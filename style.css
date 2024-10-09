@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: Montserrat, Arial, sans-serif;
+}
+
+.p_o_main_section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url("images/POMainBG.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+.p_o_main_section_container {
+    width: 1380px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 30px;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.p_o_main_section_info_wrapper {
+    margin-bottom: 4%;
+}
+.p_o_main_section_img {
+    position: relative;
+    right: -1vw;
+    max-width: 50%;
+}
+.p_o_main_section_info {
+    display: flex;
+    align-items: center;
+}
+.p_o_main_section_info__icon {
+    min-height: 100%;
+    width: auto;
+    padding-right: 8px;
+}
+.p_o_main_section_info__text h1 {
+    font-family: "Bitter", serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #E3AEB8;
+}
+.p_o_main_section_info__text p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #3C3C3B;
+}
+.p_o_main_section_info__logos {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin-top: 10%;
+}
+.p_o_main_section_info__logos_mobile {
+    display: none;
+}
