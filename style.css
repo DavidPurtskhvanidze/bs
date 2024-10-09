@@ -4,7 +4,7 @@
 body {
     font-family: Montserrat, Arial, sans-serif;
 }
-.p_o_section_title {
+.p-o-section-title {
     font-family: 'Bitter';
     font-style: normal;
     font-weight: 500;
@@ -16,7 +16,7 @@ body {
 }
 
 /*Main Section*/
-.p_o_main_section {
+.p-o-main-section {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -27,7 +27,7 @@ body {
     overflow: hidden;
     position: relative;
 }
-.p_o_main_section_container {
+.p-o-main-section__container {
     width: 1380px;
     margin: 0 auto;
     display: flex;
@@ -41,24 +41,24 @@ body {
     left: 0;
     bottom: 0;
 }
-.p_o_main_section_info_wrapper {
+.p-o-main-section__info-wrapper {
     margin-bottom: 4%;
 }
-.p_o_main_section_img {
+.p-o-main-section__img {
     position: relative;
     right: -1vw;
     max-width: 50%;
 }
-.p_o_main_section_info {
+.p-o-main-section__info {
     display: flex;
     align-items: center;
 }
-.p_o_main_section_info__icon {
+.p-o-main-section__info-icon {
     min-height: 100%;
     width: auto;
     padding-right: 8px;
 }
-.p_o_main_section_info__text h1 {
+.p-o-main-section__info-text h1 {
     font-family: "Bitter", serif;
     font-weight: 700;
     font-size: 30px;
@@ -67,46 +67,46 @@ body {
     text-transform: uppercase;
     color: #E3AEB8;
 }
-.p_o_main_section_info__text p {
+.p-o-main-section__info-text p {
     font-weight: 400;
     font-size: 15px;
     line-height: 1.6;
     color: #3C3C3B;
 }
-.p_o_main_section_info__logos {
+.p-o-main-section__info-logos {
     display: flex;
     align-items: center;
     gap: 48px;
     margin-top: 10%;
 }
-.p_o_main_section_info__logos_mobile {
+.p-o-main-section__info-logos_mobile {
     display: none;
 }
 /*Main Section*/
 
 /*Risk Section*/
-.p_o_risk_section {
+.p-o-risk-section {
     padding: 78px 0 48px;
 }
-.p_o_risk_section_slider {
+.p-o-risk-section__slider {
     padding: 48px 0;
 }
 
-.p_o_risk_section_stats {
+.p-o-risk-section__stats {
     display: flex;
     align-items: flex-start;
 }
-.p_o_risk_section_stats_divider {
+.p-o-risk-section__stats-divider {
     min-height: 100%;
     width: 1px;
     background-color: #C2C2C2;
     align-self: stretch;
     margin: 0 20px;
 }
-.p_o_risk_section_stats_item {
+.p-o-risk-section__stats-item {
     flex: 1;
 }
-.p_o_risk_section_stats_item__count {
+.p-o-risk-section__stats-item-count {
     font-family: 'Bitter';
     font-style: normal;
     font-weight: 300;
@@ -117,7 +117,7 @@ body {
     color: #E0B8A1;
     margin-bottom: 18px;
 }
-.p_o_risk_section_stats_item__text {
+.p-o-risk-section__stats-item-text {
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -126,7 +126,7 @@ body {
     color: #3C3C3B;
     padding: 0 32px;
 }
-.p_o_risk_section_stats_item__text-asterisk {
+.p-o-risk-section__stats-item-text_asterisk {
     font-size: 10px;
     color: #C2C2C2;
     margin-top: 10px;
@@ -135,10 +135,10 @@ body {
 
 
 /*Fund Section*/
-.p_o_fund_section {
+.p-o-fund-section {
     background-color: #FAEFE8;
 }
-.p_o_fund_section_header {
+.p-o-fund-section__header {
     background-image: url("images/POFundHeader.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -146,17 +146,17 @@ body {
     width: 100%;
     height: 320px;
 }
-.p_o_fund_section_content {
+.p-o-fund-section__content {
     display: flex;
     align-items: center;
     padding: 0 32px;
 }
-.p_o_fund_section_percent_wrapper {
+.p-o-fund-section__percent-wrapper {
     padding: 0 32px;
     min-height: 100%;
     align-self: stretch;
 }
-.p_o_fund_section_percent {
+.p-o-fund-section__percent {
     background-color: #E3AEB8;
     display: flex;
     flex-direction: column;
@@ -166,7 +166,7 @@ body {
     height: 110%;
     min-width: 330px;
 }
-.p_o_fund_section_percent_count {
+.p-o-fund-section__percent-count {
     background-color: #FAEFE8;
     font-family: 'Montserrat';
     font-style: normal;
@@ -180,7 +180,7 @@ body {
     width: 104%;
     padding: 6% 0;
 }
-.p_o_fund_section_percent_text {
+.p-o-fund-section__percent-text {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -190,16 +190,16 @@ body {
     color: #FEFAF8;
     padding: 0 16px;
 }
-.p_o_fund_section_info {
+.p-o-fund-section__info {
     padding: 64px 32px 64px;
 }
-.p_o_fund_section_info_icon {
+.p-o-fund-section__info-icon {
     margin-bottom: 32px;
 }
-.p_o_fund_section_info_text {
+.p-o-fund-section__info-text {
 
 }
-.p_o_fund_section_info_title {
+.p-o-fund-section__info-title {
     font-family: 'Bitter';
     font-style: normal;
     font-weight: 500;
@@ -210,7 +210,7 @@ body {
     color: #3C3C3B;
     margin-bottom: 16px;
 }
-.p_o_fund_section_info_desc p {
+.p-o-fund-section__info-desc p {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -219,7 +219,7 @@ body {
     color: #3C3C3B;
     margin-bottom: 16px;
 }
-.p_o_fund_section_info_button {
+.p-o-fund-section__info-button {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -239,7 +239,70 @@ body {
 
 /*Fund Section*/
 
+/*Fact Section*/
+.p-o-facts-section {
+    padding: 78px 0 48px;
+}
+.p-o-facts-section__wrapper {
+    padding-top: 100px;
+}
+.p-o-facts-section__item-title {
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #3C3C3B;
+    margin-bottom: 32px;
+    position: relative;
+}
+.p-o-facts-section__item-title:after {
+    content: '';
+    max-width: 100%;
+    height: 1px;
+    display: block;
+    background-color: #3C3C3B;
+    flex: 1;
+    margin: 0 0 0.2em 10px;
+}
+.p-o-facts-section__slider {
 
+}
+.p-o-facts-section__slider-item {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.p-o-facts-section__slider-item-top {
+
+}
+.p-o-facts-section__slider-item-info {
+    padding: 20px 16px;
+    background-color: #F7E7EA;
+    flex: 1;
+}
+.p-o-facts-section__slider-item-title {
+    font-family: 'Bitter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #3C3C3B;
+    margin-bottom: 8px;
+}
+.p-o-facts-section__slider-item-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #3C3C3B;
+}
+/*Fact Section*/
 
 
 
