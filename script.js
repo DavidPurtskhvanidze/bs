@@ -46,3 +46,37 @@ const factsSlider = new Swiper('#facts-slider', {
     //     }
     // }
 });
+const examInfoSlider = new Swiper('#exam-info-slider', {
+    slidesPerView: 1,
+    effect: "fade",
+    allowTouchMove: false,
+    shortSwipes: false,
+    grabCursor: false,
+});
+const examSlider = new Swiper('#exam-slider', {
+    slidesPerView: 1,
+
+    thumbs: {
+        swiper: examInfoSlider,
+    },
+
+    navigation: {
+        nextEl: ".p-o-exam-section__info-slider-next",
+        prevEl: ".p-o-exam-section__info-slider-prev",
+    },
+    pagination: {
+        el: '.p-o-exam-section__info-slider-pagination',
+        clickable: true,
+        bulletClass: 'p-o-exam-section__info-slider-bullet',
+        renderBullet: function (index) {
+            return '<div class="p-o-exam-section__info-slider-bullet">' + ('0' + [index + 1]) + '</div>';
+        },
+    },
+});
+function infoSliderNext() {
+    $('.p-o-exam-section__info-slider-next').click();
+}
+function infoSliderPrev() {
+    $('.p-o-exam-section__info-slider-prev').click();
+}
+
