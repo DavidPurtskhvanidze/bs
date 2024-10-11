@@ -1,74 +1,131 @@
 const riskSlider = new Swiper('#risk-slider', {
     loop: true,
     // Default parameters
-    slidesPerView: 6,
+    slidesPerView: 2,
     spaceBetween: 20,
+    centeredSlides: false,
+    speed: 3000,
+    autoplay: {
+        delay: 2000,
+    },
     // Responsive breakpoints
-    // breakpoints: {
-    //     // when window width is >= 320px
-    //     320: {
-    //         slidesPerView: 2,
-    //         spaceBetween: 20
-    //     },
-    //     // when window width is >= 480px
-    //     480: {
-    //         slidesPerView: 3,
-    //         spaceBetween: 30
-    //     },
-    //     // when window width is >= 640px
-    //     640: {
-    //         slidesPerView: 4,
-    //         spaceBetween: 40
-    //     }
-    // }
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            centeredSlides: true,
+        },
+        // when window width is >= 480px
+        480: {
+            slidesPerView: 3,
+            spaceBetween: 10
+        },
+        // when window width is >= 640px
+        640: {
+            slidesPerView: 4,
+            spaceBetween: 16
+        },
+        // when window width is >= 992px
+        992: {
+            slidesPerView: 6,
+            spaceBetween: 20
+        }
+    }
 });
 const factsSlider1 = new Swiper('#facts-slider1', {
-    loop: true,
     // Default parameters
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 20,
+    navigation: {
+        nextEl: ".p-o-facts-section__main-slider-next",
+        prevEl: ".p-o-facts-section__main-slider-prev",
+    },
     // Responsive breakpoints
-    // breakpoints: {
-    //     // when window width is >= 320px
-    //     320: {
-    //         slidesPerView: 2,
-    //         spaceBetween: 20
-    //     },
-    //     // when window width is >= 480px
-    //     480: {
-    //         slidesPerView: 3,
-    //         spaceBetween: 30
-    //     },
-    //     // when window width is >= 640px
-    //     640: {
-    //         slidesPerView: 4,
-    //         spaceBetween: 40
-    //     }
-    // }
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1.4,
+            spaceBetween: 20,
+        },
+        // when window width is >= 480px
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 10
+        },
+        // when window width is >= 640px
+        640: {
+            slidesPerView: 3,
+            spaceBetween: 16
+        },
+        // when window width is >= 992px
+        992: {
+            slidesPerView: 4,
+            spaceBetween: 20
+        }
+    }
 });
 const factsSlider2 = new Swiper('#facts-slider2', {
-    loop: true,
     // Default parameters
     slidesPerView: 4,
     spaceBetween: 20,
+    navigation: {
+        nextEl: ".p-o-facts-section__main-slider-next",
+        prevEl: ".p-o-facts-section__main-slider-prev",
+    },
     // Responsive breakpoints
-    // breakpoints: {
-    //     // when window width is >= 320px
-    //     320: {
-    //         slidesPerView: 2,
-    //         spaceBetween: 20
-    //     },
-    //     // when window width is >= 480px
-    //     480: {
-    //         slidesPerView: 3,
-    //         spaceBetween: 30
-    //     },
-    //     // when window width is >= 640px
-    //     640: {
-    //         slidesPerView: 4,
-    //         spaceBetween: 40
-    //     }
-    // }
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1.4,
+            spaceBetween: 20,
+        },
+        // when window width is >= 480px
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 10
+        },
+        // when window width is >= 640px
+        640: {
+            slidesPerView: 3,
+            spaceBetween: 16
+        },
+        // when window width is >= 992px
+        992: {
+            slidesPerView: 4,
+            spaceBetween: 20
+        }
+    }
+});
+
+
+const catalogSlider = new Swiper('#catalog-slider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+
+    // Responsive breakpoints
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1.4,
+            spaceBetween: 20,
+        },
+        // when window width is >= 480px
+        480: {
+            slidesPerView: 2,
+            spaceBetween: 10
+        },
+        // when window width is >= 640px
+        640: {
+            slidesPerView: 3,
+            spaceBetween: 16
+        },
+        // when window width is >= 992px
+        992: {
+            slidesPerView: 4,
+            spaceBetween: 20
+        }
+    }
 });
 const examInfoSlider = new Swiper('#exam-info-slider', {
     slidesPerView: 1,
