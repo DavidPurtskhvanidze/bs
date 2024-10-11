@@ -49,6 +49,9 @@ body {
     right: -1vw;
     max-width: 50%;
 }
+.p-o-main-section__img img {
+    display: block;
+}
 .p-o-main-section__info {
     display: flex;
     align-items: center;
@@ -139,12 +142,13 @@ body {
     background-color: #FAEFE8;
 }
 .p-o-fund-section__header {
-    background-image: url("images/POFundHeader.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     width: 100%;
     height: 320px;
+}
+.p-o-fund-section__header img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 .p-o-fund-section__content {
     display: flex;
@@ -304,6 +308,10 @@ body {
     position: relative;
     display: flex;
     align-items: center;
+}
+.p-o-exam-section__main-slider .swiper-slide {
+    justify-content: center;
+    padding: 0 50px;
 }
 .p-o-exam-section__main-slider-next {
     display: flex;
