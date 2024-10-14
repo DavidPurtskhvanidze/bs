@@ -38,14 +38,14 @@ const factsSlider1 = new Swiper('#facts-slider1', {
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
-        nextEl: ".p-o-facts-section__main-slider-next",
-        prevEl: ".p-o-facts-section__main-slider-prev",
+        nextEl: "#facts-slider1_next",
+        prevEl: "#facts-slider1_prev",
     },
     // Responsive breakpoints
     breakpoints: {
         // when window width is >= 320px
         320: {
-            slidesPerView: 1.4,
+            slidesPerView: 1,
             spaceBetween: 20,
         },
         // when window width is >= 480px
@@ -67,17 +67,17 @@ const factsSlider1 = new Swiper('#facts-slider1', {
 });
 const factsSlider2 = new Swiper('#facts-slider2', {
     // Default parameters
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
-        nextEl: ".p-o-facts-section__main-slider-next",
-        prevEl: ".p-o-facts-section__main-slider-prev",
+        nextEl: "#facts-slider2_next",
+        prevEl: "#facts-slider2_prev",
     },
     // Responsive breakpoints
     breakpoints: {
         // when window width is >= 320px
         320: {
-            slidesPerView: 1.4,
+            slidesPerView: 1,
             spaceBetween: 20,
         },
         // when window width is >= 480px

@@ -120,7 +120,6 @@
     font-weight: 300;
     font-size: 104px;
     line-height: 1;
-    text-transform: uppercase;
     text-align: center;
     color: #E0B8A1;
     margin-bottom: 18px;
@@ -171,7 +170,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: -10% 0;
     height: 110%;
     min-width: 330px;
@@ -250,14 +249,14 @@
 .p-o-catalog-section__bottom {
 
 }
-.p-o-catalog-section__info {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.2;
-    color: #3C3C3B;
-    padding: 8px 0 0;
-    min-width: 100%;
-}
+/*.p-o-catalog-section__info {*/
+/*    font-weight: 400;*/
+/*    font-size: 12px;*/
+/*    line-height: 1.2;*/
+/*    color: #3C3C3B;*/
+/*    padding: 8px 0 0;*/
+/*    min-width: 100%;*/
+/*}*/
 /*Catalog Section*/
 
 
@@ -294,17 +293,18 @@
     margin: 0 0 0.2em 10px;
 }
 .p-o-facts-section__slider {
-
+    position: relative;
 }
 .p-o-facts-section__main-slider-next {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: -16px;
+    right: -40px;
     top: 10%;
     z-index: 2;
     padding: 20px;
+    cursor: pointer;
 }
 .p-o-facts-section__main-slider-next.swiper-button-lock {
     display: none;
@@ -324,10 +324,11 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: -16px;
+    left: -40px;
     top: 10%;
     z-index: 2;
     padding: 20px;
+    cursor: pointer;
 }
 .p-o-facts-section__main-slider-prev.swiper-button-lock {
     display: none;
@@ -386,7 +387,7 @@
 }
 .p-o-exam-section__main-slider-wrapper {
     flex: 0 0 auto;
-    width: 40%;
+    width: 42%;
 }
 .p-o-exam-section__main-slider {
     position: relative;
@@ -395,16 +396,20 @@
 }
 .p-o-exam-section__main-slider .swiper-slide {
     justify-content: center;
-    padding: 0 50px;
+    align-items: center;
+}
+.p-o-exam-section__main-slider-img_width {
+    width: 74%;
 }
 .p-o-exam-section__main-slider-next {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: 0;
+    right: -10px;
     z-index: 2;
     padding: 20px;
+    cursor: pointer;
 }
 .p-o-exam-section__main-slider-next:before {
     content: '';
@@ -421,9 +426,10 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: 0;
+    left: -10px;
     z-index: 2;
     padding: 20px;
+    cursor: pointer;
 }
 .p-o-exam-section__main-slider-prev:before {
     content: '';
@@ -485,6 +491,7 @@
     color: #3C3C3B;
     padding: 10px 0 10px 20px;
     position: relative;
+    cursor: pointer;
 }
 .p-o-exam-section__info-slider-prev:before {
     content: '';
@@ -507,6 +514,7 @@
     color: #3C3C3B;
     padding: 10px 20px 10px 0;
     position: relative;
+    cursor: pointer;
 }
 .p-o-exam-section__info-slider-next:after {
     content: '';
@@ -639,6 +647,9 @@
 }
 .p-o-myth-section__accordion-wrapper {
     margin-top: 48px;
+}
+.p-o-myth-section__accordion-wrapper .ask {
+    text-transform: uppercase;
 }
 /*Myth Section*/
 
@@ -897,11 +908,26 @@
     .p-o-facts-section__slider-item-text {
         font-size: 10px;
     }
+    .p-o-facts-section__slider .swiper-slide {
+        justify-content: center;
+        align-items: center;
+    }
     .p-o-facts-section__main-slider-prev {
-        display: none;
+        left: -28px;
     }
     .p-o-facts-section__main-slider-next {
-        display: none;
+        right: -28px;
+    }
+    .p-o-facts-section__slider-item {
+        width: 90%;
+    }
+    .p-o-facts-section__main-slider-prev:before {
+        width: 16px;
+        height: 16px;
+    }
+    .p-o-facts-section__main-slider-next:before {
+        width: 16px;
+        height: 16px;
     }
 
     .p-o-exam-section {
@@ -937,6 +963,20 @@
     }
     .p-o-exam-section__wrapper {
         padding: 48px 0 0;
+    }
+    .p-o-exam-section__main-slider-prev {
+        left: -28px;
+    }
+    .p-o-exam-section__main-slider-prev:before {
+        width: 16px;
+        height: 16px;
+    }
+    .p-o-exam-section__main-slider-next {
+        right: -28px;
+    }
+    .p-o-exam-section__main-slider-next:before {
+        width: 16px;
+        height: 16px;
     }
 
     .p-o-test-section {
