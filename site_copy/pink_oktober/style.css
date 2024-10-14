@@ -9,6 +9,12 @@
     text-transform: uppercase;
     color: #3C3C3B;
 }
+.p-o-section-text-l-br {
+    display: block;
+}
+.p-o-section-text-s-br {
+    display: none;
+}
 .btn-pink {
     background-color: #E3AEB8;
     border-color: #E3AEB8;
@@ -651,6 +657,9 @@
 .p-o-myth-section__accordion-wrapper .ask {
     text-transform: uppercase;
 }
+.p-o-myth-section__accordion-wrapper .answer {
+    padding-right: 10%;
+}
 /*Myth Section*/
 
 
@@ -662,8 +671,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10%;
-    padding: 48px 0;
+    gap: 64px;
+    padding: 48px 42px;
+}
+.p-o-partners-section__wrapper img {
+    width: 100%;
 }
 .p-o-partners-section__item {
     flex: 1;
@@ -781,6 +793,7 @@
         justify-content: space-around;
         padding: 28px 0;
         flex-wrap: wrap;
+        gap: 10%;
     }
     #catalog .p-o-catalog-section .products {
         grid-gap: 32px;
@@ -788,6 +801,12 @@
     }
 }
 @media (max-width: 576px) {
+    .p-o-section-text-l-br {
+        display: none;
+    }
+    .p-o-section-text-s-br {
+        display: block;
+    }
     .p-o-section-title {
         font-size: 14px;
     }
@@ -810,9 +829,6 @@
     }
     .p-o-main-section__info-text p {
         font-size: 10px;
-    }
-    .p-o-main-section__info-text p br {
-        display: none;
     }
     .p-o-main-section__info-icon {
         display: flex;
@@ -853,9 +869,6 @@
     .p-o-fund-section__percent-text {
         font-size: 12px;
         padding: 10px 0;
-    }
-    .p-o-fund-section__percent-text br {
-        display: none;
     }
     .p-o-fund-section__percent {
         padding: 0 10px;
@@ -942,9 +955,6 @@
     }
     .p-o-exam-section__info-slider-text {
         font-size: 10px;
-    }
-    .p-o-exam-section__info-slider-text br {
-        display: none;
     }
     .p-o-exam-section__info-slider-navigation {
         display: none;
