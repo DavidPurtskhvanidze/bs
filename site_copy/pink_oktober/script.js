@@ -142,8 +142,8 @@ const examSlider = new Swiper('#exam-slider', {
     },
 
     navigation: {
-        nextEl: ".p-o-exam-section__info-slider-next",
-        prevEl: ".p-o-exam-section__info-slider-prev",
+        nextEl: ".exam-slider-next-js-action",
+        prevEl: ".exam-slider-prev-js-action",
     },
     pagination: {
         el: '.p-o-exam-section__info-slider-pagination',
@@ -154,10 +154,4 @@ const examSlider = new Swiper('#exam-slider', {
         },
     },
 });
-function infoSliderNext() {
-    $('.p-o-exam-section__info-slider-next').click();
-}
-function infoSliderPrev() {
-    $('.p-o-exam-section__info-slider-prev').click();
-}
 
