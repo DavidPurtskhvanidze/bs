@@ -75,6 +75,9 @@
     width: auto;
     padding-right: 8px;
 }
+.p-o-main-section__info-text {
+    width: 40%;
+}
 .p-o-main-section__info-text h1 {
     font-family: "Bitter", serif;
     font-weight: 700;
