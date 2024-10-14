@@ -18,17 +18,17 @@
 .p-o-section-text-s-br {
     display: none;
 }
-.btn-pink {
+.p-o-fund-section__info-text .btn-pink {
     background-color: #E3AEB8;
     border-color: #E3AEB8;
     color: #fff;
 }
-.btn-pink:hover {
+.p-o-fund-section__info-text .btn-pink:hover {
     background-color: #d59ca6;
     border-color: #d59ca6;
     color: #fff;
 }
-.btn-pink .arr {
+.p-o-fund-section__info-text .btn-pink .arr {
     border-color: #fff;
 }
 
