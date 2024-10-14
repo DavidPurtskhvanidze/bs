@@ -102,7 +102,10 @@ const factsSlider2 = new Swiper('#facts-slider2', {
 const catalogSlider = new Swiper('#catalog-slider', {
     slidesPerView: 1,
     spaceBetween: 20,
-
+    navigation: {
+        nextEl: ".p-o-catalog-section__slider-next",
+        prevEl: ".p-o-catalog-section__slider-prev",
+    },
     // Responsive breakpoints
     breakpoints: {
         // when window width is >= 320px
