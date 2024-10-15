@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="ru" class="js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="files/iziToast.min.css">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href=".">
+    <title>Title</title>
+    <meta name="keywords" content="words">
+    <meta name="description" content="Desc">
+    <meta property="og:title" content="Titile">
+    <meta property="og:image" content="https://beautysleep.ru/static/img/fb_2.png">
+    <meta property="og:type" content=" website ">
+    <meta property="og:url" content=" https://beautysleep.ru/ ">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="static/img/favicon/favicon-144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="csrf-param" content="_csrf">
+    <meta property="fb:app_id" content="135389093704271">
+    <link rel="icon" href="https://beautysleep.ru/favicon.ico">
+    <link rel="apple-touch-icon" sizes="16x16" href="https://beautysleep.ru/static/img/favicon/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="32x32" href="https://beautysleep.ru/static/img/favicon/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://beautysleep.ru/static/img/favicon/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://beautysleep.ru/static/img/favicon/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://beautysleep.ru/static/img/favicon/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://beautysleep.ru/static/img/favicon/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="https://beautysleep.ru/static/img/favicon/favicon-96.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://beautysleep.ru/static/img/favicon/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://beautysleep.ru/static/img/favicon/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://beautysleep.ru/static/img/favicon/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://beautysleep.ru/static/img/favicon/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="160x160" href="https://beautysleep.ru/static/img/favicon/favicon-160.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://beautysleep.ru/static/img/favicon/favicon-180.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="https://beautysleep.ru/static/img/favicon/favicon-192.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="https://beautysleep.ru/static/img/favicon/favicon-256.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="https://beautysleep.ru/static/img/favicon/favicon-512.png">
+    <meta http-equiv="Permissions-Policy" content="accelerometer">
+    <style>
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('https://beautysleep.ru/fotns/CeraPro-Regular.woff2') format('woff2'),
+            url('https://beautysleep.ru/fotns/CeraPro-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('https://beautysleep.ru/fotns/CeraPro-Bold.woff2') format('woff2'),
+            url('https://beautysleep.ru/fotns/CeraPro-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('https://beautysleep.ru/fotns/CeraPro-RegularItalic.woff2') format('woff2'),
+            url('https://beautysleep.ru/fotns/CeraPro-RegularItalic.woff') format('woff');
+            font-weight: normal;
+            font-style: italic;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('https://beautysleep.ru/fotns/CeraPro-Medium.woff2') format('woff2'),
+            url('https://beautysleep.ru/fotns/CeraPro-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('https://beautysleep.ru/fotns/CeraPro-Light.woff2') format('woff2'),
+            url('https://beautysleep.ru/fotns/CeraPro-Light.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('https://beautysleep.ru/fotns/CeraPro-MediumItalic.woff2') format('woff2'),
+            url('https://beautysleep.ru/fotns/CeraPro-MediumItalic.woff') format('woff');
+            font-weight: 500;
+            font-style: italic;
+            font-display: swap;
+        }
+    </style>
+
+    <link rel="stylesheet" href="files/normalize.css">
+    <link rel="stylesheet" href="files/swiper.min.css">
+    <link href="files/video-js.min.css" rel="stylesheet">
+    <link href="files/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="files/_css_styles.css">
+    <link rel="stylesheet" href="files/aos.css">
+    <link rel="stylesheet" href="files/pnotify.custom.css">
+    <link rel="stylesheet" href="files/_css_common.css">
+    <link href="files/css" rel="stylesheet">
+    <script type="text/javascript" src="files/tracking.js.download" async=""></script><script type="text/javascript" src="files/t.js.download"></script><script type="text/javascript" async="" id="tmr-code" src="files/code.js.download"></script><script async="" src="files/tag.js.download"></script><script type="text/javascript" async="" src="files/js"></script><script async="" src="files/tracking_v2.min.js.download"></script><script type="text/javascript" async="" src="https://hs.beautysleep.ru/static/old/array.js"></script><script async="" src="files/gtm.js.download"></script><script src="files/captcha.js.download" defer=""></script>
+    <link href="files/suggestions.min.css" rel="stylesheet">
+    <script src="files/jquery-3.4.1.min.js.download"></script>
+    <script async="" src="files/js(1)"></script>
+
+
+    <link rel="stylesheet" href="files/default.css" type="text/css">
+    <link rel="stylesheet" href="files/jquery.jgrowl.min.css" type="text/css">
+    <link rel="stylesheet" href="files/index(1).css" type="text/css">
+    <link rel="stylesheet" href="files/default(1).css" type="text/css">
+</head>
+<div class="header-info">
+    <div class="swiper-container header-swiper swiper-container-initialized swiper-container-horizontal">
+        <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-4911px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="1" style="width: 1637px;">
+            <span class="posthog_view_block posthog_try_to_click" posthog-name="Растяжка &#39;Покупайте сейчас и оплачивайте частями в течение нескольких месяцев!&#39;">Покупайте сейчас и оплачивайте частями в течение нескольких месяцев!</span>
+        </div>
+            <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 1637px;">
+                <a href="https://beautysleep.ru/products/" class="posthog_view_block posthog_click" posthog-name="Растяжка &#39;*Бесплатная доставка от 18 000 рублей по Москве, Московской области, Санкт-Петербургу и Ленинградской области.&#39;">*Бесплатная доставка от 18&nbsp;000 рублей по Москве, Московской области, Санкт-Петербургу и Ленинградской области.</a>
+            </div>
+            <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 1637px;">
+                <span class="posthog_view_block posthog_try_to_click" posthog-name="Растяжка &#39;Покупайте сейчас и оплачивайте частями в течение нескольких месяцев!&#39;">Покупайте сейчас и оплачивайте частями в течение нескольких месяцев!</span>
+            </div>
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" style="width: 1637px;">
+                <a href="https://beautysleep.ru/products/" class="posthog_view_block posthog_click" posthog-name="Растяжка &#39;*Бесплатная доставка от 18 000 рублей по Москве, Московской области, Санкт-Петербургу и Ленинградской области.&#39;">*Бесплатная доставка от 18&nbsp;000 рублей по Москве, Московской области, Санкт-Петербургу и Ленинградской области.</a>
+            </div></div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+</div>
+<header role="banner" style="top: 28px;">
+    <div class="header-common">
+        <div class="grid">
+            <div class="header-common__top">
+                <div class="interaction">
+                    <a href="tel:88002224624" class="interaction__phone posthog_click" posthog-name="Номер телефона"> <img src="files/phone-ico-black.svg" alt="phone-ico"> 8 (800) 222 46 24</a>
+                    <div class="burger-menu action-item tablet btn-mob-menu">
+                        <span class="burger-menu__item"></span>
+                        <span class="burger-menu__item"></span>
+                        <span class="burger-menu__item"></span>
+                    </div>
+                </div>
+                <img class="logo" posthog-name="Лого" src="files/logo.svg" alt="Beauty sleep">
+                <div class="shop">
+                    <a href="https://beautysleep.ru/products/" class="shop_goods posthog_click" posthog-name="Магазин">
+                        <img src="files/shop.svg" alt="profile">
+                        <span>онлайн магазин</span>
+                    </a>
+                    <a href="https://beautysleep.ru/basket" class="posthog_click shop_cart " posthog-name="Корзина">
+                        <img src="files/card.svg" alt="card">
+                        <img class="card-mobile-ico" src="files/card-mobile.svg" alt="card">
+                        <span>
+Корзина </span>
+                        <div class="cart-counter">
+                            <strong class="ms2_total_count">0</strong>
+                        </div>
+                    </a> </div>
+            </div>
+        </div>
+        <nav role="navigation" class="header-common__bottom">
+            <div style="display: none!important;">
+            </div>
+            <div class="header-menu__item ">
+                <span class="header-menu__item_name">Подушки</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid">
+                        <a href="https://beautysleep.ru/omnia-and-classic" class="item-content__link">
+                            <div>
+                                <img src="files/pillow_classic.svg" alt="pillow">
+                            </div>
+                            <span>Подушка Omnia &amp; Classic</span>
+                        </a>
+                        <a href="https://beautysleep.ru/copper" class="item-content__link">
+                            <div>
+                                <img src="files/pillow_copper.svg" alt="pillow_copper">
+                                <div class="item-content__link_new"><span>new</span></div>
+                            </div>
+                            <span>Подушка Omnia Copper Blend</span>
+                        </a>
+                        <a href="https://beautysleep.ru/aula" class="item-content__link">
+                            <div>
+                                <img src="files/pillow_aula.svg" alt="pillow">
+                            </div>
+                            <span>Подушка Aula</span>
+                        </a>
+                        <a href="https://beautysleep.ru/products/?category=437" class="item-content__link">
+                            <div>
+                                <img src="files/somia_ico.svg" alt="somia">
+                            </div>
+                            <span>Подушки для мужчин&nbsp;и&nbsp;детей</span>
+                        </a>
+                        <a href="https://beautysleep.ru/pillow-for-decollete" class="item-content__link">
+                            <div>
+                                <img src="files/pillow_decollete.svg" alt="pillow">
+                            </div>
+                            <span>Подушка для декольте</span>
+                        </a>
+                        <a href="https://beautysleep.ru/products/?category=25" class="item-content__link">
+                            <div>
+                                <img src="files/pillow_case.svg" alt="pillow">
+                            </div>
+                            <span>Наволочки</span>
+                        </a>
+                        <a href="https://beautysleep.ru/sleep-wrinkles" class="item-content__link">
+                            <div>
+                                <img src="files/sleep.svg" alt="pillow">
+                            </div>
+                            <span>Beauty - сон</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu__item ">
+                <span class="header-menu__item_name">Одеяла</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid">
+                        <a href="https://beautysleep.ru/weighted-blanket" class="item-content__link">
+                            <div>
+                                <img src="files/blanket.svg" alt="pillow">
+                            </div>
+                            <span>Утяжеленное одеяло </span>
+                        </a>
+                        <a href="https://beautysleep.ru/airmesh-blanket" class="item-content__link">
+                            <div>
+                                <img src="files/blanket2.svg" alt="pillow">
+                            </div>
+                            <span>Одеяло с вентиляционными вставками</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu__item ">
+                <span class="header-menu__item_name">Одежда и аксессуары из элитного шелка</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid">
+                        <a href="https://beautysleep.ru/silk-products/?product=21" class="item-content__link">
+                            <div>
+                                <img src="files/robe.svg" alt="robe">
+                            </div>
+                            <span>Халаты</span>
+                        </a>
+                        <a href="https://beautysleep.ru/silk-products/?product=23" class="item-content__link">
+                            <div>
+                                <img src="files/shirt.svg" alt="underwear">
+                            </div>
+                            <span>Комбинации</span>
+                        </a>
+                        <a href="https://beautysleep.ru/silk-products/?product=24" class="item-content__link">
+                            <div>
+                                <img src="files/underwear.svg" alt="underwear">
+                            </div>
+                            <span>Топы и шорты</span>
+                        </a>
+                        <a href="https://beautysleep.ru/silk-products/?product=25" class="item-content__link">
+                            <div>
+                                <img src="files/sleepmask.svg" alt="mask">
+                            </div>
+                            <span>Маски для сна</span>
+                        </a>
+                        <a href="https://beautysleep.ru/silk-products/?product=26" class="item-content__link">
+                            <div>
+                                <img src="files/scrunchy.svg" alt="elastic">
+                            </div>
+                            <span>Аксессуары для волос</span>
+                        </a>
+                        <a href="https://beautysleep.ru/silk-products/?product=27" class="item-content__link">
+                            <div>
+                                <img src="files/pol.svg" alt="elastic">
+                            </div>
+                            <span>Полотенца</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu__item ">
+                <span class="header-menu__item_name">Ароматы для сна</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid">
+                        <a href="https://beautysleep.ru/scents-for-sleep" class="item-content__link">
+                            <div>
+                                <img src="files/aroma.svg" alt="aroma">
+                            </div>
+                            <span>Ароматы для сна</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu__item ">
+                <span class="header-menu__item_name">Идеи подарков</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid">
+                        <a href="https://beautysleep.ru/products/?category=287" class="item-content__link">
+                            <div>
+                                <img src="files/gift card.svg" alt="">
+                            </div>
+                            <span>Подарочные сертификаты</span>
+                        </a>
+                        <a href="https://beautysleep.ru/products/?category=325" class="item-content__link">
+                            <div>
+                                <img src="files/gift.svg" alt="">
+                            </div>
+                            <span>Подарочные наборы</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu__item ">
+                <span class="header-menu__item_name">Наша наука</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid">
+                        <a href="https://beautysleep.ru/our-science" class="item-content__link">
+                            <div>
+                                <img src="files/expert-menu_.png" alt="">
+                            </div>
+                            <span>Наша наука</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu__item ">
+                <span class="header-menu__item_name">Покупателям</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid">
+                        <a href="https://beautysleep.ru/dostavka-i-oplata" class="item-content__link">
+                            <div>
+                                <img src="files/delivery.svg" alt="pillow">
+                            </div>
+                            <span>Доставка и оплата</span>
+                        </a>
+                        <a href="https://beautysleep.ru/garantia-i-vozvrat" class="item-content__link">
+                            <div>
+                                <img src="files/return.svg" alt="pillow">
+                            </div>
+                            <span>Гарантия и возврат</span>
+                        </a>
+                        <a href="https://beautysleep.ru/for-customers/contacts" class="item-content__link">
+                            <div>
+                                <img src="files/contacts.svg" alt="pillow">
+                            </div>
+                            <span>Контакты</span>
+                        </a>
+                        <a href="https://beautysleep.ru/o-kompanii" class="item-content__link">
+                            <div>
+                                <img src="files/about.svg" alt="pillow">
+                            </div>
+                            <span>О компании</span>
+                        </a>
+                        <a href="https://beautysleep.ru/reviews" class="item-content__link">
+                            <div>
+                                <img src="files/review.svg" alt="pillow">
+                            </div>
+                            <span>Отзывы</span>
+                        </a>
+                        <a href="https://beautysleep.ru/question" class="item-content__link">
+                            <div>
+                                <img src="files/faq.svg" alt="pillow">
+                            </div>
+                            <span>Вопросы</span>
+                        </a>
+                        <a href="https://beautysleep.ru/about-beauty-sleep/materials-beauty-sleep" class="item-content__link">
+                            <div>
+                                <img src="files/materials.svg" alt="pillow">
+                            </div>
+                            <span>Материалы</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu__item mobile-item">
+
+            </div>
+            <div class="header-menu__item mobile-item shop">
+                <a href="https://beautysleep.ru/products/" class="shop_goods posthog_click" posthog-name="онлайн магазин">
+                    <img src="files/shop.svg" alt="profile">
+                    <span>онлайн магазин</span>
+                </a>
+            </div>
+            <div class="interaction">
+                <a href="tel:88002224624" class="contacts-item__contact posthog_click" posthog-name="телефон">
+                    <div> <img src="files/phone-ico-blue.svg" alt="phone">
+                        <span>8 (800) 222 46 24</span>
+                    </div>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+79303844624" target="_blank" class="contacts-item__contact posthog_click" posthog-name="whatsapp">
+                    <div> <img src="files/whatsapp-ico-blue.svg" alt="whats-app">
+                        <span>+7 930 384 46 24</span>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
+<main role="main">
+
+</main>
+
+
+<footer class="posthog_view_block" posthog-name="Футер">
+    <div class="grid">
+        <div class="footer-part" style="text-align:center">
+            *10% от прибыли компании за октябрь 2024 года будут перечислены в фонд "Дальше" для поддержки женщин, столкнувшихся с раком груди.
+        </div>
+        <div class="footer-part">
+            <div class="menu-container">
+                <div>
+                    <span>Подушки Beauty sleep</span>
+                    <ul>
+                        <li>
+                            <a href="https://beautysleep.ru/omnia-and-classic">Подушка Omnia &amp; Classic</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/copper">Подушка Omnia Copper Blend</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/aula">Подушка Aula</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/products/?category=437">Подушки для мужчин&nbsp;и&nbsp;детей</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/pillow-for-decollete">Подушка для декольте</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/products/?category=25">Наволочки</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/sleep-wrinkles">Beauty - сон</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Одеяла Beauty Sleep</span>
+                    <ul>
+                        <li>
+                            <a href="https://beautysleep.ru/weighted-blanket">Утяжеленное одеяло </a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/airmesh-blanket">Одеяло с вентиляционными вставками</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Silk Collection</span>
+                    <ul>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Халаты</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Комбинации</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Топы и шорты</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Маски для сна</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Аксессуары для волос</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Полотенца</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span>О Beauty Sleep</span>
+                    <ul>
+                        <li>
+                            <a href="https://beautysleep.ru/sleep-wrinkles">Beauty - сон</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/o-kompanii">О компании</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/reviews">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/question">Вопросы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/about-beauty-sleep/materials-beauty-sleep">Материалы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/about-beauty-sleep/vacancy/">Вакансии</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/copyright">Авторские права</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Покупателям</span>
+                    <ul>
+                        <li>
+                            <a href="https://beautysleep.ru/dostavka-i-oplata">Доставка и оплата</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/garantia-i-vozvrat">Гарантия и возврат</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/for-customers/contacts">Контакты</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/o-kompanii">О компании</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/reviews">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/question">Вопросы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/about-beauty-sleep/materials-beauty-sleep">Материалы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/stocks" class="stock">Акции</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/rules-certificates">Подарочные сертификаты</a>
+                        </li>
+                        <li>
+                            &nbsp;
+                        </li>
+                        <li>
+                            <a href="https://wa.me/message/IYHHAZPLYCA6I1" class="whats-app">
+                                <img src="files/footer-whats-app.svg" alt="whats-app">
+                                whats app
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="email-mailing">
+                <h4>ПОДПИШИТЕСЬ НА РАССЫЛКУ</h4>
+                <p>Подпишитесь, чтобы узнать больше о здоровом сне, новостях и спецпредложениях Beauty Sleep!</p>
+                <form method="post" class="js-form-mailing">
+                    <input type="hidden" name="lists[pl2312]" value="set">
+                    <div class="input-box">
+                        <input name="email" type="email" data-si-form="" data-si-preset="msdcaddemail" data-si-nosave="" data-si-event="change" placeholder="Введите ваш email" required="">
+                    </div>
+                    <input type="text" class="n-message" name="n-message" value="">
+                    <button type="submit"><img src="files/mailing-submit.svg" alt="submit"></button>
+                    <input type="hidden" name="af_action" value="deb11a841c7ef742abd036ca26bea0c6">
+                </form> <div class="politics">
+                Нажимая кнопку "Подписаться", вы соглашаетесь с <a href="https://beautysleep.ru/privacy-policy" target="_blank">политикой конфиденциальности</a>
+            </div>
+            </div>
+        </div>
+        <div class="footer-part posthog_view_block" posthog-name="Соц сети">
+            <div class="sn-box">
+                <div>
+                    <a href="https://t.me/beauty_sleep_russia" target="_blank" class="social-box__item posthog_click" posthog-name="Соц сети - telegram">
+                        <img src="files/telegram.svg" alt="telegram">
+                    </a>
+                    <a href="https://vk.com/beautysleep_russia" target="_blank" class="social-box__item posthog_click" posthog-name="Соц сети - vkontakte">
+                        <img src="files/vkon.svg" alt="vkontakte">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCem2kbdspTUse0141WFNSDQ" target="_blank" class="social-box__item posthog_click" posthog-name="Соц сети - youtube">
+                        <img src="files/you.svg" alt="youtube">
+                    </a>
+                    <a href="https://clck.ru/Pv27v" target="_blank" class="social-box__item posthog_click" posthog-name="Соц сети - dzen">
+                        <img src="files/dzen.svg" alt="dzen">
+                    </a>
+                </div>
+                <span>следите за нами в соцсетях!</span>
+            </div>
+            <a href="https://beautysleep.ru/#up" class="up">
+                <span>наверх</span>
+                <img src="files/up.svg" alt="up">
+            </a>
+        </div>
+        <div class="footer-part posthog_view_block" posthog-name="Футер - ссылки">
+            <div class="footer-part__info">
+                <span>© 2016 — 2024, Beauty Sleep ®</span>
+                <div>
+                    <a href="https://beautysleep.ru/privacy-policy" target="_blank" class="posthog_click" posthog-name="Футер - Политика конфиденциальности">Политика конфиденциальности</a>
+                    <a href="https://beautysleep.ru/terms-of-use" target="_blank" class="posthog_click" posthog-name="Футер - Пользовательское соглашение">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="shopping-cart js-minicart">
+    <div class="shopping-cart-card">
+        <div class="shopping-cart__title posthog_view_block" posthog-name="Мини-корзина">
+            <h4>Корзина</h4>
+            <span class="goods-count">0 продуктов</span>
+            <div class="cart-close posthog_click" posthog-name="Закрыть мини-корзину">
+                <div class="close__lane"></div>
+                <div class="close__lane"></div>
+            </div>
+        </div>
+        <div class="shopping-cart__empty" style="display:block">
+            <div class="shopping-cart__empty_top">
+                <img src="files/empty-cart.svg" alt="cart empty">
+                <div>
+                    <span>В Вашей корзине нет товаров</span>
+                    <span>Корзина ждет, что ее наполнят. Желаем приятных покупок!</span>
+                </div>
+            </div>
+            <a href="https://beautysleep.ru/products/" class="button gradient"><span>перейти в магазин</span></a>
+        </div>
+    </div>
+    <div class="shopping-cart__footer">
+        <div class="shopping-cart__footer_title">
+            <span>сумма заказа:</span>
+            <span><span class="js-minicart-cost">0</span> р.</span>
+        </div>
+        <a href="https://beautysleep.ru/products/" class="shopping-cart__footer_next button transparent posthog_click" posthog-name="Мини-корзина - продолжить покупки"><span>продолжить покупки</span></a>
+        <a href="https://beautysleep.ru/basket" class="shopping-cart__footer_buy button gradient posthog_click" posthog-name="Мини-корзина - оформить заказ"><span>оформить заказ</span></a>
+    </div>
+    <div class="shopping-cart-bg"></div>
+</div>
+<div class="coockies-container">
+    <div class="grid">
+        <div class="coockies-text">Мы используем файлы cookie, чтобы обеспечить Вам лучший сервис. Продолжая пользоваться этим сайтом, Вы соглашаетесь на использование cookie
+            и обработку данных в соответствии с Пользовательским соглашением в области обработки и защиты персональных данных.
+        </div>
+        <button class="coockies-ok button transparent">
+            <span>хорошо</span>
+        </button>
+    </div>
+</div>
+<div class="pp pp__mailing" data-title="popup_discount_5_percents" data-pp="mailing-sale">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_mailing">
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+        <div class="popup-content">
+            <div class="mailing-header">
+                <span class="mailing-header__title">ДАРИМ СКИДКУ 5%!</span>
+                <span class="mailing-header__subtitle">Подпишитесь, чтобы получить приветственную скидку на первый заказ.</span>
+            </div>
+            <form method="post" class="mailing-body js-form-mailing-popup">
+                <input type="hidden" name="lists[pl2312]" value="set">
+                <div class="input-box">
+                    <label for="pp-email-0">Ваш email</label>
+                    <input required="" type="text" placeholder="" name="email" data-si-form="" data-si-preset="msdcaddemail" data-si-nosave="" data-si-event="change" id="pp-email-0">
+                </div>
+                <div class="input-box">
+                    <div style="height: 102px;" class="smart-captcha" data-sitekey="ysc1_RhnZmoyiqehu9aY6Fe8Tfybb40yBe1MH4ewA2Ag2cfb87bd7" data-testid="smartCaptcha-container"><div style="display: none;"><iframe frameborder="0" src="files/backend.636bb879d1085041bc19.html" aria-hidden="true" allow="encrypted-media *;" style="display: block; width: 100%; height: 100%; z-index: 0; transform: translate3d(0px, 0px, 0px);" data-testid="backend-iframe" title="SmartCaptcha backend"></iframe></div><input type="hidden" name="smart-token" data-testid="smart-token"><iframe frameborder="0" src="files/checkbox.en.4fdec4f0c66230612adf.html" aria-hidden="false" allow="encrypted-media *;" style="display: block; width: 100%; height: 100%; z-index: 0; transform: translate3d(0px, 0px, 0px);" data-testid="checkbox-iframe" title="SmartCaptcha checkbox widget"></iframe></div>
+                </div>
+                <button type="submit" class="button gradient"><span>Получить скидку</span></button>
+                <div class="politics" style="display: flex;align-items: center;gap: 0 10px;">
+                    <input type="hidden" name="agree" value="">
+                    <input type="checkbox" name="agree" style="width: 18px" value="1">
+                    <div style="text-align: left">
+                        Нажимая кнопку, вы соглашаетесь с <a href="https://beautysleep.ru/privacy-policy" target="_blank">политикой конфиденциальности</a>
+                    </div>
+                </div>
+                <input type="hidden" name="af_action" value="c30a10ea5d5b6cdde355c9ff7f8d7538">
+            </form> </div>
+    </div>
+</div>
+<div class="pp pp__mailing" data-title="popup_sleep_faq" data-pp="mailing-pop">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_mailing">
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+        <div class="popup-content">
+            <div class="mailing-header">
+                <span class="mailing-header__title">Дарим скидку!</span>
+                <span class="mailing-header__subtitle">Подпишитесь, чтобы получить скидку на первый заказ!</span>
+            </div>
+            <form method="post" class="mailing-body js-form-mailing-popup">
+                <input type="hidden" name="lists[pl62286]" value="set">
+                <div class="input-box">
+                    <label for="pp-email-0">Ваш email</label>
+                    <input required="" type="text" placeholder="" name="email" data-si-form="" data-si-preset="msdcaddemail" data-si-nosave="" data-si-event="change" id="pp-email-0">
+                </div>
+                <div class="input-box">
+                    <div style="height: 102px;" class="smart-captcha" data-sitekey="ysc1_RhnZmoyiqehu9aY6Fe8Tfybb40yBe1MH4ewA2Ag2cfb87bd7" data-testid="smartCaptcha-container"><div style="display: none;"><iframe frameborder="0" src="files/backend(1).636bb879d1085041bc19.html" aria-hidden="true" allow="encrypted-media *;" style="display: block; width: 100%; height: 100%; z-index: 0; transform: translate3d(0px, 0px, 0px);" data-testid="backend-iframe" title="SmartCaptcha backend"></iframe></div><input type="hidden" name="smart-token" data-testid="smart-token"><iframe frameborder="0" src="files/checkbox.en(1).4fdec4f0c66230612adf.html" aria-hidden="false" allow="encrypted-media *;" style="display: block; width: 100%; height: 100%; z-index: 0; transform: translate3d(0px, 0px, 0px);" data-testid="checkbox-iframe" title="SmartCaptcha checkbox widget"></iframe></div>
+                </div>
+                <button type="submit" class="button gradient"><span>ПОЛУЧИТЬ СКИДКУ</span></button>
+                <div class="politics" style="display: flex;align-items: center;gap: 0 10px;">
+                    <input type="hidden" name="agree" value="">
+                    <input type="checkbox" name="agree" style="width: 18px" value="1">
+                    <div style="text-align: left">
+                        Нажимая кнопку, вы соглашаетесь с <a href="https://beautysleep.ru/privacy-policy" target="_blank">политикой конфиденциальности</a>
+                    </div>
+                </div>
+                <input type="hidden" name="af_action" value="867e957bb0ca7ba981f730e42e58dc08">
+            </form>
+        </div>
+    </div>
+</div>
+<!--<div class="window_subs">-->
+<!--    <div class="left">-->
+<!--        <div class="title">-->
+<!--            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="17" viewBox="0 0 12 17" fill="none">-->
+<!--                <rect x="0.5" y="0.585007" width="11" height="15" fill="white" stroke="#221D1E" stroke-linejoin="round"></rect>-->
+<!--                <path d="M1 1.08501L6.625 8.08501L1 15.085" stroke="#221D1E" stroke-linecap="round" stroke-linejoin="round"></path>-->
+<!--            </svg>-->
+<!--            ДАРИМ СКИДКУ-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="right">-->
+<!--        <div class="title">ПОЛУЧИТЕ СКИДКУ 5%</div>-->
+<!--        <div class="subtitle">Подпишитесь на рассылки от Beauty Sleep и получите скидку 5% на первый заказ!</div>-->
+<!--        <form method="post" class="js-form-mailing-window-subs js-form-mailing-popup" name="js-form-mailing-window-subs">-->
+<!--            <input type="hidden" name="lists[pl32668]" value="set">-->
+<!--            <input type="email" name="email" data-si-form="" data-si-preset="msdcaddemail" data-si-nosave="" data-si-event="change" value="" placeholder="Ваш email" required="">-->
+<!--            <div class="checkbox">-->
+<!--                <input type="hidden" name="agree" value="">-->
+<!--                <input type="checkbox" name="agree" value="1">-->
+<!--                <span>-->
+<!--Нажимая на кнопку, я принимаю условия-->
+<!--<a href="https://beautysleep.ru/publichnaya-oferta" target="_blank">публичной оферты</a> и-->
+<!--<a href="https://beautysleep.ru/privacy-policy" target="_blank">политики конфидециальности</a>-->
+<!--</span>-->
+<!--            </div>-->
+<!--            <button type="submit">Получить скидку</button>-->
+<!--            <input type="hidden" name="af_action" value="0572a5447e678b1dd7ab38fd0404a108">-->
+<!--        </form> <div class="subs">Нажимая кнопку, вы соглашаетесь с <a href="https://beautysleep.ru/privacy-policy">политикой конфиденциальности</a></div>-->
+<!--    </div>-->
+<!--</div>-->
+
