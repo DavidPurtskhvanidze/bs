@@ -10,13 +10,16 @@
 /*    position: relative;*/
 /*    max-width: 100%;*/
 /*}*/
-@media screen and (max-width: 1800px) {
-    main {
-        padding-top: 0 !important;
-    }
-}
-main {
-    padding-top: 0 !important;
+/*@media screen and (max-width: 1800px) {*/
+/*    main {*/
+/*        padding-top: 0 !important;*/
+/*    }*/
+/*}*/
+/*main {*/
+/*    padding-top: 0 !important;*/
+/*}*/
+body section {
+    margin-top: 0 !important;
 }
 .p-o-section-title {
     font-family: 'Cera Pro', sans-serif;
@@ -27,6 +30,7 @@ main {
     text-align: center;
     text-transform: uppercase;
     color: #3C3C3B;
+    margin-bottom: 0;
 }
 .swiper {
     margin-left: auto;
@@ -37,8 +41,24 @@ main {
     padding: 0;
     z-index: 1
 }
+.p-o-facts-exam-wrapper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: auto
+}
+.p-o-exam-section__info-slider-wrapper {
+    width: 80%;
+}
+.p-o-exam-section__info-slider-wrapper .swiper-slide {
+    opacity: 0 !important;
+}
+.p-o-exam-section__info-slider-wrapper .swiper-slide.swiper-slide-thumb-active {
+    opacity: 1 !important;
+}
 .swiper-button-disabled {
-    opacity: 0.1;
+    opacity: 0.3;
 }
 .p-o-section-text-l-br {
     display: block;
@@ -184,7 +204,7 @@ main {
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
-    line-height: 1.3;
+    line-height: 1.1;
     text-align: start;
     color: #3C3C3B;
     padding: 0 20px;
@@ -250,7 +270,7 @@ main {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.1;
     text-align: center;
     color: #FEFAF8;
     padding: 0 16px;
@@ -260,6 +280,9 @@ main {
 }
 .p-o-fund-section__info-icon {
     margin-bottom: 32px;
+}
+.p-o-fund-section__info-text {
+    width: 90%;
 }
 .p-o-fund-section__info-title {
     font-family: 'Cera Pro', sans-serif;
@@ -277,33 +300,46 @@ main {
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
-    line-height: 1.6;
+    line-height: 1.1;
     color: #3C3C3B;
     margin-bottom: 16px;
+}
+.p-o-fund-section__info-text .button {
+    color: #fff;
+    background-color: #E3AEB8;
+    display: inline-flex;
+    margin-top: 20px;
 }
 /*Fund Section*/
 
 /*Catalog Section*/
 .p-o-catalog-section {
     padding: 78px 0 48px;
-}
-.p-o-catalog-section__top {
-    padding: 48px 0;
-}
-#catalog .p-o-catalog-section .products {
-    grid-gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-}
-.p-o-catalog-section .p-o-catalog-section__top .product .img {
-    height: 300px;
-}
-.p-o-catalog-section .product .img img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-.p-o-catalog-section__bottom {
     position: relative;
+}
+.p-o-catalog-section__wrapper {
+    position: relative;
+    padding: 24px 60px;
+}
+.p-o-catalog-section__button-wrapper {
+    padding: 64px 0;
+    text-align: center;
+}
+.p-o-catalog-section__button-wrapper .button.gradient {
+    height: 50px;
+    display: inline-flex;
+}
+.p-o-catalog-section .product-swiper-nav {
+    height: 10px;
+    position: absolute;
+    right: 60px;
+    left: 60px;
+    width: calc(100% - 120px);
+    top: 23%;
+}
+.p-o-catalog-section .product-swiper-nav .swiper-button {
+    width: 50px;
+    height: 50px;
 }
 .p-o-catalog-section__slider-next {
     display: flex;
@@ -354,36 +390,31 @@ main {
 
 
 /*Fact Section*/
+.p-o-facts-exam-wrapper {
+    padding: 64px 60px;
+    background: linear-gradient(193.72deg, #FFF3F5 15.55%, #E9ECF6 85.65%);
+}
 .p-o-facts-section {
-    padding: 78px 0 48px;
+
 }
 .p-o-facts-section__wrapper {
-    padding-top: 100px;
+    padding-top: 64px;
 }
 .p-o-facts-section__slider-wrapper {
-    padding: 45px 0;
+    padding: 0 0 64px;
 }
 .p-o-facts-section__item-title {
     display: flex;
     align-items: flex-end;
-    font-family: 'Montserrat';
+    font-family: 'Cera Pro', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 24px;
+    font-size: 32px;
     line-height: 1.2;
     text-transform: uppercase;
     color: #3C3C3B;
     margin-bottom: 32px;
     position: relative;
-}
-.p-o-facts-section__item-title:after {
-    content: '';
-    max-width: 100%;
-    height: 1px;
-    display: block;
-    background-color: #3C3C3B;
-    flex: 1;
-    margin: 0 0 0.2em 10px;
 }
 .p-o-facts-section__slider {
     position: relative;
@@ -393,11 +424,15 @@ main {
     align-items: center;
     justify-content: center;
     position: absolute;
-    right: -40px;
-    top: 10%;
+    right: -22px;
+    top: 14%;
     z-index: 2;
-    padding: 20px;
     cursor: pointer;
+    box-shadow: 3px 4px 12px rgba(0, 0, 0, .23);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
 }
 .p-o-facts-section__main-slider-next.swiper-button-lock {
     display: none;
@@ -405,23 +440,30 @@ main {
 .p-o-facts-section__main-slider-next:before {
     content: '';
     display: block;
-    border-width: 1px 1px 0 0;
+    border-width: 2px 2px 0 0;
     border-style: solid;
     transform: rotate(45deg);
-    border-color: #000;
-    width: 20px;
-    height: 20px;
+    border-color: #221D1E;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 21px;
 }
 .p-o-facts-section__main-slider-prev {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: -40px;
-    top: 10%;
+    left: -22px;
+    top: 14%;
     z-index: 2;
     padding: 20px;
     cursor: pointer;
+    box-shadow: 3px 4px 12px rgba(0, 0, 0, .23);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
 }
 .p-o-facts-section__main-slider-prev.swiper-button-lock {
     display: none;
@@ -429,12 +471,14 @@ main {
 .p-o-facts-section__main-slider-prev:before {
     content: '';
     display: block;
-    border-width: 0 0 1px 1px;
+    border-width: 0 0 2px 2px ;
     border-style: solid;
     transform: rotate(45deg);
-    border-color: #000;
-    width: 20px;
-    height: 20px;
+    border-color: #221D1E;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 21px;
 }
 .p-o-facts-section__slider-item {
     min-height: 100%;
@@ -442,7 +486,7 @@ main {
     flex-direction: column;
 }
 .p-o-facts-section__slider-item-top {
-
+    background-color: #fff;
 }
 .p-o-facts-section__slider-item-info {
     padding: 20px 16px;
@@ -450,21 +494,21 @@ main {
     flex: 1;
 }
 .p-o-facts-section__slider-item-title {
-    font-family: cera pro;
+    font-family: 'Cera Pro', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 28px;
     line-height: 1.2;
     text-transform: uppercase;
     color: #3C3C3B;
     margin-bottom: 8px;
 }
 .p-o-facts-section__slider-item-text {
-    font-family: 'Montserrat';
+    font-family: 'Cera Pro', sans-serif;
     font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.6;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.1;
     color: #3C3C3B;
 }
 /*Fact Section*/
@@ -491,7 +535,10 @@ main {
     justify-content: center;
     align-items: center;
 }
-.p-o-exam-section__main-slider-img_width {
+.p-o-exam-section__main-slider .swiper-slide img {
+    width: 90%;
+}
+.p-o-exam-section__main-slider .swiper-slide .p-o-exam-section__main-slider-img_width {
     width: 74%;
 }
 .p-o-exam-section__main-slider-next {
@@ -540,7 +587,7 @@ main {
     padding: 0 24px;
 }
 .p-o-exam-section__info-slider-wrapper .swiper-slide {
-    background-color: #FEFAF8;
+
 }
 .p-o-exam-section__info-slider-pagination {
     display: flex;
@@ -548,25 +595,25 @@ main {
     margin-bottom: 24px;
 }
 .p-o-exam-section__info-slider-bullet {
-    font-family: cera pro;
+    font-family: 'Cera Pro', sans-serif;
     font-style: normal;
-    font-weight: 300;
-    font-size: 39px;
+    font-weight: 500;
+    font-size: 52px;
     line-height: 1;
-    color: #E7DDD7;
+    color: #C7D0E7;
 }
 .p-o-exam-section__info-slider-bullet.swiper-pagination-bullet-active {
     background-color: transparent;
-    color: #3C3C3B;
+    color: #6E89C3;
 }
 .p-o-exam-section__info-slider {
 
 }
 .p-o-exam-section__info-slider-text {
     font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.6;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.1;
     color: #3C3C3B;
 }
 .p-o-exam-section__info-slider-navigation {
@@ -578,8 +625,8 @@ main {
 }
 .p-o-exam-section__info-slider-prev {
     font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
+    font-weight: 300;
+    font-size: 18px;
     line-height: 1;
     color: #3C3C3B;
     padding: 10px 0 10px 20px;
@@ -594,15 +641,15 @@ main {
     transform: rotate(45deg);
     border-color: #000;
     position: absolute;
-    top: 12px;
+    top: 16px;
     left: 3px;
     width: 6px;
     height: 6px;
 }
 .p-o-exam-section__info-slider-next {
     font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
+    font-weight: 300;
+    font-size: 18px;
     line-height: 1;
     color: #3C3C3B;
     padding: 10px 20px 10px 0;
@@ -617,7 +664,7 @@ main {
     transform: rotate(45deg);
     border-color: #000;
     position: absolute;
-    top: 12px;
+    top: 16px;
     right: 3px;
     width: 6px;
     height: 6px;
@@ -631,14 +678,14 @@ main {
 .p-o-exam-section__info {
     margin-top: 30px;
     padding: 34px 26px;
-    background-color: #FAEFE8;
+    background-color: #fff;
 }
 .p-o-exam-section__info-title {
-    margin-bottom: 24px;
-    font-family: cera pro;
+    margin-bottom: 32px;
+    font-family: 'Cera Pro', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 32px;
     line-height: 1.2;
     text-transform: uppercase;
     color: #3C3C3B;
@@ -649,9 +696,9 @@ main {
 }
 .p-o-exam-section__info-list ul li {
     font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.6;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.1;
     color: #3C3C3B;
     padding: 6px 10px 6px 20px;
     position: relative;
@@ -664,7 +711,7 @@ main {
     border-radius: 50%;
     background-color: #3C3C3B;
     position: absolute;
-    top: 1.1em;
+    top: 0.7em;
     left: 0;
 }
 /*Fact Section*/
@@ -677,22 +724,24 @@ main {
 }
 .p-o-test-section__info-wrapper {
     flex: 0 0 auto;
-    width: 55%;
+    width: 45%;
     background-color: #F7E7EA;
-    padding: 6% 32px;
+    padding: 6% 125px 6% 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
 }
-.p-o-test-section__info-wrapper .btn {
+.p-o-test-section__info-wrapper .button.gradient {
+    display: inline-flex;
+    height: 50px;
     align-self: flex-start;
-    margin-top: 36px;
+    margin-top: 32px;
 }
 .p-o-test-section__info-title {
-    font-family: cera pro;
+    font-family: 'Cera Pro', sans-serif;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 40px;
     line-height: 1.2;
     letter-spacing: 0.05em;
@@ -702,27 +751,22 @@ main {
 }
 .p-o-test-section__info-text {
     font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.6;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.1;
     color: #3C3C3B;
 }
 .p-o-test-section__info-text_small {
-    font-size: 11px;
+    font-size: 19px;
     margin-top: 4px;
-}
-.p-o-test-section__info-mark {
-    left: 0;
-    position: absolute;
-    transform: translateX(-50%);
-    top: 20px;
+    color: #ADADAD;
 }
 .p-o-test-section__info-mark img {
     width: 90px;
 }
 .p-o-test-section__picture-wrapper {
     flex: 0 0 auto;
-    width: 45%;
+    width: 55%;
     position: relative;
 }
 .p-o-test-section__picture-wrapper img {
@@ -739,20 +783,25 @@ main {
     padding: 48px 0;
 }
 .p-o-myth-section__accordion-wrapper {
-    margin-top: 48px;
+    margin-top: 64px;
 }
-.p-o-myth-section__accordion-wrapper .ask {
+.p-o-myth-section__accordion-wrapper .faq-question {
     text-transform: uppercase;
 }
-.p-o-myth-section__accordion-wrapper .answer {
-    padding-right: 10%;
+.p-o-myth-section__accordion-wrapper .faq__content {
+    max-width: 1000px;
+    margin: auto;
 }
-.p-o-myth-section__accordion-wrapper .answer p {
-    font-family: 'Montserrat';
+.p-o-myth-section__accordion-wrapper .faq-answer {
+    padding-right: 10%;
+    margin-top: 16px;
+}
+.p-o-myth-section__accordion-wrapper .faq-answer p {
+    font-family: 'Cera Pro', sans-serif;
     font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.6;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.1;
     color: #3C3C3B;
 }
 /*Myth Section*/
@@ -767,7 +816,7 @@ main {
     align-items: center;
     justify-content: center;
     gap: 64px;
-    padding: 48px 42px;
+    padding: 64px 10%;
 }
 .p-o-partners-section__wrapper img {
     width: 100%;
@@ -780,10 +829,23 @@ main {
 
 @media (max-width: 992px) {
     .p-o-risk-section__stats-item-count {
-        font-size: 82px;
+        font-size: 62px;
     }
     .p-o-risk-section__stats-item-text {
-        padding: 0 22px;
+        font-size: 20px;
+    }
+    .p-o-risk-section__stats-item-text {
+        padding: 0 6px;
+    }
+
+    .p-o-fund-section__content {
+        padding: 0;
+    }
+    .p-o-fund-section__info {
+        padding: 64px 0 64px;
+    }
+    .p-o-fund-section__info-text .button {
+        padding: 0 16px;
     }
 
     .p-o-exam-section__wrapper {
@@ -802,6 +864,23 @@ main {
         width: 100%;
         padding: 0;
     }
+
+    .p-o-facts-section__slider-item-title {
+        font-size: 22px;
+    }
+    .p-o-facts-section__slider-item-text {
+        font-size: 16px;
+    }
+
+    .p-o-test-section__info-wrapper {
+        padding: 6% 30px 6% 30px;
+    }
+
+    .p-o-myth-section {
+        padding: 48px 30px;
+    }
+
+
 }
 @media (max-width: 768px) {
     .p-o-main-section {
@@ -827,6 +906,7 @@ main {
 
     .p-o-risk-section__stats {
         flex-direction: column;
+        padding: 10px;
     }
     .p-o-risk-section__stats-divider {
         min-height: 1px;
@@ -873,12 +953,6 @@ main {
     .p-o-test-section__picture-wrapper {
         width: 100%;
     }
-    .p-o-test-section__info-mark {
-        left: 4%;
-        position: absolute;
-        transform: translateY(-50%);
-        top: 0;
-    }
 
     .p-o-partners-section__item {
         flex: initial;
@@ -903,7 +977,7 @@ main {
         display: block;
     }
     .p-o-section-title {
-        font-size: 14px;
+        font-size: 18px;
     }
     .p-o-main-section__img {
         right: 0;
@@ -932,6 +1006,30 @@ main {
         height: 130px;
     }
 
+
+    .p-o-catalog-section__wrapper {
+        position: relative;
+        padding: 24px 0 0;
+    }
+    .p-o-catalog-section__button-wrapper {
+        padding: 20px 0;
+    }
+    .p-o-catalog-section__button-wrapper .button.gradient {
+        font-size: 14px;
+        height: 28px;
+        line-height: 1;
+        margin: 0;
+        padding: 0 16px;
+    }
+    .p-o-catalog-section .product-swiper-nav .swiper-button {
+        width: 28px;
+        height: 28px;
+    }
+
+    .p-o-facts-exam-wrapper {
+        padding: 32px 0;
+    }
+
     .p-o-risk-section .p-o-section-title {
         display: none;
     }
@@ -939,22 +1037,23 @@ main {
         padding: 20px 0;
     }
     .p-o-risk-section__slider {
-        padding: 16px 0;
+        padding: 0;
     }
     .p-o-risk-section__stats-item-count {
         font-size: 48px;
         margin-bottom: 10px;
     }
     .p-o-risk-section__stats-item-text {
-        font-size: 10px;
+        font-size: 14px;
     }
     .p-o-risk-section__stats-divider {
-        margin: 16px 0;
+        margin: 14px 0;
     }
 
     .p-o-fund-section {
-        background-color: #FAEFE8;
-        margin: 16px 0 0;
+        margin: 0;
+        padding: 10px;
+        background-color: transparent;
     }
     .p-o-fund-section__percent-count {
         font-size: 48px;
@@ -962,28 +1061,33 @@ main {
         padding: 0 10px;
     }
     .p-o-fund-section__percent-text {
-        font-size: 12px;
-        padding: 10px 0;
+        font-size: 14px;
+        padding: 10px 0 12px;
     }
     .p-o-fund-section__percent {
         padding: 0 10px;
-        margin: 0 -6%;
+        margin: 0 -2%;
     }
     .p-o-fund-section__info {
         padding: 22px 12px 16px;
+        background-color: #FBF3F5;
     }
     .p-o-fund-section__info-icon {
         margin-bottom: 16px;
         width: 225px;
     }
     .p-o-fund-section__info-title {
-        font-size: 14px;
+        font-size: 18px;
     }
     .p-o-fund-section__info-desc p {
-        font-size: 10px;
+        font-size: 14px;
     }
-    .p-o-fund-section__info-text .btn-pink {
+    .p-o-fund-section__info-text .button {
         width: 100%;
+        font-size: 14px;
+        height: 28px;
+        line-height: 1;
+        margin: 0;
     }
 
 
@@ -1034,9 +1138,6 @@ main {
     }
     .p-o-facts-section__main-slider-next {
         right: -28px;
-    }
-    .p-o-facts-section__slider-item {
-        width: 90%;
     }
     .p-o-facts-section__main-slider-prev:before {
         width: 16px;

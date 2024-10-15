@@ -45,7 +45,8 @@ const factsSlider1 = new Swiper('#facts-slider1', {
     breakpoints: {
         // when window width is >= 320px
         320: {
-            slidesPerView: 1,
+            centeredSlides: true,
+            slidesPerView: 1.4,
             spaceBetween: 20,
         },
         // when window width is >= 480px
@@ -53,13 +54,13 @@ const factsSlider1 = new Swiper('#facts-slider1', {
             slidesPerView: 2,
             spaceBetween: 10
         },
-        // when window width is >= 640px
-        640: {
-            slidesPerView: 3,
-            spaceBetween: 16
-        },
         // when window width is >= 992px
         992: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        },
+        // when window width is >= 1320px
+        1320: {
             slidesPerView: 4,
             spaceBetween: 20
         }
@@ -77,7 +78,8 @@ const factsSlider2 = new Swiper('#facts-slider2', {
     breakpoints: {
         // when window width is >= 320px
         320: {
-            slidesPerView: 1,
+            centeredSlides: true,
+            slidesPerView: 1.4,
             spaceBetween: 20,
         },
         // when window width is >= 480px
@@ -85,13 +87,13 @@ const factsSlider2 = new Swiper('#facts-slider2', {
             slidesPerView: 2,
             spaceBetween: 10
         },
-        // when window width is >= 640px
-        640: {
-            slidesPerView: 3,
-            spaceBetween: 16
-        },
         // when window width is >= 992px
         992: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        },
+        // when window width is >= 1320px
+        1320: {
             slidesPerView: 4,
             spaceBetween: 20
         }
@@ -103,13 +105,14 @@ const catalogSlider = new Swiper('#catalog-slider', {
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
-        nextEl: ".p-o-catalog-section__slider-next",
-        prevEl: ".p-o-catalog-section__slider-prev",
+        nextEl: ".product-swiper-nav .swiper-button-next",
+        prevEl: ".product-swiper-nav .swiper-button-prev",
     },
     // Responsive breakpoints
     breakpoints: {
         // when window width is >= 320px
         320: {
+            centeredSlides: true,
             slidesPerView: 1.4,
             spaceBetween: 20,
         },
