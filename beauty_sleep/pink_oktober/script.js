@@ -29,7 +29,7 @@ const riskSlider = new Swiper('#risk-slider', {
         // when window width is >= 992px
         992: {
             slidesPerView: 6,
-            spaceBetween: 20
+            spaceBetween: 48
         }
     }
 });
