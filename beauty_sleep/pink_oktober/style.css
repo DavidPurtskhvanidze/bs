@@ -205,14 +205,13 @@ body section {
 .p-o-risk-section__stats {
     display: flex;
     align-items: flex-start;
-    margin: 0 -20px;
 }
 .p-o-risk-section__stats-divider {
     min-height: 100%;
     width: 1px;
     background-color: #C2C2C2;
     align-self: stretch;
-    margin: 0 20px;
+    margin: 0 30px;
 }
 .p-o-risk-section__stats-item {
     flex: 1;
@@ -239,7 +238,6 @@ body section {
     line-height: 1.1;
     text-align: start;
     color: #3C3C3B;
-    padding: 0 20px;
 }
 .p-o-risk-section__stats-item-text_asterisk {
     font-size: 18px;
@@ -844,6 +842,9 @@ body section {
     .p-o-risk-section__stats-item-text {
         padding: 0 6px;
     }
+    .p-o-risk-section__stats {
+        margin: 0;
+    }
 
     .p-o-fund-section__content {
         padding: 0;
@@ -890,6 +891,23 @@ body section {
 
 }
 @media (max-width: 768px) {
+    .p-o-slider-next {
+        width: 28px;
+        height: 28px;
+    }
+    .p-o-slider-next:before {
+        width: 8px;
+        height: 8px;
+    }
+    .p-o-slider-prev {
+        width: 28px;
+        height: 28px;
+    }
+    .p-o-slider-prev:before {
+        width: 8px;
+        height: 8px;
+    }
+
     .p-o-main-section {
         flex-direction: column;
         background-image: none;
@@ -928,6 +946,13 @@ body section {
         text-align: start;
     }
 
+    .p-o-facts-section__slider .p-o-slider-next {
+        right: 40px;
+    }
+    .p-o-facts-section__slider .p-o-slider-prev {
+        left: 40px;
+    }
+
     .p-o-fund-section__content {
         padding: 0;
         flex-direction: column;
@@ -936,6 +961,7 @@ body section {
         padding: 0 0;
     }
     .p-o-fund-section__percent {
+        padding: 0 10px;
         flex-direction: row;
         margin: 0 -3%;
     }
@@ -947,23 +973,17 @@ body section {
     .p-o-fund-section__percent-text {
         text-align: start;
     }
-
-    .p-o-exam-section__info-list ul {
-        column-count: 1;
-    }
-    .p-o-test-section {
-        flex-direction: column-reverse;
-    }
-    .p-o-test-section__info-wrapper {
-        width: 100%;
-    }
-    .p-o-test-section__picture-wrapper {
-        width: 100%;
+    .p-o-fund-section__info {
+        padding: 64px 30px 36px;
     }
 
     .p-o-partners-section__item {
         flex: initial;
-        margin: 20px 0;
+        margin: 10px 0;
+        width: 40%;
+    }
+    .p-o-partners-section {
+        padding: 10px 0;
     }
     .p-o-partners-section__wrapper {
         justify-content: space-around;
@@ -975,8 +995,7 @@ body section {
         grid-gap: 32px;
         grid-template-columns: repeat(1, 1fr);
     }
-}
-@media (max-width: 576px) {
+
     .p-o-section-text-l-br {
         display: none;
     }
@@ -1018,6 +1037,12 @@ body section {
         position: relative;
         padding: 24px 0 0;
     }
+    .p-o-catalog-section__wrapper .p-o-slider-next {
+        top: 40%;
+    }
+    .p-o-catalog-section__wrapper .p-o-slider-prev {
+        top: 40%;
+    }
     .p-o-catalog-section__button-wrapper {
         padding: 20px 0;
     }
@@ -1034,7 +1059,7 @@ body section {
     }
 
     .p-o-facts-exam-wrapper {
-        padding: 32px 0;
+        padding: 16px 0 32px;
     }
 
     .p-o-risk-section .p-o-section-title {
@@ -1052,6 +1077,7 @@ body section {
     }
     .p-o-risk-section__stats-item-text {
         font-size: 14px;
+        line-height: 1.2;
     }
     .p-o-risk-section__stats-divider {
         margin: 14px 0;
@@ -1114,14 +1140,16 @@ body section {
         display: none;
     }
 
+
     .p-o-facts-section {
         padding: 16px 0 16px;
+        margin-bottom: 0;
     }
     .p-o-facts-section__wrapper {
         padding-top: 0;
     }
     .p-o-facts-section__item-title {
-        font-size: 14px;
+        font-size: 16px;
         justify-content: center;
     }
     .p-o-facts-section__item-title:after {
@@ -1131,10 +1159,10 @@ body section {
         padding: 32px 0 0;
     }
     .p-o-facts-section__slider-item-title {
-        font-size: 14px;
+        font-size: 16px;
     }
     .p-o-facts-section__slider-item-text {
-        font-size: 10px;
+        font-size: 14px;
     }
     .p-o-facts-section__slider .swiper-slide {
         justify-content: center;
@@ -1155,6 +1183,15 @@ body section {
         height: 16px;
     }
 
+    .p-o-exam-section .p-o-section-title {
+        font-size: 14px;
+    }
+    .p-o-exam-section__info-list ul {
+        column-count: 1;
+    }
+    .p-o-exam-section__main-info-wrapper {
+        padding: 0 10px;
+    }
     .p-o-exam-section {
         padding-top: 16px;
     }
@@ -1163,38 +1200,38 @@ body section {
     }
     .p-o-exam-section__info-slider-pagination {
         gap: 12px;
-        margin-bottom: 16px;
+        margin-bottom: 10px;
     }
     .p-o-exam-section__info-slider-text {
-        font-size: 10px;
+        font-size: 14px;
     }
     .p-o-exam-section__info-slider-navigation {
         display: none;
     }
     .p-o-exam-section__info {
         margin-top: 16px;
-        padding: 26px 24px;
+        padding: 16px;
     }
     .p-o-exam-section__info-title {
         margin-bottom: 10px;
-        font-size: 14px;
+        font-size: 16px;
     }
     .p-o-exam-section__info-list ul li {
-        font-size: 10px;
-        padding: 4px 10px 4px 20px;
+        font-size: 14px;
+        padding: 4px 10px 4px 16px;
     }
     .p-o-exam-section__wrapper {
-        padding: 48px 0 0;
+        padding: 20px 0 0;
     }
     .p-o-exam-section__main-slider-prev {
-        left: -28px;
+        left: 10px;
     }
     .p-o-exam-section__main-slider-prev:before {
         width: 16px;
         height: 16px;
     }
     .p-o-exam-section__main-slider-next {
-        right: -28px;
+        right: 10px;
     }
     .p-o-exam-section__main-slider-next:before {
         width: 16px;
@@ -1202,7 +1239,16 @@ body section {
     }
 
     .p-o-test-section {
-        padding: 62px 0 16px;
+        flex-direction: column-reverse;
+    }
+    .p-o-test-section__info-wrapper {
+        width: 100%;
+    }
+    .p-o-test-section__picture-wrapper {
+        width: 100%;
+    }
+    .p-o-test-section {
+        padding: 32px 10px 16px;
     }
     .p-o-test-section__info-title {
         font-size: 18px;
@@ -1218,17 +1264,32 @@ body section {
         font-size: 7px;
         margin-top: 4px;
     }
+    .p-o-test-section__info-wrapper .button.gradient {
+        display: inline-flex;
+        height: 30px;
+        align-self: flex-start;
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 1;
+    }
 
+    .p-o-myth-section__accordion-wrapper {
+        margin-top: 22px;
+    }
     .p-o-myth-section {
-        padding: 26px 0;
+        padding: 16px 10px;
+    }
+    .p-o-myth-section__accordion-wrapper .faq-question {
+        font-size: 14px;
+    }
+    .p-o-myth-section__accordion-wrapper .faq-answer {
+        margin-top: 7px;
+    }
+    .p-o-myth-section__accordion-wrapper .faq-answer p {
+        font-size: 14px;
     }
 
-    .p-o-partners-section {
-        padding: 10px 0;
-    }
-    .p-o-partners-section__item {
-        width: 40%;
-    }
+
 }
 
 
