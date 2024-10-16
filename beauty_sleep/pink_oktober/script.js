@@ -34,7 +34,6 @@ const riskSlider = new Swiper('#risk-slider', {
     }
 });
 const catalogSlider = new Swiper('#catalog-slider', {
-    centeredSlides: true,
     slidesPerView: 1.4,
     spaceBetween: 20,
     navigation: {
@@ -43,6 +42,12 @@ const catalogSlider = new Swiper('#catalog-slider', {
     },
     // Responsive breakpoints
     breakpoints: {
+        // when window width is >= 320px
+        320: {
+            centeredSlides: true,
+            slidesPerView: 1.4,
+            spaceBetween: 20,
+        },
         // when window width is >= 480px
         480: {
             centeredSlides: true,
@@ -63,7 +68,6 @@ const catalogSlider = new Swiper('#catalog-slider', {
 });
 const factsSlider1 = new Swiper('#facts-slider1', {
     // Default parameters
-    centeredSlides: true,
     slidesPerView: 1.4,
     spaceBetween: 20,
     navigation: {
@@ -72,6 +76,12 @@ const factsSlider1 = new Swiper('#facts-slider1', {
     },
     // Responsive breakpoints
     breakpoints: {
+        // when window width is >= 320px
+        320: {
+            centeredSlides: true,
+            slidesPerView: 1.4,
+            spaceBetween: 20,
+        },
         // when window width is >= 480px
         480: {
             centeredSlides: true,
@@ -92,7 +102,6 @@ const factsSlider1 = new Swiper('#facts-slider1', {
 });
 const factsSlider2 = new Swiper('#facts-slider2', {
     // Default parameters
-    centeredSlides: true,
     slidesPerView: 1.4,
     spaceBetween: 20,
     navigation: {
@@ -101,6 +110,12 @@ const factsSlider2 = new Swiper('#facts-slider2', {
     },
     // Responsive breakpoints
     breakpoints: {
+        // when window width is >= 320px
+        320: {
+            centeredSlides: true,
+            slidesPerView: 1.4,
+            spaceBetween: 20,
+        },
         // when window width is >= 480px
         480: {
             centeredSlides: true,

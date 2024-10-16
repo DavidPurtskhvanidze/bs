@@ -222,6 +222,7 @@ body section {
 /*Risk Section*/
 .p-o-risk-section {
     padding: 190px 60px 48px;
+    margin-bottom: 128px;
 }
 .p-o-risk-section__slider {
     padding: 48px 0;
@@ -829,6 +830,14 @@ body section {
     padding-right: 10%;
     margin-top: 16px;
 }
+.p-o-myth-section__accordion-wrapper .faq-question p {
+    font-family: 'Cera Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #221D1E;
+}
 .p-o-myth-section__accordion-wrapper .faq-answer p {
     font-family: 'Cera Pro', sans-serif;
     font-style: normal;
@@ -959,6 +968,9 @@ body section {
         height: 100%;
     }
     .p-o-main-section__info-logos {
+        display: none;
+    }
+    .p-o-main-section__info:after {
         display: none;
     }
 
@@ -1097,6 +1109,7 @@ body section {
     }
     .p-o-risk-section {
         padding: 20px 0;
+        margin-bottom: 0;
     }
     .p-o-risk-section__slider {
         padding: 0;
@@ -1266,6 +1279,9 @@ body section {
     .p-o-exam-section__main-slider-next:before {
         width: 16px;
         height: 16px;
+    }
+    .p-o-exam-section__info-slider-wrapper {
+        width: 100%;
     }
 
     .p-o-test-section {
