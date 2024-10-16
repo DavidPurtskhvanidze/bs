@@ -1304,11 +1304,13 @@ body section {
         padding: 5% 24px;
     }
     .p-o-test-section__info-text {
-        font-size: 10px;
+        font-size: 14px;
+        line-height: 1.3;
+        color: #221D1E;
     }
     .p-o-test-section__info-text_small {
-        font-size: 7px;
-        margin-top: 4px;
+        font-size: 11px;
+        margin-top: 6px;
     }
     .p-o-test-section__info-wrapper .button.gradient {
         display: inline-flex;
