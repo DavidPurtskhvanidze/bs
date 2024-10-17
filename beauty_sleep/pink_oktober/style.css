@@ -541,7 +541,7 @@ body section {
     font-family: 'Cera Pro', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.1;
     color: #3C3C3B;
 }
@@ -868,7 +868,11 @@ body section {
 }
 /*Partners Section*/
 
-
+@media (min-width: 1580px) {
+    .p-o-facts-section__slider-item-title {
+        font-size: 32px;
+    }
+}
 @media (max-width: 992px) {
     .p-o-risk-section__stats-item-count {
         font-size: 62px;
