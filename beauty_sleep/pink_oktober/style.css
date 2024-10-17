@@ -9,7 +9,7 @@ body section {
     line-height: 1.2;
     text-align: center;
     text-transform: uppercase;
-    color: #3C3C3B;
+    color: #221D1E;
     margin-bottom: 0;
 }
 
@@ -351,7 +351,7 @@ body section {
     line-height: 1.2;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #3C3C3B;
+    color: #221D1E;
     margin-bottom: 16px;
 }
 .p-o-fund-section__info-desc p {
@@ -360,7 +360,7 @@ body section {
     font-weight: 300;
     font-size: 24px;
     line-height: 1.1;
-    color: #3C3C3B;
+    color: #4F4A4B;
     margin-bottom: 16px;
 }
 .p-o-fund-section__info-text .button {
@@ -431,7 +431,7 @@ body section {
     font-size: 32px;
     line-height: 1.2;
     text-transform: uppercase;
-    color: #3C3C3B;
+    color: #221D1E;
     margin-bottom: 32px;
     position: relative;
 }
@@ -648,7 +648,7 @@ body section {
     font-weight: 300;
     font-size: 24px;
     line-height: 1.1;
-    color: #3C3C3B;
+    color: #4F4A4B;
 }
 .p-o-exam-section__info-slider-navigation {
     display: flex;
@@ -662,7 +662,7 @@ body section {
     font-weight: 300;
     font-size: 18px;
     line-height: 1;
-    color: #3C3C3B;
+    color: #4F4A4B;
     padding: 10px 0 10px 20px;
     position: relative;
     cursor: pointer;
@@ -685,7 +685,7 @@ body section {
     font-weight: 300;
     font-size: 18px;
     line-height: 1;
-    color: #3C3C3B;
+    color: #4F4A4B;
     padding: 10px 20px 10px 0;
     position: relative;
     cursor: pointer;
@@ -722,7 +722,7 @@ body section {
     font-size: 32px;
     line-height: 1.2;
     text-transform: uppercase;
-    color: #3C3C3B;
+    color: #221D1E;
 }
 .p-o-exam-section__info-list ul {
     list-style: none;
@@ -733,7 +733,7 @@ body section {
     font-weight: 300;
     font-size: 24px;
     line-height: 1.1;
-    color: #3C3C3B;
+    color: #4F4A4B;
     padding: 6px 10px 6px 20px;
     position: relative;
 }
@@ -743,7 +743,7 @@ body section {
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    background-color: #3C3C3B;
+    background-color: #4F4A4B;
     position: absolute;
     top: 0.7em;
     left: 0;
@@ -780,7 +780,7 @@ body section {
     line-height: 1.2;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: #3C3C3B;
+    color: #221D1E;
     margin-bottom: 24px;
 }
 .p-o-test-section__info-text {
@@ -788,7 +788,7 @@ body section {
     font-weight: 300;
     font-size: 24px;
     line-height: 1.1;
-    color: #3C3C3B;
+    color: #4F4A4B;
 }
 .p-o-test-section__info-text_small {
     font-size: 18px;
@@ -844,7 +844,7 @@ body section {
     font-weight: 300;
     font-size: 24px;
     line-height: 1.1;
-    color: #3C3C3B;
+    color: #221D1E;
 }
 /*Myth Section*/
 
