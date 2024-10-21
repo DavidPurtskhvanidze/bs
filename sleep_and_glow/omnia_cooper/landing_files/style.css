@@ -1,0 +1,23 @@
+.defence {
+    margin-top: 0!important;
+    padding-top: 90px;
+    background: #fcf9f9;
+    padding-bottom: 120px
+}
+.defence .title {
+    position: relative;
+
+}
+.defence h3 {
+    max-width: 750px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 100%;
+    background: linear-gradient(273deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 auto 40px;
+}
