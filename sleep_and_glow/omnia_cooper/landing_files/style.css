@@ -1,6 +1,3 @@
-header {
-    display: none !important;
-}
 .defence {
     margin-top: 0!important;
     background: #fcf9f9;
@@ -117,7 +114,7 @@ header {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 0;
+    margin-bottom: 40px;
 }
 .choose-defence .block {
     padding: 0 18%;
@@ -190,7 +187,8 @@ header {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 0;
+    margin-top: 24px;
+    z-index: 1;
 }
 .choose-defence .body {
     padding: 0 150px;
