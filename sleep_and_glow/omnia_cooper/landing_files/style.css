@@ -128,6 +128,7 @@ header {
 .choose-defence {
     overflow: hidden;
     padding-top: 34px;
+    padding: 34px 12% 0;
 }
 .header-mob-title {
     display: none;
@@ -137,7 +138,7 @@ header {
     font-size: 48px;
     font-weight: 500;
     text-transform: uppercase;
-    line-height: 100%;
+    line-height: 1.1;
     background: linear-gradient(273deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -145,14 +146,15 @@ header {
     margin-bottom: 0;
 }
 .choose-defence .block {
-    padding: 0;
-    border: 1px solid #333;
+    padding: 50px 0 0;
+    border: 1px solid #C7C7C7;
     overflow: hidden;
+    border-bottom-width: 0;
 }
 .choose-defence .header-title {
     display: block;
     position: absolute;
-    top: 89px;
+    top: 68px;
     left: 60px;
 }
 .choose-defence .header {
@@ -160,12 +162,12 @@ header {
     align-items: center;
     justify-content: space-evenly;
     width: 70%;
-    margin-bottom: 100px;
+    margin-bottom: 68px;
     margin-left: 30%;
     /* position: relative; */
 }
 .choose-defence .pillow-img-box {
-    margin-top: 24px;
+    margin-top: 0;
     margin-bottom: 0;
 }
 .choose-defence .pillow-img-box-wrapper {
@@ -182,16 +184,17 @@ header {
 }
 .choose-defence .header-divider {
     align-self: stretch;
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     justify-content: center;
+    padding-top: 56px;
 }
 .choose-defence .header-divider:after {
     content: '';
     display: block;
     width: 1px;
     height: 100%;
-    background-color: #221D1E;
+    background-color: #C7C7C7;
     position: absolute;
     z-index: -1;
     top: 0;
@@ -237,48 +240,50 @@ header {
 }
 .choose-defence .pillow-info li {
     position: relative;
-    margin-bottom: 42px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 68%;
     margin-left: 32%;
+    /* padding: 10px 0; */
 }
 .choose-defence .pillow-info li:last-child {
     margin-bottom: 0;
 }
 .choose-defence .pillow-info-box:before {
     content: '';
-    width: 42px;
-    height: 42px;
+    width: 26px;
+    height: 26px;
     display: block;
     background-image: url(circle-plus.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 98%;
     position: absolute;
     background-color: #fff;
-    left: 21%;
-    top: -1px;
-    transform: translate(-30%);
+    left: 20%;
+    top: auto;
+    transform: translate(-40%);
+}
+.choose-defence .pillow-info-box.pillow-info-box-highlight:before {
+    display: none;
 }
 .choose-defence .pillow-info-box:after {
     content: '';
-    width: 42px;
-    height: 42px;
+    width: 28px;
+    height: 28px;
     display: block;
     background-image: url("circle-plus-fill.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: 98%;
     position: absolute;
     background-color: #fff;
-    right: 21%;
-    top: -1px;
-    transform: translate(-30%);
+    right: 20%;
+    top: auto;
+    transform: translate(-40%);
 }
 .choose-defence .pillow-info li .pillow-info-item {
-    position: relative;
     display: flex;
     font-weight: 400;
     font-size: 22px;
@@ -286,33 +291,29 @@ header {
     text-align: start;
     text-transform: uppercase;
     color: rgba(34, 29, 30, 0.8);
-    margin: 0;
     width: 100%;
-    padding-left: 0%;
+    padding-left: 0;
     position: static;
     /* align-self: flex-start; */
     transform: translate(-47%);
+    margin: 12px 0;
 }
 .choose-defence .pillow-info li span {
-    background-color: #fff;
-    padding: 8px 10px 8px 60px;
+    padding: 0 10px 0 60px;
     display: inline-block;
-    /* position: absolute; */
-    /* align-self: flex-start; */
-    /* transform: translate(-121%); */
 }
 .choose-defence .pillow-info li .pillow-info-item:after {
     content: '';
     display: block;
     width: 147%;
     height: 1px;
-    background-color: #221D1E;
+    background-color: #C7C7C7;
     position: absolute;
     right: 0;
     left: 0;
     top: auto;
     z-index: -1;
-    bottom: -20px;
+    bottom: -12px;
 }
 
 .choose-defence .pillow-info-box.pillow-info-box-highlight .pillow-info-item {
@@ -395,7 +396,7 @@ header {
         display: block;
         width: 1px;
         height: 100%;
-        background-color: #221D1E;
+        background-color: #C7C7C7;
         position: absolute;
         z-index: -1;
         top: 12%;
@@ -458,7 +459,7 @@ header {
         background-image: url(circle-plus.svg);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
+        background-size: 98%;
         position: absolute;
         background-color: #fff;
         left: 0;
@@ -472,7 +473,7 @@ header {
         background-image: url("circle-plus-fill.svg");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
+        background-size: 98%;
         position: absolute;
         background-color: #fff;
         right: 0;
@@ -500,7 +501,7 @@ header {
         display: block;
         width: 100%;
         height: 1px;
-        background-color: #221D1E;
+        background-color: #C7C7C7;
         position: absolute;
         right: 0;
         top: 20px;
