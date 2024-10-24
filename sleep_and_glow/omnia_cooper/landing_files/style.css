@@ -1,38 +1,62 @@
+header {
+    display: none !important;
+}
 .defence {
     margin-top: 0!important;
     background: #fcf9f9;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    width: 100%;
+    /* justify-content: center; */
 }
 .defence-video-block {
-    position: relative;
+    position: absolute;
     display: inline-block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    /* align-self: flex-start; */
 }
 .defence-video-block:after {
     content: '';
     display: block;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FCF9F9 98.64%);
     top: 0;
-    right: 0;
+    right: -2px;
     bottom: 0;
     width: 50%;
     position: absolute;
 }
 .defence .block {
     width: 80%;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     right: 0;
     bottom: 0;
     padding-left: 30%;
     padding-top: 84px;
+    padding-bottom: 136px;
+    align-self: end;
 }
 
 .defence video {
     opacity: 0.99;
+    height: 100%;
 }
 .defence .title {
     position: relative;
-
+    z-index: 1;
+    width: 80%;
+    /* position: absolute; */
+    /* top: 0; */
+    /* right: 0; */
+    /* bottom: 0; */
+    padding-left: 30%;
+    padding-top: 84px;
+    padding-bottom: 53px;
+    align-self: end;
 }
 .defence h3 {
     text-align: start;
@@ -48,23 +72,24 @@
 }
 .defence .title-cu-1 {
     position: absolute;
-    width: 150px;
-    right: 11%;
-    bottom: -230%;
+    width: 180px;
+    right: -44%;
+    bottom: -88%;
 }
 .defence .title-cu-2 {
     position: absolute;
-    width: 96px;
-    right: 28%;
-    bottom: -120%;
+    width: 131px;
+    right: -28%;
+    bottom: -7%;
 }
 .defence .title-cu-3 {
     position: absolute;
-    width: 64px;
-    right: 6%;
+    width: 87px;
+    right: -20%;
+    top: -26%;
 }
 .defence .list {
-    position: absolute;
+    position: relative;
     transform: translate(-44%);
     margin-top: 4%;
 }
@@ -275,4 +300,17 @@
 }
 .choose-defence .pillow-info-box.pillow-info-box-highlight .pillow-info-item:after {
     width: 50%;
+}
+
+@media (max-width: 992px) {
+    .defence .block {
+        width: 100%;
+        position: static;
+        padding-left: 0;
+        padding-top: 0;
+    }
+    .defence h3 {
+        text-align: center;
+        font-size: 18px;
+    }
 }
