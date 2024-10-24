@@ -1,15 +1,11 @@
-header {
-    display: none !important;
-}
+/*defence*/
 .defence {
     margin-top: 0!important;
     background: #fcf9f9;
     position: relative;
     display: flex;
     flex-direction: column;
-    /* align-items: flex-end; */
     width: 100%;
-    /* justify-content: center; */
 }
 .defence-video-block {
     position: absolute;
@@ -17,7 +13,6 @@ header {
     top: 0;
     bottom: 0;
     left: 0;
-    /* align-self: flex-start; */
 }
 .defence-video-block:after {
     content: '';
@@ -31,7 +26,6 @@ header {
 }
 .defence .block {
     width: 80%;
-    /* position: absolute; */
     top: 0;
     right: 0;
     bottom: 0;
@@ -40,7 +34,6 @@ header {
     padding-bottom: 136px;
     align-self: end;
 }
-
 .defence video {
     opacity: 0.99;
     height: 100%;
@@ -49,10 +42,6 @@ header {
     position: relative;
     z-index: 1;
     width: 80%;
-    /* position: absolute; */
-    /* top: 0; */
-    /* right: 0; */
-    /* bottom: 0; */
     padding-left: 30%;
     padding-top: 84px;
     padding-bottom: 53px;
@@ -124,10 +113,11 @@ header {
     bottom: -6px;
     left: -4px;
 }
+/*defence*/
 
+/*choose-defence*/
 .choose-defence {
     overflow: hidden;
-    padding-top: 34px;
     padding: 34px 12% 0;
 }
 .choose-defence h3 {
@@ -161,7 +151,6 @@ header {
     width: 70%;
     margin-bottom: 68px;
     margin-left: 30%;
-    /* position: relative; */
 }
 .choose-defence .pillow-img-box {
     margin-top: 0;
@@ -170,7 +159,6 @@ header {
 .choose-defence .pillow-img-box-wrapper {
     display: flex;
     flex-direction: column;
-    /* min-width: 340px; */
 }
 .choose-defence .pillow_3d {
     max-width: 300px;
@@ -199,7 +187,6 @@ header {
 .choose-defence .header-divider .badge {
     position: relative;
 }
-
 .choose-defence .header-divider .badge span {
     display: inline-flex;
     align-items: center;
@@ -242,7 +229,6 @@ header {
     justify-content: center;
     width: 68%;
     margin-left: 32%;
-    /* padding: 10px 0; */
 }
 .choose-defence .pillow-info li:last-child {
     margin-bottom: 0;
@@ -291,7 +277,6 @@ header {
     width: 100%;
     padding-left: 0;
     position: static;
-    /* align-self: flex-start; */
     transform: translate(-47%);
     margin: 12px 0;
 }
@@ -312,14 +297,13 @@ header {
     z-index: -1;
     bottom: -12px;
 }
-
 .choose-defence .pillow-info-box.pillow-info-box-highlight .pillow-info-item {
     font-weight: 700;
 }
-
 .pillow-img-box__circles.copper_circles {
     display: none;
 }
+/*choose-defence*/
 
 @media (max-width: 992px) {
     /*defence*/
@@ -370,7 +354,7 @@ header {
         margin-top: 0;
         font-style: normal;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 4vw;
         text-transform: uppercase;
         color: #000000;
         width: auto;
@@ -413,11 +397,10 @@ header {
     }
     .defence .title-cu-2 {
         position: absolute;
-        width: 48%;
-        right: -15%;
+        width: 32%;
+        right: -7%;
         bottom: 0;
         transform: translateY(54%);
-        /* opacity: 0; */
     }
     .defence .title-cu-1 {
         position: absolute;
@@ -429,8 +412,6 @@ header {
 }
 
 @media (max-width: 1280px) {
-
-
     /*  choose-defence  */
     .pillow-img-box__circles.copper_circles {
         display: block;
@@ -480,8 +461,6 @@ header {
     .choose-defence .pillow-img-box-wrapper {
         display: flex;
         flex-direction: column;
-        /* min-width: auto; */
-        /* width: 100%; */
     }
     .choose-defence .pillow_3d {
         max-width: 300px;
@@ -638,4 +617,13 @@ header {
         width: 50%;
     }
     /*  choose-defence  */
+}
+@media (max-width: 576px) {
+    .defence .list ul li {
+        font-size: 14px;
+    }
+    .defence .title-cu-2 {
+        width: 47%;
+        right: -15%;
+    }
 }
