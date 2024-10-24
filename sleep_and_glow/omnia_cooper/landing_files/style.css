@@ -12,7 +12,7 @@
     display: inline-block;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: 0px;
 }
 .defence-video-block:after {
     content: '';
@@ -118,7 +118,7 @@
 /*choose-defence*/
 .choose-defence {
     overflow: hidden;
-    padding: 34px 12% 0;
+    padding: 34px 0 0;
 }
 .choose-defence h3 {
     text-align: start;
@@ -133,7 +133,7 @@
     margin-bottom: 0;
 }
 .choose-defence .block {
-    padding: 50px 0 0;
+    padding: 34px 0 0;
     border: 1px solid #C7C7C7;
     overflow: hidden;
     border-bottom-width: 0;
@@ -141,7 +141,7 @@
 .choose-defence .header-title {
     display: block;
     position: absolute;
-    top: 68px;
+    top: 56px;
     left: 60px;
 }
 .choose-defence .header {
@@ -149,19 +149,26 @@
     align-items: center;
     justify-content: space-evenly;
     width: 70%;
-    margin-bottom: 68px;
+    margin-bottom: 24px;
     margin-left: 30%;
 }
 .choose-defence .pillow-img-box {
     margin-top: 0;
     margin-bottom: 0;
 }
+.choose-defence .pillow-img-box picture {
+    width: 100%;
+    text-align: center;
+}
 .choose-defence .pillow-img-box-wrapper {
     display: flex;
     flex-direction: column;
+    /* flex: 1; */
+    width: 100%;
 }
 .choose-defence .pillow_3d {
-    max-width: 300px;
+    max-width: 420px;
+    width: 100%;
 }
 .choose-defence .pillow-img-box__circles {
     width: 160px;
@@ -172,7 +179,7 @@
     align-items: flex-start;
     display: flex;
     justify-content: center;
-    padding-top: 56px;
+    padding-top: 90px;
 }
 .choose-defence .header-divider:after {
     content: '';
@@ -212,7 +219,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 60px;
+    margin-top: 20px;
     z-index: 1;
 }
 .choose-defence .body {
@@ -262,7 +269,7 @@
     background-size: 98%;
     position: absolute;
     background-color: #fff;
-    right: 20%;
+    right: 22%;
     top: auto;
     transform: translate(-40%);
 }
@@ -278,7 +285,7 @@
     padding-left: 0;
     position: static;
     transform: translate(-47%);
-    margin: 12px 0;
+    margin: 8px 0;
 }
 .choose-defence .pillow-info li span {
     padding: 0 10px 0 60px;
@@ -295,7 +302,7 @@
     left: 0;
     top: auto;
     z-index: -1;
-    bottom: -12px;
+    bottom: -8px;
 }
 .choose-defence .pillow-info-box.pillow-info-box-highlight .pillow-info-item {
     font-weight: 700;
@@ -320,25 +327,27 @@
     }
     .defence-video-block {
         position: relative;
+        top: 34px;
     }
     .defence video {
         height: 100%;
         width: 100%;
     }
     .defence-video-block:after {
-        background: linear-gradient(177deg, rgba(255, 255, 255, 0) 0%, #FCF9F9 98.64%);
-        top: 0;
+        top: auto;
         right: 0;
         bottom: 0;
         width: 100%;
         position: absolute;
+        height: 26px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 6%, #FCF9F9 98.64%);
     }
     .defence .title-cu-3 {
         display: none;
     }
     .defence .block {
         width: 100%;
-        top: -63px;
+        top: -43px;
         right: 0;
         bottom: 0;
         padding-left: 0;
@@ -522,7 +531,8 @@
         z-index: 1;
     }
     .choose-defence .body {
-        padding: 0;
+        padding: 6px 0 0;
+        background-color: #fff;
     }
     .choose-defence .pillow-info {
         list-style: none;
@@ -530,7 +540,7 @@
     }
     .choose-defence .pillow-info li {
         position: relative;
-        margin-bottom: 42px;
+        margin-bottom: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -545,7 +555,7 @@
         width: 28px;
         height: 28px;
         display: block;
-        background-image: url(circle-plus.svg);
+        background-image: url(circle-plus-mob.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 98%;
@@ -560,7 +570,7 @@
         width: 28px;
         height: 28px;
         display: block;
-        background-image: url("circle-plus-fill.svg");
+        background-image: url("circle-plus-fill-mob.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 98%;
