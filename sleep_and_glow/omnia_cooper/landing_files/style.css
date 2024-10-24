@@ -130,9 +130,6 @@ header {
     padding-top: 34px;
     padding: 34px 12% 0;
 }
-.header-mob-title {
-    display: none;
-}
 .choose-defence h3 {
     text-align: start;
     font-size: 48px;
@@ -173,7 +170,7 @@ header {
 .choose-defence .pillow-img-box-wrapper {
     display: flex;
     flex-direction: column;
-    min-width: 340px;
+    /* min-width: 340px; */
 }
 .choose-defence .pillow_3d {
     max-width: 300px;
@@ -326,17 +323,112 @@ header {
 
 @media (max-width: 992px) {
     /*defence*/
-    .defence .block {
+    .defence .title {
         width: 100%;
-        position: static;
         padding-left: 0;
-        padding-top: 0;
+        padding-top: 23px;
+        padding-bottom: 23px;
+        align-self: center;
     }
     .defence h3 {
         text-align: center;
-        font-size: 18px;
+        font-size: 22px;
+    }
+    .defence-video-block {
+        position: relative;
+    }
+    .defence video {
+        height: 100%;
+        width: 100%;
+    }
+    .defence-video-block:after {
+        content: '';
+        display: block;
+        background: linear-gradient(177deg, rgba(255, 255, 255, 0) 0%, #FCF9F9 98.64%);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        position: absolute;
+    }
+    .defence .title-cu-3 {
+        display: none;
+    }
+    .defence .block {
+        width: 100%;
+        top: -63px;
+        right: 0;
+        bottom: 0;
+        padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        align-self: center;
+        position: relative;
+    }
+    .defence .list ul li {
+        position: relative;
+        margin-top: 0;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #000000;
+        width: auto;
+        display: inline-flex;
+        border-radius: 0 0 0 6px;
+        border-left: 1px solid #8f7e61;
+        border-bottom: 1px solid #8f7e61;
+        flex: 1;
+        padding: 22% 0 8px 16px;
+        align-items: flex-end;
+    }
+    .defence .list ul li:first-child {
+        padding: 22% 14% 8px 16px;
+    }
+    .defence .list ul li br {
+        display: none;
+    }
+    .defence .list ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        padding: 0 16px;
+    }
+    .defence .list {
+        position: relative;
+        transform: none;
+        margin-top: 0;
+    }
+    .defence .list ul li:after {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #8f7e61;
+        position: absolute;
+        bottom: auto;
+        left: -3px;
+        top: 0;
+    }
+    .defence .title-cu-2 {
+        position: absolute;
+        width: 48%;
+        right: -15%;
+        bottom: 0;
+        transform: translateY(54%);
+        /* opacity: 0; */
+    }
+    .defence .title-cu-1 {
+        position: absolute;
+        width: 34%;
+        right: -4%;
+        bottom: 42%;
     }
     /*defence*/
+}
+
+@media (max-width: 1280px) {
 
 
     /*  choose-defence  */
@@ -345,11 +437,18 @@ header {
     }
     .choose-defence {
         overflow: hidden;
-        padding-top: 34px;
+        padding: 34px 0 0;
+    }
+    .choose-defence .header-title {
+        display: block;
+        position: static;
+        top: 68px;
+        left: 60px;
+        margin-bottom: 34px;
     }
     .choose-defence h3 {
         text-align: center;
-        font-size: 48px;
+        font-size: 22px;
         font-weight: 500;
         text-transform: uppercase;
         line-height: 100%;
@@ -357,52 +456,75 @@ header {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
+    }
+    .choose-defence h3 br {
+        display: none;
     }
     .choose-defence .block {
-        padding: 0 18%;
+        border: none;
     }
     .choose-defence .header {
         display: inline-flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: space-between;
         width: 100%;
-        margin-bottom: 100px;
+        margin-bottom: 17%;
+        margin-left: 0;
+        gap: 20px;
+        position: relative;
     }
     .choose-defence .pillow-img-box {
-        margin-top: 24px;
         margin-bottom: 0;
     }
     .choose-defence .pillow-img-box-wrapper {
         display: flex;
         flex-direction: column;
-        min-width: 340px;
+        /* min-width: auto; */
+        /* width: 100%; */
     }
     .choose-defence .pillow_3d {
         max-width: 300px;
+        width: 100%;
     }
     .choose-defence .pillow-img-box__circles {
-        width: 160px;
-        height: 160px;
+        width: 23vw;
+        height: 23vw;
     }
     .choose-defence .header-divider {
         align-self: stretch;
-        align-items: center;
+        align-items: flex-start;
         display: flex;
         justify-content: center;
+        position: absolute;
+        bottom: -20%;
+        right: 0;
+        left: 0;
+        padding-top: 0;
     }
     .choose-defence .header-divider:after {
         content: '';
         display: block;
         width: 1px;
-        height: 100%;
+        height: 1000px;
         background-color: #C7C7C7;
         position: absolute;
         z-index: -1;
-        top: 12%;
+        top: 0;
+    }
+    .choose-defence .header-divider:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #C7C7C7;
+        position: absolute;
+        z-index: -1;
+        top: 50%;
     }
     .choose-defence .header-divider .badge {
         position: relative;
+        top: 0;
     }
 
     .choose-defence .header-divider .badge span {
@@ -410,19 +532,19 @@ header {
         align-items: center;
         justify-content: center;
         font-weight: 400;
-        font-size: 22px;
+        font-size: 14px;
         line-height: 1;
         text-align: center;
         color: rgba(34, 29, 30, 0.8);
-        width: 68px;
-        height: 68px;
+        width: 38px;
+        height: 38px;
         border-radius: 50%;
         border: 1px solid rgba(34, 29, 30, 0.8);
         background-color: #fff;
     }
     .choose-defence .pillow-title {
         text-align: center;
-        font-size: 24px;
+        font-size: 14px;
         font-weight: 500;
         text-transform: uppercase;
         line-height: 1;
@@ -430,11 +552,11 @@ header {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-top: 60px;
+        margin-top: 10%;
         z-index: 1;
     }
     .choose-defence .body {
-        padding: 0 150px;
+        padding: 0;
     }
     .choose-defence .pillow-info {
         list-style: none;
@@ -447,14 +569,15 @@ header {
         align-items: center;
         justify-content: center;
         width: 100%;
+        margin-left: 0;
     }
     .choose-defence .pillow-info li:last-child {
         margin-bottom: 0;
     }
     .choose-defence .pillow-info-box:before {
         content: '';
-        width: 42px;
-        height: 42px;
+        width: 28px;
+        height: 28px;
         display: block;
         background-image: url(circle-plus.svg);
         background-repeat: no-repeat;
@@ -463,12 +586,13 @@ header {
         position: absolute;
         background-color: #fff;
         left: 0;
-        top: -1px;
+        top: 6%;
+        transform: none;
     }
     .choose-defence .pillow-info-box:after {
         content: '';
-        width: 42px;
-        height: 42px;
+        width: 28px;
+        height: 28px;
         display: block;
         background-image: url("circle-plus-fill.svg");
         background-repeat: no-repeat;
@@ -477,19 +601,21 @@ header {
         position: absolute;
         background-color: #fff;
         right: 0;
-        top: -1px;
+        top: 6%;
+        transform: none;
     }
     .choose-defence .pillow-info li .pillow-info-item {
         position: relative;
         display: block;
         font-weight: 400;
-        font-size: 22px;
+        font-size: 14px;
         line-height: 1.2;
         text-align: center;
         text-transform: uppercase;
         color: rgba(34, 29, 30, 0.8);
         margin: 0 50px;
         width: 100%;
+        transform: none;
     }
     .choose-defence .pillow-info li span {
         background-color: #fff;
@@ -497,15 +623,7 @@ header {
         display: inline-block;
     }
     .choose-defence .pillow-info li .pillow-info-item:after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 1px;
-        background-color: #C7C7C7;
-        position: absolute;
-        right: 0;
-        top: 20px;
-        z-index: -1;
+        display: none;
     }
     .choose-defence .pillow-info-box.pillow-info-box-highlight:before {
         display: none;
