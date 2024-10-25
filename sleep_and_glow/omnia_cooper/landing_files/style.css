@@ -343,11 +343,13 @@
     .defence-video-block:after {
         top: auto;
         right: 0;
-        bottom: 0;
+        bottom: -35px;
         width: 100%;
         position: absolute;
-        height: 26px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 6%, #FCF9F9 98.64%);
+        height: 24px;
+        background: none;
+        box-shadow: #fcf9f9 1px -17px 14px 13px;
+
     }
     .defence .title-cu-3 {
         display: none;
