@@ -4,7 +4,7 @@
 /*defence*/
 .defence {
     margin-top: 0!important;
-    background: transparent;
+    background: #fcf9f9;
     position: relative;
     display: flex;
     flex-direction: column;
