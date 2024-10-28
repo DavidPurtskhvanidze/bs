@@ -4,7 +4,7 @@
 /*defence*/
 .defence {
     margin-top: 0!important;
-    background: #fcf9f9;
+    background: transparent;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -252,7 +252,7 @@
     width: 26px;
     height: 26px;
     display: block;
-    background-image: url(circle-plus.svg);
+    background-image: url("images/circle-plus.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 98%;
@@ -270,7 +270,7 @@
     width: 28px;
     height: 28px;
     display: block;
-    background-image: url("circle-plus-fill.svg");
+    background-image: url("images/circle-plus-fill.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 98%;
@@ -325,8 +325,9 @@
         width: 100%;
         padding-left: 0;
         padding-top: 23px;
-        padding-bottom: 0px;
+        padding-bottom: 22px;
         align-self: center;
+        background: #fcf9f9;
     }
     .defence h3 {
         text-align: center;
@@ -334,36 +335,37 @@
     }
     .defence-video-block {
         position: relative;
-        top: 34px;
     }
     .defence video {
         height: 100%;
         width: 100%;
     }
     .defence-video-block:after {
-        top: auto;
-        right: 0;
-        bottom: -35px;
-        width: 100%;
-        position: absolute;
-        height: 24px;
-        background: none;
-        box-shadow: #fcf9f9 1px -17px 14px 13px;
-
+        display: none;
     }
     .defence .title-cu-3 {
         display: none;
     }
     .defence .block {
+        top: -40px;
         width: 100%;
-        top: -43px;
-        right: 0;
-        bottom: 0;
         padding-left: 0;
         padding-top: 0;
         padding-bottom: 0;
         align-self: center;
         position: relative;
+    }
+    .defence .block:before {
+        content: '';
+        display: block;
+        top: 26px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        box-shadow: #fcf9f9 0px -18px 16px 13px;
+        background: #fcf9f9;
     }
     .defence .list ul li {
         position: relative;
@@ -383,7 +385,7 @@
         align-items: flex-end;
     }
     .defence .list ul li:first-child {
-        padding: 22% 14% 8px 16px;
+        padding: 22% 14% 8px 8px;
     }
     .defence .list ul li br {
         display: none;
@@ -398,6 +400,7 @@
         position: relative;
         transform: none;
         margin-top: 0;
+        top: -44px;
     }
     .defence .list ul li:after {
         content: '';
@@ -422,7 +425,7 @@
         position: absolute;
         width: 34%;
         right: -4%;
-        bottom: 42%;
+        bottom: 36%;
     }
     /*defence*/
 }
@@ -570,7 +573,7 @@
         width: 28px;
         height: 28px;
         display: block;
-        background-image: url(circle-plus-mob.svg);
+        background-image: url("images/circle-plus-mob.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 98%;
@@ -585,7 +588,7 @@
         width: 28px;
         height: 28px;
         display: block;
-        background-image: url("circle-plus-fill-mob.svg");
+        background-image: url("images/circle-plus-fill-mob.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 98%;
@@ -633,6 +636,8 @@
 @media (max-width: 576px) {
     .defence .list ul li {
         font-size: 14px;
+        padding: 22% 0 8px 8px;
+        line-height: 1.1;
     }
     .defence .title-cu-2 {
         width: 47%;
