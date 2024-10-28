@@ -3,6 +3,7 @@
     font-family: 'Cera Pro', sans-serif;
     font-style: normal;
     line-height: 1.2;
+    margin-bottom: 120px;
 }
 .presentation-top {
     display: -webkit-box;
@@ -275,7 +276,7 @@
     flex-direction: column;
 }
 .slider-slide-item {
-    width: 50%;
+    width: 100px;
     -webkit-box-flex: 1;
     -ms-flex: 1 1 50%;
     flex: 1 1 50%;
@@ -393,6 +394,9 @@
     }
 }
 @media (max-width: 768px) {
+    .presentation {
+        margin-bottom: 50px;
+    }
     .presentation-head__line-title {
         display: none;
     }
