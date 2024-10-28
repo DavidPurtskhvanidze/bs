@@ -132,6 +132,7 @@
     text-transform: uppercase;
     margin: 5px 0 0;
     padding: 0 5px;
+    text-align: start;
 }
 .presentation-head {
     position: relative;
