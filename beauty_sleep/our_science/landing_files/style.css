@@ -207,7 +207,7 @@
     box-shadow: 5px 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
-.presentation-head__item-box.active-presentation {
+.presentation-head__item.active-presentation .presentation-head__item-box {
     padding: 20px 10%;
     right: 10%;
     left: 10%;
@@ -219,7 +219,7 @@
     margin-bottom: 4px;
     text-transform: uppercase;
 }
-.presentation-head__item-box.active-presentation .presentation-head__item-title {
+.presentation-head__item.active-presentation .presentation-head__item-box .presentation-head__item-title {
     color: #000000;
 }
 .presentation-head__item-block {
@@ -234,7 +234,7 @@
     height: 0;
     width: 0;
 }
-.presentation-head__item-box.active-presentation > .presentation-head__item-slider {
+.presentation-head__item.active-presentation .presentation-head__item-box > .presentation-head__item-slider {
     scale: 1;
     opacity: 1;
     height: 100%;
@@ -470,7 +470,7 @@
         height: 100%;
         width: 100vw;
     }
-    .presentation-head__item-box.active-presentation {
+    .presentation-head__item.active-presentation .presentation-head__item-box {
         padding: 20px 10%;
         right: 0;
         left: 10%;

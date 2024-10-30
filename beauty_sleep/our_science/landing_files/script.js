@@ -44,13 +44,13 @@ function getTopDot(el) {
     return top;
 }
 function isInViewport(el) {
-    let elementTop = el.offset().top + 100;
+    let elementTop = el.offset().top;
     let elementBottom = elementTop + el.outerHeight();
     let viewportTop = $(window).scrollTop();
     let viewportBottom = viewportTop + $(window).height();
-    return elementBottom > viewportTop && elementTop < viewportBottom;
+    return elementBottom > (viewportTop + (el.outerHeight() / 1.2)) && (elementTop + (el.outerHeight() / 1.2)) < viewportBottom;
 }
-$(".presentation-head__item-box").each(function (index) {
+$(".presentation-head__item").each(function (index) {
     let section = $(this);
     let startDot = $(".dot_start").eq(index);
     let endDot = $(".dot_end").eq(index);
