@@ -1,0 +1,30 @@
+header {
+    display: none !important;
+}
+
+.shop-section .shop-section__goods_sidebar input:checked ~ .checkbox__text {
+    font-weight: 500;
+}
+.shop-section__goods_sidebar .checkbox__text {
+    font-size: 18px;
+    line-height: 19px;
+}
+.shop-section .checkbox__text {
+    display: inline-flex;
+    padding: 0 6px;
+}
+.shop-section .checkbox__text:before {
+    display: none;
+}
+.shop-section .checkbox__text:after {
+    background: linear-gradient(45.79deg, #FDD1DB 6.18%, #AABBE7 98.93%);
+    width: 100%;
+    height: 26px;
+    border-radius: 0;
+    z-index: -1;
+    left: 0;
+    top: -4px;
+}
+.shop-section .goods-grid__title {
+    font-size: 32px;
+}
