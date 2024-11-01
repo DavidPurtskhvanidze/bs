@@ -38,14 +38,31 @@ header {
     line-height: 28px;
     color: #000000;
 }
+.shop-section .goods-grid .slide-product {
+    height: 100%;
+}
 .goods-grid-img-video-box {
     grid-column: 1 / -2;
+}
+.goods-grid-img-video-box.goods-grid-img-video-box__last {
+    grid-column: 2 / -1;
 }
 .goods-grid-img-video-box video {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+}
+.goods-grid-img-video-box .slide-product__img {
+    overflow: hidden;
+    flex: 1;
+    position: relative;
+}
+.goods-grid-img-video-box .slide-product__img > a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 .shop-section__goods_content .goods-grid {
     grid-column-gap: 20px;
