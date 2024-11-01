@@ -1,6 +1,4 @@
-header {
-    display: none !important;
-}
+
 
 .shop-section .shop-section__goods_sidebar input:checked ~ .checkbox__text {
     font-weight: 500;
