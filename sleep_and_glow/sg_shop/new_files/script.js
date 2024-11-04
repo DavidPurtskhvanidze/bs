@@ -1,5 +1,6 @@
 const sections = document.querySelectorAll(".goods-grid");
 const navLinks = document.querySelectorAll(".shop-section__goods_item");
+const slideProductImages = document.querySelectorAll(".goods-grid-img-video-box .slide-product__img");
 function highlightMenu() {
     let scrollPosition = window.scrollY + window.innerHeight / 2;
 
@@ -27,3 +28,11 @@ navLinks.forEach(link => {
         });
     });
 });
+function imgHeight() {
+    const slideProductImg = document.getElementsByClassName("slide-product__img");
+    slideProductImages.forEach((slideProductImages) => {
+        slideProductImages.style.height = slideProductImg[0].offsetHeight + 'px';
+    });
+}
+window.addEventListener('load', imgHeight);
+window.addEventListener('resize', imgHeight);

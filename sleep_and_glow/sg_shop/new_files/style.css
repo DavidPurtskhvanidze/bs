@@ -36,13 +36,18 @@
     line-height: 28px;
     color: #000000;
 }
+.shop-section .goods-grid {
+    align-items: start;
+}
 .shop-section .goods-grid .slide-product {
-    height: 100%;
+    height: auto;
 }
 .goods-grid-img-video-box {
+    height: 100%;
     grid-column: 1 / -2;
 }
 .goods-grid-img-video-box.goods-grid-img-video-box__last {
+    height: 100%;
     grid-column: 2 / -1;
 }
 .goods-grid-img-video-box video {
@@ -53,7 +58,6 @@
 }
 .goods-grid-img-video-box .slide-product__img {
     overflow: hidden;
-    flex: 1;
     position: relative;
 }
 .goods-grid-img-video-box .slide-product__img > a {
