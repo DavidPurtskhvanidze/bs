@@ -12,7 +12,7 @@ function highlightMenu() {
                 link.classList.remove('active');
                 if (link.getAttribute('data-id') === id) {
                     link.classList.add('active');
-                    if (window.innerWidth < 767) {
+                    if (window.innerWidth < 1279) {
                         link.scrollIntoView({
                             behavior: 'smooth',
                             inline: 'center'

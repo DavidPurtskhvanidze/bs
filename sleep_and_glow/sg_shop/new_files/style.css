@@ -82,15 +82,23 @@
     margin-bottom: 0;
 }
 .shop-section__goods_content .slide-product__info {
+    align-items: baseline;
     padding: 10px 0;
     border: none;
+    gap: 0 8px;
 }
 .shop-section__goods_content .slide-product__info > .single-product-price {
     font-size: 18px;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 .shop-section__goods_content .slide-product__info > .single-product-price span.newprice + span {
     font-size: 18px;
-    margin-left: 8px;
+    margin-left: 0;
+}
+.single-product-non--minicard {
+    min-width: 100%;
 }
 .shop-section__goods_content .slide-product__img > a {
     max-height: initial;
@@ -169,9 +177,9 @@
         margin-bottom: 10px;
     }
 }
-@media screen and (max-width:767px) {
-    .delivery-section {
-        display: none;
+@media screen and (max-width: 1279px) {
+    main.shop-store {
+        padding-top: 183px;
     }
     .shop-section .shop-section__goods_sidebar > div {
         display: flex;
@@ -181,7 +189,7 @@
         background-color: #fff;
         padding: 10px 0;
         position: fixed;
-        top: 67px;
+        top: 136px;
         left: 0;
         width: 100%;
         z-index: 10;
@@ -207,6 +215,20 @@
         height: 32px;
         z-index: -1;
         top: -2px;
+    }
+}
+@media screen and (max-width:1023px) {
+    main.shop-store {
+        padding-top: 124px;
+    }
+    .delivery-section {
+        display: none;
+    }
+    .shop-section .shop-section__goods_sidebar > div {
+        top: 70px;
+    }
+    .general-photo.center {
+        display: none;
     }
 
     .shop-section__goods .shop-section__goods_content > div:not(:last-child):not(:only-child) {
@@ -235,16 +257,15 @@
     .button.read-more-button {
         display: none;
     }
-    .shop-section__goods_content.few .slide-product__info {
-        align-items: flex-start;
-    }
     .shop-section__goods_content.few .slide-product__info > .single-product-price {
         display: flex;
-        flex-direction: column;
         font-size: 14px;
         margin-bottom: 0;
-        margin-top: 2px;
+        margin-top: 6px;
         align-self: flex-start;
+    }
+    .shop-section__goods_content .slide-product__info > .single-product-price {
+        gap: 4px;
     }
     .shop-section__goods_content .slide-product__info > .single-product-price span.newprice + span {
         font-size: 14px;
