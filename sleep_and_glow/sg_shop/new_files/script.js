@@ -3,14 +3,23 @@ const navLinks = document.querySelectorAll(".shop-section__goods_item");
 const slideProductImages = document.querySelectorAll(".goods-grid-product-box .slide-product__img");
 function highlightMenu() {
     let scrollPosition = window.scrollY + window.innerHeight / 2;
-
-    sections.forEach((section, index) => {
+    sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
-
         if (scrollPosition - 200 >= sectionTop && scrollPosition - 200 < sectionTop + sectionHeight) {
-            navLinks.forEach(link => link.classList.remove("active"));
-            navLinks[index].classList.add("active");
+            const id = section.getAttribute('id');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-id') === id) {
+                    link.classList.add('active');
+                    if (window.innerWidth < 767) {
+                        link.scrollIntoView({
+                            behavior: 'smooth',
+                            inline: 'center'
+                        });
+                    }
+                }
+            });
         }
     });
 }

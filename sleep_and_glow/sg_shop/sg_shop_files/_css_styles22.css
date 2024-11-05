@@ -25608,16 +25608,6 @@ button.btn.btn-sm {
         padding: 10px;
     }
 
-    .shop-store .shop-section__goods_sidebar > div {
-        _display: flex;
-        _padding-left: calc((100vw - var(--gridWidthVw))/ 2);
-        _overflow-x: auto;
-        _top: initial;
-        _align-items: center;
-        _height: inherit;
-        display: none;
-    }
-    
     .shop-section__goods_sidebar_active header,
     .shop-section__goods_sidebar_active .shop-store .general-photo__text,
     .shop-section__goods_sidebar_active footer{
