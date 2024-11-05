@@ -21901,10 +21901,8 @@ button.btn.btn-sm {
     }
 
     .shop-section__goods_content.few .goods-grid {
-        grid-column-gap: 0;
-        grid-row-gap: 35px;
-        -ms-grid-columns: 100%;
-        grid-template-columns: 100%
+        grid-column-gap: 10px;
+        grid-row-gap: 24px;
     }
 
     section.delivery-section .grid {
@@ -25504,24 +25502,25 @@ button.btn.btn-sm {
         line-height: 18px
     }
 
-    .shop-section__goods_content.few .slide-product__info > .single-product-price {
-        font-size: 20px;
-        line-height: normal
-    }
-
     .shop-section__goods_content.few .slide-product__img_colors > :not(span) {
-        width: 22px;
-        height: 22px
+        width: 10px;
+        height: 10px;
     }
 
+    .shop-section__goods_content.few .slide-product__img_colors {
+        padding: 8px 10px;
+    }
     .shop-section__goods_content.few .slide-product__img_colors > :not(:last-child) {
-        margin-right: 16px
+        margin-right: 8px
     }
-
+    .shop-section__goods_content.few .slide-product .pillow-preview-labels {
+        right: 10px;
+        top: 10px;
+    }
     .shop-section__goods_content.few .slide-product .pillow-preview__label {
-        width: 80px;
-        height: 80px;
-        font-size: 22px
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
     }
 
     .shop-section__goods_content.many .slide-product .pillow-preview__label {

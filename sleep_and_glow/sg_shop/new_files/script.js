@@ -1,6 +1,6 @@
 const sections = document.querySelectorAll(".goods-grid");
 const navLinks = document.querySelectorAll(".shop-section__goods_item");
-const slideProductImages = document.querySelectorAll(".goods-grid-img-video-box .slide-product__img");
+const slideProductImages = document.querySelectorAll(".goods-grid-product-box .slide-product__img");
 function highlightMenu() {
     let scrollPosition = window.scrollY + window.innerHeight / 2;
 
