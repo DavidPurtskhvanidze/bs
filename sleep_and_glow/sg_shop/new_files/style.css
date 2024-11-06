@@ -267,11 +267,13 @@
     .shop-section__goods_content .slide-product__info > .single-product-price {
         gap: 4px;
     }
+    .goods-grid-product-box {
+        grid-column: auto;
+    }
+}
+@media screen and (max-width:767px) {
     .shop-section__goods_content .slide-product__info > .single-product-price span.newprice + span {
         font-size: 14px;
         margin-left: 0;
-    }
-    .goods-grid-product-box {
-        grid-column: auto;
     }
 }
