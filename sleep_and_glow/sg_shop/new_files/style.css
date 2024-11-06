@@ -30,11 +30,12 @@
     font-weight: 700;
     line-height: 30px;
 }
-.shop-section .goods-grid__title span {
+.shop-section .goods-grid__title .goods-grid__sub-title {
     font-weight: 300;
     font-size: 18px;
     line-height: 28px;
     color: #000000;
+    margin-top: 6px;
 }
 .shop-section .goods-grid {
     align-items: start;
@@ -242,9 +243,10 @@
         font-size: 18px;
         line-height: 28px;
     }
-    .shop-section .goods-grid__title span {
+    .shop-section .goods-grid__title .goods-grid__sub-title {
         font-size: 14px;
         line-height: 20px;
+        margin-top: 0;
     }
     .shop-section__goods_content .slide-product__information_descr {
         font-size: 14px;
