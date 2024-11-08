@@ -241,6 +241,9 @@
     .shop-section__goods_item:first-child {
         margin-left: calc((100% - var(--gridWidth)) / 2);
     }
+    .shop-section__goods_item:last-child {
+        margin-right: calc((100% - var(--gridWidth)) / 2);
+    }
     .shop-section__goods_item.active {
         color: #fff;
         border-color: transparent;
