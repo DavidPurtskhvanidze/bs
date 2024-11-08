@@ -102,9 +102,10 @@
 }
 .shop-section__goods_content .slide-product__img .slide-product__img_sizes .b-modification__title {
     font-weight: 500;
-    font-size: 10px;
+    font-size: 14px;
     margin-right: 0;
     margin-bottom: 0;
+    letter-spacing: normal;
 }
 .shop-section__goods_content .slide-product__img .slide-product__img_sizes .b-modification__item {
     font-size: 12px;
@@ -200,6 +201,9 @@
 @media screen and (max-width: 1800px) {
     .shop-section__goods .shop-section__goods_content > div:not(:last-child):not(:only-child) {
         margin-bottom: 128px;
+    }
+    .shop-section__goods_content .slide-product__img .slide-product__img_sizes .b-modification__title {
+        font-size: 10px;
     }
 }
 @media screen and (max-width: 1767px) {
@@ -301,14 +305,52 @@
     .goods-grid-product-box {
         grid-column: auto;
     }
+    .shop-section__goods_content.few .goods-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 24px;
+    }
+    .shop-section__goods_content.few .slide-product__img_colors > :not(span) {
+        width: 10px;
+        height: 10px;
+    }
+
+    .shop-section__goods_content.few .slide-product__img_colors {
+        padding: 8px 10px;
+    }
+    .shop-section__goods_content.few .slide-product__img_colors > :not(:last-child) {
+        margin-right: 8px
+    }
+    .shop-section__goods_content.few .slide-product .pillow-preview-labels {
+        right: 10px;
+        top: 10px;
+    }
+    .shop-section__goods_content.few .slide-product .pillow-preview__label {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
 }
 @media screen and (max-width:767px) {
     .shop-section__goods_content .slide-product__info > .single-product-price span.newprice + span {
         font-size: 14px;
         margin-left: 0;
     }
+    .shop-store .shop-section .shop-section__goods_sidebar > div {
+        display: flex;
+    }
     .shop-section__goods_content .slide-product__img .slide-product__img_sizes {
         bottom: 10px;
         left: 10px;
+    }
+    .shop-section__goods_sidebar {
+        margin: 0;
+    }
+    .shop-section__goods {
+        margin-top: 0;
+    }
+    section:not(.general-section) {
+        margin-top: 0;
+        padding-top: 0;
     }
 }
