@@ -211,11 +211,21 @@
 .shop-section__goods_item.active:hover:after {
     opacity: 1;
 }
+.noscroll .shop-section__goods_sidebar > div {
+    position: fixed;
+    top: 200px;
+}
 
 /*Popup*/
 .pp__size .pp__content {
     width: auto;
-    max-width: 600px;
+    max-width: 440px;
+    min-width: 360px;
+    top: 136px;
+    right: calc((100% - var(--gridWidth)) / 2);
+}
+.pp.pp__size {
+    justify-content: flex-end;
 }
 .pp__size .popup-content {
     padding: 32px;
@@ -242,14 +252,23 @@
     border: 1px solid #000;
     background-color: #fff;
     padding: 16px;
+    position: relative;
+}
+.pp__size_list-item.active:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 1px solid #000;
 }
 .pp__size_list-item:hover {
     background-color: #F5F5F5;
 }
-.pp__size_list-item.active {
-    border: 2px solid #000;
-}
 .pp__size_list-item-uni {
+    text-align: center;
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
@@ -257,19 +276,8 @@
     text-transform: uppercase;
     color: #221D1E;
 }
-.pp__size_list-item-inch {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1.2;
-    color: #221D1E;
-}
-.pp__size_list-item-inch-desc {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1.2;
-    color: #A3B2C7;
+.pp__size .pp__bg {
+    background-color: rgba(34, 29, 30, .2);
 }
 
 @media screen and (max-width: 1800px) {
@@ -286,6 +294,14 @@
     }
 }
 @media screen and (max-width: 1279px) {
+    .pp.pp__size {
+        justify-content: center;
+    }
+    .pp__size .pp__content {
+        top: auto;
+        right: auto;
+        margin-bottom: 0;
+    }
     main.shop-store {
         padding-top: 183px;
     }
@@ -429,5 +445,21 @@
     section:not(.general-section) {
         margin-top: 0;
         padding-top: 0;
+    }
+    .pp__size_title {
+        font-size: 18px;
+    }
+    .pp__size_list-item-uni {
+        font-size: 18px;
+    }
+    .pp__size .popup-content {
+        padding: 16px;
+    }
+    .pp__size_list {
+        gap: 10px;
+    }
+    .pp__size .pp__content {
+        max-width: 336px;
+        min-width: 260px;
     }
 }
