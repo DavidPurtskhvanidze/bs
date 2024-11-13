@@ -23,9 +23,7 @@ $(document).ready(function () {
         },
         loop: true,
         effect: 'fade',
-        autoplay: {
-                delay: 7000,
-        },
+        autoplay: false,
         on: {
             slideChange: function (slider) {
                 var index = slider.activeIndex;
