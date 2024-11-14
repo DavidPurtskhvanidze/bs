@@ -21,7 +21,7 @@ $(document).ready(function () {
             nextEl: '#slider .button-next',
             prevEl: '#slider .button-prev',
         },
-        loop: true,
+        loop: false,
         effect: 'fade',
         autoplay: false,
         on: {
@@ -475,9 +475,4 @@ $(document).ready(function () {
     })
 
 
-});
-
-$(window).resize(function () {
-    initTabSwiper();
-    paddingBody();
 });

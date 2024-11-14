@@ -1,3 +1,8 @@
+#bs-video-container {
+    width: 100%;
+    height: 100%;
+    background-color: #ddbb9a;
+}
 .bf-text {
     font-family: 'Bitter', sans-serif;
     font-style: normal;
@@ -21,6 +26,9 @@
     -o-object-fit: cover;
     object-fit: cover;
     object-position: bottom;
+}
+.bs-bg-video-mobile {
+    display: none;
 }
 #slider .slide-text-bf .btn:hover {
     border-color: #000;
@@ -92,5 +100,49 @@
         -o-object-fit: cover;
         object-fit: cover;
         object-position: 20% 100%;
+    }
+}
+@media screen and (max-width:1620px) {
+    #slider .swiper-slide[data-left] .slide-text.slide-text-bf {
+        left: 10%;
+    }
+    .bs-bg-video {
+        object-position: 36% 100%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .bs-bg-video {
+        object-position: center 72%;
+    }
+    #slider .slide-text-bf {
+        align-items: center;
+    }
+    #slider .swiper-slide[data-left] .slide-text.slide-text-bf {
+        left: 0;
+        top: 96px;
+    }
+    #slider .swiper-slide[data-left] .slide-text.slide-text-bf h2 {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 4px;
+    }
+    #slider .swiper-slide[data-left] .slide-text.slide-text-bf h2 {
+        font-size: 29px;
+    }
+    #slider .swiper-slide[data-left] .slide-text.slide-text-bf h2 span:first-child {
+        font-size: 29px;
+        margin-right: 12px;
+    }
+    #slider .swiper-slide[data-left] .slide-text.slide-text-bf .slide-text-bf-code-title {
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+    #slider .swiper-slide[data-left] .slide-text.slide-text-bf .slide-text-bf-code {
+        font-size: 20px;
+        padding: 4px 16px;
+    }
+    #slider .swiper-slide[data-left] .slide-text.slide-text-bf .btn-lg {
+        margin-top: 27px;
     }
 }
