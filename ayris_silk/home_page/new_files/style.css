@@ -111,6 +111,9 @@
     }
 }
 @media screen and (max-width: 767px) {
+    #slider .container.container-text-bf {
+        height: auto;
+    }
     .bs-bg-video {
         object-position: center 72%;
     }
