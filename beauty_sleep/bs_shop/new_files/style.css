@@ -124,7 +124,7 @@
     flex-wrap: wrap;
     gap: 8px;
 }
-.shop-section__goods_content .slide-product__info > .single-product-price span.newprice + span {
+.shop-section__goods_content .slide-product__info > .single-product-price span.js-old-price {
     font-size: 18px;
     margin-left: 0;
 }
@@ -162,6 +162,7 @@
     font-size: 16px;
     padding: 0 12px;
     height: 36px;
+    cursor: pointer;
 }
 .single-product-buttons .button.border {
     border-width: 1px;
@@ -425,7 +426,7 @@
     }
 }
 @media screen and (max-width:767px) {
-    .shop-section__goods_content .slide-product__info > .single-product-price span.newprice + span {
+    .shop-section__goods_content .slide-product__info > .single-product-price span.js-old-price {
         font-size: 14px;
         margin-left: 0;
     }
