@@ -1,5 +1,7 @@
 
-
+.shop-section .slide-product__img_colors > :not(span) {
+    margin-left: 6px;
+}
 .shop-section .shop-section__goods_sidebar input:checked ~ .checkbox__text {
     font-weight: 500;
 }
@@ -346,14 +348,12 @@
     }
 }
 @media screen and (max-width:1023px) {
-    main.shop-store {
-        padding-top: 124px;
-    }
     .delivery-section {
         display: none;
     }
     .shop-section .shop-section__goods_sidebar > div {
-        top: 70px;
+        top: auto;
+        bottom: 0;
     }
     .general-photo.center {
         display: none;
