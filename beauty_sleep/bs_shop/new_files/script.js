@@ -38,8 +38,8 @@ navLinks.forEach(link => {
 });
 
 function setMobTopPadding() {
-    let headerInfoHeight = $(".header-info").length > 0 ? $(".header-info").height() : 0;
-    let headerHeight = $("header").length > 0 ? $("header").height() : 0;
+    let headerInfoHeight = $(".header-info").length > 0 ? $(".header-info").height() + 10 : 0;
+    let headerHeight = $("header").length > 0 ? $("header").height() + 10 : 0;
     if (window.innerWidth < 1023) {
         $("main.shop-store").css('padding-top', headerInfoHeight + headerHeight + 'px');
     }

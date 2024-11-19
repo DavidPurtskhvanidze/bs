@@ -351,6 +351,9 @@
     .delivery-section {
         display: none;
     }
+    .shop-section__goods {
+        margin-top: 0;
+    }
     .shop-section .shop-section__goods_sidebar > div {
         top: auto;
         bottom: 0;
@@ -405,7 +408,7 @@
         grid-row-gap: 24px;
     }
     .shop-section__goods_content.few .slide-product__img_colors > :not(span) {
-        width: 10px;
+        width: 14px;
         height: 10px;
     }
 
@@ -426,6 +429,10 @@
     }
 }
 @media screen and (max-width:767px) {
+    .shop-section__goods_content .slide-product__badge.custom {
+        width: 50px;
+        height: 50px;
+    }
     .shop-section__goods_content .slide-product__info > .single-product-price span.js-old-price {
         font-size: 14px;
         margin-left: 0;
