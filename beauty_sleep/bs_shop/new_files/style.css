@@ -408,12 +408,12 @@
         grid-row-gap: 24px;
     }
     .shop-section__goods_content.few .slide-product__img_colors > :not(span) {
-        width: 14px;
+        width: 10px;
         height: 10px;
     }
 
     .shop-section__goods_content.few .slide-product__img_colors {
-        padding: 8px 10px;
+        padding: 14px 10px;
     }
     .shop-section__goods_content.few .slide-product__img_colors > :not(:last-child) {
         margin-right: 8px
