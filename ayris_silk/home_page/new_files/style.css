@@ -228,4 +228,7 @@
         text-transform: uppercase;
         color: #000000;
     }
+    #slider .swiper-slide[data-left] .slide-text.slide-text-bf .slide-text-bf-date {
+        display: none;
+    }
 }
