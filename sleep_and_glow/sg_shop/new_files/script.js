@@ -45,3 +45,9 @@ function imgHeight() {
 }
 window.addEventListener('load', imgHeight);
 window.addEventListener('resize', imgHeight);
+
+function showOverlaySett(element, data) {
+    element.classList.toggle('remove');
+    let overlay = document.querySelectorAll('[data-overlay="'+ data +'"]');
+    overlay[0].classList.toggle('show');
+}
