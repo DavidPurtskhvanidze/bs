@@ -510,7 +510,6 @@ section.difference-section {
     }
     .benefit-section-info-item-text h4 {
         font-size: 20px;
-        color: #76ACE3;
     }
     .benefit-section-info-item-text span {
         font-weight: 400;
@@ -617,6 +616,14 @@ section.difference-section {
     .double-effect-section {
         padding: 0;
     }
+    .double-effect-section .dignities-item div span:first-child {
+        font-size: 14px;
+    }
+    .dignities-item div span:last-child {
+        font-size: 14px;
+        color: #221D1E;
+        line-height: 1.4;
+    }
     .double-effect-section .dignities-section__items .item:first-child,
     .double-effect-section .dignities-section__items .item:last-child {
         height: 34px;
@@ -678,6 +685,9 @@ section.difference-section {
         bottom: 10px;
         left: 10px;
     }
+    .structure-section .slide-description h3 {
+        text-align: center;
+    }
 }
 @media screen and (max-width: 540px) {
     .tensela-section-info-title {
@@ -685,6 +695,8 @@ section.difference-section {
     }
     .tensela-section-info-text {
         font-size: 14px;
+        color: #221D1E;
+        font-weight: 300;
     }
     .benefit-section-title {
         font-size: 14px;
@@ -695,8 +707,17 @@ section.difference-section {
     }
     .benefit-section-info-item-text span {
         font-size: 14px;
+        font-weight: 300;
     }
     .difference-section-text {
         font-size: 14px;
+        line-height: 1.4;
+        font-weight: 300;
+    }
+    .structure-section .slide-description p {
+        font-size: 14px;
+        line-height: 1.4;
+        color: #221D1E;
+        font-weight: 300;
     }
 }
