@@ -556,6 +556,7 @@ section.difference-section {
     }
     .all-night-section h3 {
         font-size: 20px;
+        line-height: 1.2;
     }
     .innovation-box {
         width: 100px;
@@ -656,6 +657,11 @@ section.difference-section {
     .difference-section-title {
         font-size: 18px;
         padding: 30px calc((100% - var(--gridWidth)) / 2) 16px;
+        line-height: 1.5;
+        font-weight: 300;
+    }
+    .difference-section-title b {
+        font-weight: 500;
     }
     .difference-section-box {
         gap: 20px;
@@ -699,8 +705,8 @@ section.difference-section {
         font-weight: 300;
     }
     .benefit-section-title {
-        font-size: 14px;
-        padding: 20px 0;
+        font-size: 18px;
+        padding: 16px 0 22px;
     }
     .benefit-section-info-item-text h4 {
         font-size: 14px;
@@ -719,5 +725,9 @@ section.difference-section {
         line-height: 1.4;
         color: #221D1E;
         font-weight: 300;
+    }
+    .structure-section .slide-description h3 {
+        font-size: 14px;
+        line-height: 1.5;
     }
 }
