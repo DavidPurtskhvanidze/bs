@@ -48,6 +48,6 @@ window.addEventListener('resize', imgHeight);
 
 function showOverlaySett(element, data) {
     element.classList.toggle('remove');
-    let overlay = document.querySelectorAll('[data-overlay="'+ data +'"]');
-    overlay[0].classList.toggle('show');
+    let overlay = document.querySelectorAll('[data-viewproduct="'+ data +'"]');
+    overlay[0].classList.toggle('overlay-show');
 }
