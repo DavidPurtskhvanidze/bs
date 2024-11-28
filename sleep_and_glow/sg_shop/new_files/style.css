@@ -1,5 +1,8 @@
 
-
+.shop-section .shop-section__goods {
+    -ms-grid-columns: 0.8fr 3.2fr;
+    grid-template-columns: 0.8fr 3.2fr;
+}
 .shop-section .shop-section__goods_sidebar input:checked ~ .checkbox__text {
     font-weight: 500;
 }
@@ -135,6 +138,8 @@
     flex: 1;
     flex-wrap: wrap;
     gap: 8px;
+    margin-right: 10px;
+    padding-top: 8px;
 }
 .shop-section__goods_content .slide-product__info .slide-product__info-price-buttons > .single-product-price span.newprice + span {
     font-size: 18px;
@@ -168,6 +173,10 @@
 .single-product-buttons {
     display: flex;
     gap: 0 8px;
+    position: absolute;
+    right: 0;
+    padding: 10px 0;
+    z-index: 1;
 }
 .single-product-buttons .button.add-button {
     width: 36px;
@@ -212,7 +221,7 @@
 .slide-product__info-overlay {
     width: 100%;
     background-color: #fff;
-    padding: 10px 0;
+    padding: 22px 0 10px;
     display: none;
 }
 .overlay-show .slide-product__info-overlay {
@@ -401,6 +410,7 @@
     color: #221D1E;
     border-left: 1px solid #000;
     border-right: 1px solid #000;
+    background-color: #fff;
 }
 .shop-section__goods_sidebar > div {
     display: flex;
@@ -524,6 +534,14 @@
         margin-bottom: 10px;
     }
 }
+@media screen and (max-width: 1680px) {
+    .shop-section__goods_content .goods-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .goods-grid-img-video-box {
+        grid-column: 1 / -1;
+    }
+}
 @media screen and (max-width: 1279px) {
     .pp.pp__size {
         justify-content: center;
@@ -605,16 +623,21 @@
         line-height: 20px;
         margin-top: 0;
     }
-    .shop-section__goods_content .slide-product__information_descr {
-        font-size: 14px;
-    }
-    .single-product-buttons .button {
-        padding: 0 14px;
-        font-size: 14px;
-        height: 28px;
-    }
-    .button.read-more-button {
-        display: none;
+    /*.shop-section__goods_content .slide-product__information_descr {*/
+    /*    font-size: 14px;*/
+    /*}*/
+    /*.single-product-buttons .button {*/
+    /*    padding: 0 14px;*/
+    /*    font-size: 14px;*/
+    /*    height: 28px;*/
+    /*}*/
+    /*.button.read-more-button {*/
+    /*    display: none;*/
+    /*}*/
+    .single-product-buttons {
+        right: 16px;
+        padding: 16px 0;
+        bottom: 0;
     }
     .shop-section__goods_content.few .slide-product__info > .single-product-price {
         display: flex;
@@ -654,8 +677,6 @@
         height: 40px;
         font-size: 12px;
     }
-}
-@media screen and (max-width:767px) {
     .shop-section__goods_content .slide-product__info > .single-product-price span.newprice + span {
         font-size: 14px;
         margin-left: 0;
@@ -693,4 +714,73 @@
         max-width: 336px;
         min-width: 260px;
     }
+    .slide-product__info-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .slide-product__information_descr {
+        order: 2;
+    }
+    .shop-section__goods_content .slide-product__info-klarna {
+        order: 1;
+        padding: 2px 0 10px;
+    }
+    .single-product-non--minicard {
+        order: 3;
+    }
+    .slide-product__info-box {
+        margin-top: 0px;
+    }
 }
+@media screen and (max-width:767px) {
+    .shop-section__goods_content .slide-product__information_descr {
+         font-size: 14px;
+    }
+    .shop-section__goods_content .slide-product__info-klarna {
+        font-size: 10px;
+    }
+    .shop-section__goods_content .slide-product__info .slide-product__info-price-buttons > .single-product-price {
+        font-size: 14px;
+        margin-right: 0;
+    }
+    .shop-section__goods_content .slide-product__info .slide-product__info-price-buttons > .single-product-price span.newprice + span {
+        font-size: 14px;
+        margin-left: 0;
+    }
+    .single-product-buttons .button {
+        font-size: 14px;
+        padding: 0 10px;
+        height: 30px;
+    }
+    .single-product-buttons .button.add-button {
+        width: 30px;
+        height: 30px;
+    }
+    .add-quantity-button-quantity-count {
+        width: 30px;
+        font-size: 14px;
+    }
+    .add-quantity-button {
+        font-size: 14px;
+        height: 30px;
+    }
+    .single-product-buttons {
+        right: 10px;
+        padding: 10px 0;
+        bottom: 0;
+    }
+    .shop-section__goods_content .goods-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .goods-grid-img-video-box {
+        grid-column: 1 / -1;
+    }
+}
+/*@media screen and (max-width: 576px) {*/
+/*    .shop-section__goods_content .goods-grid {*/
+/*        grid-template-columns: repeat(3, minmax(0, 1fr));*/
+/*    }*/
+/*    .goods-grid-img-video-box {*/
+/*        grid-column: 1 / -1;*/
+/*    }*/
+/*}*/
