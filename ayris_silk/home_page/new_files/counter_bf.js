@@ -1,34 +1,57 @@
-// Set the countdown date
-var countDownDate = new Date("November 30, 2024 00:00:00").getTime();
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+function startCountdown(targetDate) {
+    const daysElement = document.getElementById('days');
+    const hoursElement = document.getElementById('hours');
+    const minutesElement = document.getElementById('minutes');
+    const secondsElement = document.getElementById('seconds');
 
-    // Get the current time
-    var now = new Date().getTime();
+    const daysLabel = document.getElementById('days-label');
+    const hoursLabel = document.getElementById('hours-label');
+    const minutesLabel = document.getElementById('minutes-label');
+    const secondsLabel = document.getElementById('seconds-label');
 
-    // Find the distance between current time and the count down date
-    var distance = countDownDate - now;
+    function updateCountdown() {
+        const now = new Date();
+        const moscowTime = new Date(now.toLocaleString("en-US", { timeZone: "Europe/Moscow" }));
+        const timeDifference = targetDate - moscowTime;
 
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        if (timeDifference <= 0) {
+            clearInterval(interval);
+            daysElement.textContent = 0;
+            hoursElement.textContent = 0;
+            minutesElement.textContent = 0;
+            secondsElement.textContent = 0;
+            return;
+        }
 
-    // Display the result in the corresponding elements
-    document.getElementById("days").innerHTML = days < 10 ? '0' + days : days;
-    document.getElementById("hours").innerHTML = hours < 10 ? '0' + hours : hours;
-    document.getElementById("minutes").innerHTML = minutes < 10 ? '0' + minutes : minutes;
-    document.getElementById("seconds").innerHTML = seconds < 10 ? '0' + seconds : seconds;
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
+        daysElement.textContent = days;
+        hoursElement.textContent = hours;
+        minutesElement.textContent = minutes;
+        secondsElement.textContent = seconds;
 
-    // If the count down is finished display Happy New Year text
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("days").innerHTML = "00";
-        document.getElementById("hours").innerHTML = "00";
-        document.getElementById("minutes").innerHTML = "00";
-        document.getElementById("seconds").innerHTML = "00";
+        daysLabel.textContent = decline(days, ['день', 'дня', 'дней']);
+        hoursLabel.textContent = decline(hours, ['час', 'часа', 'часов']);
+        minutesLabel.textContent = decline(minutes, ['минута', 'минуты', 'минут']);
+        secondsLabel.textContent = decline(seconds, ['секунда', 'секунды', 'секунд']);
     }
-}, 1000);
+
+    function decline(number, forms) {
+        const n = Math.abs(number) % 100;
+        const n1 = n % 10;
+        if (n > 10 && n < 20) return forms[2];
+        if (n1 > 1 && n1 < 5) return forms[1];
+        if (n1 === 1) return forms[0];
+        return forms[2];
+    }
+
+    const interval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+}
+
+const targetDate = new Date('2024-11-30T11:00:00+03:00');
+startCountdown(targetDate);

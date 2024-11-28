@@ -5,7 +5,9 @@
 .counter-bf-wrapper h2 {
     font-size: 28px;
 }
-
+.counter-bf-wrapper h2 b {
+    font-weight: 900;
+}
 #slider .counter-bf-wrapper img.counter-bf-img {
     width: auto;
     height: auto;
@@ -31,7 +33,7 @@
     padding: 20px 0;
 }
 .counter-bf.days {
-    display: none;
+    /*display: none;*/
 }
 .counter-bf span {
     font-family: 'Bitter';
@@ -82,14 +84,14 @@
         margin-bottom: -14px;
     }
     .counter-bf-wrapper h2 {
-        font-size: 16px;
+        font-size: 17px;
         line-height: 1.5;
     }
     .counter-bf span {
         font-size: 44px;
     }
     .counter-bf p {
-        font-size: 11px;
+        font-size: 10px;
     }
     .counter-bf {
         width: 68px;
