@@ -9,6 +9,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="./page_files/iziToast.min.css">
     <link rel="stylesheet" href="new_files/style.css" type="text/css">
+    <link rel="stylesheet" href="new_files/counter_bf.css" type="text/css">
 
     <meta property="og:image" content="https://ayris-silk.ruhttps://ayris-silk.ru/assets/tpl/img/sertificate-block.jpg">
 
@@ -226,6 +227,50 @@
 
 <div id="slider" class="swiper-container">
     <div class="swiper-wrapper">
+        <div class="slide swiper-slide">
+
+
+            <div class="container container-counter-bf">
+                <div class="counter-bf-wrapper">
+                    <picture>
+                        <source srcset="new_files/CounterBF.webp" type="image/webp">
+                        <source srcset="new_files/CounterBF.png" type="image/png">
+                        <img src="new_files/CounterBF.png" alt="ТОЛЬКО ОДИН ДЕНЬ: СКИДКИ ДО 35% ПО КОДУ BLACK" class="counter-bf-img">
+                    </picture>
+                    <h2>
+                        ТОЛЬКО ОДИН ДЕНЬ: СКИДКИ ДО 35% ПО КОДУ <b>BLACK</b>
+                    </h2>
+                    <div class="counters-bf">
+
+                        <div class="counter-bf days">
+                            <span id="days">0</span>
+                            <p>День</p>
+                        </div>
+
+                        <div class="counter-bf">
+                            <span id="hours">0</span>
+                            <p>Часов</p>
+                        </div>
+
+                        <div class="counter-bf">
+                            <span id="minutes">0</span>
+                            <p>Минут</p>
+                        </div>
+
+                        <div class="counter-bf">
+                            <span id="seconds">0</span>
+                            <p>Секунд</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
         <div class="slide swiper-slide" data-left="1">
 
             <!-- Container for video -->
@@ -849,6 +894,7 @@
     </div>
 </div>
 <script src="new_files/script.js"></script>
+<script src="new_files/counter_bf.js"></script>
 
 <footer class="bg-grey">
     <div class="container">
@@ -1233,12 +1279,12 @@
     }
 </style>
 <script>
-    if (localStorage.getItem('cookies') === null) {
-        $('.coockies-container').show()
+    if (localStorage.getItem("cookies") === null) {
+        $(".coockies-container").show()
     }
-    $(document).on('click', '.coockies-button button', function () {
-        $('.coockies-container').hide()
-        localStorage.setItem('cookies', 1);
+    $(document).on("click", ".coockies-button button", function () {
+        $(".coockies-container").hide()
+        localStorage.setItem("cookies", 1);
     })
 </script>
 
@@ -1338,7 +1384,7 @@
 
     #podborka-modal .title {
         font-size: 26px;
-        font-family: 'Bitter', sans-serif;
+        font-family: "Bitter", sans-serif;
         text-transform: uppercase;
         font-weight: 300;
     }
@@ -1349,7 +1395,7 @@
         margin-top: 10px;
         position: relative;
         display: inline-block;
-        font-family: 'Bitter', sans-serif;
+        font-family: "Bitter", sans-serif;
         text-transform: uppercase;
     }
 
