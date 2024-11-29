@@ -51,3 +51,12 @@ function showOverlaySett(element, data) {
     let overlay = document.querySelectorAll('[data-viewproduct="'+ data +'"]');
     overlay[0].classList.toggle('overlay-show');
 }
+function clickOnSett(element, data) {
+    element.classList.toggle('active');
+    let currentSett = document.querySelectorAll('[data-overlay-sett-size="'+ data +'"]');
+    currentSett[0].classList.add('hidden');
+
+    let nextSett = document.querySelectorAll('[data-overlay-sett-color="'+ data +'"]');
+    nextSett[0].classList.remove('hidden');
+    nextSett[0].classList.add('visible');
+}
