@@ -51,6 +51,17 @@ function showOverlaySett(element, data) {
     let overlay = document.querySelectorAll('[data-viewproduct="'+ data +'"]');
     overlay[0].classList.toggle('overlay-show');
 }
+function showCartToaster() {
+    const cardToaster = document.getElementsByClassName("shop-cart-toaster");
+    cardToaster[0].classList.add('show');
+    setTimeout(() => {
+        cardToaster[0].classList.remove('show');
+    }, 4000);
+}
+function closeCartToaster() {
+    const cardToaster = document.getElementsByClassName("shop-cart-toaster");
+    cardToaster[0].classList.remove('show');
+}
 function clickOnSett(element, data) {
     element.classList.toggle('active');
     let currentSett = document.querySelectorAll('[data-overlay-sett-size="'+ data +'"]');
