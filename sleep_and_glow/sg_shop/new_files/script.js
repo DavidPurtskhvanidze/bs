@@ -1,6 +1,5 @@
 const sections = document.querySelectorAll(".goods-grid");
 const navLinks = document.querySelectorAll(".shop-section__goods_item");
-const slideProductImages = document.querySelectorAll(".goods-grid-product-box .slide-product__img");
 function highlightMenu() {
     let scrollPosition = window.scrollY + window.innerHeight / 2;
     sections.forEach(section => {
@@ -37,17 +36,9 @@ navLinks.forEach(link => {
         });
     });
 });
-function imgHeight() {
-    const slideProductImg = document.getElementsByClassName("slide-product__img");
-    slideProductImages.forEach((slideProductImages) => {
-        slideProductImages.style.height = slideProductImg[0].offsetHeight + 'px';
-    });
-}
-window.addEventListener('load', imgHeight);
-window.addEventListener('resize', imgHeight);
+
 
 function showOverlaySett(element, data) {
-    element.classList.toggle('remove');
     let overlay = document.querySelectorAll('[data-viewproduct="'+ data +'"]');
     overlay[0].classList.toggle('overlay-show');
 }

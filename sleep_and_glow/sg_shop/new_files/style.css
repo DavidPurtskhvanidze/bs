@@ -379,6 +379,21 @@
     border: 1px solid #BCBDC2;
     border-radius: 50%;
     position: relative;
+    padding: 0;
+}
+.info-overlay-color-button:hover:after {
+    content: "";
+    position: absolute;
+    width: 116%;
+    height: 116%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 1px solid #000;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s;
 }
 .info-overlay-color-button.active:after {
     content: "";
@@ -426,6 +441,7 @@
     background-color: #fff;
     height: 100%;
     width: 20px;
+    padding: 0;
 }
 
 .add-quantity-button-decrease span {
@@ -686,9 +702,8 @@
         margin-top: 0;
     }
     .single-product-buttons {
-        top: 10px;
         right: 10px;
-        bottom: 0;
+        bottom: 10px;
     }
     .shop-section__goods_content.few .slide-product__info > .single-product-price {
         display: flex;
@@ -718,11 +733,6 @@
     }
     .shop-section__goods_content.few .slide-product__img_colors > :not(:last-child) {
         margin-right: 8px
-    }
-    .shop-section__goods_content .slide-product .pillow-preview-labels {
-        right: 10px;
-        bottom: 10px;
-        top: auto;
     }
     .shop-section__goods_content.few .slide-product .pillow-preview__label {
         width: 40px;
