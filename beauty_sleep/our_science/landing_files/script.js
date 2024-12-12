@@ -109,4 +109,3 @@ $(".presentation-head__item").each(function (index) {
         activateSection();
     });
 });
-
