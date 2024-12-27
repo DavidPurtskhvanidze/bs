@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./page_files/iziToast.min.css">
     <link rel="stylesheet" href="new_files/style.css" type="text/css">
     <link rel="stylesheet" href="new_files/counter_bf.css" type="text/css">
+    <link rel="stylesheet" href="new_files/new_year_sale.css" type="text/css">
 
     <meta property="og:image" content="https://ayris-silk.ruhttps://ayris-silk.ru/assets/tpl/img/sertificate-block.jpg">
 
@@ -228,41 +229,42 @@
 <div id="slider" class="swiper-container">
     <div class="swiper-wrapper">
         <div class="slide swiper-slide">
-
-
-            <div class="container container-counter-bf">
-                <div class="counter-bf-wrapper">
-                    <picture>
-                        <source srcset="new_files/CounterBF.webp" type="image/webp">
-                        <source srcset="new_files/CounterBF.png" type="image/png">
-                        <img src="new_files/CounterBF.png" alt="ТОЛЬКО ОДИН ДЕНЬ: СКИДКИ ДО 35% ПО КОДУ BLACK" class="counter-bf-img">
-                    </picture>
-                    <h2>
-                        ТОЛЬКО&nbsp;ОДИН&nbsp;ДЕНЬ:&nbsp;СКИДКИ&nbsp;ДО&nbsp;35% ПО&nbsp;КОДУ&nbsp;<b>BLACK</b>
+            <picture class="counter-new-year-picture">
+                <source srcset="new_files/as_new_year_sale_bg.webp" type="image/webp">
+                <source srcset="new_files/as_new_year_sale_bg.jpg" type="image/png">
+                <img src="new_files/as_new_year_sale_bg.jpg" alt="Новогодняя распродажа">
+            </picture>
+            <div class="container container-counter-new-year">
+                <div class="counter-new-year-wrapper">
+                    <h2 class="counter-new-year-title">
+                        Новогодняя&nbsp;распродажа<br class="tablet-br"> заканчивается&nbsp;через
                     </h2>
-                    <div class="counters-bf">
+                    <div class="counters-new-year">
 
-                        <div class="counter-bf days">
+                        <div class="counter-new-year days">
                             <span id="days">0</span>
-                            <p id="days-label">День</p>
+                            <p id="days-label">день</p>
                         </div>
 
-                        <div class="counter-bf">
+                        <div class="counter-new-year">
                             <span id="hours">0</span>
-                            <p id="hours-label">Часов</p>
+                            <p id="hours-label">часов</p>
                         </div>
 
-                        <div class="counter-bf">
+                        <div class="counter-new-year">
                             <span id="minutes">0</span>
-                            <p id="minutes-label">Минут</p>
+                            <p id="minutes-label">минут</p>
                         </div>
 
-                        <div class="counter-bf">
+                        <div class="counter-new-year">
                             <span id="seconds">0</span>
-                            <p id="seconds-label">Секунд</p>
+                            <p id="seconds-label">секунд</p>
                         </div>
 
                     </div>
+                    <p class="counter-new-year-descriptor">
+                        <span>Успейте купить подарки со скидкой <span>10%</span><br class="tablet-br"> по коду <span class="counter-new-year-code">Newyear25</span></span>
+                    </p>
 
                 </div>
             </div>
@@ -894,7 +896,7 @@
     </div>
 </div>
 <script src="new_files/script.js"></script>
-<script src="new_files/counter_bf.js"></script>
+<script src="new_files/counter_new_year_sale.js"></script>
 
 <footer class="bg-grey">
     <div class="container">
