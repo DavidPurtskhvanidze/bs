@@ -1,0 +1,224 @@
+.container-counter-new-year {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(245.68deg, #FFADF6 19.27%, #B4E3FD 84.37%), #FFFFFF;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.counter-new-year-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+.counter-new-year-picture {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.counter-new-year-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 0 !important;
+    border: none !important;
+}
+.counter-new-year-title {
+    text-transform: none;
+    margin-bottom: 0;
+    font-family: 'CoFoRobert-Light', serif;
+    font-size: 42px;
+    line-height: 1;
+    text-align: center;
+    color: #000000;
+}
+.counters-new-year {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 44px 0;
+}
+.counter-new-year {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 184px;
+}
+.counter-new-year span {
+    text-align: center;
+    font-family: 'CoFoRobert-Light', serif;
+    font-size: 80px;
+    line-height: 1;
+    color: #000000;
+    width: 100%;
+}
+.counter-new-year p {
+    font-family: 'CoFoRobert-Light', serif;
+    font-size: 48px;
+    line-height: 1;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #000000;
+    margin: 0;
+}
+.counter-new-year-descriptor {
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'GT-America', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1;
+    color: #000000;
+    margin: 0;
+}
+.counter-new-year-descriptor .counter-new-year-percent {
+    font-size: 30px;
+}
+.counter-new-year-code {
+    border: 1px solid #000;
+    border-radius: 7px;
+    display: inline-block;
+    padding: 5px 40px;
+    margin-left: 7px;
+    background-color: #fff;
+    font-style: normal;
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-family: 'GT-America', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 2.4px;
+    color: #000000;
+}
+.tablet-br {
+    display: none;
+}
+@media screen and (max-width:1220px) {
+    .counter-new-year-title {
+        font-size: calc(42 / (1220 + 40)* 100vw);
+    }
+    .counters-new-year {
+
+    }
+    .counters-new-year {
+        padding: calc(44 / (1220 + 40)* 100vw) 0;
+    }
+    .counter-new-year {
+        width: calc(184 / (1220 + 40)* 100vw);
+    }
+    .counter-new-year span {
+        font-size: calc(80 / (1220 + 40)* 100vw);
+    }
+    .counter-new-year p {
+        font-size: calc(48 / (1220 + 40)* 100vw);
+    }
+    .counter-new-year-descriptor {
+        font-size: calc(20 / (1220 + 40)* 100vw);
+    }
+    .counter-new-year-descriptor .counter-new-year-percent {
+        font-size: calc(30 / (1220 + 40)* 100vw);
+    }
+    .counter-new-year-code {
+        font-size: calc(30 / (1220 + 40)* 100vw);
+        padding: 8px calc(40 / (1220 + 40)* 100vw);
+    }
+}
+@media screen and (max-width:500px) {
+    .counter-new-year-title {
+        line-height: 1.2;
+        font-size: calc(21 / (500 + 40)* 100vw);
+    }
+    .counters-new-year {
+
+    }
+    .counters-new-year {
+        padding: calc(22 / (500 + 40)* 100vw) 0;
+    }
+    .counter-new-year {
+        width: calc(92 / (500 + 40)* 100vw);
+    }
+    .counter-new-year span {
+        font-size: calc(40 / (500 + 40)* 100vw);
+    }
+    .counter-new-year p {
+        font-size: calc(24 / (500 + 40)* 100vw);
+    }
+    .counter-new-year-descriptor {
+        font-size: calc(10 / (500 + 40)* 100vw);
+    }
+    .counter-new-year-descriptor .counter-new-year-percent {
+        font-size: calc(15 / (500 + 40)* 100vw);
+    }
+    .counter-new-year-code {
+        margin-top: 10px;
+        font-size: calc(30 / (1220 + 40)* 100vw);
+        padding: 4px calc(40 / (1220 + 40)* 100vw);
+    }
+    .tablet-br {
+        display: inline-block;
+    }
+}
+/*@media screen and (max-width:1124px) {*/
+/*    .tablet-br {*/
+/*        display: inline-block;*/
+/*    }*/
+/*}*/
+/*@media screen and (max-width:768px) {*/
+/*    .counter-new-year-title {*/
+/*        font-size: 30px;*/
+/*    }*/
+/*    .counters-new-year {*/
+/*        padding: 30px 0;*/
+/*        gap: 20px;*/
+/*    }*/
+/*    .counter-new-year span {*/
+/*        font-size: 50px;*/
+/*    }*/
+/*    .counter-new-year p {*/
+/*        font-size: 30px;*/
+/*    }*/
+/*    .counter-new-year-descriptor {*/
+/*        font-size: 20px;*/
+/*    }*/
+/*    .counter-new-year-descriptor span > span {*/
+/*        font-size: 30px;*/
+/*    }*/
+/*    .counter-new-year-code {*/
+/*        font-size: 25px;*/
+/*    }*/
+/*}*/
+/*@media screen and (max-width:580px) {*/
+/*    .container.container-counter-new-year {*/
+/*        padding: 0 10px;*/
+/*    }*/
+/*    .counter-new-year-title {*/
+/*        font-size: 20px;*/
+/*    }*/
+/*    .counters-new-year {*/
+/*        padding: 20px 0;*/
+/*    }*/
+/*    .counter-new-year {*/
+/*        gap: 20px;*/
+/*    }*/
+/*    .counter-new-year span {*/
+/*        font-size: 35px;*/
+/*    }*/
+/*    .counter-new-year p {*/
+/*        font-size: 15px;*/
+/*    }*/
+/*    .counter-new-year-descriptor {*/
+/*        font-size: 15px;*/
+/*    }*/
+/*    .counter-new-year-descriptor span > span {*/
+/*        font-size: 20px;*/
+/*    }*/
+/*    .counter-new-year-code {*/
+/*        font-size: 20px;*/
+/*    }*/
+/*}*/
