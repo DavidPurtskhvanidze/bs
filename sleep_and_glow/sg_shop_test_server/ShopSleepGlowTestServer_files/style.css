@@ -459,13 +459,13 @@
     font-style: normal;
     font-weight: 500;
     font-size: clamp(14px, calc(16 / 1920* 100vw), 16px);
-    line-height: 1.2;
+    line-height: 1.7;
     text-transform: uppercase;
     color: #000000;
     margin-bottom: 1.2em;
     cursor: pointer;
     position: relative;
-    padding: 0 6px;
+    padding: 0 0.4em;
 }
 .shop-section__goods_item:after {
     content: "";
