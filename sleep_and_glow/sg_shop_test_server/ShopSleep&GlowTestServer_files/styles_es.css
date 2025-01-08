@@ -1,0 +1,242 @@
+.goods__item_info {
+    margin-right: 230px;
+}
+.unisupport_banner .block .title {
+  max-width: 780px;
+}
+.cop_but a span {
+  font-size: 11px;
+}
+.vent_but a span {
+  font-size: 11px;
+}
+@media screen and (max-width: 1800px) {
+    .goods__item_info {
+        margin-right: 190px;
+    }
+}
+@media screen and (max-width: 1490px) {
+    .header-menu__item {
+      font-size: 10px;
+    }
+}
+@media screen and (max-width: 1429px) {
+    .goods__item_info {
+        margin-right: 150px;
+    }
+    .uniwrinkle_stages-block .block .text {
+        font-size: 24px !important;
+    }
+}
+@media screen and (max-width: 1023px) {
+    .goods__item_info {
+        margin-right: 120px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .goods__item_info {
+        margin-right: 90px;
+    }
+    .uniwrinkle_banner .block {
+        padding-top: 60px !important;
+    }
+    .uniwrinkle_stages-block .block .text {
+        font-size: 26px !important;
+    }
+    .unihow_banner .block {
+        padding-top: 500px !important;
+    }
+    .unisupport_banner .block .title {
+      max-width: 320px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .science .faceblock .blocks .block .faceslider .title.es-font {
+      font-size: 12px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .why-cop .block .left {
+        padding-top: 0;
+        top: -15px;
+        max-width: 195px;
+        left: -18px;
+    }
+    .why-cop .block .left .title:after {
+        top: -53px;
+    }
+    .why-cop .block .right {
+        right: -208px;
+        top: -257px;
+    }
+    .why-cop .block {
+      margin-bottom: -260px;
+    }
+    .why-cop .block img:first-child {
+      margin-left: 3px;
+    }
+    .why-cop .block .right .title {
+      max-width: 125px;
+    }
+    .why-cop .block .right .title:after {
+      right: 0;
+      top: -69px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .why-cop .block .left {
+        padding-top: 0;
+        top: -15px;
+        max-width: 195px;
+        left: -18px;
+    }
+    .why-cop .block .left .title:after {
+        top: -53px;
+    }
+    .why-cop .block .right {
+        right: -208px;
+        top: -257px;
+    }
+    .why-cop .block {
+      margin-bottom: -260px;
+    }
+    .why-cop .block img:first-child {
+      margin-left: 3px;
+    }
+    .why-cop .block .right .title {
+      max-width: 125px;
+    }
+    .why-cop .block .right .title:after {
+      right: 0;
+      top: -69px;
+    }
+}
+@media screen and (max-width: 414px) {
+  .why-cop .block .left {
+    max-width: 170px;
+    top: -20px;
+    left: 0;
+  }
+  .why-cop .block .left .title:after {
+    top: -37px;
+  }
+  .why-cop .block .right {
+    right: -202px;
+    top: -265px;
+  }
+  .why-cop .block {
+    margin-bottom: -260px;
+  }
+  .why-cop .block img:first-child {
+    margin-left: 0;
+  }
+  .why-cop .block .right .title {
+    max-width: none;
+  }
+  .why-cop .block .right .title:after {
+    right: 44px;
+    top: -85px;
+  }
+}
+@media screen and (max-width: 393px) {
+  .why-cop .block .left {
+    max-width: 150px;
+    padding-top: 0;
+    left: 9px;
+  }
+  .why-cop .block .left .title:after {
+    top: -37px;
+  }
+  .why-cop .block .right {
+    right: -188px;
+    top: -300px;
+    max-width: 125px;
+  }
+  .why-cop .block .right .title:after {
+    top: -69px;
+    right: -2px;
+    width: 135px;
+    height: 143px;
+    background-size: 100%;
+  }
+  .why-cop .block {
+    margin-bottom: -300px;
+  }
+  .why-cop .block .why-cop-r {
+    right: -5px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .why-cop .block .left {
+    max-width: 150px;
+    padding-top: 0;
+    left: 9px;
+  }
+  .why-cop .block .left .title:after {
+    top: -37px;
+  }
+  .why-cop .block .right {
+    right: -188px;
+    top: -300px;
+    max-width: 125px;
+  }
+  .why-cop .block .right .title:after {
+    top: -69px;
+    right: -2px;
+    width: 135px;
+    height: 143px;
+    background-size: 100%;
+  }
+  .why-cop .block {
+    margin-bottom: -300px;
+  }
+  .why-cop .block .why-cop-r {
+    right: -5px;
+  }
+}
+@media screen and (max-width: 375px) {
+    .why-cop .block .left {
+        top: -11px;
+        left: 3px;
+    }
+    .why-cop .block .left .title:after {
+        top: -38px;
+    }
+    .why-cop .block .right {
+        top: -291px;
+        right: -181px;
+    }
+    .why-cop .block .right .title:after {
+        top: -70px;
+    }
+}
+@media screen and (max-width: 360px) {
+  .why-cop .block .left {
+    left: -5px;
+  }
+  .why-cop .block .right {
+    right: -176px;
+  }
+}
+.kills-unicopper .content .blocks .right .img .block .text,
+.improves .blocks .left .img .block .text,
+.boosts .blocks .left .img .block .text {
+    text-wrap: nowrap;
+}
+.uniwrinkle_banner .block {
+    padding-top: 100px;
+}
+.uniwrinkle_stages-block .block .text {
+    font-size: 36px;
+}
+.unibest_banner .block .title {
+    max-width: 710px;
+}
+.unihow_banner .block {
+    padding-top: 60px;
+}
+.uniperfect_banner .block .title,
+.unisummer-hear .block .subtitle {
+    max-width: 650px;
+}
+
