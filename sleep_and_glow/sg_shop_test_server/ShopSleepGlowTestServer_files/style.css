@@ -203,7 +203,7 @@
     line-height: 1.2;
     color: #221D1E;
     min-width: 100%;
-    min-height: clamp(34px, calc(44 / 1920* 100vw), 44px);
+    height: clamp(34px, calc(44 / 1920* 100vw), 44px);
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
@@ -228,7 +228,7 @@
     gap: 0 8px;
     position: absolute;
     right: 0;
-    bottom: -10%;
+    bottom: -2.6em;
     z-index: 1;
 }
 .single-product-buttons .button.add-button {
@@ -238,8 +238,8 @@
 }
 .single-product-buttons .button.add-button > span {
     display: block;
-    width: clamp(6px, calc(10 / 1920* 100vw), 10px);
-    height: clamp(6px, calc(10 / 1920* 100vw), 10px);
+    width: 10px;
+    height: 10px;
     background-image: url("data:image/svg+xml,%3Csvg width='9' height='9' viewBox='0 0 9 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.108 8.38V4.798H0.616V3.988H4.108V0.424H5.008V3.988H8.446V4.798H5.008V8.38H4.108Z' fill='%23221D1E'/%3E%3C/svg%3E%0A");
     background-position: center;
     background-size: contain;
@@ -458,14 +458,14 @@
     flex: 1;
     font-style: normal;
     font-weight: 500;
-    font-size: clamp(14px, calc(16 / 1920* 100vw), 16px);
+    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
     line-height: 1.7;
     text-transform: uppercase;
     color: #000000;
-    margin-bottom: 1.2em;
+    margin-bottom: 1.12em;
     cursor: pointer;
     position: relative;
-    padding: 0 0.4em;
+    padding: 0 0.22em;
 }
 .shop-section__goods_item:after {
     content: "";
