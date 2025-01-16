@@ -536,7 +536,7 @@
 }
 
 .science .patents-science .carousel .block .content .title {
-    color: #221D1E;
+    color: var(--black);
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -546,7 +546,7 @@
 }
 
 .science .patents-science .carousel .block .content .subtitle {
-    color: #221D1E;
+    color: var(--black);
     font-size: 26px;
     font-style: normal;
     font-weight: 400;
@@ -647,7 +647,7 @@
 }
 
 .science .patents-science .carousel .title {
-    color: #000;
+    color: var(--black);
     font-family: "Cera Pro";
     font-size: 14px;
     font-style: normal;
@@ -683,21 +683,21 @@
 }
 
 .science .experts .title {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 26px;
     line-height: 1.4;
     margin-bottom: 50px;
     text-transform: uppercase;
-    color: #221D1E;
+    color: var(--black);
     text-align: center;
-    padding: 40px 16px 0;
+    padding: 32px 16px 0;
 }
 .science .experts .title b {
     font-weight: 500;
 }
 .science.science_main-page .experts .title {
     font-size: 36px;
-    margin-bottom: 4px;
+    margin-bottom: 12px;
 }
 
 .science .experts .swiper_experts {
@@ -733,41 +733,41 @@
 }
 
 .science .experts .expert .text {
-    padding: 60px;
+    padding: 62px 20px;
     max-width: 50%;
 }
 
 .science .experts .expert .text .name {
-    color: #000;
+    color: var(--black);
     font-family: "Cera Pro";
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
     line-height: 1;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 .science .experts .expert .text .city {
-    color: #ADADAD;
+    color: var(--gray);
     font-family: "Cera Pro";
     font-size: 18px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.4;
     text-transform: uppercase;
-    margin-bottom: 58px;
+    margin-bottom: 38px;
 }
 .science .science_full-width-video .expert .text .city {
     margin-bottom: 35px;
 }
 
 .science .experts .expert .text .comm {
-    color: #000;
+    color: var(--black);
     font-family: "Cera Pro";
     font-size: 18px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.4;
     text-transform: uppercase;
 }
@@ -841,10 +841,11 @@
 .science .science_full-width-video .expert .text {
     text-align: center;
     max-width: 100%;
+    padding: 56px 20px;
 }
 .science .science_full-width-video .expert .text .comm {
     margin: auto;
-    width: 800px;
+    width: 50%;
 }
 .science .science_full-width-video .expert .video {
     max-width: 100%;
@@ -871,8 +872,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
     border: none;
 }
 .video-pause-button {
@@ -892,626 +893,6 @@
 .lifevizblock-mob {
     display: none;
 }
-
-@media screen and (max-width: 1400px) {
-    .science .faceblock .blocks .block .faceimg {
-        width: 100%;
-    }
-    .science .faceblock .blocks .block:first-child {
-        padding-left: 20px;
-    }
-    .science .qublock {
-        padding: 0 0 60px;
-    }
-    .science .qublock .padd {
-        padding: 0;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    .science .faceblock .blocks .block:last-child {
-        padding-left: 20px;
-    }
-}
-
-@media screen and (max-width: 1280px) {
-    .science .experts .swiper_experts,
-    .science .experts .swiper-pagination {
-        border-top: none;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .science .headblock {
-        padding-top: 25px;
-    }
-    .science .headblock .subtitle {
-        font-size: 22px;
-    }
-    .science .digitblock .block .proc {
-        font-size: 55px;
-        line-height: 55px;
-    }
-    .science .digitblock .block:first-child .proc {
-        max-width: 175px;
-    }
-    .science .digitblock .block {
-        min-width: auto;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .params {
-        bottom: 9px;
-    }
-    .science .digitblock {
-        padding: 25px 0 35px;
-    }
-    .science .digitblock .blocks {
-        max-width: none;
-    }
-    .science .digitblock .block .subtitle,
-    .science .digitblock .block .proc,
-    .science .digitblock .block .title {
-        margin: auto !important;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .img {
-        max-width: 170px;
-    }
-    .science .faceblock .blocks .block .faceslider {
-        max-width: 500px;
-        min-height: auto;
-    }
-    .science .faceblock {
-        margin-bottom: 30px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .slide {
-        max-width: 370px;
-    }
-    .science .faceblock .blocks .block:first-child {
-        padding-top: 0;
-    }
-    .science .faceblock .blocks .block .faceslider .title,
-    .science .faceblock .blocks .block .faceslider .subtitle {
-        margin-left: 65px;
-    }
-    .science .faceblock .blocks .block .faceslider {
-        padding: 20px 0;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-prev {
-        left: 10px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-next {
-        right: 10px;
-    }
-    .science .qublock .blocks .block:last-child {
-        padding-right: 10px;
-    }
-    .science .experts .expert .video {
-        padding-left: 0;
-    }
-    .science .experts .expert .text {
-        padding: 20px 30px;
-        padding-right: 80px;
-    }
-    .science .science_full-width-video .experts .expert .text {
-        padding-right: 0;
-    }
-    .science .science_full-width-video .expert .text .comm {
-        width: 100%;
-    }
-    .science .experts .swiper_experts {
-        padding-bottom: 60px;
-    }
-    .science .experts .swiper-pagination {
-        padding-top: 30px;
-    }
-    .science .qublock .blocks .block:first-child {
-        width: 85%;
-    }
-}
-
-@media screen and (max-width: 1020px) {
-    .science .experts .expert .video .play-video {
-        left: auto;
-        top: auto;
-    }
-    .science .experts {
-        margin-bottom: 30px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-
-    .index .science {
-        border-bottom: 0px;
-        padding-bottom: 20px;
-    }
-    .science .faceblock .blocks .block .faceslider {
-        max-width: 400px
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .img {
-        max-width: 140px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .slide {
-        max-width: 290px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .params {
-        font-size: 7px;
-    }
-    .science .faceblock .blocks .block .faceslider .title, .science .faceblock .blocks .block .faceslider .subtitle {
-        margin-left: 55px;
-    }
-    .science .experts .swiper-pagination {
-        padding-top: 0;
-    }
-    .science .experts .swiper_experts {
-        padding-bottom: 60px;
-    }
-    .science .experts .title {
-        margin-bottom: 30px;
-    }
-    .science .experts .expert .text .city {
-        font-size: 16px;
-    }
-    .science .experts .expert .text .comm {
-        font-size: 16px;
-        line-height: 20px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-next,
-    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-prev {
-        width: 33px;
-        height: 33px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-next:after,
-    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-prev:after {
-        background-size: 7px 14px;
-    }
-    .science .patents-science .patents-slider-nav .swiper-button {
-        width: 33px;
-        height: 33px;
-    }
-    .science .patents-science .patents-slider-nav .swiper-button-prev,
-    .science .patents-science .patents-slider-nav .swiper-button-next {
-        top: 45%;
-    }
-    .science .experts .swiper-button-next,
-    .science .experts .swiper-button-prev {
-        width: 33px;
-        height: 33px;
-    }
-    .science .experts .swiper-button-next {
-        right: 7px;
-        top: 42%;
-    }
-    .science .experts .swiper-button-prev {
-        left: 7px;
-        top: 42%;
-    }
-    .science .experts .swiper-button-next:after,
-    .science .experts .swiper-button-prev:after {
-        background-size: 7px 14px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .science .faceblock .blocks .block .faceslider {
-        max-width: 320px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .img {
-        max-width: 100px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .slide {
-        max-width: 225px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .month {
-        font-size: 10px;
-    }
-    .science .faceblock .blocks .block .faceslider .title, .science .faceblock .blocks .block .faceslider .subtitle {
-        margin-left: 48px;
-    }
-    .science .faceblock .blocks .block .faceslider .title {
-        font-size: 16px;
-    }
-    .science .faceblock .blocks .block .faceslider .subtitle {
-        font-size: 10px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .params {
-        font-size: 5px;
-    }
-    .science .headblock .subtitle {
-        font-size: 14px;
-    }
-    .science .qublock .blocks {
-        display: block;
-        padding: 25px;
-    }
-    .science .qublock .blocks .block:first-child {
-        width: auto;
-    }
-    .science .qublock,
-    .science .patents-science {
-        border-bottom: none;
-    }
-    .science .experts .swiper_experts {
-        padding-bottom: 30px;
-    }
-    .science .qublock .blocks .block .img.lifevizblock {
-        top: auto;
-        margin-bottom: 0;
-    }
-    .science .qublock .blocks .block {
-        padding-right: 0;
-    }
-    .science .qublock .blocks .block:first-child {
-        margin-bottom: 20px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .science .science_full-width-video .video-wrapper {
-        aspect-ratio: 9 / 16;
-    }
-    .science .headblock .title {
-        margin-bottom: 30px;
-    }
-    .science .headblock .subtitle {
-        line-height: 20px;
-        margin: 0 auto 25px;
-    }
-    .science .digitblock .blocks {
-        display: block;
-    }
-    .science .digitblock .block:after,
-    .science .digitblock .block.left .subtitle {
-        display: none;
-    }
-    .science .digitblock .block {
-        border-bottom: 2px solid var(--lightgray);
-    }
-    .science .digitblock .block:last-child {
-        border-bottom: none;
-    }
-    .science .digitblock {
-        padding: 0;
-    }
-    .science .digitblock .block {
-        padding: 20px 0;
-        display: flex;
-    }
-    .science .digitblock .block .title {
-        margin: 0 0 0 35px !important;
-    }
-    .science .digitblock .block .proc {
-        font-size: 46px;
-        line-height: 46px;
-    }
-    .science .digitblock .block .title {
-        position: relative;
-        top: 21px;
-    }
-    .science .digitblock .block:first-child .title {
-        top: 3px;
-    }
-    .science .faceblock {
-        padding-top: 0;
-    }
-    .science .faceblock .blocks .block:first-child {
-        padding-top: 90px
-    }
-    .science .faceblock .blocks .block:last-child {
-        padding-top: 30px
-    }
-    .science .faceblock .blocks .block .faceslider {
-        max-width: 260px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .img {
-        max-width: 95px;
-    }
-    .science .faceblock .blocks .block .faceslider .title,
-    .science .faceblock .blocks .block .faceslider .subtitle {
-        margin-left: 30px;
-    }
-    .science .faceblock .blocks .block .faceslider .title {
-        margin-left: 0;
-        padding-left: 30px;
-        border-bottom: 0;
-        background: linear-gradient(90deg, rgba(249, 207, 211, 0.43) 0%, rgba(85, 122, 188, 0.43) 100%);
-        height: 30px;
-        line-height: 30px;
-        min-width: 130px;
-    }
-    .science .digitblock .block .title {
-        line-height: 20px;
-        font-size: 14px;
-    }
-    .science .faceblock .blocks .block .faceslider .subtitle {
-        min-width: 200px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .slide {
-        max-width: 200px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .params {
-        font-size: 6px;
-        bottom: 8px;
-        left: 40%;
-        text-wrap: nowrap;
-        line-height: 8px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .month {
-        font-size: 9px;
-        margin-bottom: 0;
-    }
-    .science .faceblock .blocks .block .faceslider .subtitle {
-        font-size: 10px;
-        line-height: 14px;
-    }
-    .science .faceblock .blocks .block .faceslider .title {
-        font-size: 14px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-next,
-    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-prev {
-        width: 22px;
-        height: 22px;
-        top: 60%;
-        box-shadow: 1px 2px 10px rgba(0, 0, 0, .1);
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-next:after,
-    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-prev:after {
-        background-size: 5px 10px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-prev {
-        left: 3px;
-    }
-    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-next {
-        right: 3px;
-    }
-    .science .faceblock .blocks {
-        overflow: hidden;
-    }
-    .science .faceblock .blocks .block .faceimg {
-        width: auto;
-        position: absolute;
-        right: -50%;
-        max-width: 370px;
-        opacity: 0.7;
-    }
-    .science .faceblock .blocks .block .faceslider {
-        margin-bottom: 40px;
-        background: rgba(255, 255, 255, 0.5);
-        box-shadow: 2px 5px 15px 0 rgba(0, 0, 0, 0.2);
-    }
-    .science .headblock {
-        padding-top: 0;
-    }
-    .science .patents-science h4,
-    .science .experts .title,
-    .science .experts .expert .text .name {
-        font-size: 18px;
-    }
-    .science .experts .expert .text .comm {
-        font-size: 14px;
-    }
-    .science .experts .swiper-pagination-bullet {
-        margin: 0 10px;
-    }
-    .science .qublock .blocks .block .title {
-        color: #000;
-        font-size: 16px;
-        font-weight: 500;
-    }
-    .science .qublock .blocks .block {
-        text-align: center;
-        width: 100%;
-        display: block;
-    }
-    .science .qublock .blocks .block .subtitle {
-        font-size: 12px;
-    }
-    .science .qublock .blocks .block .img {
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-    .science .qublock .blocks .block:first-child {
-        margin-bottom: 35px;
-    }
-    .science .qublock .blocks .block .img.lifevizblock {
-        display: none;
-    }
-    .lifevizblock-mob {
-        display: block;
-        position: absolute;
-        left: 25%;
-        padding-top: 30px;
-    }
-    .science .qublock .blocks .block .lifevizblock-mob .lifeviz {
-        max-width: 172px;
-    }
-    .science .qublock .blocks .block .lifevizblock-mob .quant {
-        max-width: 185px;
-        margin-left: 15px;
-    }
-    .science .qublock .blocks .block .text > .more {
-        display: none;
-    }
-    .science .qublock .blocks .block:last-child {
-        padding-bottom: 160px;
-    }
-    .science .qublock {
-        margin-bottom: 40px;
-    }
-    .science .qublock .blocks .block .text .lifevizblock-mob .more {
-        position: absolute;
-        right: -64px;
-        top: 191px;
-    }
-    .science .experts .title {
-        padding-top: 0;
-    }
-    .index .science .experts .title {
-        padding-top: 20px;
-    }
-
-    .index .science .experts, .index .science .patents-science {
-        border-bottom: 1px solid #f0efef;
-        padding-bottom: 20px;
-    }
-    .index .science {
-        margin-bottom: 0px;
-    }
-
-    .index .science .patents-science {
-        padding-top: 0px;
-    }
-
-
-    .science .experts .expert {
-        display: block;
-        text-align: center;
-        padding: 0 25px;
-    }
-    .science .experts .expert .video {
-        max-width: 100%;
-        padding-left: 0;
-    }
-    .science .experts .expert .text {
-        max-width: 100%;
-        padding: 30px;
-    }
-    .science .experts .swiper-button-prev,
-    .science .experts .swiper-button-next {
-        top: 30%;
-    }
-    .science .experts {
-        width: 100%;
-    }
-    .science .patents-science .carousel .swiper-slide {
-        width: 80px;
-    }
-    .science .patents-science .carousel .block,
-    .science .patents-science .carousel .block .img,
-    .science .patents-science .carousel .block .content {
-        width: 80px;
-        height: 100px;
-    }
-    .science .patents-science .patents-slider2.carousel .block .content .plogo {
-        top: 0px;
-        height: 80px;
-    }
-    .science .patents-science .carousel .block .content .plogo img {
-        width: 40px;
-    }
-    .science .patents-science .carousel .title {
-        font-size: 10px;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        text-align: center;
-        width: 100%;
-    }
-    .science .patents-science .patents-slider2 .swiper-container {
-        padding: 20px !important;
-    }
-    .science .patents-science .patents-slider-nav .swiper-button-prev,
-    .science .patents-science .patents-slider-nav .swiper-button-next {
-        top: 50%;
-    }
-    .science .experts {
-        padding-top: 0;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .lifevizblock-mob {
-        left: 20%;
-    }
-    .science .faceblock .blocks .block .faceimg {
-        right: -70%;
-    }
-    .science .experts .swiper-button-prev,
-    .science .experts .swiper-button-next {
-        top: 25%;
-    }
-    .science .patents-science .carousel .title {
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .lifevizblock-mob {
-        left: 15%;
-    }
-    .science .faceblock .blocks .block .faceimg {
-        right: -130%;
-    }
-    .science .patents-science .carousel .swiper-slide {
-        width: 60px;
-    }
-    .science .patents-science .carousel .block,
-    .science .patents-science .carousel .block .img,
-    .science .patents-science .carousel .block .content {
-        width: 60px;
-        height: 80px;
-    }
-    .science .patents-science .patents-slider2.carousel .block .content .plogo {
-        top: 0px;
-        height: 60px;
-    }
-    .science .patents-science .carousel .block .content .plogo img {
-        width: 30px;
-    }
-    .science .patents-science .carousel .title {
-        font-size: 7px;
-        position: absolute;
-        top: 35px;
-        left: 0;
-        text-align: center;
-        width: 100%;
-    }
-    .science .patents-science .patents-slider-nav .swiper-button-prev,
-    .science .patents-science .patents-slider-nav .swiper-button-next {
-        top: 52%;
-    }
-    .science .patents-science .patents-slider2.carousel {
-        padding: 0;
-    }
-    .science .patents-science .patents-slider-nav .swiper-button-prev {
-        left: -15px;
-    }
-    .science .patents-science .patents-slider-nav .swiper-button-next {
-        right: -15px;
-    }
-    .science .patents-science .patents-slider2 .swiper-container {
-        padding: 20px 40px !important;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .lifevizblock-mob {
-        left: 12%;
-    }
-    .science .faceblock .blocks .block .faceimg {
-        right: -230%;
-    }
-    .science .experts .swiper-button-prev,
-    .science .experts .swiper-button-next {
-        top: 21%;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .presentation {
@@ -1883,14 +1264,63 @@
     right: -3px;
 }
 
+@media screen and (max-width: 1800px) {
+    .science.science_main-page .experts .title {
+        font-size: 26px;
+    }
+}
 
-@media (min-width: 1400px) {
+@media screen and (max-width: 1400px) {
+    .science .faceblock .blocks .block .faceimg {
+        width: 100%;
+    }
+    .science .faceblock .blocks .block:first-child {
+        padding-left: 20px;
+    }
+    .science .qublock {
+        padding: 0 0 60px;
+    }
+    .science .qublock .padd {
+        padding: 0;
+    }
     .presentation-head-box > svg {
         height: 100%;
         width: 40vw;
     }
 }
-@media (max-width: 1200px) {
+
+@media screen and (max-width: 1300px) {
+    .science .faceblock .blocks .block:last-child {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .science .science_full-width-video .expert .text .comm {
+        width: 70%;
+    }
+    .science .experts .swiper_experts,
+    .science .experts .swiper-pagination {
+        border-top: none;
+    }
+    .science.science_main-page .experts .title {
+        font-size: 20px;
+    }
+    .science .experts .expert .text {
+        padding: 32px;
+    }
+    .science .experts .expert .text .name {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+    .science .experts .swiper-button-next,
+    .science .experts .swiper-button-prev {
+        width: 44px;
+        height: 44px;
+    }
+    .science .experts .swiper-button-prev {
+        right: 76px;
+    }
     .presentation-head__info-box {
         width: 60%;
     }
@@ -1910,7 +1340,223 @@
         height: 3vw;
     }
 }
-@media (max-width: 768px) {
+
+@media screen and (max-width: 1024px) {
+    .science .headblock {
+        padding-top: 25px;
+    }
+    .science .headblock .subtitle {
+        font-size: 22px;
+    }
+    .science .digitblock .block .proc {
+        font-size: 55px;
+        line-height: 55px;
+    }
+    .science .digitblock .block:first-child .proc {
+        max-width: 175px;
+    }
+    .science .digitblock .block {
+        min-width: auto;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .params {
+        bottom: 9px;
+    }
+    .science .digitblock {
+        padding: 25px 0 35px;
+    }
+    .science .digitblock .blocks {
+        max-width: none;
+    }
+    .science .digitblock .block .subtitle,
+    .science .digitblock .block .proc,
+    .science .digitblock .block .title {
+        margin: auto !important;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .img {
+        max-width: 170px;
+    }
+    .science .faceblock .blocks .block .faceslider {
+        max-width: 500px;
+        min-height: auto;
+    }
+    .science .faceblock {
+        margin-bottom: 30px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .slide {
+        max-width: 370px;
+    }
+    .science .faceblock .blocks .block:first-child {
+        padding-top: 0;
+    }
+    .science .faceblock .blocks .block .faceslider .title,
+    .science .faceblock .blocks .block .faceslider .subtitle {
+        margin-left: 65px;
+    }
+    .science .faceblock .blocks .block .faceslider {
+        padding: 20px 0;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-prev {
+        left: 10px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-next {
+        right: 10px;
+    }
+    .science .qublock .blocks .block:last-child {
+        padding-right: 10px;
+    }
+    .science .experts .expert .video {
+        padding-left: 0;
+    }
+    .science .experts .expert .text {
+        padding: 20px 30px;
+    }
+    .science .science_full-width-video .experts .expert .text {
+        padding-right: 0;
+    }
+
+    .science .experts .swiper-pagination {
+        padding-top: 30px;
+    }
+    .science .qublock .blocks .block:first-child {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .science .experts .expert .video .play-video {
+        left: auto;
+        top: auto;
+    }
+    .science .experts {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .index .science {
+        border-bottom: 0px;
+        padding-bottom: 20px;
+    }
+    .science .faceblock .blocks .block .faceslider {
+        max-width: 400px
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .img {
+        max-width: 140px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .slide {
+        max-width: 290px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .params {
+        font-size: 7px;
+    }
+    .science .faceblock .blocks .block .faceslider .title, .science .faceblock .blocks .block .faceslider .subtitle {
+        margin-left: 55px;
+    }
+    .science .experts .swiper-pagination {
+        padding-top: 0;
+    }
+    .science .experts .swiper_experts {
+        padding-bottom: 60px;
+    }
+    .science .experts .title {
+        margin-bottom: 30px;
+    }
+    .science .experts .expert .text .city {
+        font-size: 16px;
+    }
+    .science .experts .expert .text .comm {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-next,
+    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-prev {
+        width: 33px;
+        height: 33px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-next:after,
+    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-prev:after {
+        background-size: 7px 14px;
+    }
+    .science .patents-science .patents-slider-nav .swiper-button {
+        width: 33px;
+        height: 33px;
+    }
+    .science .patents-science .patents-slider-nav .swiper-button-prev,
+    .science .patents-science .patents-slider-nav .swiper-button-next {
+        top: 45%;
+    }
+    .science .experts .swiper-button-next,
+    .science .experts .swiper-button-prev {
+        width: 33px;
+        height: 33px;
+    }
+    .science .experts .swiper-button-next {
+        right: 7px;
+        top: 42%;
+    }
+    .science .experts .swiper-button-prev {
+        left: 7px;
+        top: 42%;
+    }
+    .science .experts .swiper-button-next:after,
+    .science .experts .swiper-button-prev:after {
+        background-size: 7px 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .science .faceblock .blocks .block .faceslider {
+        max-width: 320px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .img {
+        max-width: 100px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .slide {
+        max-width: 225px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .month {
+        font-size: 10px;
+    }
+    .science .faceblock .blocks .block .faceslider .title, .science .faceblock .blocks .block .faceslider .subtitle {
+        margin-left: 48px;
+    }
+    .science .faceblock .blocks .block .faceslider .title {
+        font-size: 16px;
+    }
+    .science .faceblock .blocks .block .faceslider .subtitle {
+        font-size: 10px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .params {
+        font-size: 5px;
+    }
+    .science .headblock .subtitle {
+        font-size: 14px;
+    }
+    .science .qublock .blocks {
+        display: block;
+        padding: 25px;
+    }
+    .science .qublock .blocks .block:first-child {
+        width: auto;
+    }
+    .science .qublock,
+    .science .patents-science {
+        border-bottom: none;
+    }
+    .science .experts .swiper_experts {
+        padding-bottom: 30px;
+    }
+    .science .qublock .blocks .block .img.lifevizblock {
+        top: auto;
+        margin-bottom: 0;
+    }
+    .science .qublock .blocks .block {
+        padding-right: 0;
+    }
+    .science .qublock .blocks .block:first-child {
+        margin-bottom: 20px;
+    }
     .presentation {
         margin-bottom: 50px;
     }
@@ -2022,25 +1668,101 @@
         font-size: 2vw;
     }
 }
-@media screen and (max-width: 1800px) {
-    .science.science_main-page .experts .title {
-        font-size: 26px;
-    }
-}
-@media screen and (max-width: 1279px) {
-    .science.science_main-page .experts .title {
-        font-size: 20px;
-    }
-    .science .experts .expert .text {
-        padding: 32px;
-    }
-    .science .experts .expert .text .city {
-        margin-bottom: 32px;
-    }
-}
 
-
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
+    .science .science_full-width-video .video-wrapper {
+        aspect-ratio: 9 / 16;
+    }
+    .science .headblock .title {
+        margin-bottom: 30px;
+    }
+    .science .headblock .subtitle {
+        line-height: 20px;
+        margin: 0 auto 25px;
+    }
+    .science .digitblock .blocks {
+        display: block;
+    }
+    .science .digitblock .block:after,
+    .science .digitblock .block.left .subtitle {
+        display: none;
+    }
+    .science .digitblock .block {
+        border-bottom: 2px solid var(--lightgray);
+    }
+    .science .digitblock .block:last-child {
+        border-bottom: none;
+    }
+    .science .digitblock {
+        padding: 0;
+    }
+    .science .digitblock .block {
+        padding: 20px 0;
+        display: flex;
+    }
+    .science .digitblock .block .title {
+        margin: 0 0 0 35px !important;
+    }
+    .science .digitblock .block .proc {
+        font-size: 46px;
+        line-height: 46px;
+    }
+    .science .digitblock .block .title {
+        position: relative;
+        top: 21px;
+    }
+    .science .digitblock .block:first-child .title {
+        top: 3px;
+    }
+    .science .faceblock {
+        padding-top: 0;
+    }
+    .science .faceblock .blocks .block:first-child {
+        padding-top: 90px
+    }
+    .science .faceblock .blocks .block:last-child {
+        padding-top: 30px
+    }
+    .science .faceblock .blocks .block .faceslider {
+        max-width: 260px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .img {
+        max-width: 95px;
+    }
+    .science .faceblock .blocks .block .faceslider .title,
+    .science .faceblock .blocks .block .faceslider .subtitle {
+        margin-left: 30px;
+    }
+    .science .faceblock .blocks .block .faceslider .title {
+        margin-left: 0;
+        padding-left: 30px;
+        border-bottom: 0;
+        background: linear-gradient(90deg, rgba(249, 207, 211, 0.43) 0%, rgba(85, 122, 188, 0.43) 100%);
+        height: 30px;
+        line-height: 30px;
+        min-width: 130px;
+    }
+    .science .digitblock .block .title {
+        line-height: 20px;
+        font-size: 14px;
+    }
+    .science .faceblock .blocks .block .faceslider .subtitle {
+        min-width: 200px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .slide {
+        max-width: 200px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .params {
+        font-size: 6px;
+        bottom: 8px;
+        left: 40%;
+        text-wrap: nowrap;
+        line-height: 8px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .slide .card .month {
+        font-size: 9px;
+        margin-bottom: 0;
+    }
     .video-controls {
         top: 10px;
         right: 14px;
@@ -2049,7 +1771,279 @@
         width: 28px;
         height: 28px;
     }
+    .science.science_main-page .experts .title {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    .science .faceblock .blocks .block .faceslider .subtitle {
+        font-size: 10px;
+        line-height: 14px;
+    }
+    .science .faceblock .blocks .block .faceslider .title {
+        font-size: 14px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-next,
+    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-prev {
+        width: 22px;
+        height: 22px;
+        top: 60%;
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, .1);
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-next:after,
+    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-prev:after {
+        background-size: 5px 10px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-prev {
+        left: 3px;
+    }
+    .science .faceblock .blocks .block .faceslider .sliderblock .swiper-button-next {
+        right: 3px;
+    }
+    .science .faceblock .blocks {
+        overflow: hidden;
+    }
+    .science .faceblock .blocks .block .faceimg {
+        width: auto;
+        position: absolute;
+        right: -50%;
+        max-width: 370px;
+        opacity: 0.7;
+    }
+    .science .faceblock .blocks .block .faceslider {
+        margin-bottom: 40px;
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 2px 5px 15px 0 rgba(0, 0, 0, 0.2);
+    }
+    .science .headblock {
+        padding-top: 0;
+    }
+    .science .patents-science h4,
+    .science .experts .title,
+    .science .experts .expert .text .name {
+        font-size: 18px;
+    }
+    .science .experts .expert .text .comm {
+        font-size: 14px;
+    }
+    .science .experts .swiper-pagination-bullet {
+        margin: 0 10px;
+    }
+    .science .qublock .blocks .block .title {
+        color: #000;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .science .qublock .blocks .block {
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    .science .qublock .blocks .block .subtitle {
+        font-size: 12px;
+    }
+    .science .qublock .blocks .block .img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .science .qublock .blocks .block:first-child {
+        margin-bottom: 35px;
+    }
+    .science .qublock .blocks .block .img.lifevizblock {
+        display: none;
+    }
+    .lifevizblock-mob {
+        display: block;
+        position: absolute;
+        left: 25%;
+        padding-top: 30px;
+    }
+    .science .qublock .blocks .block .lifevizblock-mob .lifeviz {
+        max-width: 172px;
+    }
+    .science .qublock .blocks .block .lifevizblock-mob .quant {
+        max-width: 185px;
+        margin-left: 15px;
+    }
+    .science .qublock .blocks .block .text > .more {
+        display: none;
+    }
+    .science .qublock .blocks .block:last-child {
+        padding-bottom: 160px;
+    }
+    .science .qublock {
+        margin-bottom: 40px;
+    }
+    .science .qublock .blocks .block .text .lifevizblock-mob .more {
+        position: absolute;
+        right: -64px;
+        top: 191px;
+    }
+    .science .experts .title {
+        padding-top: 0;
+    }
+    .index .science .experts .title {
+        padding-top: 20px;
+    }
+    .science .experts .expert .text .city {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .index .science .experts, .index .science .patents-science {
+        border-bottom: 1px solid #f0efef;
+        padding-bottom: 20px;
+    }
+    .index .science {
+        margin-bottom: 0;
+    }
+    .science .experts .science_full-width-video .expert .text {
+        padding: 24px 0 24px;
+    }
+
+    .index .science .patents-science {
+        padding-top: 0;
+    }
+    .science .experts .expert .text .comm {
+        font-weight: 500;
+    }
+
+    .science .experts .expert {
+        display: block;
+        text-align: center;
+        padding: 0 25px;
+    }
+    .science .experts .expert .video {
+        max-width: 100%;
+        padding-left: 0;
+    }
+    .science .experts .expert .text {
+        max-width: 100%;
+        padding: 30px;
+    }
+    .science .experts .swiper-button-prev,
+    .science .experts .swiper-button-next {
+        top: 30%;
+    }
+    .science .experts {
+        width: 100%;
+    }
+    .science .patents-science .carousel .swiper-slide {
+        width: 80px;
+    }
+    .science .patents-science .carousel .block,
+    .science .patents-science .carousel .block .img,
+    .science .patents-science .carousel .block .content {
+        width: 80px;
+        height: 100px;
+    }
+    .science .patents-science .patents-slider2.carousel .block .content .plogo {
+        top: 0px;
+        height: 80px;
+    }
+    .science .patents-science .carousel .block .content .plogo img {
+        width: 40px;
+    }
+    .science .patents-science .carousel .title {
+        font-size: 10px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        text-align: center;
+        width: 100%;
+    }
+    .science .patents-science .patents-slider2 .swiper-container {
+        padding: 20px !important;
+    }
+    .science .patents-science .patents-slider-nav .swiper-button-prev,
+    .science .patents-science .patents-slider-nav .swiper-button-next {
+        top: 50%;
+    }
+    .science .experts {
+        padding-top: 0;
+    }
+    .science .science_full-width-video .expert .text .comm {
+        width: 100%;
+    }
 }
+
+@media screen and (max-width: 500px) {
+    .lifevizblock-mob {
+        left: 20%;
+    }
+    .science .faceblock .blocks .block .faceimg {
+        right: -70%;
+    }
+    .science .experts .swiper-button-prev,
+    .science .experts .swiper-button-next {
+        top: 25%;
+    }
+    .science .patents-science .carousel .title {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .lifevizblock-mob {
+        left: 15%;
+    }
+    .science .faceblock .blocks .block .faceimg {
+        right: -130%;
+    }
+    .science .patents-science .carousel .swiper-slide {
+        width: 60px;
+    }
+    .science .patents-science .carousel .block,
+    .science .patents-science .carousel .block .img,
+    .science .patents-science .carousel .block .content {
+        width: 60px;
+        height: 80px;
+    }
+    .science .patents-science .patents-slider2.carousel .block .content .plogo {
+        top: 0px;
+        height: 60px;
+    }
+    .science .patents-science .carousel .block .content .plogo img {
+        width: 30px;
+    }
+    .science .patents-science .carousel .title {
+        font-size: 7px;
+        position: absolute;
+        top: 35px;
+        left: 0;
+        text-align: center;
+        width: 100%;
+    }
+    .science .patents-science .patents-slider-nav .swiper-button-prev,
+    .science .patents-science .patents-slider-nav .swiper-button-next {
+        top: 52%;
+    }
+    .science .patents-science .patents-slider2.carousel {
+        padding: 0;
+    }
+    .science .patents-science .patents-slider-nav .swiper-button-prev {
+        left: -15px;
+    }
+    .science .patents-science .patents-slider-nav .swiper-button-next {
+        right: -15px;
+    }
+    .science .patents-science .patents-slider2 .swiper-container {
+        padding: 20px 40px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .lifevizblock-mob {
+        left: 12%;
+    }
+    .science .faceblock .blocks .block .faceimg {
+        right: -230%;
+    }
+    .science .experts .swiper-button-prev,
+    .science .experts .swiper-button-next {
+        top: 21%;
+    }
+}
+
 
 
 
