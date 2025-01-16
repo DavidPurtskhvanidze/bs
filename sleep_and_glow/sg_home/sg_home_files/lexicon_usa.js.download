@@ -1,0 +1,1 @@
+var lexiconForJs={"free":"Is free","showed":"Shown","currency":"US$","messageError":"An error occurred in the process","requiredField":"This field must be filled in","incorrectEmail":"Enter a valid email address","incorrectPhone":"Enter the correct phone number","incorrectZip":"This zip/post code does not match your state/province"};
