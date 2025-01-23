@@ -3,11 +3,11 @@
 /* gl-title */
 .gl-title {
     margin: 0 0 64px;
-    font-size: 32px;
-    font-weight: 300;
+    font-size: 36px;
+    font-weight: 400;
     text-align: center;
     text-transform: uppercase;
-    line-height: 48px;
+    line-height: 1.2;
 }
 
 .gl-title strong {
@@ -21,11 +21,12 @@
     align-items: center;
 }
 
-/* results-wrinkles-section
+/* results-wrinkles-section*/
 .results-wrinkles-section {
-    padding: 156px 20px;
+    margin: 40px auto 0 !important;
+    width: var(--gridWidth);
 }
-*/
+
 /* results-wrinkles-slider */
 .results-wrinkles-slider {
     position: relative;
@@ -78,7 +79,7 @@
 
 /* results-wrinkles-item */
 .results-wrinkles-item {
-    padding: 32px 70px 32px 64px;
+    padding: 32px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 6px 5px 22px 0 rgba(0, 0, 0, 0.1);
@@ -184,51 +185,11 @@
     background: #F5F5F5;
 }
 
-/* 1500 */
-@media (max-width: 1500px) {
 
+@media screen and (max-width: 1800px) {
     .gl-title {
-        font-size: 28px;
-        line-height: 38px;
+        font-size: 26px;
     }
-
-    .results-wrinkles-item {
-        padding: 32px 45px;
-    }
-
-    .results-wrinkles-item__title {
-        font-size: 16px;
-        line-height: 26px;
-    }
-
-    .results-wrinkles-item__gallery {
-        gap: 0 15px;
-    }
-
-    .results-wrinkles-item__gallery-title {
-        font-size: 16px;
-        line-height: 26px;
-    }
-
-    .results-wrinkles-item__gallery-title {
-        font-size: 14px;
-    }
-
-    .percentage-info__sm-text {
-        font-size: 14px;
-        line-height: 24px;
-    }
-
-    .percentage-info__number {
-        font-size: 50px;
-        line-height: 50px;
-    }
-
-    .percentage-info__text {
-        font-size: 14px;
-        line-height: 22px;
-    }
-
 }
 
 /* 1300 */
@@ -243,11 +204,25 @@
 
 /* 1081 */
 @media (max-width: 1081px) {
-
+    .results-wrinkles-section {
+        margin: 24px auto 0 !important;
+    }
     .gl-title {
         margin: 0 0 24px;
         font-size: 18px;
         line-height: 28px;
+    }
+    .percentage-info__sm-text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .percentage-info__number {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .percentage-info__text {
+        font-size: 14px;
+        line-height: 22px;
     }
 
 }
@@ -267,10 +242,6 @@
 
 /* 680 */
 @media (max-width: 680px) {
-
-    .results-wrinkles-section {
-        padding: 80px 10px !important;
-    }
 
     .results-wrinkles-item__title {
         font-size: 14px;
@@ -299,6 +270,7 @@
     .results-wrinkles-item__gallery-title {
         font-size: 10px;
         line-height: 18px;
+        font-weight: 300;
     }
 
     .percentage-info {
@@ -324,6 +296,7 @@
         gap: 0 16px;
         flex-direction: inherit;
         min-width: 254px;
+        width: 100%;
     }
 
     .percentage-info__sm-text {
@@ -343,6 +316,9 @@
     .percentage-info__text {
         margin: 0;
         line-height: 20px;
+        font-size: 14px;
+        width: 60%;
+        flex: 1 1 60%;
     }
 
 }
