@@ -1,0 +1,30 @@
+
+
+
+
+
+.page-text-hero-wrapper {
+    background-color: #FAEFE8;
+    padding: clamp(20px, calc(47/1440*100vw), 47px) 16px;
+}
+.page-text-hero-title {
+    font-family: 'Bitter';
+    font-weight: 500;
+    font-size: clamp(14px, calc(15/1440*100vw), 15px);
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    color: #3C3C3B;
+    margin-bottom: clamp(10px, calc(20/1440*100vw), 20px);
+}
+.page-text-hero-text {
+    font-family: 'Bitter';
+    font-weight: 300;
+    font-size: clamp(9px, calc(15/1440*100vw), 15px);
+    line-height: 1.8;
+    text-align: center;
+    color: #3C3C3B;
+}
+.page-text-hero-text + .page-text-hero-text {
+    margin-top: clamp(12px, calc(24/1440*100vw), 24px);
+}
