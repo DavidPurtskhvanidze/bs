@@ -1,5 +1,5 @@
 // скрол к категории товаров
-$(document).on('click', '.tabs a[data-name]', function() {
+$(document).on('click', '.tabs-slider a[data-name]', function() {
     var title = $(this).data('name');
     var anchor = $('h2[data-name="' + title + '"]').closest('.product-group');
     console.log(title, anchor);
@@ -16,25 +16,24 @@ $(window).on('scroll', function() {
         , tabsHeight = tabs.outerHeight()
         , replacerHeight = replacer.outerHeight();
 
-    if ($(window).scrollTop() >= replacer.offset().top - tabsHeight) {
-        replacer.css({
-            height: tabsHeight
-        });
-        tabs.addClass('fixed');
-    }
+    // if ($(window).scrollTop() >= replacer.offset().top - tabsHeight) {
+    //     replacer.css({
+    //         height: tabsHeight
+    //     });
+    //     tabs.addClass('fixed');
+    // }
 
-    if ($(window).scrollTop() < replacer.offset().top + 15) {
-        replacer.css({
-            height: ''
-        });
-        tabs.removeClass('fixed');
-    }
+    // if ($(window).scrollTop() < replacer.offset().top + 15) {
+    //     replacer.css({
+    //         height: ''
+    //     });
+    //     tabs.removeClass('fixed');
+    // }
 })
 // клик по цвету
-$(document).on('click', '.colors__content .swiper-slide', function() {
+$(document).on('click', '.product-colors-list .product-colors-list-item', function() {
     var i = $(this).index();
-    $(this).closest('.colors').prev().find('.swiper-pagination').find('span').eq(i).click();
-
+    $(this).closest('.product-colors-wrapper').prev().find('.swiper-pagination').find('span').eq(i).click();
 })
 // подгружаем слайдеры при скроле
 $(document).on('pdopage_load', function(e, config, response) {
@@ -106,7 +105,7 @@ function scrNav() {
 }
 
 function loadSliders() {
-    const tabsSlider = document.querySelectorAll('.tabs .swiper-container');
+    const tabsSlider = document.querySelectorAll('.tabs-slider .swiper-container');
     for (i = 0; i < tabsSlider.length; i++) {
         tabsSlider[i].classList.add('tabs-slider-' + i);
 
@@ -150,7 +149,7 @@ function loadSliders() {
         });
     }
 
-    const previewsSlider = document.querySelectorAll('.previews .swiper-container');
+    const previewsSlider = document.querySelectorAll('.pictures-slider .swiper-container');
     for (i = 0; i < previewsSlider.length; i++) {
         previewsSlider[i].classList.add('previews-slider-' + i);
 
@@ -176,7 +175,7 @@ function loadSliders() {
                 },
                 768: {
                     slidesPerView: 3,
-                    spaceBetween: 30
+                    spaceBetween: 20
                 }
             },
             on: {
@@ -190,7 +189,7 @@ function loadSliders() {
         });
     }
 
-    const productsSlider = document.querySelectorAll('.products');
+    const productsSlider = document.querySelectorAll('.product-slider .swiper-container');
     for (i = 0; i < productsSlider.length; i++) {
         productsSlider[i].classList.add('products-slider-' + i);
 
