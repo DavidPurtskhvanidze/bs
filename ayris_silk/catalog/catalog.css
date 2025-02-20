@@ -211,22 +211,22 @@
 }
 
 @media (max-width: 576px) {
-    .product-colors {
+    .product-colors-wrapper {
         align-items: start;
     }
-    .product-colors__title {
+    .product-colors-title {
         font-size: 9px;
     }
-    .product-colors__title span {
+    .product-colors-title span {
         font-size: 12px;
     }
-    .product-colors__list:after {
+    .product-colors-list:after {
         width: 70%;
     }
-    .product-colors__list {
+    .product-colors-list {
         gap: 14px;
     }
-    .product-colors__divider {
+    .product-colors-divider {
         width: 64%;
     }
 
