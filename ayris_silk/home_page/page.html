@@ -225,9 +225,165 @@
     </div>
 </header>
 
+<style>
+    .slide-bg .slide-text {
+        position: relative;
+    }
 
+    .slide-bg .slide-text:before {
+        content: '';
+        display: block;
+        position: absolute;
+        background: url(https://ayris-silk.ru/images/25_02_25/bg.svg) no-repeat;
+        width: 780px;
+        height: 360px;
+        background-size: 100% 100%;
+        left: -210px;
+        z-index: 0;
+        bottom: -51px;
+    }
+
+    #slider .slide-bg .slide-text * {
+        position: relative;
+        z-index: 2;
+    }
+
+    #slider .slide-bg .slide-text {
+        right: 0;
+        top: auto;
+        left: 70% !important;
+        text-align: left;
+        width: auto !important;
+        transform: none !important;
+        max-width: 100% !important;
+        bottom: 30px;
+    }
+
+    .slide-bg .pretitle {
+        font-size: clamp(12px, calc(15/1920*100vw), 15px);
+        margin-bottom: 10px;
+    }
+
+    .slide-bg h2 {
+        font-size: clamp(16px, calc(32/1920*100vw), 32px);
+        margin-bottom: 10px;
+        font-weight: 400 !important;
+    }
+
+    .slide-bg .aftertitle {
+        font-size: clamp(16px, calc(20/1920*100vw), 25px);
+    }
+
+    .slide-bg .aftertitle.d {
+        display: block;
+        white-space: nowrap;
+    }
+
+    .slide-bg .aftertitle.m {
+        display: none;
+    }
+
+    .br-xs {
+        display: none;
+    }
+
+    @media (max-width: 1440px) {
+        .slide-bg .slide-text:before {
+            bottom: -100px;
+        }
+        .slide-bg .slide-text:before {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1320px) {
+        .slide-bg .aftertitle.d {
+            display: none;
+        }
+        .slide-bg .aftertitle.m {
+            display: block;
+        }
+    }
+
+    @media (max-width: 768px) {
+        #slider .slide-bg .slide-text {
+            left: 64% !important;
+        }
+    }
+
+    @media (max-width: 580px) {
+        .slide-bg .slide-text:before {
+            display: block;
+            left: 0;
+            right: 0;
+            z-index: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, rgba(60, 60, 59, 0.4) 5%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        .slide-bg .slide-text {
+            text-align: center;
+            color: #FFF8F4;
+            width: 100% !important;
+            left: 0 !important;
+            right: 0;
+            top: auto !important;
+            bottom: 30px !important;
+            transform: none !important;
+            max-width: 100% !important;
+        }
+
+        .br-xs {
+            display: inline-block;
+        }
+
+        .slide-bg .aftertitle {
+            margin: auto;
+            width: 250px;
+        }
+
+        .slide-bg .aftertitle.d {
+            display: block;
+            white-space: normal;
+        }
+
+        .slide-bg .aftertitle.m {
+            display: none;
+        }
+
+        #slider .slide-bg .slide-text {
+            left: 0 !important;
+            bottom: 0 !important;
+            padding-bottom: 24px;
+            text-align: center;
+        }
+
+        .slide-bg h2 {
+            width: 100%;
+        }
+    }
+</style>
 <div id="slider" class="swiper-container">
     <div class="swiper-wrapper">
+        <div class="slide slide-bg swiper-slide">
+            <picture>
+                <source srcset="https://ayris-silk.ru/images/25_02_25/mob-375x580.jpg" type="image/jpeg" media="(max-width: 580px)">
+                <source srcset="https://ayris-silk.ru/images/25_02_25/tablet-768x640.jpg" type="image/jpeg" media="(max-width: 768px)">
+                <source srcset="8mart/desk-1440х750.jpg" type="image/jpeg" media="(max-width: 1440px)">
+                <source srcset="https://ayris-silk.ru/images/25_02_25/desk-1920x750.jpg" type="image/jpeg">
+
+                <img srcset="https://ayris-silk.ru/images/25_02_25/desk-1920x750.jpg" alt="">
+            </picture>
+            <div class="container">
+                <div class="slide-text">
+                    <div class="pretitle" style="">с 20.02 до 08.03</div>
+                    <h2>Подарки для тех, <br>кто выбирает лучшее</h2>
+                    <div class="aftertitle d">-10% на все<br class="br-xs"> по&nbsp;промокоду <strong>8MART</strong></div>
+                    <div class="aftertitle m">-10% по&nbsp;коду <strong>8MART</strong></div>
+                </div>
+            </div>
+        </div>
+
         <div class="slide swiper-slide">
             <picture class="counter-new-year-picture">
                 <source srcset="new_files/as_new_year_sale_bg.webp" type="image/webp">
@@ -271,8 +427,6 @@
 
 
         </div>
-
-
         <div class="slide swiper-slide" data-left="1">
 
             <!-- Container for video -->
