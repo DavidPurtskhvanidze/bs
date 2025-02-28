@@ -101,6 +101,11 @@
 <body id="main" data-new-gr-c-s-check-loaded="14.1207.0" data-gr-ext-installed="">
 
 <header class="">
+    <div class="info">
+        <div class="container uc">
+            Выбирайте подарки: -10% на все по промокоду 8MART
+        </div>
+    </div>
     <div class="header">
         <div class="container flx">
             <div class="burger-menu"><span></span><span></span><span></span></div>
@@ -230,19 +235,6 @@
         position: relative;
     }
 
-    .slide-bg .slide-text:before {
-        content: '';
-        display: block;
-        position: absolute;
-        background: url(https://ayris-silk.ru/images/25_02_25/bg.svg) no-repeat;
-        width: 780px;
-        height: 360px;
-        background-size: 100% 100%;
-        left: -210px;
-        z-index: 0;
-        bottom: -51px;
-    }
-
     #slider .slide-bg .slide-text * {
         position: relative;
         z-index: 2;
@@ -251,17 +243,17 @@
     #slider .slide-bg .slide-text {
         right: 0;
         top: auto;
-        left: 70% !important;
+        left: 63% !important;
         text-align: left;
         width: auto !important;
         transform: none !important;
         max-width: 100% !important;
-        bottom: 30px;
+        bottom: 1.6em;
     }
 
     .slide-bg .pretitle {
         font-size: clamp(12px, calc(15/1920*100vw), 15px);
-        margin-bottom: 10px;
+        margin-bottom: 7px;
     }
 
     .slide-bg h2 {
@@ -288,11 +280,9 @@
     }
 
     @media (max-width: 1440px) {
-        .slide-bg .slide-text:before {
-            bottom: -100px;
-        }
-        .slide-bg .slide-text:before {
-            display: none;
+        #slider .slide-bg .slide-text {
+            left: 66% !important;
+            bottom: 2em;
         }
     }
 
@@ -307,7 +297,8 @@
 
     @media (max-width: 1279px) {
         #slider .slide-bg .slide-text {
-            bottom: 40px;
+            left: 70% !important;
+            bottom: 2.5em;
         }
     }
 
@@ -319,11 +310,14 @@
 
     @media (max-width: 580px) {
         .slide-bg .slide-text:before {
+            content: '';
             display: block;
+            position: absolute;
             left: 0;
             right: 0;
-            z-index: 0;
             bottom: 0;
+            z-index: 0;
+            height: 360px;
             background: linear-gradient(0deg, rgba(60, 60, 59, 0.4) 5%, rgba(255, 255, 255, 0) 100%);
         }
 
@@ -367,6 +361,9 @@
         .slide-bg h2 {
             width: 100%;
         }
+        #slider .slide-bg picture img {
+            object-position: 0 17%;
+        }
     }
 </style>
 <div id="slider" class="swiper-container">
@@ -378,8 +375,8 @@
 
                 <source srcset="8mart/desk-1440х750.jpg" type="image/jpeg" media="(max-width: 1440px)">
 
-                <source srcset="https://ayris-silk.ru/images/25_02_25/desk-1920x750.jpg" type="image/jpeg">
-                <img srcset="https://ayris-silk.ru/images/25_02_25/desk-1920x750.jpg" alt="">
+                <source srcset="8mart/desktop_8M_1920_w.jpg" type="image/jpeg">
+                <img srcset="8mart/desktop_8M_1920_w.jpg" alt="">
             </picture>
             <div class="container">
                 <div class="slide-text">
