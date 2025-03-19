@@ -1,14 +1,14 @@
-header {
-    display: none !important;
-}
-main {
-    padding-top: 0 !important;
-}
-@media screen and (max-width: 1800px) {
-    main {
-        padding-top: 0 !important;
-    }
-}
+/*header {*/
+/*    display: none !important;*/
+/*}*/
+/*main {*/
+/*    padding-top: 0 !important;*/
+/*}*/
+/*@media screen and (max-width: 1800px) {*/
+/*    main {*/
+/*        padding-top: 0 !important;*/
+/*    }*/
+/*}*/
 
 .br-mobile {
     display: none;
@@ -478,7 +478,8 @@ body section.hyaluron-cutting-edge-section {
     display: flex;
     grid-template-columns: 20% 100%;
     position: relative;
-    padding-left: 4vw;
+    padding-left: 4em;
+    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
 }
 .hyaluron-cutting-edge-num {
     font-weight: 500;
@@ -492,8 +493,8 @@ body section.hyaluron-cutting-edge-section {
     text-fill-color: transparent;
     position: absolute;
     top: 0;
-    height: 4vw;
-    left: -1vw;
+    height: 0.7em;
+    left: -0.2em;
     aspect-ratio: 1/1;
     display: flex;
     align-items: start;
@@ -501,7 +502,7 @@ body section.hyaluron-cutting-edge-section {
 }
 .hyaluron-cutting-edge-text {
     font-weight: 300;
-    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
+    /* font-size: clamp(14px, calc(18 / 1920* 100vw), 18px); */
     line-height: 1.5;
     text-transform: uppercase;
     color: #000000;
@@ -941,11 +942,11 @@ body section.hyaluron-cutting-edge-section {
         position: static;
     }
     .hyaluron-cutting-edge {
-        padding-left: 23vw;
+        padding-left: 8em;
     }
     .hyaluron-cutting-edge-num {
-        height: 22vw;
-        left: 1vw;
+        height: 1em;
+        left: 0.2em;
     }
     .hyaluron-cutting-edge-img {
         margin-bottom: 6%;
@@ -977,6 +978,18 @@ body section.hyaluron-cutting-edge-section {
     }
     .hyaluron-cutting-edge-video .hyaluron-cutting-edge-text {
         color: #000;
+    }
+    body section.hyaluron-diff-section {
+        margin-bottom: 24%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hyaluron-cutting-edge {
+        padding-left: 6em;
+    }
+    .hyaluron-cutting-edge-num {
+        left: 0;
     }
 }
 
