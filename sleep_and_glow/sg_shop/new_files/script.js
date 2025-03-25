@@ -1,5 +1,5 @@
 const sections = document.querySelectorAll(".goods-grid");
-const navLinks = document.querySelectorAll(".shop-section__goods_item");
+const navLinks = document.querySelectorAll(".shop-section__goods_item_action");
 function highlightMenu() {
     let scrollPosition = window.scrollY + window.innerHeight / 2;
     sections.forEach(section => {
@@ -14,7 +14,7 @@ function highlightMenu() {
                     if (window.innerWidth < 1279) {
                         link.scrollIntoView({
                             behavior: 'smooth',
-                            inline: 'center'
+                            inline: 'start',
                         });
                     }
                 }
@@ -62,3 +62,19 @@ function clickOnSett(element, data) {
     nextSett[0].classList.remove('hidden');
     nextSett[0].classList.add('visible');
 }
+
+function shopSectionSidebarPosition() {
+    const mainBlock = document.getElementsByClassName("store");
+    const headerInfo = document.getElementsByClassName("header-info");
+    const headerCommon = document.getElementsByClassName("header-common");
+    const shopSectionSidebar = document.querySelector(".shop-section .shop-section__goods_sidebar > div");
+    if (window.innerWidth <= 1278) {
+        mainBlock[0].style.setProperty("padding-top", `${headerInfo[0].offsetHeight + headerCommon[0].offsetHeight + shopSectionSidebar.offsetHeight}px`);
+        shopSectionSidebar.style.setProperty("top", `${headerInfo[0].offsetHeight + headerCommon[0].offsetHeight}px`);
+    } else {
+        mainBlock[0].removeAttribute("style");
+        shopSectionSidebar.removeAttribute("style");
+    }
+}
+shopSectionSidebarPosition();
+window.addEventListener("resize", shopSectionSidebarPosition);

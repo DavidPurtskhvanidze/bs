@@ -16,19 +16,19 @@ $(window).on('scroll', function() {
         , tabsHeight = tabs.outerHeight()
         , replacerHeight = replacer.outerHeight();
 
-    // if ($(window).scrollTop() >= replacer.offset().top - tabsHeight) {
-    //     replacer.css({
-    //         height: tabsHeight
-    //     });
-    //     tabs.addClass('fixed');
-    // }
+    if ($(window).scrollTop() >= replacer.offset().top - tabsHeight) {
+        replacer.css({
+            height: tabsHeight
+        });
+        tabs.addClass('fixed');
+    }
 
-    // if ($(window).scrollTop() < replacer.offset().top + 15) {
-    //     replacer.css({
-    //         height: ''
-    //     });
-    //     tabs.removeClass('fixed');
-    // }
+    if ($(window).scrollTop() < replacer.offset().top + 15) {
+        replacer.css({
+            height: ''
+        });
+        tabs.removeClass('fixed');
+    }
 })
 // клик по цвету
 $(document).on('click', '.product-colors-list .product-colors-list-item', function() {
@@ -117,7 +117,7 @@ function loadSliders() {
                 slidesPerView: "auto",
                 slidesPerGroup: 1,
                 loop: false,
-                spaceBetween: 15,
+                spaceBetween: 16,
                 navigation: {
                     nextEl: '.tabs-slider-' + i + ' + .button-prev + .button-next',
                     prevEl: '.tabs-slider-' + i + ' + .button-prev',
@@ -157,25 +157,25 @@ function loadSliders() {
             continue;
 
         new Swiper('.previews-slider-' + i,{
+            loop: true,
+            speed: 700,
+            freeMode: false,
+            spaceBetween: 10,
             navigation: {
                 nextEl: '.previews-slider-' + i + ' .button-next',
                 prevEl: '.previews-slider-' + i + ' .button-prev',
             },
-            loop: true,
-            speed: 700,
-            freeMode: false,
             autoplay: {
                 pauseOnMouseEnter: true,
             },
-            spaceBetween: 50,
             breakpoints: {
                 320: {
                     slidesPerView: 1.5,
-                    spaceBetween: 10
+                    spaceBetween: 10,
                 },
-                768: {
+                767: {
                     slidesPerView: 3,
-                    spaceBetween: 20
+                    spaceBetween: 20,
                 }
             },
             on: {
@@ -200,8 +200,7 @@ function loadSliders() {
 
         new Swiper('.products-slider-' + i,{
             loop: loop,
-            slidesPerView: 4,
-            spaceBetween: 15,
+            spaceBetween: 10,
             speed: 700,
             freeMode: false,
             navigation: {
@@ -215,15 +214,15 @@ function loadSliders() {
             breakpoints: {
                 320: {
                     slidesPerView: 1.5,
-                    spaceBetween: 10
+                    spaceBetween: 10,
                 },
-                768: {
+                767: {
                     slidesPerView: 3,
-                    spaceBetween: 15
+                    spaceBetween: 20,
                 },
-                1200: {
+                1199: {
                     slidesPerView: 5,
-                    spaceBetween: 15
+                    spaceBetween: 18,
                 }
             },
             on: {
