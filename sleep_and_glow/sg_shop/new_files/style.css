@@ -500,10 +500,6 @@
 .shop-section__goods_item_action.active .shop-section__goods_item:hover:after {
     opacity: 1;
 }
-.noscroll .shop-section__goods_sidebar > div {
-    position: fixed;
-    top: 200px;
-}
 
 /*Popup*/
 .pp__size .pp__content {
@@ -627,7 +623,7 @@
         padding-left: 14px;
     }
     .shop-section__goods_item_action:last-child {
-        margin-right: 14px;
+        padding-right: 14px;
     }
     .shop-section__goods_item:after {
         height: 32px;

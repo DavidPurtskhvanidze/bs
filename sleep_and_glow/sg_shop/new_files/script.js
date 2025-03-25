@@ -1,17 +1,24 @@
 const sections = document.querySelectorAll(".goods-grid");
 const navLinks = document.querySelectorAll(".shop-section__goods_item_action");
+const seenSections = new Set();
+
 function highlightMenu() {
     let scrollPosition = window.scrollY + window.innerHeight / 2;
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
+
         if (scrollPosition - 200 >= sectionTop && scrollPosition - 200 < sectionTop + sectionHeight) {
             const id = section.getAttribute('id');
+
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('data-id') === id) {
                     link.classList.add('active');
-                    if (window.innerWidth < 1279) {
+
+                    if (window.innerWidth < 1279 && !seenSections.has(id)) {
+                        seenSections.add(id);
                         link.scrollIntoView({
                             behavior: 'smooth',
                             inline: 'start',
@@ -19,9 +26,12 @@ function highlightMenu() {
                     }
                 }
             });
+        } else {
+            seenSections.delete(section.getAttribute('id'));
         }
     });
 }
+
 window.addEventListener("scroll", highlightMenu);
 
 navLinks.forEach(link => {
