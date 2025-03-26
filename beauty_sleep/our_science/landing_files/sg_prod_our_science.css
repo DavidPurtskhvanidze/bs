@@ -1121,8 +1121,6 @@
     position: relative;
 }
 .presentation-head__item-slider {
-    display: -ms-grid;
-    display: grid;
     position: relative;
     scale: 0;
     opacity: 0;
@@ -1268,6 +1266,12 @@
     }
 }
 
+@media (min-width: 1400px) {
+    .presentation-head-box > svg {
+        height: 100%;
+        width: 40vw;
+    }
+}
 @media screen and (max-width: 1400px) {
     .science .faceblock .blocks .block .faceimg {
         width: 100%;
@@ -1280,10 +1284,6 @@
     }
     .science .qublock .padd {
         padding: 0;
-    }
-    .presentation-head-box > svg {
-        height: 100%;
-        width: 40vw;
     }
 }
 
