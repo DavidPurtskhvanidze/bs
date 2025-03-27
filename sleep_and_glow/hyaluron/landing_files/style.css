@@ -1,14 +1,3 @@
-/*header {*/
-/*    display: none !important;*/
-/*}*/
-/*main {*/
-/*    padding-top: 0 !important;*/
-/*}*/
-/*@media screen and (max-width: 1800px) {*/
-/*    main {*/
-/*        padding-top: 0 !important;*/
-/*    }*/
-/*}*/
 .noscroll {
     overflow: auto !important;
 }
@@ -221,6 +210,29 @@ body section.hyaluron-diff-section {
 }
 .hyaluron-diff-side-left {
     padding-left: 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.hyaluron-diff-side-left-item {
+    position: relative;
+}
+.hyaluron-diff-side-left-badge {
+    position: absolute;
+    bottom: 7%;
+    left: 3%;
+    display: flex;
+    align-items: center;
+    font-family: 'Cera Pro', sans-serif;
+    font-weight: 600;
+    font-size: clamp(10px, calc(18/1920*100vw), 18px);
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: #4F6FC1;
+}
+.hyaluron-diff-side-left-badge svg {
+    width: 2em;
+    margin-right: 0.5em;
 }
 .hyaluron-diff-side-right {
     padding-right: 4%;
@@ -291,9 +303,6 @@ body section.hyaluron-proven-section {
     align-items: center;
     position: relative;
 }
-.hyaluron-proven-percent-item svg {
-    width: 45%;
-}
 .hyaluron-proven-percent-item-mob {
     display: none;
 }
@@ -352,6 +361,70 @@ body section.hyaluron-proven-section {
     position: absolute;
     top: -20%;
     right: 0;
+}
+.hyaluron-proven-percent-item_link a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3%;
+}
+.hyaluron-proven-percent-item_link-text {
+    font-weight: 400;
+    font-size: clamp(16px, calc(18 / 1920* 100vw), 18px);
+    line-height: 1.2;
+    text-transform: uppercase;
+    background: linear-gradient(65.37deg, #F0C9D1 0%, #6E89C3 108.19%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    position: relative;
+    width: clamp(90px, calc(110 / 1920* 100vw), 110px);
+    height: clamp(90px, calc(110 / 1920* 100vw), 110px);
+    border-radius: 50%;
+    border: 1px solid #7B4C8E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hyaluron-proven-percent-item_link-text svg {
+    position: absolute;
+    bottom: 1em;
+    right: -2.2em;
+    width: clamp(44px, calc(54 / 1920* 100vw), 54px);
+}
+
+.hyaluron-proven-percent-item-desk {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(65.37deg, #F0C9D1 0%, #6E89C3 108.19%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.hyaluron-proven-percent-count {
+    font-weight: 300;
+    font-size: clamp(54px, calc(100 / 1920* 100vw), 100px);
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.1em;
+}
+.hyaluron-proven-percent-count i {
+    font-weight: 500;
+    font-size: clamp(25px, calc(48 / 1920* 100vw), 48px);
+    line-height: 1;
+    text-transform: uppercase;
+    font-style: normal;
+}
+.hyaluron-proven-percent-text {
+    font-weight: 500;
+    font-size: clamp(10px, calc(18 / 1920* 100vw), 18px);
+    line-height: 1.2;
+    text-transform: uppercase;
 }
 
 .hyaluron-proven-wakeup {
@@ -505,7 +578,6 @@ body section.hyaluron-cutting-edge-section {
 }
 .hyaluron-cutting-edge-text {
     font-weight: 300;
-    /* font-size: clamp(14px, calc(18 / 1920* 100vw), 18px); */
     line-height: 1.5;
     text-transform: uppercase;
     color: #000000;
@@ -539,6 +611,30 @@ body section.hyaluron-cutting-edge-section {
     align-items: center;
     margin-top: auto;
     margin-bottom: auto;
+}
+.pillow-img-box-anty-hydra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(7px, calc(32 / 1920* 100vw), 32px);
+}
+.pillow-img-box-anty-hydra svg {
+    width: clamp(10px, calc(28 / 1920* 100vw), 28px);
+}
+.pillow-img-box-anty-hydra-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #DCC2EC -28.87%, #93819E 47.91%, #DCC3ED 98.11%);
+    border-radius: 92.7783px;
+    font-weight: 500;
+    font-size: clamp(13px, calc(18 / 1920* 100vw), 18px);
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 0 clamp(10px, calc(40 / 1920* 100vw), 40px);
+    height: clamp(26px, calc(50 / 1920* 100vw), 50px);
 }
 .hyaluron-dignities-section .pillow-img-box .pillow-img-box-picture {
     display: flex;
@@ -672,7 +768,6 @@ body section.hyaluron-pillow-section {
     }
     .pillow-img-box .pillow-img-box-anty-hydra {
         top: -11%;
-        width: 58%;
     }
     .hyaluron-dignities-section .dignities-section__content_center {
         width: auto;
@@ -901,7 +996,7 @@ body section.hyaluron-pillow-section {
         flex-direction: column;
     }
     .hyaluron-proven-percent-item {
-        align-items: start;
+        align-items: center;
     }
     .hyaluron-proven-percent-item_line:before,
     .hyaluron-proven-percent-item_line:after {
@@ -911,7 +1006,13 @@ body section.hyaluron-pillow-section {
         width: 80%;
     }
     .hyaluron-proven-percent-item-mob {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(65.37deg, #F0C9D1 0%, #6E89C3 108.19%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
     }
     .hyaluron-proven-percent-item-desk {
         display: none;
@@ -928,7 +1029,7 @@ body section.hyaluron-pillow-section {
     }
     .hyaluron-proven-section .hyaluron-proven-title {
         order: 1;
-        padding-top: 19%;
+        padding: 19% 10px 0;
     }
     .hyaluron-proven-percent {
         order: 2;
@@ -1039,6 +1140,12 @@ body section.hyaluron-pillow-section {
     }
     .hyaluron-cutting-edge-num {
         left: 0;
+    }
+    .hyaluron-proven-percent-item {
+        align-items: start;
+    }
+    .hyaluron-proven-percent-item-mob {
+        align-items: center;
     }
 }
 
