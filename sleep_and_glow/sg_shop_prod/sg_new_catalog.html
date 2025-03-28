@@ -39,6 +39,7 @@
 
 
     <script src="sg_new_catalog_files/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="sg_new_catalog_files/cookie.js"></script>
 
 
@@ -5166,36 +5167,28 @@ https://sleepandglow.com/webp/assets/images/products/2050/big/gallery-02.jpg.web
 </footer>
 
 <div class="shopping-cart js-minicart">
-
-
-    <div class="shopping-cart-card" style="height: calc(100% - 179.8px);">
+    <div class="shopping-cart-card">
         <div class="shopping-cart__title">
-            <div class="h4">Cart</div>
-            <!--412.20 = 0 == 45.8    229 -
-        412.2-
-        45.8        -->
-
-            <span class="goods-count">2 product</span>
-
-            <div class="cart-close">
-                <div class="close__lane"></div>
-                <div class="close__lane"></div>
+            <div class="shopping-cart__info">
+                <div class="h4">Cart</div>
+                <span class="goods-count">2 product</span>
+            </div>
+            <div class="shopping-cart-return">
+                Return to catalog
             </div>
         </div>
         <div class="shopping-cart__body">
             <div>
                 <div class="shopping-cart__goods">
-                    <div class="cart-item" data-id="2050" id="b3dc0d94742533c97a8076a1e28360f8" data-price="183.20"
-                         data-oldprice="229.00" data-count="1" data-option="">
-
+                    <div class="cart-item">
                         <img class="cart-item__img" src="./sg_new_catalog_files/gallery-02.jpg" alt="Omnia pillow">
-
-
                         <div class="cart-item__info">
-                            <span class="cart-item__info_title">Omnia pillow</span>
-                            <div class="cart-item__info_specifications">
-                                <div class="specifications-price"><span>Price per piece.</span><span>US$ 183.20</span> |
-                                    1
+                            <div class="cart-item__info_top">
+                                <span class="cart-item__info_title">Omnia pillow</span>
+                                <div class="cart-item__info_specifications">
+                                    <div class="specifications-price">
+                                        <span>Price per piece.</span><span>US$ 183.20</span> | 1
+                                    </div>
                                 </div>
                             </div>
                             <div class="cart-item__info_cont">
@@ -5213,10 +5206,8 @@ https://sleepandglow.com/webp/assets/images/products/2050/big/gallery-02.jpg.web
                                             value="cart/change"></button>
                                 </form>
                                 <div class="single-product-price amount">
-
                                     <span class="newprice js-new-price">US$ 412.20</span>
                                     <span class="js-old-price">US$ 458.00</span>
-
                                 </div>
                             </div>
                         </div>
@@ -5224,7 +5215,6 @@ https://sleepandglow.com/webp/assets/images/products/2050/big/gallery-02.jpg.web
                              onclick="runFuncMinus(this, {from:&#39;remove-product-from-minicart-close-btn&#39;});">
                             <form method="post" class="ms2_form">
                                 <input type="hidden" name="key" value="b3dc0d94742533c97a8076a1e28360f8">
-
                                 <div class="close__lane"></div>
                                 <div class="close__lane"></div>
                                 <button class="btn btn-sm btn-danger" type="submit" name="ms2_action"
@@ -5232,483 +5222,810 @@ https://sleepandglow.com/webp/assets/images/products/2050/big/gallery-02.jpg.web
                             </form>
                         </div>
                     </div>
-
-
                 </div>
-
-                <div class="shopping-cart__notify" data-freedeliv="10000">
-
-
-                    <!-- <span> Вам не хватает <span class="js-free-deliv-left-val">9 587.80 US&#36;</span>, чтобы получить бесплатную доставку на дом </span> -->
-                    <span>
-                    Shipping cost depends on the delivery method and will be calculated when placing an order                </span>
+<!--                <div class="shopping-cart__notify">-->
+<!--                    <span>-->
+<!--                        Shipping cost depends on the delivery method and will be calculated when placing an order-->
+<!--                    </span>-->
+<!--                </div>-->
+                <div class="shopping-cart__notify-shipping inactive">
+                    <div class="shopping-cart__notify-shipping-info">
+                        <svg class="shipping-icon" width="100%" height="100%" viewBox="0 0 39 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_10345_7286)">
+                                <path d="M26 2.87476H31.3335L35.0002 9.7529" stroke="#221D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M29.6681 24.135C31.8773 24.135 33.6682 22.4553 33.6682 20.3833C33.6682 18.3113 31.8773 16.6316 29.6681 16.6316C27.4589 16.6316 25.668 18.3113 25.668 20.3833C25.668 22.4553 27.4589 24.135 29.6681 24.135Z" stroke="#221D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.0001 24.7603C15.2093 24.7603 17.0002 23.0806 17.0002 21.0086C17.0002 18.9366 15.2093 17.2569 13.0001 17.2569C10.7909 17.2569 9 18.9366 9 21.0086C9 23.0806 10.7909 24.7603 13.0001 24.7603Z" stroke="#221D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.667 5.37793H2" stroke="#221D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.667 10.3789H1" stroke="#221D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.0015 14.7568H1.66797" stroke="#221D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M24.3335 20.3843H17" stroke="#221D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.00011 20.3848H5" stroke="#221D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.66406 1H25.6647V9.75401H34.9983L37.9983 12.5678V20.3839H34.3316" stroke="#221D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_10345_7286">
+                                    <rect width="39" height="26" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div class="shopping-cart__notify-shipping-title">
+                            FREE SHIPPING FOR ORDERS OVER C$270
+                        </div>
+                        <div class="shopping-cart__notify-shipping-text">
+                            Items in cart for $219, need to add<br>
+                            another $51 worth of items to get free shipping
+                        </div>
+                    </div>
+                    <div class="shopping-cart__notify-shipping-indicator inactive">
+                        inactive
+                    </div>
                 </div>
             </div>
 
+            <div class="shopping-cart__notify-gift">
+                <svg class="gift-icon" width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_10345_13912)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.82448 4.69775C0.36913 4.69775 0 5.06689 0 5.52224V9.52224C0 9.97759 0.36913 10.3467 0.82448 10.3467H7.8245V8.69775H1.64897V6.34672H7.8245V5.52224H11.8245V6.34672H18V8.69775H11.8245V10.3467H18.8245C19.2798 10.3467 19.649 9.97759 19.649 9.52224V5.52224C19.649 5.06689 19.2798 4.69775 18.8245 4.69775H0.82448Z" fill="#C4C4C4"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.82448 4.69775C0.36913 4.69775 0 5.06689 0 5.52224V9.52224C0 9.97759 0.36913 10.3467 0.82448 10.3467H7.8245V8.69775H1.64897V6.34672H7.8245V5.52224H11.8245V6.34672H18V8.69775H11.8245V10.3467H18.8245C19.2798 10.3467 19.649 9.97759 19.649 9.52224V5.52224C19.649 5.06689 19.2798 4.69775 18.8245 4.69775H0.82448Z" fill="black"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8245 18.5222H7.8245V17.6978H3.64897V10.3467H7.8245V8.69775H2.82448C2.36913 8.69775 2 9.06689 2 9.52224V18.5222C2 18.9776 2.36913 19.3467 2.82448 19.3467H16.8245C17.2798 19.3467 17.649 18.9776 17.649 18.5222V9.52224C17.649 9.06689 17.2798 8.69775 16.8245 8.69775H11.8245V10.3467H16V17.6978H11.8245V18.5222Z" fill="#C4C4C4"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.8245 18.5222H7.8245V17.6978H3.64897V10.3467H7.8245V8.69775H2.82448C2.36913 8.69775 2 9.06689 2 9.52224V18.5222C2 18.9776 2.36913 19.3467 2.82448 19.3467H16.8245C17.2798 19.3467 17.649 18.9776 17.649 18.5222V9.52224C17.649 9.06689 17.2798 8.69775 16.8245 8.69775H11.8245V10.3467H16V17.6978H11.8245V18.5222Z" fill="black"/>
+                        <path d="M11.8242 18.522H7.82422V5.52197H11.8242V18.522Z" stroke="#C4C4C4" stroke-width="1.64897" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.8242 18.522H7.82422V5.52197H11.8242V18.522Z" stroke="black" stroke-width="1.64897" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.82422 5.02211C10.4909 3.35544 12.133 0.269094 14.3242 2.02213C16.8242 4.02219 12.1575 4.35544 9.82422 5.02211Z" stroke="#C4C4C4" stroke-width="1.64897" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.82422 5.02211C10.4909 3.35544 12.133 0.269094 14.3242 2.02213C16.8242 4.02219 12.1575 4.35544 9.82422 5.02211Z" stroke="black" stroke-width="1.64897" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.04021 5.02211C8.37361 3.35544 6.73141 0.269094 4.54024 2.02213C2.04024 4.02219 6.70691 4.35544 9.04021 5.02211Z" stroke="#C4C4C4" stroke-width="1.64897" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.04021 5.02211C8.37361 3.35544 6.73141 0.269094 4.54024 2.02213C2.04024 4.02219 6.70691 4.35544 9.04021 5.02211Z" stroke="black" stroke-width="1.64897" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_10345_13912">
+                            <rect width="20" height="19" fill="white" transform="translate(0 0.5)"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                GET LUXURIOUS SILK MASK FOR A PURCHASE<br>
+                OVER C$ 300 - PROMO CODE ‘LOVEGIFT'
+            </div>
 
-            <div><br>
-                <img src="./sg_new_catalog_files/gift_black.svg" alt="" width="25px">
-                <b><span style="font-size:14px">SILK MASK FOR ORDERS OVER 270 - CODE 'SELFLOVE'</span></b></div>
+            <div class="single-product-section__other-products">
+<!--                <div class="other-products__heading_banner">-->
+<!--                    <picture>-->
+<!--                        <source srcset="/uploads/akcii/dacha24/dacha_minicart_mob_en.jpg?ver=1"-->
+<!--                                media="(max-width: 767px)">-->
+<!--                        <img class="single-photo" src="./sg_new_catalog_files/dacha_minicart_pc_en.jpg"-->
+<!--                             alt="ADD ITEMS AND GET 20% OFF*">-->
+<!--                    </picture>-->
+<!--                </div>-->
 
+<!--                <style>-->
+<!--                    .other-products__heading_banner {-->
+<!--                        margin: 20px -40px;-->
+<!--                    }-->
 
-            <script>
-                // Перевод js фраз для рубрикатора
-                var locrubricator = {
-                    "nocolor": "You have not selected a color",
-                    "nosize": "You have not selected a size",
-                    "nocomplect": "You have not selected a quantity for the set",
+<!--                    @media only screen and (max-width: 767px) {-->
+<!--                        .other-products__heading_banner {-->
+<!--                            margin: 20px -9px 20px -10px-->
+<!--                        }-->
+<!--                    }-->
+<!--                </style>-->
 
-                    "readmore": "read more",
-                    "deleted": "deleted",
-                    "added": "added",
-                    "changed": "changed"
-                };
-            </script>
+                <div class="other-products second scrollbar">
+                    <div class="other-products-item">
+                        <h4 class="other-products-item-title">
+                            Complete<br> Your Beauty<br> Sleep
+                        </h4>
+                    </div>
+                    <div class="js-product-box other-products-item">
+                        <div class="slide-product__img">
+                            <a class="slide-product__img-wrapper" href="#" data-currency="USD">
+                                <img src="./sg_new_catalog_files/alyiĭ-3.jpg" alt="photo-0" data-color="Dark_Ruby">
+                                <img src="./sg_new_catalog_files/omnia-green-01.jpg" alt="photo-3"
+                                     data-color="Green">
+                                <img src="./sg_new_catalog_files/omnia-nav-silk-yellow-01.jpg" alt="photo-6"
+                                     data-color="Butter_Yellow">
+                                <img src="./sg_new_catalog_files/1-1.jpg" alt="photo-9" data-color="Silver_shine">
+                                <img src="./sg_new_catalog_files/omnia-blue-01.jpg" alt="photo-12"
+                                     data-color="King_blue">
+                                <img src="./sg_new_catalog_files/grafit-3.jpg" alt="photo-15" data-color="Graphite">
+                                <img src="./sg_new_catalog_files/shokolad-3.jpg" alt="photo-18"
+                                     data-color="Chocolate">
+                                <img src="./sg_new_catalog_files/1.jpg" alt="photo-21" data-color="Hot_pink">
+                            </a>
 
-
-            <div data-lang="" class="single-product-section__other-products">
-
-
-                <div class="other-products__heading_banner">
-                    <picture>
-                        <source srcset="/uploads/akcii/dacha24/dacha_minicart_mob_en.jpg?ver=1"
-                                media="(max-width: 767px)">
-                        <img class="single-photo" src="./sg_new_catalog_files/dacha_minicart_pc_en.jpg"
-                             alt="ADD ITEMS AND GET 20% OFF*">
-                    </picture>
-                </div>
-
-                <style>
-                    .other-products__heading_banner {
-                        margin: 20px -40px;
-                    }
-
-                    @media only screen and (max-width: 767px) {
-                        .other-products__heading_banner {
-                            margin: 20px -9px 20px -10px
-                        }
-                    }
-                </style>
-
-
-                <div class="swiper-container swiper-other-products second scrollbar">
-                    <div class="swiper-wrapper">
-
-
-                        <div class="swiper-slide js-product-box" data-viewproduct="12506"
-                             data-out="Shopping cart panel">
-
-
-                            <div class="slide-product__img">
-                                <a href="https://sleepandglow.com/product/61" data-currency="USD"
-                                   data-name="Omnia 100% silk pillowcase" data-id="12506" data-price="99.00"
-                                   data-category="SHOP NOW">
-                                    <img src="./sg_new_catalog_files/alyiĭ-3.jpg" alt="photo-0" data-color="Dark_Ruby">
-
-
-                                    <img src="./sg_new_catalog_files/omnia-green-01.jpg" alt="photo-3"
-                                         data-color="Green">
-
-
-                                    <img src="./sg_new_catalog_files/omnia-nav-silk-yellow-01.jpg" alt="photo-6"
-                                         data-color="Butter_Yellow">
-
-
-                                    <img src="./sg_new_catalog_files/1-1.jpg" alt="photo-9" data-color="Silver_shine">
-
-
-                                    <img src="./sg_new_catalog_files/omnia-blue-01.jpg" alt="photo-12"
-                                         data-color="King_blue">
-
-
-                                    <img src="./sg_new_catalog_files/grafit-3.jpg" alt="photo-15" data-color="Graphite">
-
-
-                                    <img src="./sg_new_catalog_files/shokolad-3.jpg" alt="photo-18"
-                                         data-color="Chocolate">
-
-
-                                    <img src="./sg_new_catalog_files/1.jpg" alt="photo-21" data-color="Hot_pink">
-
-
-                                </a>
-                                <div class="js-product-color js-rec-prod-colors">
-
-                                    <div class="slide-product__img_colors" data-id="12506">
-                                        <span>Color:</span>
-
-                                        <div class="c_button" style="background-color: #cd3c4b;"
-                                             data-value="Dark_Ruby=#cd3c4b" data-colorhash="#cd3c4b"
-                                             data-color="Dark_Ruby" data-id="12506" data-price=""
-                                             onclick="runFuncMod(this);"></div>
-
-                                        <div class="c_button" style="background-color: #FFFACD;"
-                                             data-value="Butter_Yellow=#FFFACD" data-colorhash="#FFFACD"
-                                             data-color="Butter_Yellow" data-id="12506" data-price=""
-                                             onclick="runFuncMod(this);"></div>
-
-                                        <div class="c_button" style="background-color: #5f493e;"
-                                             data-value="Chocolate=#5f493e" data-colorhash="#5f493e"
-                                             data-color="Chocolate" data-id="12506" data-price=""
-                                             onclick="runFuncMod(this);"></div>
-
-                                        <div class="c_button" style="background-color: #615e57;"
-                                             data-value="Graphite=#615e57" data-colorhash="#615e57"
-                                             data-color="Graphite" data-id="12506" data-price=""
-                                             onclick="runFuncMod(this);"></div>
-
-                                        <div class="c_button" style="background-color: #4fa236;"
-                                             data-value="Green=#4fa236" data-colorhash="#4fa236" data-color="Green"
-                                             data-id="12506" data-price="" onclick="runFuncMod(this);"></div>
-
-                                        <div class="c_button" style="background-color: #063ABA;"
-                                             data-value="King_blue=#063ABA" data-colorhash="#063ABA"
-                                             data-color="King_blue" data-id="12506" data-price=""
-                                             onclick="runFuncMod(this);"></div>
-
-                                        <div class="c_button" style="background-color: #db396e;"
-                                             data-value="Hot_pink=#db396e" data-colorhash="#db396e"
-                                             data-color="Hot_pink" data-id="12506" data-price=""
-                                             onclick="runFuncMod(this);"></div>
-                                    </div>
-
-
-                                </div>
-
+                            <div class="slide-product__img-button">
+                                <img class="slide-product__img-button-mask" src="new_files/button_mask_1.png" alt="">
+                                <button class="button transparent to-card btn btn-buy btn-add-basket action-basket" type="submit" onclick="">
+                                    <span>Add</span>
+                                    <svg class="bag-icon" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_11024_3357)">
+                                            <path d="M3.70109 12.9277L1.875 5.62329H12.8315L11.0054 12.9277H3.70109Z" stroke="#221D1E" stroke-width="0.9"/>
+                                            <path d="M10.1724 4.29467C10.1724 2.08387 8.96112 0.913025 7.46701 0.913025C5.97293 0.913025 4.76172 2.08747 4.76172 4.29467" stroke="#221D1E" stroke-width="0.9"/>
+                                            <path d="M10 8H5" stroke="black" stroke-width="0.9" stroke-linecap="round"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_11024_3357">
+                                                <rect width="12.7826" height="14" fill="white" transform="translate(1.10938)"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
                             </div>
+                            <!--                                <div class="js-product-color js-rec-prod-colors">-->
+                            <!--                                    <div class="slide-product__img_colors">-->
+                            <!--                                        <span>Color:</span>-->
+                            <!--                                        <div class="c_button" style="background-color: #cd3c4b;"-->
+                            <!--                                             data-value="Dark_Ruby=#cd3c4b" data-colorhash="#cd3c4b"-->
+                            <!--                                             data-color="Dark_Ruby" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
-                            <form method="post" class="slide-product__information ms2_form">
-                                <input type="hidden" name="id" value="12506">
-                                <input type="hidden" name="options[color]" value="Dark_Ruby=#cd3c4b">
-                                <div class="slide-product__information_head css-old_price_box">
-                                    <div>Omnia 100% silk pillowcase</div>
-                                    <div class="single-product-price">
-                                        <span class="">US$ <span
-                                                class="no-js-new-price msoptionsprice-cost msoptionsprice-12506">99.00</span></span>
-                                        <span style="display:none;" class="no-js-old-price">US$ 0.00</span>
-                                    </div>
-                                </div>
-                                <div class="slide-product__information_descr">
-                                    Our signature Omnia pillowcase is specially tailored to the shape of the pillow, so
-                                    the material doesn't stretch or bunch over the face cradles.
-                                </div>
-                                <div class="slide-product__information_footer">
-                                    <div class="single-product-non--forcolor single-product-non--minicard">Not
-                                        available
-                                    </div>
-                                    <div class="single-product__counter">
-                                        <span class="hand_button decrement"></span>
-                                        <input type="number" name="count" value="1" min="1" max="999" placeholder="0">
-                                        <span class="hand_button increment"></span>
-                                    </div>
+                            <!--                                        <div class="c_button" style="background-color: #FFFACD;"-->
+                            <!--                                             data-value="Butter_Yellow=#FFFACD" data-colorhash="#FFFACD"-->
+                            <!--                                             data-color="Butter_Yellow" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
-                                    <button class="button transparent to-card btn btn-buy btn-add-basket action-basket"
-                                            type="submit" name="ms2_action" value="cart/add"
-                                            data-pagetitle="Omnia 100% silk pillowcase"
-                                            data-parent="Additional pillowcases" data-id="12506" data-price="99.00"
-                                            data-currency="USD"
-                                            onclick="runFunc(this, {from:&#39;add-other-products-cart&#39;});">
-                                        <span>Add to Cart</span>
-                                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 23.1954V9.87817H20.9759V23.1954H1Z" stroke="#221D1E"
-                                                  stroke-width="2"></path>
-                                            <path d="M16.4135 7.16539C16.4135 3.13468 14.2052 1 11.4811 1C8.7571 1 6.54883 3.14124 6.54883 7.16539"
-                                                  stroke="#221D1E" stroke-width="2"></path>
-                                        </svg>
-                                    </button>
+                            <!--                                        <div class="c_button" style="background-color: #5f493e;"-->
+                            <!--                                             data-value="Chocolate=#5f493e" data-colorhash="#5f493e"-->
+                            <!--                                             data-color="Chocolate" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
-                                    <div class="js-product-color">
-                                        <div class="slide-product__img_colors" data-id="12506">
-                                            <input type="hidden" name="options[color]" id="option_color-12506"
-                                                   value="Dark_Ruby=#cd3c4b">
-                                            <span>Color:</span>
+                            <!--                                        <div class="c_button" style="background-color: #615e57;"-->
+                            <!--                                             data-value="Graphite=#615e57" data-colorhash="#615e57"-->
+                            <!--                                             data-color="Graphite" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
-                                            <div class="c_button active" style="background-color: #cd3c4b;"
-                                                 data-value="Dark_Ruby=#cd3c4b" data-colorhash="#cd3c4b"
-                                                 data-color="Dark_Ruby"></div>
+                            <!--                                        <div class="c_button" style="background-color: #4fa236;"-->
+                            <!--                                             data-value="Green=#4fa236" data-colorhash="#4fa236" data-color="Green"-->
+                            <!--                                             data-id="12506" data-price="" onclick="runFuncMod(this);"></div>-->
 
-                                            <div class="c_button" style="background-color: #FFFACD;"
-                                                 data-value="Butter_Yellow=#FFFACD" data-colorhash="#FFFACD"
-                                                 data-color="Butter_Yellow"></div>
+                            <!--                                        <div class="c_button" style="background-color: #063ABA;"-->
+                            <!--                                             data-value="King_blue=#063ABA" data-colorhash="#063ABA"-->
+                            <!--                                             data-color="King_blue" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
-                                            <div class="c_button" style="background-color: #5f493e;"
-                                                 data-value="Chocolate=#5f493e" data-colorhash="#5f493e"
-                                                 data-color="Chocolate"></div>
-
-                                            <div class="c_button" style="background-color: #615e57;"
-                                                 data-value="Graphite=#615e57" data-colorhash="#615e57"
-                                                 data-color="Graphite"></div>
-
-                                            <div class="c_button" style="background-color: #4fa236;"
-                                                 data-value="Green=#4fa236" data-colorhash="#4fa236"
-                                                 data-color="Green"></div>
-
-                                            <div class="c_button" style="background-color: #063ABA;"
-                                                 data-value="King_blue=#063ABA" data-colorhash="#063ABA"
-                                                 data-color="King_blue"></div>
-
-                                            <div class="c_button" style="background-color: #db396e;"
-                                                 data-value="Hot_pink=#db396e" data-colorhash="#db396e"
-                                                 data-color="Hot_pink"></div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </form>
-
-
+                            <!--                                        <div class="c_button" style="background-color: #db396e;"-->
+                            <!--                                             data-value="Hot_pink=#db396e" data-colorhash="#db396e"-->
+                            <!--                                             data-color="Hot_pink" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
                         </div>
 
-
-                        <div class="swiper-slide js-product-box" data-viewproduct="2061" data-out="Shopping cart panel">
-
-
-                            <div class="slide-product__img">
-                                <a href="https://sleepandglow.com/product/6" data-currency="USD"
-                                   data-name="Weighted blanket" data-id="2061" data-price="151.20"
-                                   data-category="SHOP NOW">
-                                    <img src="./sg_new_catalog_files/blanket-01.jpg" alt="photo-0" data-color="">
-
-
-                                </a>
-                                <div class="js-product-color js-rec-prod-colors">
-
-
+                        <form method="post" class="slide-product__information ms2_form">
+                            <input type="hidden" name="id" value="12506">
+                            <input type="hidden" name="options[color]" value="Dark_Ruby=#cd3c4b">
+                            <div class="slide-product__information_head css-old_price_box">
+                                <div>Omnia 100% silk pillowcase</div>
+                                <div class="single-product-price">
+                                    <span class="newprice">US$ <span class="no-js-new-price msoptionsprice-cost msoptionsprice-2061">151.20</span></span>
+                                    <span class="no-js-old-price">US$ 189.00</span>
                                 </div>
-
                             </div>
+<!--                            <div class="slide-product__information_descr">-->
+<!--                                Our signature Omnia pillowcase is specially tailored to the shape of the pillow, so-->
+<!--                                the material doesn't stretch or bunch over the face cradles.-->
+<!--                            </div>-->
+                        </form>
+                    </div>
+                    <div class="js-product-box other-products-item">
+                        <div class="slide-product__img">
+                            <a class="slide-product__img-wrapper" href="#" data-currency="USD">
+                                <img src="./sg_new_catalog_files/alyiĭ-3.jpg" alt="photo-0" data-color="Dark_Ruby">
+                                <img src="./sg_new_catalog_files/omnia-green-01.jpg" alt="photo-3"
+                                     data-color="Green">
+                                <img src="./sg_new_catalog_files/omnia-nav-silk-yellow-01.jpg" alt="photo-6"
+                                     data-color="Butter_Yellow">
+                                <img src="./sg_new_catalog_files/1-1.jpg" alt="photo-9" data-color="Silver_shine">
+                                <img src="./sg_new_catalog_files/omnia-blue-01.jpg" alt="photo-12"
+                                     data-color="King_blue">
+                                <img src="./sg_new_catalog_files/grafit-3.jpg" alt="photo-15" data-color="Graphite">
+                                <img src="./sg_new_catalog_files/shokolad-3.jpg" alt="photo-18"
+                                     data-color="Chocolate">
+                                <img src="./sg_new_catalog_files/1.jpg" alt="photo-21" data-color="Hot_pink">
+                            </a>
 
-                            <form method="post" class="slide-product__information ms2_form">
-                                <input type="hidden" name="id" value="2061">
-                                <input type="hidden" name="options[color]" value="">
-                                <div class="slide-product__information_head css-old_price_box">
-                                    <div>Weighted blanket</div>
-                                    <div class="single-product-price">
-                                        <span class="newprice">US$ <span
-                                                class="no-js-new-price msoptionsprice-cost msoptionsprice-2061">151.20</span></span>
-                                        <span class="no-js-old-price">US$ 189.00</span>
-                                    </div>
-                                </div>
-                                <div class="slide-product__information_descr">
-                                    Helps relieve anxiety, allows you to fully relax and fall asleep faster.
-                                </div>
-                                <div class="slide-product__information_footer">
-                                    <div class="single-product-non--forcolor single-product-non--minicard">Not
-                                        available
-                                    </div>
-                                    <div class="single-product__counter">
-                                        <span class="hand_button decrement"></span>
-                                        <input type="number" name="count" value="1" min="1" max="999" placeholder="0">
-                                        <span class="hand_button increment"></span>
-                                    </div>
+                            <div class="slide-product__img-button">
+                                <img class="slide-product__img-button-mask" src="new_files/button_mask_1.png" alt="">
+                                <button class="button transparent to-card btn btn-buy btn-add-basket action-basket" type="submit" onclick="">
+                                    <span>Add</span>
+                                    <svg class="bag-icon" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_11024_3357)">
+                                            <path d="M3.70109 12.9277L1.875 5.62329H12.8315L11.0054 12.9277H3.70109Z" stroke="#221D1E" stroke-width="0.9"/>
+                                            <path d="M10.1724 4.29467C10.1724 2.08387 8.96112 0.913025 7.46701 0.913025C5.97293 0.913025 4.76172 2.08747 4.76172 4.29467" stroke="#221D1E" stroke-width="0.9"/>
+                                            <path d="M10 8H5" stroke="black" stroke-width="0.9" stroke-linecap="round"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_11024_3357">
+                                                <rect width="12.7826" height="14" fill="white" transform="translate(1.10938)"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+                            <!--                                <div class="js-product-color js-rec-prod-colors">-->
+                            <!--                                    <div class="slide-product__img_colors">-->
+                            <!--                                        <span>Color:</span>-->
+                            <!--                                        <div class="c_button" style="background-color: #cd3c4b;"-->
+                            <!--                                             data-value="Dark_Ruby=#cd3c4b" data-colorhash="#cd3c4b"-->
+                            <!--                                             data-color="Dark_Ruby" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
-                                    <button class="button transparent to-card btn btn-buy btn-add-basket action-basket"
-                                            type="submit" name="ms2_action" value="cart/add"
-                                            data-pagetitle="Weighted blanket" data-parent="Blankets" data-id="2061"
-                                            data-price="151.20" data-currency="USD"
-                                            onclick="runFunc(this, {from:&#39;add-other-products-cart&#39;});">
-                                        <span>Add to Cart</span>
-                                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 23.1954V9.87817H20.9759V23.1954H1Z" stroke="#221D1E"
-                                                  stroke-width="2"></path>
-                                            <path d="M16.4135 7.16539C16.4135 3.13468 14.2052 1 11.4811 1C8.7571 1 6.54883 3.14124 6.54883 7.16539"
-                                                  stroke="#221D1E" stroke-width="2"></path>
-                                        </svg>
-                                    </button>
+                            <!--                                        <div class="c_button" style="background-color: #FFFACD;"-->
+                            <!--                                             data-value="Butter_Yellow=#FFFACD" data-colorhash="#FFFACD"-->
+                            <!--                                             data-color="Butter_Yellow" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
-                                    <div class="js-product-color">
+                            <!--                                        <div class="c_button" style="background-color: #5f493e;"-->
+                            <!--                                             data-value="Chocolate=#5f493e" data-colorhash="#5f493e"-->
+                            <!--                                             data-color="Chocolate" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
-                                    </div>
-                                </div>
-                            </form>
+                            <!--                                        <div class="c_button" style="background-color: #615e57;"-->
+                            <!--                                             data-value="Graphite=#615e57" data-colorhash="#615e57"-->
+                            <!--                                             data-color="Graphite" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
+                            <!--                                        <div class="c_button" style="background-color: #4fa236;"-->
+                            <!--                                             data-value="Green=#4fa236" data-colorhash="#4fa236" data-color="Green"-->
+                            <!--                                             data-id="12506" data-price="" onclick="runFuncMod(this);"></div>-->
 
+                            <!--                                        <div class="c_button" style="background-color: #063ABA;"-->
+                            <!--                                             data-value="King_blue=#063ABA" data-colorhash="#063ABA"-->
+                            <!--                                             data-color="King_blue" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
+
+                            <!--                                        <div class="c_button" style="background-color: #db396e;"-->
+                            <!--                                             data-value="Hot_pink=#db396e" data-colorhash="#db396e"-->
+                            <!--                                             data-color="Hot_pink" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
                         </div>
 
-
-                        <div class="swiper-slide js-product-box" data-viewproduct="11155"
-                             data-out="Shopping cart panel">
-
-
-                            <div class="slide-product__img">
-                                <a href="https://sleepandglow.com/product/27" data-currency="USD"
-                                   data-name="Ventilated blanket" data-id="11155" data-price="143.20"
-                                   data-category="SHOP NOW">
-                                    <img src="./sg_new_catalog_files/air02.jpg" alt="photo-0" data-color="">
-
-
-                                </a>
-                                <div class="js-product-color js-rec-prod-colors">
-
-
+                        <form method="post" class="slide-product__information ms2_form">
+                            <input type="hidden" name="id" value="12506">
+                            <input type="hidden" name="options[color]" value="Dark_Ruby=#cd3c4b">
+                            <div class="slide-product__information_head css-old_price_box">
+                                <div>Omnia 100% silk pillowcase</div>
+                                <div class="single-product-price">
+                                    <span class="newprice">US$ <span class="no-js-new-price msoptionsprice-cost msoptionsprice-2061">151.20</span></span>
+                                    <span class="no-js-old-price">US$ 189.00</span>
                                 </div>
-
                             </div>
+                            <!--                            <div class="slide-product__information_descr">-->
+                            <!--                                Our signature Omnia pillowcase is specially tailored to the shape of the pillow, so-->
+                            <!--                                the material doesn't stretch or bunch over the face cradles.-->
+                            <!--                            </div>-->
+                        </form>
+                    </div>
+                    <div class="js-product-box other-products-item">
+                        <div class="slide-product__img">
+                            <a class="slide-product__img-wrapper" href="#" data-currency="USD">
+                                <img src="./sg_new_catalog_files/alyiĭ-3.jpg" alt="photo-0" data-color="Dark_Ruby">
+                                <img src="./sg_new_catalog_files/omnia-green-01.jpg" alt="photo-3"
+                                     data-color="Green">
+                                <img src="./sg_new_catalog_files/omnia-nav-silk-yellow-01.jpg" alt="photo-6"
+                                     data-color="Butter_Yellow">
+                                <img src="./sg_new_catalog_files/1-1.jpg" alt="photo-9" data-color="Silver_shine">
+                                <img src="./sg_new_catalog_files/omnia-blue-01.jpg" alt="photo-12"
+                                     data-color="King_blue">
+                                <img src="./sg_new_catalog_files/grafit-3.jpg" alt="photo-15" data-color="Graphite">
+                                <img src="./sg_new_catalog_files/shokolad-3.jpg" alt="photo-18"
+                                     data-color="Chocolate">
+                                <img src="./sg_new_catalog_files/1.jpg" alt="photo-21" data-color="Hot_pink">
+                            </a>
 
-                            <form method="post" class="slide-product__information ms2_form">
-                                <input type="hidden" name="id" value="11155">
-                                <input type="hidden" name="options[color]" value="">
-                                <div class="slide-product__information_head css-old_price_box">
-                                    <div>Ventilated blanket</div>
-                                    <div class="single-product-price">
-                                        <span class="newprice">US$ <span
-                                                class="no-js-new-price msoptionsprice-cost msoptionsprice-11155">143.20</span></span>
-                                        <span class="no-js-old-price">US$ 179.00</span>
-                                    </div>
-                                </div>
-                                <div class="slide-product__information_descr">
-                                    This ventilated blanket is perfect for those who get hot while they sleep, no matter
-                                    what time of year. It's specially designed for people who perspire more.
-                                </div>
-                                <div class="slide-product__information_footer">
-                                    <div class="single-product-non--forcolor single-product-non--minicard">Not
-                                        available
-                                    </div>
-                                    <div class="single-product__counter">
-                                        <span class="hand_button decrement"></span>
-                                        <input type="number" name="count" value="1" min="1" max="999" placeholder="0">
-                                        <span class="hand_button increment"></span>
-                                    </div>
+                            <div class="slide-product__img-button">
+                                <img class="slide-product__img-button-mask" src="new_files/button_mask_1.png" alt="">
+                                <button class="button transparent to-card btn btn-buy btn-add-basket action-basket" type="submit" onclick="">
+                                    <span>Add</span>
+                                    <svg class="bag-icon" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_11024_3357)">
+                                            <path d="M3.70109 12.9277L1.875 5.62329H12.8315L11.0054 12.9277H3.70109Z" stroke="#221D1E" stroke-width="0.9"/>
+                                            <path d="M10.1724 4.29467C10.1724 2.08387 8.96112 0.913025 7.46701 0.913025C5.97293 0.913025 4.76172 2.08747 4.76172 4.29467" stroke="#221D1E" stroke-width="0.9"/>
+                                            <path d="M10 8H5" stroke="black" stroke-width="0.9" stroke-linecap="round"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_11024_3357">
+                                                <rect width="12.7826" height="14" fill="white" transform="translate(1.10938)"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+                            <!--                                <div class="js-product-color js-rec-prod-colors">-->
+                            <!--                                    <div class="slide-product__img_colors">-->
+                            <!--                                        <span>Color:</span>-->
+                            <!--                                        <div class="c_button" style="background-color: #cd3c4b;"-->
+                            <!--                                             data-value="Dark_Ruby=#cd3c4b" data-colorhash="#cd3c4b"-->
+                            <!--                                             data-color="Dark_Ruby" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
-                                    <button class="button transparent to-card btn btn-buy btn-add-basket action-basket"
-                                            type="submit" name="ms2_action" value="cart/add"
-                                            data-pagetitle="Ventilated blanket" data-parent="Blankets" data-id="11155"
-                                            data-price="143.20" data-currency="USD"
-                                            onclick="runFunc(this, {from:&#39;add-other-products-cart&#39;});">
-                                        <span>Add to Cart</span>
-                                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 23.1954V9.87817H20.9759V23.1954H1Z" stroke="#221D1E"
-                                                  stroke-width="2"></path>
-                                            <path d="M16.4135 7.16539C16.4135 3.13468 14.2052 1 11.4811 1C8.7571 1 6.54883 3.14124 6.54883 7.16539"
-                                                  stroke="#221D1E" stroke-width="2"></path>
-                                        </svg>
-                                    </button>
+                            <!--                                        <div class="c_button" style="background-color: #FFFACD;"-->
+                            <!--                                             data-value="Butter_Yellow=#FFFACD" data-colorhash="#FFFACD"-->
+                            <!--                                             data-color="Butter_Yellow" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
-                                    <div class="js-product-color">
+                            <!--                                        <div class="c_button" style="background-color: #5f493e;"-->
+                            <!--                                             data-value="Chocolate=#5f493e" data-colorhash="#5f493e"-->
+                            <!--                                             data-color="Chocolate" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
-                                    </div>
-                                </div>
-                            </form>
+                            <!--                                        <div class="c_button" style="background-color: #615e57;"-->
+                            <!--                                             data-value="Graphite=#615e57" data-colorhash="#615e57"-->
+                            <!--                                             data-color="Graphite" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
+                            <!--                                        <div class="c_button" style="background-color: #4fa236;"-->
+                            <!--                                             data-value="Green=#4fa236" data-colorhash="#4fa236" data-color="Green"-->
+                            <!--                                             data-id="12506" data-price="" onclick="runFuncMod(this);"></div>-->
 
+                            <!--                                        <div class="c_button" style="background-color: #063ABA;"-->
+                            <!--                                             data-value="King_blue=#063ABA" data-colorhash="#063ABA"-->
+                            <!--                                             data-color="King_blue" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
+
+                            <!--                                        <div class="c_button" style="background-color: #db396e;"-->
+                            <!--                                             data-value="Hot_pink=#db396e" data-colorhash="#db396e"-->
+                            <!--                                             data-color="Hot_pink" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
                         </div>
 
-
-                        <div class="swiper-slide js-product-box" data-viewproduct="2064" data-out="Shopping cart panel">
-
-
-                            <div class="slide-product__img">
-                                <a href="https://sleepandglow.com/product/4" data-currency="USD"
-                                   data-name="Silk sleep mask" data-id="2064" data-price="23.20"
-                                   data-category="SHOP NOW">
-                                    <img src="./sg_new_catalog_files/silk-sleeping-mask-pearl-1.jpg" alt="photo-0"
-                                         data-color="Off_white">
-
-
-                                    <img src="./sg_new_catalog_files/silk-sleep-mask-pink-powder-1.jpg" alt="photo-1"
-                                         data-color="Pink">
-
-
-                                    <img src="./sg_new_catalog_files/bleck-new-maska-2.jpg" alt="photo-4"
-                                         data-color="Black">
-                                </a>
-                                <div class="js-product-color js-rec-prod-colors">
-
-                                    <div class="slide-product__img_colors" data-id="2064">
-                                        <span>Color:</span>
-
-                                        <div class="c_button" style="background-color: #F3F3F3;"
-                                             data-value="Off_white=#F3F3F3" data-colorhash="#F3F3F3"
-                                             data-color="Off_white" data-id="2064" data-price=""
-                                             onclick="runFuncMod(this);"></div>
-
-                                        <div class="c_button" style="background-color: #f4cad6;"
-                                             data-value="Pink=#f4cad6" data-colorhash="#f4cad6" data-color="Pink"
-                                             data-id="2064" data-price="" onclick="runFuncMod(this);"></div>
-
-                                        <div class="c_button" style="background-color: #2c2926;"
-                                             data-value="Black=#2c2926" data-colorhash="#2c2926" data-color="Black"
-                                             data-id="2064" data-price="" onclick="runFuncMod(this);"></div>
-                                    </div>
-
-
+                        <form method="post" class="slide-product__information ms2_form">
+                            <input type="hidden" name="id" value="12506">
+                            <input type="hidden" name="options[color]" value="Dark_Ruby=#cd3c4b">
+                            <div class="slide-product__information_head css-old_price_box">
+                                <div>Omnia 100% silk pillowcase</div>
+                                <div class="single-product-price">
+                                    <span class="newprice">US$ <span class="no-js-new-price msoptionsprice-cost msoptionsprice-2061">151.20</span></span>
+                                    <span class="no-js-old-price">US$ 189.00</span>
                                 </div>
-
                             </div>
+                            <!--                            <div class="slide-product__information_descr">-->
+                            <!--                                Our signature Omnia pillowcase is specially tailored to the shape of the pillow, so-->
+                            <!--                                the material doesn't stretch or bunch over the face cradles.-->
+                            <!--                            </div>-->
+                        </form>
+                    </div>
+                    <div class="js-product-box other-products-item">
+                        <div class="slide-product__img">
+                            <a class="slide-product__img-wrapper" href="#" data-currency="USD">
+                                <img src="./sg_new_catalog_files/alyiĭ-3.jpg" alt="photo-0" data-color="Dark_Ruby">
+                                <img src="./sg_new_catalog_files/omnia-green-01.jpg" alt="photo-3"
+                                     data-color="Green">
+                                <img src="./sg_new_catalog_files/omnia-nav-silk-yellow-01.jpg" alt="photo-6"
+                                     data-color="Butter_Yellow">
+                                <img src="./sg_new_catalog_files/1-1.jpg" alt="photo-9" data-color="Silver_shine">
+                                <img src="./sg_new_catalog_files/omnia-blue-01.jpg" alt="photo-12"
+                                     data-color="King_blue">
+                                <img src="./sg_new_catalog_files/grafit-3.jpg" alt="photo-15" data-color="Graphite">
+                                <img src="./sg_new_catalog_files/shokolad-3.jpg" alt="photo-18"
+                                     data-color="Chocolate">
+                                <img src="./sg_new_catalog_files/1.jpg" alt="photo-21" data-color="Hot_pink">
+                            </a>
 
-                            <form method="post" class="slide-product__information ms2_form">
-                                <input type="hidden" name="id" value="2064">
-                                <input type="hidden" name="options[color]" value="Off_white=#F3F3F3">
-                                <div class="slide-product__information_head css-old_price_box">
-                                    <div>Silk sleep mask</div>
-                                    <div class="single-product-price">
-                                        <span class="newprice">US$ <span
-                                                class="no-js-new-price msoptionsprice-cost msoptionsprice-2064">23.20</span></span>
-                                        <span class="no-js-old-price">US$ 29.00</span>
-                                    </div>
-                                </div>
-                                <div class="slide-product__information_descr">
-                                    The perfect best-selling silk mask to help you rest comfortably, even during the
-                                    daytime
-                                </div>
-                                <div class="slide-product__information_footer">
-                                    <div class="single-product-non--forcolor single-product-non--minicard">Not
-                                        available
-                                    </div>
-                                    <div class="single-product__counter">
-                                        <span class="hand_button decrement"></span>
-                                        <input type="number" name="count" value="1" min="1" max="999" placeholder="0">
-                                        <span class="hand_button increment"></span>
-                                    </div>
+                            <div class="slide-product__img-button">
+                                <img class="slide-product__img-button-mask" src="new_files/button_mask_1.png" alt="">
+                                <button class="button transparent to-card btn btn-buy btn-add-basket action-basket" type="submit" onclick="">
+                                    <span>Add</span>
+                                    <svg class="bag-icon" width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_11024_3357)">
+                                            <path d="M3.70109 12.9277L1.875 5.62329H12.8315L11.0054 12.9277H3.70109Z" stroke="#221D1E" stroke-width="0.9"/>
+                                            <path d="M10.1724 4.29467C10.1724 2.08387 8.96112 0.913025 7.46701 0.913025C5.97293 0.913025 4.76172 2.08747 4.76172 4.29467" stroke="#221D1E" stroke-width="0.9"/>
+                                            <path d="M10 8H5" stroke="black" stroke-width="0.9" stroke-linecap="round"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_11024_3357">
+                                                <rect width="12.7826" height="14" fill="white" transform="translate(1.10938)"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+                            <!--                                <div class="js-product-color js-rec-prod-colors">-->
+                            <!--                                    <div class="slide-product__img_colors">-->
+                            <!--                                        <span>Color:</span>-->
+                            <!--                                        <div class="c_button" style="background-color: #cd3c4b;"-->
+                            <!--                                             data-value="Dark_Ruby=#cd3c4b" data-colorhash="#cd3c4b"-->
+                            <!--                                             data-color="Dark_Ruby" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
-                                    <button class="button transparent to-card btn btn-buy btn-add-basket action-basket"
-                                            type="submit" name="ms2_action" value="cart/add"
-                                            data-pagetitle="Silk sleep mask"
-                                            data-parent="Sleep&amp;Glow Silk Collection" data-id="2064"
-                                            data-price="23.20" data-currency="USD"
-                                            onclick="runFunc(this, {from:&#39;add-other-products-cart&#39;});">
-                                        <span>Add to Cart</span>
-                                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 23.1954V9.87817H20.9759V23.1954H1Z" stroke="#221D1E"
-                                                  stroke-width="2"></path>
-                                            <path d="M16.4135 7.16539C16.4135 3.13468 14.2052 1 11.4811 1C8.7571 1 6.54883 3.14124 6.54883 7.16539"
-                                                  stroke="#221D1E" stroke-width="2"></path>
-                                        </svg>
-                                    </button>
+                            <!--                                        <div class="c_button" style="background-color: #FFFACD;"-->
+                            <!--                                             data-value="Butter_Yellow=#FFFACD" data-colorhash="#FFFACD"-->
+                            <!--                                             data-color="Butter_Yellow" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
-                                    <div class="js-product-color">
-                                        <div class="slide-product__img_colors" data-id="2064">
-                                            <input type="hidden" name="options[color]" id="option_color-2064"
-                                                   value="Off_white=#F3F3F3">
-                                            <span>Color:</span>
+                            <!--                                        <div class="c_button" style="background-color: #5f493e;"-->
+                            <!--                                             data-value="Chocolate=#5f493e" data-colorhash="#5f493e"-->
+                            <!--                                             data-color="Chocolate" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
-                                            <div class="c_button active" style="background-color: #F3F3F3;"
-                                                 data-value="Off_white=#F3F3F3" data-colorhash="#F3F3F3"
-                                                 data-color="Off_white"></div>
+                            <!--                                        <div class="c_button" style="background-color: #615e57;"-->
+                            <!--                                             data-value="Graphite=#615e57" data-colorhash="#615e57"-->
+                            <!--                                             data-color="Graphite" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
-                                            <div class="c_button" style="background-color: #f4cad6;"
-                                                 data-value="Pink=#f4cad6" data-colorhash="#f4cad6"
-                                                 data-color="Pink"></div>
+                            <!--                                        <div class="c_button" style="background-color: #4fa236;"-->
+                            <!--                                             data-value="Green=#4fa236" data-colorhash="#4fa236" data-color="Green"-->
+                            <!--                                             data-id="12506" data-price="" onclick="runFuncMod(this);"></div>-->
 
-                                            <div class="c_button" style="background-color: #2c2926;"
-                                                 data-value="Black=#2c2926" data-colorhash="#2c2926"
-                                                 data-color="Black"></div>
+                            <!--                                        <div class="c_button" style="background-color: #063ABA;"-->
+                            <!--                                             data-value="King_blue=#063ABA" data-colorhash="#063ABA"-->
+                            <!--                                             data-color="King_blue" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
 
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </form>
-
-
+                            <!--                                        <div class="c_button" style="background-color: #db396e;"-->
+                            <!--                                             data-value="Hot_pink=#db396e" data-colorhash="#db396e"-->
+                            <!--                                             data-color="Hot_pink" data-id="12506" data-price=""-->
+                            <!--                                             onclick="runFuncMod(this);"></div>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
                         </div>
+
+                        <form method="post" class="slide-product__information ms2_form">
+                            <input type="hidden" name="id" value="12506">
+                            <input type="hidden" name="options[color]" value="Dark_Ruby=#cd3c4b">
+                            <div class="slide-product__information_head css-old_price_box">
+                                <div>Omnia 100% silk pillowcase</div>
+                                <div class="single-product-price">
+                                    <span class="newprice">US$ <span class="no-js-new-price msoptionsprice-cost msoptionsprice-2061">151.20</span></span>
+                                    <span class="no-js-old-price">US$ 189.00</span>
+                                </div>
+                            </div>
+                            <!--                            <div class="slide-product__information_descr">-->
+                            <!--                                Our signature Omnia pillowcase is specially tailored to the shape of the pillow, so-->
+                            <!--                                the material doesn't stretch or bunch over the face cradles.-->
+                            <!--                            </div>-->
+                        </form>
                     </div>
                 </div>
+
+
+<!--                <div class="swiper-container swiper-other-products second scrollbar">-->
+<!--                    <div class="swiper-wrapper">-->
+<!--                        -->
+<!--                        <div class="js-product-box">-->
+<!--                            <div class="slide-product__img">-->
+<!--                                <a href="#" data-currency="USD">-->
+<!--                                    <img src="./sg_new_catalog_files/alyiĭ-3.jpg" alt="photo-0" data-color="Dark_Ruby">-->
+<!--                                    <img src="./sg_new_catalog_files/omnia-green-01.jpg" alt="photo-3"-->
+<!--                                         data-color="Green">-->
+<!--                                    <img src="./sg_new_catalog_files/omnia-nav-silk-yellow-01.jpg" alt="photo-6"-->
+<!--                                         data-color="Butter_Yellow">-->
+<!--                                    <img src="./sg_new_catalog_files/1-1.jpg" alt="photo-9" data-color="Silver_shine">-->
+<!--                                    <img src="./sg_new_catalog_files/omnia-blue-01.jpg" alt="photo-12"-->
+<!--                                         data-color="King_blue">-->
+<!--                                    <img src="./sg_new_catalog_files/grafit-3.jpg" alt="photo-15" data-color="Graphite">-->
+<!--                                    <img src="./sg_new_catalog_files/shokolad-3.jpg" alt="photo-18"-->
+<!--                                         data-color="Chocolate">-->
+<!--                                    <img src="./sg_new_catalog_files/1.jpg" alt="photo-21" data-color="Hot_pink">-->
+<!--                                </a>-->
+<!--&lt;!&ndash;                                <div class="js-product-color js-rec-prod-colors">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="slide-product__img_colors">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span>Color:</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <div class="c_button" style="background-color: #cd3c4b;"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-value="Dark_Ruby=#cd3c4b" data-colorhash="#cd3c4b"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-color="Dark_Ruby" data-id="12506" data-price=""&ndash;&gt;-->
+<!--&lt;!&ndash;                                             onclick="runFuncMod(this);"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                        <div class="c_button" style="background-color: #FFFACD;"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-value="Butter_Yellow=#FFFACD" data-colorhash="#FFFACD"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-color="Butter_Yellow" data-id="12506" data-price=""&ndash;&gt;-->
+<!--&lt;!&ndash;                                             onclick="runFuncMod(this);"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                        <div class="c_button" style="background-color: #5f493e;"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-value="Chocolate=#5f493e" data-colorhash="#5f493e"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-color="Chocolate" data-id="12506" data-price=""&ndash;&gt;-->
+<!--&lt;!&ndash;                                             onclick="runFuncMod(this);"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                        <div class="c_button" style="background-color: #615e57;"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-value="Graphite=#615e57" data-colorhash="#615e57"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-color="Graphite" data-id="12506" data-price=""&ndash;&gt;-->
+<!--&lt;!&ndash;                                             onclick="runFuncMod(this);"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                        <div class="c_button" style="background-color: #4fa236;"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-value="Green=#4fa236" data-colorhash="#4fa236" data-color="Green"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-id="12506" data-price="" onclick="runFuncMod(this);"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                        <div class="c_button" style="background-color: #063ABA;"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-value="King_blue=#063ABA" data-colorhash="#063ABA"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-color="King_blue" data-id="12506" data-price=""&ndash;&gt;-->
+<!--&lt;!&ndash;                                             onclick="runFuncMod(this);"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                        <div class="c_button" style="background-color: #db396e;"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-value="Hot_pink=#db396e" data-colorhash="#db396e"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-color="Hot_pink" data-id="12506" data-price=""&ndash;&gt;-->
+<!--&lt;!&ndash;                                             onclick="runFuncMod(this);"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--                            </div>-->
+
+<!--                            <form method="post" class="slide-product__information ms2_form">-->
+<!--                                <input type="hidden" name="id" value="12506">-->
+<!--                                <input type="hidden" name="options[color]" value="Dark_Ruby=#cd3c4b">-->
+<!--                                <div class="slide-product__information_head css-old_price_box">-->
+<!--                                    <div>Omnia 100% silk pillowcase</div>-->
+<!--                                    <div class="single-product-price">-->
+<!--                                        <span class="newprice">US$ <span class="no-js-new-price msoptionsprice-cost msoptionsprice-2061">151.20</span></span>-->
+<!--                                        <span class="no-js-old-price">US$ 189.00</span>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="slide-product__information_descr">-->
+<!--                                    Our signature Omnia pillowcase is specially tailored to the shape of the pillow, so-->
+<!--                                    the material doesn't stretch or bunch over the face cradles.-->
+<!--                                </div>-->
+<!--                                <div class="slide-product__information_footer">-->
+<!--                                    <div class="single-product-non&#45;&#45;forcolor single-product-non&#45;&#45;minicard">Not-->
+<!--                                        available-->
+<!--                                    </div>-->
+
+<!--                                    <button class="button transparent to-card btn btn-buy btn-add-basket action-basket"-->
+<!--                                            type="submit" name="ms2_action" value="cart/add"-->
+<!--                                            data-pagetitle="Omnia 100% silk pillowcase"-->
+<!--                                            data-parent="Additional pillowcases" data-id="12506" data-price="99.00"-->
+<!--                                            data-currency="USD"-->
+<!--                                            onclick="runFunc(this, {from:&#39;add-other-products-cart&#39;});">-->
+<!--                                        <span>Add to Cart</span>-->
+<!--                                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none"-->
+<!--                                             xmlns="http://www.w3.org/2000/svg">-->
+<!--                                            <path d="M1 23.1954V9.87817H20.9759V23.1954H1Z" stroke="#221D1E"-->
+<!--                                                  stroke-width="2"></path>-->
+<!--                                            <path d="M16.4135 7.16539C16.4135 3.13468 14.2052 1 11.4811 1C8.7571 1 6.54883 3.14124 6.54883 7.16539"-->
+<!--                                                  stroke="#221D1E" stroke-width="2"></path>-->
+<!--                                        </svg>-->
+<!--                                    </button>-->
+<!--                                </div>-->
+<!--                            </form>-->
+<!--                        </div>-->
+
+
+<!--&lt;!&ndash;                        <div class="swiper-slide js-product-box" data-viewproduct="2061" data-out="Shopping cart panel">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                            <div class="slide-product__img">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <a href="https://sleepandglow.com/product/6" data-currency="USD"&ndash;&gt;-->
+<!--&lt;!&ndash;                                   data-name="Weighted blanket" data-id="2061" data-price="151.20"&ndash;&gt;-->
+<!--&lt;!&ndash;                                   data-category="SHOP NOW">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <img src="./sg_new_catalog_files/blanket-01.jpg" alt="photo-0" data-color="">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                                </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="js-product-color js-rec-prod-colors">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            <form method="post" class="slide-product__information ms2_form">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <input type="hidden" name="id" value="2061">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <input type="hidden" name="options[color]" value="">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="slide-product__information_head css-old_price_box">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div>Weighted blanket</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="single-product-price">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span class="newprice">US$ <span&ndash;&gt;-->
+<!--&lt;!&ndash;                                                class="no-js-new-price msoptionsprice-cost msoptionsprice-2061">151.20</span></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span class="no-js-old-price">US$ 189.00</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="slide-product__information_descr">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    Helps relieve anxiety, allows you to fully relax and fall asleep faster.&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="slide-product__information_footer">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="single-product-non&#45;&#45;forcolor single-product-non&#45;&#45;minicard">Not&ndash;&gt;-->
+<!--&lt;!&ndash;                                        available&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="single-product__counter">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span class="hand_button decrement"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <input type="number" name="count" value="1" min="1" max="999" placeholder="0">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span class="hand_button increment"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                    <button class="button transparent to-card btn btn-buy btn-add-basket action-basket"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            type="submit" name="ms2_action" value="cart/add"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            data-pagetitle="Weighted blanket" data-parent="Blankets" data-id="2061"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            data-price="151.20" data-currency="USD"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            onclick="runFunc(this, {from:&#39;add-other-products-cart&#39;});">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span>Add to Cart</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             xmlns="http://www.w3.org/2000/svg">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <path d="M1 23.1954V9.87817H20.9759V23.1954H1Z" stroke="#221D1E"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                  stroke-width="2"></path>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <path d="M16.4135 7.16539C16.4135 3.13468 14.2052 1 11.4811 1C8.7571 1 6.54883 3.14124 6.54883 7.16539"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                  stroke="#221D1E" stroke-width="2"></path>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </svg>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </button>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                    <div class="js-product-color">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </form>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                        <div class="swiper-slide js-product-box" data-viewproduct="11155"&ndash;&gt;-->
+<!--&lt;!&ndash;                             data-out="Shopping cart panel">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                            <div class="slide-product__img">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <a href="https://sleepandglow.com/product/27" data-currency="USD"&ndash;&gt;-->
+<!--&lt;!&ndash;                                   data-name="Ventilated blanket" data-id="11155" data-price="143.20"&ndash;&gt;-->
+<!--&lt;!&ndash;                                   data-category="SHOP NOW">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <img src="./sg_new_catalog_files/air02.jpg" alt="photo-0" data-color="">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                                </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="js-product-color js-rec-prod-colors">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            <form method="post" class="slide-product__information ms2_form">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <input type="hidden" name="id" value="11155">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <input type="hidden" name="options[color]" value="">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="slide-product__information_head css-old_price_box">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div>Ventilated blanket</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="single-product-price">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span class="newprice">US$ <span&ndash;&gt;-->
+<!--&lt;!&ndash;                                                class="no-js-new-price msoptionsprice-cost msoptionsprice-11155">143.20</span></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span class="no-js-old-price">US$ 179.00</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="slide-product__information_descr">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    This ventilated blanket is perfect for those who get hot while they sleep, no matter&ndash;&gt;-->
+<!--&lt;!&ndash;                                    what time of year. It's specially designed for people who perspire more.&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="slide-product__information_footer">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="single-product-non&#45;&#45;forcolor single-product-non&#45;&#45;minicard">Not&ndash;&gt;-->
+<!--&lt;!&ndash;                                        available&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="single-product__counter">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span class="hand_button decrement"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <input type="number" name="count" value="1" min="1" max="999" placeholder="0">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span class="hand_button increment"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                    <button class="button transparent to-card btn btn-buy btn-add-basket action-basket"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            type="submit" name="ms2_action" value="cart/add"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            data-pagetitle="Ventilated blanket" data-parent="Blankets" data-id="11155"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            data-price="143.20" data-currency="USD"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            onclick="runFunc(this, {from:&#39;add-other-products-cart&#39;});">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span>Add to Cart</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             xmlns="http://www.w3.org/2000/svg">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <path d="M1 23.1954V9.87817H20.9759V23.1954H1Z" stroke="#221D1E"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                  stroke-width="2"></path>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <path d="M16.4135 7.16539C16.4135 3.13468 14.2052 1 11.4811 1C8.7571 1 6.54883 3.14124 6.54883 7.16539"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                  stroke="#221D1E" stroke-width="2"></path>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </svg>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </button>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                    <div class="js-product-color">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </form>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                        <div class="swiper-slide js-product-box" data-viewproduct="2064" data-out="Shopping cart panel">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                            <div class="slide-product__img">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <a href="https://sleepandglow.com/product/4" data-currency="USD"&ndash;&gt;-->
+<!--&lt;!&ndash;                                   data-name="Silk sleep mask" data-id="2064" data-price="23.20"&ndash;&gt;-->
+<!--&lt;!&ndash;                                   data-category="SHOP NOW">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <img src="./sg_new_catalog_files/silk-sleeping-mask-pearl-1.jpg" alt="photo-0"&ndash;&gt;-->
+<!--&lt;!&ndash;                                         data-color="Off_white">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                                    <img src="./sg_new_catalog_files/silk-sleep-mask-pink-powder-1.jpg" alt="photo-1"&ndash;&gt;-->
+<!--&lt;!&ndash;                                         data-color="Pink">&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                                    <img src="./sg_new_catalog_files/bleck-new-maska-2.jpg" alt="photo-4"&ndash;&gt;-->
+<!--&lt;!&ndash;                                         data-color="Black">&ndash;&gt;-->
+<!--&lt;!&ndash;                                </a>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="js-product-color js-rec-prod-colors">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                    <div class="slide-product__img_colors" data-id="2064">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span>Color:</span>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                        <div class="c_button" style="background-color: #F3F3F3;"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-value="Off_white=#F3F3F3" data-colorhash="#F3F3F3"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-color="Off_white" data-id="2064" data-price=""&ndash;&gt;-->
+<!--&lt;!&ndash;                                             onclick="runFuncMod(this);"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                        <div class="c_button" style="background-color: #f4cad6;"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-value="Pink=#f4cad6" data-colorhash="#f4cad6" data-color="Pink"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-id="2064" data-price="" onclick="runFuncMod(this);"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                        <div class="c_button" style="background-color: #2c2926;"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-value="Black=#2c2926" data-colorhash="#2c2926" data-color="Black"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             data-id="2064" data-price="" onclick="runFuncMod(this);"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            <form method="post" class="slide-product__information ms2_form">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <input type="hidden" name="id" value="2064">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <input type="hidden" name="options[color]" value="Off_white=#F3F3F3">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="slide-product__information_head css-old_price_box">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div>Silk sleep mask</div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="single-product-price">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span class="newprice">US$ <span&ndash;&gt;-->
+<!--&lt;!&ndash;                                                class="no-js-new-price msoptionsprice-cost msoptionsprice-2064">23.20</span></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span class="no-js-old-price">US$ 29.00</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="slide-product__information_descr">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    The perfect best-selling silk mask to help you rest comfortably, even during the&ndash;&gt;-->
+<!--&lt;!&ndash;                                    daytime&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="slide-product__information_footer">&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="single-product-non&#45;&#45;forcolor single-product-non&#45;&#45;minicard">Not&ndash;&gt;-->
+<!--&lt;!&ndash;                                        available&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <div class="single-product__counter">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span class="hand_button decrement"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <input type="number" name="count" value="1" min="1" max="999" placeholder="0">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span class="hand_button increment"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                    <button class="button transparent to-card btn btn-buy btn-add-basket action-basket"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            type="submit" name="ms2_action" value="cart/add"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            data-pagetitle="Silk sleep mask"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            data-parent="Sleep&amp;Glow Silk Collection" data-id="2064"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            data-price="23.20" data-currency="USD"&ndash;&gt;-->
+<!--&lt;!&ndash;                                            onclick="runFunc(this, {from:&#39;add-other-products-cart&#39;});">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span>Add to Cart</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none"&ndash;&gt;-->
+<!--&lt;!&ndash;                                             xmlns="http://www.w3.org/2000/svg">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <path d="M1 23.1954V9.87817H20.9759V23.1954H1Z" stroke="#221D1E"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                  stroke-width="2"></path>&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <path d="M16.4135 7.16539C16.4135 3.13468 14.2052 1 11.4811 1C8.7571 1 6.54883 3.14124 6.54883 7.16539"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                  stroke="#221D1E" stroke-width="2"></path>&ndash;&gt;-->
+<!--&lt;!&ndash;                                        </svg>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </button>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                    <div class="js-product-color">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <div class="slide-product__img_colors" data-id="2064">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <input type="hidden" name="options[color]" id="option_color-2064"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                   value="Off_white=#F3F3F3">&ndash;&gt;-->
+<!--&lt;!&ndash;                                            <span>Color:</span>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                            <div class="c_button active" style="background-color: #F3F3F3;"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                 data-value="Off_white=#F3F3F3" data-colorhash="#F3F3F3"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                 data-color="Off_white"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                            <div class="c_button" style="background-color: #f4cad6;"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                 data-value="Pink=#f4cad6" data-colorhash="#f4cad6"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                 data-color="Pink"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                            <div class="c_button" style="background-color: #2c2926;"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                 data-value="Black=#2c2926" data-colorhash="#2c2926"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                 data-color="Black"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                        </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </form>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
 
         </div>
@@ -5729,13 +6046,12 @@ https://sleepandglow.com/webp/assets/images/products/2050/big/gallery-02.jpg.web
         <div class="sezzle-minicart">
 
         </div>
-
-
-        <a href="https://sleepandglow.com/shop/" class="shopping-cart__footer_next button transparent"><span>CONTINUE MY SHOPPING</span></a>
-
-
-        <a href="https://sleepandglow.com/add-other-products-for-a-perfect-sleep"
-           class="shopping-cart__footer_buy button gradient"><span>Confirm and Pay</span></a>
+        <a href="#" class="shopping-cart__footer_next button">
+            <span>CONTINUE MY SHOPPING</span>
+        </a>
+        <a href="#" class="shopping-cart__footer_buy button gradient">
+            <span>Confirm and Pay</span>
+        </a>
     </div>
     <div class="shopping-cart-bg"></div>
     <script>
@@ -5749,6 +6065,18 @@ https://sleepandglow.com/webp/assets/images/products/2050/big/gallery-02.jpg.web
 
     </script>
 </div>
+
+
+<script>
+    $('.other-products').masonry({
+        // options
+        itemSelector: '.other-products-item',
+        gutter: 24,
+    });
+</script>
+
+
+
 
 
 <div class="pp pp__mailing pp__mailing--country">

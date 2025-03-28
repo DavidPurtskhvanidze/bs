@@ -1,0 +1,2792 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="./sg_new_catalog_files/iziToast.min.css">
+    <style class="vjs-styles-defaults">
+        .video-js {
+            width: 300px;
+            height: 150px;
+        }
+        .vjs-fluid {
+            padding-top: 56.25%
+        }
+    </style>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light">
+
+    <link rel="stylesheet" href="./sg_new_catalog_files/normalize.css">
+    <link rel="stylesheet" href="./sg_new_catalog_files/swiper.min.css">
+    <link href="./sg_new_catalog_files/video-js.min.css" rel="stylesheet">
+    <link href="./sg_new_catalog_files/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="./sg_new_catalog_files/_css_styles22.css">
+    <link rel="stylesheet" href="./sg_new_catalog_files/aos.css">
+    <link rel="stylesheet" href="./sg_new_catalog_files/pnotify.custom.css">
+    <link rel="stylesheet" href="./sg_new_catalog_files/_css_common22.css">
+    <link rel="stylesheet" href="./sg_new_catalog_files/science.css">
+    <link rel="stylesheet" href="./sg_new_catalog_files/styles_all.css">
+    <link rel="stylesheet" href="./sg_new_catalog_files/styles_usa.css">
+
+    <link rel="stylesheet" href="./sg_new_catalog_files/style.css">
+
+
+    <link href="./sg_new_catalog_files/css" rel="stylesheet">
+    <link href="./sg_new_catalog_files/suggestions.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./sg_new_catalog_files/complects.css">
+
+
+    <script src="sg_new_catalog_files/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="sg_new_catalog_files/cookie.js"></script>
+    <script src="./sg_new_catalog_files/complects.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.srcset = lazyImage.dataset.srcset;
+                            lazyImage.classList.remove("lazy");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+                lazyImages.forEach(function (lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            } else {
+                // Possibly fall back to event handlers here
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+            if ("IntersectionObserver" in window) {
+                var lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (video) {
+                        if (video.isIntersecting) {
+                            for (var source in video.target.children) {
+                                var videoSource = video.target.children[source];
+                                if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                                    videoSource.src = videoSource.dataset.src;
+                                }
+                            }
+                            video.target.load();
+                            video.target.classList.remove("lazy");
+                            lazyVideoObserver.unobserve(video.target);
+                        }
+                    });
+                });
+                lazyVideos.forEach(function (lazyVideo) {
+                    lazyVideoObserver.observe(lazyVideo);
+                });
+            }
+        });
+    </script>
+    <style>
+
+        @keyframes flicker2 {
+
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+                text-shadow: 0 0 4px #EA90BB,
+                0 0 11px #EA90BB,
+                0 0 19px #EA90BB,
+                0 0 40px #EA90BB,
+                0 0 80px #FC67A8,
+                0 0 90px #FC67A8,
+                0 0 100px #FC67A8,
+                0 0 150px #FC67A8;
+
+            }
+
+            20%, 24%, 55% {
+                text-shadow: none;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            .header-info {
+                font-size: 10px !important;
+                padding: 5px 5px !important;
+
+            }
+        }
+
+
+        @media screen and (max-width: 767px) {
+            .header-info {
+                font-size: 11px;
+            }
+        }
+
+
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('fonts/CeraPro-Regular.woff2') format('woff2'),
+            url('fonts/CeraPro-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('fonts/CeraPro-Bold.woff2') format('woff2'),
+            url('fonts/CeraPro-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('fonts/CeraPro-Medium.woff2') format('woff2'),
+            url('fonts/CeraPro-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('fonts/CeraPro-Light.woff2') format('woff2'),
+            url('fonts/CeraPro-Light.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+
+    </style>
+
+
+    <style>
+        .rc-anchor, .rc-anchor-invisible {
+            visibility: hidden !important;
+            display: none !important;
+        }
+
+        .grecaptcha-badge {
+            visibility: hidden;
+        }
+    </style>
+    <link rel="stylesheet" href="./sg_new_catalog_files/default.css" type="text/css">
+    <script type="text/javascript">miniShop2Config = {
+        "cssUrl": "\/assets\/components\/minishop2\/css\/web\/",
+        "jsUrl": "\/assets\/components\/minishop2\/js\/web\/",
+        "actionUrl": "\/assets\/components\/minishop2\/action.php",
+        "ctx": "lat",
+        "close_all_message": "close all",
+        "price_format": [2, ".", " "],
+        "price_format_no_zeros": false,
+        "weight_format": [3, ".", " "],
+        "weight_format_no_zeros": true
+    };</script>
+    <link rel="stylesheet" href="./sg_new_catalog_files/index(1).css" type="text/css">
+    <script type="text/javascript">miniShop2Config = {
+        "cssUrl": "\/assets\/components\/minishop2\/css\/web\/",
+        "jsUrl": "\/assets\/components\/minishop2\/js\/web\/",
+        "actionUrl": "\/assets\/components\/minishop2\/action.php",
+        "ctx": "usa",
+        "close_all_message": "close all",
+        "price_format": [2, ".", " "],
+        "price_format_no_zeros": false,
+        "weight_format": [3, ".", " "],
+        "weight_format_no_zeros": true
+    };</script>
+    <link rel="stylesheet" href="./sg_new_catalog_files/default(1).css" type="text/css">
+    <script src="sg_new_catalog_files/api.js" async=""></script>
+
+    <script attributionsrc="" type="text/javascript" async="" src="./sg_new_catalog_files/f.txt"></script>
+</head>
+
+<body>
+
+<script>
+    localStorage.removeItem("checkout2_sended");
+</script>
+
+<header role="banner" class="">
+    <div class="header-info">
+        <span>SILK MASK FOR ORDERS OVER 270 - CODE 'SELFLOVE'</span>
+    </div>
+
+    <div class="header-common">
+        <div class="grid">
+            <div class="header-common__top">
+                <div class="interaction">
+
+                    <div class="b-switch b-switch--desktop">
+                        <div class="b-switch__item b-switchSelect">
+                            <div class="b-switchSelect__title">USA</div>
+                            <ul class="b-switchSelect__list">
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.ch/add-other-products-for-a-perfect-sleep?findGeo=true">Switzerland</a>
+                                </li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.fr/add-other-products-for-a-perfect-sleep?findGeo=true">France</a>
+                                </li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.it/add-other-products-for-a-perfect-sleep?findGeo=true">Italy</a>
+                                </li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.de/add-other-products-for-a-perfect-sleep?findGeo=true">Germany/Austria</a>
+                                </li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.pl/add-other-products-for-a-perfect-sleep?findGeo=true">Poland</a>
+                                </li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.cz/add-other-products-for-a-perfect-sleep?country=cz&amp;findGeo=true">Czech
+                                    Republic</a></li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.cz/add-other-products-for-a-perfect-sleep?country=sk&amp;findGeo=true">Slovakia</a>
+                                </li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.es/add-other-products-for-a-perfect-sleep?findGeo=true">Spain</a>
+                                </li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.co.uk/add-other-products-for-a-perfect-sleep?findGeo=true">Great
+                                    Britain</a></li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.com.au/add-other-products-for-a-perfect-sleep?findGeo=true">Australia/New
+                                    Zealand</a></li>
+                                <li class="b-switchSelect__item b-switchSelect__item--active">
+                                    <span>USA</span>
+                                </li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.ca/add-other-products-for-a-perfect-sleep?findGeo=true">Canada</a>
+                                </li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.com/add-other-products-for-a-perfect-sleep?country=roe&amp;findGeo=true">Rest
+                                    of Europe</a></li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.com/add-other-products-for-a-perfect-sleep?country=oc&amp;findGeo=true">Other
+                                    Countries</a></li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.com/add-other-products-for-a-perfect-sleep?country=ae&amp;findGeo=true">United
+                                    Arab Emirates</a></li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.kr/add-other-products-for-a-perfect-sleep?country=kr&amp;findGeo=true">South
+                                    Korea</a></li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.jp/add-other-products-for-a-perfect-sleep?country=jp&amp;findGeo=true">Japan</a>
+                                </li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.com.co/add-other-products-for-a-perfect-sleep?findGeo=true">Latin
+                                    America</a></li>
+                                <li class="b-switchSelect__item"><a
+                                        href="https://sleepandglow.mx/add-other-products-for-a-perfect-sleep?findGeo=true">Mexico</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="burger-menu action-item tablet btn-mob-menu">
+                        <span class="burger-menu__item"></span>
+                        <span class="burger-menu__item"></span>
+                        <span class="burger-menu__item"></span>
+                    </div>
+
+                </div>
+                <div class="logo">
+                    <a href="https://sleepandglow.com/">
+                        <img loading="lazy" src="./sg_new_catalog_files/logo-sg.png.webp" alt="Sleep&amp;Glow">
+                    </a>
+                </div>
+                <div class="shop">
+                    <a href="#" class="shop_goods">
+                        <img loading="lazy" src="./sg_new_catalog_files/shop.svg" alt="profile">
+                        <span>Shop now</span>
+                    </a>
+
+                    <a href="#" class="shop_cart">
+                        <img loading="lazy" src="./sg_new_catalog_files/card.svg" alt="card">
+                        <img loading="lazy" class="card-mobile-ico" src="./sg_new_catalog_files/card-mobile.svg"
+                             alt="card">
+                        <span>
+                            Cart
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <nav role="navigation" class="header-common__bottom">
+            <div class="header-menu__item "><span class="header-menu__item_name">Pillows</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid"><a href="https://sleepandglow.com/omnia"
+                                                           class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/pillow_omnia.svg" alt="pillow"></div>
+                        <span>The Omnia</span></a><a href="https://sleepandglow.com/omnia-copper"
+                                                     class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/pillow_copper2.svg" alt="pillow"></div>
+                        <span>The Omnia Skin Defense</span></a><a href="https://sleepandglow.com/aula"
+                                                                  class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/pillow_aula.svg" alt="pillow"></div>
+                        <span>The Aula</span></a><a href="https://sleepandglow.com/silk-pillow-bra"
+                                                    class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/pillow_decollete.svg" alt="pillow">
+                        </div>
+                        <span>The Pillow Bra</span></a><a
+                            href="https://sleepandglow.com/additional-pillowcases/?category=2053"
+                            class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/pillow_case.svg" alt=""></div>
+                        <span>ADDITIONAL PILLOWCASES</span></a></div>
+                </div>
+            </div>
+            <div class="header-menu__item "><span class="header-menu__item_name">Blankets</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid"><a href="https://sleepandglow.com/weighted-blankets-page"
+                                                           class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/blanket.svg" alt="pillow"></div>
+                        <span>Weighted Blankets</span></a><a
+                            href="https://sleepandglow.com/blanket-with-ventilation-panels" class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/blanket2.svg" alt="">
+                            <div class="item-content__link_new"><span>new</span></div>
+                        </div>
+                        <span>ventilated blanket</span></a></div>
+                </div>
+            </div>
+            <div class="header-menu__item "><span class="header-menu__item_name">Silk Loungewear</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid"><a href="https://sleepandglow.com/silk-products/"
+                                                           class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/robe.svg" alt="Silk Loungewear"></div>
+                        <span>SILK KIMONO</span></a><a href="https://sleepandglow.com/silk-tops-and-shorts/"
+                                                       class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/underwear.svg" alt=""></div>
+                        <span>SILK TOPS AND SHORTS</span></a></div>
+                </div>
+            </div>
+            <div class="header-menu__item "><span class="header-menu__item_name">Silk collection</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid"><a href="https://sleepandglow.com/the-silk-collection?product=6"
+                                                           class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/pillow_case.svg" alt=""></div>
+                        <span>Additional Silk Pillowcases</span></a><a
+                            href="https://sleepandglow.com/the-silk-collection?product=7" class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/sleepmask.svg" alt=""></div>
+                        <span>The silk sleep mask</span></a><a
+                            href="https://sleepandglow.com/the-silk-collection?product=5" class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/coif.svg" alt=""></div>
+                        <span>The silk sleep hair turban</span></a><a
+                            href="https://sleepandglow.com/the-silk-collection?product=8" class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/scrunchy.svg" alt=""></div>
+                        <span>Silk Hair Scrunchies</span></a><a
+                            href="https://sleepandglow.com/silk-pillow-bra?product=2" class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/pillow_decollete.svg" alt="pillow">
+                        </div>
+                        <span>Silk Pillow Bra</span></a><a href="https://sleepandglow.com/the-silk-collection?product=9"
+                                                           class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/bando.png.webp" alt=""></div>
+                        <span>SILK HEADBAND</span></a></div>
+                </div>
+            </div>
+            <div class="header-menu__item "><span class="header-menu__item_name">Our Science</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid"><a href="https://sleepandglow.com/our-science"
+                                                           class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/expert-menu_.png.webp" alt=""></div>
+                        <span>Our Science</span></a></div>
+                </div>
+            </div>
+            <div class="header-menu__item "><span class="header-menu__item_name">BEAUTY SLEEP UNIVERSITY</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid"><a href="https://sleepandglow.com/beauty-sleep-university/"
+                                                           class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/Шапочка.svg" alt=""></div>
+                        <span>BEAUTY SLEEP UNIVERSITY</span></a></div>
+                </div>
+            </div>
+            <div class="header-menu__item"><span class="header-menu__item_name"><a
+                    href="https://sleepandglow.com/for-professionals">For professionals</a></span></div>
+            <div class="header-menu__item "><span class="header-menu__item_name">About</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid"><a href="https://sleepandglow.com/beauty-sleep"
+                                                           class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/sleep.svg" alt="pillow"></div>
+                        <span>Beauty Sleep</span></a><a href="https://sleepandglow.com/our-story"
+                                                        class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/about.svg" alt="pillow"></div>
+                        <span>Our Story</span></a><a href="https://sleepandglow.com/reviews" class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/review.svg" alt="pillow"></div>
+                        <span>Reviews</span></a><a href="https://sleepandglow.com/faq" class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/faq.svg" alt="pillow"></div>
+                        <span>FAQ</span></a><a href="https://sleepandglow.com/our-materials" class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/materials.svg" alt="pillow"></div>
+                        <span>Materials</span></a></div>
+                </div>
+            </div>
+            <div class="header-menu__item "><span class="header-menu__item_name">Support</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid"><a href="https://sleepandglow.com/payment-and-shipping/"
+                                                           class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/delivery.svg" alt="pillow"></div>
+                        <span>Payment and Shipping</span></a><a href="https://sleepandglow.com/warranty-and-returns/"
+                                                                class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/return.svg" alt="pillow"></div>
+                        <span>Warranty and Returns</span></a><a href="https://sleepandglow.com/contact-us"
+                                                                class="item-content__link">
+                        <div><img loading="lazy" src="./sg_new_catalog_files/contacts.svg" alt="pillow"></div>
+                        <span>Contact Us</span></a></div>
+                </div>
+            </div>
+            <div class="header-menu__item mobile-item">
+                <!--<a href="shop/" class="header-menu__item_name">онлайн магазин beauty sleep</a>-->
+            </div>
+            <div class="header-menu__item mobile-item shop">
+                <a href="https://sleepandglow.com/shop/" class="shop_goods">
+                    <img loading="lazy" src="./sg_new_catalog_files/shop.svg" alt="profile">
+                    <span>SHOP NOW</span>
+                </a>
+            </div>
+
+            <div class="b-switch b-switch--mobile">
+                <div class="b-switch__item b-switchSelect">
+                    <div class="b-switchSelect__title">USA</div>
+                    <ul class="b-switchSelect__list">
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.ch/add-other-products-for-a-perfect-sleep?findGeo=true">Switzerland</a>
+                        </li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.fr/add-other-products-for-a-perfect-sleep?findGeo=true">France</a>
+                        </li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.it/add-other-products-for-a-perfect-sleep?findGeo=true">Italy</a>
+                        </li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.de/add-other-products-for-a-perfect-sleep?findGeo=true">Germany/Austria</a>
+                        </li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.pl/add-other-products-for-a-perfect-sleep?findGeo=true">Poland</a>
+                        </li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.cz/add-other-products-for-a-perfect-sleep?country=cz&amp;findGeo=true">Czech
+                            Republic</a></li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.cz/add-other-products-for-a-perfect-sleep?country=sk&amp;findGeo=true">Slovakia</a>
+                        </li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.es/add-other-products-for-a-perfect-sleep?findGeo=true">Spain</a>
+                        </li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.co.uk/add-other-products-for-a-perfect-sleep?findGeo=true">Great
+                            Britain</a></li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.com.au/add-other-products-for-a-perfect-sleep?findGeo=true">Australia/New
+                            Zealand</a></li>
+                        <li class="b-switchSelect__item b-switchSelect__item--active">
+                            <span>USA</span>
+                        </li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.ca/add-other-products-for-a-perfect-sleep?findGeo=true">Canada</a>
+                        </li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.com/add-other-products-for-a-perfect-sleep?country=roe&amp;findGeo=true">Rest
+                            of Europe</a></li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.com/add-other-products-for-a-perfect-sleep?country=oc&amp;findGeo=true">Other
+                            Countries</a></li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.com/add-other-products-for-a-perfect-sleep?country=ae&amp;findGeo=true">United
+                            Arab Emirates</a></li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.kr/add-other-products-for-a-perfect-sleep?country=kr&amp;findGeo=true">South
+                            Korea</a></li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.jp/add-other-products-for-a-perfect-sleep?country=jp&amp;findGeo=true">Japan</a>
+                        </li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.com.co/add-other-products-for-a-perfect-sleep?findGeo=true">Latin
+                            America</a></li>
+                        <li class="b-switchSelect__item"><a
+                                href="https://sleepandglow.mx/add-other-products-for-a-perfect-sleep?findGeo=true">Mexico</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<main class="add-products-page" id="up">
+    <section class="cart-section">
+        <div class="grid">
+            <h3>ADD ITEMS AND GET 20% OFF*</h3>
+            <div class="cart-add-products">
+
+                <a href="https://sleepandglow.com/cart/" class="button gradient">
+                    <svg width="22" height="25" viewBox="0 0 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 23.1954V9.87817H20.9759V23.1954H1Z" stroke="#221D1E" stroke-width="2"></path>
+                        <path d="M16.4135 7.16539C16.4135 3.13468 14.2052 1 11.4811 1C8.7571 1 6.54883 3.14124 6.54883 7.16539"
+                              stroke="#221D1E" stroke-width="2"></path>
+                    </svg>
+                    <span>Continue without additional products</span>
+                </a>
+
+            </div>
+            <div style="margin-top:20px; text-align:center">
+                <img loading="lazy" src="./sg_new_catalog_files/gift_black.svg" alt="" width="25px">
+                <span style="margin:0 auto; padding-top:10px">SILK MASK FOR ORDERS OVER 270 - CODE 'SELFLOVE'</span>
+            </div>
+
+
+            <!-- rubrikator-->
+            <div class="product-mini-complects" data-lang="usa">
+                <div class="caption-main">
+                    <!--Укажите количество и добавьте в корзину 1й кнопкой-->
+
+                    ADD ITEMS AND GET 20% OFF*
+                </div>
+                <div class="caption-main-small">
+                    *The discount is applied to the items with the lowest cost in the bundle.<br>
+                    **When adding pillowcases, the discount is applied to the second and all subsequent pillowcases in
+                    the set
+                </div>
+
+                <div class="wrapp-box-complect">
+
+                    <div class="complect-head-name">
+                    <span class="minicaption">
+                                                                        <span class="txt">Pillows</span>
+                        <span class="icon-svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="11" viewBox="0 0 23 11" fill="none">
+                                <path d="M1.5 1.5L11.5 9.5L21.5 1.5" stroke="#ccc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </span>
+                        <span class="selected-sum">
+                        <span class="hidetext">selected:</span>
+                        <span class="sum-num fx-complect-block-total fx-summ-2049">1</span>pcs.</span>
+                    </div>
+                    <div class="complect-nabor-list" style="display: none;">
+                        <div class="cnl-item fx-product-box fx-css-stayfirstalld selected" id="complect-2049v2050_1">
+                            <div class="cnl-img fx-product-imgs-color " data-id="2050">
+                                <img loading="lazy" src="./sg_rubrikator_files/gallery-02.jpg.webp" alt="photo-0" data-color="made_in" class="">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">229.00</span> US$</span>
+                                    <span class="priceold" style="display: none;"><span class="fx-old-price">229.00</span> US$</span>
+                                    <span class="precents fx-precents" style="display: none;">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Omnia pillow
+                                </div>
+
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="1" data-id="2050" data-razdel="2049" data-type="1" data-price="229" data-cost="0" data-old-price="229.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="1" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2049v2052_2">
+                            <div class="cnl-img fx-product-imgs-color " data-id="2052">
+                                <img loading="lazy" src="./sg_rubrikator_files/aula-01.jpg.webp" alt="photo-0" data-color="made_in" class="">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">183.20</span> US$</span>
+                                    <span class="priceold" style=""><span class="fx-old-price">229.00</span> US$</span>
+                                    <span class="precents fx-precents" style="">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Aula pillow
+                                </div>
+
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="2052" data-razdel="2049" data-type="1" data-price="229" data-cost="0" data-old-price="229.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2049v11833_3">
+                            <div class="cnl-img fx-product-imgs-color " data-id="11833">
+                                <img loading="lazy" src="./sg_rubrikator_files/zxcasdasd.jpg.webp" alt="photo-0" data-color="made_in" class="">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">207.20</span> US$</span>
+                                    <span class="priceold" style=""><span class="fx-old-price">259.00</span> US$</span>
+                                    <span class="precents fx-precents" style="">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Omnia pillow copper skin defense
+                                </div>
+
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="11833" data-razdel="2049" data-type="1" data-price="259" data-cost="0" data-old-price="259.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2049v2918_4">
+                            <div class="cnl-img fx-product-imgs-color " data-id="2918">
+                                <img loading="lazy" src="./sg_rubrikator_files/omniamarblepink01.jpg.webp" alt="photo-0" data-color="Pink_marble" class="">
+                                <img loading="lazy" src="./sg_rubrikator_files/omniamarblewhite.jpg.webp" alt="photo-1" data-color="White_marble" class="hident">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">215.20</span> US$</span>
+                                    <span class="priceold" style=""><span class="fx-old-price">269.00</span> US$</span>
+                                    <span class="precents fx-precents" style="">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Omnia pillow with a premium silk pillowcase "Marble"
+                                </div>
+
+
+                                <div class="cnl-colors" style="order:2;">
+                                    <div class="cnl-caption color">Color:</div>
+                                    <div class="msoption-switcher fx-product-color">
+                                        <div class="cnl-variant-colors">
+                                            <input id="67e63e1d30d31" type="radio" value="Pink_marble=#db8c97" name="19116_options[color]" autocomplete="off">
+                                            <label for="67e63e1d30d31" class="lab-itm" style="background-color: #db8c97;" data-color="Pink_marble" data-value="Pink_marble=#db8c97"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="2918" data-razdel="2049" data-type="1" data-price="269" data-cost="0" data-old-price="269.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2049v12507_5">
+                            <div class="cnl-img fx-product-imgs-color " data-id="12507">
+                                <img loading="lazy" src="./sg_rubrikator_files/aula-marble.jpg.webp" alt="photo-0" data-color="" class="">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">215.20</span> US$</span>
+                                    <span class="priceold" style=""><span class="fx-old-price">269.00</span> US$</span>
+                                    <span class="precents fx-precents" style="">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Aula pillow in a premium mulberry silk pillowcase "Marble"
+                                </div>
+
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="12507" data-razdel="2049" data-type="1" data-price="269" data-cost="0" data-old-price="269.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2049v2066_6">
+                            <div class="cnl-img fx-product-imgs-color " data-id="2066">
+                                <img loading="lazy" src="./sg_rubrikator_files/decolette-04-1.jpg.webp" alt="photo-0" data-color="" class="">
+                                <img loading="lazy" src="./sg_rubrikator_files/photo-9.jpg.webp" alt="photo-1" data-color="Pink_powder" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/bra-chernoe-sg.jpg.webp" alt="photo-6" data-color="Onyx" class="hident">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">71.20</span> US$</span>
+                                    <span class="priceold" style=""><span class="fx-old-price">89.00</span> US$</span>
+                                    <span class="precents fx-precents" style="">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Pillow bra
+                                </div>
+
+
+                                <div class="cnl-colors" style="order:2;">
+                                    <div class="cnl-caption color">Color:</div>
+                                    <div class="msoption-switcher fx-product-color">
+                                        <div class="cnl-variant-colors">
+                                            <input id="67e63e1d3bd9f" type="radio" value="Onyx=#3a3939" name="57668_options[color]" autocomplete="off">
+                                            <label for="67e63e1d3bd9f" class="lab-itm" style="background-color: #3a3939;" data-color="Onyx" data-value="Onyx=#3a3939"></label>
+                                            <input id="67e63e1d3bda8" type="radio" value="Pink_powder=#ffdae7" name="57668_options[color]" autocomplete="off">
+                                            <label for="67e63e1d3bda8" class="lab-itm" style="background-color: #ffdae7;" data-color="Pink_powder" data-value="Pink_powder=#ffdae7"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="2066" data-razdel="2049" data-type="1" data-price="89" data-cost="0" data-old-price="89.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="complect-head-name  ">
+                    <span class="minicaption">
+                                                                        <span class="txt">Additional pillowcases</span>
+                        <span class="icon-svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="11" viewBox="0 0 23 11" fill="none">
+                                <path d="M1.5 1.5L11.5 9.5L21.5 1.5" stroke="#ccc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </span>
+                        <span class="selected-sum">
+                        <span class="hidetext">selected:</span>
+                        <span class="sum-num fx-complect-block-total fx-summ-2053">0</span>pcs.</span>
+                    </div>
+                    <div class="complect-nabor-list" style="display: none;">
+                        <div class="cnl-item fx-product-box" id="complect-2053v2055_1">
+                            <div class="cnl-img fx-product-imgs-color " data-id="2055">
+                                <img loading="lazy" src="./sg_rubrikator_files/pillowcase-omnia-white-tencel.jpg.webp" alt="photo-0" data-color="Off_white" class="">
+                                <img loading="lazy" src="./sg_rubrikator_files/omniatencelarcticice.jpg.webp" alt="photo-1" data-color="Arctic_ice" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/omniatencelrosesmoke.jpg.webp" alt="photo-2" data-color="Rose_smoke" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/omniasilkbraziliansand-(1).jpg.webp" alt="photo-3" data-color="Brazilian_sand" class="hident">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">65.00</span> US$</span>
+                                    <span class="priceold" style="display: none;"><span class="fx-old-price">41.6</span> US$</span>
+                                    <span class="precents fx-precents" style="display: none;">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Omnia tencel pillowcase
+                                </div>
+
+
+                                <div class="cnl-colors" style="order:2;">
+                                    <div class="cnl-caption color">Color:</div>
+                                    <div class="msoption-switcher fx-product-color">
+                                        <div class="cnl-variant-colors">
+                                            <input id="67e63e1d47b31" type="radio" value="Arctic_ice=#cdd0d9" name="98228_options[color]" autocomplete="off">
+                                            <label for="67e63e1d47b31" class="lab-itm" style="background-color: #cdd0d9;" data-color="Arctic_ice" data-value="Arctic_ice=#cdd0d9"></label>
+                                            <input id="67e63e1d47b3a" type="radio" value="Brazilian_sand=#c9a392" name="98228_options[color]" autocomplete="off">
+                                            <label for="67e63e1d47b3a" class="lab-itm" style="background-color: #c9a392;" data-color="Brazilian_sand" data-value="Brazilian_sand=#c9a392"></label>
+                                            <input id="67e63e1d47b3e" type="radio" value="Off_white=#F3F3F3" name="98228_options[color]" autocomplete="off">
+                                            <label for="67e63e1d47b3e" class="lab-itm" style="background-color: #F3F3F3;" data-color="Off_white" data-value="Off_white=#F3F3F3"></label>
+                                            <input id="67e63e1d47b40" type="radio" value="Rose_smoke=#f1dbca" name="98228_options[color]" autocomplete="off">
+                                            <label for="67e63e1d47b40" class="lab-itm" style="background-color: #f1dbca;" data-color="Rose_smoke" data-value="Rose_smoke=#f1dbca"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="2055" data-razdel="2053" data-type="2" data-price="65" data-cost="0" data-old-price="65.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2053v2054_2">
+                            <div class="cnl-img fx-product-imgs-color " data-id="2054">
+                                <img loading="lazy" src="./sg_rubrikator_files/1560811405.jpg.webp" alt="photo-0" data-color="Off_white" class="">
+                                <img loading="lazy" src="./sg_rubrikator_files/4631152810283.jpg.webp" alt="photo-1" data-color="Arctic_ice" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/4631151807512.jpg.webp" alt="photo-2" data-color="Rose_smoke" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/4631152810290.jpg.webp" alt="photo-3" data-color="Brazilian_sand" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/4640125491084.jpg.webp" alt="photo-4" data-color="Onyx" class="hident">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">79.00</span> US$</span>
+                                    <span class="priceold" style="display: none;"><span class="fx-old-price">50.56</span> US$</span>
+                                    <span class="precents fx-precents" style="display: none;">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Omnia silk pillowcase
+                                </div>
+
+
+                                <div class="cnl-colors" style="order:2;">
+                                    <div class="cnl-caption color">Color:</div>
+                                    <div class="msoption-switcher fx-product-color">
+                                        <div class="cnl-variant-colors">
+                                            <input id="67e63e1d503bf" type="radio" value="Arctic_ice=#cdd0d9" name="2510_options[color]" autocomplete="off">
+                                            <label for="67e63e1d503bf" class="lab-itm" style="background-color: #cdd0d9;" data-color="Arctic_ice" data-value="Arctic_ice=#cdd0d9"></label>
+                                            <input id="67e63e1d503c8" type="radio" value="Brazilian_sand=#c9a392" name="2510_options[color]" autocomplete="off">
+                                            <label for="67e63e1d503c8" class="lab-itm" style="background-color: #c9a392;" data-color="Brazilian_sand" data-value="Brazilian_sand=#c9a392"></label>
+                                            <input id="67e63e1d503cc" type="radio" value="Off_white=#F3F3F3" name="2510_options[color]" autocomplete="off">
+                                            <label for="67e63e1d503cc" class="lab-itm" style="background-color: #F3F3F3;" data-color="Off_white" data-value="Off_white=#F3F3F3"></label>
+                                            <input id="67e63e1d503ce" type="radio" value="Onyx=#3a3939" name="2510_options[color]" autocomplete="off">
+                                            <label for="67e63e1d503ce" class="lab-itm" style="background-color: #3a3939;" data-color="Onyx" data-value="Onyx=#3a3939"></label>
+                                            <input id="67e63e1d503d0" type="radio" value="Rose_smoke=#f1dbca" name="2510_options[color]" autocomplete="off">
+                                            <label for="67e63e1d503d0" class="lab-itm" style="background-color: #f1dbca;" data-color="Rose_smoke" data-value="Rose_smoke=#f1dbca"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="2054" data-razdel="2053" data-type="2" data-price="79" data-cost="0" data-old-price="79.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2053v14206_3">
+                            <div class="cnl-img fx-product-imgs-color " data-id="14206">
+                                <img loading="lazy" src="./sg_rubrikator_files/pillowcase-omnia-white-tencel(1).jpg.webp" alt="photo-0" data-color="" class="">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">69.00</span> US$</span>
+                                    <span class="priceold" style="display: none;"><span class="fx-old-price">44.16</span> US$</span>
+                                    <span class="precents fx-precents" style="display: none;">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Omnia Cool Tech pillowcase
+                                </div>
+
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="14206" data-razdel="2053" data-type="2" data-price="69" data-cost="0" data-old-price="69.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2053v2919_4">
+                            <div class="cnl-img fx-product-imgs-color " data-id="2919">
+                                <img loading="lazy" src="./sg_rubrikator_files/omniacasemarblewhite.jpg.webp" alt="photo-0" data-color="Off_white" class="">
+                                <img loading="lazy" src="./sg_rubrikator_files/omniacasemarblepink01.jpg.webp" alt="photo-1" data-color="Pink_marble" class="hident">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">89.00</span> US$</span>
+                                    <span class="priceold" style="display: none;"><span class="fx-old-price">56.96</span> US$</span>
+                                    <span class="precents fx-precents" style="display: none;">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Omnia premium mulberry silk pillowcase "Marble"
+                                </div>
+
+
+                                <div class="cnl-colors" style="order:2;">
+                                    <div class="cnl-caption color">Color:</div>
+                                    <div class="msoption-switcher fx-product-color">
+                                        <div class="cnl-variant-colors">
+                                            <input id="67e63e1d5b008" type="radio" value="Off_white=#F3F3F3" name="40151_options[color]" autocomplete="off">
+                                            <label for="67e63e1d5b008" class="lab-itm" style="background-color: #F3F3F3;" data-color="Off_white" data-value="Off_white=#F3F3F3"></label>
+                                            <input id="67e63e1d5b011" type="radio" value="Pink_marble=#db8c97" name="40151_options[color]" autocomplete="off">
+                                            <label for="67e63e1d5b011" class="lab-itm" style="background-color: #db8c97;" data-color="Pink_marble" data-value="Pink_marble=#db8c97"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="2919" data-razdel="2053" data-type="2" data-price="89" data-cost="0" data-old-price="89.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2053v12506_5">
+                            <div class="cnl-img fx-product-imgs-color " data-id="12506">
+                                <img loading="lazy" src="./sg_rubrikator_files/alyiĭ-3.jpg.webp" alt="photo-0" data-color="Dark_Ruby" class="">
+                                <img loading="lazy" src="./sg_rubrikator_files/omnia-green-01.jpg.webp" alt="photo-3" data-color="Green" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/omnia-nav-silk-yellow-01.jpg.webp" alt="photo-6" data-color="Butter_Yellow" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/1-1.jpg.webp" alt="photo-9" data-color="Silver_shine" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/omnia-blue-01.jpg.webp" alt="photo-12" data-color="King_blue" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/grafit-3.jpg.webp" alt="photo-15" data-color="Graphite" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/shokolad-3.jpg.webp" alt="photo-18" data-color="Chocolate" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/1.jpg.webp" alt="photo-21" data-color="Hot_pink" class="hident">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">99.00</span> US$</span>
+                                    <span class="priceold" style="display: none;"><span class="fx-old-price">63.36</span> US$</span>
+                                    <span class="precents fx-precents" style="display: none;">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Omnia 100% silk pillowcase
+                                </div>
+
+
+                                <div class="cnl-colors" style="order:2;">
+                                    <div class="cnl-caption color">Color:</div>
+                                    <div class="msoption-switcher fx-product-color">
+                                        <div class="cnl-variant-colors">
+                                            <input id="67e63e1d665fa" type="radio" value="Butter_Yellow=#FFFACD" name="5342_options[color]" autocomplete="off">
+                                            <label for="67e63e1d665fa" class="lab-itm" style="background-color: #FFFACD;" data-color="Butter_Yellow" data-value="Butter_Yellow=#FFFACD"></label>
+                                            <input id="67e63e1d66604" type="radio" value="Chocolate=#5f493e" name="5342_options[color]" autocomplete="off">
+                                            <label for="67e63e1d66604" class="lab-itm" style="background-color: #5f493e;" data-color="Chocolate" data-value="Chocolate=#5f493e"></label>
+                                            <input id="67e63e1d66608" type="radio" value="Dark_Ruby=#cd3c4b" name="5342_options[color]" autocomplete="off">
+                                            <label for="67e63e1d66608" class="lab-itm" style="background-color: #cd3c4b;" data-color="Dark_Ruby" data-value="Dark_Ruby=#cd3c4b"></label>
+                                            <input id="67e63e1d6660a" type="radio" value="Graphite=#615e57" name="5342_options[color]" autocomplete="off">
+                                            <label for="67e63e1d6660a" class="lab-itm" style="background-color: #615e57;" data-color="Graphite" data-value="Graphite=#615e57"></label>
+                                            <input id="67e63e1d6660c" type="radio" value="Green=#4fa236" name="5342_options[color]" autocomplete="off">
+                                            <label for="67e63e1d6660c" class="lab-itm" style="background-color: #4fa236;" data-color="Green" data-value="Green=#4fa236"></label>
+                                            <input id="67e63e1d6660e" type="radio" value="Hot_pink=#db396e" name="5342_options[color]" autocomplete="off">
+                                            <label for="67e63e1d6660e" class="lab-itm" style="background-color: #db396e;" data-color="Hot_pink" data-value="Hot_pink=#db396e"></label>
+                                            <input id="67e63e1d66610" type="radio" value="King_blue=#063ABA" name="5342_options[color]" autocomplete="off">
+                                            <label for="67e63e1d66610" class="lab-itm" style="background-color: #063ABA;" data-color="King_blue" data-value="King_blue=#063ABA"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="12506" data-razdel="2053" data-type="2" data-price="99" data-cost="0" data-old-price="99.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2053v2058_6">
+                            <div class="cnl-img fx-product-imgs-color " data-id="2058">
+                                <img loading="lazy" src="./sg_rubrikator_files/pillowcase-aula-white-silk.jpg.webp" alt="photo-0" data-color="" class="">
+                                <img loading="lazy" src="./sg_rubrikator_files/pillowcase-aula-white-silk-2.jpg.webp" alt="photo-2" data-color="Off_white" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/аула-персик-550-550.jpg.webp" alt="photo-3" data-color="Rose_smoke" class="hident">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">79.00</span> US$</span>
+                                    <span class="priceold" style="display: none;"><span class="fx-old-price">50.56</span> US$</span>
+                                    <span class="precents fx-precents" style="display: none;">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Aula silk pillowcase
+                                </div>
+
+
+                                <div class="cnl-colors" style="order:2;">
+                                    <div class="cnl-caption color">Color:</div>
+                                    <div class="msoption-switcher fx-product-color">
+                                        <div class="cnl-variant-colors">
+                                            <input id="67e63e1d6cc22" type="radio" value="Off_white=#F3F3F3" name="60331_options[color]" autocomplete="off">
+                                            <label for="67e63e1d6cc22" class="lab-itm" style="background-color: #F3F3F3;" data-color="Off_white" data-value="Off_white=#F3F3F3"></label>
+                                            <input id="67e63e1d6cc2c" type="radio" value="Rose_smoke=#f1dbca" name="60331_options[color]" autocomplete="off">
+                                            <label for="67e63e1d6cc2c" class="lab-itm" style="background-color: #f1dbca;" data-color="Rose_smoke" data-value="Rose_smoke=#f1dbca"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="2058" data-razdel="2053" data-type="2" data-price="79" data-cost="0" data-old-price="79.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2053v2059_7">
+                            <div class="cnl-img fx-product-imgs-color " data-id="2059">
+                                <img loading="lazy" src="./sg_rubrikator_files/pillowcase-aula-white-tencel.jpg.webp" alt="photo-0" data-color="" class="">
+                                <img loading="lazy" src="./sg_rubrikator_files/pillowcase-aula-white-tencel-2.jpg.webp" alt="photo-2" data-color="Off_white" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/аула-персик-550-550(1).jpg.webp" alt="photo-3" data-color="Rose_smoke" class="hident">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">65.00</span> US$</span>
+                                    <span class="priceold" style="display: none;"><span class="fx-old-price">41.6</span> US$</span>
+                                    <span class="precents fx-precents" style="display: none;">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Aula tencel pillowcase
+                                </div>
+
+
+                                <div class="cnl-colors" style="order:2;">
+                                    <div class="cnl-caption color">Color:</div>
+                                    <div class="msoption-switcher fx-product-color">
+                                        <div class="cnl-variant-colors">
+                                            <input id="67e63e1d73061" type="radio" value="Off_white=#F3F3F3" name="6953_options[color]" autocomplete="off">
+                                            <label for="67e63e1d73061" class="lab-itm" style="background-color: #F3F3F3;" data-color="Off_white" data-value="Off_white=#F3F3F3"></label>
+                                            <input id="67e63e1d7306b" type="radio" value="Rose_smoke=#f1dbca" name="6953_options[color]" autocomplete="off">
+                                            <label for="67e63e1d7306b" class="lab-itm" style="background-color: #f1dbca;" data-color="Rose_smoke" data-value="Rose_smoke=#f1dbca"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="2059" data-razdel="2053" data-type="2" data-price="65" data-cost="0" data-old-price="65.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="complect-head-name  ">
+                    <span class="minicaption">
+                                                                        <span class="txt">Blankets</span>
+                        <span class="icon-svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="11" viewBox="0 0 23 11" fill="none">
+                                <path d="M1.5 1.5L11.5 9.5L21.5 1.5" stroke="#ccc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </span>
+                        <span class="selected-sum">
+                        <span class="hidetext">selected:</span>
+                        <span class="sum-num fx-complect-block-total fx-summ-2060">0</span>pcs.</span>
+                    </div>
+                    <div class="complect-nabor-list" style="display: none;">
+                        <div class="cnl-item fx-product-box" id="complect-2060v2061_1">
+                            <div class="cnl-img fx-product-imgs-color " data-id="2061">
+                                <img loading="lazy" src="./sg_rubrikator_files/blanket-01.jpg.webp" alt="photo-0" data-color="" class="">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">151.20</span> US$</span>
+                                    <span class="priceold" style=""><span class="fx-old-price">189.00</span> US$</span>
+                                    <span class="precents fx-precents" style="">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Weighted blanket
+                                </div>
+
+
+                                <div class="cnl-colors" style="order:1;">
+                                    <div class="cnl-caption size">Size:</div>
+                                    <div class="msoption-switcher sty-size fx-product-size">
+                                        <div class="cnl-variant-colors">
+                                            <div class="input-parent">
+                                                <input id="67e63e1d7e439" type="radio" value="Twin 15lbs" name="33352_options[size]" autocomplete="off">
+                                                <label for="67e63e1d7e439" class="lab-itm-btn" data-color="Twin 15lbs" data-value="Twin 15lbs" data-customprice="209.00">Twin
+                                                    15lbs</label>
+                                            </div>
+                                            <div class="input-parent">
+                                                <input id="67e63e1d7e45a" type="radio" value="Single 10lbs" name="33352_options[size]" autocomplete="off">
+                                                <label for="67e63e1d7e45a" class="lab-itm-btn" data-color="Single 10lbs" data-value="Single 10lbs" data-customprice="189.00">Single
+                                                    10lbs</label>
+                                            </div>
+                                            <div class="input-parent">
+                                                <input id="67e63e1d7e461" type="radio" value="Queen 20lbs" name="33352_options[size]" autocomplete="off">
+                                                <label for="67e63e1d7e461" class="lab-itm-btn" data-color="Queen 20lbs" data-value="Queen 20lbs" data-customprice="229.00">Queen
+                                                    20lbs</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="2061" data-razdel="2060" data-type="1" data-price="189" data-cost="0" data-old-price="189.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2060v11155_2">
+                            <div class="cnl-img fx-product-imgs-color " data-id="11155">
+                                <img loading="lazy" src="./sg_rubrikator_files/air02.jpg.webp" alt="photo-0" data-color="" class="">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">143.20</span> US$</span>
+                                    <span class="priceold" style=""><span class="fx-old-price">179.00</span> US$</span>
+                                    <span class="precents fx-precents" style="">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Ventilated blanket
+                                </div>
+
+
+                                <div class="cnl-colors" style="order:1;">
+                                    <div class="cnl-caption size">Size:</div>
+                                    <div class="msoption-switcher sty-size fx-product-size">
+                                        <div class="cnl-variant-colors">
+                                            <div class="input-parent">
+                                                <input id="67e63e1d84a42" type="radio" value="Twin" name="90229_options[size]" autocomplete="off">
+                                                <label for="67e63e1d84a42" class="lab-itm-btn" data-color="Twin" data-value="Twin" data-customprice="179.00">Twin</label>
+                                            </div>
+                                            <div class="input-parent">
+                                                <input id="67e63e1d84a4b" type="radio" value="Queen" name="90229_options[size]" autocomplete="off">
+                                                <label for="67e63e1d84a4b" class="lab-itm-btn" data-color="Queen" data-value="Queen" data-customprice="199.00">Queen</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="11155" data-razdel="2060" data-type="1" data-price="179" data-cost="0" data-old-price="179.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="complect-head-name  ">
+                    <span class="minicaption">
+                                                                                                                            <span class="txt">Gifts ideas</span>
+                        <span class="icon-svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="11" viewBox="0 0 23 11" fill="none">
+                                <path d="M1.5 1.5L11.5 9.5L21.5 1.5" stroke="#ccc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </span>
+                        <span class="selected-sum">
+                        <span class="hidetext">selected:</span>
+                        <span class="sum-num fx-complect-block-total fx-summ-2063">0</span>pcs.</span>
+                    </div>
+                    <div class="complect-nabor-list" style="display: none;">
+                        <div class="cnl-item fx-product-box" id="complect-2063v2064_1">
+                            <div class="cnl-img fx-product-imgs-color " data-id="2064">
+                                <img loading="lazy" src="./sg_rubrikator_files/silk-sleeping-mask-pearl-1.jpg.webp" alt="photo-0" data-color="Off_white" class="">
+                                <img loading="lazy" src="./sg_rubrikator_files/silk-sleep-mask-pink-powder-1.jpg.webp" alt="photo-1" data-color="Pink" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/bleck-new-maska-2.jpg.webp" alt="photo-4" data-color="Black" class="hident">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">23.20</span> US$</span>
+                                    <span class="priceold" style=""><span class="fx-old-price">29.00</span> US$</span>
+                                    <span class="precents fx-precents" style="">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Silk sleep mask
+                                </div>
+
+
+                                <div class="cnl-colors" style="order:2;">
+                                    <div class="cnl-caption color">Color:</div>
+                                    <div class="msoption-switcher fx-product-color">
+                                        <div class="cnl-variant-colors">
+                                            <input id="67e63e1d929e1" type="radio" value="Black=#2c2926" name="74997_options[color]" autocomplete="off">
+                                            <label for="67e63e1d929e1" class="lab-itm" style="background-color: #2c2926;" data-color="Black" data-value="Black=#2c2926"></label>
+                                            <input id="67e63e1d929ed" type="radio" value="Off_white=#F3F3F3" name="74997_options[color]" autocomplete="off">
+                                            <label for="67e63e1d929ed" class="lab-itm" style="background-color: #F3F3F3;" data-color="Off_white" data-value="Off_white=#F3F3F3"></label>
+                                            <input id="67e63e1d929f0" type="radio" value="Pink=#f4cad6" name="74997_options[color]" autocomplete="off">
+                                            <label for="67e63e1d929f0" class="lab-itm" style="background-color: #f4cad6;" data-color="Pink" data-value="Pink=#f4cad6"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="2064" data-razdel="2063" data-type="1" data-price="29" data-cost="0" data-old-price="29.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2063v2067_2">
+                            <div class="cnl-img fx-product-imgs-color " data-id="2067">
+                                <img loading="lazy" src="./sg_rubrikator_files/scrunchy-pink.jpg.webp" alt="photo-0" data-color="Rose_smoke" class="">
+                                <img loading="lazy" src="./sg_rubrikator_files/scrunchy-white.jpg.webp" alt="photo-1" data-color="Off_white" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/scrunchy-black.jpg.webp" alt="photo-2" data-color="Black" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/scrunchiesm-beige-1.jpg.webp" alt="photo-3" data-color="Caramel" class="hident">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">23.20</span> US$</span>
+                                    <span class="priceold" style=""><span class="fx-old-price">29.00</span> US$</span>
+                                    <span class="precents fx-precents" style="">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Large silk hair scrunchies
+                                </div>
+
+
+                                <div class="cnl-colors" style="order:2;">
+                                    <div class="cnl-caption color">Color:</div>
+                                    <div class="msoption-switcher fx-product-color">
+                                        <div class="cnl-variant-colors">
+                                            <input id="67e63e1d99f23" type="radio" value="Black=#2c2926" name="96301_options[color]" autocomplete="off">
+                                            <label for="67e63e1d99f23" class="lab-itm" style="background-color: #2c2926;" data-color="Black" data-value="Black=#2c2926"></label>
+                                            <input id="67e63e1d99f2d" type="radio" value="Caramel=#EFE4D3" name="96301_options[color]" autocomplete="off">
+                                            <label for="67e63e1d99f2d" class="lab-itm" style="background-color: #EFE4D3;" data-color="Caramel" data-value="Caramel=#EFE4D3"></label>
+                                            <input id="67e63e1d99f31" type="radio" value="Rose_smoke=#f1dbca" name="96301_options[color]" autocomplete="off">
+                                            <label for="67e63e1d99f31" class="lab-itm" style="background-color: #f1dbca;" data-color="Rose_smoke" data-value="Rose_smoke=#f1dbca"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="2067" data-razdel="2063" data-type="1" data-price="29" data-cost="0" data-old-price="29.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2063v2068_3">
+                            <div class="cnl-img fx-product-imgs-color " data-id="2068">
+                                <img loading="lazy" src="./sg_rubrikator_files/scrunchy-pink-slim.jpg.webp" alt="photo-0" data-color="Rose_smoke" class="">
+                                <img loading="lazy" src="./sg_rubrikator_files/scrunchy-white-slim.jpg.webp" alt="photo-1" data-color="Off_white" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/scrunchy-black-slim.jpg.webp" alt="photo-2" data-color="Black" class="hident">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">20.00</span> US$</span>
+                                    <span class="priceold" style=""><span class="fx-old-price">25.00</span> US$</span>
+                                    <span class="precents fx-precents" style="">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Skinny silk hair scrunchies
+                                </div>
+
+
+                                <div class="cnl-colors" style="order:2;">
+                                    <div class="cnl-caption color">Color:</div>
+                                    <div class="msoption-switcher fx-product-color">
+                                        <div class="cnl-variant-colors">
+                                            <input id="67e63e1da1cfb" type="radio" value="Black=#2c2926" name="19515_options[color]" autocomplete="off">
+                                            <label for="67e63e1da1cfb" class="lab-itm" style="background-color: #2c2926;" data-color="Black" data-value="Black=#2c2926"></label>
+                                            <input id="67e63e1da1d04" type="radio" value="Caramel=#c0a89b" name="19515_options[color]" autocomplete="off">
+                                            <label for="67e63e1da1d04" class="lab-itm" style="background-color: #c0a89b;" data-color="Caramel" data-value="Caramel=#c0a89b"></label>
+                                            <input id="67e63e1da1d08" type="radio" value="Rose_smoke=#f1dbca" name="19515_options[color]" autocomplete="off">
+                                            <label for="67e63e1da1d08" class="lab-itm" style="background-color: #f1dbca;" data-color="Rose_smoke" data-value="Rose_smoke=#f1dbca"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="2068" data-razdel="2063" data-type="1" data-price="25" data-cost="0" data-old-price="25.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2063v2065_4">
+                            <div class="cnl-img fx-product-imgs-color " data-id="2065">
+                                <img loading="lazy" src="./sg_rubrikator_files/turbancaramel1.jpg.webp" alt="photo-0" data-color="" class="">
+                                <img loading="lazy" src="./sg_rubrikator_files/hats-white-2.jpg.webp" alt="photo-1" data-color="Off_white" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/hats-pink-3.jpg.webp" alt="photo-2" data-color="Rose_smoke" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/black-turban-1.jpg.webp" alt="photo-4" data-color="Black" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/caramel-turban-3.jpg.webp" alt="photo-8" data-color="Caramel" class="hident">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">60.00</span> US$</span>
+                                    <span class="priceold" style=""><span class="fx-old-price">75.00</span> US$</span>
+                                    <span class="precents fx-precents" style="">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    THE SILK SLEEP HAIR TURBAN
+                                </div>
+
+
+                                <div class="cnl-colors" style="order:2;">
+                                    <div class="cnl-caption color">Color:</div>
+                                    <div class="msoption-switcher fx-product-color">
+                                        <div class="cnl-variant-colors">
+                                            <input id="67e63e1daa679" type="radio" value="Black=#2c2926" name="70006_options[color]" autocomplete="off">
+                                            <label for="67e63e1daa679" class="lab-itm" style="background-color: #2c2926;" data-color="Black" data-value="Black=#2c2926"></label>
+                                            <input id="67e63e1daa683" type="radio" value="Caramel=#bba089" name="70006_options[color]" autocomplete="off">
+                                            <label for="67e63e1daa683" class="lab-itm" style="background-color: #bba089;" data-color="Caramel" data-value="Caramel=#bba089"></label>
+                                            <input id="67e63e1daa687" type="radio" value="Rose_smoke=#f1dbca" name="70006_options[color]" autocomplete="off">
+                                            <label for="67e63e1daa687" class="lab-itm" style="background-color: #f1dbca;" data-color="Rose_smoke" data-value="Rose_smoke=#f1dbca"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="2065" data-razdel="2063" data-type="1" data-price="75" data-cost="0" data-old-price="75.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2063v4011_5">
+                            <div class="cnl-img fx-product-imgs-color " data-id="4011">
+                                <img loading="lazy" src="./sg_rubrikator_files/bando-test.jpg.webp" alt="photo-0" data-color="" class="">
+                                <img loading="lazy" src="./sg_rubrikator_files/bando-karamel-2.jpg.webp" alt="photo-2" data-color="Caramel" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/bando-bl.jpg.webp" alt="photo-4" data-color="Black" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/povyazka-bando-rozovaya-glavnyij-vid-(11).jpg.webp" alt="photo-7" data-color="Pink" class="hident">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">23.20</span> US$</span>
+                                    <span class="priceold" style=""><span class="fx-old-price">29.00</span> US$</span>
+                                    <span class="precents fx-precents" style="">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Silk headbands
+                                </div>
+
+
+                                <div class="cnl-colors" style="order:2;">
+                                    <div class="cnl-caption color">Color:</div>
+                                    <div class="msoption-switcher fx-product-color">
+                                        <div class="cnl-variant-colors">
+                                            <input id="67e63e1db2824" type="radio" value="Black=#3a3939" name="81733_options[color]" autocomplete="off">
+                                            <label for="67e63e1db2824" class="lab-itm" style="background-color: #3a3939;" data-color="Black" data-value="Black=#3a3939"></label>
+                                            <input id="67e63e1db282e" type="radio" value="Caramel=#bba089" name="81733_options[color]" autocomplete="off">
+                                            <label for="67e63e1db282e" class="lab-itm" style="background-color: #bba089;" data-color="Caramel" data-value="Caramel=#bba089"></label>
+                                            <input id="67e63e1db2846" type="radio" value="Pink=#f4cad6" name="81733_options[color]" autocomplete="off">
+                                            <label for="67e63e1db2846" class="lab-itm" style="background-color: #f4cad6;" data-color="Pink" data-value="Pink=#f4cad6"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="4011" data-razdel="2063" data-type="1" data-price="29" data-cost="0" data-old-price="29.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cnl-item fx-product-box" id="complect-2063v11139_6">
+                            <div class="cnl-img fx-product-imgs-color " data-id="11139">
+                                <img loading="lazy" src="./sg_rubrikator_files/bandnarrowpink01.jpg.webp" alt="photo-0" data-color="Pink" class="">
+                                <img loading="lazy" src="./sg_rubrikator_files/bandnarrowcaramel01.jpg.webp" alt="photo-2" data-color="Caramel" class="hident">
+                                <img loading="lazy" src="./sg_rubrikator_files/bandnarrowblack01.jpg.webp" alt="photo-4" data-color="Black" class="hident">
+
+
+                            </div>
+
+                            <div class="cnl-info">
+                                <div class="box-price">
+                                    <span class="price"><span class="fx-new-price">20.00</span> US$</span>
+                                    <span class="priceold" style=""><span class="fx-old-price">25.00</span> US$</span>
+                                    <span class="precents fx-precents" style="">20%</span>
+                                </div>
+                                <div class="cnl-title">
+                                    Skinny silk headband
+                                </div>
+
+
+                                <div class="cnl-colors" style="order:2;">
+                                    <div class="cnl-caption color">Color:</div>
+                                    <div class="msoption-switcher fx-product-color">
+                                        <div class="cnl-variant-colors">
+                                            <input id="67e63e1db9ca3" type="radio" value="Black=#3a3939" name="54773_options[color]" autocomplete="off">
+                                            <label for="67e63e1db9ca3" class="lab-itm" style="background-color: #3a3939;" data-color="Black" data-value="Black=#3a3939"></label>
+                                            <input id="67e63e1db9cab" type="radio" value="Caramel=#bba089" name="54773_options[color]" autocomplete="off">
+                                            <label for="67e63e1db9cab" class="lab-itm" style="background-color: #bba089;" data-color="Caramel" data-value="Caramel=#bba089"></label>
+                                            <input id="67e63e1db9caf" type="radio" value="Pink=#f4cad6" name="54773_options[color]" autocomplete="off">
+                                            <label for="67e63e1db9caf" class="lab-itm" style="background-color: #f4cad6;" data-color="Pink" data-value="Pink=#f4cad6"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cnl-count">
+                                    <div class="prod-item-counter fx-count-changer" data-id="">
+                                        <span class="hand_button decrement fx-min"></span>
+                                        <input class="prod-item-counter-input fx-prod-count" type="number" name="count" value="0" data-id="11139" data-razdel="2063" data-type="1" data-price="25" data-cost="0" data-old-price="25.00" data-minval="0" data-maxval="999" min="0" data-globalcounter="0" max="999" placeholder="0">
+
+                                        <span class="hand_button increment fx-max"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="grid">
+        <div class="footer-part">
+            <div class="menu-container">
+
+                <div>
+                    <span>Pillows</span>
+                    <ul>
+                        <li>
+                            <a href="https://sleepandglow.com/omnia">The Omnia</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/omnia-copper">The Omnia Skin Defense</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/aula">The Aula</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/silk-pillow-bra">The Pillow Bra</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/shop/?category=2053">ADDITIONAL PILLOWCASES</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Blankets</span>
+                    <ul>
+                        <li>
+                            <a href="https://sleepandglow.com/weighted-blankets-page">Weighted Blankets</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/blanket-with-ventilation-panels">ventilated blanket</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <span>Silk collection</span>
+                    <ul>
+                        <li>
+                            <a href="https://sleepandglow.com/the-silk-collection">Additional Silk Pillowcases</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/the-silk-collection">The silk sleep mask</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/the-silk-collection">The silk sleep hair turban</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/the-silk-collection">Silk Hair Scrunchies</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/silk-pillow-bra">Silk Pillow Bra</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/the-silk-collection">SILK HEADBAND</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <span>Silk Loungewear</span>
+                    <ul>
+                        <li>
+                            <a href="https://sleepandglow.com/silk-products/">SILK KIMONO</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/silk-tops-and-shorts/">SILK TOPS AND SHORTS</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <span>About</span>
+                    <ul>
+                        <li>
+                            <a href="https://sleepandglow.com/beauty-sleep">Beauty Sleep</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/our-story">Our Story</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/reviews">Reviews</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/faq">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/our-materials">Materials</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/2091">Privacy policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Support</span>
+                    <ul>
+                        <li>
+                            <a href="https://sleepandglow.com/payment-and-shipping/">Payment and Shipping</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/warranty-and-returns/">Warranty and Returns</a>
+                        </li>
+                        <li>
+                            <a href="https://sleepandglow.com/contact-us">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="email-mailing">
+                <div class="h4">SUBSCRIBE TO OUR NEWSLETTER</div>
+                <p>Sign up to discover sleep hygiene, news and news from Sleep&amp;Glow!</p>
+                <form method="post" class="js-form-mailing" action="https://sleepandglow.com/" novalidate="novalidate">
+                    <div class="input-box">
+                        <input name="email" type="email" placeholder="Enter your e-mail">
+                        <input type="text" name="vorg" class="vorg">
+                    </div>
+                    <input type="text" class="n-message" name="n-message" value="">
+
+                    <button type="submit"><img loading="lazy" src="./sg_new_catalog_files/mailing-submit.svg"
+                                               alt="submit"></button>
+
+                    <span class="error_g-recaptcha-response error"></span>
+                    <input type="hidden" name="g-recaptcha-response"
+                           value="03AFcWeA5eLnp5Vywx7i0QHZJZGXrV5Nto7b5dPwXJNYtjshKjnI9jFwl_6ZeHisoD0npxEy8etyKlZbdMf6SRHmqzZWFeEmFPXMNgIxf9HehLrHaACx-X87MA_knYI8-IwjLXacQo6-QQH4SOlgMMPc1by_A0c2qbzjYN8nzhUOgQriSNCr6vV-Y3RZqgIT4NwCOI2DvgbnP5pTkB9-PiS34HYtNxATE4fWOImyY_IWEyba4RKKyxCwTKIgoVDEdGM2MLNM_H20SmI-Fe_kElYBaRKWohz_IirLP16L7_TSI8BSfheyY9GH8j519VnOz0GzvRiw4C3jK0mzJIJHVIHHW3bpZwVP6mZv7BJDUUaoLR98_biyOBu2RuRs1-g6pKjYW7_n0x6GVhMSziv4rHuiAEa8H4NUQbWcvoell9VqS3BVZrPY5m04ZqmTKTms-YnifeBrJ2dn4haYfVbDCj8PO0s6l8XuBlV3qH2JogsMkFXwYAzCMRdMCrSqxFFl9WIAgN1I5ykEEVwnYn2C1U8XLvBCIT7hwnkx0UjrHdwOzzzTW28TGOs-4VZhAoKjHlkSKtLeEONdrbhEIzhDo9X4V2wrmgKxSwgVJsa64Zbq4t-o-asx_K8_16DwO6V3pTlGHDJ0xjUW2bAoaJLK5JAkszIcA8Nk8h1JdDERyCOkRzIE0vqdQMtVnIGDQpEl8wsW-DEbijqpSufAdj8Zeei361eHwRLPY863WEfaqdqnafBaSxQLDQJ9fUD-peHrCYQwfP0ZUjBMyE_3a34TGn8n4m5ghxAGjsDDAC4Ou-fzHOfGNZq1MrCDLKLUtX7zSDNChGolUy-leFOWgZk6LcKgM3fBixncfrgS_Uf31ohBsC16bDSGxRZ7OJ8RDjHg03qmkqTUDRkoF0SoR3L0FPxD5DAcQgY2OBUHF6Lon562YQ-x7uFhW7zl2u2ZbuvAkaPBhnX_4FVgalntp0Bo0a-qUJR7AfVLFUjRg_ru5yYFCbalDH0Jn6Lg4kcrMaDtNom_fT6oLqsJPaOYL488hXLEaUbNsSDNAuO_HpXRWAL7FAXFYz54lMwuYV5LfwB9s8IVLdSYwvZULcyXiAQ4KH1XXaw4NXGNLEexMG_muLtiQM3TUa06sl1YTKQjidHLFYQuvM4zHsNgCsxBWkIWdoGyQ8jJY_ZDlZJ1FvxGUzaclAW_CX8X7RyJZfxwbajb88fry68aKbEZ2OLSmQQ55DfdY0k8Ur1PLT4Tjhq7ez3_D6qVEwzkQWZ4vFjmb9VUB4uFrmVOrsSHZURyZSd3Sz06Mm3yZ2BO-ef78m3ynMrCGBzmjgGOvoFSBhvaLUnVkLYt6-P0mPcoHUz_DKIhdO60fs0_4eIZim1WmgnqWpPlhpoX4Sqssl3P2vfGhWalqYI4FDGQ2MQ-g1QqNAs9vg_cTkqPm-fG4r-BqNJlIG9MkxrntFb_kF1rywvNBctJNiLUF4oS-qR--ivl8pZmUm2uAoYYQ3j_hwIGtA-8IQnUIqXkWCSbgRg44qP5qPbK-AhF65-33cTsxRDXGTG3-T2Uj8j4WIqWxZ1cPPsDPSdk_fqNetguja1dK022-qHpP2ExAy-80BdcQMUcwsiRkn0ZoMqLu551xa95VM6DC7_bbwMrkw8oqXG15K15xmYZif1LZ65e29XXM1x7L-0SHxU4EYYa5BEzKWqZEF31ujFdD33I6SOvPGnfYvLyKgN0mf1WeaHcIuu0cwvmKw8nE2Io-2WxbdnH5us3ornTTO7mBefSiKVmm25GyIMUyN3EMy4o69jiq30x9m2PR1LXSebWhZ0_rIB1gVOfZTeEimxHl2a82Xn0Wk9wjx021GpaEVzsUEUYlgrjRWWp5docoLwo2iL9B5XcyPWkZG-ta08VawcDxkFbC8TaPI8yI0xIUBwTEbhZrLA3b9XIXhSQ-ODHafQoXfLt2qHTNwNbJPRkREzss7uVq7TNI5fbnBGSWB-eppkfDP-iQkuSThSmN4FpsgSLQqkQZnKyQvKq6gxtgMKMascbytvPY">
+
+                    <input type="hidden" name="af_action" value="193b2ea636d2ad0ce03eb058aa286f98">
+                </form>
+                <div class="politics">
+                    By clicking on Subscribe, you agree to our <a href="https://sleepandglow.com/privacy-policy"
+                                                                  target="_blank">privacy policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-part mobile-display-block-non-flex">
+            <div class="sn-box">
+                <div>
+                    <a href="https://www.instagram.com/sleepandglow/" target="_blank" class="social-box__item">
+                        <img loading="lazy" src="./sg_new_catalog_files/in.svg" alt="instagram">
+                    </a>
+                    <a href="https://www.facebook.com/sleepandglow" target="_blank" class="social-box__item">
+                        <img loading="lazy" src="./sg_new_catalog_files/f.svg" alt="facebook">
+                    </a>
+                    <a href="https://sleepandglow.com/false" target="_blank" class="social-box__item">
+                        <img loading="lazy" src="./sg_new_catalog_files/vkon.svg" alt="vk">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCE9tVdNt0JS15blKR3t6Qkw/featured" target="_blank"
+                       class="social-box__item">
+                        <img loading="lazy" src="./sg_new_catalog_files/you.svg" alt="youtube">
+                    </a>
+                </div>
+                <!--<span>false</span>-->
+                <span>FOLLOW US ON SOCIAL MEDIA</span>
+            </div>
+
+            <div class="sn-box mobile-display-none">
+                <div class="v-line"></div>
+                <div>
+                    <img loading="lazy" src="./sg_new_catalog_files/feder.jpeg.webp" alt="feder">
+                </div>
+                <span style="font-size:12px; line-height:16px" class="mobile-display">
+                        TAKO INNOVATIONS SL en el marco del Programa ICEX Next, ha contado con el apoyo de
+                        ICEX y con la cofinanciación del fondo europeo FEDER.
+                        La finalidad de este apoyo es contribuir al desarrollo internacional de la empresa y
+                        de su entorno. FONDO EUROPEO DE DESARROLLO REGIONAL. Una manera de hacer Europa
+                    </span>
+                <div class="v-line"></div>
+            </div>
+
+
+            <a href="https://sleepandglow.com/#up" class="up">
+                <span>Top of page</span>
+                <img loading="lazy" src="./sg_new_catalog_files/up.svg" alt="up">
+            </a>
+        </div>
+
+
+        <div class="footer-part mobile-display-block">
+            <div class="sn-box mobile-display-block">
+                <div>
+                    <img loading="lazy" src="./sg_new_catalog_files/feder.jpeg.webp" alt="feder">
+                </div>
+                <span style="font-size:12px; line-height:16px" class="mobile-display">
+                        TAKO INNOVATIONS SL en el marco del Programa ICEX Next, ha contado con el apoyo de
+                        ICEX y con la cofinanciación del fondo europeo FEDER.
+                        La finalidad de este apoyo es contribuir al desarrollo internacional de la empresa y
+                        de su entorno.
+                    </span>
+            </div>
+        </div>
+
+
+        <div class="footer-part">
+            <div class="footer-part__info">
+                <!--<span>© 2016 — 2024, Sleep&amp;Glow ®</span>-->
+                <span>© 2016 — 2024, Sleep&amp;Glow ®</span>
+                <div>
+                    <a href="https://sleepandglow.com/privacy-policy">Privacy policy</a>
+                    <a href="https://sleepandglow.com/terms-of-use">Terms of use</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="shopping-cart js-minicart">
+
+
+    <div class="shopping-cart-card">
+        <div class="shopping-cart__title">
+            <div class="h4">Cart</div>
+
+            <span class="goods-count">3 product</span>
+
+            <div class="cart-close">
+                <div class="close__lane"></div>
+                <div class="close__lane"></div>
+            </div>
+        </div>
+        <div class="shopping-cart__body">
+            <div>
+                <div class="shopping-cart__goods">
+                    <div class="cart-item" data-id="2050" id="b3dc0d94742533c97a8076a1e28360f8" data-price="183.20"
+                         data-oldprice="229.00" data-count="1" data-option="">
+
+                        <img loading="lazy" class="cart-item__img" src="./sg_new_catalog_files/gallery-02.jpg.webp"
+                             alt="Omnia pillow">
+
+
+                        <div class="cart-item__info">
+                            <span class="cart-item__info_title">Omnia pillow</span>
+                            <div class="cart-item__info_specifications">
+                                <div class="specifications-price"><span>Price per piece.</span><span>US$ 183.20</span> |
+                                    1
+                                </div>
+                            </div>
+                            <div class="cart-item__info_cont">
+                                <form method="post" class="ms2_form js-now-submit" role="form" data-linked="">
+                                    <input type="hidden" name="key" value="b3dc0d94742533c97a8076a1e28360f8">
+                                    <div class="single-product__counter">
+                                        <span class="hand_button decrement"
+                                              onclick="runFuncMinus(this, {from:&#39;remove-product-from-minicart&#39;});"></span>
+                                        <input type="number" name="count" value="1" min="0" max="999"
+                                               data-promogoods-count="1">
+                                        <span class="hand_button increment"
+                                              onclick="runFuncPlus(this, {from:&#39;add-product-from-minicart&#39;});"></span>
+                                    </div>
+                                    <button class="btn btn-sm" type="submit" name="ms2_action"
+                                            value="cart/change"></button>
+                                </form>
+                                <div class="single-product-price amount">
+
+                                    <span class="newprice js-new-price">US$ 412.20</span>
+                                    <span class="js-old-price">US$ 458.00</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-close js-remove-product"
+                             onclick="runFuncMinus(this, {from:&#39;remove-product-from-minicart-close-btn&#39;});">
+                            <form method="post" class="ms2_form">
+                                <input type="hidden" name="key" value="b3dc0d94742533c97a8076a1e28360f8">
+
+                                <div class="close__lane"></div>
+                                <div class="close__lane"></div>
+                                <button class="btn btn-sm btn-danger" type="submit" name="ms2_action"
+                                        value="cart/remove"></button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="cart-item" data-id="12506" id="e23e04c44238c4e9c87c8988e68b1c7f" data-price="99.00"
+                         data-oldprice="99.00" data-count="1" data-option="Dark_Ruby=#cd3c4b">
+
+
+                        <img loading="lazy" class="cart-item__img" src="./sg_new_catalog_files/alyiĭ-3.jpg.webp"
+                             alt="Dark_Ruby=#cd3c4b">
+
+                        <div class="cart-item__info">
+                            <span class="cart-item__info_title">Omnia 100% silk pillowcase</span>
+                            <div class="cart-item__info_specifications">
+                                <div class="specifications-color"><span>Color:</span><span>Dark_Ruby</span></div>
+                                <div class="specifications-price"><span>Price per piece.</span><span>US$ 99.00</span> |
+                                    1
+                                </div>
+                            </div>
+                            <div class="cart-item__info_cont">
+                                <form method="post" class="ms2_form js-now-submit" role="form" data-linked="">
+                                    <input type="hidden" name="key" value="e23e04c44238c4e9c87c8988e68b1c7f">
+                                    <div class="single-product__counter">
+                                        <span class="hand_button decrement"
+                                              onclick="runFuncMinus(this, {from:&#39;remove-product-from-minicart&#39;});"></span>
+                                        <input type="number" name="count" value="1" min="0" max="999">
+                                        <span class="hand_button increment"
+                                              onclick="runFuncPlus(this, {from:&#39;add-product-from-minicart&#39;});"></span>
+                                    </div>
+                                    <button class="btn btn-sm" type="submit" name="ms2_action"
+                                            value="cart/change"></button>
+                                </form>
+                                <div class="single-product-price amount">
+
+                                    <span class=" js-new-price">US$ 99.00</span>
+                                    <span class="js-old-price" style="display:none;">US$ 0.00</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-close js-remove-product"
+                             onclick="runFuncMinus(this, {from:&#39;remove-product-from-minicart-close-btn&#39;});">
+                            <form method="post" class="ms2_form">
+                                <input type="hidden" name="key" value="e23e04c44238c4e9c87c8988e68b1c7f">
+
+                                <div class="close__lane"></div>
+                                <div class="close__lane"></div>
+                                <button class="btn btn-sm btn-danger" type="submit" name="ms2_action"
+                                        value="cart/remove"></button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="shopping-cart__notify" data-freedeliv="10000">
+
+
+                    <!-- <span> Вам не хватает <span class="js-free-deliv-left-val">9 488.80 US&#36;</span>, чтобы получить бесплатную доставку на дом </span> -->
+                    <span>
+                    Shipping cost depends on the delivery method and will be calculated when placing an order                </span>
+                </div>
+            </div>
+
+
+            <div><br>
+                <img loading="lazy" src="./sg_new_catalog_files/gift_black.svg" alt="" width="25px">
+                <b><span style="font-size:14px">SILK MASK FOR ORDERS OVER 270 - CODE 'SELFLOVE'</span></b></div>
+
+
+            <div data-lang="" class="single-product-section__other-products">
+
+
+                <div class="other-products__heading_banner">
+                    <picture>
+                        <source srcset="/uploads/akcii/dacha24/dacha_minicart_mob_en.jpg?ver=1"
+                                media="(max-width: 767px)">
+                        <img loading="lazy" class="single-photo"
+                             src="./sg_new_catalog_files/dacha_minicart_pc_en.jpg" alt="ADD ITEMS AND GET 20% OFF*">
+                    </picture>
+                </div>
+
+                <style>
+                    .other-products__heading_banner {
+                        margin: 20px -40px;
+                    }
+
+                    @media only screen and (max-width: 767px) {
+                        .other-products__heading_banner {
+                            margin: 20px -9px 20px -10px
+                        }
+                    }
+                </style>
+
+
+                <div class="swiper-container swiper-other-products second scrollbar">
+                    <div class="swiper-wrapper">
+
+
+                        <div class="swiper-slide js-product-box" data-viewproduct="12506"
+                             data-out="Shopping cart panel">
+
+
+                            <div class="slide-product__img">
+                                <a href="https://sleepandglow.com/product/61" data-currency="USD"
+                                   data-name="Omnia 100% silk pillowcase" data-id="12506" data-price="79.20"
+                                   data-category="ADD ITEMS AND GET 20% OFF*">
+                                    <img loading="lazy" src="./sg_new_catalog_files/alyiĭ-3.jpg.webp" alt="photo-0"
+                                         data-color="Dark_Ruby">
+
+
+                                    <img loading="lazy" src="./sg_new_catalog_files/omnia-green-01.jpg.webp"
+                                         alt="photo-3" data-color="Green">
+
+
+                                    <img loading="lazy"
+                                         src="./sg_new_catalog_files/omnia-nav-silk-yellow-01.jpg.webp"
+                                         alt="photo-6" data-color="Butter_Yellow">
+
+
+                                    <img loading="lazy" src="./sg_new_catalog_files/1-1.jpg.webp" alt="photo-9"
+                                         data-color="Silver_shine">
+
+
+                                    <img loading="lazy" src="./sg_new_catalog_files/omnia-blue-01.jpg.webp"
+                                         alt="photo-12" data-color="King_blue">
+
+
+                                    <img loading="lazy" src="./sg_new_catalog_files/grafit-3.jpg.webp"
+                                         alt="photo-15" data-color="Graphite">
+
+
+                                    <img loading="lazy" src="./sg_new_catalog_files/shokolad-3.jpg.webp"
+                                         alt="photo-18" data-color="Chocolate">
+
+
+                                    <img loading="lazy" src="./sg_new_catalog_files/1.jpg.webp" alt="photo-21"
+                                         data-color="Hot_pink">
+
+
+                                </a>
+                                <div class="js-product-color js-rec-prod-colors">
+
+                                    <div class="slide-product__img_colors" data-id="12506">
+                                        <span>Color:</span>
+
+                                        <div class="c_button active" style="background-color: #cd3c4b;"
+                                             data-value="Dark_Ruby=#cd3c4b" data-colorhash="#cd3c4b"
+                                             data-color="Dark_Ruby" data-id="12506" data-price=""
+                                             onclick="runFuncMod(this);"></div>
+
+                                        <div class="c_button" style="background-color: #FFFACD;"
+                                             data-value="Butter_Yellow=#FFFACD" data-colorhash="#FFFACD"
+                                             data-color="Butter_Yellow" data-id="12506" data-price=""
+                                             onclick="runFuncMod(this);"></div>
+
+                                        <div class="c_button" style="background-color: #5f493e;"
+                                             data-value="Chocolate=#5f493e" data-colorhash="#5f493e"
+                                             data-color="Chocolate" data-id="12506" data-price=""
+                                             onclick="runFuncMod(this);"></div>
+
+                                        <div class="c_button" style="background-color: #615e57;"
+                                             data-value="Graphite=#615e57" data-colorhash="#615e57"
+                                             data-color="Graphite" data-id="12506" data-price=""
+                                             onclick="runFuncMod(this);"></div>
+
+                                        <div class="c_button" style="background-color: #4fa236;"
+                                             data-value="Green=#4fa236" data-colorhash="#4fa236" data-color="Green"
+                                             data-id="12506" data-price="" onclick="runFuncMod(this);"></div>
+
+                                        <div class="c_button" style="background-color: #063ABA;"
+                                             data-value="King_blue=#063ABA" data-colorhash="#063ABA"
+                                             data-color="King_blue" data-id="12506" data-price=""
+                                             onclick="runFuncMod(this);"></div>
+
+                                        <div class="c_button" style="background-color: #db396e;"
+                                             data-value="Hot_pink=#db396e" data-colorhash="#db396e"
+                                             data-color="Hot_pink" data-id="12506" data-price=""
+                                             onclick="runFuncMod(this);"></div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                            <form method="post" class="slide-product__information ms2_form">
+                                <input type="hidden" name="id" value="12506">
+                                <input type="hidden" name="options[color]" value="Dark_Ruby=#cd3c4b">
+                                <div class="slide-product__information_head css-old_price_box">
+                                    <div>Omnia 100% silk pillowcase</div>
+                                    <div class="single-product-price">
+                                        <span class="newprice">US$ <span
+                                                class="no-js-new-price msoptionsprice-cost msoptionsprice-12506">79.20</span></span>
+                                        <span class="no-js-old-price">US$ 99.00</span>
+                                    </div>
+                                </div>
+                                <div class="slide-product__information_descr">
+                                    Our signature Omnia pillowcase is specially tailored to the shape of the pillow, so
+                                    the material doesn't stretch or bunch over the face cradles.
+                                </div>
+                                <div class="slide-product__information_footer">
+                                    <div class="single-product-non--forcolor single-product-non--minicard">Not
+                                        available
+                                    </div>
+                                    <div class="single-product__counter">
+                                        <span class="hand_button decrement"></span>
+                                        <input type="number" name="count" value="1" min="1" max="999" placeholder="0">
+                                        <span class="hand_button increment"></span>
+                                    </div>
+
+                                    <button class="button transparent to-card btn btn-buy btn-add-basket action-basket show"
+                                            type="submit" name="ms2_action" value="cart/add"
+                                            data-pagetitle="Omnia 100% silk pillowcase"
+                                            data-parent="Additional pillowcases" data-id="12506" data-price="79.20"
+                                            data-currency="USD"
+                                            onclick="runFunc(this, {from:&#39;add-other-products-cart&#39;});">
+                                        <span>Add to Cart</span>
+                                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 23.1954V9.87817H20.9759V23.1954H1Z" stroke="#221D1E"
+                                                  stroke-width="2"></path>
+                                            <path d="M16.4135 7.16539C16.4135 3.13468 14.2052 1 11.4811 1C8.7571 1 6.54883 3.14124 6.54883 7.16539"
+                                                  stroke="#221D1E" stroke-width="2"></path>
+                                        </svg>
+                                    </button>
+
+                                    <div class="js-product-color">
+                                        <div class="slide-product__img_colors" data-id="12506">
+                                            <input type="hidden" name="options[color]" id="option_color-12506"
+                                                   value="Dark_Ruby=#cd3c4b">
+                                            <span>Color:</span>
+
+                                            <div class="c_button active" style="background-color: #cd3c4b;"
+                                                 data-value="Dark_Ruby=#cd3c4b" data-colorhash="#cd3c4b"
+                                                 data-color="Dark_Ruby"></div>
+
+                                            <div class="c_button" style="background-color: #FFFACD;"
+                                                 data-value="Butter_Yellow=#FFFACD" data-colorhash="#FFFACD"
+                                                 data-color="Butter_Yellow"></div>
+
+                                            <div class="c_button" style="background-color: #5f493e;"
+                                                 data-value="Chocolate=#5f493e" data-colorhash="#5f493e"
+                                                 data-color="Chocolate"></div>
+
+                                            <div class="c_button" style="background-color: #615e57;"
+                                                 data-value="Graphite=#615e57" data-colorhash="#615e57"
+                                                 data-color="Graphite"></div>
+
+                                            <div class="c_button" style="background-color: #4fa236;"
+                                                 data-value="Green=#4fa236" data-colorhash="#4fa236"
+                                                 data-color="Green"></div>
+
+                                            <div class="c_button" style="background-color: #063ABA;"
+                                                 data-value="King_blue=#063ABA" data-colorhash="#063ABA"
+                                                 data-color="King_blue"></div>
+
+                                            <div class="c_button" style="background-color: #db396e;"
+                                                 data-value="Hot_pink=#db396e" data-colorhash="#db396e"
+                                                 data-color="Hot_pink"></div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+
+
+                        </div>
+
+
+                        <div class="swiper-slide js-product-box" data-viewproduct="2061" data-out="Shopping cart panel">
+
+
+                            <div class="slide-product__img">
+                                <a href="https://sleepandglow.com/product/6" data-currency="USD"
+                                   data-name="Weighted blanket" data-id="2061" data-price="151.20"
+                                   data-category="ADD ITEMS AND GET 20% OFF*">
+                                    <img loading="lazy" src="./sg_new_catalog_files/blanket-01.jpg.webp"
+                                         alt="photo-0" data-color="">
+
+
+                                </a>
+                                <div class="js-product-color js-rec-prod-colors">
+
+
+                                </div>
+
+                            </div>
+
+                            <form method="post" class="slide-product__information ms2_form">
+                                <input type="hidden" name="id" value="2061">
+                                <input type="hidden" name="options[color]" value="">
+                                <div class="slide-product__information_head css-old_price_box">
+                                    <div>Weighted blanket</div>
+                                    <div class="single-product-price">
+                                        <span class="newprice">US$ <span
+                                                class="no-js-new-price msoptionsprice-cost msoptionsprice-2061">151.20</span></span>
+                                        <span class="no-js-old-price">US$ 189.00</span>
+                                    </div>
+                                </div>
+                                <div class="slide-product__information_descr">
+                                    Helps relieve anxiety, allows you to fully relax and fall asleep faster.
+                                </div>
+                                <div class="slide-product__information_footer">
+                                    <div class="single-product-non--forcolor single-product-non--minicard">Not
+                                        available
+                                    </div>
+                                    <div class="single-product__counter">
+                                        <span class="hand_button decrement"></span>
+                                        <input type="number" name="count" value="1" min="1" max="999" placeholder="0">
+                                        <span class="hand_button increment"></span>
+                                    </div>
+
+                                    <button class="button transparent to-card btn btn-buy btn-add-basket action-basket show"
+                                            type="submit" name="ms2_action" value="cart/add"
+                                            data-pagetitle="Weighted blanket" data-parent="Blankets" data-id="2061"
+                                            data-price="151.20" data-currency="USD"
+                                            onclick="runFunc(this, {from:&#39;add-other-products-cart&#39;});">
+                                        <span>Add to Cart</span>
+                                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 23.1954V9.87817H20.9759V23.1954H1Z" stroke="#221D1E"
+                                                  stroke-width="2"></path>
+                                            <path d="M16.4135 7.16539C16.4135 3.13468 14.2052 1 11.4811 1C8.7571 1 6.54883 3.14124 6.54883 7.16539"
+                                                  stroke="#221D1E" stroke-width="2"></path>
+                                        </svg>
+                                    </button>
+
+                                    <div class="js-product-color">
+
+                                    </div>
+                                </div>
+                            </form>
+
+
+                        </div>
+
+
+                        <div class="swiper-slide js-product-box" data-viewproduct="11155"
+                             data-out="Shopping cart panel">
+
+
+                            <div class="slide-product__img">
+                                <a href="https://sleepandglow.com/product/27" data-currency="USD"
+                                   data-name="Ventilated blanket" data-id="11155" data-price="143.20"
+                                   data-category="ADD ITEMS AND GET 20% OFF*">
+                                    <img loading="lazy" src="./sg_new_catalog_files/air02.jpg.webp" alt="photo-0"
+                                         data-color="">
+
+
+                                </a>
+                                <div class="js-product-color js-rec-prod-colors">
+
+
+                                </div>
+
+                            </div>
+
+                            <form method="post" class="slide-product__information ms2_form">
+                                <input type="hidden" name="id" value="11155">
+                                <input type="hidden" name="options[color]" value="">
+                                <div class="slide-product__information_head css-old_price_box">
+                                    <div>Ventilated blanket</div>
+                                    <div class="single-product-price">
+                                        <span class="newprice">US$ <span
+                                                class="no-js-new-price msoptionsprice-cost msoptionsprice-11155">143.20</span></span>
+                                        <span class="no-js-old-price">US$ 179.00</span>
+                                    </div>
+                                </div>
+                                <div class="slide-product__information_descr">
+                                    This ventilated blanket is perfect for those who get hot while they sleep, no matter
+                                    what time of year. It's specially designed for people who perspire more.
+                                </div>
+                                <div class="slide-product__information_footer">
+                                    <div class="single-product-non--forcolor single-product-non--minicard">Not
+                                        available
+                                    </div>
+                                    <div class="single-product__counter">
+                                        <span class="hand_button decrement"></span>
+                                        <input type="number" name="count" value="1" min="1" max="999" placeholder="0">
+                                        <span class="hand_button increment"></span>
+                                    </div>
+
+                                    <button class="button transparent to-card btn btn-buy btn-add-basket action-basket show"
+                                            type="submit" name="ms2_action" value="cart/add"
+                                            data-pagetitle="Ventilated blanket" data-parent="Blankets" data-id="11155"
+                                            data-price="143.20" data-currency="USD"
+                                            onclick="runFunc(this, {from:&#39;add-other-products-cart&#39;});">
+                                        <span>Add to Cart</span>
+                                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 23.1954V9.87817H20.9759V23.1954H1Z" stroke="#221D1E"
+                                                  stroke-width="2"></path>
+                                            <path d="M16.4135 7.16539C16.4135 3.13468 14.2052 1 11.4811 1C8.7571 1 6.54883 3.14124 6.54883 7.16539"
+                                                  stroke="#221D1E" stroke-width="2"></path>
+                                        </svg>
+                                    </button>
+
+                                    <div class="js-product-color">
+
+                                    </div>
+                                </div>
+                            </form>
+
+
+                        </div>
+
+
+                        <div class="swiper-slide js-product-box" data-viewproduct="2064" data-out="Shopping cart panel">
+
+
+                            <div class="slide-product__img">
+                                <a href="https://sleepandglow.com/product/4" data-currency="USD"
+                                   data-name="Silk sleep mask" data-id="2064" data-price="23.20"
+                                   data-category="ADD ITEMS AND GET 20% OFF*">
+                                    <img loading="lazy"
+                                         src="./sg_new_catalog_files/silk-sleeping-mask-pearl-1.jpg.webp"
+                                         alt="photo-0" data-color="Off_white">
+
+
+                                    <img loading="lazy"
+                                         src="./sg_new_catalog_files/silk-sleep-mask-pink-powder-1.jpg.webp"
+                                         alt="photo-1" data-color="Pink">
+
+
+                                    <img loading="lazy" src="./sg_new_catalog_files/bleck-new-maska-2.jpg.webp"
+                                         alt="photo-4" data-color="Black">
+                                </a>
+                                <div class="js-product-color js-rec-prod-colors">
+
+                                    <div class="slide-product__img_colors" data-id="2064">
+                                        <span>Color:</span>
+
+                                        <div class="c_button active" style="background-color: #F3F3F3;"
+                                             data-value="Off_white=#F3F3F3" data-colorhash="#F3F3F3"
+                                             data-color="Off_white" data-id="2064" data-price=""
+                                             onclick="runFuncMod(this);"></div>
+
+                                        <div class="c_button" style="background-color: #f4cad6;"
+                                             data-value="Pink=#f4cad6" data-colorhash="#f4cad6" data-color="Pink"
+                                             data-id="2064" data-price="" onclick="runFuncMod(this);"></div>
+
+                                        <div class="c_button" style="background-color: #2c2926;"
+                                             data-value="Black=#2c2926" data-colorhash="#2c2926" data-color="Black"
+                                             data-id="2064" data-price="" onclick="runFuncMod(this);"></div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                            <form method="post" class="slide-product__information ms2_form">
+                                <input type="hidden" name="id" value="2064">
+                                <input type="hidden" name="options[color]" value="Off_white=#F3F3F3">
+                                <div class="slide-product__information_head css-old_price_box">
+                                    <div>Silk sleep mask</div>
+                                    <div class="single-product-price">
+                                        <span class="newprice">US$ <span
+                                                class="no-js-new-price msoptionsprice-cost msoptionsprice-2064">23.20</span></span>
+                                        <span class="no-js-old-price">US$ 29.00</span>
+                                    </div>
+                                </div>
+                                <div class="slide-product__information_descr">
+                                    The perfect best-selling silk mask to help you rest comfortably, even during the
+                                    daytime
+                                </div>
+                                <div class="slide-product__information_footer">
+                                    <div class="single-product-non--forcolor single-product-non--minicard">Not
+                                        available
+                                    </div>
+                                    <div class="single-product__counter">
+                                        <span class="hand_button decrement"></span>
+                                        <input type="number" name="count" value="1" min="1" max="999" placeholder="0">
+                                        <span class="hand_button increment"></span>
+                                    </div>
+
+                                    <button class="button transparent to-card btn btn-buy btn-add-basket action-basket show"
+                                            type="submit" name="ms2_action" value="cart/add"
+                                            data-pagetitle="Silk sleep mask"
+                                            data-parent="Sleep&amp;Glow Silk Collection" data-id="2064"
+                                            data-price="23.20" data-currency="USD"
+                                            onclick="runFunc(this, {from:&#39;add-other-products-cart&#39;});">
+                                        <span>Add to Cart</span>
+                                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 23.1954V9.87817H20.9759V23.1954H1Z" stroke="#221D1E"
+                                                  stroke-width="2"></path>
+                                            <path d="M16.4135 7.16539C16.4135 3.13468 14.2052 1 11.4811 1C8.7571 1 6.54883 3.14124 6.54883 7.16539"
+                                                  stroke="#221D1E" stroke-width="2"></path>
+                                        </svg>
+                                    </button>
+
+                                    <div class="js-product-color">
+                                        <div class="slide-product__img_colors" data-id="2064">
+                                            <input type="hidden" name="options[color]" id="option_color-2064"
+                                                   value="Off_white=#F3F3F3">
+                                            <span>Color:</span>
+
+                                            <div class="c_button active" style="background-color: #F3F3F3;"
+                                                 data-value="Off_white=#F3F3F3" data-colorhash="#F3F3F3"
+                                                 data-color="Off_white"></div>
+
+                                            <div class="c_button" style="background-color: #f4cad6;"
+                                                 data-value="Pink=#f4cad6" data-colorhash="#f4cad6"
+                                                 data-color="Pink"></div>
+
+                                            <div class="c_button" style="background-color: #2c2926;"
+                                                 data-value="Black=#2c2926" data-colorhash="#2c2926"
+                                                 data-color="Black"></div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="shopping-cart__footer">
+        <div class="shopping-cart__footer_title">
+            <span>Order:</span>
+            <span>US$ <span class="js-minicart-cost">511.20</span></span>
+        </div>
+        <div class="shopping-cart__footer_title">
+            <span>Discount:</span>
+            <span>- US$ <span class="js-minicart-cost-sale">45.80</span></span>
+        </div>
+
+
+        <div class="sezzle-minicart">
+
+        </div>
+
+
+        <a href="https://sleepandglow.com/shop/" class="shopping-cart__footer_next button transparent"><span>CONTINUE MY SHOPPING</span></a>
+
+
+        <a href="https://sleepandglow.com/cart"
+           class="shopping-cart__footer_buy button gradient"><span>Confirm and Pay</span></a>
+    </div>
+    <div class="shopping-cart-bg"></div>
+    <script>
+        try {
+            $(document).ready(function () {
+                otherProductsSwiperSidebar();
+            });
+        } catch (err) {
+            console.error(err);
+        }
+
+    </script>
+</div>
+
+
+<div class="pp pp__mailing pp__mailing--country">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content--min">
+
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+
+        <div class="popup-content popup-content--notpadding">
+            <div class="mailing-header mailing-header--notbg">
+                <span class="mailing-header__title">Where are we shipping to?</span>
+            </div>
+            <div class="b-countries-cards">
+                <div class="b-countries-cards__items">
+                    <a href="https://sleepandglow.ch/add-other-products-for-a-perfect-sleep?findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-sch.jpg.webp" alt="Switzerland">
+                        </div>
+                        <div class="b-countries-cards__title">Switzerland</div>
+                    </a>
+                    <a href="https://sleepandglow.fr/add-other-products-for-a-perfect-sleep?findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-fr.jpg.webp" alt="France">
+                        </div>
+                        <div class="b-countries-cards__title">France</div>
+                    </a>
+                    <a href="https://sleepandglow.it/add-other-products-for-a-perfect-sleep?findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-it.png.webp" alt="Italy">
+                        </div>
+                        <div class="b-countries-cards__title">Italy</div>
+                    </a>
+                    <a href="https://sleepandglow.de/add-other-products-for-a-perfect-sleep?findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-de.gif" alt="Germany/Austria">
+                        </div>
+                        <div class="b-countries-cards__title">Germany/Austria</div>
+                    </a>
+                    <a href="https://sleepandglow.pl/add-other-products-for-a-perfect-sleep?findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-pl.png.webp" alt="Poland">
+                        </div>
+                        <div class="b-countries-cards__title">Poland</div>
+                    </a>
+                    <a href="https://sleepandglow.cz/add-other-products-for-a-perfect-sleep?country=cz&amp;findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-cz.jpg.webp" alt="Czech Republic">
+                        </div>
+                        <div class="b-countries-cards__title">Czech Republic</div>
+                    </a>
+                    <a href="https://sleepandglow.cz/add-other-products-for-a-perfect-sleep?country=sk&amp;findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-sk.jpg.webp" alt="Slovakia">
+                        </div>
+                        <div class="b-countries-cards__title">Slovakia</div>
+                    </a>
+                    <a href="https://sleepandglow.es/add-other-products-for-a-perfect-sleep?findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-es.jpg.webp" alt="Spain">
+                        </div>
+                        <div class="b-countries-cards__title">Spain</div>
+                    </a>
+                    <a href="https://sleepandglow.co.uk/add-other-products-for-a-perfect-sleep?findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-gb.png.webp" alt="Great Britain">
+                        </div>
+                        <div class="b-countries-cards__title">Great Britain</div>
+                    </a>
+                    <a href="https://sleepandglow.com.au/add-other-products-for-a-perfect-sleep?findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-au_nz.png.webp"
+                                 alt="Australia/New Zealand">
+                        </div>
+                        <div class="b-countries-cards__title">Australia/New Zealand</div>
+                    </a>
+                    <a href="https://sleepandglow.com/add-other-products-for-a-perfect-sleep?country=usa&amp;findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-usa.jpg.webp" alt="USA">
+                        </div>
+                        <div class="b-countries-cards__title">USA</div>
+                    </a>
+                    <a href="https://sleepandglow.ca/add-other-products-for-a-perfect-sleep?findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-ca.png.webp" alt="Canada">
+                        </div>
+                        <div class="b-countries-cards__title">Canada</div>
+                    </a>
+                    <a href="https://sleepandglow.com/add-other-products-for-a-perfect-sleep?country=roe&amp;findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-euro.png.webp"
+                                 alt="Rest of Europe">
+                        </div>
+                        <div class="b-countries-cards__title">Rest of Europe</div>
+                    </a>
+                    <a href="https://sleepandglow.com/add-other-products-for-a-perfect-sleep?country=oc&amp;findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-other.png.webp"
+                                 alt="Other Countries">
+                        </div>
+                        <div class="b-countries-cards__title">Other Countries</div>
+                    </a>
+                    <a href="https://sleepandglow.com/add-other-products-for-a-perfect-sleep?country=ae&amp;findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-uae.png.webp"
+                                 alt="United Arab Emirates">
+                        </div>
+                        <div class="b-countries-cards__title">United Arab Emirates</div>
+                    </a>
+                    <a href="https://sleepandglow.kr/add-other-products-for-a-perfect-sleep?country=kr&amp;findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-kr.jpg.webp" alt="South Korea">
+                        </div>
+                        <div class="b-countries-cards__title">South Korea</div>
+                    </a>
+                    <a href="https://sleepandglow.jp/add-other-products-for-a-perfect-sleep?country=jp&amp;findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-jp.jpg.webp" alt="Japan">
+                        </div>
+                        <div class="b-countries-cards__title">Japan</div>
+                    </a>
+                    <a href="https://sleepandglow.com.co/add-other-products-for-a-perfect-sleep?findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-lat.png.webp" alt="Latin America">
+                        </div>
+                        <div class="b-countries-cards__title">Latin America</div>
+                    </a>
+                    <a href="https://sleepandglow.mx/add-other-products-for-a-perfect-sleep?findGeo=true"
+                       class="b-countries-cards__item">
+                        <div class="b-countries-cards__icon">
+                            <img loading="lazy" src="./sg_new_catalog_files/flag-mx.jpg.webp" alt="Mexico">
+                        </div>
+                        <div class="b-countries-cards__title">Mexico</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="pp pp__mailing" data-pp="mailing-pop">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_mailing">
+
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+
+        <div class="popup-content">
+            <div class="mailing-header">
+                <span class="mailing-header__title">Sign up  and get $5 off!</span>
+            </div>
+            <span class="mailing-header__subtitle">Subscribe to our newsletter and get 5% off your first order!</span>
+            <form method="post" class="mailing-body js-form-mailing-popup pt0" action="https://sleepandglow.com/"
+                  novalidate="novalidate">
+                <div class="input-box sleepandglow_popup">
+                    <label for="pp-email-0">Enter your e-mail</label>
+                    <input required="" type="text" placeholder="" name="email" id="pp-email-0">
+                    <input type="text" class="vorg" name="vorg">
+                </div>
+
+                <div class="checkbox politic-check" style="margin-top: 0; margin-bottom: 40px;">
+                    <input type="hidden" name="agree3" value="">
+                    <input type="checkbox" required="" name="agree3" id="agree3">
+                    <label for="agree3" class="checkbox__text">
+                        <span>I agree to receive information about company news and promotions.</span>
+                    </label>
+                </div>
+
+                <input type="text" class="n-message" name="n-message" value="">
+
+                <span class="error_g-recaptcha-response error"></span>
+                <input type="hidden" name="g-recaptcha-response"
+                       value="03AFcWeA5eLnp5Vywx7i0QHZJZGXrV5Nto7b5dPwXJNYtjshKjnI9jFwl_6ZeHisoD0npxEy8etyKlZbdMf6SRHmqzZWFeEmFPXMNgIxf9HehLrHaACx-X87MA_knYI8-IwjLXacQo6-QQH4SOlgMMPc1by_A0c2qbzjYN8nzhUOgQriSNCr6vV-Y3RZqgIT4NwCOI2DvgbnP5pTkB9-PiS34HYtNxATE4fWOImyY_IWEyba4RKKyxCwTKIgoVDEdGM2MLNM_H20SmI-Fe_kElYBaRKWohz_IirLP16L7_TSI8BSfheyY9GH8j519VnOz0GzvRiw4C3jK0mzJIJHVIHHW3bpZwVP6mZv7BJDUUaoLR98_biyOBu2RuRs1-g6pKjYW7_n0x6GVhMSziv4rHuiAEa8H4NUQbWcvoell9VqS3BVZrPY5m04ZqmTKTms-YnifeBrJ2dn4haYfVbDCj8PO0s6l8XuBlV3qH2JogsMkFXwYAzCMRdMCrSqxFFl9WIAgN1I5ykEEVwnYn2C1U8XLvBCIT7hwnkx0UjrHdwOzzzTW28TGOs-4VZhAoKjHlkSKtLeEONdrbhEIzhDo9X4V2wrmgKxSwgVJsa64Zbq4t-o-asx_K8_16DwO6V3pTlGHDJ0xjUW2bAoaJLK5JAkszIcA8Nk8h1JdDERyCOkRzIE0vqdQMtVnIGDQpEl8wsW-DEbijqpSufAdj8Zeei361eHwRLPY863WEfaqdqnafBaSxQLDQJ9fUD-peHrCYQwfP0ZUjBMyE_3a34TGn8n4m5ghxAGjsDDAC4Ou-fzHOfGNZq1MrCDLKLUtX7zSDNChGolUy-leFOWgZk6LcKgM3fBixncfrgS_Uf31ohBsC16bDSGxRZ7OJ8RDjHg03qmkqTUDRkoF0SoR3L0FPxD5DAcQgY2OBUHF6Lon562YQ-x7uFhW7zl2u2ZbuvAkaPBhnX_4FVgalntp0Bo0a-qUJR7AfVLFUjRg_ru5yYFCbalDH0Jn6Lg4kcrMaDtNom_fT6oLqsJPaOYL488hXLEaUbNsSDNAuO_HpXRWAL7FAXFYz54lMwuYV5LfwB9s8IVLdSYwvZULcyXiAQ4KH1XXaw4NXGNLEexMG_muLtiQM3TUa06sl1YTKQjidHLFYQuvM4zHsNgCsxBWkIWdoGyQ8jJY_ZDlZJ1FvxGUzaclAW_CX8X7RyJZfxwbajb88fry68aKbEZ2OLSmQQ55DfdY0k8Ur1PLT4Tjhq7ez3_D6qVEwzkQWZ4vFjmb9VUB4uFrmVOrsSHZURyZSd3Sz06Mm3yZ2BO-ef78m3ynMrCGBzmjgGOvoFSBhvaLUnVkLYt6-P0mPcoHUz_DKIhdO60fs0_4eIZim1WmgnqWpPlhpoX4Sqssl3P2vfGhWalqYI4FDGQ2MQ-g1QqNAs9vg_cTkqPm-fG4r-BqNJlIG9MkxrntFb_kF1rywvNBctJNiLUF4oS-qR--ivl8pZmUm2uAoYYQ3j_hwIGtA-8IQnUIqXkWCSbgRg44qP5qPbK-AhF65-33cTsxRDXGTG3-T2Uj8j4WIqWxZ1cPPsDPSdk_fqNetguja1dK022-qHpP2ExAy-80BdcQMUcwsiRkn0ZoMqLu551xa95VM6DC7_bbwMrkw8oqXG15K15xmYZif1LZ65e29XXM1x7L-0SHxU4EYYa5BEzKWqZEF31ujFdD33I6SOvPGnfYvLyKgN0mf1WeaHcIuu0cwvmKw8nE2Io-2WxbdnH5us3ornTTO7mBefSiKVmm25GyIMUyN3EMy4o69jiq30x9m2PR1LXSebWhZ0_rIB1gVOfZTeEimxHl2a82Xn0Wk9wjx021GpaEVzsUEUYlgrjRWWp5docoLwo2iL9B5XcyPWkZG-ta08VawcDxkFbC8TaPI8yI0xIUBwTEbhZrLA3b9XIXhSQ-ODHafQoXfLt2qHTNwNbJPRkREzss7uVq7TNI5fbnBGSWB-eppkfDP-iQkuSThSmN4FpsgSLQqkQZnKyQvKq6gxtgMKMascbytvPY">
+
+                <button type="submit" class="button gradient">
+                    <span>GET YOUR DISCOUNT</span>
+                </button>
+
+                <div class="politics">
+                    By clicking on Subscribe, you agree to our <a href="https://sleepandglow.com/privacy-policy"
+                                                                  target="_blank">privacy policy</a>
+                </div>
+
+                <input type="hidden" name="af_action" value="186ca925beada6f5e77e7a034db62f4f">
+            </form>
+        </div>
+    </div>
+</div>
+<div class="pp pp__mailing_second" data-pp="mailing-pop_second">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_mailing_second">
+
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+
+        <div class="popup-content2">
+            <div class="mailing-header">
+                <span class="mailing-header__title">Sign up for 5% off and a sleep guide</span>
+            </div>
+            <span class="mailing-header__subtitle">Subscribe to our newsletter to get 5% off your first order and a guide to getting quality sleep from Beauty Sleep University!</span>
+
+            <form method="post" class="mailing-body-second js-form-mailing-popup_second popup-content"
+                  name="js-form-mailing-popup_second" action="https://sleepandglow.com/">
+                <div class="input-box">
+                    <label for="pp-email-10">Enter your e-mail</label>
+                    <input required="" type="text" placeholder="" name="email" id="pp-email-10">
+                </div>
+
+                <div class="checkbox politic-check" style="margin-top: 0px;    margin-bottom: 40px;">
+                    <input type="hidden" name="agree2" value="">
+                    <input type="checkbox" required="" name="agree2" id="agree2">
+                    <label for="agree2" class="checkbox__text">
+                        <span>I agree to receive information about company news and promotions.</span>
+                    </label>
+
+                </div>
+                <input type="text" class="n-message" name="n-message" value="">
+
+                <span class="error_g-recaptcha-response error"></span>
+                <input type="hidden" name="g-recaptcha-response"
+                       value="03AFcWeA5eLnp5Vywx7i0QHZJZGXrV5Nto7b5dPwXJNYtjshKjnI9jFwl_6ZeHisoD0npxEy8etyKlZbdMf6SRHmqzZWFeEmFPXMNgIxf9HehLrHaACx-X87MA_knYI8-IwjLXacQo6-QQH4SOlgMMPc1by_A0c2qbzjYN8nzhUOgQriSNCr6vV-Y3RZqgIT4NwCOI2DvgbnP5pTkB9-PiS34HYtNxATE4fWOImyY_IWEyba4RKKyxCwTKIgoVDEdGM2MLNM_H20SmI-Fe_kElYBaRKWohz_IirLP16L7_TSI8BSfheyY9GH8j519VnOz0GzvRiw4C3jK0mzJIJHVIHHW3bpZwVP6mZv7BJDUUaoLR98_biyOBu2RuRs1-g6pKjYW7_n0x6GVhMSziv4rHuiAEa8H4NUQbWcvoell9VqS3BVZrPY5m04ZqmTKTms-YnifeBrJ2dn4haYfVbDCj8PO0s6l8XuBlV3qH2JogsMkFXwYAzCMRdMCrSqxFFl9WIAgN1I5ykEEVwnYn2C1U8XLvBCIT7hwnkx0UjrHdwOzzzTW28TGOs-4VZhAoKjHlkSKtLeEONdrbhEIzhDo9X4V2wrmgKxSwgVJsa64Zbq4t-o-asx_K8_16DwO6V3pTlGHDJ0xjUW2bAoaJLK5JAkszIcA8Nk8h1JdDERyCOkRzIE0vqdQMtVnIGDQpEl8wsW-DEbijqpSufAdj8Zeei361eHwRLPY863WEfaqdqnafBaSxQLDQJ9fUD-peHrCYQwfP0ZUjBMyE_3a34TGn8n4m5ghxAGjsDDAC4Ou-fzHOfGNZq1MrCDLKLUtX7zSDNChGolUy-leFOWgZk6LcKgM3fBixncfrgS_Uf31ohBsC16bDSGxRZ7OJ8RDjHg03qmkqTUDRkoF0SoR3L0FPxD5DAcQgY2OBUHF6Lon562YQ-x7uFhW7zl2u2ZbuvAkaPBhnX_4FVgalntp0Bo0a-qUJR7AfVLFUjRg_ru5yYFCbalDH0Jn6Lg4kcrMaDtNom_fT6oLqsJPaOYL488hXLEaUbNsSDNAuO_HpXRWAL7FAXFYz54lMwuYV5LfwB9s8IVLdSYwvZULcyXiAQ4KH1XXaw4NXGNLEexMG_muLtiQM3TUa06sl1YTKQjidHLFYQuvM4zHsNgCsxBWkIWdoGyQ8jJY_ZDlZJ1FvxGUzaclAW_CX8X7RyJZfxwbajb88fry68aKbEZ2OLSmQQ55DfdY0k8Ur1PLT4Tjhq7ez3_D6qVEwzkQWZ4vFjmb9VUB4uFrmVOrsSHZURyZSd3Sz06Mm3yZ2BO-ef78m3ynMrCGBzmjgGOvoFSBhvaLUnVkLYt6-P0mPcoHUz_DKIhdO60fs0_4eIZim1WmgnqWpPlhpoX4Sqssl3P2vfGhWalqYI4FDGQ2MQ-g1QqNAs9vg_cTkqPm-fG4r-BqNJlIG9MkxrntFb_kF1rywvNBctJNiLUF4oS-qR--ivl8pZmUm2uAoYYQ3j_hwIGtA-8IQnUIqXkWCSbgRg44qP5qPbK-AhF65-33cTsxRDXGTG3-T2Uj8j4WIqWxZ1cPPsDPSdk_fqNetguja1dK022-qHpP2ExAy-80BdcQMUcwsiRkn0ZoMqLu551xa95VM6DC7_bbwMrkw8oqXG15K15xmYZif1LZ65e29XXM1x7L-0SHxU4EYYa5BEzKWqZEF31ujFdD33I6SOvPGnfYvLyKgN0mf1WeaHcIuu0cwvmKw8nE2Io-2WxbdnH5us3ornTTO7mBefSiKVmm25GyIMUyN3EMy4o69jiq30x9m2PR1LXSebWhZ0_rIB1gVOfZTeEimxHl2a82Xn0Wk9wjx021GpaEVzsUEUYlgrjRWWp5docoLwo2iL9B5XcyPWkZG-ta08VawcDxkFbC8TaPI8yI0xIUBwTEbhZrLA3b9XIXhSQ-ODHafQoXfLt2qHTNwNbJPRkREzss7uVq7TNI5fbnBGSWB-eppkfDP-iQkuSThSmN4FpsgSLQqkQZnKyQvKq6gxtgMKMascbytvPY">
+                <button type="submit" class="button gradient"><span>GET YOUR DISCOUNT AND SLEEP GUIDE!</span></button>
+
+                <div class="politics">
+                    By clicking on Subscribe, you agree to our <a href="https://sleepandglow.com/privacy-policy"
+                                                                  target="_blank">privacy policy</a>
+                </div>
+
+                <input type="hidden" name="af_action" value="a2d493512d946c8b78720304ef127720">
+            </form>
+        </div>
+    </div>
+</div>
+<div class="pp pp__mailing" data-pp="email-mailing">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_mailing">
+
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+
+        <div class="popup-content">
+            <div class="mailing-header">
+                <span class="mailing-header__title">Thanks!</span>
+            </div>
+            <div class="mailing-body">
+                <span>Thank you for your subscription, we will send you our unique offers</span>
+                <button class="button gradient close_btn">
+                    <span>Continue shopping</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pp pp__patent-preview" data-pp="patent-preview">
+    <div class="pp__bg"></div>
+    <div class="pp__content no_bg">
+        <div class="pp__close pp__close_bg">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+
+        <div class="popup-content">
+
+            <div class="img" data-patent="hong_kong">
+                <img loading="lazy" src="./sg_new_catalog_files/1(1).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/2.jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/3.jpg.webp" alt="">
+            </div>
+
+            <div class="img" data-patent="canada">
+                <img loading="lazy" src="./sg_new_catalog_files/1(2).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/2(1).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/3(1).jpg.webp" alt="">
+            </div>
+
+            <div class="img" data-patent="japan">
+                <img loading="lazy" src="./sg_new_catalog_files/1(3).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/2(2).jpg.webp" alt="">
+            </div>
+
+            <div class="img" data-patent="skorea">
+                <img loading="lazy" src="./sg_new_catalog_files/1(4).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/2(3).jpg.webp" alt="">
+            </div>
+
+            <div class="img" data-patent="usa">
+                <img loading="lazy" src="./sg_new_catalog_files/1(5).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/2(4).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/1(6).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/2(5).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/3(2).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/4.jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/5.jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/6.jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/7.jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/8.jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/9.jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/10.jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/11.jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/12.jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/13.jpg.webp" alt="">
+            </div>
+
+            <div class="img" data-patent="wipo">
+                <img loading="lazy" src="./sg_new_catalog_files/1(7).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/2(6).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/1(8).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/2(7).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/3(3).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/4(1).jpg.webp" alt="">
+            </div>
+
+            <div class="img" data-patent="new_zealand">
+                <img loading="lazy" src="./sg_new_catalog_files/1(9).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/2(8).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/3(4).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/4(2).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/5(1).jpg.webp" alt="">
+            </div>
+
+            <div class="img" data-patent="australia">
+                <img loading="lazy" src="./sg_new_catalog_files/1(10).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/2(9).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/3(5).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/4(3).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/5(2).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/6(1).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/1(11).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/2(10).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/3(6).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/4(4).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/5(3).jpg.webp" alt="">
+                <img loading="lazy" src="./sg_new_catalog_files/6(2).jpg.webp" alt="">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="./sg_new_catalog_files/lexicon_usa.js"></script>
+
+
+<script src="./sg_new_catalog_files/price-widget"></script>
+
+<script src="./sg_new_catalog_files/swiper.min.js"></script>
+
+
+<script src="./sg_new_catalog_files/video.min.js"></script>
+<script src="./sg_new_catalog_files/jquery.validate.min.js"></script>
+<script src="./sg_new_catalog_files/jquery.visible.min.js"></script>
+<script src="./sg_new_catalog_files/messages_ru.min.js"></script>
+<script src="./sg_new_catalog_files/additional-methods.min.js"></script>
+<!--<script src="./sg_new_catalog_files/PNotify.js"></script>-->
+<script src="./sg_new_catalog_files/suggs.js"></script>
+<script src="./sg_new_catalog_files/_js_main_v11.js"></script>
+<script src="./sg_new_catalog_files/main.js"></script>
+<script src="./sg_new_catalog_files/_js_checkout_v11.js"></script>
+
+
+<!--script src="/static/js/customAjaxForm.js"></script-->
+
+
+<script src="./sg_new_catalog_files/skrollr.min.js"></script>
+<script src="./sg_new_catalog_files/aos.js"></script>
+<script type="text/javascript" id="pap_x2s6df8d" src="./sg_new_catalog_files/zg7j7hw4"></script>
+<script type="text/javascript" src="./sg_new_catalog_files/zg7r7hw4"></script>
+<script defer="" src="./sg_new_catalog_files/sms_aff_clicktrack.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        /*
+        function nextMsg(i) {
+            if (messages.length == i) {
+                i = 0;
+            }
+            if (messages[i+1] !== '') {
+                $('.header-info').html(messages[i]).fadeIn(500).delay(5000).fadeOut(500, function() {
+                    nextMsg(i + 1);
+                });
+            }
+        };
+
+        var messages = [
+            "SILK MASK FOR ORDERS OVER 270 - CODE 'SELFLOVE'",
+        "SILK MASK FOR ORDERS OVER 270 - CODE 'SELFLOVE'"
+    ];
+
+    nextMsg(0);
+*/
+        $(".js-product-color .c_button.active").click().addClass("active");
+        $(".partners-swipernew").length > 0 && (partnersSwiperNew = new Swiper(".partners-swipernew", {
+            speed: 300,
+            allowTouchMove: !1,
+            initialSlide: 1,
+            centeredSlides: false,
+            loop: !1,
+            slidesPerView: 4,
+            breakpoints: {1279: {}}
+        }));
+
+    })
+
+
+</script>
+
+
+<script>
+    if (!dataLayer) {
+        var dataLayer = [];
+    }
+</script>
+<script>
+    jQuery(function () {
+        jQuery(".goods-grid .slide-product a").on('click', function (e) {
+            let id = jQuery(this).closest('form.slide-product').find('input[name=id]').val()
+            setCookie('click_product', id, {path: '/'})
+            setCookie('click_product_out', 'Shop', {path: '/'})
+        })
+    })
+</script>
+
+<style>
+    .rc-anchor, .rc-anchor-invisible {
+        visibility: hidden !important;
+        display: none !important;
+    }
+</style>
+
+<script type="module" src="./sg_new_catalog_files/sendit.js"></script>
+<script src="./sg_new_catalog_files/ms2Cart.js"></script>
+<script src="./sg_new_catalog_files/customAjaxForm.js"></script>
+<script src="./sg_new_catalog_files/jquery.form.min.js"></script>
+<script src="./sg_new_catalog_files/jquery.jgrowl.min.js"></script>
+
+
+
+
+
+</body>
+</html>
