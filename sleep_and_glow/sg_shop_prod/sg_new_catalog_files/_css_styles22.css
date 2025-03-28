@@ -13000,6 +13000,43 @@ button.btn.btn-sm {
     background-position-x: 53%
 }
 
+
+.add-products-page-title {
+    font-weight: 300;
+    font-size: clamp(36px, calc(72 / 1920* 100vw), 72px);
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: #221D1E;
+    text-align: start;
+    margin-bottom: 0;
+}
+.add-products-page-title span {
+    color: #ff4f72;
+}
+.add-products-page .cart-add-products {
+    justify-content: flex-start;
+    margin: clamp(24px, calc(32 / 1920* 100vw), 32px) 0 0;
+}
+.add-products-page .cart-add-products .button {
+    font-weight: 500;
+    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
+    line-height: 1;
+    text-transform: uppercase;
+    color: #221D1E;
+    height: clamp(28px, calc(44 / 1920* 100vw), 44px);
+    padding: 0 clamp(16px, calc(32 / 1920* 100vw), 32px);
+}
+.add-products-page .cart-add-products .button.gradient > svg {
+    margin-right: clamp(8px, calc(10 / 1920* 100vw), 10px);
+}
+.add-products-page .cart-add-products .button:hover {
+    color: #fff;
+}
+
+.add-products-page .complect-head-name .selected-sum {
+    display: none;
+}
+
 @media screen and (min-width:1024px) {
     .header-menu__item:hover .header-menu__item_name {
         color: #4f6fc1
@@ -25966,11 +26003,6 @@ button.btn.btn-sm {
     }
     .add-products-page .cart-section{
         margin-top: 30px;
-    }
-    .add-products-page .cart-add-products .button {
-        font-size: 11px;
-        height: 50px;
-        padding: 0 15px;
     }
 }
 
