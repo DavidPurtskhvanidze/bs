@@ -5196,11 +5196,11 @@ https://sleepandglow.com/webp/assets/images/products/2050/big/gallery-02.jpg.web
                                     <input type="hidden" name="key" value="b3dc0d94742533c97a8076a1e28360f8">
                                     <div class="single-product__counter">
                                         <span class="hand_button decrement"
-                                              onclick="runFuncMinus(this, {from:&#39;remove-product-from-minicart&#39;});"></span>
+                                              onclick="runFuncMinus();"></span>
                                         <input type="number" name="count" value="1" min="0" max="999"
                                                data-promogoods-count="1">
                                         <span class="hand_button increment"
-                                              onclick="runFuncPlus(this, {from:&#39;add-product-from-minicart&#39;});"></span>
+                                              onclick="runFuncPlus();"></span>
                                     </div>
                                     <button class="btn btn-sm" type="submit" name="ms2_action"
                                             value="cart/change"></button>
@@ -5211,8 +5211,49 @@ https://sleepandglow.com/webp/assets/images/products/2050/big/gallery-02.jpg.web
                                 </div>
                             </div>
                         </div>
+                        <div class="cart-close js-remove-product" onclick="runFuncMinus();">
+                            <form method="post" class="ms2_form">
+                                <input type="hidden" name="key" value="">
+                                <div class="close__lane"></div>
+                                <div class="close__lane"></div>
+                                <button class="btn btn-sm btn-danger" type="submit" name="ms2_action"
+                                        value="cart/remove"></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <img class="cart-item__img" src="./sg_new_catalog_files/alyiĭ-3.jpg" alt="Omnia pillow">
+                        <div class="cart-item__info">
+                            <div class="cart-item__info_top">
+                                <span class="cart-item__info_title">Omnia 100% silk pillowcase</span>
+                                <div class="cart-item__info_specifications">
+                                    <div class="specifications-price">
+                                        <span>Price per piece.</span><span>US$ 183.20</span> | 1
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-item__info_cont">
+                                <form method="post" class="ms2_form js-now-submit" role="form" data-linked="">
+                                    <input type="hidden" name="key" value="b3dc0d94742533c97a8076a1e28360f8">
+                                    <div class="single-product__counter">
+                                        <span class="hand_button decrement"
+                                              onclick="runFuncMinus();"></span>
+                                        <input type="number" name="count" value="1" min="0" max="999"
+                                               data-promogoods-count="1">
+                                        <span class="hand_button increment"
+                                              onclick="runFuncPlus();"></span>
+                                    </div>
+                                    <button class="btn btn-sm" type="submit" name="ms2_action"
+                                            value="cart/change"></button>
+                                </form>
+                                <div class="single-product-price amount">
+                                    <span class="js-new-price">US$ 412.20</span>
+                                    <span class="js-old-price" style="display:none;">US$ 458.00</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="cart-close js-remove-product"
-                             onclick="runFuncMinus(this, {from:&#39;remove-product-from-minicart-close-btn&#39;});">
+                             onclick="runFuncMinus();">
                             <form method="post" class="ms2_form">
                                 <input type="hidden" name="key" value="b3dc0d94742533c97a8076a1e28360f8">
                                 <div class="close__lane"></div>
@@ -5484,7 +5525,7 @@ https://sleepandglow.com/webp/assets/images/products/2050/big/gallery-02.jpg.web
                             <input type="hidden" name="id" value="12506">
                             <input type="hidden" name="options[color]" value="Dark_Ruby=#cd3c4b">
                             <div class="slide-product__information_head css-old_price_box">
-                                <div>Omnia 100% silk pillowcase</div>
+                                <div>The omnia premium mulberry silk pillowcase </div>
                                 <div class="single-product-price">
                                     <span class="newprice">US$ <span class="no-js-new-price msoptionsprice-cost msoptionsprice-2061">151.20</span></span>
                                     <span class="no-js-old-price">US$ 189.00</span>
@@ -6041,16 +6082,11 @@ https://sleepandglow.com/webp/assets/images/products/2050/big/gallery-02.jpg.web
             <span>Discount:</span>
             <span>- US$ <span class="js-minicart-cost-sale">45.80</span></span>
         </div>
-
-
-        <div class="sezzle-minicart">
-
-        </div>
         <a href="#" class="shopping-cart__footer_next button">
-            <span>CONTINUE MY SHOPPING</span>
+            <span>continue my shopping</span>
         </a>
         <a href="#" class="shopping-cart__footer_buy button gradient">
-            <span>Confirm and Pay</span>
+            <span>Check out</span>
         </a>
     </div>
     <div class="shopping-cart-bg"></div>
@@ -6072,6 +6108,12 @@ https://sleepandglow.com/webp/assets/images/products/2050/big/gallery-02.jpg.web
         // options
         itemSelector: '.other-products-item',
         gutter: 24,
+    });
+
+</script>
+<script>
+    $( window ).on("load", function() {
+        $('.shop_cart_catalog').click();
     });
 </script>
 

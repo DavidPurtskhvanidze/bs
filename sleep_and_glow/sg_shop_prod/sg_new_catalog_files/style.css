@@ -504,10 +504,10 @@
 .shop-section__goods_item.active:hover:after {
     opacity: 1;
 }
-.noscroll .shop-section__goods_sidebar > div {
-    position: fixed;
-    top: 200px;
-}
+/*.noscroll .shop-section__goods_sidebar > div {*/
+/*    position: fixed;*/
+/*    top: 200px;*/
+/*}*/
 
 /*Popup*/
 .pp__size .pp__content {
