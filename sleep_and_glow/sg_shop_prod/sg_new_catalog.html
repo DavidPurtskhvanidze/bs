@@ -646,7 +646,7 @@
 
                                 <div class="single-product-buttons">
                                     <div class="spinner hidden"></div>
-                                    <button onclick="showOverlaySett(this, 2050); addProductFromCatalog(this);"
+                                    <button onclick="moveToCard(this)"
                                             title="Add" type="button" class="button border add-button">
                                         <span></span>
                                     </button>
@@ -722,9 +722,9 @@
 
                                 </a>
 
-                                <div class="single-product-buttons overlay-show">
+                                <div class="single-product-buttons">
                                     <div class="spinner hidden"></div>
-                                    <button onclick="showOverlaySett(this, 2070); addProductFromCatalog(this);"
+                                    <button onclick="moveToCard(this)"
                                             title="Add" type="button" class="button border add-button">
                                         <span></span>
                                     </button>
@@ -778,7 +778,7 @@
                         </form>
 
 
-                        <form class="slide-product js-product-box ms2_form msoptionsprice-product form_color overlay-show"
+                        <form class="slide-product js-product-box ms2_form msoptionsprice-product form_color"
                               method="post" data-viewproduct="2066">
                             <input type="hidden" name="id" value="2066">
                             <input type="hidden" name="count" value="0">
@@ -881,7 +881,7 @@
                                                     <input style="hidden" type="radio" class="b-mod-size"
                                                            name="options[color]" value="Pink_powder=#ffdae7"
                                                            id="option_color-0" checked="">
-                                                    <button onclick="clickOnSett(this, &#39;2066&#39;);"
+                                                    <button onclick="clickOnSett(this, &#39;2066&#39;);moveToCard(this)"
                                                             class="info-overlay-color-button"
                                                             style="background-color: #ffdae7;"
                                                             data-value="Pink_powder=#ffdae7" data-colorhash="#ffdae7"
@@ -893,7 +893,7 @@
                                                     <input style="hidden" type="radio" class="b-mod-size"
                                                            name="options[color]" value="Onyx=#3a3939"
                                                            id="option_color-1">
-                                                    <button onclick="clickOnSett(this, &#39;2066&#39;);"
+                                                    <button onclick="clickOnSett(this, &#39;2066&#39;);moveToCard(this)"
                                                             class="info-overlay-color-button"
                                                             style="background-color: #3a3939;" data-value="Onyx=#3a3939"
                                                             data-colorhash="#3a3939" data-color="Onyx" type="button"
@@ -956,7 +956,7 @@
 
                                 <div class="single-product-buttons">
                                     <div class="spinner hidden"></div>
-                                    <button onclick="showOverlaySett(this, 2052); addProductFromCatalog(this);"
+                                    <button onclick="moveToCard(this);"
                                             title="Add" type="button" class="button border add-button">
                                         <span></span>
                                     </button>
@@ -1035,7 +1035,7 @@
 
                                 <div class="single-product-buttons">
                                     <div class="spinner hidden"></div>
-                                    <button onclick="showOverlaySett(this, 12507); addProductFromCatalog(this);"
+                                    <button onclick="moveToCard(this); // showOverlaySett(this, 12507); addProductFromCatalog(this);"
                                             title="Add" type="button" class="button border add-button">
                                         <span></span>
                                     </button>
@@ -1137,7 +1137,7 @@
 
                                 <div class="single-product-buttons">
                                     <div class="spinner hidden"></div>
-                                    <button onclick="showOverlaySett(this, 2058)" title="Add" type="button"
+                                    <button onclick="moveToCard(this)" title="Add" type="button"
                                             class="button border add-button">
                                         <span></span>
                                     </button>
@@ -1275,7 +1275,7 @@
 
                                 <div class="single-product-buttons">
                                     <div class="spinner hidden"></div>
-                                    <button onclick="showOverlaySett(this, 2059)" title="Add" type="button"
+                                    <button onclick="moveToCard(this)" title="Add" type="button"
                                             class="button border add-button">
                                         <span></span>
                                     </button>
@@ -1415,7 +1415,7 @@
 
                                 <div class="single-product-buttons">
                                     <div class="spinner hidden"></div>
-                                    <button onclick="showOverlaySett(this, 11833); addProductFromCatalog(this);"
+                                    <button onclick="moveToCard(this);"
                                             title="Add" type="button" class="button border add-button">
                                         <span></span>
                                     </button>
@@ -1493,7 +1493,7 @@
 
                                 <div class="single-product-buttons">
                                     <div class="spinner hidden"></div>
-                                    <button onclick="showOverlaySett(this, 11989); addProductFromCatalog(this);"
+                                    <button onclick="moveToCard(this);"
                                             title="Add" type="button" class="button border add-button">
                                         <span></span>
                                     </button>
@@ -5349,7 +5349,7 @@ https://sleepandglow.com/webp/assets/images/products/2050/big/gallery-02.jpg.web
 <!--                    }-->
 <!--                </style>-->
 
-                <div class="other-products second scrollbar">
+                <div class="other-products second">
                     <div class="other-products-item">
                         <h4 class="other-products-item-title">
                             Complete<br> Your Beauty<br> Sleep
@@ -6104,17 +6104,47 @@ https://sleepandglow.com/webp/assets/images/products/2050/big/gallery-02.jpg.web
 
 
 <script>
-    $('.other-products').masonry({
-        // options
-        itemSelector: '.other-products-item',
-        gutter: 24,
+    $( window ).on("load", function() {
+        $('.other-products').masonry({
+            // options
+            itemSelector: '.other-products-item',
+            transitionDuration: 0,
+            // fitWidth: true,
+        });
     });
 
+
+    function moveToCard(element) {
+        const productImg = $(element).closest('.slide-product').find('.slide-product__img a img').first();
+        productImg
+            .clone()
+            .css({
+                position: "absolute",
+                "z-index": "11100",
+                top: productImg.offset().top,
+                left: productImg.offset().left,
+                width: productImg.width(),
+                "border-radius": 0,
+            })
+            .appendTo("body")
+            .animate({
+                    opacity: 1,
+                    left: $(".shop_cart_catalog").offset().left,
+                    top: $(".shop_cart_catalog").offset().top,
+                    width: 20,
+                    "border-radius": 6,
+                },
+                400,
+                function() {
+                    $(this).remove();
+                }
+            );
+    }
 </script>
 <script>
-    $( window ).on("load", function() {
-        $('.shop_cart_catalog').click();
-    });
+    // $( window ).on("load", function() {
+    //     $('.shop_cart_catalog').click();
+    // });
 </script>
 
 

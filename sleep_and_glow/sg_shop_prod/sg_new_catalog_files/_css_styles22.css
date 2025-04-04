@@ -8515,7 +8515,7 @@ section.swiper-duo-section .grid {
 }
 
 .other-products {
-
+    margin: clamp(-5px, calc(12 / 1920* 100vw), -12px);
 }
 .other-products-item-title {
     font-style: normal;
@@ -8526,8 +8526,9 @@ section.swiper-duo-section .grid {
     color: #4E4A4B;
 }
 .other-products-item {
-    width: 47%;
-    margin-bottom: 24px;
+    width: 50%;
+    padding: clamp(5px, calc(12 / 1920* 100vw), 12px);
+    /*margin-bottom: 24px;*/
 }
 
 
@@ -9513,16 +9514,15 @@ section.goods-section.trio .grid {
     padding: clamp(10px, calc(32 / 1920* 100vw), 32px);
     background-color: #fff;
     z-index: 1;
-    position: relative;
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -o-transform: translateX(100%);
-    transform: translateX(100%);
-    -webkit-transition: .3s cubic-bezier(0, 0, .2, 1);
-    -o-transition: .3s cubic-bezier(0, 0, .2, 1);
-    -moz-transition: .3s cubic-bezier(0, 0, .2, 1);
-    transition: .3s cubic-bezier(0, 0, .2, 1);
+    /*-webkit-transform: translateX(100%);*/
+    /*-moz-transform: translateX(100%);*/
+    /*-ms-transform: translateX(100%);*/
+    /*-o-transform: translateX(100%);*/
+    /*transform: translateX(100%);*/
+    /*-webkit-transition: .3s cubic-bezier(0, 0, .2, 1);*/
+    /*-o-transition: .3s cubic-bezier(0, 0, .2, 1);*/
+    /*-moz-transition: .3s cubic-bezier(0, 0, .2, 1);*/
+    /*transition: .3s cubic-bezier(0, 0, .2, 1);*/
     overflow-y: visible;
     overflow-x: hidden
 }
@@ -9733,6 +9733,7 @@ section.goods-section.trio .grid {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    top: 0;
 }
 
 .cart-item {
@@ -9807,7 +9808,7 @@ section.goods-section.trio .grid {
     font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
     line-height: 1.2;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: clamp(2px, calc(10 / 1920* 100vw), 10px);
     display: block;
 }
 
@@ -9839,6 +9840,7 @@ section.goods-section.trio .grid {
     -moz-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    justify-content: space-between;
     margin-top: auto
 }
 
@@ -10040,7 +10042,7 @@ section.goods-section.trio .grid {
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
-    transform: translateX(0)
+    transform: translateX(0);
 }
 
 .shopping-cart__footer_title {
@@ -10065,7 +10067,7 @@ section.goods-section.trio .grid {
 }
 
 .shopping-cart__footer_title:last-of-type {
-    margin-bottom: 30px
+    /*margin-bottom: 30px*/
 }
 
 .shopping-cart__footer .button {
@@ -23000,8 +23002,8 @@ button.btn.btn-sm {
     }
 
     .cart-item__img {
-        width: 90px;
-        height: 90px;
+        width: 100px;
+        height: 100px;
         margin-right: 20px
     }
 
@@ -23030,7 +23032,7 @@ button.btn.btn-sm {
     }
 
     .cart-item__info_specifications {
-        font-size: 10px;
+        /*font-size: 10px;*/
         -webkit-box-orient: vertical;
         -webkit-box-direction: reverse;
         -webkit-flex-direction: column-reverse;
@@ -23298,7 +23300,7 @@ button.btn.btn-sm {
     /*}*/
 
     .cart-container__goods .cart-item__info_specifications {
-        font-size: 10px;
+        /*font-size: 10px;*/
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
@@ -25269,7 +25271,11 @@ button.btn.btn-sm {
     }
     .shipping-icon {
         position: static;
-        margin-bottom: 10px;
+        margin-bottom: 18px;
+    }
+    .shopping-cart__notify-gift .gift-icon {
+        width: 1.5em;
+        margin-bottom: 0.2em;
     }
     .shopping-cart__notify-shipping-info {
         padding-left: 0;
@@ -28993,11 +28999,17 @@ input[name="n-message"] {
     }
 }
 @media screen and (max-width: 400px) {
-    .slide-product__information_head {
+    .other-products .slide-product__information_head {
         flex-direction: column-reverse;
     }
-    .other-products-item {
-        width: 44%;
-        margin-bottom: 24px;
+    .other-products .single-product-price {
+        margin-top: 0;
+    }
+    .other-products .other-products-item {
+        /*width: 44%;*/
+        /*margin-bottom: clamp(10px, calc(24 / 1920* 100vw), 24px);*/
     }
 }
+/*body * {*/
+/*    transition: unset !important;*/
+/*}*/
