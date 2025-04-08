@@ -8576,6 +8576,12 @@ section.swiper-duo-section .grid {
     left: 0;
     z-index: 101;
 }
+.other-products .slide-product__img .js-product-color {
+    margin: 0;
+}
+.other-products .slide-product__img .slide-product__img_colors {
+    padding: 12px 14px;
+}
 
 .slide-product__information_head {
     display: -webkit-box;
