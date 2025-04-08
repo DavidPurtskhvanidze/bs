@@ -29005,11 +29005,4 @@ input[name="n-message"] {
     .other-products .single-product-price {
         margin-top: 0;
     }
-    .other-products .other-products-item {
-        /*width: 44%;*/
-        /*margin-bottom: clamp(10px, calc(24 / 1920* 100vw), 24px);*/
-    }
 }
-/*body * {*/
-/*    transition: unset !important;*/
-/*}*/
