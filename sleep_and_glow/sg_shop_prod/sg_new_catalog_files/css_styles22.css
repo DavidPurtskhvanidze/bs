@@ -3163,22 +3163,50 @@ section:not(.expert-board) .general-photo__text {
 
 .slide-product__img-button {
     position: absolute;
-    bottom: -1px;
-    right: -1px;
+    bottom: 0;
+    right: 0;
     z-index: 101;
     display: flex;
-    padding: 1em 0 0 0.9em;
     align-items: center;
     justify-content: center;
     font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
 }
-.slide-product__img .slide-product__img-button-mask {
+.slide-product__img-button:before {
+    content: '';
     display: block;
+    background-image: url(../new_files/button_mask_start.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 3em;
+    height: 3em;
     position: absolute;
-    object-fit: contain;
-    right: 0em;
-    bottom: 0em;
-    object-position: bottom;
+    bottom: 0;
+    left: -0.8em;
+}
+.slide-product__img-button:after {
+    content: '';
+    display: block;
+    background-image: url(../new_files/button_mask_end.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.slide-product__img .slide-product__img-button-mask {
+    background-image: url(../new_files/button_mask_1.png);
+    background-size: contain;
+    background-position: top;
+    background-repeat: repeat;
+    width: 100%;
+    height: 3em;
+    position: absolute;
+    bottom: 0px;
+    left: 1em;
 }
 .slide-product__img-button .button {
     font-weight: 500;
@@ -8535,6 +8563,7 @@ section.swiper-duo-section .grid {
 .other-products .slide-product__img {
     position: relative;
     margin-bottom: 3%;
+    overflow: hidden;
 }
 
 .other-products .slide-product__img .mask {
