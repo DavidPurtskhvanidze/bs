@@ -10080,6 +10080,12 @@ section.goods-section.trio .grid {
     transform: translateX(0);
 }
 
+.shopping-cart__footer #klarna-product {
+    display: block;
+    margin-top: 0;
+    margin-bottom: clamp(8px, calc(12 / 1920* 100vw), 12px);
+}
+
 .shopping-cart__footer_title {
     font-weight: 500;
     font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
