@@ -264,11 +264,11 @@ fieldset {
     transform: translateY(100%);
     font-size: 11px;
 }
-.input-field:not([value=""]) + .input-label {
-    top: 0;
-    transform: translateY(100%);
-    font-size: 11px;
-}
+/*.input-field:not([value=""]) + .input-label {*/
+/*    top: 0;*/
+/*    transform: translateY(100%);*/
+/*    font-size: 11px;*/
+/*}*/
 
 .input-container_big-height {
     --input-height: 63px;
