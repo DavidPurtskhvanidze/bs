@@ -254,21 +254,12 @@ fieldset {
     pointer-events: none;
     transition: all 0.3s ease;
 }
-.input-field:focus + .input-label {
-    top: 0;
-    transform: translateY(100%);
-    font-size: 11px;
-}
+.input-field:focus + .input-label,
 .input-field:not(:placeholder-shown) + .input-label {
     top: 0;
     transform: translateY(100%);
     font-size: 11px;
 }
-/*.input-field:not([value=""]) + .input-label {*/
-/*    top: 0;*/
-/*    transform: translateY(100%);*/
-/*    font-size: 11px;*/
-/*}*/
 
 .input-container_big-height {
     --input-height: 63px;
@@ -327,6 +318,7 @@ textarea {
     color: var(--color-dark-2);
     outline: none;
     resize: none;
+    border-radius: 0;
 }
 
 /*input count select*/
