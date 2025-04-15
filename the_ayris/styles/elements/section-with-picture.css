@@ -1,0 +1,17 @@
+.section-with-picture {
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-with-picture__item {
+    min-width: 200px;
+    max-width: 80%;
+}
+
+@media (max-width: 767px) {
+    .section-with-picture {
+        min-height: auto;
+        padding: 10% 0;
+    }
+}

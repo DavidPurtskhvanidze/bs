@@ -1,0 +1,63 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.dropdown__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: clamp(12px, calc(16/var(--clamp-width)*100vw), 16px);
+    padding-inline: 16px;
+    height: var(--button-height);
+    color: var(--color-dark-3);
+}
+.dropdown__button::after {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='8' viewBox='0 0 13 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 1.27832L6.5 7.01602L1 1.27832' stroke='%2332312F' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1em;
+    height: 0.5em;
+    display: block;
+    margin-left: 0.6em;
+    transition: transform 0.3s;
+}
+.dropdown__list {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    background-color: var(--color-menu-bg);
+    top: 100%;
+    padding-inline: clamp(12px, calc(24/var(--clamp-width)*100vw), 24px);
+    padding-block: clamp(12px, calc(16/var(--clamp-width)*100vw), 16px);
+    min-width: 230px;
+}
+.dropdown__list-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    font-size: clamp(12px, calc(13/var(--clamp-width)*100vw), 13px);
+    height: 30px;
+    color: var(--color-dark-3);
+}
+.dropdown.open .dropdown__list {
+    display: block;
+}
+.dropdown__list-item.active,
+.dropdown__list-item:hover {
+    color: var(--color-gray-1);
+}
+
+.dropdown.open .dropdown__button::after {
+    transform: rotate(180deg);
+}

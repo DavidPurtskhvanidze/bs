@@ -1,0 +1,16 @@
+.picture-big-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: var(--baner-height);
+}
+.picture-big-icon__icon-wrapper {
+    position: absolute;
+    color: var(--color-accent);
+    height: 64%;
+}
+.picture-big-icon__icon-wrapper svg {
+    width: 100%;
+    height: 100%;
+}

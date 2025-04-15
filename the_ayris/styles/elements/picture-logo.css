@@ -1,0 +1,14 @@
+.picture-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.picture-logo__logo-wrapper {
+    position: absolute;
+    color: var(--color-main-bg);
+    width: clamp(210px, calc(730/var(--clamp-width)*100vw), 730px);
+}
+.picture-logo__logo-wrapper svg {
+    width: 100%;
+}
