@@ -26,13 +26,13 @@
     font-family: "Aboreto", system-ui;
     font-style: normal;
     font-weight: 400;
-    font-size: clamp(10px, calc(162/1440*100vw), 162px);
+    font-size: clamp(75px, calc(162/1440*100vw), 162px);
     line-height: 1;
     color: #4F453D;
     margin-left: -0.3em;
 }
 .dacha-slide-text .percentage i {
-    font-size: clamp(10px, calc(130/1440*100vw), 130px);
+    font-size: clamp(57px, calc(130/1440*100vw), 130px);
 }
 .dacha-slide-text h2 .title {
     font-family: 'Montserrat', sans-serif;
@@ -70,5 +70,15 @@
     .dacha-slide-text {
         left: 8%;
         bottom: 5%;
+    }
+    .dacha-slide-text h2 {
+        margin-bottom: 8px;
+    }
+    .dacha-slide-text .percentage {
+        margin-left: -0.1em;
+    }
+    .dacha-slide-text .desc {
+        line-height: 1.3;
+        margin-bottom: 10px;
     }
 }
