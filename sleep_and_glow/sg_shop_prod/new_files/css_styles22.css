@@ -9933,6 +9933,7 @@ section.goods-section.trio .grid {
     display: flex;
     flex-direction: column;
     padding-left: 50px;
+    padding-right: 10px;
     position: relative;
     flex: 1;
 }
@@ -13055,10 +13056,10 @@ button.btn.btn-sm {
 .add-products-page-title {
     font-weight: 300;
     font-size: clamp(36px, calc(72 / 1920* 100vw), 72px);
-    line-height: 1.3;
+    line-height: 1.2;
     text-transform: uppercase;
     color: #221D1E;
-    text-align: center;
+    text-align: start;
     margin-bottom: 0;
 }
 .add-products-page-title span {
@@ -13070,17 +13071,21 @@ button.btn.btn-sm {
 }
 
 .add-products-page .cart-add-products.flex-center {
-    justify-content: center;
+    justify-content: flex-start;
     margin: clamp(24px, calc(32 / 1920* 100vw), 32px) 0 0;
 }
 .add-products-page .cart-add-products .button {
     font-weight: 500;
-    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
+    font-size: clamp(10px, calc(18 / 1920* 100vw), 18px);
     line-height: 1;
     text-transform: uppercase;
     color: #221D1E;
-    height: clamp(28px, calc(44 / 1920* 100vw), 44px);
-    padding: 0 clamp(16px, calc(32 / 1920* 100vw), 32px);
+    height: auto;
+    padding: clamp(5px, calc(12 / 1920* 100vw), 12px) clamp(16px, calc(32 / 1920* 100vw), 32px);
+}
+.add-products-page .cart-add-products .button > span {
+    flex: 1;
+    line-height: 1.1;
 }
 .add-products-page .cart-add-products .button.gradient > svg {
     margin-right: clamp(8px, calc(10 / 1920* 100vw), 10px);
@@ -25327,6 +25332,7 @@ button.btn.btn-sm {
     }
     .shopping-cart__notify-shipping-info {
         padding-left: 0;
+        padding-right: 0;
     }
     .shopping-cart__notify-shipping-indicator {
         position: absolute;
