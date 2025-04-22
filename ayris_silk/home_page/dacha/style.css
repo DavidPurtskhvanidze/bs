@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Rethink+Sans&display=swap');
+.dacha-slide {
+
+}
+#slider .dacha-slide img {
+    object-position: right;
+}
+.dacha-slide-text {
+    position: absolute;
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    flex-direction: column;
+    bottom: 149px;
+    left: 0;
+    text-align: start;
+}
+.dacha-slide-text h2 {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+.dacha-slide-text .percentage {
+    font-family: "Aboreto", system-ui;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(10px, calc(162/1440*100vw), 162px);
+    line-height: 1;
+    color: #4F453D;
+    margin-left: -0.3em;
+}
+.dacha-slide-text .percentage i {
+    font-size: clamp(10px, calc(130/1440*100vw), 130px);
+}
+.dacha-slide-text h2 .title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(18px, calc(32/1440*100vw), 32px);
+    line-height: 1;
+    text-transform: uppercase;
+    color: #4F453D;
+}
+.dacha-slide-text .desc {
+    font-family: 'Bitter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(14px, calc(22/1440*100vw), 22px);
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #3C3C3B;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1780px)  {
+    .dacha-slide-text {
+        left: 10%;
+    }
+}
+@media (max-width: 870px)  {
+    .dacha-slide-text {
+        left: 10%;
+        bottom: 10%;
+    }
+}
+@media (max-width: 500px)  {
+    .dacha-slide-text {
+        left: 8%;
+        bottom: 5%;
+    }
+}

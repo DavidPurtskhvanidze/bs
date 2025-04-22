@@ -42,6 +42,8 @@
     <link rel="stylesheet" href="./page_files/jquery.fancybox.min.css">
     <link rel="stylesheet" href="./page_files/jquery-ui.min.css">
 
+    <link rel="stylesheet" href="./dacha/style.css">
+
     <style>
         @font-face {
             font-family: "Montserrat";
@@ -368,6 +370,43 @@
 </style>
 <div id="slider" class="swiper-container">
     <div class="swiper-wrapper">
+
+        <!-- Dacha-->
+        <div class="slide swiper-slide dacha-slide">
+            <picture>
+                <source srcset="dacha/dacha375.webp" type="image/webp" media="(max-width: 575px)">
+                <source srcset="dacha/dacha375.jpg" type="image/jpeg" media="(max-width: 575px)">
+                <source srcset="dacha/dacha768.webp" type="image/webp" media="(max-width: 920px)">
+                <source srcset="dacha/dacha768.jpg" type="image/jpeg" media="(max-width: 920px)">
+                <source srcset="dacha/dacha1440.webp" type="image/webp" media="(max-width: 1440px)">
+                <source srcset="dacha/dacha1440.jpg" type="image/jpeg" media="(max-width: 1440px)">
+                <source srcset="dacha/dacha1920.webp" type="image/webp">
+                <source srcset="dacha/dacha1920.jpg" type="image/jpeg">
+                <img src="dacha/dacha1920.jpg">
+            </picture>
+            <div class="container">
+                <div class="dacha-slide-text">
+                    <h2>
+                        <span class="percentage">
+                            -20<i>%</i>
+                        </span>
+                        <span class="title">
+                            НА ВТОРОЙ ТОВАР
+                        </span>
+                    </h2>
+                    <p class="desc">
+                        Beauty-сон на даче и дома:<br>
+                        СКИДКА НА ВТОРУЮ МАСКУ,<br>
+                        НАВОЛОЧКУ, ПОЛОТЕНЦЕ ИЗ ШЕЛКА
+                    </p>
+                    <a href="/" class="btn btn-lg btn-white">
+                        В каталог<span class="arr"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Dacha-->
+
         <div class="slide slide-bg swiper-slide">
             <picture>
                 <source srcset="https://ayris-silk.ru/images/25_02_25/mob-375x580.jpg" type="image/jpeg" media="(max-width: 580px)">
