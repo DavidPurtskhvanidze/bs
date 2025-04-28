@@ -8548,7 +8548,7 @@ section.swiper-duo-section .grid {
 .other-products-item-title {
     font-style: normal;
     font-weight: 500;
-    font-size: clamp(24px, calc(48 / 1920* 100vw), 48px);
+    font-size: clamp(24px, calc(32 / 1920* 100vw), 32px);
     line-height: 1.3;
     text-transform: uppercase;
     color: #4E4A4B;
