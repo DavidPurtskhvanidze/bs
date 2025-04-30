@@ -49,9 +49,14 @@ navLinks.forEach(link => {
 
 $(document).ready(function() {
 	$('.js-product-color').each(function(index) {
-	    const labelCount = $(this).find('label').length;
-	    if (labelCount >= 5) {
+        const label = $(this).find('label');
+	    const labelCount = label.length;
+        label.each(function(index) {
+            $(this).addClass('lb-color-' + (index + 1));
+        });
+	    if (labelCount > 5) {
 	    	$(this).addClass("collapse");
+            $(this).find('.slide-product__img_colors').append('<div class="more-color-count">'+ (labelCount - 4) +'</div>');
 	    }
 	});
 
