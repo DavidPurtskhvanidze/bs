@@ -1,0 +1,1004 @@
+.noscroll {
+    overflow: auto !important;
+}
+
+.br-mobile {
+    display: none;
+}
+.cooling-main-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: 'Cera Pro', sans-serif;
+}
+.cooling-main-section picture {
+    display: flex;
+    width: 100%;
+}
+.cooling-main-section picture img {
+    width: 100%;
+}
+.cooling-main-text {
+    position: absolute;
+    bottom: clamp(24px, calc(60/1920*100vw), 60px);
+}
+.cooling-main-text h1 {
+    color: #fff;
+    font-weight: 500;
+    font-size: clamp(24px, calc(48/1920*100vw), 48px);
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: clamp(13px, calc(20/1920*100vw), 20px);
+    position: relative;
+    z-index: 1;
+}
+.cooling-main-text p {
+    color: #fff;
+    font-weight: 500;
+    font-size: clamp(14px, calc(18/1920*100vw), 18px);
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+body section.cooling-text-section {
+    margin: 0;
+    padding: clamp(27px, calc(64/1920*100vw), 64px) 16px;
+}
+.cooling-text-section h3 {
+    font-weight: 500;
+    font-size: clamp(24px, calc(48/1920*100vw), 48px);
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(178.51deg, #CBE5FF 4.05%, #85B2DE 77.71%, #3F7EBD 188.35%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 0;
+}
+.cooling-text-section h3 b {
+    font-weight: 500;
+}
+
+body section.cooling-two-in-one-section {
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+    background-color: #ece7e3;
+}
+.cooling-two-in-one-section picture {
+    display: flex;
+}
+.cooling-two-in-one-section picture img {
+    width: 100%;
+}
+.cooling-two-in-one-title {
+    font-family: 'Cera Pro', sans-serif;
+    font-weight: 250;
+    font-size: clamp(90px, calc(180/1920*100vw), 180px);
+    line-height: 1;
+    align-items: center;
+    position: absolute;
+    top: 8%;
+    right: 10%;
+    color: #fff;
+}
+.cooling-two-in-one-title span {
+    font-weight: 300;
+    font-size: clamp(47px, calc(96/1920*100vw), 96px);
+}
+.cooling-two-in-one-card {
+    position: absolute;
+    bottom: 16%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 2% 1% 2% 1%;
+    background: linear-gradient(0deg, rgba(142, 131, 114, 0.17), rgba(142, 131, 114, 0.17)), rgba(255, 255, 255, 0.2);
+    border: 5px solid #A9D4FF;
+    backdrop-filter: blur(15px);
+    border-radius: 16px;
+    gap: clamp(10px, calc(20/1920*100vw), 20px);
+    width: 28%;
+}
+.cooling-two-in-one-card_pillow {
+    left: 7%;
+}
+.cooling-two-in-one-card_fiber {
+    right: 7%;
+}
+.cooling-two-in-one-card-pillow {
+    right: -30%;
+    position: absolute;
+    max-width: 60%;
+    top: 58%;
+}
+.cooling-two-in-one-card-fiber {
+    right: -28%;
+    position: absolute;
+    max-width: 80%;
+    top: 2%;
+}
+.cooling-two-in-one-card-num {
+    font-family: 'Cera Pro', sans-serif;
+    font-weight: 500;
+    font-size: clamp(64px, calc(120/1920*100vw), 120px);
+    line-height: 1;
+    text-transform: uppercase;
+    color: #ffffff;
+    top: -15%;
+    position: relative;
+}
+.cooling-two-in-one-card-info {
+    font-family: 'Cera Pro', sans-serif;
+}
+.cooling-two-in-one-card-info h3 {
+    font-family: 'Cera Pro', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(18px, calc(32/1920*100vw), 32px);
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: start;
+    margin-bottom: 0;
+}
+
+
+body section.cooling-diff-section {
+    margin-top: clamp(56px, calc(128/1920*100vw), 128px);
+}
+.cooling-diff-section h3 {
+    font-family: 'Cera Pro', sans-serif;
+    font-weight: 300;
+    font-size: clamp(18px, calc(32/1920*100vw), 32px);
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    color: #221D1E;
+    margin-bottom: clamp(36px, calc(78/1920*100vw), 78px);
+}
+.cooling-diff-section h3 b {
+    font-weight: 500;
+}
+.cooling-diff-sides {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    position: relative;
+}
+.cooling-diff-sides picture {
+    display: flex;
+    width: 100%;
+}
+.cooling-diff-sides picture img {
+    width: 100%;
+}
+.cooling-diff-side-left {
+    padding-left: 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cooling-diff-side-left-item {
+    position: relative;
+}
+.cooling-diff-side-left-badge {
+    position: absolute;
+    bottom: 7%;
+    left: 3%;
+    display: flex;
+    align-items: center;
+    font-family: 'Cera Pro', sans-serif;
+    font-weight: 600;
+    font-size: clamp(10px, calc(18/1920*100vw), 18px);
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: #4F6FC1;
+}
+.cooling-diff-side-left-badge svg {
+    width: 2em;
+    margin-right: 0.5em;
+}
+.cooling-diff-side-right {
+    padding-right: 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cooling-diff-sides p {
+    font-family: 'Cera Pro', sans-serif;
+    font-weight: 300;
+    font-size: clamp(14px, calc(18/1920*100vw), 18px);
+    line-height: 1.2;
+    color: rgba(34, 29, 30, 0.8);
+}
+
+
+body section.cooling-technology-section {
+    padding-top: 0;
+    margin-top: 7%;
+    position: relative;
+}
+.cooling-technology-img {
+    position: relative;
+    margin-bottom: 3%;
+}
+.cooling-technology-img picture {
+    display: flex;
+    width: 100%;
+}
+.cooling-technology-img picture img {
+    width: 100%;
+}
+.cooling-technology-section h2 {
+    font-weight: 500;
+    font-size: clamp(18px, calc(32 / 1920* 100vw), 32px);
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: absolute;
+    top: 13%;
+    left: 9%;
+    z-index: 1;
+}
+.cooling-technology {
+    display: flex;
+    padding-left: 4em;
+    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
+    position: absolute;
+    top: 28%;
+    left: 9%;
+    width: 23%;
+}
+.cooling-technology-num {
+    font-weight: 500;
+    font-size: clamp(85px, calc(120 / 1920* 100vw), 120px);
+    line-height: 1;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    height: 0.7em;
+    left: 0;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+.cooling-technology-text {
+
+}
+.cooling-technology-text h4 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 1em;
+}
+.cooling-technology-text p {
+    font-weight: 300;
+    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
+    line-height: 1.2;
+    color: #FFFFFF;
+}
+
+.cooling-technology-num-mob {
+    display: none;
+    height: 3em;
+}
+.cooling-technology-micro-num-mob {
+    display: none;
+    height: 3em;
+}
+
+
+
+/**/
+body section.cooling-technology-micro-section {
+    padding-top: 0;
+    margin-top: 7%;
+    position: relative;
+}
+.cooling-technology-micro-img {
+    position: relative;
+    margin-bottom: 3%;
+}
+.cooling-technology-micro-img picture {
+    display: flex;
+    width: 100%;
+}
+.cooling-technology-micro-img picture img {
+    width: 100%;
+}
+.cooling-technology-micro-section h2 {
+    font-weight: 500;
+    font-size: clamp(18px, calc(32 / 1920* 100vw), 32px);
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #221D1E;
+    position: absolute;
+    top: 6%;
+    left: 9%;
+    z-index: 1;
+}
+.cooling-technology-micro {
+    display: flex;
+    grid-template-columns: 20% 100%;
+    padding-left: 4em;
+    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
+    position: absolute;
+    top: 16%;
+    right: 9%;
+    width: 23%;
+}
+.cooling-technology-micro-num {
+    font-weight: 500;
+    font-size: clamp(85px, calc(120 / 1920* 100vw), 120px);
+    line-height: 1;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #DCC2EC -28.87%, #93819E 47.91%, #DCC3ED 98.11%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    position: absolute;
+    top: 0;
+    height: 0.7em;
+    left: -0.2em;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+.cooling-technology-micro-text h4 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #221D1E;
+    margin-bottom: 1em;
+}
+.cooling-technology-micro-text p {
+    font-weight: 300;
+    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
+    line-height: 1.2;
+    color: #221D1E;
+}
+
+/**/
+
+
+
+.cooling-dignities-section .pillow-img-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.pillow-img-box-anty-hydra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(7px, calc(10 / 1920* 100vw), 10px);
+}
+.pillow-img-box-anty-hydra svg {
+    width: clamp(10px, calc(28 / 1920* 100vw), 28px);
+}
+
+.pillow-img-box-anty-hydra-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 92.7783px;
+    font-weight: 500;
+    font-size: clamp(18px, calc(32 / 1920* 100vw), 32px);
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: #221D1E;
+    padding: 0 clamp(10px, calc(20 / 1920* 100vw), 20px);
+    height: clamp(36px, calc(64 / 1920* 100vw), 64px);
+    border: 1px solid #85B2DE;
+}
+.cooling-dignities-section .pillow-img-box .pillow-img-box-picture {
+    display: flex;
+    width: 92%;
+    z-index: 1;
+}
+.pillow-img-box-anty-hydra-mob {
+    display: none;
+}
+.cooling-dignities-section .dignities-section__content {
+    align-items: center;
+}
+.cooling-dignities-section .dignities-section__content_left,
+.cooling-dignities-section .dignities-section__content_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 48px;
+    width: 66%;
+}
+.cooling-dignities-section .dignities-item.left,
+.cooling-dignities-section .dignities-item.right {
+    margin-bottom: 0;
+    align-items: center;
+}
+.cooling-dignities-section .dignities-item.left {
+    text-align: right;
+    padding-left: 14%;
+}
+.cooling-dignities-section .dignities-item.right {
+    text-align: left;
+    padding-right: 14%;
+}
+.cooling-dignities-section .dignities-item div span:first-child {
+    font-family: 'Cera Pro', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #76ACE3;
+    margin-bottom: 4%;
+}
+.cooling-dignities-section .dignities-item div span:last-child {
+    font-family: 'Cera Pro', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
+    line-height: 1.3;
+    color: #221D1E;
+    min-height: auto;
+}
+.cooling-dignities-section .dignities-section__content_right .dignities-item img,
+.cooling-dignities-section  .dignities-section__content_left .dignities-item img {
+    width: auto;
+    height: auto;
+}
+.cooling-dignities-section .dignities-item.left img {
+    margin-left: 4%;
+}
+.cooling-dignities-section .dignities-item.right img {
+    margin-right: 4%;
+}
+.pillow-img-box .pillow-img-box-anty-hydra {
+    position: absolute;
+    top: -60%;
+}
+.pillow-img-box .pillow-img-box-button {
+    position: absolute;
+    bottom: -55%;
+}
+.pillow-img-box-button .button {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
+    line-height: 1;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px clamp(20px, calc(40 / 1920* 100vw), 40px);
+    height: clamp(28px, calc(44 / 1920* 100vw), 44px);
+    background: linear-gradient(178.51deg, #CBE5FF 4.05%, #85B2DE 77.71%, #3F7EBD 188.35%);
+    border-radius: 24px;
+}
+.cooling-dignities-section.dignities-section__content {
+    align-items: center;
+}
+.cooling-dignities-section .pillow-img-box__circles::after,
+.cooling-dignities-section .pillow-img-box__circles::before {
+    border-color: #a9d4ff;
+}
+.cooling-dignities-section .pillow-img-box__circles {
+    border-color: #a9d4ff;
+}
+.cooling-dignities-section  .dignities-item div {
+    margin-bottom: 3%;
+}
+
+body section.cooling-pillow-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 13vw 0 0;
+    row-gap: 1.2vw;
+    margin-bottom: 19vw;
+}
+.cooling-pillow-section:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 98%;
+    background-color: #EAEDFF;
+    position: absolute;
+    bottom: -18vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.dignities-item-1 { grid-area: 1 / 1 / 2 / 2; }
+.dignities-item-2 { grid-area: 2 / 1 / 3 / 2; }
+.dignities-item-3 { grid-area: 3 / 1 / 4 / 2; }
+.dignities-item-4 { grid-area: 1 / 3 / 2 / 4; }
+.dignities-item-5 { grid-area: 2 / 3 / 3 / 4; }
+.dignities-item-6 { grid-area: 3 / 3 / 4 / 4; }
+
+.dignities-section__content_center {
+    grid-area: 1 / 2 / 4 / 3;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.structure-section .slide-description h3 {
+    text-align: start;
+}
+
+
+body section.benefit-section {
+    margin-top: clamp(93px, calc(128 / 1920* 100vw), 128px);
+    position: relative;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.benefit-section_img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.benefit-section_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.benefit-section-title {
+    text-align: start;
+    font-size: clamp(18px, calc(32 / 1920* 100vw), 32px);
+    font-weight: 500;
+    text-transform: uppercase;
+    background: linear-gradient(178.51deg, #CBE5FF 4.05%, #85B2DE 77.71%, #3F7EBD 188.35%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    line-height: 1.1;
+    margin-bottom: clamp(24px, calc(64 / 1920* 100vw), 64px);
+    z-index: 1;
+    position: relative;
+}
+.benefit-section-info {
+    width: 33%;
+    padding: 5% 0 9%;
+    margin-right: 8%;
+}
+.benefit-section-info-item {
+    position: relative;
+    display: flex;
+    align-items: start;
+    margin-bottom: 3vw;
+}
+.benefit-section-info-item:last-child {
+    margin-bottom: 0;
+}
+.benefit-section-info-item-line {
+    display: flex;
+    align-items: center;
+    width: 72%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 50px;
+    transform: translateX(calc(-100% - 14px));
+}
+.benefit-section-info-item-line__last {
+    width: 39%;
+}
+.benefit-section-info-item-line:before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fff;
+}
+.benefit-section-info-item-img {
+    margin-right: clamp(10px, calc(20 / 1920* 100vw), 20px);
+    width: clamp(78px, calc(98 / 1920* 100vw), 98px);
+}
+.benefit-section-info-item-text {
+    flex: 1;
+}
+.benefit-section-info-item-text h4 {
+    font-weight: 500;
+    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #221D1E;
+    margin-bottom: clamp(4px, calc(16 / 1920* 100vw), 16px);
+}
+.benefit-section-info-item-text span {
+    font-weight: 300;
+    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
+    line-height: 1.3;
+    color: #221D1E;
+}
+
+@media screen and (max-width: 1279px) {
+    .cooling-dignities-section .dignities-section__content_right .dignities-item img,
+    .cooling-dignities-section .dignities-section__content_left .dignities-item img {
+        width: 50px;
+    }
+    .cooling-dignities-section .dignities-item div span:first-child {
+        margin-bottom: 6px;
+    }
+    .cooling-dignities-section .dignities-section__content_center {
+        width: auto;
+    }
+    .cooling-dignities-section .pillow-img-box__circles {
+        position: absolute;
+        width: 14vw;
+        height: 14vw;
+        border-width: 3px;
+    }
+    .cooling-dignities-section .dignities-item img {
+        width: 28%;
+    }
+}
+
+@media (max-width: 768px) {
+    .br-mobile {
+        display: block;
+    }
+    body section.cooling-two-in-one-section {
+        overflow: hidden;
+        padding: 90% 0 34px;
+    }
+    .cooling-two-in-one-section .cooling-two-in-one-bg {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .cooling-two-in-one-section .cooling-two-in-one-bg img {
+        width: 100%;
+    }
+    .cooling-two-in-one-card {
+        position: relative;
+        width: 100%;
+        max-width: 340px;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        margin: auto;
+        padding: 15px;
+    }
+    .cooling-two-in-one-title {
+        position: absolute;
+        left: auto;
+        right: 3%;
+        top: 1%;
+        text-align: end;
+        padding: 0 10px;
+    }
+    .cooling-two-in-one-card-pillow {
+        right: 0%;
+        position: absolute;
+        max-width: 51%;
+        top: -82%;
+    }
+    .cooling-two-in-one-card-fiber {
+        position: absolute;
+        max-width: 59%;
+        top: -76%;
+        right: 0;
+    }
+    .cooling-two-in-one-card_pillow {
+        margin-bottom: 70px;
+    }
+    .cooling-text-section h3 {
+        font-weight: 500;
+        line-height: 1.3;
+    }
+    .cooling-text-section h3 br {
+        display: none;
+    }
+    .cooling-main-section {
+        overflow: hidden;
+    }
+    .cooling-two-in-one-card-num {
+        top: -8%;
+    }
+    .cooling-diff-sides {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4%;
+        position: relative;
+    }
+    .cooling-diff-sides:before {
+        display: none;
+    }
+    .cooling-diff-side-left {
+        padding-left: 0;
+        gap: 4px;
+    }
+    .cooling-diff-side-right {
+        padding-right: 0;
+        gap: 4px;
+    }
+    .cooling-diff-sides p {
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 1.4;
+    }
+
+    body section.cooling-pillow-section {
+        display: flex;
+        flex-direction: column;
+        gap: 37px;
+        padding: 19% 3% 3%;
+    }
+    .dignities-section__content_center {
+        order: 1;
+    }
+    .dignities-item-1 {
+        order: 2;
+    }
+    .dignities-item-2 {
+        order: 3;
+    }
+    .dignities-item-3 {
+        order: 4;
+    }
+    .dignities-item-4 {
+        order: 5;
+    }
+    .dignities-item-5 {
+        order: 6;
+    }
+    .dignities-item-6 {
+        order: 7;
+    }
+    .cooling-dignities-section .dignities-item.left img {
+        margin-right: 3%;
+        margin-left: 0;
+    }
+    .cooling-dignities-section .dignities-item.left {
+        text-align: start;
+        padding-left: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: start;
+    }
+    .cooling-dignities-section .dignities-item.right {
+        text-align: left;
+        padding-right: 0;
+        display: flex;
+        align-items: start;
+    }
+    .cooling-dignities-section .dignities-item img {
+        width: 23%;
+    }
+    .pillow-img-box-anty-hydra-mob {
+        display: block;
+    }
+    .pillow-img-box-anty-hydra-desc {
+        display: none;
+    }
+    .cooling-dignities-section .pillow-img-box .pillow-img-box-picture img {
+        width: 115%;
+    }
+    .cooling-dignities-section .dignities-section__content_center {
+        margin-bottom: -6%;
+    }
+    .cooling-dignities-section .dignities-item div span:first-child {
+        margin-bottom: 8px;
+    }
+    .cooling-dignities-section .dignities-item div {
+        margin-bottom: 0;
+        flex: 1;
+    }
+    .cooling-dignities-section .pillow-img-box__circles {
+        position: absolute;
+        width: 44vw;
+        height: 44vw;
+        border-width: 2px;
+    }
+    .cooling-pillow-section:after {
+        background-color: #EAEDFF;
+    }
+    .cooling-technology-section h2 {
+        text-align: center;
+        margin-bottom: 7%;
+        position: static;
+        text-transform: uppercase;
+        background: linear-gradient(178.51deg, #CBE5FF 4.05%, #85B2DE 77.71%, #3F7EBD 188.35%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    .cooling-technology-video {
+        aspect-ratio: 1.8 / 1;
+        overflow: hidden;
+    }
+    .cooling-technology-video video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: right;
+    }
+    .cooling-technology {
+        position: static;
+        padding-left: 0;
+        width: 100%;
+
+    }
+    .cooling-technology-num {
+        height: 1em;
+        left: 0.2em;
+    }
+    .cooling-technology-img {
+        margin-bottom: 6%;
+    }
+    .cooling-technology-video-wrapper {
+        height: 70vw;
+        overflow: hidden;
+        margin-bottom: 6%;
+    }
+    .cooling-technology-video-wrapper video {
+        height: 100%;
+        object-fit: cover;
+    }
+    .cooling-technology-video .cooling-technology-num {
+        background: none;
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: unset;
+        background-clip: unset;
+        color: #fff;
+    }
+    .cooling-technology-num-mob {
+        display: block;
+    }
+    .cooling-technology-micro-num-mob {
+        display: block;
+    }
+    .cooling-technology-num-desk {
+        display: none;
+    }
+    .cooling-technology-micro-num-desk {
+        display: none;
+    }
+    .cooling-technology-video .cooling-technology-text br {
+        display: none;
+    }
+    .cooling-technology-video .cooling-technology-text {
+        color: #000;
+    }
+    body section.cooling-diff-section {
+        margin-bottom: 25%;
+    }
+    .cooling-diff-section h3 {
+        line-height: 1.4;
+    }
+
+    .cooling-technology-text h4 {
+        color: #221D1E;
+        margin-bottom: 1%;
+        display: flex;
+        align-items: center;
+        gap: 2.6em;
+        font-weight: 300;
+        padding-left: 5%;
+        line-height: 1.6;
+    }
+    .cooling-technology-num-mob {
+        height: 7em;
+    }
+    .cooling-technology-text p {
+        color: #221D1E;
+        padding: 0 4%;
+        line-height: 1.4;
+    }
+
+    .cooling-technology-micro {
+        position: static;
+        padding-left: 0;
+        width: 100%;
+    }
+    .cooling-technology-micro h4 {
+        color: #221D1E;
+        margin-bottom: 1%;
+        display: flex;
+        align-items: center;
+        gap: 1.4em;
+        font-weight: 300;
+        padding-left: 5%;
+        line-height: 1.6;
+    }
+    .cooling-technology-micro-num-mob {
+        height: 7em;
+    }
+    .cooling-technology-micro p {
+        color: #221D1E;
+        padding: 0 4%;
+        line-height: 1.4;
+    }
+    .cooling-technology-micro-num {
+
+    }
+    /**/
+
+    /**/
+    body section.benefit-section {
+        flex-direction: column;
+    }
+    .benefit-section-title {
+        position: absolute;
+        top: -46px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+    }
+    .benefit-section-info-item {
+        margin-bottom: 5vw;
+    }
+    .benefit-section_img {
+        position: static;
+    }
+    .benefit-section-info {
+        width: 100%;
+        padding: 16px 10px;
+        margin-right: 0;
+    }
+    /**/
+
+    /**/
+    .cooling-dignities-section .pillow-img-box {
+        padding: 33% 0 44%;
+    }
+    .pillow-img-box .pillow-img-box-anty-hydra {
+        position: absolute;
+        top: -4%;
+    }
+    .pillow-img-box .pillow-img-box-button {
+        position: absolute;
+        bottom: 5%;
+    }
+    /**/
+
+
+
+}
+
+@media (max-width: 576px) {
+    .cooling-technology-num {
+        left: 0;
+    }
+
+}
+
+
