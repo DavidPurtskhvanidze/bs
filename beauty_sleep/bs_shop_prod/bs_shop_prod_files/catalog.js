@@ -64,10 +64,12 @@ $(document).ready(function() {
         const labelCount = label.length;
         label.each(function(index) {
             $(this).addClass('lb-color-' + (index + 1));
+            $(this).parent().addClass('lb-size-' + (index + 1));
         });
         if (labelCount > 5) {
             $(this).addClass("collapse");
             $(this).find('.slide-product__img_colors').append('<div class="more-color-count">'+ (labelCount - 4) +'</div>');
+            $(this).find('.single-product-hints__size .list').append('<div class="more-size-count">'+ (labelCount - 4) +'</div>');
 
             const form = $(this).closest('form');
             const oldBtn = form.find('.btn-add-basket');
