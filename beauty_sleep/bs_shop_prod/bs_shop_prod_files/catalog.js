@@ -7,10 +7,11 @@ let lastNavLinksIndex = 0;
 let sidebarOffsetTop = 190;
 
 function sidebarTopPosition() {
+    let sidebarHeight = $(window).height() - mainHeader.height();
     if (mainHeader.hasClass('hide')) {
         shopSidebarBlock.css('top', 0);
     } else {
-        shopSidebarBlock.css('top', mainHeader.height());
+        shopSidebarBlock.css({'top': mainHeader.height(),'overflow-y':'auto','height': window.innerWidth > 1278 ? sidebarHeight : 'auto'});
     }
 }
 sidebarTopPosition();
