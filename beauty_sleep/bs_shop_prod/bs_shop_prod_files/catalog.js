@@ -3,6 +3,8 @@ const navLinks = document.querySelectorAll(".shop-section__goods_item_action");
 const seenSections = new Set();
 const mainHeader = $('header.header');
 const shopSidebarBlock = $('.shop-section .shop-section__goods_sidebar > div');
+let lastNavLinksIndex = 0;
+let sidebarOffsetTop = 190;
 
 function sidebarTopPosition() {
     if (mainHeader.hasClass('hide')) {
@@ -14,7 +16,7 @@ function sidebarTopPosition() {
 sidebarTopPosition();
 function highlightMenu() {
     let scrollPosition = window.scrollY + window.innerHeight / 2;
-    sidebarTopPosition()
+    sidebarTopPosition();
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
@@ -22,11 +24,11 @@ function highlightMenu() {
         if (scrollPosition - 200 >= sectionTop && scrollPosition - 200 < sectionTop + sectionHeight) {
             const id = section.getAttribute('id');
 
-            navLinks.forEach(link => {
+            navLinks.forEach((link, index) => {
                 link.classList.remove('active');
                 if (link.getAttribute('data-id') === id) {
                     link.classList.add('active');
-
+                    lastNavLinksIndex = index;
                     if (window.innerWidth < 1279 && !seenSections.has(id)) {
                         seenSections.add(id);
                         link.scrollIntoView({
@@ -43,15 +45,32 @@ function highlightMenu() {
 }
 
 window.addEventListener("scroll", highlightMenu);
+window.addEventListener("resize", sidebarTopPosition);
 
-navLinks.forEach(link => {
+navLinks.forEach((link, index) => {
     link.addEventListener("click", (event) => {
         event.preventDefault();
+
+        // calculations based on moving up and down the list
+        if (index > lastNavLinksIndex) {
+            if(window.innerWidth > 1024) {
+                //moving down
+                sidebarOffsetTop = 153;
+            } else {
+                //moving up
+                sidebarOffsetTop = index == 0 ? 153 : 68;
+            }
+        } else if (index < lastNavLinksIndex) {
+            //moving up
+            sidebarOffsetTop = 153;
+        }
+        lastNavLinksIndex = index;
+
         const targetId = link.getAttribute("data-id");
         const targetSection = document.getElementById(targetId);
         const shopSection = document.getElementsByClassName("shop-section");
         window.scrollTo({
-            top: targetSection.offsetTop + (shopSection[0].offsetTop - 190),
+            top: targetSection.offsetTop + (shopSection[0].offsetTop - sidebarOffsetTop),
             behavior: "smooth"
         });
     });
@@ -72,15 +91,28 @@ $(document).ready(function() {
             $(this).find('.single-product-hints__size .list').append('<div class="more-size-count">'+ (labelCount - 4) +'</div>');
 
             const form = $(this).closest('form');
-            const oldBtn = form.find('.btn-add-basket');
-            const newBtn = oldBtn.clone().attr({
-                type: 'button',
+            const oldBtn = form.find('button.btn-add-basket');
+            oldBtn.hide();
+            oldBtn.after(`
+                <a type="button" 
+                    class="button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show">
+                    <span>опции</span> 
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 21.7383L3 9.73828H21L18 21.7383H6Z" stroke="#221D1E"></path>
+                        <path d="M16.4446 7.55556C16.4446 3.92353 14.4547 2 12.0001 2C9.5455 2 7.55566 3.92944 7.55566 7.55556" stroke="#221D1E"></path>
+                        <path d="M14.7695 15.7383H9.22686" stroke="black" stroke-linecap="round"></path>
+                        <path d="M12 18.5095L12 12.9668" stroke="black" stroke-linecap="round"></path>
+                    </svg>
+                </a>
+            `);
+            /*const newBtn = oldBtn.clone().attr({
+                type: 'a',
                 name: 'ms2_action2',
                 value: 'cart/add2'
             }).removeAttr('onclick');
 
             newBtn.find('span').text('опции');
-            oldBtn.replaceWith(newBtn);
+            oldBtn.replaceWith(newBtn);*/
 
 
         } else {
@@ -94,47 +126,18 @@ $(document).ready(function() {
         const productColor = $(this).closest(".js-product-color");
         productColor.removeClass("collapse");
         productColor.find(".color-overlay").hide();
+        const form = $(this).closest('form');
+        form.find("a.btn-add-basket").hide();
+        form.find("button.btn-add-basket").show();
     })
 
-    $(".btn-add-basket[type=button]").click(function() {
-        $(this)
-            .attr('type', 'submit')
-            .attr('name', 'ms2_action')
-            .attr('value', 'cart/add')
-            .off('click') // Удаляет текущий click, чтобы не зациклить
-            .on('click', function() {
-                addToCart(this);
-            });
-
-        $(this).find('span').text('добавить');
-        const form = $(this).closest('form');
-        const productColor = form.find(".js-product-color");
-        productColor.removeClass("collapse");
-        productColor.find(".color-overlay").hide();
-    });
-
     $("a.btn-add-basket").click(function() {
-        const oldBtn = $(this);
 
-        const newBtn = $('<button>', {
-            class: oldBtn.attr('class'),
-            type: 'button',
-            name: 'ms2_action2',
-            value: 'cart/add2',
-            'data-reachgoal': oldBtn.attr('data-reachgoal'),
-            'data-pagetitle': oldBtn.attr('data-pagetitle'),
-            'data-parent': oldBtn.attr('data-parent'),
-            'data-id': oldBtn.attr('data-id'),
-            'data-price': oldBtn.attr('data-price'),
-            style: oldBtn.attr('style')
-        }).append(oldBtn.contents()); // переносим <span>, <svg> и т.п.
-
-        oldBtn.replaceWith(newBtn);
-
-        oldBtn.find('span').text('добавить');
         const form = $(this).closest('form');
         const productColor = form.find(".js-product-color");
         productColor.removeClass("collapse");
         productColor.find(".color-overlay").hide();
+        form.find("a.btn-add-basket").hide();
+        form.find("button.btn-add-basket").show();
     });
 })

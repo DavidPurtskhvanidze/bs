@@ -2421,11 +2421,6 @@
                                 Anti-age бестселлеры
                             </div>
                         </div>
-                        <div class="shop-section__goods_item_action" data-id="">
-                            <div class="shop-section__goods_item">
-                                Золотой стандарт anti-age
-                            </div>
-                        </div>
                         <div class="shop-section__goods_item_action" data-id="anti-stress/">
                             <div class="shop-section__goods_item">
                                 Антистресс-одеяло
@@ -3515,8 +3510,6 @@
 
                         </form>
                     </div>
-
-
                     <div class="goods-grid goods-grid--complects22" id="anti-stress/">
                         <div class="goods-grid__title">
                             <h3>Антистресс-одеяло</h3>
@@ -12493,6 +12486,7 @@
     }
 </style>
 
+<!--menu-->
 <script type="text/javascript">
     var headmagrininfo = 0;
     var headmagrinhead = 0;
@@ -14215,7 +14209,7 @@
         send.ecommerce.items.push(item)
         dataLayer.push({ecommerce: null})
         dataLayer.push(send)
-        console.log(send)
+        
     }
 
 
@@ -14292,7 +14286,7 @@
         send.ecommerce.items.push(item)
         dataLayer.push({ecommerce: null})
         dataLayer.push(send)
-        console.log(send)
+        
     }
 
     /* Добавление товара в корзину */
@@ -14310,7 +14304,7 @@
         send.ecommerce.items.push(item)
         dataLayer.push({ecommerce: null})
         dataLayer.push(send)
-        console.log(send)
+        
     }
 
     /* Просмотр товара */
@@ -14333,7 +14327,7 @@
         send.ecommerce.items.push(item)
         dataLayer.push({ecommerce: null})
         dataLayer.push(send)
-        console.log(send)
+        
     }
 
     /* Просмотр списка товаров */
@@ -14349,7 +14343,7 @@
         send.ecommerce.items.push(items)
         dataLayer.push({ecommerce: null})
         dataLayer.push(send)
-        console.log(send)
+        
     }
 
     /* Просмотр корзины */
@@ -14366,7 +14360,7 @@
         send.ecommerce.items = items
         dataLayer.push({ecommerce: null})
         dataLayer.push(send)
-        console.log(send)
+        
     }
 
     /* Переход на оформление заказа */
@@ -14383,7 +14377,7 @@
         items = setIndexes(items)
         send.ecommerce.items = items
         dataLayer.push(send)
-        console.log(send)
+        
     }
 
     /* Добавление способа доставки */
@@ -14401,7 +14395,7 @@
         send.ecommerce.items.push(items)
         dataLayer.push({ecommerce: null})
         dataLayer.push(send)
-        console.log(send)
+        
     }
 
     /* Добавление способа оплаты */
@@ -14419,7 +14413,7 @@
         send.ecommerce.items.push(items)
         dataLayer.push({ecommerce: null})
         dataLayer.push(send)
-        console.log(send)
+        
     }
 
     /* Оформление заказа */
@@ -14455,7 +14449,7 @@
             }
             dataLayer.push({ecommerce: null})
             dataLayer.push(send)
-            console.log(send)
+            
         } catch (e) {
             console.log(e)
         }
@@ -14516,7 +14510,7 @@
         send.ecommerce.items = items
         dataLayer.push({ecommerce: null})
         dataLayer.push(send)
-        console.log(send)
+        
     }
 
     /* Ошибки в форме заказа */
@@ -14538,7 +14532,7 @@
         }
         dataLayer.push({ecommerce: null})
         dataLayer.push(send)
-        console.log(send)
+        
     }
 
     function showSubscribeModal() {
@@ -14553,7 +14547,7 @@
 
         dataLayer.push({ecommerce: null})
         dataLayer.push(send)
-        console.log(send)
+        
 
         setTimeout(() => {
             send = {
@@ -14567,7 +14561,7 @@
             }
             dataLayer.push({ecommerce: null})
             dataLayer.push(send)
-            console.log(send)
+            
         }, 1000)
     }
 
@@ -14586,7 +14580,7 @@
 
         dataLayer.push({ecommerce: null})
         dataLayer.push(send)
-        console.log(send)
+        
     }
 
     function footerSubscribeSubmit() {
@@ -14599,7 +14593,7 @@
 
         dataLayer.push({ecommerce: null})
         dataLayer.push(send)
-        console.log(send)
+        
     }
 
     function footerSubscribeVisit() {
@@ -14617,7 +14611,7 @@
                 if ($('.email-mailing').isInViewport() && window.pop_up_first_visit_after20sec === false) {
                     dataLayer.push({ecommerce: null})
                     dataLayer.push(send)
-                    console.log(send)
+                    
 
                     window.pop_up_first_visit_after20sec = true
                 }
