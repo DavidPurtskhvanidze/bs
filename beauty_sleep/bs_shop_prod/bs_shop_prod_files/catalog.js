@@ -84,7 +84,7 @@ $(document).ready(function() {
         const labelCount = label.length;
         label.each(function(index) {
             $(this).addClass('lb-color-' + (index + 1));
-            $(this).parent().addClass('lb-size-' + (index + 1));
+            $(this).find('.single-product-hints__size .list .input-parent').addClass('lb-size-' + (index + 1));
         });
         if (labelCount > 5) {
             $(this).addClass("collapse");
