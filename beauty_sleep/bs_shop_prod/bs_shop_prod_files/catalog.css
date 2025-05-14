@@ -1,9 +1,5 @@
 /*shop-cart-toaster*/
 
-body * {
-    transition: none !important;
-}
-
 .shop-cart-toaster {
     display: flex;
     align-items: center;
@@ -731,7 +727,12 @@ body * {
     padding-right: 20px;
     padding-top: 20px;
     margin-right: 6px;
-    scrollbar-width: thin;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.shop-section__goods_sidebar > div::-webkit-scrollbar {
+    display: none;
 }
 .shop-section__goods_sidebar {
     margin-top: 0;
