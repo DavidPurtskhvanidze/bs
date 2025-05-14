@@ -413,6 +413,11 @@ body section.cooling-technology-micro-section {
     width: 92%;
     z-index: 1;
 }
+.cooling-dignities-section .pillow-img-box .pillow-img-box-video {
+    display: flex;
+    width: 92%;
+    z-index: 1;
+}
 .pillow-img-box-anty-hydra-mob {
     display: none;
 }
@@ -809,6 +814,9 @@ body section.benefit-section {
     }
     .cooling-dignities-section .pillow-img-box .pillow-img-box-picture img {
         width: 115%;
+    }
+    .cooling-dignities-section .pillow-img-box .pillow-img-box-video {
+
     }
     .cooling-dignities-section .dignities-section__content_center {
         margin-bottom: -6%;
