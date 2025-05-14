@@ -177,7 +177,7 @@ main {
 }
 
 .header__logo {
-  width: clamp(154px, 14.21875vw, 273px);
+  width: clamp(200px, 16.21875vw, 273px);
   transition-duration: var(--site-transition);
   max-width: 100%;
   height: auto;
