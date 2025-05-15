@@ -4,8 +4,9 @@
 .card {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-main-bg);
-    width: 90%;
+    background-color: blueviolet;
+    width: 100%;
+    max-width: 100%;
 }
 .card-top {
     position: relative;
