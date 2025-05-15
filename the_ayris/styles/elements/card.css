@@ -4,15 +4,12 @@
 .card {
     display: flex;
     flex-direction: column;
-    background-color: blueviolet;
-    width: 100%;
-    max-width: 100%;
+    background-color: mediumaquamarine;
 }
 .card-top {
     position: relative;
     aspect-ratio: 1 / 1.4;
     width: 100%;
-    max-width: 100%;
 }
 .card-top__link {
     position: absolute;
