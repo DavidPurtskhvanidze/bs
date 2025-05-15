@@ -2527,7 +2527,9 @@
                             <div class="slide-product__img">
 
 
-                                <!--<div class="slide-product__badge custom"><img loading="lazy"  src="promo/Black_Friday_2024/badge_black24.png" alt=""></div>-->
+                                <div class="slide-product__badge custom">
+                                    <img loading="lazy"  src="../files/2024-12-06-eb4agzeb4agz.svg" alt="">
+                                </div>
 
 
                                 <a href="https://beautysleep.ru/pillowcases-beauty-sleep/omnia-100"
@@ -2700,7 +2702,9 @@
                             <div class="slide-product__img">
 
 
-                                <!--<div class="slide-product__badge custom"><img loading="lazy"  src="promo/Black_Friday_2024/badge_black24.png" alt=""></div>-->
+                                <div class="slide-product__badge custom">
+                                    <img loading="lazy"  src="../files/2024-12-06-d5u4gvd5u4gv.svg" alt="">
+                                </div>
 
 
                                 <a href="https://beautysleep.ru/product/13" class=" posthog_click">
@@ -2879,8 +2883,9 @@
                             <div class="slide-product__img">
 
 
-                                <!--<div class="slide-product__badge custom"><img loading="lazy"  src="promo/Black_Friday_2024/badge_black24.png" alt=""></div>-->
-
+                                <div class="slide-product__badge custom">
+                                    <img loading="lazy"  src="../files/2025-04-22-mpicqvmpicqv.svg" alt="">
+                                </div>
 
                                 <a href="https://beautysleep.ru/pillows-beauty-sleep/beauty-sleep-omnia-10011"
                                    class=" posthog_click">
@@ -13162,10 +13167,8 @@
         position: fixed;
         z-index: 9;
     }
-
     .introx img {
-        display: block;
-    }
+        display:block;}
 
     .fx-bnrset {
         -webkit-transition: .3s;
@@ -13173,23 +13176,20 @@
         -moz-transition: .3s;
         transition: .3s;
     }
-
     .fx-bnrset.hide {
-        top: 140px;
+        top:140px;
     }
-
-    .shop-section__goods_sidebar > div {
-        top: 235px;
+    .shop-section__goods_sidebar > div{
+        top:235px;
     }
 
     .slide-product__badge.custom {
-        top: 16px;
-        right: 16px;
+        top: clamp(8px, calc(16/1920*100vw), 16px);
+        right: clamp(8px, calc(16/1920*100vw), 16px);
         width: auto;
         height: auto;
-        max-height: 80px;
+        max-height: clamp(44px, calc(80/1920*100vw), 80px);
     }
-
     .slide-product__badge.custom img {
         width: auto;
         height: auto;
@@ -13197,38 +13197,33 @@
 
     @media screen and (max-width: 1800px) {
         .introx {
-            top: 134px;
+            top:134px;
         }
-
-        .shop-section__goods_sidebar > div {
-            top: 220px;
+        .shop-section__goods_sidebar > div{
+            top:220px;
         }
     }
-
     @media screen and (max-width: 1280px) {
         .introx {
-            top: 130px;
+            top:130px;
         }
     }
 
     @media screen and (max-width: 1024px) {
         .introx {
-            top: 73px;
+            top:73px;
         }
-
         .fx-bnrset.hide {
-            top: 30px;
+            top:30px;
         }
 
     }
-
     @media screen and (max-width: 480px) {
         .introx {
-            top: 85px;
+            top:85px;
         }
-
         .fx-bnrset.hide {
-            top: 40px;
+            top:40px;
         }
     }
 </style>

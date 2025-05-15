@@ -114,7 +114,7 @@
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-    object-position: left;
+    object-position: -2px;
 }
 .goods-grid-img-video-box img {
     width: 100%;
