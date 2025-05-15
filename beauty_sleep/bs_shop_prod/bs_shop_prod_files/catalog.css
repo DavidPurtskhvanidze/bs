@@ -149,6 +149,7 @@
 .shop-section__goods_content .slide-product__img {
     margin-bottom: 0;
     position: relative;
+    aspect-ratio: 1/1;
 }
 .shop-section__goods_content .slide-product__img .pillow-preview-labels {
     right: 16px;
