@@ -8582,6 +8582,11 @@ body .single-product-section__footer > .digi-dolyame-button,
   margin-right: 8px;
   width: 16px;
 }
+.single-product-section__footer .single-product-buy .single-product__to-card.button svg {
+  margin-left: clamp(6px, calc(8/1920*100vw), 8px);
+  margin-right: 0;
+  width: clamp(12px, calc(18/1920*100vw), 18px);
+}
 
 .single-product-buyoneclick {
   color: rgba(34, 29, 30, .4)
