@@ -399,13 +399,13 @@ body section.cooling-technology-micro-section {
     background: #ffffff;
     border-radius: 92.7783px;
     font-weight: 500;
-    font-size: clamp(18px, calc(32 / 1920* 100vw), 32px);
+    font-size: clamp(18px, calc(25 / 1920* 100vw), 25px);
     line-height: 1;
     text-align: center;
     text-transform: uppercase;
     color: #221D1E;
-    padding: 0 clamp(10px, calc(20 / 1920* 100vw), 20px);
-    height: clamp(36px, calc(64 / 1920* 100vw), 64px);
+    padding: 6px clamp(10px, calc(20 / 1920* 100vw), 20px);
+    min-height: clamp(36px, calc(64 / 1920* 100vw), 64px);
     border: 1px solid #85B2DE;
 }
 .cooling-dignities-section .pillow-img-box .pillow-img-box-picture {
@@ -488,14 +488,14 @@ body section.cooling-technology-micro-section {
     text-decoration: none;
     font-weight: 500;
     font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
-    line-height: 1;
+    line-height: 1.2;
     text-transform: uppercase;
     color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4px clamp(20px, calc(40 / 1920* 100vw), 40px);
-    height: clamp(28px, calc(44 / 1920* 100vw), 44px);
+    padding: 6px clamp(20px, calc(40 / 1920* 100vw), 40px);
+    min-height: clamp(28px, calc(44 / 1920* 100vw), 44px);
     background: linear-gradient(178.51deg, #CBE5FF 4.05%, #85B2DE 77.71%, #3F7EBD 188.35%);
     border-radius: 24px;
 }
@@ -815,9 +815,6 @@ body section.benefit-section {
     .cooling-dignities-section .pillow-img-box .pillow-img-box-picture img {
         width: 115%;
     }
-    .cooling-dignities-section .pillow-img-box .pillow-img-box-video {
-
-    }
     .cooling-dignities-section .dignities-section__content_center {
         margin-bottom: -6%;
     }
@@ -1010,3 +1007,8 @@ body section.benefit-section {
 }
 
 
+.cooling-dignities-section .pillow-img-box .pillow-img-box-video {
+    display: flex;
+    width: 92%;
+    z-index: 1;
+}
