@@ -401,12 +401,12 @@ body section.cooling-technology-micro-section {
     border-radius: 92.7783px;
     font-weight: 500;
     font-size: clamp(16px, calc(25 / 1920 * 100vw), 25px);
-    line-height: 1;
+    line-height: 1.1;
     text-align: center;
     text-transform: uppercase;
     color: #221D1E;
     padding: 6px clamp(10px, calc(20 / 1920 * 100vw), 20px);
-    min-height: clamp(50px, calc(64 / 1920 * 100vw), 64px);
+    min-height: clamp(50px, calc(68 / 1920 * 100vw), 68px);
     border: 1px solid #85B2DE;
     flex: 1;
 }
@@ -483,8 +483,8 @@ body section.cooling-technology-micro-section {
     top: -60%;
     margin-left: auto;
     margin-right: auto;
-    left: auto;
-    right: auto;
+    left: 0;
+    right: 0;
 }
 .pillow-img-box .pillow-img-box-button {
     position: absolute;
@@ -666,6 +666,12 @@ body section.benefit-section {
     }
     .cooling-dignities-section .dignities-section__content_center {
         width: auto;
+    }
+    .pillow-img-box .pillow-img-box-anty-hydra {
+        width: 94%;
+    }
+    .pillow-img-box .pillow-img-box-button {
+        width: 94%;
     }
     .cooling-dignities-section .pillow-img-box__circles {
         position: absolute;
