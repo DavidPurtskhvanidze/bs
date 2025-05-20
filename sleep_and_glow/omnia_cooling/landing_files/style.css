@@ -481,6 +481,10 @@ body section.cooling-technology-micro-section {
 .pillow-img-box .pillow-img-box-anty-hydra {
     position: absolute;
     top: -60%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }
 .pillow-img-box .pillow-img-box-button {
     position: absolute;
