@@ -1,5 +1,5 @@
 const sections = document.querySelectorAll(".goods-grid");
-const navLinks = document.querySelectorAll(".shop-section__goods_item");
+const navLinks = document.querySelectorAll(".shop-section__goods_item_action");
 function highlightMenu() {
     let scrollPosition = window.scrollY + window.innerHeight / 2;
     sections.forEach(section => {

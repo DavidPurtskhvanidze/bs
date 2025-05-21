@@ -44,3 +44,43 @@ function moveToCard(id) {
         }
     });
 }
+
+$('.no-js-product-color').each(function(index) {
+    $(this).addClass("collapse");
+    const cButton = $(this).find('.c_button');
+    const cButtonCount = cButton.length;
+    const form = $(this).closest('form');
+    const oldBtn = form.find('button.btn-add-basket');
+    oldBtn.hide();
+    oldBtn.after(`
+                <a type="button" 
+                    class="button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show">
+                    <span>select options</span>
+                </a>
+            `);
+    cButton.each(function(index) {
+        if (index > 3) {
+            $(this).addClass("hidden");
+        }
+    });
+    if (cButtonCount > 5) {
+        $(this).find('.slide-product__img_colors').append('<div class="more-color-count">'+ ("+" + (cButtonCount - 4)) +'</div>');
+    }
+
+    const newBtn = form.find("a.btn-add-basket");
+
+    $(this).click(function() {
+        $(this).removeClass("collapse");
+        $(this).find(".color-overlay").hide();
+        form.find("a.btn-add-basket").hide();
+        form.find("button.btn-add-basket").show();
+    })
+
+    newBtn.click(function() {
+        form.find(".no-js-product-color").removeClass("collapse");
+        form.find(".color-overlay").hide();
+        form.find("a.btn-add-basket").hide();
+        form.find("button.btn-add-basket").show();
+    })
+
+});

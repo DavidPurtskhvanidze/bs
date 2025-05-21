@@ -1,9 +1,24 @@
 /*shop-cart-toaster*/
 .slide-product__info-klarna klarna-placement::part(osm-legal) {
     text-align: left;
-    font-size:12px;
 }
 
+.slide-product__info-klarna klarna-placement::part(osm-message) {
+    text-align: left;
+    font-size: 10px;
+}
+.slide-product__info-klarna klarna-placement::part(osm-cta) {
+    text-align: left;
+    font-size: 10px;
+}
+.slide-product__info-klarna klarna-placement::part(osm-logo) {
+    text-align: left;
+    font-size: 10px;
+}
+.slide-product__info-klarna klarna-placement::part(osm-legal) {
+    text-align: left;
+    font-size: 10px;
+}
 .shop-cart-toaster {
     display: flex;
     align-items: center;
@@ -57,14 +72,7 @@
     text-overflow: ellipsis;
 }
 /*shop-cart-toaster*/
-.slide-product__info-klarna klarna-placement::part(osm-message) {
-    text-align: left;
-    font-size: 12px;
-}
-.slide-product__info-klarna klarna-placement::part(osm-cta) {
-    text-align: left;
-    font-size: 12px;
-}
+
 
 .shop-section .shop-section__goods {
     grid-template-columns: 0.34fr 1fr;
@@ -186,10 +194,11 @@
     margin: 2px;
 }
 .shop-section__goods_content .slide-product__info {
-    display: block;
-    padding: 10px 0 0;
+    margin-top: clamp(10px, calc(20 / 1920 * 100vw), 20px);;
+    padding: 0;
     border: none;
     position: relative;
+    height: clamp(28px, calc(36 / 1920* 100vw), 36px);
 }
 .slide-product__info-box {
     width: 100%;
@@ -207,6 +216,7 @@
 .shop-section__goods_content .slide-product__info .single-product-price span.newprice + span {
     font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
     margin-left: 0;
+    font-weight: 400;
 }
 .single-product-non--minicard {
     min-width: 100%;
@@ -214,8 +224,30 @@
 .shop-section__goods_content .slide-product__img > a {
     max-height: initial;
 }
+.slide-product__title {
+    margin-top: clamp(10px, calc(16 / 1920 * 100vw), 16px);
+    margin-bottom: 0px;
+    height: clamp(40px, calc(56 / 1920 * 100vw), 56px);
+    align-items: center;
+}
+.slide-product__title a {
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+}
+.slide-product__title h4 {
+    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px) !important;
+    text-transform: none;
+    font-weight: 300;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
 .shop-section__goods_content .slide-product__information_title {
-    font-weight: 700;
+    font-weight: 500;
     font-size: clamp(14px, calc(20 / 1920* 100vw), 20px);
     line-height: 1.2;
     color: #221D1E;
@@ -240,13 +272,12 @@
 .shop-section__goods_content .slide-product__info-klarna b {
     font-weight: 500;
 }
-.single-product-buttons {
-    display: flex;
-    gap: 0 8px;
+.single-product-buttons.mobile {
+    display: none;
     position: absolute;
-    right: 0;
-    bottom: -2.6em;
-    z-index: 1;
+}
+.single-product-buttons.mobile button span {
+    display: none;
 }
 .single-product-buttons .button.add-button {
     width: clamp(28px, calc(36 / 1920* 100vw), 36px);
@@ -267,17 +298,29 @@
 }
 .single-product-buttons .button {
     font-weight: 300;
-    font-size: clamp(10px, calc(18 / 1920* 100vw), 18px);
-    padding: 0 0.7em;
-    height: clamp(16px, calc(36 / 1920* 100vw), 36px);
+    font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
+    text-transform: none;
+    height: clamp(28px, calc(36 / 1920 * 100vw), 36px);
+    border: 1px solid #000;
+    padding: 0 clamp(2px, calc(12 / 1920 * 100vw), 12px);
+    line-height: 1;
+    gap: 4px;
+}
+.single-product-buttons .button.show {
+    z-index: 6;
 }
 .single-product-buttons .button.border {
     border-width: 1px;
 }
+/*.single-product-buttons .button > span {*/
+/*    margin-bottom: 0.2em;*/
+/*}*/
 .single-product-buttons .button > svg {
-    width: 14px;
-    height: auto;
-    margin-left: 4px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 16px;
+    z-index: 1;
 }
 .slide-product__info-overlay {
     width: 100%;
@@ -494,20 +537,16 @@
     left: 0;
     top: 1px;
 }
-.shop-section__goods_item.active:after {
+.shop-section__goods_item_action.active .shop-section__goods_item:after {
     background: linear-gradient(45.79deg, #FDD1DB 6.18%, #AABBE7 98.93%);
 }
 .shop-section__goods_item:hover:after {
     opacity: 0.3;
     background: linear-gradient(45.79deg, #FDD1DB 6.18%, #AABBE7 98.93%);
 }
-.shop-section__goods_item.active:hover:after {
+.shop-section__goods_item_action.active .shop-section__goods_item:hover:after {
     opacity: 1;
 }
-/*.noscroll .shop-section__goods_sidebar > div {*/
-/*    position: fixed;*/
-/*    top: 200px;*/
-/*}*/
 
 /*Popup*/
 .pp__size .pp__content {
@@ -573,6 +612,115 @@
     background-color: rgba(34, 29, 30, .2);
 }
 
+/*colors*/
+.shop-section__goods_content .slide-product__img .slide-product__img_colors {
+    padding: 8% 2% 0 1%;
+    background-color: #fff;
+    gap: clamp(6px, calc(10/1920*100vw), 10px);
+    border-radius: 0 20px 0 0;
+    bottom: 0;
+    top: auto;
+    transition: padding 0.3s;
+}
+.slide-product__img_colors .c_button {
+    margin: 0;
+    width: clamp(22px, calc(34 / 1920* 100vw), 34px) !important;
+    height: clamp(22px, calc(34 / 1920* 100vw), 34px) !important;
+    border: 1px solid #BCBDC2;
+    transition: margin 0.2s;
+}
+.no-js-product-color.collapse .slide-product__img_colors .c_button {
+    margin: 0 0 0 -16px;
+}
+.shop-section__goods_content .slide-product__img .no-js-product-color.collapse .slide-product__img_colors {
+    padding: 2% 2% 0 5%;
+}
+.slide-product__img_colors .more-color-count {
+    margin: 0 0 0 -16px;
+    width: clamp(24px, calc(36 / 1920 * 100vw), 36px);
+    height: clamp(24px, calc(36 / 1920 * 100vw), 36px);
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #BCBDC2;
+    font-weight: 300;
+    font-size: clamp(12px, calc(18 / 1920 * 100vw), 18px);
+    line-height: 1;
+    text-transform: uppercase;
+    color: #221D1E;
+    background-color: #fff;
+}
+.no-js-product-color.collapse .slide-product__img_colors .more-color-count {
+    display: flex;
+}
+.no-js-product-color.collapse .c_button.hidden {
+    display: none;
+}
+.slide-product__img_colors > :not(span)::before {
+    width: 112%;
+    height: 112%;
+}
+.slide-product__img_colors .color-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 12;
+    border: none;
+    border-radius: 0;
+}
+.slide-product__img_colors .color-overlay:before,
+.slide-product__img_colors .color-overlay:after {
+    display: none;
+}
+.no-js-product-color.collapse .slide-product__img-title {
+    display: none;
+}
+.slide-product__img_colors .slide-product__img-title {
+    position: absolute;
+    top: 0.4em;
+    left: 0;
+    font-weight: 300;
+    font-size:clamp(10px, calc(18 / 1920* 100vw), 18px) !important;
+    line-height: 1;
+    color: #221D1E;
+    text-transform: none;
+    margin: 0;
+    white-space: nowrap;
+}
+.shop-section__goods_content .slide-product__img .slide-product__img_colors:before {
+    content: '';
+    display: block;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.39876e-06 -1.39876e-06C6.26248e-07 8.83655 7.16344 16 16 16L0 16L1.39876e-06 -1.39876e-06Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: -16px;
+    left: 0;
+}
+.shop-section__goods_content .slide-product__img .slide-product__img_colors:after {
+    content: '';
+    display: block;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.39876e-06 -1.39876e-06C6.26248e-07 8.83655 7.16344 16 16 16L0 16L1.39876e-06 -1.39876e-06Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: -16px;
+    bottom: 0;
+}
+/*colors*/
+
 @media screen and (max-width: 1800px) {
     .shop-section__goods .shop-section__goods_content > div:not(:last-child):not(:only-child) {
         margin-bottom: 128px;
@@ -581,11 +729,7 @@
         font-size: 10px;
     }
 }
-@media screen and (max-width: 1767px) {
-    .shop-section__goods_content .slide-product__info > .single-product-price {
-        margin-bottom: 10px;
-    }
-}
+
 @media screen and (max-width: 1279px) {
     .pp.pp__size {
         justify-content: center;
@@ -611,7 +755,6 @@
         width: 100%;
         z-index: 10;
         justify-content: flex-start;
-        gap: 14px;
     }
     .shop-section__goods_item {
         font-weight: 300;
@@ -621,15 +764,18 @@
         height: 30px;
         margin-bottom: 0;
     }
-    .shop-section__goods_item:first-child {
-        margin-left: calc((100% - var(--gridWidth)) / 2);
-    }
-    .shop-section__goods_item:last-child {
-        margin-right: calc((100% - var(--gridWidth)) / 2);
-    }
-    .shop-section__goods_item.active {
+    .shop-section__goods_item_action.active .shop-section__goods_item {
         color: #fff;
         border-color: transparent;
+    }
+    .shop-section__goods_item_action {
+        padding-left: 14px;
+    }
+    .shop-section__goods_item_action.active {
+        padding-left: 14px;
+    }
+    .shop-section__goods_item_action:last-child {
+        padding-right: 14px;
     }
     .shop-section__goods_item:after {
         height: 32px;
@@ -638,6 +784,9 @@
     }
 }
 @media screen and (max-width:1023px) {
+    main section.shop-section {
+        margin-top: 20px;
+    }
     .shop-cart-toaster {
         top: 76px;
     }
@@ -672,12 +821,12 @@
         display: flex;
         font-size: 14px;
         margin-bottom: 0;
-        margin-top: 6px;
         align-self: flex-start;
     }
-    .shop-section__goods_content .slide-product__info {
-        padding: 10px 0;
-    }
+    /*Remove*/
+    /*.shop-section__goods_content .slide-product__info {*/
+    /*    padding: 10px 0;*/
+    /*}*/
     .shop-section__goods_content .slide-product__info-klarna {
         padding: 0.3em 0;
     }
@@ -690,25 +839,24 @@
     .goods-grid-product-box {
         grid-column: auto;
     }
-    .shop-section .shop-section__goods {
-        padding-top:30px;
-    }
     .shop-section__goods_content.few .goods-grid {
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 10px;
         grid-row-gap: 10px;
     }
-    .shop-section__goods_content.few .slide-product__img_colors > :not(span) {
-        width: 10px;
-        height: 10px;
-    }
-
-    .shop-section__goods_content.few .slide-product__img_colors {
-        padding: 8px 10px;
-    }
-    .shop-section__goods_content.few .slide-product__img_colors > :not(:last-child) {
-        margin-right: 8px
-    }
+    /*Remove*/
+    /*.shop-section__goods_content.few .slide-product__img_colors > :not(span) {*/
+    /*    width: 10px;*/
+    /*    height: 10px;*/
+    /*}*/
+    /*Remove*/
+    /*.shop-section__goods_content.few .slide-product__img_colors {*/
+    /*    padding: 8px 10px;*/
+    /*}*/
+    /*Remove*/
+    /*.shop-section__goods_content.few .slide-product__img_colors > :not(:last-child) {*/
+    /*    margin-right: 8px*/
+    /*}*/
     .shop-section__goods_content.few .slide-product .pillow-preview__label {
         width: 40px;
         height: 40px;
@@ -720,7 +868,6 @@
     }
     .shop-store .shop-section .shop-section__goods_sidebar > div {
         display: flex;
-        padding-top:30px;
     }
     .shop-section__goods_content .slide-product__img .slide-product__img_sizes {
         bottom: 10px;
@@ -756,21 +903,50 @@
         padding-right: 0;
     }
 
-    .slide-product__info-klarna klarna-placement::part(osm-legal) {
-        font-size:8px;
+    /*Colors*/
+    .single-product-buttons {
+        display: none;
     }
+    .single-product-buttons.mobile {
+        display: block;
+    }
+    .shop-section__goods_content .slide-product__img .slide-product__img_colors {
+        bottom: auto;
+        top: 0;
+        border-radius: 0 0 0.9em 0;
+    }
+    .shop-section__goods_content .slide-product__img .slide-product__img_colors {
+        padding: 0 2% 2% 1%;
+    }
+    .shop-section__goods_content .slide-product__img .no-js-product-color.collapse .slide-product__img_colors {
+        padding: 0 2% 2% 9%;
+    }
+    .shop-section__goods_content .slide-product__img .slide-product__img_colors:before {
+        top: auto;
+        left: 0;
+        bottom: -16px;
+        transform: rotate(90deg);
+    }
+    .shop-section__goods_content .slide-product__img .slide-product__img_colors:after {
+        bottom: auto;
+        top: 0;
+        transform: rotate(90deg);
+    }
+    .slide-product__img_colors .slide-product__img-title {
+        display: none;
+    }
+    .shop-section__goods_content .slide-product__img .slide-product__img_colors {
 
-    .slide-product__info-klarna klarna-placement::part(osm-message) {
-        font-size: 8px;
     }
-    .slide-product__info-klarna klarna-placement::part(osm-cta) {
-        font-size: 8px;
-    }
+    /*Colors*/
 }
 @media screen and (max-width:767px) {
-    .slide-product__info-klarna klarna-placement::part(osm-message) {
+    .slide-product__info-klarna klarna-placement::part(osm-message), .slide-product__info-klarna klarna-placement::part(osm-logo) {
         text-align: left;
-        font-size: 8px;
+        font-size: 10px;
+    }
+    klarna-placement::part(osm-container), klarna-placement::part(osm-cta), klarna-placement::part(osm-legal) {
+        font-size:10px! important;
     }
     .shop-cart-toaster-text {
         width: 180px;
@@ -838,12 +1014,14 @@
         width: 24px;
         height: 24px;
     }
+    .shop-section__goods_content.few .slide-product__img_colors > :not(:last-child) {
+        margin-right: unset;
+    }
 }
-/*@media screen and (max-width: 576px) {*/
-/*    .shop-section__goods_content .goods-grid {*/
-/*        grid-template-columns: repeat(3, minmax(0, 1fr));*/
-/*    }*/
-/*    .goods-grid-img-video-box {*/
-/*        grid-column: 1 / -1;*/
-/*    }*/
-/*}*/
+
+
+@media screen and (max-width: 540px) {
+    klarna-placement::part(osm-container), klarna-placement::part(osm-cta), klarna-placement::part(osm-legal) {
+        font-size:10px! important;
+    }
+}
