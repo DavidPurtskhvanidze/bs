@@ -65,6 +65,7 @@
     <link rel="stylesheet" href="../files/css_common.css">
     <link rel="stylesheet" href="landing_files/style.css">
     <link rel="stylesheet" href="landing_files/structure_section_new.css">
+    <link rel="stylesheet" href="landing_files/transformer_section.css">
     
     <script src="../files/jquery-3.4.1.min.js"></script>
 
@@ -280,7 +281,7 @@
                 <div class="shop">
                     <a href="https://beautysleep.ru/products/" class="shop_goods posthog_click" posthog-name="Магазин">
                         <img src="../files/shop.svg" alt="profile">
-                        <span>онлайн магазин</span>
+                        <span>купить</span>
                     </a>
                     <a href="https://beautysleep.ru/basket" class="posthog_click shop_cart " posthog-name="Корзина">
                         <img src="../files/card.svg" alt="card">
@@ -537,9 +538,9 @@
             </div>
             <div class="header-menu__item mobile-item shop">
                 <a href="https://beautysleep.ru/products/" class="shop_goods posthog_click"
-                   posthog-name="онлайн магазин">
+                   posthog-name="купить">
                     <img src="../files/shop.svg" alt="profile">
-                    <span>онлайн магазин</span>
+                    <span>купить</span>
                 </a>
             </div>
             <div class="interaction">
@@ -581,6 +582,12 @@
                 Уникальная anti-aging подушка <br class="br-mobile"> с эффектом увлажнения
             </p>
         </div>
+
+        <div class="hyaluron-main-innovation">
+            <span>
+                ИННОВАЦИЯ
+            </span>
+        </div>
     </section>
 
     <section class="hyaluron-text-section">
@@ -592,13 +599,13 @@
 
     <section class="hyaluron-two-in-one-section">
         <picture class="hyaluron-two-in-one-bg">
-            <source srcset="landing_files/images/hyaluron-2-1-img-mobile.avif" media="(max-width: 768px)" type="image/avif">
+            <source srcset="landing_files/images/hyaluron-2-1-img-mobile.avif" media="(max-width: 1279px)" type="image/avif">
             <source srcset="landing_files/images/hyaluron-2-1-img.avif" type="image/avif">
 
-            <source srcset="landing_files/images/hyaluron-2-1-img-mobile.webp" media="(max-width: 768px)" type="image/webp">
+            <source srcset="landing_files/images/hyaluron-2-1-img-mobile.webp" media="(max-width: 1279px)" type="image/webp">
             <source srcset="landing_files/images/hyaluron-2-1-img.webp" type="image/webp">
 
-            <source srcset="landing_files/images/hyaluron-2-1-img-mobile.jpg" media="(max-width: 768px)" type="image/jpg">
+            <source srcset="landing_files/images/hyaluron-2-1-img-mobile.jpg" media="(max-width: 1279px)" type="image/jpg">
             <source srcset="landing_files/images/hyaluron-2-1-img.jpg" type="image/jpg">
 
             <img src="landing_files/images/hyaluron-2-1-img.jpg" alt="">
@@ -618,22 +625,26 @@
             </div>
             <div class="hyaluron-two-in-one-card-info">
                 <h3>
-                    Запатентованная 3D<br> форма подушки Omnia
+                    ЗАПАТЕНТОВАННАЯ <br class="br-mobile"> 3D ФОРМА
+                    ПОДУШКИ OMNIA
                 </h3>
                 <p>
-                    Подушка борется с морщинами сна и предотвращает утреннюю отечность
+                    Подушка борется с морщинами сна и утренней отечностью
                 </p>
+                <a class="hyaluron-two-in-one-card-button" href="#">
+                    подробнее
+                </a>
             </div>
         </div>
         <div class="hyaluron-two-in-one-card hyaluron-two-in-one-card_fiber">
             <picture class="hyaluron-two-in-one-card-fiber">
-                <source srcset="landing_files/images/fiber-mob.avif" media="(max-width: 768px)" type="image/avif">
+                <source srcset="landing_files/images/fiber-mob.avif" media="(max-width: 1279px)" type="image/avif">
                 <source srcset="landing_files/images/fiber.avif" type="image/avif">
 
-                <source srcset="landing_files/images/fiber-mob.webp" media="(max-width: 768px)" type="image/webp">
+                <source srcset="landing_files/images/fiber-mob.webp" media="(max-width: 1279px)" type="image/webp">
                 <source srcset="landing_files/images/fiber.webp" type="image/webp">
 
-                <source srcset="landing_files/images/fiber-mob.png" media="(max-width: 768px)" type="image/png">
+                <source srcset="landing_files/images/fiber-mob.png" media="(max-width: 1279px)" type="image/png">
                 <source srcset="landing_files/images/fiber.png" type="image/png">
 
                 <img src="landing_files/images/fiber.png" alt="">
@@ -643,10 +654,12 @@
             </div>
             <div class="hyaluron-two-in-one-card-info">
                 <h3>
-                    НАВОЛОЧКА С<br> ГИАЛУРОНОВОЙ КИСЛОТОЙ
+                    НАВОЛОЧКА С гиалуроновой кислотой
                 </h3>
                 <p>
-                    Микрокапсулы с гиалуроновой кислотой встроены в шелковые волокна наволочки
+                    Микрокапсулы с гиалуроновой
+                    кислотой встроены в шёлковые
+                    волокна наволочки
                 </p>
             </div>
         </div>
@@ -788,22 +801,23 @@
                         Результаты<br>
                         исследования
 
-                        <svg width="57" height="54" viewBox="0 0 57 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <ellipse cx="22.6189" cy="20.5" rx="16.1384" ry="15.5" fill="white"/>
-                            <path d="M41.4368 34.8241H38.8329L37.91 33.9694C41.8653 29.5375 43.9088 23.4911 42.7882 17.0648C41.239 8.26432 33.5922 1.23658 24.3634 0.160263C10.4212 -1.48587 -1.3127 9.78383 0.401238 23.1745C1.52189 32.0383 8.83907 39.3826 18.002 40.8705C24.693 41.9468 30.9884 39.9841 35.6028 36.1853L36.4927 37.0717V39.5726L50.5009 53.0266C51.8522 54.3245 54.0606 54.3245 55.412 53.0266C56.7633 51.7286 56.7633 49.6077 55.412 48.3097L41.4368 34.8241ZM21.6606 34.8241C13.4535 34.8241 6.82849 28.4611 6.82849 20.5787C6.82849 12.6962 13.4535 6.33327 21.6606 6.33327C29.8677 6.33327 36.4927 12.6962 36.4927 20.5787C36.4927 28.4611 29.8677 34.8241 21.6606 34.8241Z" fill="url(#paint0_linear_10334_34429)"/>
-                            <path d="M23.7749 12.3438H20.5648V18.5101H14.1445V21.5932H20.5648V27.7595H23.7749V21.5932H30.1952V18.5101H23.7749V12.3438Z" fill="url(#paint1_linear_10334_34429)"/>
+                        <svg width="57" height="55" viewBox="0 0 57 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M41.2014 35.6952H38.5976L37.6747 34.8405C41.6299 30.4086 43.6735 24.3622 42.5528 17.9359C41.0037 9.13541 33.3569 2.10768 24.128 1.03136C10.1858 -0.61478 -1.54805 10.6549 0.165887 24.0456C1.28654 32.9094 8.60372 40.2537 17.7667 41.7416C24.4576 42.8179 30.753 40.8552 35.3675 37.0564L36.2574 37.9428V40.4437L50.2655 53.8977C51.6169 55.1956 53.8252 55.1956 55.1766 53.8977C56.528 52.5997 56.528 50.4788 55.1766 49.1808L41.2014 35.6952ZM21.4253 35.6952C13.2182 35.6952 6.59314 29.3322 6.59314 21.4498C6.59314 13.5673 13.2182 7.20437 21.4253 7.20437C29.6324 7.20437 36.2574 13.5673 36.2574 21.4498C36.2574 29.3322 29.6324 35.6952 21.4253 35.6952Z" fill="url(#paint0_linear_1323_48895)"/>
+                            <path d="M21.4253 35.6952C13.2182 35.6952 6.59314 29.3322 6.59314 21.4498C6.59314 13.5673 13.2182 7.20437 21.4253 7.20437C29.6324 7.20437 36.2574 13.5673 36.2574 21.4498C36.2574 29.3322 29.6324 35.6952 21.4253 35.6952Z" fill="white"/>
+                            <path d="M23.5396 13.2148H20.3295V19.3812H13.9092V22.4643H20.3295V28.6306H23.5396V22.4643H29.9599V19.3812H23.5396V13.2148Z" fill="url(#paint1_linear_1323_48895)"/>
                             <defs>
-                                <linearGradient id="paint0_linear_10334_34429" x1="0.234375" y1="54" x2="72.4582" y2="19.5412" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#F0C9D1"/>
-                                    <stop offset="1" stop-color="#6E89C3"/>
+                                <linearGradient id="paint0_linear_1323_48895" x1="-16.2228" y1="27.6074" x2="69.7362" y2="27.6074" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#DCC2EC"/>
+                                    <stop offset="0.501875" stop-color="#93819E"/>
+                                    <stop offset="0.830053" stop-color="#DCC3ED"/>
                                 </linearGradient>
-                                <linearGradient id="paint1_linear_10334_34429" x1="14.1445" y1="27.7595" x2="34.7704" y2="17.9129" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#F0C9D1"/>
-                                    <stop offset="1" stop-color="#6E89C3"/>
+                                <linearGradient id="paint1_linear_1323_48895" x1="9.2755" y1="20.8475" x2="33.8292" y2="20.8475" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#DCC2EC"/>
+                                    <stop offset="0.501875" stop-color="#93819E"/>
+                                    <stop offset="0.830053" stop-color="#DCC3ED"/>
                                 </linearGradient>
                             </defs>
                         </svg>
-
                     </div>
                 </a>
             </div>
@@ -811,17 +825,21 @@
 
         <a href="" title="" class="hyaluron-proven-percent-link-mob">
             результаты исследования
-            <svg width="100%" height="100%" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.274 11.9712H14.3087L13.9666 11.6774C15.4328 10.1536 16.1904 8.07473 15.775 5.86525C15.2007 2.83948 12.366 0.423207 8.94478 0.0531482C3.77631 -0.512825 -0.57351 3.36191 0.0618574 7.96588C0.47729 11.0134 3.18982 13.5385 6.58659 14.0501C9.06696 14.4202 11.4007 13.7453 13.1113 12.4392L13.4412 12.744V13.6038L18.6341 18.2296C19.1351 18.6758 19.9537 18.6758 20.4547 18.2296C20.9557 17.7833 20.9557 17.0541 20.4547 16.6079L15.274 11.9712ZM7.94285 11.9712C4.90042 11.9712 2.44448 9.78353 2.44448 7.07339C2.44448 4.36325 4.90042 2.17555 7.94285 2.17555C10.9853 2.17555 13.4412 4.36325 13.4412 7.07339C13.4412 9.78353 10.9853 11.9712 7.94285 11.9712Z" fill="url(#paint0_linear_109_26791)"/>
-                <path d="M8.72631 4.24585H7.53629V6.36594H5.15625V7.42599H7.53629V9.54609H8.72631V7.42599H11.1063V6.36594H8.72631V4.24585Z" fill="url(#paint1_linear_109_26791)"/>
+
+            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="8.29066" cy="8.2881" rx="5.97718" ry="5.74074" fill="white"/>
+                <path d="M14.6651 13.5936H13.7383L13.4098 13.277C14.8176 11.6356 15.545 9.3962 15.1461 7.0161C14.5947 3.75666 11.873 1.15379 8.58819 0.755157C3.62577 0.145477 -0.550646 4.31944 0.0593914 9.27895C0.458262 12.5618 3.06265 15.282 6.32401 15.833C8.7055 16.2317 10.9462 15.5047 12.5886 14.0978L12.9054 14.4261V15.3523L17.8913 20.3353C18.3723 20.816 19.1583 20.816 19.6393 20.3353C20.1202 19.8546 20.1202 19.069 19.6393 18.5883L14.6651 13.5936ZM7.62621 13.5936C4.70506 13.5936 2.34703 11.237 2.34703 8.31754C2.34703 5.39811 4.70506 3.04146 7.62621 3.04146C10.5473 3.04146 12.9054 5.39811 12.9054 8.31754C12.9054 11.237 10.5473 13.5936 7.62621 13.5936Z" fill="url(#paint0_linear_1323_49996)"/>
+                <path d="M8.37891 5.26709H7.23633V7.55091H4.95117V8.69282H7.23633V10.9766H8.37891V8.69282H10.6641V7.55091H8.37891V5.26709Z" fill="url(#paint1_linear_1323_49996)"/>
                 <defs>
-                    <linearGradient id="paint0_linear_109_26791" x1="0" y1="18.5643" x2="25.9906" y2="5.1941" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#F0C9D1"/>
-                        <stop offset="1" stop-color="#6E89C3"/>
+                    <linearGradient id="paint0_linear_1323_49996" x1="-5.77381" y1="10.5981" x2="24.8214" y2="10.5981" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#DCC2EC"/>
+                        <stop offset="0.501875" stop-color="#93819E"/>
+                        <stop offset="0.830053" stop-color="#DCC3ED"/>
                     </linearGradient>
-                    <linearGradient id="paint1_linear_109_26791" x1="5.15625" y1="9.54609" x2="12.5785" y2="5.72566" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#F0C9D1"/>
-                        <stop offset="1" stop-color="#6E89C3"/>
+                    <linearGradient id="paint1_linear_1323_49996" x1="3.30191" y1="8.09398" x2="12.0413" y2="8.09398" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#DCC2EC"/>
+                        <stop offset="0.501875" stop-color="#93819E"/>
+                        <stop offset="0.830053" stop-color="#DCC3ED"/>
                     </linearGradient>
                 </defs>
             </svg>
@@ -859,11 +877,11 @@
                             <img src="landing_files/images/wake-up-1.svg" alt="">
                         </div>
                         <div class="hyaluron-proven-wakeup-info-list-description">
-                            <h4>Глубокое увлажнение:</h4>
+                            <h4>
+                                глубокое увлажнение:
+                            </h4>
                             <p>
-                                Шёлковая наволочка с гиалуроновой кислотой постепенно выделяет
-                                влагу, непрерывно увлажняя кожу в течение всей ночи. С утра кожа
-                                мягкая и напитанная.
+                                Шёлковая наволочка с гиалуроновой кислотой постепенно выделяет влагу, непрерывно увлажняя кожу в течение всей ночи. С утра кожа мягкая и напитанная.
                             </p>
                         </div>
                     </li>
@@ -873,11 +891,11 @@
                             <img src="landing_files/images/wake-up-2.svg" alt="">
                         </div>
                         <div class="hyaluron-proven-wakeup-info-list-description">
-                            <h4>Совершенство текстуры кожи:</h4>
+                            <h4>
+                                Совершенство текстуры кожи:
+                            </h4>
                             <p>
-                                При регулярном использовании гиалуроновая кислота помогает
-                                коже стать более упругой и разглаживает мелкие морщины,
-                                возвращая коже здоровый вид и молодость.
+                                При регулярном использовании гиалуроновая кислота помогает коже стать более упругой и разглаживает мелкие морщины, возвращая коже здоровый вид и молодость.
                             </p>
                         </div>
                     </li>
@@ -887,11 +905,12 @@
                             <img src="landing_files/images/wake-up-3.svg" alt="">
                         </div>
                         <div class="hyaluron-proven-wakeup-info-list-description">
-                            <h4>Поддержка естественного барьера кожи:</h4>
+                            <h4>
+                                поддержка естественного барьера кожи:
+                            </h4>
                             <p>
                                 Нежное прикосновение шёлка помогает сохранить влагу,
-                                <b>а гиалуроновая кислота повышает упругость кожи, укрепляя её
-                                    естественный барьер и уменьшая видимые признаки старения.</b>
+                                а гиалуроновая кислота повышает упругость кожи, укрепляя её естественный барьер и уменьшая видимые признаки старения.
                             </p>
                         </div>
                     </li>
@@ -914,9 +933,9 @@
                 <source srcset="landing_files/images/cutting-edge.webp" type="image/webp">
 
                 <source srcset="landing_files/images/cutting-edge-mob.jpg" media="(max-width: 768px)" type="image/jpg">
-                <source srcset="landing_files/images/cutting-edge.jpg" type="image/jpg">
+                <source srcset="landing_files/images/cutting-edge.png" type="image/png">
 
-                <img src="landing_files/images/cutting-edge.jpg" alt="">
+                <img src="landing_files/images/cutting-edge.png" alt="">
             </picture>
             <div class="hyaluron-cutting-edge-info">
                 <div class="hyaluron-cutting-edge">
@@ -945,8 +964,8 @@
 
                     </div>
                     <div class="hyaluron-cutting-edge-text">
-                        Гиалуроновая кислота заключена в<br>
-                        микроскопические частицы,<br>
+                        Гиалуроновая кислота заключена<br>
+                        в микроскопические частицы,<br>
                         которые равномерно распределены<br>
                         внутри шёлковых волокон.
                     </div>
@@ -981,13 +1000,12 @@
 
                     </div>
                     <div class="hyaluron-cutting-edge-text">
-                        Пока вы спите, микрокапсулы постепенно<br>
-                        высвобождают гиалуроновую кислоту на<br>
-                        поверхность кожи, непрерывно увлажняя<br>
-                        ее. Медленная и направленная подача<br>
-                        обеспечивает длительное увлажнение, а<br>
-                        шёлк остаётся невероятно мягким на<br>
-                        ощупь.
+                        Пока вы спите, микрокапсулы постепенно<br>
+                        высвобождают гиалуроновую кислоту<br>
+                        на поверхность кожи, непрерывно увлажняя её.<br>
+                        Медленная и направленная подача обеспечивает<br>
+                        длительное увлажнение, а шёлк остаётся<br>
+                        невероятно мягким на ощупь.
                     </div>
                 </div>
             </div>
@@ -997,63 +1015,52 @@
     <section class="hyaluron-pillow-section hyaluron-dignities-section">
         <div class="dignities-item dignities-item-1 left">
             <div>
-                <span>Кожа, которая выглядит молодо</span>
                 <span>
-                    Помогает бороться с существующими морщинами
-                    и предотвращает появление новых.
-                    Даже дорогостоящие кремы для лица и ботокс
-                    бессильны в борьбе с морщинами сна.
+                    Кожа, которая выглядит молодо
+                </span>
+                <span>
+                    Помогает бороться с существующими морщинами и предотвращает появление новых. Даже дорогостоящие кремы для лица и ботокс бессильны в борьбе с морщинами сна.
                 </span>
             </div>
             <img loading="lazy" src="landing_files/images/pillow-1.svg" alt="dignities-1">
         </div>
         <div class="dignities-item dignities-item-2 left">
             <div>
-                <span>Против утренней отечности</span>
                 <span>
-                    Особая форма подушки предотвращает
-                    утреннюю отечность* благодаря
-                    специальным выемкам.
+                    ОРТОПЕДИЧЕСКИЕ СВОЙСТВА
                 </span>
-            </div>
-            <img loading="lazy" src="landing_files/images/pillow-2.svg" alt="dignities-2">
-        </div>
-        <div class="dignities-item dignities-item-3 left">
-            <div>
-                <span>ОРТОПЕДИЧЕСКИЕ СВОЙСТВА</span>
                 <span>
-                    Разработано совместно с ортопедами.
-                    Обеспечивает физиологически правильное
-                    положение тела во время сна. Одобрено
-                    Росздравнадзором.
+                    Разработано совместно с ортопедами. Обеспечивает физиологически правильное положение тела во время сна. Одобрено Росздравнадзором.
                 </span>
             </div>
             <img loading="lazy" src="landing_files/images/pillow-3.svg" alt="dignities-3">
+        </div>
+        <div class="dignities-item dignities-item-3 left">
+            <div>
+                <span>
+                    поддержка естественного барьера кожи
+                </span>
+                <span>
+                    Нежное прикосновение шёлка помогает сохранить влагу, а гиалуроновая кислота повышает упругость кожи, укрепляя её естественный барьер и уменьшая видимые признаки старения.
+                </span>
+            </div>
+            <img loading="lazy" src="landing_files/images/pillow-6.svg" alt="dignities-3">
         </div>
         <div class="dignities-section__content_center">
             <div class="pillow-img-box">
                 <div class="pillow-img-box-anty-hydra">
                     <div class="pillow-img-box-anty-hydra-item">
-                        Anti-age
+                        <span>
+                            Anti-age
+                        </span>
                     </div>
-                    <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="10.0039" y="28.6328" width="28.1328" height="8.27436" transform="rotate(-90 10.0039 28.6328)" fill="url(#paint0_linear_10334_35165)"/>
-                        <rect x="28.207" y="18.7031" width="28.1328" height="8.27436" transform="rotate(180 28.207 18.7031)" fill="url(#paint1_linear_10334_35165)"/>
-                        <defs>
-                            <linearGradient id="paint0_linear_10334_35165" x1="1.88223" y1="32.7296" x2="44.9187" y2="32.7296" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#DCC2EC"/>
-                                <stop offset="0.501875" stop-color="#93819E"/>
-                                <stop offset="0.830053" stop-color="#DCC3ED"/>
-                            </linearGradient>
-                            <linearGradient id="paint1_linear_10334_35165" x1="20.0854" y1="22.7999" x2="63.1219" y2="22.7999" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#DCC2EC"/>
-                                <stop offset="0.501875" stop-color="#93819E"/>
-                                <stop offset="0.830053" stop-color="#DCC3ED"/>
-                            </linearGradient>
-                        </defs>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.91954 10.9955H0V8.95928H8.91954V0H11.2184V8.95928H20V10.9955H11.2184V20H8.91954V10.9955Z" fill="#221D1E"/>
                     </svg>
                     <div class="pillow-img-box-anty-hydra-item">
-                        увлажнение
+                        <span>
+                            увлажнение
+                        </span>
                     </div>
                 </div>
                 <div class="pillow-img-box__circles"></div>
@@ -1066,7 +1073,10 @@
                 </picture>
                 <!-- Desktop button -->
                 <div class="pillow-img-box-button">
-                    <a href="#" class="button transparent">
+                    <a href="#">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.5 12L4.5 21L4.5 3L20.5 12Z" stroke="white"/>
+                        </svg>
                         <span>
                             узнайте как работает подушка
                         </span>
@@ -1081,50 +1091,31 @@
                     Упругость кожи
                 </span>
                 <span>
-                    Повышая уровень увлажнённости, гиалуроновая
-                    кислота поддерживает естественную структуру
-                    кожи, повышает её упругость и помогает
-                    сгладить мелкие морщины.
+                    Повышая уровень увлажнённости, гиалуроновая кислота поддерживает естественную структуру кожи, повышает её упругость и помогает сгладить мелкие морщины.
                 </span>
             </div>
         </div>
         <div class="dignities-item dignities-item-5 right">
-            <img loading="lazy" src="landing_files/images/pillow-5.svg" alt="dignities-5">
+            <img loading="lazy" src="landing_files/images/pillow-2.svg" alt="dignities-2">
             <div>
-                <span>ДЛИТЕЛЬНОЕ УВЛАЖНЕНИЕ</span>
                 <span>
-                    Наволочка с гиалуроновой кислотой
-                    постепенно передаёт влагу вашей коже в
-                    течение всей ночи, обеспечивая
-                    длительное увлажнение.
+                    Против утренней отёчности
+                </span>
+                <span>
+                    Особая форма подушки предотвращает утреннюю отёчность* благодаря специальным выемкам.
                 </span>
             </div>
         </div>
         <div class="dignities-item dignities-item-6 right">
-            <img loading="lazy" src="landing_files/images/pillow-6.svg" alt="dignities-6">
+            <img loading="lazy" src="landing_files/images/pillow-5.svg" alt="dignities-5">
             <div>
-                <span>поддержка естественного барьера кожи</span>
                 <span>
-                    Нежное прикосновение шёлка помогает
-                    сохранить влагу, а гиалуроновая кислота
-                    повышает упругость кожи, укрепляя её
-                    естественный барьер и уменьшая видимые
-                    признаки старения.
+                    ДЛИТЕЛЬНОЕ УВЛАЖНЕНИЕ
+                </span>
+                <span>
+                    Наволочка с гиалуроновой кислотой постепенно передаёт влагу вашей коже в течение всей ночи, обеспечивая длительное увлажнение.
                 </span>
             </div>
-        </div>
-        <!-- Mobile button -->
-        <div class="pillow-img-box-button mobile">
-            <a href="#" class="button transparent">
-                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.5 11.4395L2 5.43945H11L9.50001 11.4395H3.5Z" stroke="#221D1E"/>
-                    <path d="M8.81946 4.34809C8.81946 2.53208 7.82451 1.57031 6.59721 1.57031C5.36992 1.57031 4.375 2.53503 4.375 4.34809" stroke="#221D1E"/>
-                    <path d="M8.67188 7.39258H4.56473" stroke="#221D1E" stroke-linecap="square"/>
-                </svg>
-                <span>
-                    узнайте как работает подушка
-                </span>
-            </a>
         </div>
     </section>
 
@@ -1332,19 +1323,110 @@
 
                 <div class="structure-button">
                     <a href="#" class="button gradient">
-                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 16.3027L2.75 7.30273H16.25L14 16.3027H5Z" stroke="#221D1E" stroke-width="1.5"/>
-                            <path d="M12.9714 5.66667C12.9714 2.94265 11.4789 1.5 9.638 1.5C7.79707 1.5 6.30469 2.94708 6.30469 5.66667" stroke="#221D1E" stroke-width="1.5"/>
-                            <path d="M12.7656 10.2324H6.60491" stroke="#221D1E" stroke-width="1.5" stroke-linecap="square"/>
+                        <span>купить</span>
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="white"/>
+                            <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="white"/>
+                            <path d="M16.8496 13.6426H8.63532" stroke="white" stroke-linecap="square"/>
                         </svg>
-                        <span>В каталог</span>
+
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="transformer-section">
+        <h3>
+            <b>Подушки-трансформеры Somia</b> для мужчин и детей
+        </h3>
+        <div class="transformer-wrapper">
+            <div class="transformer-item">
+                <h4>
+                    инновация<br> от Beauty Sleep
+                </h4>
+                <p class="transformer-sub-title-mob">
+                    <b>Подушки-трансформер somia</b><br> для мужчин и детей
+                </p>
+                <p class="transformer-sub-desc-mob">
+                    Настройте подушку под себя:<br>
+                    3 комбинации по высоте, 4 слоя разной мягкости
+                </p>
+                <picture class="transformer-pillow">
+                    <source srcset="landing_files/transformer_section_images/transformer-pillow.avif" type="image/avif">
+                    <source srcset="landing_files/transformer_section_images/transformer-pillow.webp" type="image/webp">
+                    <source srcset="landing_files/transformer_section_images/transformer-pillow.png" type="image/png">
+                    <img src="landing_files/transformer_section_images/transformer-pillow.png" alt="Подушки-трансформеры Somia">
+                </picture>
+            </div>
+            <div class="transformer-item">
+                <picture class="transformer-picture">
+                    <source srcset="landing_files/transformer_section_images/transformer-pillow-2.avif" type="image/avif">
+                    <source srcset="landing_files/transformer_section_images/transformer-pillow-2.webp" type="image/webp">
+                    <source srcset="landing_files/transformer_section_images/transformer-pillow-2.jpg" type="image/jpg">
+                    <img src="landing_files/transformer_section_images/transformer-pillow-2.jpg" alt="Подушки-трансформеры Somia">
+                </picture>
+                <p class="transformer-label">
+                    Для сна без боли<br>
+                    в спине и шее
+                </p>
+            </div>
+            <div class="transformer-item">
+                <picture class="transformer-picture">
+                    <source srcset="landing_files/transformer_section_images/transformer-pillow-3.avif" type="image/avif">
+                    <source srcset="landing_files/transformer_section_images/transformer-pillow-3.webp" type="image/webp">
+                    <source srcset="landing_files/transformer_section_images/transformer-pillow-3.jpg" type="image/jpg">
+                    <img src="landing_files/transformer_section_images/transformer-pillow-3.jpg" alt="Подушки-трансформеры Somia">
+                </picture>
+                <p class="transformer-label">
+                    <span>Мягкая</span>
+                    Высота 12 см
+                </p>
+            </div>
+        </div>
+        <a href="#" class="button gradient">
+            <span>купить</span>
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="#221D1E"/>
+                <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="#221D1E"/>
+                <path d="M16.8496 13.6426H8.63532" stroke="#221D1E" stroke-linecap="square"/>
+            </svg>
+        </a>
+    </section>
+
 </main>
+
+<!--landing bottom toaster-->
+<div class="bottom-toaster">
+    <div class="bottom-toaster-wrapper">
+        <div class="bottom-toaster-box">
+            <div class="bottom-toaster-box-picture">
+                <picture>
+                    <source srcset="landing_files/images/hyaluron-pillow-toaster.avif" type="image/avif">
+                    <source srcset="landing_files/images/hyaluron-pillow-toaster.webp" type="image/webp">
+                    <source srcset="landing_files/images/hyaluron-pillow-toaster.png" type="image/png">
+                    <img src="landing_files/images/hyaluron-pillow-toaster.png" alt="Anti-Age + Увлажнение">
+                </picture>
+            </div>
+            <div class="bottom-toaster-box-title">
+                <h3>
+                    anti-age + увлажнение
+                </h3>
+            </div>
+        </div>
+        <div class="bottom-toaster-button">
+            <a href="#" class="button gradient">
+                <span>купить</span>
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="#221D1E"/>
+                    <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="#221D1E"/>
+                    <path d="M16.8496 13.6426H8.63532" stroke="#221D1E" stroke-linecap="square"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
+<!--landing bottom toaster-->
 
 <a href="https://beautysleep.ru/pillows-beauty-sleep/beauty-sleep-omnia-1001" class="label__buy">Купить</a>
 <div class="pp pp__fullreview" data-pp="fullreview">
