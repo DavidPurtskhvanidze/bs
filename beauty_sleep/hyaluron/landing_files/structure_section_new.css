@@ -12,7 +12,7 @@
     text-align: center;
     font-weight: 300;
     font-size: clamp(18px, calc(32/1920*100vw), 32px);
-    line-height: 1.4;
+    line-height: 1.5;
     text-transform: uppercase;
     color: #221D1E;
     margin-bottom: clamp(16px, calc(32/1920*100vw), 32px);
@@ -23,13 +23,17 @@
 .structure-section .slide-description p {
     margin-bottom: clamp(24px, calc(64/1920*100vw), 64px);
     font-size: clamp(14px, calc(18/1920*100vw), 18px);
-    line-height: 1.4;
+    line-height: 1.5;
 }
 .structure-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     padding-top: clamp(24px, calc(90 / 1920* 100vw), 90px);
 }
 .structure-button .button {
+    display: inline-flex;
     font-weight: 500;
     font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
     height: clamp(28px, calc(44 / 1920* 100vw), 44px);
@@ -92,6 +96,7 @@
 @media screen and (max-width: 767px) {
     .structure-section .structure-imgages {
         width: 100%;
+        margin-top: 0;
     }
     .structure-list {
         width: 100%;
@@ -100,20 +105,18 @@
     .structure-button .button {
         min-width: 165px;
     }
-    .structure-list li span.li-hint {
-        display: inline-block;
-        margin-left: 0;
-        font-weight: 300;
-        font-size: 10px;
-        color: #221D1E;
+    .structure-section .structure-section__content {
+        margin-bottom: 64px;
+        padding-bottom: 0;
     }
 
 }
 @media (max-width: 576px) {
     .structure-section .slide-description h3 {
-        text-align: start;
+        text-align: center;
     }
     .structure-section .slide-description p {
         text-align: start;
+        line-height: 1.4;
     }
 }

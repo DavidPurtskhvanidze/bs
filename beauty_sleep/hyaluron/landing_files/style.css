@@ -76,7 +76,7 @@
 
 body section.hyaluron-text-section {
     margin: 0;
-    padding: clamp(27px, calc(83/1920*100vw), 83px) 16px;
+    padding: clamp(24px, calc(76/1920*100vw), 76px) 20px;
 }
 .hyaluron-text-section h3 {
     font-weight: 500;
@@ -99,17 +99,19 @@ body section.hyaluron-two-in-one-section {
     position: relative;
     margin-top: 0;
     padding-top: 0;
-    background-color: #ece7e3;
+    background-color: #eeeae5;
 }
 .hyaluron-two-in-one-section picture {
     display: flex;
 }
 .hyaluron-two-in-one-section picture img {
     width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 .hyaluron-two-in-one-title {
     font-family: 'Cera Pro', sans-serif;
-    font-weight: 250;
+    font-weight: 300;
     font-size: clamp(90px, calc(180/1920*100vw), 180px);
     line-height: 1;
     align-items: center;
@@ -119,7 +121,7 @@ body section.hyaluron-two-in-one-section {
     color: #fff;
 }
 .hyaluron-two-in-one-title span {
-    font-weight: 300;
+    font-weight: 250;
     font-size: clamp(47px, calc(96/1920*100vw), 96px);
 }
 .hyaluron-two-in-one-card {
@@ -178,7 +180,7 @@ body section.hyaluron-two-in-one-section {
     font-style: normal;
     font-weight: 500;
     font-size: clamp(18px, calc(32/1920*100vw), 32px);
-    line-height: 1.3;
+    line-height: 1.5;
     text-transform: uppercase;
     background: linear-gradient(90deg, #DCC2EC -28.87%, #93819E 47.91%, #DCC3ED 98.11%);
     -webkit-background-clip: text;
@@ -186,14 +188,14 @@ body section.hyaluron-two-in-one-section {
     background-clip: text;
     text-fill-color: transparent;
     text-align: start;
-    margin-bottom: clamp(10px, calc(32/1920*100vw), 32px);
+    margin-bottom: clamp(10px, calc(16/1920*100vw), 16px);
 
 }
 .hyaluron-two-in-one-card-info p {
     font-style: normal;
     font-weight: 300;
     font-size: clamp(14px, calc(18/1920*100vw), 18px);
-    line-height: 1.4;
+    line-height: 1.5;
     color: #A484B7;
 }
 .hyaluron-two-in-one-card-button {
@@ -208,7 +210,7 @@ body section.hyaluron-two-in-one-section {
     color: #fff;
     font-weight: 500;
     font-size: clamp(14px, calc(18/1920*100vw), 18px);
-    line-height: 1;
+    line-height: 1.5;
     text-transform: uppercase;
     text-decoration: none;
     opacity: 1;
@@ -220,13 +222,13 @@ body section.hyaluron-two-in-one-section {
 
 
 body section.hyaluron-diff-section {
-    margin-top: clamp(47px, calc(127/1920*100vw), 127px);
+    margin: clamp(64px, calc(128/1920*100vw), 128px) 0;
 }
 .hyaluron-diff-section h3 {
     font-family: 'Cera Pro', sans-serif;
     font-weight: 300;
     font-size: clamp(18px, calc(32/1920*100vw), 32px);
-    line-height: 1.2;
+    line-height: 1.5;
     text-align: center;
     text-transform: uppercase;
     background: linear-gradient(90deg, #DCC2EC -28.87%, #93819E 47.91%, #DCC3ED 98.11%);
@@ -234,7 +236,7 @@ body section.hyaluron-diff-section {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    margin-bottom: clamp(30px, calc(72/1920*100vw), 72px);
+    margin-bottom: clamp(24px, calc(64/1920*100vw), 64px);
 }
 .hyaluron-diff-section h3 b {
     font-weight: 500;
@@ -253,7 +255,7 @@ body section.hyaluron-diff-section {
     width: 100%;
 }
 .hyaluron-diff-side-left {
-    padding-left: 4%;
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -284,42 +286,26 @@ body section.hyaluron-diff-section {
     margin-right: 0.5em;
 }
 .hyaluron-diff-side-right {
-    padding-right: 4%;
+    padding-right: 20px;
 }
 .hyaluron-diff-sides p {
     font-family: 'Cera Pro', sans-serif;
     font-weight: 300;
     font-size: clamp(14px, calc(18/1920*100vw), 18px);
-    line-height: 1.2;
-    color: rgba(34, 29, 30, 0.8);
-    padding-top: clamp(10px, calc(32/1920*100vw), 32px);
+    line-height: 1.5;
+    color: #221D1E;
+    padding-top: clamp(10px, calc(20/1920*100vw), 20px);
 }
 
 body section.hyaluron-proven-section {
-    margin-top: 8%;
-    padding-top: 0;
+    margin-top: 0;
+    padding-top: clamp(64px, calc(128 / 1920* 100vw), 128px);
 }
-.hyaluron-proven-section .hyaluron-proven-title {
-    font-family: 'Cera Pro', sans-serif;
-    font-weight: 500;
-    font-size: clamp(18px, calc(32 / 1920* 100vw), 32px);
-    line-height: 1.3;
-    text-align: center;
-    text-transform: uppercase;
-    background: linear-gradient(90deg, #DCC2EC -28.87%, #93819E 47.91%, #DCC3ED 98.11%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    margin-bottom: clamp(24px, calc(73 / 1920* 100vw), 73px);
-    position: relative;
-    padding-top: 6%;
-}
-.hyaluron-proven-section .hyaluron-proven-title:before {
+.hyaluron-proven-section:before {
     content: '';
     display: block;
     height: 1px;
-    width: 98%;
+    width: calc(100% - clamp(20px, calc(40 / 1920* 100vw), 40px));
     background-color: #EDE6F1;
     position: absolute;
     top: 0;
@@ -327,12 +313,28 @@ body section.hyaluron-proven-section {
     right: 0;
     margin: auto;
 }
+.hyaluron-proven-section .hyaluron-proven-title {
+    font-family: 'Cera Pro', sans-serif;
+    font-weight: 500;
+    font-size: clamp(18px, calc(32 / 1920* 100vw), 32px);
+    line-height: 1.5;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #DCC2EC -28.87%, #93819E 47.91%, #DCC3ED 98.11%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: clamp(24px, calc(64 / 1920* 100vw), 64px);
+    padding: 0 20px;
+    position: relative;
+}
 .hyaluron-proven-section .hyaluron-proven-sub {
     font-family: 'Cera Pro', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: clamp(18px, calc(32 / 1920* 100vw), 32px);
-    line-height: 1.4;
+    line-height: 1.5;
     text-transform: uppercase;
     color: #221D1E;
     text-align: center;
@@ -344,7 +346,7 @@ body section.hyaluron-proven-section {
 .hyaluron-proven-percent {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 3% 8% 8%;
+    padding: clamp(24px, calc(64 / 1920* 100vw), 64px) 8% clamp(24px, calc(128 / 1920* 100vw), 128px);
 }
 .hyaluron-proven-percent-item {
     display: flex;
@@ -447,6 +449,7 @@ body section.hyaluron-proven-section {
 .hyaluron-proven-percent-item-desk {
     display: flex;
     flex-direction: column;
+    gap: 16px;
     background: linear-gradient(90deg, #DCC2EC -28.87%, #93819E 47.91%, #DCC3ED 98.11%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -456,7 +459,7 @@ body section.hyaluron-proven-section {
 .hyaluron-proven-percent-count {
     font-weight: 300;
     font-size: clamp(54px, calc(100 / 1920* 100vw), 100px);
-    line-height: 1.2;
+    line-height: 0.8;
     letter-spacing: -0.05em;
     display: flex;
     align-items: center;
@@ -472,7 +475,7 @@ body section.hyaluron-proven-section {
 .hyaluron-proven-percent-text {
     font-weight: 500;
     font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
-    line-height: 1.2;
+    line-height: 1.5;
     text-transform: uppercase;
 }
 
@@ -498,17 +501,17 @@ body section.hyaluron-proven-section {
     object-fit: cover;
 }
 .hyaluron-proven-wakeup-info {
-    padding-left: 6%;
-    padding-top: 5%;
+    padding-top: clamp(24px, calc(50 / 1920* 100vw), 50px);
+    padding-left: clamp(10px, calc(64 / 1920* 100vw), 64px);
 }
 .hyaluron-proven-wakeup-info-title {
     font-style: normal;
     font-weight: 500;
     font-size: clamp(18px, calc(32 / 1920* 100vw), 32px);
-    line-height: 1.4;
+    line-height: 1.5;
     text-transform: uppercase;
     text-align: start;
-    margin-bottom: 8%;
+    margin-bottom: clamp(24px, calc(64 / 1920* 100vw), 64px);
     background: linear-gradient(90deg, #DCC2EC -28.87%, #93819E 47.91%, #DCC3ED 98.11%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -521,19 +524,18 @@ body section.hyaluron-proven-section {
 .hyaluron-proven-wakeup-info-list {
     display: flex;
     flex-direction: column;
+    gap: clamp(24px, calc(32 / 1920* 100vw), 32px);
     list-style: none;
     height: 100%;
 }
 .hyaluron-proven-wakeup-info-list li {
     display: flex;
     align-items: center;
-    gap: 0 2%;
-    margin-bottom: 5%;
+    gap: 0 clamp(10px, calc(20 / 1920* 100vw), 20px);
     position: relative;
 }
 .hyaluron-proven-wakeup-info-list-icon {
-    margin-top: 2%;
-    width: 10%;
+    width: clamp(78px, calc(98 / 1920* 100vw), 98px);
     position: relative;
 }
 .hyaluron-proven-wakeup-info-list-line {
@@ -556,9 +558,9 @@ body section.hyaluron-proven-section {
     font-family: 'Cera Pro', sans-serif;
     font-weight: 500;
     font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
-    line-height: 1.2;
+    line-height: 1.5;
     text-transform: uppercase;
-    margin-bottom: clamp(6px, calc(20 / 1920* 100vw), 20px);
+    margin-bottom: clamp(10px, calc(16 / 1920* 100vw), 16px);
     background: linear-gradient(90deg, #DCC2EC -28.87%, #93819E 47.91%, #DCC3ED 98.11%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -569,7 +571,7 @@ body section.hyaluron-proven-section {
     font-family: 'Cera Pro', sans-serif;
     font-weight: 300;
     font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
-    line-height: 1.4;
+    line-height: 1.5;
     color: #221D1E;
     width: 80%;
 }
@@ -585,6 +587,7 @@ body section.hyaluron-cutting-edge-section {
 }
 .hyaluron-cutting-edge-img {
     position: relative;
+    padding-top: 24px;
     margin-bottom: -19%;
 }
 .hyaluron-cutting-edge-img picture {
@@ -596,8 +599,8 @@ body section.hyaluron-cutting-edge-section {
 }
 .hyaluron-cutting-edge-info {
     position: absolute;
-    top: 21%;
-    left: 9%;
+    top: 20%;
+    left: 10%;
 }
 .hyaluron-cutting-edge-section h2 {
     font-weight: 500;
@@ -606,8 +609,8 @@ body section.hyaluron-cutting-edge-section {
     text-transform: uppercase;
     color: #A484B7;
     position: absolute;
-    top: 9%;
-    left: 9%;
+    top: 8%;
+    left: 10%;
     z-index: 1;
 }
 .hyaluron-cutting-edge {
@@ -649,8 +652,8 @@ body section.hyaluron-cutting-edge-section {
 .hyaluron-cutting-edge-video .hyaluron-cutting-edge-info {
     top: auto;
     left: auto;
-    bottom: 13%;
-    right: 15%;
+    bottom: 18%;
+    right: 11%;
 }
 .hyaluron-cutting-edge-video .hyaluron-cutting-edge-num {
     background: none;
@@ -695,7 +698,6 @@ body section.hyaluron-cutting-edge-section {
     text-transform: uppercase;
     color: #221D1E;
     padding: 0.4em 20px;
-    /*height: clamp(26px, calc(50 / 1920* 100vw), 50px);*/
     position: relative;
 }
 .pillow-img-box-anty-hydra-item span {
@@ -718,7 +720,7 @@ body section.hyaluron-cutting-edge-section {
 }
 .pillow-img-box-button {
     position: absolute;
-    bottom: -21%;
+    bottom: -19%;
     right: 0;
     left: 0;
 }
@@ -767,28 +769,28 @@ body section.hyaluron-cutting-edge-section {
 }
 .hyaluron-dignities-section .dignities-item.left {
     text-align: right;
-    padding-left: 8%;
+    padding-left: clamp(10px, calc(20 / 1920* 100vw), 20px);
 }
 .hyaluron-dignities-section .dignities-item.right {
     text-align: left;
-    padding-right: 8%;
+    padding-right: clamp(10px, calc(20 / 1920* 100vw), 20px);
 }
 .hyaluron-dignities-section .dignities-item div span:first-child {
     font-family: 'Cera Pro', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
-    line-height: 1.2;
+    line-height: 1.5;
     text-transform: uppercase;
     color: #A484B7;
-    margin-bottom: 4%;
+    margin-bottom: clamp(4px, calc(16 / 1920* 100vw), 16px);
 }
 .hyaluron-dignities-section .dignities-item div span:last-child {
     font-family: 'Cera Pro', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
-    line-height: 1.3;
+    line-height: 1.5;
     color: #221D1E;
     min-height: auto;
 }
@@ -798,10 +800,12 @@ body section.hyaluron-cutting-edge-section {
     height: auto;
 }
 .hyaluron-dignities-section .dignities-item.left img {
-    margin-left: 4%;
+    margin-left: clamp(10px, calc(20 / 1920* 100vw), 20px);
+    width: clamp(78px, calc(120 / 1920* 100vw), 120px);
 }
 .hyaluron-dignities-section .dignities-item.right img {
-    margin-right: 4%;
+    margin-right: clamp(10px, calc(20 / 1920* 100vw), 20px);
+    width: clamp(78px, calc(120 / 1920* 100vw), 120px);
 }
 .pillow-img-box .pillow-img-box-anty-hydra {
     position: absolute;
@@ -817,28 +821,25 @@ body section.hyaluron-cutting-edge-section {
 .hyaluron-dignities-section .pillow-img-box__circles {
     border-color: #BCA6C9;
 }
-.hyaluron-dignities-section  .dignities-item div {
-    margin-bottom: 3%;
-}
+
 
 body section.hyaluron-pillow-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    padding: 8vw 0 0;
-    row-gap: 1vw;
-    margin-bottom: 19vw;
+    grid-column-gap: clamp(10px, calc(20 / 1920* 100vw), 20px);
+    grid-row-gap: clamp(24px, calc(64 / 1920* 100vw), 64px);
+    padding: clamp(64px, calc(256 / 1920* 100vw), 256px) 0 clamp(64px, calc(238 / 1920* 100vw), 238px);
+    margin-top: 0;
 }
 .hyaluron-pillow-section:after {
     content: '';
     display: block;
     height: 1px;
-    width: 98%;
+    width: calc(100% - clamp(20px, calc(40 / 1920* 100vw), 40px));
     background-color: #EDE6F1;
     position: absolute;
-    bottom: -10vw;
+    bottom: 12px;
     left: 0;
     right: 0;
     margin: auto;
@@ -858,6 +859,15 @@ body section.hyaluron-pillow-section {
     align-items: center;
 }
 
+body section.structure-section {
+    margin-top: 0;
+    padding-top: clamp(64px, calc(128 / 1920 * 100vw), 128px);
+}
+body section.structure-section .grid {
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
 .structure-section .slide-description h3 {
     text-align: start;
 }
@@ -897,7 +907,7 @@ body section.hyaluron-pillow-section {
 .bottom-toaster-box-title h3 {
     font-weight: 500;
     font-size: clamp(14px, calc(32 / 1920 * 100vw), 32px);
-    line-height: 1.3;
+    line-height: 1.5;
     text-transform: uppercase;
     color: #221D1E;
 }
@@ -968,17 +978,16 @@ body section.hyaluron-pillow-section {
     .hyaluron-two-in-one-title {
         position: absolute;
         left: auto;
-        right: 3%;
+        right: 5%;
         top: 1%;
         text-align: end;
         padding: 0 10px;
     }
     .hyaluron-two-in-one-card-pillow {
         position: absolute;
-        max-width: 51%;
         top: 0;
         right: 0;
-        transform: translateY(-87%);
+        transform: translateY(-80%);
     }
     .hyaluron-two-in-one-card-fiber {
         position: absolute;
@@ -988,7 +997,7 @@ body section.hyaluron-pillow-section {
         transform: translateY(-75%);
     }
     .hyaluron-two-in-one-card_pillow {
-        margin-bottom: 104px;
+        margin-bottom: 86px;
     }
     .hyaluron-text-section h3 br {
         display: none;
@@ -1010,11 +1019,16 @@ body section.hyaluron-pillow-section {
     .hyaluron-dignities-section .dignities-section__content_left .dignities-item img {
         width: 50px;
     }
-    .hyaluron-dignities-section .dignities-item div span:first-child {
-        margin-bottom: 6px;
+    .hyaluron-dignities-section .dignities-item div span:first-child,
+    .hyaluron-dignities-section .dignities-item div span:last-child {
+        line-height: 1.4;
+    }
+    .hyaluron-dignities-section .dignities-item.right img {
+        margin-right: 0;
     }
     .pillow-img-box .pillow-img-box-anty-hydra {
-        top: -11%;
+        position: static;
+        margin-bottom: 24px;
     }
     .hyaluron-dignities-section .dignities-section__content_center {
         width: auto;
@@ -1042,13 +1056,13 @@ body section.hyaluron-pillow-section {
         right: 4%;
     }
     .hyaluron-text-section h3 {
-        line-height: 1.4;
+        line-height: 1.5;
     }
 
     .hyaluron-diff-sides {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 4%;
+        gap: 24px;
         position: relative;
     }
     .hyaluron-diff-sides:before {
@@ -1065,6 +1079,9 @@ body section.hyaluron-pillow-section {
         padding-right: 10px;
         line-height: 1.4;
     }
+    .hyaluron-diff-side-left-item-wrapper {
+        gap: 10px;
+    }
     .hyaluron-proven-wakeup {
         grid-template-columns: 1fr;
     }
@@ -1076,10 +1093,10 @@ body section.hyaluron-pillow-section {
         font-style: normal;
         font-weight: 500;
         font-size: clamp(18px, calc(32 / 1920* 100vw), 32px);
-        line-height: 1.4;
+        line-height: 1.5;
         text-transform: uppercase;
-        padding-top: 8%;
-        margin-bottom: 8%;
+        padding-top: 24px;
+        margin-bottom: 24px;
         text-align: center;
         background: linear-gradient(90deg, #DCC2EC -28.87%, #93819E 47.91%, #DCC3ED 98.11%);
         -webkit-background-clip: text;
@@ -1088,10 +1105,8 @@ body section.hyaluron-pillow-section {
         text-fill-color: transparent;
     }
     .hyaluron-proven-wakeup-info {
-        padding-left: 3%;
-        padding-top: 7%;
-        padding-bottom: 7%;
-        padding-right: 3%;
+        padding-right: clamp(10px, calc(64 / 1920* 100vw), 64px);
+        padding-bottom: clamp(24px, calc(50 / 1920* 100vw), 50px);
     }
     .hyaluron-proven-wakeup-info-list-icon {
         margin-top: 0;
@@ -1103,8 +1118,8 @@ body section.hyaluron-pillow-section {
     }
     .hyaluron-proven-wakeup-info-list li {
         align-items: start;
-        margin-bottom: 10%;
-        gap: 0 4%;
+        /*margin-bottom: 10%;*/
+        /*gap: 0 4%;*/
     }
     .hyaluron-proven-wakeup-info-list li:last-child {
         margin-bottom: 0;
@@ -1114,14 +1129,15 @@ body section.hyaluron-pillow-section {
     }
     .hyaluron-proven-wakeup-info-list-description p {
         width: 100%;
+        line-height: 1.4;
     }
 
 
     body section.hyaluron-pillow-section {
         display: flex;
         flex-direction: column;
-        gap: 24px;
-        padding: 19% 3% 3%;
+        overflow: hidden;
+        padding: 20% 10px 64px;
     }
     .dignities-section__content_center {
         order: 1;
@@ -1145,7 +1161,7 @@ body section.hyaluron-pillow-section {
         order: 7;
     }
     .hyaluron-dignities-section .dignities-item.left img {
-        margin-right: 3%;
+        /*margin-right: 3%;*/
         margin-left: 0;
     }
     .hyaluron-dignities-section .dignities-item.left {
@@ -1154,15 +1170,17 @@ body section.hyaluron-pillow-section {
         display: flex;
         flex-direction: row-reverse;
         align-items: start;
+        gap: 10px;
     }
     .hyaluron-dignities-section .dignities-item.right {
         text-align: left;
         padding-right: 0;
         display: flex;
         align-items: start;
+        gap: 10px;
     }
     .hyaluron-dignities-section .dignities-item img {
-        width: 23%;
+        /*width: 23%;*/
     }
     .pillow-img-box-anty-hydra-mob {
         display: block;
@@ -1171,16 +1189,17 @@ body section.hyaluron-pillow-section {
         display: none;
     }
     .hyaluron-dignities-section .pillow-img-box .pillow-img-box-picture {
-        width: 100%;
+        width: 120%;
+        margin-bottom: 24px;
+    }
+    .pillow-img-box-anty-hydra-item {
+        padding: 0.7em 20px;
     }
     .pillow-img-box-button {
         position: static;
     }
     .hyaluron-dignities-section .dignities-section__content_center {
         margin-bottom: 2%;
-    }
-    .hyaluron-dignities-section .dignities-item div span:first-child {
-        margin-bottom: 8px;
     }
     .hyaluron-dignities-section .dignities-item div {
         margin-bottom: 0;
@@ -1193,14 +1212,15 @@ body section.hyaluron-pillow-section {
         border-width: 2px;
     }
     .hyaluron-pillow-section:after {
-        background-color: #EAEDFF;
+        background-color: #EDE6F1;
     }
     body section.hyaluron-proven-section {
         display: flex;
         flex-direction: column;
+        padding-top: 0;
     }
     .hyaluron-proven-percent-item {
-        align-items: center;
+        align-items: start;
     }
     .hyaluron-proven-percent-item_line:before,
     .hyaluron-proven-percent-item_line:after {
@@ -1212,6 +1232,8 @@ body section.hyaluron-pillow-section {
     .hyaluron-proven-percent-item-mob {
         display: flex;
         flex-direction: column;
+        align-items: start;
+        gap: 10px;
         background: linear-gradient(90deg, #DCC2EC -28.87%, #93819E 47.91%, #DCC3ED 98.11%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -1237,13 +1259,13 @@ body section.hyaluron-pillow-section {
     }
     .hyaluron-proven-percent {
         order: 2;
-        padding: 0 3%;
+        padding: 0 10px;
         grid-template-columns: 1fr 1fr;
-        margin-bottom: 6%;
+        margin-bottom: 24px;
     }
     .hyaluron-proven-section .hyaluron-proven-sub{
         order: 3;
-        padding: 0 3% 8%;
+        padding: 0 10px 24px;
     }
     .hyaluron-proven-section .hyaluron-proven-title:before {
         background-color: #EDE6F1;
@@ -1253,12 +1275,12 @@ body section.hyaluron-pillow-section {
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
-        line-height: 1;
+        line-height: 1.4;
         text-decoration: underline;
         text-transform: uppercase;
         position: relative;
         order: 4;
-        margin-bottom: 26%;
+        margin-bottom: 28%;
         padding: 0;
         align-self: center;
         background: linear-gradient(90deg, #DCC2EC -28.87%, #93819E 47.91%, #DCC3ED 98.11%);
@@ -1284,17 +1306,13 @@ body section.hyaluron-pillow-section {
     .hyaluron-proven-wakeup-info-list-description b {
         font-weight: 400;
     }
-    .body section.hyaluron-diff-section {
-        margin-bottom: 24%;
-    }
     .hyaluron-cutting-edge-section h2 {
-        margin-bottom: 5%;
         position: static;
         text-align: center;
     }
     body section.hyaluron-cutting-edge-section {
-        margin-top: 22%;
-        padding-bottom: 22%;
+        margin-top: 64px;
+        padding-bottom: 64px;
         position: relative;
         background-color: #fff;
     }
@@ -1302,17 +1320,17 @@ body section.hyaluron-pillow-section {
         content: '';
         display: block;
         height: 1px;
-        width: 94%;
+        width: calc(100% - 20px);
         background-color: #EDE6F1;
         position: absolute;
-        bottom: 3%;
+        bottom: 0;
         left: 0;
         right: 0;
         margin: auto;
     }
-    .pillow-img-box-anty-hydra-item {
-        padding: 0.7em 20px;
-    }
+    /*.pillow-img-box-anty-hydra-item {*/
+    /*    padding: 0.7em 20px;*/
+    /*}*/
     .hyaluron-cutting-edge-info {
         position: static;
     }
@@ -1354,22 +1372,23 @@ body section.hyaluron-pillow-section {
     .hyaluron-cutting-edge-num-desk {
         display: none;
     }
-    .hyaluron-cutting-edge-video .hyaluron-cutting-edge-text br {
-        display: none;
-    }
+    /*.hyaluron-cutting-edge-video .hyaluron-cutting-edge-text br {*/
+    /*    display: none;*/
+    /*}*/
     .hyaluron-cutting-edge-video .hyaluron-cutting-edge-text {
         color: #221D1E;
         font-weight: 300;
         text-transform: none;
+        line-height: 1.4;
     }
     .hyaluron-cutting-edge-text {
         color: #221D1E;
         font-weight: 300;
         text-transform: none;
     }
-    body section.hyaluron-diff-section {
-        margin-bottom: 24%;
-    }
+    /*body section.hyaluron-diff-section {*/
+    /*    margin-bottom: 24%;*/
+    /*}*/
 }
 
 @media (max-width: 576px) {
@@ -1378,9 +1397,6 @@ body section.hyaluron-pillow-section {
     }
     .hyaluron-cutting-edge-num {
         left: 0;
-    }
-    .hyaluron-proven-percent-item-mob {
-        align-items: center;
     }
 }
 
