@@ -890,7 +890,7 @@ body section.structure-section .grid {
 /*bottom-toaster*/
 .bottom-toaster {
     padding: clamp(4px, calc(8 / 1920 * 100vw), 8px) clamp(10px, calc(64 / 1920 * 100vw), 64px);
-    height: clamp(56px, calc(136 / 1920 * 100vw), 136px);
+    height: clamp(56px, calc(80 / 1920 * 100vw), 80px);
     background-color: #fff;
     position: fixed;
     bottom: 0;
@@ -910,18 +910,18 @@ body section.structure-section .grid {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: clamp(8px, calc(20 / 1920 * 100vw), 20px);
+    gap: clamp(8px, calc(32 / 1920 * 100vw), 32px);
     height: 100%;
 }
 .bottom-toaster-box-picture {
-    height: 94%;
+    height: 100%;
 }
 .bottom-toaster-box-picture img {
     max-height: 100%;
 }
 .bottom-toaster-box-title h3 {
     font-weight: 500;
-    font-size: clamp(14px, calc(32 / 1920 * 100vw), 32px);
+    font-size: clamp(14px, calc(24 / 1920 * 100vw), 24px);
     line-height: 1.5;
     text-transform: uppercase;
     color: #221D1E;
@@ -935,7 +935,7 @@ body section.structure-section .grid {
 .bottom-toaster-button .button {
     font-weight: 500;
     font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
-    height: clamp(28px, calc(44 / 1920 * 100vw), 44px);
+    height: clamp(32px, calc(44 / 1920 * 100vw), 44px);
     padding: 0 clamp(16px, calc(32 / 1920 * 100vw), 32px);
     line-height: 1;
     text-transform: uppercase;
