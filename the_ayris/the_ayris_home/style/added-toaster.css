@@ -1,0 +1,57 @@
+.added-toaster {
+    filter: drop-shadow(0px 3px 4px rgba(0, 0, 0, 0.2));
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+    background-color: var(--color-main-bg);
+    padding: 10px;
+    position: fixed;
+    bottom: -100px;
+    right: 10px;
+    z-index: 15;
+    display: flex;
+    gap: 30px;
+    transition: bottom 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    width: 400px;
+}
+.added-toaster.active {
+    bottom: 60px;
+    opacity: 1;
+}
+.added-toaster__picture {
+    width: 50px;
+    height: 60px;
+    display: block;
+    border: 1px solid var(--color-dark-3);
+}
+.added-toaster__picture-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.added-toaster-info {
+    flex: 1;
+}
+.added-toaster-info_title {
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    color: var(--color-dark-3);
+    margin-bottom: 20px;
+}
+.added-toaster-info_descriptor {
+    font-size: 11px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    color: var(--color-gray-1);
+    margin-bottom: 12px;
+}
+.added-toaster__link {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+    line-height: 1;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: var(--color-dark-3);
+}

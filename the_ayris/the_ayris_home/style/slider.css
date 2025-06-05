@@ -1,0 +1,21 @@
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    content: '' !important;
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='29' viewBox='0 0 17 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.5468 13.2873C16.689 13.4075 16.8031 13.5566 16.8814 13.7242C16.9596 13.8919 17.0001 14.0741 17.0001 14.2586C17.0001 14.4431 16.9596 14.6254 16.8814 14.793C16.8031 14.9606 16.689 15.1097 16.5468 15.2299L0.658537 28.4749C0.658537 28.5315 0.600974 28.5598 0.482244 28.5598C0.408881 28.5539 0.337986 28.531 0.275427 28.4928C0.212869 28.4547 0.160442 28.4025 0.122456 28.3404C0.0666851 28.2923 0.0274125 28.2284 0.0100218 28.1574C-0.00736882 28.0865 -0.00203388 28.012 0.0253058 27.9441L10.9773 14.3488L0.0289072 0.573089C-0.0286589 0.456316 0.028909 0.307695 0.255576 0.134303C0.482242 -0.0390878 0.615362 -0.0426264 0.658537 0.134303L16.5468 13.2873Z' fill='%2395928E' fill-opacity='0.49'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: var(--swiper-button-next-prev-width);
+    height: var(--swiper-button-next-prev-height);
+
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    content: '' !important;
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='29' viewBox='0 0 17 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.453196 13.2873C0.310976 13.4075 0.196861 13.5566 0.118616 13.7242C0.0403728 13.8919 -0.000141144 14.0741 -0.000141144 14.2586C-0.000141144 14.4431 0.0403728 14.6254 0.118616 14.793C0.196861 14.9606 0.310976 15.1097 0.453196 15.2299L16.3415 28.4749C16.3415 28.5315 16.399 28.5598 16.5178 28.5598C16.5911 28.5539 16.662 28.531 16.7246 28.4928C16.7871 28.4547 16.8396 28.4025 16.8775 28.3404C16.9333 28.2923 16.9726 28.2284 16.99 28.1574C17.0074 28.0865 17.002 28.012 16.9747 27.9441L6.02271 14.3488L16.9711 0.573089C17.0287 0.456316 16.9711 0.307695 16.7444 0.134303C16.5178 -0.0390878 16.3846 -0.0426264 16.3415 0.134303L0.453196 13.2873Z' fill='%2395928E' fill-opacity='0.49'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: var(--swiper-button-next-prev-width);
+    height: var(--swiper-button-next-prev-height);
+}

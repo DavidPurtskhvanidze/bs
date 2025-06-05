@@ -1,0 +1,72 @@
+.basket-order-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: clamp(32px, calc(58/var(--clamp-width)*100vw), 58px);
+}
+.basket-order-header__title {
+    font-weight: 400;
+    font-size: clamp(23px, calc(28/var(--clamp-width)*100vw), 28px);
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    color: var(--color-dark-3);
+}
+.basket-order-header__info {
+    font-size: clamp(15px, calc(20/var(--clamp-width)*100vw), 20px);
+    line-height: 1;
+    color: var(--color-dark-3);
+}
+.basket-order-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5px;
+    margin-bottom: clamp(32px, calc(88 / var(--clamp-width)* 100vw), 88px);
+}
+.basket-order-list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, calc(30 / var(--clamp-width)* 100vw), 30px);
+    margin-bottom: 50px;
+}
+.basket-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, calc(30 / var(--clamp-width)* 100vw), 30px);
+}
+.basket-info-list__item {
+    padding-bottom: 34px;
+    border-bottom: 1px solid var(--color-dark-3);
+}
+.basket-info-list__item:last-child {
+    border-bottom: none;
+}
+.basket-info-list__item-title {
+    font-size: clamp(14px, calc(16 / var(--clamp-width)* 100vw), 16px);
+    line-height: 1.2;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: var(--color-dark-3);
+    margin-bottom: clamp(18px, calc(24 / var(--clamp-width)* 100vw), 24px);
+    display: inline-block;
+}
+.basket-info-list-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.basket-info-list-detail_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.basket-info-list-detail_item-label {
+    font-size: clamp(13px, calc(16 / var(--clamp-width)* 100vw), 16px);
+    line-height: 1.2;
+    color: var(--color-dark-3);
+    flex: 1;
+}
+.basket-info-list-detail_item-value {
+    font-size: clamp(13px, calc(16 / var(--clamp-width)* 100vw), 16px);
+    line-height: 1.2;
+    color: var(--color-dark-3);
+}

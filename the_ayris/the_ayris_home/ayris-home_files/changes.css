@@ -1,0 +1,327 @@
+
+.suggestions-promo {
+    display: none!important;
+}
+form .suggestions-wrapper {
+    position: absolute;
+    top:100%;
+    left: 0;
+    width: 95%;
+}
+
+
+.banner-with-text-button {
+    display: flex;
+}
+
+.bodyoverflow {
+    margin-right: 17px;
+}
+.bodyoverflow .header{
+    margin-right: 16px;
+}
+
+.letsclose:after {
+    content: '';
+    height: 2px;
+    display: block;
+    background: #444444;
+    width: 0%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+
+    animation: borderoff 2.5s ease-out infinite
+}
+
+@keyframes borderoff {
+    1% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+.empty-cart-message {
+    max-width: 400px;
+    padding: 20px 5px;
+    /*background: #ffffff;
+    background: #9a8162;*/
+    margin:0 auto 20px;
+    text-align: center;
+/* font-weight: 600; */
+/*    border-radius: 20px;*/
+   /* color: #ffffff;*/
+}
+
+.banner.fixheight .banner-bg-picture img{
+    object-position: top;
+}
+.banner.fixheight .banner-bg-picture {
+    /*max-height: 900px;
+    height: 900px;*/
+    /* Если все таки нужно уменьшить высоту баннеров.
+    Если делаем меньше 899 то проверить баннеры с товарами.
+     */
+    max-height: 850px;
+    height: 850px;
+}
+.fixheight-halfig {
+    /* сумаа 899 или 100% heigh */
+}
+.fixheight-halfig .bn-top{
+    height: 373px;
+}
+.fixheight-halfig .bn-bottom{
+    height: 522px;
+}
+
+@media (max-width: 1280px) {
+    .banner.fixheight .banner-bg-picture {
+        /*height: 450px;*/
+    }
+    .banners-wrapper-col-1.banner.fixheight .banner-bg-picture {
+        /*height: 400px;*/
+    }
+    .fixheight-halfig1 .banner.fixheight .banner-bg-picture{
+        height: 100%;
+    }
+    .fixheight-halfig .bn-top{
+        height: auto;
+    }
+    .fixheight-halfig .bn-bottom{
+        height: auto;
+    }
+}
+@media (max-width: 767px) {
+    .banner.fixheight .banner-bg-picture {
+        height: 376px;
+    }
+    .banner.fixheight.banner-mob-vertical .banner-bg-picture {
+        height: auto;
+    }
+    .banners-wrapper-col-1.banner.fixheight .banner-bg-picture {
+        height: 300px;
+    }
+}
+
+.banner-with-links picture img {
+    max-height: 690px;
+}
+
+
+/* tovar page */
+.color-radio__control.pattern {
+    background-size: 26px auto;
+    background-position: center center;
+    border: 1px solid #aaa;
+}
+.color-radio__control:hover {
+    border: 1px solid #888;
+}
+body .product-info {
+    /*height: auto;*/
+    /*overflow: hidden;*/
+    margin-top: 130px;
+}
+@media (max-width: 1280px) {
+    body .product-info {
+        margin-top: 120px;
+    }
+}
+@media (max-width: 1025px) {
+    body .product-section {
+        display: flex;
+    }
+    body .product-info {
+        margin-top: 60px;
+    }
+    .product-info-body {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 767px) {
+    body .product-section {
+        flex-wrap: wrap;
+    }
+    body .product-info {
+        margin-top: 0px;
+    }
+}
+.product-slide-wrap {
+    position: relative;
+}
+.product-picture {
+    height: auto;
+    display: block;
+}
+.product-picture__img {
+    /*height: 100%;*/
+    /*height: auto;*/
+    /*width: auto;*/
+    margin: 0 0 0 auto;
+    object-fit: cover;
+}
+body .product-pictures-wrapper .swiper-wrapper{
+    height: auto;
+    /*height: 100%;*/
+}
+body .product-pictures-wrapper .swiper-slide {
+    height: auto!important;
+    /*height: 100%;*/
+    display: block;
+    /*aspect-ratio: 1;*/
+}
+
+.product-pictures-wrapper .swiper-wrapper {
+    display: flex; /* fix bad verstka */
+}
+.product-pictures-wrapper {
+    /*aspect-ratio: 0.66667;*/
+    /*height: calc(100vh - 132px);*/
+    /*height: calc(100vh - 0px);*/
+    /*height: 100%;*/
+}
+
+@media (max-width: 767px) {
+    .product-pictures-wrapper {
+        /*aspect-ratio: 0.75;*/
+        /*height: calc(100vh - 132px);*/
+        /*height: calc(100vh - 0px);*/
+        /*height: 100%;*/
+    }
+}
+
+.product-pictures-wrapper .swiper-container.swiper-vertical {
+    height: 100%;
+}
+.product-pictures-wrapper .swiper-pagination-bullet {
+    background: #F9F4EC;
+    opacity: 1;
+}
+.product-pictures-wrapper .swiper-pagination-bullet-active {
+    background: #95928E;
+    opacity: 1;
+}
+.swiper-pagination-vertical.swiper-pagination-bullets,
+.swiper-vertical>.swiper-pagination-bullets {
+    top:50%;
+    right: 50px;
+}
+
+.bread-crumbs {
+    /* уже и не помню для чего добавлял. убрал. */
+    /*flex: 0 0 auto;*/
+}
+
+
+/* Forms */
+/*
+.input-container__button:after {
+    content: '';
+    display: block;
+    background-image: url("data:image/svg+xml,%3Csvg width='7' height='13' viewBox='0 0 7 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6.5L1 12' stroke='%2332312F' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 13px;
+}*/
+
+input.required {
+
+}
+
+.input-container_invalid {
+    background-color: #fdd;
+}
+input.input-container_invalid {
+    height:100%;
+}
+fieldset.input-container_invalid {
+    background-color: #fd9e9e36;
+    border: #f00 dashed 1px;
+    padding: 10px 20px;
+}
+
+.radio .radio__input:disabled ~p,
+.radio .radio__input:disabled ~span,
+.radio input:disabled ~p,
+.radio input:disabled ~span {
+    opacity: 0.25;
+    color:#777;
+}
+.radio .radio__input:checked ~ .radio__control:after,
+.radio input:checked ~ .radio__control:after {
+    width: 12px;
+    height: 12px;
+}
+
+.fx-promo-exist.good .input-container__button:after {
+    content: none;
+}
+.input-container__button .ok {
+    display: none;
+    color: var(--color-emerald-green);
+}
+.input-container__button .del {
+    display: none;
+    color: #f44;
+    width: 26px;
+    height: 26px;
+}
+.good .input-container__button .ok {
+    display: block;
+}
+.good .input-container__button:hover .ok{
+    display: none;
+}
+.good .input-container__button:hover .del{
+    display: block;
+}
+.fx-promo-exist.good {
+    border-color: var(--color-emerald-green);
+}
+
+.grid-col-lg-5 .banner:nth-child(5) {
+    display: none;
+}
+
+@media (min-width: 1460px) {
+    .grid-col-lg-5 {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0,1fr));
+        align-items: start;
+    }
+    .grid-col-lg-5 .banner:nth-child(5) {
+        display: flex;
+    }
+}
+
+@media (max-width: 767px) {
+    .product-pictures-wrapper {
+        height: auto;
+    }
+    .product-picture__img {
+        height: auto;
+        width: auto;
+        position: relative;
+        top: -25px;
+        top: 0px;
+    }
+}
+
+@media (min-width: 575px) {
+    .bread-crumbs-full-width {
+        overflow: auto;
+    }
+}
+.product-picture-full-img-link {
+    z-index: 10;
+}
+
+.card-colors__item {
+    background-size: 8px 8px;
+    background-position: 50%;
+}
+

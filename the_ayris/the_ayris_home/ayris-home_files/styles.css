@@ -1,0 +1,43 @@
+@import url('../style/variables.css');
+@import url('../style/normalize.css');
+@import url('../style/fonts.css');
+@import url('../style/globals.css');
+
+@import url('../style/modal.css');
+@import url('../style/table.css');
+@import url('../style/tabs.css?v3');
+@import url('../style/buttons.css');
+@import url('../style/bread-crumbs.css');
+@import url('../style/added-toaster.css');
+@import url('../style/dropdown.css');
+@import url('../style/basket-sidebar.css');
+@import url('../style/basket.css');
+@import url('../style/basket-order.css');
+@import url('../style/forms.css?v13');
+@import url('../style/slider.css');
+@import url('../style/grid.css');
+@import url('../style/header.css?v1.0.4');
+@import url('../style/footer.css');
+@import url('../style/catalog-toolbar.css');
+@import url('../style/product.css');
+@import url('../style/card.css?v1.001');
+@import url('../style/card-horizontal.css');
+@import url('../style/club-form.css');
+@import url('../style/inspired-by.css');
+@import url('../style/menu-drop.css');
+@import url('../style/section.css');
+@import url('../style/text-section.css');
+@import url('../style/banners.css');
+@import url('../style/error.css');
+@import url('../style/faq.css');
+
+/*custom style*/
+@import url('../style/section-with-picture.css');
+@import url('../style/custom-pictures-grid.css');
+@import url('../style/picture-logo.css');
+@import url('../style/picture-big-icon.css');
+
+@import url('../style/utils.css');
+@import url('../style/media.css');
+
+

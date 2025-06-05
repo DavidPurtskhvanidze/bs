@@ -1,0 +1,28 @@
+.page-error {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: clamp(26px, calc(36/var(--clamp-width)*100vw), 36px);
+    padding: clamp(56px, calc(126/var(--clamp-width)*100vw), 126px) 0;
+}
+.page-error-title {
+    font-family: 'RoundhandWeb', serif;
+    font-weight: 500;
+    font-size: clamp(50px, calc(100/var(--clamp-width)*100vw), 100px);
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--color-dark-3);
+}
+.page-error-descriptor {
+    font-weight: 400;
+    font-size: clamp(13px, calc(15/var(--clamp-width)*100vw), 15px);
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: var(--color-dark-3);
+    width: clamp(94%, calc(80/var(--clamp-width)*100vw), 80%);
+    margin: 0 auto;
+}
