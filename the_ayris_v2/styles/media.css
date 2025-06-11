@@ -262,13 +262,21 @@
     /*Product card*/
 
     /*Footer*/
+    .footer-main {
+        justify-content: space-around;
+        column-gap: 10px;
+    }
     .footer-main__section {
-        width: calc(100% / 3);
+        width: auto;
+        padding-inline-end: 0;
+    }
+    .footer-main__title {
+        margin-bottom: clamp(20px, calc(40 / var(--clamp-width) * 100vw), 40px);
     }
     .footer-main__section-form {
         width: 100%;
         justify-content: center;
-        padding-top: 90px;
+        padding-top: 60px;
     }
     .footer-info {
         order: 1;
@@ -417,6 +425,9 @@
     }
     .footer-main__list {
         gap: 7px;
+    }
+    .footer-main__section-form {
+        padding-top: 35px;
     }
     /*Footer*/
 }
@@ -650,6 +661,12 @@
         padding: 0 10px;
     }
     /*FAQ*/
+
+    /*Footer*/
+    .footer-main {
+        justify-content: space-between;
+    }
+    /*Footer*/
 
 }
 
