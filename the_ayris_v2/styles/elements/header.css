@@ -141,6 +141,9 @@
     stroke: var(--color-light-1) !important;
     color: var(--color-light-1);
 }
+.header-menu__item_user-link.active svg rect {
+    stroke: var(--color-accent) !important;
+}
 .header-menu__item_user-link-count {
     font-size: 14px;
     line-height: 1;
