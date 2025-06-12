@@ -38,8 +38,8 @@
 
         --menu-drop-lists-padding: 0;
 
-        --page-banner-padding-block: 50px;
-        --page-banner-padding-inline: 50px;
+        --page-banner-padding-block: 40px;
+        --page-banner-padding-inline: 40px;
 
         --button-font-size: 12px;
         --button-height: 52px;
@@ -323,6 +323,15 @@
     .banner-with-text-button {
         --button-height: 48px;
     }
+    .grid-col-3 .banner-title {
+        font-size: clamp(24px, calc(75 / var(--clamp-width) * 100vw), 75px);
+        --page-banner-padding-block: clamp(20px, calc(50 / var(--clamp-width) * 100vw), 50px);
+        --page-banner-padding-inline: clamp(10px, calc(50 / var(--clamp-width) * 100vw), 50px);
+    }
+    .grid-col-3 .banner-descriptor {
+        --page-banner-padding-block: clamp(20px, calc(50 / var(--clamp-width) * 100vw), 50px);
+        --page-banner-padding-inline: clamp(10px, calc(50 / var(--clamp-width) * 100vw), 50px);
+    }
     /*Banners*/
 
     /*Product card*/
@@ -458,6 +467,17 @@
         display: none;
     }
     /*Bread crumbs*/
+
+    /*Banners*/
+    .banner-title_vertical-center {
+        bottom: calc(var(--page-banner-padding-block) - 0.2em);
+        text-align: start;
+    }
+    .grid-col-3 .banner-title {
+        --page-banner-padding-block: calc(clamp(20px, calc(50 / var(--clamp-width) * 100vw), 50px) - 0.2em);
+        --page-banner-padding-inline: clamp(10px, calc(50 / var(--clamp-width) * 100vw), 50px);
+    }
+    /*Banners*/
 
     /*Catalog toolbar*/
     .catalog-filter-wrapper {
