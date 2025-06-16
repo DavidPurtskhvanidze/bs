@@ -1,7 +1,7 @@
 .tabs__header {
     overflow-x: auto;
-    margin-bottom: 16px;
-    padding-block-end: 4px;
+    margin-bottom: 30px;
+    padding-block-end: 13px;
 }
 .tabs__header::-webkit-scrollbar-track {
     background-color: #D9D9D9;
@@ -41,7 +41,7 @@
     height: 1px;
     background-color: var(--color-dark-3);
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
 }
 .tabs__body-content {
     display: none;
@@ -52,6 +52,9 @@
 }
 .tabs__body-content.active {
     display: block;
+}
+.tabs__body-content ul:last-child {
+    margin-bottom: 0;
 }
 
 @media (max-width: 390px) {
