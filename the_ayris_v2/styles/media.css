@@ -626,19 +626,6 @@
     }
     /*Product popup*/
 
-    /*Card*/
-    .card-title {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .card-descriptor {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    /*Card*/
-
     /*Basket*/
     .basket-card-list .card-horizontal__info-title {
         font-size: 13px;
