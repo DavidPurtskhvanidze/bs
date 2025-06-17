@@ -95,8 +95,8 @@ body section.hyaluron-text-section {
 }
 .hyaluron-text-section h3 {
     font-weight: 500;
-    font-size: clamp(18px, calc(48/1920*100vw), 48px);
-    line-height: 1.2;
+    font-size: clamp(18px, calc(32/1920*100vw), 32px);
+    line-height: 1.5;
     text-align: center;
     text-transform: uppercase;
     background: linear-gradient(90deg, #DCC2EC -28.87%, #93819E 47.91%, #DCC3ED 98.11%);
@@ -351,12 +351,11 @@ body section.hyaluron-proven-section {
     font-family: 'Cera Pro', sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: clamp(18px, calc(32 / 1920* 100vw), 32px);
+    font-size: clamp(14px, calc(18 / 1920* 100vw), 18px);
     line-height: 1.5;
-    text-transform: uppercase;
     color: #221D1E;
     text-align: center;
-    padding: 0 10%;
+    padding: 0 12%;
 }
 .hyaluron-proven-percent {
     display: grid;
@@ -412,21 +411,21 @@ body section.hyaluron-proven-section {
 .hyaluron-proven-percent-item_line:before {
     content: '';
     display: block;
-    height: 120%;
+    height: 100%;
     width: 1px;
     background-color: #EAEDFF;
     position: absolute;
-    top: -20%;
+    top: 0;
     left: 0;
 }
 .hyaluron-proven-percent-item_line:after {
     content: '';
     display: block;
-    height: 120%;
+    height: 100%;
     width: 1px;
     background-color: #EAEDFF;
     position: absolute;
-    top: -20%;
+    top: 0;
     right: 0;
 }
 .hyaluron-proven-percent-item_link a {
@@ -1287,6 +1286,7 @@ body section.structure-section .grid {
     .hyaluron-proven-section .hyaluron-proven-sub{
         order: 3;
         padding: 0 10px 24px;
+        line-height: 1.4;
     }
     .hyaluron-proven-section .hyaluron-proven-title:before {
         background-color: #EDE6F1;
@@ -1294,7 +1294,7 @@ body section.structure-section .grid {
     .hyaluron-proven-percent-link-mob {
         display: inline-block;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 300;
         font-size: 14px;
         line-height: 1.4;
         text-decoration: underline;
