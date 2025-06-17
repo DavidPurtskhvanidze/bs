@@ -5,6 +5,7 @@
     justify-content: center;
     position: relative;
     background-color: #EAEDFF;
+    margin-top: clamp(64px, calc(96 / 1920* 100vw), 96px);
     padding: clamp(16px, calc(64 / 1920* 100vw), 64px) clamp(10px, calc(20 / 1920* 100vw), 20px) clamp(16px, calc(64 / 1920* 100vw), 64px) 0;
 }
 .transformer-section h3 {
