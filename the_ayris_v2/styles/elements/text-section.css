@@ -59,14 +59,14 @@
     display: inline-block;
 }
 .text-section+.page-text-content {
-    padding-top: 0;
+    padding: 0 clamp(10px, calc(50/var(--clamp-width)*100vw), 50px) clamp(40px, calc(50/var(--clamp-width)*100vw), 50px);
 }
 
 
 .ul-list li {
     position: relative;
-    margin-bottom: clamp(8px, calc(16/var(--clamp-width)*100vw), 16px);
-    font-size: clamp(12px, calc(16/var(--clamp-width)*100vw), 16px);
+    margin-bottom: clamp(20px, calc(42/var(--clamp-width)*100vw), 24px);
+    font-size: clamp(16px, calc(18/var(--clamp-width)*100vw), 18px);
     padding-left: 1em;
 }
 .ul-list li:before {
@@ -81,4 +81,7 @@
 }
 .ul-list li:last-child {
     margin-bottom: 0;
+}
+.ul-list li a {
+    text-decoration: underline;
 }
