@@ -13,6 +13,25 @@
     /*Banners*/
 }
 
+@media (max-width: 1440px) {
+    :root {
+        --header-height: 70px;
+        --header-paddin-inline: 40px;
+
+        --page-banner-padding-block: 40px;
+        --page-banner-padding-inline: 40px;
+    }
+
+    /*Catalog toolbar*/
+    .catalog-filter__button {
+        padding-inline: 40px;
+    }
+    .dropdown__button_catalog-toolbar {
+        padding-inline: 40px;
+    }
+    /*Catalog toolbar*/
+}
+
 /*Desktop LG*/
 @media (max-width: 1280px)  {
     .page-container {
@@ -260,6 +279,15 @@
         width: 100%;
     }
     /*Product card*/
+
+    /*Catalog toolbar*/
+    .catalog-filter__button {
+        padding-inline: 20px;
+    }
+    .dropdown__button_catalog-toolbar {
+        padding-inline: 20px;
+    }
+    /*Catalog toolbar*/
 
     /*Footer*/
     .footer-main {
