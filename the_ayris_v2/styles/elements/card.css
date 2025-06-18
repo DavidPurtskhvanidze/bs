@@ -1,6 +1,18 @@
 .card-grid__big-banner {
     grid-area: 1 / 3 / 3 / 5;
 }
+.card-grid__big-banner .banner-bg-picture {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.card-grid__big-banner .banner-bg-picture img {
+    object-position: top;
+}
 .card {
     display: flex;
     flex-direction: column;

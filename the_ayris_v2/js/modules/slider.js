@@ -168,3 +168,22 @@ const cardsButtonBlockSlider = new Swiper('#cardsButtonBlockSlider', {
         clickable : true
     },
 });*/
+
+//addGapBottomBanner
+// This script adds padding to the bottom of a large banner. In a grid.
+function addGapBottomBanner() {
+    let cardBottomOuterHeight = $('.card-bottom').outerHeight();
+    let cardBigBanner = $('.card-grid__big-banner');
+    if (window.innerWidth >= 767) {
+        cardBigBanner.css('margin-bottom', cardBottomOuterHeight);
+    } else {
+        cardBigBanner.removeAttr('style');
+    }
+}
+$(document).ready(function () {
+    addGapBottomBanner();
+});
+$(window).on('resize', function() {
+    addGapBottomBanner();
+});
+//addGapBottomBanner

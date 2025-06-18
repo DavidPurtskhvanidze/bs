@@ -4,6 +4,9 @@
     .banner {
         height: 100%;
     }
+    .card-grid__big-banner {
+        height: auto;
+    }
     .banner-with-links {
         height: 100%;
     }
@@ -329,6 +332,9 @@
 
     .card-grid__big-banner {
         grid-area: 2 / 1 / 3 / 3;
+    }
+    .card-grid__big-banner .banner-bg-picture {
+        position: static;
     }
     .cards-button-block {
         padding-top: 24px;
