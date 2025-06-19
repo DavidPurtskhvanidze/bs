@@ -366,8 +366,9 @@ body section.hyaluron-proven-section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
-    padding: clamp(0px, calc(25 / 1920* 100vw), 25px) 0;
+    padding: clamp(0px, calc(7 / 1920* 100vw), 7px) 0;
 }
 .hyaluron-proven-percent-item-mob {
     display: none;
@@ -463,7 +464,7 @@ body section.hyaluron-proven-section {
 .hyaluron-proven-percent-item-desk {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 5px;
     background: linear-gradient(90deg, #DCC2EC -28.87%, #93819E 47.91%, #DCC3ED 98.11%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -473,7 +474,7 @@ body section.hyaluron-proven-section {
 .hyaluron-proven-percent-count {
     font-weight: 300;
     font-size: clamp(54px, calc(100 / 1920* 100vw), 100px);
-    line-height: 0.7;
+    line-height: 1;
     letter-spacing: -0.05em;
     display: flex;
     align-items: center;
@@ -1248,6 +1249,9 @@ body section.structure-section .grid {
     }
     .hyaluron-proven-percent-item svg {
         width: 80%;
+    }
+    .hyaluron-proven-percent-item {
+        justify-content: flex-start;
     }
     .hyaluron-proven-percent-item-mob {
         display: flex;
