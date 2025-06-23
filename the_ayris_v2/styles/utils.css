@@ -70,9 +70,9 @@
 .align-items-center {
     align-items: center;
 }
-/*.justify-content-center {*/
-/*    justify-content: center;*/
-/*}*/
+.justify-content-center {
+    justify-content: center;
+}
 
 /*Desktop XL*/
 @media (max-width: 1440px) {
