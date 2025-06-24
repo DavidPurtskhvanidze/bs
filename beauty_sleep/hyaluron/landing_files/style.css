@@ -1,14 +1,99 @@
 /*это не нужно, это временно чтобы удобно было работать*/
-/*body * {*/
-/*    transition: none !important;*/
-/*}*/
-/*html {*/
-/*    overflow: auto !important;*/
-/*}*/
-/*html body {*/
-/*    overflow: auto !important;*/
-/*}*/
+body * {
+    transition: none !important;
+}
+html {
+    overflow: auto !important;
+}
+html body {
+    overflow: auto !important;
+}
 /*это не нужно, это временно чтобы удобно было работать*/
+
+/*new changed animation*/
+:root {
+    --pillow-circles-scale: 2;
+}
+@-webkit-keyframes pillow-circles {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        -webkit-transform: scale(var(--pillow-circles-scale));
+        transform: scale(var(--pillow-circles-scale));
+        opacity: 0
+    }
+}
+@-moz-keyframes pillow-circles {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        -moz-transform: scale(var(--pillow-circles-scale));
+        transform: scale(var(--pillow-circles-scale));
+        opacity: 0
+    }
+}
+@-o-keyframes pillow-circles {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        -o-transform: scale(var(--pillow-circles-scale));
+        transform: scale(var(--pillow-circles-scale));
+        opacity: 0
+    }
+}
+@keyframes pillow-circles {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        -webkit-transform: scale(var(--pillow-circles-scale));
+        -moz-transform: scale(var(--pillow-circles-scale));
+        -o-transform: scale(var(--pillow-circles-scale));
+        transform: scale(var(--pillow-circles-scale));
+        opacity: 0
+    }
+}
+/*new changed animation*/
+
+/*footer-strofa*/
+.footer-strofa {
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
+    line-height: 1.5;
+    text-transform: uppercase;
+    background: linear-gradient(65.37deg, #F0C9D1 0%, #6E89C3 108.19%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    border-top: 1px solid #EAEDFF;
+    border-bottom: 1px solid #EAEDFF;
+    padding: clamp(16px, calc(32 / 1920 * 100vw), 32px) clamp(10px, calc(20 / 1920 * 100vw), 20px);
+    margin: clamp(64px, calc(96 / 1920 * 100vw), 96px) 0;
+}
+@media (max-width: 576px) {
+    .footer-strofa {
+        text-align: center;
+        line-height: 1.7;
+    }
+}
+/*footer-strofa*/
 
 .br-mobile {
     display: none;
@@ -126,7 +211,7 @@ body section.hyaluron-two-in-one-section {
 }
 .hyaluron-two-in-one-title {
     font-family: 'Cera Pro', sans-serif;
-    font-weight: 300;
+    font-weight: 250;
     font-size: clamp(90px, calc(180/1920*100vw), 180px);
     line-height: 1;
     align-items: center;
@@ -832,10 +917,27 @@ body section.hyaluron-cutting-edge-section {
 .hyaluron-dignities-section .pillow-img-box__circles::after,
 .hyaluron-dignities-section .pillow-img-box__circles::before {
     border-color: #BCA6C9;
+    -webkit-animation: pillow-circles 3s ease-in-out infinite forwards;
+    -moz-animation: pillow-circles 3s ease-in-out infinite forwards;
+    -o-animation: pillow-circles 3s ease-in-out infinite forwards;
+    animation: pillow-circles 3s ease-in-out infinite forwards;
+}
+.hyaluron-dignities-section .pillow-img-box__circles::after {
+    -webkit-animation-delay: .9s;
+    -moz-animation-delay: .9s;
+    -o-animation-delay: .9s;
+    animation-delay: .9s;
+    -webkit-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    -o-animation-duration: 3s;
+    animation-duration: 3s
 }
 .hyaluron-dignities-section .pillow-img-box__circles {
     border-color: #BCA6C9;
+    width: 17vw;
+    height: 17vw;
 }
+
 
 
 body section.hyaluron-pillow-section {
@@ -1050,9 +1152,10 @@ body section.structure-section .grid {
     }
     .hyaluron-dignities-section .pillow-img-box__circles {
         position: absolute;
-        width: 14vw;
-        height: 14vw;
+        width: 17vw;
+        height: 17vw;
         border-width: 3px;
+        margin-top: 15%;
     }
     .hyaluron-dignities-section .dignities-item img {
         width: 28%;
@@ -1213,7 +1316,7 @@ body section.structure-section .grid {
         display: none;
     }
     .hyaluron-dignities-section .pillow-img-box .pillow-img-box-picture {
-        width: 120%;
+        width: 100%;
         margin-bottom: 24px;
     }
     .pillow-img-box-anty-hydra-item {
@@ -1233,7 +1336,11 @@ body section.structure-section .grid {
         position: absolute;
         width: 44vw;
         height: 44vw;
-        border-width: 2px;
+        margin-top: 4%;
+    }
+    .hyaluron-dignities-section .pillow-img-box__circles::after,
+    .hyaluron-dignities-section .pillow-img-box__circles::before {
+        border-width: 3px;
     }
     .hyaluron-pillow-section:after {
         background-color: #EDE6F1;
@@ -1269,8 +1376,8 @@ body section.structure-section .grid {
     }
     .hyaluron-proven-percent-link-mob svg {
         position: absolute;
-        bottom: 11%;
-        right: -12%;
+        bottom: -62%;
+        right: -11%;
         width: 10%;
         height: auto;
     }

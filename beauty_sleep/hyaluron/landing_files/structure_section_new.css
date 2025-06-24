@@ -75,6 +75,9 @@
     line-height: 1.4;
     margin-bottom: 16px;
 }
+.structure-list li span {
+    font-weight: 500;
+}
 .structure-list {
     width: 460px;
     margin-left: 150px;
