@@ -10,6 +10,31 @@ html body {
 }
 /*это не нужно, это временно чтобы удобно было работать*/
 
+/*footer-strofa*/
+.footer-strofa {
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
+    line-height: 1.5;
+    text-transform: uppercase;
+    background: linear-gradient(65.37deg, #F0C9D1 0%, #6E89C3 108.19%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    border-top: 1px solid #EAEDFF;
+    border-bottom: 1px solid #EAEDFF;
+    padding: clamp(16px, calc(32 / 1920 * 100vw), 32px) clamp(10px, calc(20 / 1920 * 100vw), 20px);
+    margin: clamp(64px, calc(96 / 1920 * 100vw), 96px) 0;
+}
+@media (max-width: 576px) {
+    .footer-strofa {
+        text-align: center;
+        line-height: 1.7;
+    }
+}
+/*footer-strofa*/
+
 .br-mobile {
     display: none;
 }
@@ -72,7 +97,7 @@ body section.linen-tips {
     background-color: #F6F7F9;
     display: flex;
     flex-wrap: wrap;
-    padding: clamp(24px, calc(32/1920*100vw), 32px) clamp(16px, calc(20/1920*100vw), 20px);
+    padding: clamp(24px, calc(32/1920*100vw), 32px) clamp(10px, calc(20/1920*100vw), 20px);
     gap: clamp(16px, calc(20/1920*100vw), 20px);
     margin-top: 0;
 }
@@ -152,7 +177,7 @@ body section.linen-video-section {
 /*linen-unique-structure*/
 body section.linen-unique-structure {
     margin: 0;
-    padding-bottom: clamp(24px, calc(64/1920*100vw), 64px);
+    padding-bottom: clamp(24px, calc(96/1920*100vw), 96px);
     background-color: #FCF9F9;
 }
 .linen-unique-structure-wrapper {
@@ -163,14 +188,17 @@ body section.linen-unique-structure {
 .linen-unique-structure-video {
     background-color: #EAEDFF;
     grid-area: 1 / 1 / 4 / 2;
+    max-height: 616px;
 }
 .linen-unique-structure-video video {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    max-height: 616px;
 }
 .linen-unique-structure h4 {
     grid-area: 1 / 2 / 2 / 3;
+    align-self: end;
     font-weight: 500;
     font-size: clamp(18px, calc(32/1920*100vw), 32px);
     line-height: 1.5;
@@ -188,7 +216,7 @@ body section.linen-unique-structure {
 }
 .linen-unique-structure ul {
     grid-area: 3 / 2 / 4 / 3;
-    padding: 0 clamp(10px, calc(20/1920*100vw), 20px) clamp(24px, calc(70/1920*100vw), 70px);
+    padding: 0 clamp(10px, calc(20/1920*100vw), 20px) clamp(64px, calc(70/1920*100vw), 70px);
     list-style: none;
     display: inline-flex;
     flex-direction: column;
@@ -311,7 +339,7 @@ body section.picture-cards-section {
 .picture-cards-section-wrapper {
     display: flex;
     gap: 20px;
-    aspect-ratio: 1880 / 668;
+    aspect-ratio: 1880 / 644;
     width: 100%;
     height: 100%;
 }
@@ -468,8 +496,8 @@ body section.picture-cards-section {
 /*comparison-material-section*/
 body section.comparison-material-section {
     background-color: #FCF9F9;
-    margin: 0;
-    padding: 64px 20px 64px;
+    margin: 0 0 clamp(64px, calc(96/1920*100vw), 96px);
+    padding: 64px clamp(10px, calc(20 / 1920 * 100vw), 20px) clamp(32px, calc(64/1920*100vw), 64px);
 }
 .comparison-material-section h3 {
     font-weight: 300;
@@ -582,7 +610,7 @@ body section.linen-cooper-blend-section {
 .linen-cooper-blend-info-item {
     padding-top: clamp(24px, calc(20/1920*100vw), 20px);
 }
-.linen-cooper-blend-info-item svg {
+.linen-cooper-blend-info-item img {
     display: none;
 }
 .linen-cooper-blend-info-item h5 {
@@ -799,7 +827,7 @@ body section.linen-clinic-anti-section {
     line-height: 1.5;
     text-transform: uppercase;
     color: #221D1E;
-    margin-bottom: clamp(24px, calc(64/1920*100vw), 64px);
+    margin-bottom: clamp(12px, calc(64/1920*100vw), 64px);
     text-align: center;
 }
 .linen-clinic-anti-section h3 b {
@@ -824,11 +852,11 @@ body section.linen-clinic-anti-section {
 }
 .linen-clinic-anti-wrapper h4 {
     font-weight: 300;
-    font-size: clamp(18px, calc(32/1920*100vw), 32px);
+    font-size: clamp(14px, calc(18/1920*100vw), 18px);
     line-height: 1.5;
-    text-transform: uppercase;
+    text-transform: none;
     color: #221D1E;
-    margin-bottom: clamp(32px, calc(64/1920*100vw), 64px);
+    margin-bottom: clamp(24px, calc(64/1920*100vw), 64px);
     text-align: center;
 }
 .linen-clinic-anti-wrapper h4 b {
@@ -925,8 +953,8 @@ body section.linen-clinic-anti-section {
 }
 .linen-clinic-anti-percent-item_link-text-mob svg {
     position: absolute;
-    bottom: -20px;
-    right: -20px;
+    bottom: -10px;
+    right: -24px;
 }
 .linen-clinic-anti-percent-item_link-text {
     font-weight: 400;
@@ -954,7 +982,7 @@ body section.linen-clinic-anti-section {
 
 /*linen-perfection-section*/
 body section.linen-perfection-section {
-    margin: 0;
+    margin: 0 0 clamp(64px, calc(96 / 1920 * 100vw), 96px);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1109,7 +1137,7 @@ body section.linen-perfection-section {
         font-weight: 300;
     }
     body section.comparison-material-section {
-        padding: 0 0 64px;
+        padding: 0;
         background-color: #fff;
     }
     .comparison-material-item:first-child .comparison-material-item-title {
@@ -1129,6 +1157,7 @@ body section.linen-perfection-section {
     }
     .comparison-material-item {
         display: flex;
+        align-items: stretch;
         gap: 0;
     }
     .comparison-material-item-title {
@@ -1153,10 +1182,15 @@ body section.linen-perfection-section {
         z-index: 0;
     }
     .comparison-material-item-info {
-        align-items: center;
         width: 50%;
+        display: flex;
+        align-items: stretch;
+        padding: 8px 8px 20px;
+        line-height: 1.4;
+        height: auto;
     }
-    .comparison-material-item-info {
+    .comparison-material-item:first-child .comparison-material-item-info,
+    .comparison-material-item:last-child .comparison-material-item-info {
         padding: 8px;
     }
 
@@ -1169,6 +1203,9 @@ body section.linen-perfection-section {
     .linen-clinic-anti-percent-item_link-text-mob {
         display: flex;
         text-align: center;
+    }
+    .linen-clinic-anti-wrapper h4 {
+        line-height: 1.4;
     }
 
     body section.linen-cooper-blend-section {
@@ -1206,25 +1243,32 @@ body section.linen-perfection-section {
     }
     .linen-cooper-blend-molecul {
         order: 3;
+        width: 100%;
     }
     .linen-cooper-blend-bg-img {
         order: 2;
         position: relative;
     }
-    .linen-cooper-blend-molecul img {
+    .linen-cooper-blend-molecul .linen-cooper-blend-molecul-img {
         display: none;
     }
     .linen-cooper-blend-molecul .box {
         position: relative;
         grid-template-rows: 1fr 1fr 1fr;
     }
+    .linen-cooper-blend-info-item h5 {
+        line-height: 1.4;
+    }
+    .linen-cooper-blend-info-item p {
+        line-height: 1.4;
+    }
     .box h4 {
         display: none;
     }
-    .linen-cooper-blend-info-item svg {
+    .linen-cooper-blend-info-item img {
         display: block;
-        width: 80px;
-        height: 80px;
+        width: 78px;
+        height: 78px;
     }
     .linen-cooper-blend-info-item > div {
         flex: 1;
@@ -1354,7 +1398,7 @@ body section.linen-perfection-section {
     }
 
     body section.linen-cooper-fiber-section {
-        padding: 64px 10px 16px;
+        padding: 64px 0 16px;
     }
     .linen-cooper-fiber-box-item {
         padding: 8px;
@@ -1381,13 +1425,13 @@ body section.linen-perfection-section {
         background-color: #C49375;
         position: absolute;
         border-radius: 50%;
-        top: -2px;
+        top: -22%;
         right: -2px;
     }
     .linen-cooper-fiber-box-item:nth-child(1):after {
         content: '';
         width: 80%;
-        height: 100%;
+        height: 120%;
         display: block;
         border-right: 1px solid #C49375;
         border-bottom: 1px solid #C49375;
@@ -1404,13 +1448,13 @@ body section.linen-perfection-section {
         background-color: #C49375;
         position: absolute;
         border-radius: 50%;
-        top: -2px;
+        top: -22%;
         left: -1px;
     }
     .linen-cooper-fiber-box-item:nth-child(2):after {
         content: '';
         width: 80%;
-        height: 100%;
+        height: 120%;
         display: block;
         border-left: 1px solid #C49375;
         border-bottom: 1px solid #C49375;
@@ -1444,6 +1488,9 @@ body section.linen-perfection-section {
     .linen-cooper-fiber-box-item:nth-child(4):before,
     .linen-cooper-fiber-box-item:nth-child(4):after {
         display: none;
+    }
+    .linen-cooper-fiber-box-item p {
+        line-height: 1.4;
     }
 
 }
@@ -1481,18 +1528,22 @@ body section.linen-perfection-section {
     }
     .linen-unique-structure h4 {
         text-align: center;
+        align-self: center;
     }
     .linen-unique-structure p {
         text-align: center;
     }
     .linen-unique-structure-video {
         aspect-ratio: 340 / 320;
-        margin-bottom: 24px;
+        margin-bottom: 10px;
     }
     .linen-unique-structure-video video {
         object-fit: cover;
         width: 100%;
         height: 100%;
+    }
+    .linen-unique-structure p {
+        line-height: 1.4;
     }
 
     .linen-perfection-text {
@@ -1505,9 +1556,16 @@ body section.linen-perfection-section {
 
     .linen-details-item {
         width: 100%;
+        margin-bottom: 16px;
     }
     .linen-details-wrapper {
-        gap: 24px;
+        gap: 0;
+    }
+    .linen-details-info p {
+        line-height: 1.4;
+    }
+    body section.linen-details {
+        padding-bottom: 8px;
     }
     .linen-details-img {
         width: 100%;
