@@ -187,3 +187,24 @@ $(window).on('resize', function() {
     addGapBottomBanner();
 });
 //addGapBottomBanner
+
+
+
+// fx- addMarginToBottomOfBanner
+// This script adds padding to the bottom of a large banner. In a grid.
+function addMarginToBottomOfBanner() {
+    let cardBottomOuterHeight = $('.card-bottom').outerHeight();
+    let cardBigBanner = $('.fx-big-banner-margin-bottom');
+    if (window.innerWidth >= 767) {
+        cardBigBanner.css('margin-bottom', cardBottomOuterHeight);
+    } else {
+        cardBigBanner.removeAttr('style');
+    }
+}
+$(document).ready(function () {
+    addMarginToBottomOfBanner();
+});
+$(window).on('resize', function() {
+    addMarginToBottomOfBanner();
+});
+// fx- addMarginToBottomOfBanner
