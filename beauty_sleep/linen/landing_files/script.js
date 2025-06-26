@@ -57,7 +57,21 @@ document.querySelectorAll('.card').forEach(card => {
     const sizeButtons = card.querySelectorAll('.card-size');
     const images = card.querySelectorAll('.card-picture img');
 
+    const colorList = card.querySelector('.card-colors');
+    if (colorButtons.length > 3 && colorList) {
+        colorList.classList.add('collapse');
+        const moreBtn = document.createElement('div');
+        moreBtn.className = 'card-color more-colors';
+        moreBtn.textContent = `+${(colorButtons.length) - 2}`;
+        colorList.querySelector('.card-colors-list').appendChild(moreBtn);
+
+        colorList.addEventListener('click', () => {
+            colorList.classList.remove('collapse');
+        });
+    }
+
     colorButtons.forEach(button => {
+
         button.addEventListener('click', () => {
             const selectedColor = button.getAttribute('data-color');
 
