@@ -688,6 +688,13 @@ body section.linen-cooper-blend-section {
     width: 100%;
     height: 100%;
 }
+.molecul-img-1 {
+    width: 2.6vw;
+    height: 2.6vw;
+    position: absolute;
+    top: 1%;
+    right: 41%;
+}
 .box h4 {
     align-self: center;
     font-weight: 300;
@@ -1013,7 +1020,7 @@ body section.linen-perfection-section {
 }
 .linen-perfection-text {
     position: absolute;
-    bottom: clamp(24px, calc(64 / 1920 * 100vw), 64px);
+    bottom: clamp(28px, calc(64 / 1920 * 100vw), 64px);
     max-width: 60%;
 }
 .linen-perfection-text h3 {
@@ -1023,7 +1030,7 @@ body section.linen-perfection-section {
     line-height: 1.5;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: clamp(16px, calc(32 / 1920 * 100vw), 32px);
+    margin-bottom: clamp(10px, calc(32 / 1920 * 100vw), 32px);
     position: relative;
     z-index: 1;
     padding: 0 10px;
