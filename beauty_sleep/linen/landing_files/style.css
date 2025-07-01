@@ -257,6 +257,7 @@ body section.linen-details {
     display: flex;
     flex-wrap: wrap;
     column-gap: clamp(24px, calc(20/1920*100vw), 20px);
+    row-gap: 10px;
 }
 .linen-details-title {
     flex: 1 1 100%;
