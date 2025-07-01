@@ -2,12 +2,12 @@
 /*body * {*/
 /*    transition: none !important;*/
 /*}*/
-html {
-    overflow: auto !important;
-}
-html body {
-    overflow: auto !important;
-}
+/*html {*/
+/*    overflow: auto !important;*/
+/*}*/
+/*html body {*/
+/*    overflow: auto !important;*/
+/*}*/
 /*это не нужно, это временно чтобы удобно было работать*/
 
 /*footer-strofa*/
