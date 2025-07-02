@@ -52,8 +52,8 @@
     --menu-drop-lists-padding: 60px;
 
     --baner-height: 900px;
-    --page-banner-padding-block: 60px;
-    --page-banner-padding-inline: 60px;
+    --page-banner-padding-block: clamp(20px, calc(50 / var(--clamp-width) * 100vw), 50px);
+    --page-banner-padding-inline: clamp(10px, calc(50 / var(--clamp-width) * 100vw), 50px);
 
     --input-height: 52px;
     --input-inline-padding: 20px;

@@ -1,5 +1,6 @@
 /*Banner common*/
 .banner {
+    --clamp-width: 1920;
     position: relative;
     display: flex;
     align-items: center;
@@ -201,7 +202,7 @@
     bottom: 0;
     left: 0;
     position: absolute;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.5) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.4) 100%);
 }
 .banner-with-links picture {
     display: block;
@@ -237,7 +238,6 @@
     border-top: 1.3px solid var(--color-light-1);
 }
 .banner-links-list-item {
-    flex: 1;
     line-height: 1;
 }
 .banner-links-list-link {

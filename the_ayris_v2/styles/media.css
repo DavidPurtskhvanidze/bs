@@ -1,7 +1,13 @@
 /*Desktop XXL*/
 @media (min-width: 1921px)  {
+    :root {
+        --page-banner-padding-block: 60px;
+        --page-banner-padding-inline: 60px;
+    }
+
     /*Banners*/
     .banner {
+        --clamp-width: 1440;
         height: 100%;
     }
     .card-grid__big-banner {
@@ -20,9 +26,8 @@
     :root {
         --header-height: 70px;
         --header-paddin-inline: 40px;
-
-        --page-banner-padding-block: 40px;
-        --page-banner-padding-inline: 40px;
+        --page-banner-padding-block: clamp(20px, calc(40 / var(--clamp-width) * 100vw), 40px);
+        --page-banner-padding-inline: clamp(10px, calc(40 / var(--clamp-width) * 100vw), 40px);
     }
 
     /*Catalog toolbar*/
@@ -33,6 +38,27 @@
         padding-inline: 40px;
     }
     /*Catalog toolbar*/
+
+    /*Banners*/
+    .banner {
+        --clamp-width: 1440;
+    }
+    .banner-title {
+        font-size: clamp(24px, calc(58 / var(--clamp-width) * 100vw), 58px);
+    }
+    .banner-descriptor {
+        font-size: clamp(10px, calc(15 / var(--clamp-width) * 100vw), 15px);
+    }
+    .grid-col-3 .banner-title {
+        font-size: clamp(24px, calc(34 / var(--clamp-width) * 100vw), 34px);
+    }
+    .banner-with-links-title {
+        font-size: clamp(24px, calc(34 / var(--clamp-width) * 100vw), 34px);
+    }
+    .banner-links-list-link {
+        font-size: clamp(13px, calc(19 / var(--clamp-width) * 100vw), 19px);
+    }
+    /*Banners*/
 }
 
 /*Desktop LG*/
@@ -59,9 +85,6 @@
         --header-paddin-inline: 20px;
 
         --menu-drop-lists-padding: 0;
-
-        --page-banner-padding-block: 40px;
-        --page-banner-padding-inline: 40px;
 
         --button-font-size: 12px;
         --button-height: 52px;
@@ -215,14 +238,6 @@
     .picture-big-icon {
         height: auto;
     }
-    .grid-col-3 .banner-title {
-        --page-banner-padding-block: 40px;
-        --page-banner-padding-inline: 40px;
-    }
-    .grid-col-3 .banner-descriptor {
-        --page-banner-padding-block: 40px;
-        --page-banner-padding-inline: 40px;
-    }
     /*Banners*/
 
     /*Banner with links*/
@@ -319,8 +334,6 @@
 /*Mobile SM*/
 @media (max-width: 767px) {
     :root {
-        --page-banner-padding-block: clamp(20px, calc(50/var(--clamp-width)*100vw), 50px);
-        --page-banner-padding-inline: clamp(10px, calc(50/var(--clamp-width)*100vw), 50px);
         --footer-padding: 10px;
         --gap: 2px;
         --modal-padding: 10px
@@ -358,13 +371,10 @@
         --button-height: 48px;
     }
     .grid-col-3 .banner-title {
-        font-size: clamp(24px, calc(75 / var(--clamp-width) * 100vw), 75px);
-        --page-banner-padding-block: clamp(20px, calc(50 / var(--clamp-width) * 100vw), 50px);
-        --page-banner-padding-inline: clamp(10px, calc(50 / var(--clamp-width) * 100vw), 50px);
+        font-size: clamp(24px, calc(58 / var(--clamp-width) * 100vw), 58px);
     }
-    .grid-col-3 .banner-descriptor {
-        --page-banner-padding-block: clamp(20px, calc(50 / var(--clamp-width) * 100vw), 50px);
-        --page-banner-padding-inline: clamp(10px, calc(50 / var(--clamp-width) * 100vw), 50px);
+    .banner-with-links-title {
+        font-size: clamp(24px, calc(58 / var(--clamp-width) * 100vw), 58px);
     }
     /*Banners*/
 
@@ -502,16 +512,6 @@
     }
     /*Bread crumbs*/
 
-    /*Banners*/
-    .banner-title_vertical-center {
-        bottom: calc(var(--page-banner-padding-block) - 0.2em);
-        text-align: start;
-    }
-    .grid-col-3 .banner-title {
-        --page-banner-padding-block: calc(clamp(20px, calc(50 / var(--clamp-width) * 100vw), 50px) - 0.2em);
-        --page-banner-padding-inline: clamp(10px, calc(50 / var(--clamp-width) * 100vw), 50px);
-    }
-    /*Banners*/
 
     /*Catalog toolbar*/
     .catalog-filter-wrapper {
