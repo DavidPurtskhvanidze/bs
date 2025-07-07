@@ -50,6 +50,11 @@
     overflow: hidden;
     display: flex;
 }
+.transformer-video {
+    border-radius: clamp(15px, calc(32 / 1920* 100vw), 32px);
+    overflow: hidden;
+    display: flex;
+}
 .transformer-item .transformer-label {
     position: absolute;
     left: clamp(14px, calc(32 / 1920* 100vw), 32px);
