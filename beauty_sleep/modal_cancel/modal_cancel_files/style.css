@@ -54,8 +54,18 @@
     line-height: 1.55;
     border-bottom: 1px solid var(--gray);
 }
+.cancel-data-form .input-box input.error,
+.cancel-data-form .input-box textarea.error {
+    border-color: #ff4569;
+}
 .cancel-data-form .input-box:hover label:not(.error) {
     transform: translate(0, -16px);
+}
+.cancel-data-form .input-box.inserted label:not(.error) {
+    transform: translate(0, -16px);
+}
+.cancel-data-form label.error {
+    line-height: 1.55;
 }
 .cancel-data-form .input__container {
     margin-bottom: clamp(16px, calc(32 / var(--clamp-width) * 100vw), 32px);

@@ -678,6 +678,16 @@ test
               <input type="email" required="" name="email">
             </div>
           </div>
+          <div class="input__container">
+            <div class="input-box inserted">
+              <label>Номер телефона*</label>
+              <input type="text" required="" name="phone" id="phone" autocomplete="disabled" class="required valid" aria-invalid="false">
+            </div>
+            <div class="input-box inserted">
+              <label>Email*</label>
+              <input type="email" data-si-form="" data-si-preset="msdcaddemail" data-si-nosave="" data-si-event="change" required="" name="email" id="email" autocomplete="disabled" class="required error" aria-invalid="true"><label id="email-error" class="error" for="email">Пожалуйста, введите корректный адрес электронной почты.</label>
+            </div>
+          </div>
           <div class="input-box">
             <label>Комментарий</label>
             <input required="" type="text" placeholder="" name="comment">
@@ -716,13 +726,6 @@ test
         оснований, указанных в пунктах 2–11 части 1 статьи 6, части 2 статьи 10 и части 2 статьи
         11 Федерального закона № 152-ФЗ «О персональных данных».
       </p>
-
-      <div class="form-success">
-        <h3>Спасибо!</h3>
-        <img loading="lazy" src="/static/img/form-success.svg" alt="success">
-        <span>Отзыв отправлен</span>
-        <button class="button gradient close_btn"> <span>закрыть</span> </button>
-      </div>
     </div>
   </div>
 </div>
