@@ -1,0 +1,136 @@
+/*popup-content_cancel-data*/
+.popup-content_cancel-data {
+    --clamp-width: 1920;
+    padding: clamp(30px, calc(40 / var(--clamp-width) * 100vw), 40px) clamp(30px, calc(120 / var(--clamp-width) * 100vw), 120px);
+}
+.popup-content_cancel-data .fancybox-button svg path {
+    fill: var(--nut);
+    stroke-width: 0;
+}
+.popup-content_cancel-data .input-group + .input-group {
+    margin-top: clamp(20px, calc(25 / var(--clamp-width) * 100vw), 25px);
+}
+.popup-content_cancel-data .input-group input:last-child {
+    margin: 0;
+}
+.popup-content_cancel-data .input-group textarea:last-child {
+    margin: 0;
+}
+.popup-content_cancel-data .error {
+    border-width: 0 0 1px !important;
+    background: #fee;
+}
+.cancel-data-title {
+    font-weight: 500;
+    font-size: clamp(14px, calc(22 / var(--clamp-width) * 100vw), 22px);
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+    color: #3C3C3B;
+    margin-bottom: clamp(30px, calc(35 / var(--clamp-width) * 100vw), 35px);
+}
+.popup-content_cancel-data input,
+.popup-content_cancel-data select,
+.popup-content_cancel-data textarea {
+    font-size: clamp(7px, calc(10 / var(--clamp-width) * 100vw), 10px);
+    font-weight: 500;
+    padding: clamp(10px, calc(15 / var(--clamp-width) * 100vw), 15px) 0;
+    margin: 0 0 10px;
+}
+.cancel-data-desc {
+    font-weight: 500;
+    font-size: clamp(8px, calc(9 / var(--clamp-width) * 100vw), 9px);
+    line-height: 1.3;
+    text-align: center;
+    color: rgba(130, 130, 130, 0.4);
+}
+.popup-content_cancel-data textarea {
+    background-color: #FEFCFB;
+    padding: 10px 15px;
+}
+.cancel-data-checkbox-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: clamp(30px, calc(35 / var(--clamp-width) * 100vw), 35px) 0;
+    gap: clamp(10px, calc(15 / var(--clamp-width) * 100vw), 15px);
+}
+.cancel-data-checkbox {
+    cursor: pointer;
+}
+.cancel-data-checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.cancel-data-checkbox label span {
+    text-transform: none;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #3C3C3B;
+}
+.cancel-data-checkbox input[type='checkbox'] {
+    display: block;
+    width: auto;
+    margin: 0;
+}
+.cancel-data-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto clamp(30px, calc(35 / var(--clamp-width) * 100vw), 35px);
+}
+.popup-content_cancel-data .btn {
+    padding: 4px 30px;
+    font-size: clamp(8px, calc(12 / var(--clamp-width) * 100vw), 12px);
+    min-width: 163px;
+    line-height: 1.2;
+    height: clamp(26px, calc(35 / var(--clamp-width) * 100vw), 35px);
+}
+
+
+@media (max-width: 1280px) {
+    .popup.popup-content_cancel-data {
+        width: auto;
+        max-width: 600px;
+    }
+}
+@media (max-width: 767px) {
+    .pp__content_cancel-data {
+        width: calc(100% - 20px);
+    }
+    .cancel-data-title {
+        text-align: start;
+    }
+    .pp_cancel-data .input-box::before {
+        top: calc(100% - 1px);
+    }
+    .pp_cancel-data .input__container>*,
+    .pp_cancel-data .input__container>.input-box {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+}
+@media (max-width: 480px) {
+    .cancel-data-title {
+        line-height: 1.55;
+    }
+    .pp_cancel-data .checkbox__text {
+        line-height: 1.4;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

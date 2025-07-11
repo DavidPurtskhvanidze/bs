@@ -82,6 +82,8 @@
     <link rel="stylesheet" href="../files/index.css" type="text/css">
     <link rel="stylesheet" href="../files/default(1).css" type="text/css">
 
+    <link rel="stylesheet" href="../modal_cancel/modal_cancel_files/style.css" type="text/css">
+
 </head>
 <body id="main" data-new-gr-c-s-check-loaded="14.1243.0" data-gr-ext-installed="">
 
@@ -212,13 +214,6 @@
         <img src="../files/ayrissilk.svg" alt="">
     </div>
 </div>
-<a href="https://ayris-silk.ru/shipping" data-fancybox-load="" class="p-links__delivery">
-    <img src="assets/tpl/img/car.svg" alt="">
-    <span>Доставка и оплата</span>
-    <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 1L5.06452 4.5L1 8" stroke="#3C3C3B"></path>
-    </svg>
-</a>
 
 <footer class="bg-grey">
     <div class="container">
@@ -350,7 +345,7 @@
     </div>
 </footer>
 
-
+<!--modalCancel-->
 <div id="modalCancel" class="popup fancybox-content popup-content_cancel-data">
     <h4 class="cancel-data-title">
         Отозвать согласие на&nbsp;обработку персональных данных
@@ -358,52 +353,46 @@
     <form action="">
         <div class="input-group group-2">
             <input type="text" name="name" placeholder="Имя">
-            <input type="email" data-si-form="" data-si-preset="msdcaddemail" data-si-nosave="" data-si-event="change" name="email" placeholder="E-mail">
-            <input type="text" name="birthdate" placeholder="День рождения (дд/мм/гггг)">
-
-            <span class="error-msgn error_name"></span>
-            <span class="error-msgn error_email"></span>
+            <input type="text" name="surname" placeholder="Фамилия">
+            <input type="text" name="phone" placeholder="Телефон">
+            <input type="email" name="email" placeholder="E-mail">
+            <input type="text" name="birthdate" placeholder="Дата рождения">
         </div>
-        <p class="agree">
-            <label for="">
-                <input type="hidden" name="agree" value="">
-                <input type="checkbox" name="agree" value="1" style="display:block;width:15px;">
-                <span onclick="$(this).prev().click();" class="text-oferta">
-                    Даю <a style="text-decoration:underline" target="_blank"
-                           href="obtaining-an-advertising-mailing">согласие</a> на получение рекламной рассылки
+        <div class="input-group">
+            <textarea type="text" name="text" rows="3" placeholder="комментарий"></textarea>
+        </div>
+        <div class="cancel-data-checkbox-wrapper">
+            <div class="cancel-data-checkbox">
+                <label for="">
+                    <input type="hidden" name="agree" value="">
+                    <input type="checkbox" name="agree" value="1">
+                    <span onclick="$(this).prev().click();">
+                    Я отзываю свое согласие на обработку персональных данных
                 </span>
-            </label>
-            <label for="">
-                <input type="hidden" name="agree2" value="">
-                <input type="checkbox" name="agree2" value="1" style="display:block;width:15px;">
-                <span onclick="$(this).prev().click();" class="text-oferta">
-                    Даю <a style="text-decoration:underline" target="_blank"
-                           href="consent-to-process-personal-data-when-subscribing-to-an-advertising-newsletter">согласие</a> на обработку персональных данных
+                </label>
+            </div>
+            <div class="cancel-data-checkbox">
+                <label for="">
+                    <input type="hidden" name="agree2" value="">
+                    <input type="checkbox" name="agree2" value="1">
+                    <span onclick="$(this).prev().click();">
+                    Я отзываю согласие на рекламную рассылку
                 </span>
-            </label>
-            <style>
-                form .agree label {
-                    display: flex;
-                    text-align: left;
-
-                }
-
-                form .agree label * {
-                    margin: 0;
-                }
-
-                form .agree label input {
-                    width: 30px;
-                    margin-right: 10px;
-                }
-            </style>
+                </label>
+            </div>
+        </div>
+        <div class="cancel-data-button-wrapper">
+            <button type="submit" class="btn btn-brown">
+                отозвать<span class="arr"></span>
+            </button>
+        </div>
+        <p class="cancel-data-desc">
+            В случае отзыва согласия на обработку персональных данных Оператор вправе продолжить обработку персональных данных без согласия субъекта персональных данных при наличии оснований, указанных в пунктах 2-11 части 1 статьи 6, части 2 статьи 10 и части 2 статьи 11 Федерального закона № 152-ФЗ «О персональных данных».
         </p>
-        <button type="submit" class="btn btn-brown btn-lg">
-            Получить скидку<span class="arr"></span>
-        </button>
+
     </form>
 </div>
-
+<!--modalCancel-->
 
 
 
