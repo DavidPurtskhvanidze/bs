@@ -1,4 +1,7 @@
 /*pp_cancel-data*/
+.pp_cancel-data {
+    --clamp-width: 1920;
+}
 .pp_cancel-data .pp__close {
     top: clamp(10px, calc(20 / var(--clamp-width) * 100vw), 20px);
     right: clamp(10px, calc(20 / var(--clamp-width) * 100vw), 20px);
@@ -12,7 +15,6 @@
     margin-top: -1px;
 }
 .pp__content_cancel-data {
-    --clamp-width: 1920;
     padding: clamp(20px, calc(40 / var(--clamp-width) * 100vw), 40px);
     max-width: 720px;
     width: 100%;
