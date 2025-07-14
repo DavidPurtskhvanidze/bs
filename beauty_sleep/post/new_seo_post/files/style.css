@@ -69,14 +69,14 @@
     background-clip: text;
     text-fill-color: transparent;
 }
-.post-page-wrapper ul {
+.post-page-wrapper .post-container ul {
     font-weight: 300;
     font-size: clamp(14px, calc(18/1920*100vw), 18px);
     line-height: 1.5;
     color: #221D1E;
     padding-left: 1.6em;
 }
-.post-page-wrapper ol {
+.post-page-wrapper .post-container ol {
     font-weight: 300;
     font-size: clamp(14px, calc(18/1920*100vw), 18px);
     line-height: 1.5;
@@ -106,19 +106,38 @@
 .post-sidebar {
     width: 100%;
     max-width: 475px;
-    position: relative;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: auto;
+    padding-left: clamp(10px, calc(20/1920*100vw), 20px);
+    position: sticky;
+    top: 160px;
 }
 .post-sidebar ul {
     list-style: none;
 }
 .post-sidebar-menu {
-    position: sticky;
-    top: 200px;
+    position: relative;
     padding-left: 32px;
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: clamp(24px, calc(32/1920*100vw), 32px);
+    /*gap: clamp(24px, calc(32/1920*100vw), 32px);*/
+    gap: 32px;
+    /*scrollbar-width: none;*/
+    /*-ms-overflow-style: none;*/
+
+}
+.post-sidebar-menu:before {
+    content: '';
+    height: 100%;
+    width: 4px;
+    background-color: #F5F5F5;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
 }
 .post-sidebar-menu > li {
     font-weight: 500;
@@ -127,9 +146,39 @@
     text-transform: uppercase;
     color: #4F6FC1;
 }
+.post-sidebar-menu .sidebar-link {
+    color: #A3B2C7;
+    cursor: pointer;
+    position: relative;
+    /*padding-bottom: 4px;*/
+}
+.post-sidebar-menu .sidebar-link.active {
+    color: #4F6FC1;
+}
+.post-sidebar-menu .sidebar-link:before {
+    content: '';
+    height: 260%;
+    width: 4px;
+    background-color: transparent;
+    display: block;
+    position: absolute;
+    top: -120%;
+    left: -32px;
+    bottom: 0;
+}
+.post-sidebar-menu .sidebar-link > .sidebar-link:before {
+    left: -64px;
+}
+.post-sidebar-menu li > ul > li.sidebar-link:before {
+    left: -64px;
+}
+.post-sidebar-menu .sidebar-link.active:before {
+    background-color: #4F6FC1;
+}
 .post-sidebar-menu li > ul {
     margin-top: 16px;
-    padding-left: clamp(16px, calc(32/1920*100vw), 32px);
+    /*padding-left: clamp(16px, calc(32/1920*100vw), 32px);*/
+    padding-left: 32px;
     display: flex;
     flex-direction: column;
     gap: 8px;

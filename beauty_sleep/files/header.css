@@ -493,7 +493,7 @@ main {
         max-width: -moz-fit-content;
         max-width: fit-content;
     }
-    .header__mobile-col:nth-child(1) {
+    .header__mobile-col { /*:nth-child(1)*/
         flex-basis: 100%;
         align-items: center;
         justify-content: center;
@@ -504,6 +504,8 @@ main {
         align-items: center;
         justify-content: center;
         gap: 0.75rem;
+        padding-right: 10px;
+        margin-right: 10px;
     }
     .header__mobile-link-text {
         font-weight: 500;
@@ -517,6 +519,13 @@ main {
     .header__nav-wrap.show {
         transform: translateX(0);
     }
+
+    body.noscroll.backdrop .header__content {
+        height: 100vh;
+        max-height: 100dvh;
+        overflow-y: scroll;
+    }
+
 }
 
 @media (max-width: 920px) {
@@ -526,17 +535,17 @@ main {
     }
 
     .header__middle-col {
-        flex: 0 0 10% !important;
+        flex: 0 0 24px !important;
     }
 
-    /* Ð›Ð¾Ð³Ð¾ - Ð·Ð°Ð½Ð¸Ð¼Ð°ÐµÑ‚ Ð²ÑÑ‘ Ð¾ÑÑ‚Ð°Ð»ÑŒÐ½Ð¾Ðµ */
+    /* Лого - занимает всё остальное */
     .header__middle-col:nth-child(2) {
         flex: 1 !important;
         order: 1 !important;
         justify-content: start !important;
     }
 
-    /* ÐœÐµÐ½ÑŽ Ð¸ ÐºÐ¾Ñ€Ð·Ð¸Ð½Ð° â€” Ð¿Ð¾ 10%, Ð¿Ñ€Ð¸Ð¶Ð°Ñ‚Ñ‹ Ðº Ð¿Ñ€Ð°Ð²Ð¾Ð¼Ñƒ ÐºÑ€Ð°ÑŽ */
+    /* Меню и корзина — по 10%, прижаты к правому краю */
 
     .header__middle-col:nth-child(3) {
         order: 2;
@@ -547,5 +556,6 @@ main {
     .header__middle-col:nth-child(1) {
         order: 3;
         justify-content: start !important;
+        flex: 0 0 24px !important;
     }
 }
