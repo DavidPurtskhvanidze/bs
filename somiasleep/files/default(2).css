@@ -1,4 +1,4 @@
-@import url('./lib/jquery.jgrowl.min.css');
+/*@import url('./lib/jquery.jgrowl.min.css');*/
 .af-message-success { background-color: green !important; }
 .af-message-error { background-color: brown !important; }
 .af-message-info { background-color: black !important; }

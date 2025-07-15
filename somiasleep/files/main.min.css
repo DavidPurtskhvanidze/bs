@@ -29,20 +29,20 @@ textarea:focus:-ms-input-placeholder, input:focus:-ms-input-placeholder {
 @font-face {
 	font-family: 'GT-America';
 	font-weight: 400;
-	src: local('GT-America'), url('../fonts_new/GT_America/GT-America-LC-Standard-Light.woff') format('woff');
+	src: local('GT-America'), url('../fonts/GT_America/GT-America-LC-Standard-Light.woff') format('woff');
 }
 
 @font-face {
 	font-family: 'GT-America';
 	font-weight: 500;
-	src: local('GT-America'), url('../fonts_new/GT_America/GT-America-LC-Standard-Medium.woff') format('woff');
+	src: local('GT-America'), url('../fonts/GT_America/GT-America-LC-Standard-Medium.woff') format('woff');
 }
 
 
 @font-face {
 	font-family: 'CoFoRobert-Light';
 	font-weight: 400;
-	src: local('GT-America'), url('../fonts_new/CoFo_Robert/CoFoRobert-Light.woff') format('woff');
+	src: local('GT-America'), url('../fonts/CoFoRobert-Light.woff') format('woff');
 }
 
 .loading img {
@@ -3146,7 +3146,7 @@ ol.list.policy li {
 .checkbox input:checked + label:after {
     content: "";
     display: block;
-    background: url(../img/v.svg) no-repeat;
+    background: url(../files/v.svg) no-repeat;
     position: absolute;
     top: 0.625rem;
     bottom: 0;

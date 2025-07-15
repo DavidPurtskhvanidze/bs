@@ -1,0 +1,119 @@
+.cancel-modal {
+    --clamp-width: 1920;
+}
+.cancel-modal .modal-content {
+    border-radius: 10px;
+    padding: clamp(30px, calc(40 / var(--clamp-width) * 100vw), 40px) clamp(20px, calc(120 / var(--clamp-width) * 100vw), 120px);
+    border: 1px solid #000;
+}
+.cancel-modal .btn-close {
+    width: 24px;
+    font-size: 40px;
+    height: 24px;
+    line-height: 24px;
+    top: 15px;
+    right: 15px;
+    position: absolute;
+    cursor: pointer;
+}
+.cancel-modal .modal-dialog {
+    max-width: 100%;
+    width: 690px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+.cancel-modal-content {
+
+}
+.cancel-modal-content .title {
+    font-style: normal;
+    font-weight: 250;
+    font-size: clamp(24px, calc(28 / var(--clamp-width) * 100vw), 28px);
+    line-height: 1;
+    text-align: center;
+    color: #000000;
+    margin-bottom: clamp(15px, calc(30 / var(--clamp-width) * 100vw), 30px);
+}
+.cancel-modal [type="text"],
+.cancel-modal [type="email"],
+.cancel-modal [type="tel"],
+.cancel-modal select {
+    border-bottom: 1px solid #B6B6B6;
+    padding: .5rem 0;
+}
+.cancel-modal [type="text"].error,
+.cancel-modal [type="email"].error,
+.cancel-modal [type="tel"].error,
+.cancel-modal select.error {
+    border-color: red;
+    color: red;
+}
+.cancel-modal input::placeholder {
+    color: #B6B6B6;
+}
+.cancel-modal input.comment {
+    padding: .6rem 1rem;
+    border: 1px solid #B6B6B6;
+    border-radius: 10px;
+}
+.cancel-modal-content .checkbox {
+    font-weight: 250;
+    font-size: 14px;
+    line-height: 1.42;
+    color: #131313;
+}
+.cancel-modal-content .checkbox label:before {
+    top: 0;
+}
+.cancel-modal .btn_button_1 {
+    padding: clamp(15px, calc(30 / var(--clamp-width) * 100vw), 30px) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.cancel-modal-desc {
+    font-family: 'GT-America', sans-serif;
+    font-weight: 300;
+    font-size: clamp(10px, calc(12 / var(--clamp-width) * 100vw), 12px);
+    line-height: 1.25;
+    text-align: center;
+    color: #B6B6B6;
+}
+
+
+
+
+
+@media (max-width: 1280px) {
+    .pp__content_cancel-data {
+        width: auto;
+    }
+}
+@media (max-width: 767px) {
+    .pp__content_cancel-data {
+        width: calc(100% - 20px);
+    }
+    .cancel-data-title {
+        text-align: start;
+    }
+    .pp_cancel-data .input-box::before {
+        top: calc(100% - 1px);
+    }
+    .pp_cancel-data .input__container>*,
+    .pp_cancel-data .input__container>.input-box {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+}
+@media (max-width: 480px) {
+    .cancel-data-title {
+        line-height: 1.55;
+    }
+    .pp_cancel-data .checkbox__text {
+        line-height: 1.4;
+    }
+}
