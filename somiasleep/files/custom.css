@@ -1,0 +1,28 @@
+@media (max-width:820px){
+    header.fix{
+        position:fixed;
+        top:0px;
+        width:100%;
+    }
+}
+.product_item2 .prod_btn a{
+    padding:4px 20px !important;
+    line-height: 24px !important;
+    font-family: 'CoFoRobert-Light', serif;
+}
+.fx-cart-product-recomend,.cart_modal_infosale{
+    display:none !important;
+}
+.item-caption-controls a{
+    background: rgba(180, 227, 253, 1);
+    padding: 6px 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.disabled-btn {
+  opacity: 0.4 !important;
+  pointer-events: none !important;
+  cursor: default !important;
+  user-select: none !important;
+  transition: opacity 0.2s;
+}
