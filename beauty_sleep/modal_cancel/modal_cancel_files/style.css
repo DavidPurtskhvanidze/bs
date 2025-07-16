@@ -110,10 +110,17 @@
     height: 1px;
 }
 .email-mailing-cancel {
-    margin-top: clamp(24px, calc(64 / 1920 * 100vw), 64px);
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+    padding: 0;
+    list-style-type: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    margin: clamp(24px, calc(64 / 1920 * 100vw), 32px) 0 0;
+    text-transform: uppercase;
+    color: var(--gray);
+    background-color: transparent;
+    border: none;
+    text-align: start;
 }
 
 
@@ -124,6 +131,9 @@
 @media (max-width: 1280px) {
     .pp__content_cancel-data {
         width: auto;
+    }
+    .email-mailing-cancel {
+        font-size: 10px;
     }
 }
 @media (max-width: 767px) {
