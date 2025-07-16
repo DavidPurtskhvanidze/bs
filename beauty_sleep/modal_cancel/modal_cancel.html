@@ -643,7 +643,7 @@ test
 <script src="../files/swiper.min.js"></script>
 <!--Scripts-->
 
-<div class="pp pp_cancel-data show">
+<div class="pp pp_cancel-data show" data-pp="cancel-data">
   <div class="pp__bg"></div>
   <div class="pp__content pp__content_cancel-data">
 
@@ -923,18 +923,35 @@ test
         <form method="post" class="js-form-mailing">
           <input type="hidden" name="lists[pl2312]" value="set">
           <div class="input-box">
-            <input name="email" type="email" data-si-form="" data-si-preset="msdcaddemail" data-si-nosave=""
-                   data-si-event="change" placeholder="Введите ваш email" required="">
+            <input name="email" type="email" data-si-form="" data-si-preset="msdcaddemail" data-si-nosave="" data-si-event="change" placeholder="Введите ваш email" required="">
           </div>
           <input type="text" class="n-message" name="n-message" value="">
-          <button type="submit"><img src="../files/mailing-submit.svg" alt="submit">
-          </button>
+          <button type="submit"><img loading="lazy" src="/static/img/mailing-submit.svg" alt="submit"></button>
 
-          <input type="hidden" name="af_action" value="deb11a841c7ef742abd036ca26bea0c6">
+          <div class="politics">
+            <label for="agree100" style="display:flex;gap:0 10px;">
+              <input type="hidden" name="agree">
+              <input style="width:15px;height:15px" type="checkbox" name="agree" id="agree100" required="">
+              <span>Даю <a href="docs/consent-to-receive-an-advertising-newsletter" target="_blank">согласие</a> на получение рекламной рассылки</span>
+            </label>
+            <br>
+            <label for="agree101" style="display:flex;gap:0 10px;">
+              <input type="hidden" name="agree2">
+              <input style="width:15px;height:15px" type="checkbox" name="agree2" id="agree101" required="">
+              <span>Даю <a href="docs/adv-agreement" target="_blank">согласие</a> на обработку персональных данных</span>
+            </label>
+          </div>
+
+          <input type="hidden" name="af_action" value="2cb05d62962627616cb0986d57c93ccb">
         </form>
-        <div class="politics">
-          Нажимая кнопку "Подписаться", вы соглашаетесь с <a href="https://beautysleep.ru/privacy-policy"
-                                                             target="_blank">политикой конфиденциальности</a>
+
+        <div class="email-mailing-cancel">
+          <h4>
+            Отозвать согласие на обработку персональных данных
+          </h4>
+          <button class="button pp_ transparent" data-pp="cancel-data">
+            <span>Отозвать</span>
+          </button>
         </div>
       </div>
     </div>
@@ -1202,6 +1219,12 @@ test
   $(document).on('click', '[href="shuber"]', function () {
     return false;
   })
+  $(document).ready(function () {
+    if($('[name="phone"]').length) {
+      mask("[name='phone']");
+      $('[name="phone"]').val('');
+    }
+  });
 </script>
 
 

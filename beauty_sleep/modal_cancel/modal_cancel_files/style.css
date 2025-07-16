@@ -89,7 +89,7 @@
     color: var(--black);
 }
 .pp_cancel-data .checkbox__text:before {
-    top: 5px;
+    top: clamp(1px, calc(5 / var(--clamp-width) * 100vw), 5px);
     min-width: 18px;
     min-height: 18px;
     border: 1px solid #dcdcdc;
@@ -108,6 +108,12 @@
 .pp_cancel-data .input-box::before {
     top: calc(100% - 1px);
     height: 1px;
+}
+.email-mailing-cancel {
+    margin-top: clamp(24px, calc(64 / 1920 * 100vw), 64px);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 
