@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const sidebarLinks = document.querySelectorAll('.sidebar-link');
     const sectionIds = Array.from(sidebarLinks).map(link => link.dataset.sidebar);
     const mainHeader = $('header.header');
-    const sidebarBlock = $('.post-sidebar');
+    const sidebarBlock = $('.post-sidebar .post-sidebar-content');
     const sections = sectionIds
         .map(id => document.getElementById(id))
         .filter(Boolean);
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function sidebarTopPosition() {
         console.log('sidebarTopPosition');
         let sidebarHeight = $(window).height() - mainHeader.height();
-        sidebarBlock.css({'overflow-y':'auto','height': sidebarHeight - 32});
+        sidebarBlock.css({'height': sidebarHeight - 32});
     }
     sidebarTopPosition();
 
@@ -51,4 +51,18 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', highlightSidebar);
     window.addEventListener('resize', sidebarTopPosition);
     highlightSidebar();
+
+    var swiper = new Swiper('.post-sidebar-content', {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        freeMode: true,
+        scrollContainer: true,
+        mousewheel: true,
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true
+        }
+    });
 });
+
+

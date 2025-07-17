@@ -106,12 +106,10 @@
 .post-sidebar {
     width: 100%;
     max-width: 475px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    overflow-y: auto;
+    /*scrollbar-width: none;*/
+    /*-ms-overflow-style: none;*/
+    /*overflow-y: auto;*/
     padding-left: clamp(10px, calc(20/1920*100vw), 20px);
-    position: sticky;
-    top: 160px;
 }
 .post-sidebar ul {
     list-style: none;
@@ -127,6 +125,16 @@
     /*scrollbar-width: none;*/
     /*-ms-overflow-style: none;*/
 
+}
+
+.swiper-container.post-sidebar-content {
+    height: 300px;
+    width: 100%;
+    position: sticky;
+    top: 160px;
+}
+.post-sidebar-content .swiper-slide {
+    height: auto;
 }
 .post-sidebar-menu:before {
     content: '';
