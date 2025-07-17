@@ -2,17 +2,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const sidebarLinks = document.querySelectorAll('.sidebar-link');
     const sectionIds = Array.from(sidebarLinks).map(link => link.dataset.sidebar);
     const mainHeader = $('header.header');
-    const sidebarBlock = $('.post-sidebar .post-sidebar-content');
+    const sidebarBlock = $('.post-sidebar-content');
+    const sidebarBlockHeight = sidebarBlock.height();
+    const el = document.querySelector('.post-sidebar-content');
     const sections = sectionIds
         .map(id => document.getElementById(id))
         .filter(Boolean);
 
     function sidebarTopPosition() {
-        console.log('sidebarTopPosition');
-        let sidebarHeight = $(window).height() - mainHeader.height();
-        sidebarBlock.css({'height': sidebarHeight - 32});
+        let offsetTop = el.getBoundingClientRect().top ;
+
+        let sidebarHeight = $(window).height() - offsetTop;
+        let sidebarBlockHeightArea = $(window).height() - mainHeader.height();
+
+        sidebarBlock.css({'height': sidebarHeight, 'max-height': sidebarBlockHeightArea - 24});
     }
-    sidebarTopPosition();
 
     sidebarLinks.forEach((link) => {
         link.addEventListener('click', function (e) {
@@ -48,21 +52,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     window.addEventListener('scroll', highlightSidebar);
+    window.addEventListener('scroll', sidebarTopPosition);
+
     window.addEventListener('resize', highlightSidebar);
     window.addEventListener('resize', sidebarTopPosition);
-    highlightSidebar();
 
-    var swiper = new Swiper('.post-sidebar-content', {
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        freeMode: true,
-        scrollContainer: true,
-        mousewheel: true,
-        scrollbar: {
-            el: '.swiper-scrollbar',
-            draggable: true
-        }
-    });
+    highlightSidebar();
+    sidebarTopPosition();
 });
 
 

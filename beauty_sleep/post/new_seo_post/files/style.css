@@ -47,6 +47,7 @@
 }
 .post-page-with-sidebar {
     justify-content: flex-start;
+    padding-top: 0;
 }
 .post-page-wrapper section {
     margin-top: 0;
@@ -68,6 +69,9 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+}
+.post-page-with-sidebar.post-page-wrapper .post-container {
+    padding-top: clamp(0px, calc(96/1920*100vw), 96px);
 }
 .post-page-wrapper .post-container ul {
     font-weight: 300;
@@ -106,9 +110,6 @@
 .post-sidebar {
     width: 100%;
     max-width: 475px;
-    /*scrollbar-width: none;*/
-    /*-ms-overflow-style: none;*/
-    /*overflow-y: auto;*/
     padding-left: clamp(10px, calc(20/1920*100vw), 20px);
 }
 .post-sidebar ul {
@@ -120,21 +121,16 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    /*gap: clamp(24px, calc(32/1920*100vw), 32px);*/
-    gap: 32px;
-    /*scrollbar-width: none;*/
-    /*-ms-overflow-style: none;*/
-
+    gap: clamp(24px, calc(32/1920*100vw), 32px);
+    margin-top: clamp(0px, calc(96/1920*100vw), 96px);
 }
-
-.swiper-container.post-sidebar-content {
-    height: 300px;
+.post-sidebar-content {
     width: 100%;
     position: sticky;
     top: 160px;
-}
-.post-sidebar-content .swiper-slide {
-    height: auto;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 .post-sidebar-menu:before {
     content: '';
