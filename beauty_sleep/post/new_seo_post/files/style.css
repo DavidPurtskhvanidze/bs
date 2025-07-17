@@ -518,7 +518,7 @@
 }
 .post-top-date-views .post-date {
     font-weight: 300;
-    font-size: clamp(10px, calc(18/1920*100vw), 18px);
+    font-size: clamp(14px, calc(18/1920*100vw), 18px);
     line-height: 1.5;
     color: #4F6FC1;
 }
@@ -888,16 +888,22 @@ section.post-additional-info {
     }
     .post-top-back-button button:before {
         content: '';
-        background-image: url("data:image/svg+xml,%3Csvg width='25' height='18' viewBox='0 0 25 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.64645 9.35355C4.45119 9.15829 4.45119 8.84171 4.64645 8.64645L7.82843 5.46447C8.02369 5.2692 8.34027 5.2692 8.53553 5.46447C8.7308 5.65973 8.7308 5.97631 8.53553 6.17157L5.70711 9L8.53553 11.8284C8.7308 12.0237 8.7308 12.3403 8.53553 12.5355C8.34027 12.7308 8.02369 12.7308 7.82843 12.5355L4.64645 9.35355ZM21 9V9.5H5V9V8.5H21V9Z' fill='%234F6FC1'/%3E%3C/svg%3E%0A");        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg width='25' height='18' viewBox='0 0 25 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.64645 9.35355C4.45119 9.15829 4.45119 8.84171 4.64645 8.64645L7.82843 5.46447C8.02369 5.2692 8.34027 5.2692 8.53553 5.46447C8.7308 5.65973 8.7308 5.97631 8.53553 6.17157L5.70711 9L8.53553 11.8284C8.7308 12.0237 8.7308 12.3403 8.53553 12.5355C8.34027 12.7308 8.02369 12.7308 7.82843 12.5355L4.64645 9.35355ZM21 9V9.5H5V9V8.5H21V9Z' fill='%234F6FC1'/%3E%3C/svg%3E%0A");
+        background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         width: 25px;
         height: 18px;
         display: inline-block;
+        margin-top: 1px;
     }
     .post-views svg {
         width: 18px;
         height: 18px;
+        margin-top: 1px;
+    }
+    .post-views {
+        gap: 7px;
     }
 
     .post-card-date {
