@@ -1,0 +1,4076 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style class="vjs-styles-defaults">
+    .video-js {
+      width: 300px;
+      height: 150px;
+    }
+
+    .vjs-fluid {
+      padding-top: 56.25%
+    }
+  </style>
+
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <base href=".">
+  <title>Title</title>
+  <meta name="description" content="Описание">
+  <meta property="og:title" content="">
+
+  <style>
+    @font-face {
+      font-family: 'Cera Pro';
+      src: url('../files/fonts/CeraPro-Regular.woff2') format('woff2'),
+      url('../files/fonts/CeraPro-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Cera Pro';
+      src: url('../files/fonts/CeraPro-Bold.woff2') format('woff2'),
+      url('../files/fonts/CeraPro-Bold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Cera Pro';
+      src: url('../files/fonts/CeraPro-Medium.woff2') format('woff2'),
+      url('../files/fonts/CeraPro-Medium.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Cera Pro';
+      src: url('../files/fonts/CeraPro-Light.woff2') format('woff2'),
+      url('../files/fonts/CeraPro-Light.woff') format('woff');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+
+  <link rel="stylesheet" href="../files/normalize.css">
+  <link rel="stylesheet" href="../files/swiper.min.css">
+  <link href="../files/video-js.min.css" rel="stylesheet">
+  <link href="../files/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="../files/css_styles.css">
+  <link rel="stylesheet" href="../files/header.css">
+  <link rel="stylesheet" href="../files/aos.css">
+  <link rel="stylesheet" href="../files/pnotify.custom.css">
+  <link rel="stylesheet" href="../files/css_common.css">
+  <link rel="stylesheet" href="landing_files/style.css">
+  <link rel="stylesheet" href="landing_files/structure_section_new.css">
+  <link rel="stylesheet" href="landing_files/transformer_section.css">
+
+  <script src="../files/jquery-3.4.1.min.js"></script>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+      if ("IntersectionObserver" in window) {
+        let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              let lazyImage = entry.target;
+              lazyImage.src = lazyImage.dataset.src;
+              lazyImage.srcset = lazyImage.dataset.srcset;
+              lazyImage.classList.remove("lazy");
+              lazyImageObserver.unobserve(lazyImage);
+            }
+          });
+        });
+        lazyImages.forEach(function (lazyImage) {
+          lazyImageObserver.observe(lazyImage);
+        });
+      } else {
+        // Possibly fall back to event handlers here
+      }
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+      if ("IntersectionObserver" in window) {
+        var lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(function (video) {
+            if (video.isIntersecting) {
+              for (var source in video.target.children) {
+                var videoSource = video.target.children[source];
+                if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                  videoSource.src = videoSource.dataset.src;
+                }
+              }
+              video.target.load();
+              video.target.classList.remove("lazy");
+              lazyVideoObserver.unobserve(video.target);
+            }
+          });
+        });
+        lazyVideos.forEach(function (lazyVideo) {
+          lazyVideoObserver.observe(lazyVideo);
+        });
+      }
+    });
+  </script>
+
+
+
+  <link rel="stylesheet" href="../files/index(1).css" type="text/css">
+  <link rel="stylesheet" href="../files/default(1).css" type="text/css">
+
+  <style>
+    .SmartCaptcha-Overlay {
+      position: fixed;
+      z-index: 9999999;
+      top: -10000px;
+      left: -10000px;
+
+      width: 100%;
+      width: var(--smart-captcha-doc-width, 100%);
+      height: 100%;
+      height: var(--smart-captcha-doc-height, 100%);
+      margin: 0;
+      padding: 0;
+
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .SmartCaptcha-Overlay.SmartCaptcha-Overlay_visible {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .SmartCaptcha-Overlay.SmartCaptcha-Overlay_no_background {
+      background: none;
+    }
+
+    .SmartCaptcha-Overlay .SmartCaptcha-Spin {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+
+      margin: auto;
+
+      transform: translateY(-50%);
+    }
+  </style>
+  <style>.SmartCaptcha-Spin {
+    display: none;
+    visibility: hidden;
+
+    box-sizing: border-box;
+
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  }
+
+  .SmartCaptcha-Spin::after {
+    visibility: hidden;
+
+    content: '\00A0';
+  }
+
+  .SmartCaptcha-Overlay_visible.SmartCaptcha-Overlay_show_spinner .SmartCaptcha-Spin {
+    display: inline-block;
+    visibility: visible;
+
+    width: 50px;
+    height: 50px;
+
+    border-top-color: #5282FF;
+    border-left-color: #5282FF;
+
+    animation: islands-spin 1s .21s infinite linear;
+
+    backface-visibility: hidden;
+  }
+
+  .SmartCaptcha-Overlay_visible.SmartCaptcha-Overlay_show_spinner .SmartCaptcha-Spin {
+    border-top-color: var(--spin-view-default-border-color, #5282FF);
+    border-left-color: var(--spin-view-default-border-color, #5282FF);
+  }
+
+  @keyframes islands-spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  </style>
+  <style>.smart-captcha {
+    min-width: 300px;
+    height: 102px;
+  }
+
+  .smart-captcha_invisible {
+    height: 0;
+  }
+  </style>
+
+  <!--    <style>-->
+  <!--        html, body {-->
+  <!--            overflow: unset !important;-->
+  <!--        }-->
+  <!--    </style>-->
+
+</head>
+
+<body>
+
+
+<header class="header">
+  <div class="header__content">
+    <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-autoheight" data-site-carousel="header">
+      <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-4956px, 0px, 0px); height: 16px;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="2" style="width: 1652px;">
+        <span class="header__slide">Для обеспечения быстрой работы сайта, пожалуйста, отключите VPN</span>
+      </div>
+        <div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 1652px;">
+          <a href="products/" class="header__slide">Бьюти-сон дома и на даче: -30% на второе изделие в корзине*</a>
+        </div>
+        <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1" style="width: 1652px;">
+          <span class="header__slide">Покупайте сейчас и оплачивайте частями в течение нескольких месяцев</span>
+        </div>
+        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" style="width: 1652px;">
+          <span class="header__slide">Для обеспечения быстрой работы сайта, пожалуйста, отключите VPN</span>
+        </div>
+        <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" style="width: 1652px;">
+          <a href="products/" class="header__slide">Бьюти-сон дома и на даче: -30% на второе изделие в корзине*</a>
+        </div></div>
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+    <div class="header__middle">
+      <div class="header__middle-col">
+        <a href="tel:88002224624" class="header__phone">
+          <img loading="lazy" width="18" height="18" src="../files/phone.svg" alt="Телефон горячей линии">
+          <span class="header__phone-text">8 (800) 222 46 24</span>
+        </a>
+        <button class="header__nav-switch" data-site-switch="#main-nav" data-site-noscroll="1" data-site-backdrop="1">
+          <span class="header__line"></span>
+          <span class="header__line"></span>
+          <span class="header__line"></span>
+        </button>
+      </div>
+      <div class="header__middle-col">
+        <a class="header__logo-link">
+          <img loading="lazy" width="356" height="45" class="header__logo" src="../files/logo.svg" alt="Beauty Sleep">
+        </a>
+      </div>
+      <div class="header__middle-col">
+        <div class="header__link-group">
+          <a href="products/" class="header__shop-link">
+            <img loading="lazy" src="../files/dot-grid.svg" alt="Онлайн магазин">
+            <span class="header__link-text">Купить</span>
+          </a>
+          <a href="basket" class="header__cart-link ">
+    <span class="header__cart-icon-wrap">
+        <img loading="lazy" class="header__cart-icon" src="../files/cart_new_icon.svg" width="18" height="18" alt="Shopping cart">
+        <span class="header__cart-counter">0</span>
+    </span>
+            <span class="header__link-text">Корзина</span>
+          </a>                </div>
+      </div>
+    </div>
+    <nav class="header__nav-wrap" id="main-nav">
+      <div class="header__mobile" style="padding: 1.5rem 0.5rem;">
+        <div class="header__mobile-col" style="align-items: flex-start; justify-content: flex-start;">
+          <a href="products/" class="header__shop-link">
+            <svg width="19" height="20" viewBox="0 0 19 20" fill="none">
+              <rect x="0.710938" y="0.830078" width="2.65314" height="2.65314" fill="#221D1E"></rect>
+              <rect x="0.710938" y="8.93066" width="2.65314" height="2.65314" fill="#221D1E"></rect>
+              <rect x="0.710938" y="17.0315" width="2.65314" height="2.65314" fill="#221D1E"></rect>
+              <rect x="8.5" y="0.830078" width="2.65314" height="2.65314" fill="#221D1E"></rect>
+              <rect x="8.5" y="8.93066" width="2.65314" height="2.65314" fill="#221D1E"></rect>
+              <rect x="8.5" y="17.0315" width="2.65314" height="2.65314" fill="#221D1E"></rect>
+              <rect x="16.2891" y="0.830078" width="2.65314" height="2.65314" fill="#221D1E"></rect>
+              <rect x="16.2891" y="8.93066" width="2.65314" height="2.65314" fill="#221D1E"></rect>
+              <rect x="16.2891" y="17.0315" width="2.65314" height="2.65314" fill="#221D1E"></rect>
+            </svg>
+            <span class="header__link-text">Перейти в каталог</span>
+          </a>
+        </div>
+      </div>
+      <ul class="header__nav">
+        <li class="header__nav-item" data-site-switch="#submenu-0" data-site-hover="(min-width: 1280px)">
+          <button class="header__nav-link ">
+            <span class="header__nav-link-text">Подушки</span>
+            <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs></defs>
+              <g opacity="0.500000">
+                <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+              </g>
+            </svg>
+          </button>
+          <div id="submenu-0" class="header__submenu-wrap">
+            <ul class="header__submenu header__submenu_special">
+              <li class="header__submenu-item">
+                <a href="omnia" class="header__submenu-link">
+                  <div class="header__submenu-img-wrap">
+                    <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/pillow_omnia02.svg" alt="Подушка Omnia">
+                  </div>
+                  <span class="header__submenu-link-text">Подушка Omnia</span>
+                </a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="copper" class="header__submenu-link">
+                  <div class="header__submenu-img-wrap">
+                    <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/pillow_copper02.svg" alt="Подушка Omnia Copper Blend">
+                  </div>
+                  <span class="header__submenu-link-text">Подушка Omnia Copper Blend</span>
+                </a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="cooling" class="header__submenu-link">
+                  <div class="header__submenu-img-wrap">
+                    <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/pillow_cooling02.svg" alt="Подушка Omnia Cooling">
+                  </div>
+                  <span class="header__submenu-link-text">Подушка Omnia Cooling</span>
+                </a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="aula" class="header__submenu-link">
+                  <div class="header__submenu-img-wrap">
+                    <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/pillow_aula02.svg" alt="Подушка Aula">
+                  </div>
+                  <span class="header__submenu-link-text">Подушка Aula</span>
+                </a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="products/?category=437" class="header__submenu-link">
+                  <div class="header__submenu-img-wrap">
+                    <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/somia_ico02.svg" alt="Подушки для мужчин&nbsp;и&nbsp;детей">
+                  </div>
+                  <span class="header__submenu-link-text">Подушки для мужчин&nbsp;и&nbsp;детей</span>
+                </a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="pillow-for-decollete" class="header__submenu-link">
+                  <div class="header__submenu-img-wrap">
+                    <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/pillow_decollete02.svg" alt="Подушка для декольте">
+                  </div>
+                  <span class="header__submenu-link-text">Подушка для декольте</span>
+                </a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="products/?category=25" class="header__submenu-link">
+                  <div class="header__submenu-img-wrap">
+                    <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/pillow_case02.svg" alt="Наволочки">
+                  </div>
+                  <span class="header__submenu-link-text">Наволочки</span>
+                </a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="sleep-wrinkles" class="header__submenu-link">
+                  <div class="header__submenu-img-wrap">
+                    <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/sleep02.svg" alt="Beauty - сон">
+                  </div>
+                  <span class="header__submenu-link-text">Beauty - сон</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li><li class="header__nav-item" data-site-switch="#submenu-1" data-site-hover="(min-width: 1280px)">
+        <button class="header__nav-link ">
+          <span class="header__nav-link-text">Одеяла</span>
+          <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g opacity="0.500000">
+              <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+            </g>
+          </svg>
+        </button>
+        <div id="submenu-1" class="header__submenu-wrap">
+          <ul class="header__submenu ">
+            <li class="header__submenu-item">
+              <a href="weighted-blanket" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/blanket02.svg" alt="Утяжеленное одеяло ">
+                </div>
+                <span class="header__submenu-link-text">Утяжеленное одеяло </span>
+              </a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="airmesh-blanket" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/blanket002.svg" alt="Одеяло с вентиляционными вставками">
+                </div>
+                <span class="header__submenu-link-text">Одеяло с вентиляционными вставками</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li><li class="header__nav-item" data-site-switch="#submenu-2" data-site-hover="(min-width: 1280px)">
+        <button class="header__nav-link ">
+          <span class="header__nav-link-text">Постельное белье</span>
+          <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g opacity="0.500000">
+              <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+            </g>
+          </svg>
+        </button>
+        <div id="submenu-2" class="header__submenu-wrap">
+          <ul class="header__submenu ">
+            <li class="header__submenu-item">
+              <a href="products/?category=481" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/linen02.svg" alt="Постельное белье">
+                  <img loading="lazy" width="55" height="55" src="assets/components/beautysleep/img/icons/menu/new.svg" alt="" class="header__submenu-img-new">
+                </div>
+                <span class="header__submenu-link-text">Постельное белье</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li><li class="header__nav-item" data-site-switch="#submenu-3" data-site-hover="(min-width: 1280px)">
+        <button class="header__nav-link ">
+          <span class="header__nav-link-text">Одежда и аксессуары из шелка</span>
+          <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g opacity="0.500000">
+              <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+            </g>
+          </svg>
+        </button>
+        <div id="submenu-3" class="header__submenu-wrap">
+          <ul class="header__submenu ">
+            <li class="header__submenu-item">
+              <a href="silk-clothes/?category=all" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/all_products02.svg" alt="Все товары из шелка">
+                </div>
+                <span class="header__submenu-link-text">Все товары из шелка</span>
+              </a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="silk-clothes/?category=263-452-261-512-259-508-536-505-504" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/clothes02.svg" alt="Одежда">
+                </div>
+                <span class="header__submenu-link-text">Одежда</span>
+              </a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="silk-clothes/?category=267-266-268-269-270-280" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/accessories02.svg" alt="Аксессуары">
+                </div>
+                <span class="header__submenu-link-text">Аксессуары</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li><li class="header__nav-item" data-site-switch="#submenu-4" data-site-hover="(min-width: 1280px)">
+        <button class="header__nav-link ">
+          <span class="header__nav-link-text">Ароматы для сна</span>
+          <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g opacity="0.500000">
+              <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+            </g>
+          </svg>
+        </button>
+        <div id="submenu-4" class="header__submenu-wrap">
+          <ul class="header__submenu ">
+            <li class="header__submenu-item">
+              <a href="scents-for-sleep" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/aroma02.svg" alt="Ароматы для сна">
+                </div>
+                <span class="header__submenu-link-text">Ароматы для сна</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li><li class="header__nav-item" data-site-switch="#submenu-5" data-site-hover="(min-width: 1280px)">
+        <button class="header__nav-link ">
+          <span class="header__nav-link-text">Идеи подарков</span>
+          <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g opacity="0.500000">
+              <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+            </g>
+          </svg>
+        </button>
+        <div id="submenu-5" class="header__submenu-wrap">
+          <ul class="header__submenu ">
+            <li class="header__submenu-item">
+              <a href="products/?category=287" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/gift_card02.svg" alt="Подарочные сертификаты">
+                </div>
+                <span class="header__submenu-link-text">Подарочные сертификаты</span>
+              </a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="products/?category=325" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/gift02.svg" alt="Подарочные наборы">
+                </div>
+                <span class="header__submenu-link-text">Подарочные наборы</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li><li class="header__nav-item" data-site-switch="#submenu-6" data-site-hover="(min-width: 1280px)">
+        <button class="header__nav-link ">
+          <span class="header__nav-link-text">Наша наука</span>
+          <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g opacity="0.500000">
+              <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+            </g>
+          </svg>
+        </button>
+        <div id="submenu-6" class="header__submenu-wrap">
+          <ul class="header__submenu ">
+            <li class="header__submenu-item">
+              <a href="our-science" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/expert02.svg" alt="Клинические исследования">
+                </div>
+                <span class="header__submenu-link-text">Клинические исследования</span>
+              </a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="beauty-sleep-university/" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/univer.svg" alt="Beauty - университет">
+                </div>
+                <span class="header__submenu-link-text">Beauty - университет</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li><li class="header__nav-item" data-site-switch="#submenu-7" data-site-hover="(min-width: 1280px)">
+        <button class="header__nav-link ">
+          <span class="header__nav-link-text">Покупателям</span>
+          <svg width="13.093750" height="6.941650" viewBox="0 0 13.0938 6.94165" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g opacity="0.500000">
+              <path id="Vector" d="M0.63 0.77L6.54 5.64L12.45 0.77" stroke="#BCBDC2" stroke-opacity="1.000000" stroke-width="2.000000"></path>
+            </g>
+          </svg>
+        </button>
+        <div id="submenu-7" class="header__submenu-wrap">
+          <ul class="header__submenu ">
+            <li class="header__submenu-item">
+              <a href="dostavka-i-oplata" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/delivery02.svg" alt="Доставка и оплата">
+                </div>
+                <span class="header__submenu-link-text">Доставка и оплата</span>
+              </a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="garantia-i-vozvrat" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/return02.svg" alt="Гарантия и возврат">
+                </div>
+                <span class="header__submenu-link-text">Гарантия и возврат</span>
+              </a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="for-customers/contacts" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/contacts02.svg" alt="Контакты">
+                </div>
+                <span class="header__submenu-link-text">Контакты</span>
+              </a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="o-kompanii" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/about02.svg" alt="О компании">
+                </div>
+                <span class="header__submenu-link-text">О компании</span>
+              </a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="reviews" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/review02.svg" alt="Отзывы">
+                </div>
+                <span class="header__submenu-link-text">Отзывы</span>
+              </a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="question" class="header__submenu-link">
+                <div class="header__submenu-img-wrap">
+                  <img loading="lazy" class="header__submenu-img" width="100" height="100" src="content_img/menu_img/new icons/faq02.svg" alt="Вопросы">
+                </div>
+                <span class="header__submenu-link-text">Вопросы</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>            </ul>
+      <div class="header__mobile" style="align-items: flex-start;justify-content: flex-start; row-gap: 1rem;">
+
+        <div class="header__mobile-col" style="align-items: flex-start;justify-content: flex-start;">
+          <a href="tel:88002224624" class="header__mobile-link">
+            <img loading="lazy" width="20" height="20" src="assets/components/beautysleep/img/icons/phone.svg" alt="Hotline phone">
+            <span class="header__mobile-link-text">8 (800) 222 46 24</span>
+          </a>
+        </div>
+        <div class="header__mobile-col" style="align-items: flex-start;justify-content: flex-start;">
+          <a href="https://api.whatsapp.com/send?phone=+79303844624" class="header__mobile-link">
+            <img loading="lazy" width="20" height="20" src="assets/components/beautysleep/img/icons/socials/wa.svg" alt="Whatsapp phone">
+            <span class="header__mobile-link-text">+7 (930) 384-46-24</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<main role="main">
+
+  <section class="linen-main-section general-section">
+    <picture>
+      <source srcset="landing_files/images/linen-main-img-mob.avif" media="(max-width: 768px)" type="image/avif">
+      <source srcset="landing_files/images/linen-main-img.avif" type="image/avif">
+
+      <source srcset="landing_files/images/linen-main-img-mob.webp" media="(max-width: 768px)" type="image/webp">
+      <source srcset="landing_files/images/linen-main-img.webp" type="image/webp">
+
+      <source srcset="landing_files/images/linen-main-img-mob.jpg" media="(max-width: 768px)" type="image/jpg">
+      <source srcset="landing_files/images/linen-main-img.jpg" type="image/jpg">
+
+      <img src="landing_files/images/linen-main-img.jpg" alt="Main picture">
+    </picture>
+
+    <div class="linen-main-text">
+      <h1>
+        Постельное белье<br>
+        из премиального тенселя Beauty Sleep
+      </h1>
+      <p>
+        Совершенство сна в каждой детали
+      </p>
+    </div>
+  </section>
+
+  <section class="linen-tips">
+    <div class="linen-tips-item">
+      <div class="linen-tips-item-icon">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.1491 3.03959C19.8774 2.95125 20.6377 3.03813 21.3706 3.03959L25.9922 3.04105C26.4357 3.04105 28.6026 2.97607 28.8304 3.02864C29.091 3.08923 37.2822 8.56411 37.7873 9.01092C38.2126 10.2754 38.5627 11.5604 38.9501 12.8358L40.4448 17.6536C40.1311 18.9845 39.6412 20.3031 39.2455 21.615L38.1982 25.1318C37.7052 26.7614 37.9095 26.5766 36.4703 27.5659C37.7554 29.1604 39.0116 31.3777 40.1205 33.1131L42.4795 36.7883C42.9914 37.579 43.5283 38.3594 44 39.1735C41.9531 39.0428 38.8984 39.1034 36.8386 39.1735C36.2675 40.9293 35.2558 43.1239 34.5108 44.8228C34.4249 44.8798 34.4454 44.8754 34.4272 44.9666H34.4014C34.0452 44.7045 31.3391 40.3774 30.897 39.6925L27.313 34.2388L26.2709 32.6882C24.7846 32.6341 23.2739 32.6889 21.7853 32.6882C21.0706 33.8548 20.2807 34.993 19.525 36.1356L15.1358 42.8991C14.6855 43.5999 14.2541 44.3745 13.6951 45.0002C13.3267 43.4532 11.7826 40.8132 11.1386 39.1727C8.76816 39.061 6.37649 39.253 4 39.1727C4.31292 38.3996 4.91672 37.6819 5.38609 36.9869L9.39855 30.9491C10.0715 29.943 11.0072 28.4792 11.7485 27.5652C10.0783 26.0795 10.7998 27.2155 9.99856 24.9121C9.21551 22.6627 8.43702 20.3899 7.73979 18.1143C7.78309 17.6587 7.93043 17.209 8.04967 16.7673L8.6512 14.5931C9.15399 12.7854 9.60741 10.9639 10.13 9.16204C10.4573 8.80868 11.1211 8.44656 11.5441 8.15599L18.0508 3.73389C18.4032 3.49808 18.7647 3.22211 19.1498 3.04032L19.1491 3.03959ZM19.9526 4.98014C18.4025 5.88836 16.9313 6.97764 15.4488 7.9888L13.313 9.46503C12.9158 9.73881 12.0348 10.1498 11.8867 10.6317C11.172 12.9577 10.4391 15.7517 9.87096 18.115C10.8295 20.3257 11.5145 23.1095 12.3507 25.4282C13.9077 26.7438 17.5738 28.8939 19.4164 30.0365C20.6673 30.8118 20.3187 30.6636 21.8149 30.6541L24.9122 30.649C25.5912 30.649 27.4466 30.8418 27.9897 30.5344L33.6897 26.8855C34.4576 26.4022 35.2042 25.8042 36.0351 25.4275C36.1855 24.1506 36.8257 22.5269 37.1964 21.258C37.984 18.5647 38.5088 18.6487 37.7508 16.1051L37.008 13.6031C36.6791 12.4854 36.3791 11.3559 36.0343 10.2426C35.5672 9.90526 35.0758 9.60082 34.5996 9.27593L30.6176 6.60019C29.8186 6.07234 28.9596 5.61531 28.2449 4.98014C27.5431 4.95751 26.8367 4.97941 26.1342 4.98014L22.2706 4.98306C21.5202 4.98525 20.6931 5.07213 19.9518 4.98014H19.9526ZM34.7379 28.661C33.1307 29.6386 30.2158 31.8383 28.6725 32.5253L32.3173 38.1521C32.5824 38.5638 33.8439 40.8176 34.0558 40.5621C34.5442 39.4224 34.9604 38.2645 35.4966 37.1424C37.0794 37.1424 38.6736 37.192 40.2541 37.1424C39.7286 36.2093 35.0287 28.7866 34.7379 28.661ZM13.4832 28.661C13.0237 29.1619 12.7001 29.789 12.3196 30.3468C10.9176 32.4034 9.30209 35.2829 7.73828 37.1424L10.8295 37.1402C11.3816 37.1402 11.9406 37.1168 12.492 37.1424C13.0404 38.2324 13.5986 39.4173 13.9958 40.5621L14.052 40.665C14.4591 40.3328 17.69 35.2033 18.1799 34.4666C18.606 33.8249 18.9721 33.1225 19.465 32.5261C17.5085 31.247 15.4715 29.8912 13.4832 28.6618V28.661Z" fill="#6E89C3"/>
+          <path d="M30.6269 12.5356C30.9656 13.1686 31.0955 13.9045 31.4183 14.5456C30.5495 15.2362 29.7558 16.1021 28.9561 16.8701L24.6164 21.1243C23.6876 22.0457 22.7428 23.0269 21.7828 23.9125C20.4362 22.9473 18.5618 21.2236 17.2966 20.1051C16.9381 19.7978 16.5599 19.5094 16.2158 19.1867C16.6449 18.6289 17.0649 18.0558 17.551 17.5411C18.6158 18.55 20.8061 20.0788 21.6089 21.1185C23.9633 19.1516 26.4171 16.4708 28.6994 14.3302C29.3335 13.7352 29.9396 13.0723 30.6269 12.5356Z" fill="#6E89C3"/>
+        </svg>
+      </div>
+      <p class="linen-tips-item-text">
+        Премиальный тенсель высочайшего
+        качества, специально разработанный
+        для Beauty Sleep
+      </p>
+    </div>
+    <div class="linen-tips-item">
+      <div class="linen-tips-item-icon">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24.0979 4.03408C26.911 3.80612 29.1995 4.75915 31.5923 5.77568C34.0286 6.81058 37.2114 6.88933 39.7179 5.98708C40.9554 5.54156 44.3302 3.56807 45.6003 4.61609C46.0954 5.02446 46.1487 5.7144 45.6581 6.14073C45.196 6.54234 44.3976 6.5696 43.8005 6.74849C42.6476 7.09407 41.6433 7.75745 40.4898 8.12594C37.4742 9.08947 33.7883 9.06706 30.8474 7.8995C28.4464 6.94637 27.7556 6.25007 24.7312 6.23917C21.0492 6.2005 19.8334 7.50829 16.7641 8.37066C13.9794 9.15317 11.0833 9.02001 8.38548 8.04427C7.41406 7.69294 6.51105 7.22329 5.55326 6.85197C5.01517 6.6434 3.73753 6.44078 3.45688 6.22917C2.64328 5.61586 2.96628 4.48061 4.03016 4.34765C5.57734 4.15422 8.01066 5.51016 9.49546 6.02241C12.3837 7.01895 14.9705 6.70649 17.7747 5.5772C20.1106 4.63638 21.4148 4.16462 24.0979 4.03408Z" fill="#6E89C3"/>
+          <path d="M24.0979 27.4486C26.911 27.2207 29.1995 28.1737 31.5923 29.1902C34.0286 30.2251 37.2114 30.3039 39.7179 29.4016C40.9554 28.9561 44.3302 26.9826 45.6003 28.0306C46.0954 28.439 46.1487 29.1289 45.6581 29.5553C45.196 29.9569 44.3976 29.9841 43.8005 30.163C42.6476 30.5086 41.6433 31.172 40.4898 31.5405C37.4742 32.504 33.7883 32.4816 30.8474 31.314C28.4464 30.3609 27.7556 29.6646 24.7312 29.6537C21.0492 29.6151 19.8334 30.9228 16.7641 31.7852C13.9794 32.5677 11.0833 32.4346 8.38548 31.4588C7.41406 31.1075 6.51105 30.6378 5.55326 30.2665C5.01517 30.0579 3.73753 29.8553 3.45688 29.6437C2.64328 29.0304 2.96628 27.8952 4.03016 27.7622C5.57734 27.5688 8.01066 28.9247 9.49546 29.437C12.3837 30.4335 14.9705 30.121 17.7747 28.9917C20.1106 28.0509 21.4148 27.5792 24.0979 27.4486Z" fill="#6E89C3"/>
+          <path d="M24.0979 39.1562C26.911 38.9282 29.1995 39.8812 31.5923 40.8977C34.0286 41.9327 37.2114 42.0114 39.7179 41.1091C40.9554 40.6636 44.3302 38.6901 45.6003 39.7382C46.0954 40.1465 46.1487 40.8365 45.6581 41.2628C45.196 41.6644 44.3976 41.6917 43.8005 41.8706C42.6476 42.2161 41.6433 42.8795 40.4898 43.248C37.4742 44.2115 33.7883 44.1891 30.8474 43.0216C28.4464 42.0684 27.7556 41.3721 24.7312 41.3612C21.0492 41.3226 19.8334 42.6304 16.7641 43.4927C13.9794 44.2752 11.0833 44.1421 8.38548 43.1663C7.41406 42.815 6.51105 42.3454 5.55326 41.974C5.01517 41.7655 3.73753 41.5628 3.45688 41.3512C2.64328 40.7379 2.96628 39.6027 4.03016 39.4697C5.57734 39.2763 8.01066 40.6322 9.49546 41.1445C12.3837 42.141 14.9705 41.8286 17.7747 40.6993C20.1106 39.7585 21.4148 39.2867 24.0979 39.1562Z" fill="#6E89C3"/>
+          <path d="M24.0979 15.7414C26.911 15.5134 29.1995 16.4664 31.5923 17.483C34.0286 18.5179 37.2114 18.5966 39.7179 17.6944C40.9554 17.2488 44.3302 15.2753 45.6003 16.3234C46.0954 16.7317 46.1487 17.4217 45.6581 17.848C45.196 18.2496 44.3976 18.2769 43.8005 18.4558C42.6476 18.8013 41.6433 19.4647 40.4898 19.8332C37.4742 20.7967 33.7883 20.7743 30.8474 19.6068C28.4464 18.6536 27.7556 17.9573 24.7312 17.9464C21.0492 17.9078 19.8334 19.2156 16.7641 20.0779C13.9794 20.8604 11.0833 20.7273 8.38548 19.7515C7.41406 19.4002 6.51105 18.9306 5.55326 18.5592C5.01517 18.3507 3.73753 18.1481 3.45688 17.9364C2.64328 17.3231 2.96628 16.1879 4.03016 16.0549C5.57734 15.8615 8.01066 17.2174 9.49546 17.7297C12.3837 18.7262 14.9705 18.4138 17.7747 17.2845C20.1106 16.3437 21.4148 15.8719 24.0979 15.7414Z" fill="#6E89C3"/>
+        </svg>
+      </div>
+      <p class="linen-tips-item-text">
+        Шелковистость и гладкость
+        прикосновения
+      </p>
+    </div>
+    <div class="linen-tips-item">
+      <div class="linen-tips-item-icon">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M39.4473 22.9099C39.4473 23.0678 39.4473 23.204 39.4473 23.3428C39.4473 24.4728 39.4473 25.6056 39.4447 26.7355C39.4447 27.1331 39.6966 27.3482 40.0913 27.3428C40.8494 27.3319 41.6128 27.2965 42.3658 27.37C43.3758 27.468 44.0561 28.3965 43.9964 29.4748C43.9418 30.5013 43.1239 31.3182 42.1269 31.329C41.2467 31.3372 40.3665 31.329 39.4655 31.329C39.4577 31.5115 39.4473 31.6149 39.4473 31.7184C39.4473 32.892 39.4473 34.0655 39.4473 35.2418C39.4473 35.6421 39.6447 35.8327 40.0419 35.8327C40.7404 35.8272 41.4388 35.8027 42.1373 35.83C43.3706 35.879 44.1989 37.0226 43.9392 38.286C43.7549 39.1818 42.9915 39.8217 42.088 39.8271C41.2285 39.8326 40.3665 39.8271 39.4733 39.8271C39.4629 40.015 39.4499 40.1158 39.4499 40.2165C39.4499 40.7774 39.4499 41.3356 39.4499 41.8965C39.4499 43.1109 38.7021 43.9686 37.6376 43.9795C36.5133 43.9904 35.7058 43.1409 35.6954 41.9074C35.685 40.7883 35.6954 39.6665 35.6954 38.5474C35.6954 38.4303 35.6954 38.3132 35.6954 38.1798C35.0411 38.0409 34.4179 38.1117 33.8182 38.286C32.7224 38.6073 31.6397 38.9749 30.5596 39.3397C30.4791 39.367 30.3986 39.544 30.396 39.6529C30.3804 40.4806 30.4038 41.3111 30.3778 42.1416C30.3493 43.1028 29.6041 43.9115 28.7343 43.9714C27.7035 44.0449 26.8388 43.3996 26.6908 42.3921C26.6207 41.9183 26.6519 41.4255 26.6389 40.9435C26.6337 40.7066 26.709 40.4126 26.6 40.2519C26.4987 40.0994 26.2001 40.1022 26.0002 40.0096C25.2939 39.6883 24.5903 39.367 23.8944 39.0239C23.1285 38.6481 22.3573 38.3023 21.4953 38.2751C21.4537 38.2751 21.4148 38.2805 21.3369 38.286C21.3317 38.4031 21.3239 38.5147 21.3239 38.6291C21.3239 39.7373 21.3187 40.8482 21.3239 41.9564C21.3265 42.806 20.9812 43.4404 20.2516 43.7971C19.5245 44.1538 18.8209 44.034 18.2133 43.4867C17.7875 43.1028 17.5824 42.5963 17.5824 42.0027C17.5824 41.1641 17.5824 40.3254 17.5824 39.495C16.6892 39.7237 15.8272 39.9796 14.9496 40.1593C14.0668 40.3418 13.1762 40.2928 12.2596 40.0695C12.2596 40.7311 12.2596 41.3547 12.2596 41.9782C12.2596 43.1218 11.4833 43.9686 10.4317 43.9795C9.33856 43.9904 8.52846 43.1545 8.52067 41.9891C8.51288 40.9 8.51029 39.8135 8.52327 38.7244C8.52587 38.4793 8.45057 38.3622 8.22467 38.3459C7.44833 38.2833 6.67458 38.1961 5.89563 38.1689C4.76876 38.1281 3.94568 37.2295 4.0028 36.0478C4.05473 34.9151 4.99206 34.0873 6.09816 34.1799C6.88489 34.2452 7.67422 34.2861 8.4973 34.3433C8.50509 34.2235 8.51808 34.12 8.51808 34.0192C8.51808 32.7477 8.51288 31.4761 8.52587 30.2072C8.52587 29.9758 8.45836 29.8614 8.24545 29.8451C7.47949 29.7906 6.71352 29.7198 5.94497 29.6926C5.00244 29.6572 4.2235 29.0119 4.04954 28.0725C3.81066 26.7846 4.73241 25.6382 5.98651 25.6818C6.71352 25.7063 7.44054 25.7717 8.17015 25.8179C8.27141 25.8234 8.37267 25.8179 8.5025 25.8179C8.51288 25.7172 8.52846 25.6246 8.52846 25.532C8.52846 24.2605 8.52327 22.9889 8.53625 21.72C8.53625 21.475 8.46095 21.3579 8.23766 21.3361C7.67682 21.2789 7.11857 21.2163 6.55514 21.17C6.22798 21.1428 5.89304 21.1836 5.57107 21.1291C4.58182 20.9631 3.9301 20.0318 4.01319 18.9508C4.09108 17.9597 4.90897 17.1565 5.88005 17.1728C6.64861 17.1864 7.41717 17.2599 8.18573 17.3035C8.28439 17.309 8.38566 17.3035 8.51029 17.3035C8.51808 17.1864 8.52846 17.083 8.52846 16.9795C8.52846 15.7297 8.52067 14.4799 8.53625 13.2301C8.53885 12.9687 8.45316 12.8489 8.21948 12.8298C7.45352 12.7699 6.68756 12.6964 5.9216 12.6637C4.64932 12.6093 3.79768 11.4929 4.06512 10.1968C4.23908 9.34998 4.99725 8.66926 5.83332 8.67743C6.56033 8.6856 7.28735 8.7564 8.01436 8.79724C8.16755 8.80541 8.32074 8.79724 8.51029 8.79724C8.51808 8.6856 8.52846 8.57124 8.52846 8.4596C8.52846 7.64002 8.52067 6.82315 8.53106 6.00357C8.54664 4.9716 9.24249 4.15473 10.1902 4.0322C11.0912 3.91512 11.9714 4.52232 12.2129 5.4481C12.27 5.66321 12.283 5.89465 12.2856 6.11793C12.2908 7.37862 12.2934 8.63931 12.283 9.89728C12.283 10.1151 12.3583 10.2022 12.5322 10.3084C13.3475 10.8067 14.1914 10.8149 15.056 10.5099C15.783 10.2513 16.5022 9.96263 17.2319 9.71213C17.5331 9.60866 17.6032 9.43167 17.598 9.11854C17.5798 8.10563 17.585 7.09272 17.5928 6.08253C17.6006 5.09685 18.0991 4.3644 18.9248 4.09211C20.1165 3.69729 21.3161 4.61762 21.3551 5.97634C21.3758 6.74147 21.3603 7.5066 21.3603 8.269C21.3603 8.39425 21.3603 8.51951 21.3603 8.67743C23.2687 8.73461 24.9512 9.44256 26.6207 10.3901C26.6285 10.2104 26.6389 10.0988 26.6389 9.98714C26.6389 8.6611 26.6337 7.33778 26.6415 6.01174C26.6467 5.1622 27.1166 4.45153 27.8463 4.15473C28.5733 3.86066 29.386 4.05399 29.9053 4.6503C30.2376 5.0315 30.4012 5.4835 30.4012 6.00357C30.4012 7.08183 30.4012 8.15736 30.4012 9.23562C30.4012 9.34181 30.4012 9.44528 30.4012 9.60866C32.1356 9.00418 33.8493 8.51406 35.6954 8.61753C35.6954 8.11924 35.6902 7.65908 35.6954 7.19891C35.7006 6.70335 35.6798 6.20506 35.7396 5.71767C35.8668 4.67753 36.7106 3.96686 37.6973 4.01859C38.658 4.0676 39.4292 4.87085 39.4551 5.91099C39.4837 7.18257 39.4655 8.45143 39.4655 9.72302C39.4655 10.1314 39.6784 10.3357 40.0731 10.3275C40.73 10.3139 41.3869 10.2948 42.0438 10.3139C42.9733 10.3411 43.6848 10.9047 43.9133 11.757C44.1444 12.6174 43.838 13.4942 43.1317 13.9979C42.7864 14.243 42.3995 14.3192 41.9919 14.322C41.3973 14.322 40.8001 14.3274 40.2055 14.3383C39.9718 14.3437 39.7381 14.371 39.4811 14.39C39.4759 14.5044 39.4655 14.6106 39.4655 14.7141C39.4655 15.8876 39.4655 17.0612 39.4655 18.2375C39.4655 18.6132 39.6706 18.8201 40.0367 18.8201C40.7456 18.8174 41.4544 18.7793 42.1607 18.8201C43.246 18.8828 44.0171 19.765 43.9912 20.846C43.9652 21.9515 43.1499 22.7901 42.062 22.8201C41.5583 22.8337 41.0546 22.8146 40.5534 22.8255C40.1977 22.8337 39.842 22.8718 39.4525 22.8963L39.4473 22.9099ZM35.672 26.662C35.1138 26.692 34.5919 26.7002 34.0752 26.7546C32.8938 26.8771 31.7721 27.272 30.6531 27.6586C29.6223 28.0126 28.5889 28.372 27.5529 28.7069C27.3711 28.7668 27.14 28.7559 26.9557 28.6933C26.5948 28.5762 26.2442 28.4156 25.9015 28.2467C24.8889 27.7485 23.8918 27.2093 22.7857 26.9752C22.321 26.8771 21.8458 26.8281 21.3525 26.7519V28.647C22.2976 28.6742 23.1674 28.9547 24.0035 29.3522C24.5176 29.5973 25.0213 29.8587 25.5302 30.1146C26.439 30.5721 27.3685 30.7709 28.3604 30.4114C28.9316 30.2045 29.5132 30.0275 30.0896 29.8369C31.1853 29.4775 32.2681 29.0718 33.3794 28.7777C34.1142 28.5844 34.8905 28.5544 35.6746 28.4482V26.662H35.672ZM26.6311 22.0713C26.6311 21.3851 26.6389 20.7942 26.6233 20.2061C26.6233 20.1353 26.5065 20.0454 26.426 20.0046C25.8729 19.7241 25.3147 19.4491 24.7565 19.1823C22.6221 18.1639 20.4671 17.9788 18.2627 18.9672C17.3773 19.3647 16.4711 19.7078 15.5571 20.0264C14.6925 20.3286 13.8045 20.4947 12.9009 20.1925C12.7088 20.1271 12.5244 20.04 12.2856 19.9393C12.2856 20.5383 12.2934 21.0938 12.283 21.6492C12.2778 21.848 12.3505 21.9297 12.527 21.9869C13.2696 22.2237 14.02 22.2292 14.7808 22.1039C16.0712 21.8943 17.2812 21.4178 18.46 20.865C19.7582 20.2578 21.0928 19.8848 22.4923 20.3014C23.344 20.5546 24.1515 20.9712 24.9746 21.3252C25.512 21.5566 26.0417 21.8044 26.6389 22.074L26.6311 22.0713ZM26.6311 39.0538C26.6311 38.3949 26.6363 37.804 26.6233 37.2159C26.6233 37.1587 26.5376 37.077 26.4753 37.0471C25.8158 36.7203 25.1589 36.3936 24.4942 36.0832C22.3729 35.0948 20.2516 35.0594 18.1095 36.0396C17.2942 36.4127 16.4555 36.7421 15.6065 37.0253C14.5886 37.3629 13.5475 37.5617 12.5141 37.0471C12.4543 37.0171 12.3868 37.0035 12.2674 36.9654C12.2674 37.5426 12.2778 38.0791 12.2622 38.6127C12.2544 38.836 12.3271 38.9368 12.527 39.0021C13.441 39.2989 14.3498 39.2281 15.2663 39.0239C16.5282 38.7434 17.7044 38.2098 18.8806 37.6761C20.1918 37.0825 21.5394 36.9191 22.8974 37.4256C23.7724 37.7523 24.611 38.1961 25.4679 38.5801C25.8314 38.7434 26.2079 38.8823 26.6311 39.0538ZM21.3551 9.79381C21.3551 10.3357 21.3629 10.8503 21.3499 11.3622C21.3447 11.5746 21.4278 11.6454 21.6173 11.6563C22.4949 11.6971 23.3024 12.0048 24.0866 12.386C24.5799 12.6256 25.0706 12.8707 25.5614 13.1157C26.4727 13.5704 27.4049 13.7529 28.3915 13.3907C29.0484 13.1511 29.7131 12.9306 30.3804 12.7182C31.5462 12.3506 32.7069 11.9558 33.8909 11.6508C34.4569 11.5038 35.0671 11.5365 35.6902 11.4847C35.6902 10.9892 35.6798 10.4745 35.6954 9.96263C35.7006 9.73663 35.6253 9.66856 35.415 9.66311C34.3063 9.63316 33.221 9.80743 32.1694 10.156C30.9205 10.5726 29.6872 11.0409 28.4538 11.5092C27.6827 11.8006 26.9635 11.8033 26.2053 11.3949C25.3225 10.9211 24.3955 10.529 23.4686 10.156C22.8091 9.89184 22.108 9.77747 21.3551 9.78837V9.79381ZM30.396 21.2136C30.531 21.1727 30.6271 21.1428 30.7206 21.1128C31.4034 20.8814 32.0785 20.6172 32.7718 20.4294C33.3742 20.266 33.9947 20.1462 34.6153 20.0754C35.9447 19.9229 37.1313 20.3014 38.1543 21.2272C38.5515 21.5839 39.0007 21.8262 39.5486 21.8153C40.3795 21.799 41.2129 21.8099 42.0438 21.7935C42.5579 21.7826 42.9422 21.3851 42.95 20.8895C42.9578 20.3749 42.5839 19.9692 42.0464 19.9583C41.3376 19.942 40.6287 19.942 39.9225 19.9665C39.5927 19.9801 39.3279 19.9011 39.0734 19.6806C38.1854 18.9073 37.1676 18.4199 36.0174 18.2729C34.1038 18.0305 32.3174 18.5969 30.544 19.2395C30.4817 19.2613 30.4038 19.3538 30.4012 19.4137C30.3908 20.0019 30.396 20.59 30.396 21.2136ZM30.383 38.2452C30.5336 38.1907 30.6271 38.158 30.7232 38.1226C31.9046 37.687 33.0886 37.2567 34.3401 37.1043C35.6357 36.9463 36.8586 37.1179 37.9102 38.0273C38.1075 38.1989 38.3101 38.384 38.5386 38.4875C38.8605 38.6318 39.2085 38.7816 39.5512 38.8006C40.3613 38.8415 41.174 38.8142 41.9841 38.8006C42.5527 38.7924 42.9422 38.4194 42.9526 37.8966C42.9604 37.3657 42.5995 36.9845 42.0178 36.9654C41.3817 36.9436 40.7404 36.9137 40.1094 36.9763C39.6213 37.0226 39.2604 36.8565 38.9021 36.5542C37.7648 35.5931 36.4432 35.201 35.0022 35.2282C33.465 35.2582 32.0058 35.7047 30.5726 36.2438C30.4921 36.2738 30.396 36.4018 30.3934 36.4862C30.3778 37.0553 30.3856 37.6271 30.3856 38.2479L30.383 38.2452ZM17.5746 10.7686C17.4344 10.8203 17.3383 10.853 17.2448 10.8884C16.6944 11.0953 16.1491 11.3132 15.5935 11.5038C14.3446 11.934 13.1268 11.9667 11.9324 11.2614C11.4625 10.9837 10.9484 10.7713 10.4369 10.5862C9.74102 10.3357 9.03737 10.0688 8.31555 9.93812C7.5418 9.79926 6.74209 9.81015 5.95276 9.76114C5.4776 9.73119 5.06476 10.1042 5.02322 10.5971C4.98167 11.079 5.34258 11.5283 5.81514 11.5773C5.97872 11.5936 6.1423 11.5827 6.30847 11.5855C7.20166 11.5964 8.10524 11.5827 8.94909 11.934C9.87344 12.3206 10.7796 12.7454 11.6936 13.162C12.4362 13.4996 13.1943 13.7229 14.0174 13.6821C15.2144 13.6195 16.3283 13.2219 17.4344 12.7863C17.4941 12.7617 17.5668 12.6664 17.5668 12.6038C17.5772 12.0048 17.572 11.4058 17.572 10.7659L17.5746 10.7686ZM17.5746 27.7757C17.424 27.8329 17.3305 27.8737 17.2345 27.9064C16.4659 28.1705 15.7025 28.4619 14.9262 28.6933C14.0719 28.9465 13.2229 28.922 12.4076 28.4918C12.1064 28.3339 11.7896 28.2005 11.4859 28.0425C9.73842 27.1467 7.88454 26.7601 5.94756 26.7682C5.53732 26.7682 5.22055 26.9806 5.07774 27.3618C4.94532 27.7131 5.0336 28.1378 5.35816 28.3693C5.53992 28.5 5.78658 28.5626 6.01247 28.5844C6.78623 28.6606 7.59633 28.5844 8.33373 28.7968C9.35414 29.0881 10.3252 29.5755 11.3119 29.9976C11.9766 30.2807 12.6231 30.6102 13.3553 30.6701C14.7912 30.7845 16.1128 30.3298 17.4188 29.8015C17.4863 29.7743 17.5668 29.6708 17.5694 29.6C17.5824 29.0092 17.5772 28.4183 17.5772 27.7757H17.5746ZM30.4116 26.6157C32.1408 25.9949 33.8519 25.5348 35.6746 25.6219V21.1101C35.1657 21.14 34.6594 21.0883 34.1972 21.2136C33.0003 21.5349 31.8215 21.9406 30.6323 22.3027C30.4298 22.3653 30.3908 22.4797 30.3908 22.6757C30.3986 23.882 30.3934 25.0855 30.396 26.2917C30.396 26.3843 30.4064 26.4796 30.4142 26.6185L30.4116 26.6157ZM12.2544 31.5523C12.2544 32.9274 12.2544 34.248 12.2596 35.5713C12.2596 35.6394 12.3219 35.7319 12.379 35.7673C13.0567 36.1622 13.7656 36.4426 14.5523 36.1867C15.4792 35.8817 16.3958 35.5441 17.3227 35.2309C17.5382 35.1574 17.5928 35.0267 17.5902 34.8007C17.5798 33.6163 17.585 32.4345 17.585 31.2501C17.585 31.1493 17.572 31.0486 17.5616 30.9179C15.8298 31.5578 14.1239 32.0915 12.2544 31.555V31.5523ZM12.2648 14.5534C12.2648 15.9285 12.2648 17.249 12.2674 18.5724C12.2674 18.635 12.3089 18.733 12.3583 18.7548C12.9347 19.0244 13.4825 19.3647 14.168 19.2449C15.2611 19.057 16.2764 18.6377 17.2968 18.2129C17.5149 18.1231 17.5928 18.0142 17.5902 17.7691C17.5798 16.5956 17.585 15.4247 17.585 14.2512C17.585 14.1477 17.5746 14.0442 17.5668 13.9026C15.8401 14.5507 14.1291 15.0571 12.2648 14.5507V14.5534ZM35.672 29.5973C35.106 29.6409 34.5582 29.6055 34.0544 29.7416C32.8756 30.0629 31.7176 30.4604 30.557 30.8498C30.4713 30.877 30.3908 31.0731 30.3882 31.1929C30.3752 32.3882 30.3804 33.5809 30.3804 34.7762C30.3804 34.8661 30.3934 34.9586 30.4038 35.0866C32.1305 34.493 33.8415 33.992 35.6695 34.1064V29.6L35.672 29.5973ZM35.6772 12.6637C35.241 12.6637 34.8386 12.6202 34.4465 12.6719C33.0912 12.8489 31.8241 13.3608 30.557 13.8536C30.4765 13.8863 30.4012 14.066 30.4012 14.1776C30.3908 15.3839 30.3934 16.5901 30.396 17.7963C30.396 17.878 30.4116 17.9597 30.4246 18.0822C32.1408 17.4451 33.8623 17.0013 35.6772 17.0938V12.661V12.6637ZM17.5876 22.4252C15.8298 23.0433 14.1213 23.5743 12.3141 23.0733C12.2908 23.1168 12.2752 23.1359 12.2752 23.155C12.2726 24.4483 12.2674 25.739 12.2752 27.0323C12.2752 27.1086 12.3401 27.2148 12.405 27.2529C13.0931 27.6668 13.8227 27.9037 14.612 27.6368C15.5571 27.3182 16.4971 26.9806 17.4318 26.6294C17.5123 26.5994 17.5798 26.4115 17.5824 26.2972C17.5954 25.4885 17.5902 24.6825 17.5902 23.8738C17.5902 23.4136 17.5902 22.9508 17.5902 22.4225L17.5876 22.4252ZM21.3525 29.7389V34.2371C23.2635 34.2589 24.9408 35.0294 26.6311 35.9525C26.6311 35.7564 26.6311 35.6421 26.6311 35.5277C26.6311 34.4386 26.6311 33.3521 26.6311 32.263C26.6311 31.664 26.6155 31.7021 26.0755 31.4815C25.2835 31.1575 24.5124 30.779 23.7386 30.4114C22.9883 30.0547 22.2275 29.7471 21.3525 29.7362V29.7389ZM21.3888 12.7345C21.3732 12.8026 21.3577 12.8325 21.3577 12.8625C21.3577 14.2403 21.3577 15.618 21.3499 16.9931C21.3499 17.1783 21.42 17.23 21.5862 17.2382C21.8718 17.2518 22.16 17.2763 22.443 17.3198C23.8113 17.5295 25.0525 18.1122 26.2728 18.7602C26.3767 18.8147 26.4831 18.861 26.6285 18.9291C26.6285 17.5077 26.6285 16.1517 26.6207 14.7985C26.6207 14.7331 26.5324 14.6405 26.4649 14.6106C25.6081 14.2321 24.7383 13.8863 23.8918 13.486C23.0921 13.1103 22.2898 12.7781 21.3862 12.7318L21.3888 12.7345ZM26.6337 27.3319C26.6337 25.9868 26.6363 24.6771 26.6259 23.3646C26.6259 23.2938 26.535 23.1876 26.4623 23.155C25.6419 22.7955 24.8214 22.4361 23.9957 22.0958C23.3388 21.8262 22.6767 21.5703 22.0094 21.3334C21.8069 21.2598 21.5784 21.268 21.3499 21.2381V25.5811C22.2768 25.7907 23.1856 25.9269 24.0476 26.2128C24.92 26.5014 25.7483 26.9398 26.6337 27.3319ZM20.3113 21.3143C19.7972 21.5212 19.3636 21.7118 18.9196 21.8698C18.6885 21.9515 18.6132 22.074 18.6132 22.3354C18.621 26.3081 18.6184 30.278 18.6184 34.2507C18.6184 34.3651 18.6184 34.4794 18.6184 34.6128C19.0987 34.5039 19.5349 34.3787 19.9763 34.316C20.2568 34.2779 20.3165 34.1636 20.3165 33.8885C20.3087 29.8315 20.3113 25.7717 20.3113 21.7146C20.3113 21.6111 20.3113 21.5049 20.3113 21.3116V21.3143ZM29.373 14.2893C28.89 14.4118 28.459 14.548 28.0202 14.6242C27.7528 14.6705 27.6775 14.774 27.6775 15.0571C27.6879 19.1061 27.6827 23.1577 27.6853 27.2066C27.6853 27.3182 27.6957 27.4326 27.7061 27.596C28.1968 27.4244 28.6382 27.2529 29.0874 27.1168C29.3159 27.046 29.3834 26.9289 29.3808 26.6838C29.3626 24.6716 29.347 22.6567 29.347 20.6445C29.347 18.6622 29.3652 16.6827 29.3756 14.7004C29.3756 14.5752 29.3756 14.4499 29.3756 14.292L29.373 14.2893ZM38.4191 34.8252C38.4243 34.7245 38.4347 34.6319 38.4347 34.5393C38.4347 32.3774 38.4373 30.2127 38.4373 28.0507C38.4373 26.3598 38.4373 24.6716 38.4295 22.9807C38.4295 22.8527 38.3724 22.6785 38.2841 22.6077C37.9258 22.3218 37.5441 22.0685 37.1702 21.8071C37.043 21.7173 36.908 21.6383 36.7626 21.5457V34.2262C37.3156 34.425 37.8453 34.6183 38.4191 34.8252ZM9.55667 13.3444C9.55667 13.5514 9.55667 13.6766 9.55667 13.8046C9.55667 15.6671 9.55667 17.5295 9.55667 19.392C9.55667 21.5349 9.55667 23.6778 9.56186 25.8179C9.56186 25.9296 9.6034 26.112 9.66832 26.1392C10.1694 26.3407 10.6835 26.5123 11.2314 26.7056C11.2314 26.5422 11.2314 26.417 11.2314 26.289C11.2314 24.0807 11.2314 21.8752 11.2314 19.667C11.2314 17.9216 11.2314 16.179 11.2262 14.4336C11.2262 14.3111 11.1873 14.1177 11.1094 14.0796C10.6264 13.8264 10.1253 13.6086 9.55667 13.3444ZM18.634 17.6112C19.0935 17.4996 19.5168 17.3661 19.9504 17.3062C20.2412 17.2681 20.3165 17.1646 20.3165 16.8651C20.3087 13.9898 20.3139 11.1144 20.3165 8.24177C20.3165 7.52021 20.3191 6.79865 20.3087 6.07709C20.3009 5.51073 19.953 5.13497 19.4622 5.13225C18.9559 5.13225 18.621 5.51617 18.621 6.10976C18.621 9.84555 18.621 13.5813 18.621 17.3198C18.621 17.4043 18.6288 17.4914 18.634 17.6112ZM38.4347 17.8127C38.4347 17.6656 38.4347 17.5404 38.4347 17.4124C38.4347 14.5044 38.4347 11.5991 38.4347 8.69105C38.4347 7.79794 38.4399 6.90484 38.4295 6.00901C38.4243 5.49439 38.0634 5.13225 37.5883 5.13225C37.1469 5.13225 36.7911 5.47533 36.7885 5.9355C36.7781 7.01103 36.7833 8.08929 36.7833 9.16483C36.7833 10.2213 36.7859 11.2751 36.7833 12.3315C36.7756 13.9026 36.7574 15.4737 36.7548 17.0448C36.7548 17.1238 36.8301 17.2518 36.8976 17.279C37.3883 17.4614 37.8843 17.6248 38.4321 17.8127H38.4347ZM9.56965 30.357C9.56186 30.5122 9.55407 30.6075 9.55407 30.7028C9.55407 33.3412 9.55407 35.9797 9.55407 38.6182C9.55407 39.7264 9.55407 40.8373 9.55667 41.9455C9.55926 42.5337 9.94354 42.9203 10.4654 42.8822C10.9094 42.8495 11.2106 42.4819 11.2132 41.9483C11.2184 40.3772 11.2132 38.8033 11.2132 37.2322C11.2132 35.2936 11.2132 33.3549 11.2054 31.4162C11.2054 31.3045 11.1665 31.1303 11.0938 31.0922C10.6082 30.8389 10.1123 30.6156 9.56705 30.3597L9.56965 30.357ZM29.3288 31.3263C28.807 31.4434 28.3136 31.5441 27.8281 31.6721C27.7632 31.6885 27.6905 31.8409 27.6879 31.9335C27.6749 32.4917 27.6801 33.0526 27.6801 33.6135C27.6801 36.3582 27.6801 39.1029 27.6801 41.8475C27.6801 42.1715 27.7268 42.4765 27.9761 42.6943C28.2409 42.9231 28.5369 42.9938 28.8615 42.825C29.2042 42.648 29.3418 42.3567 29.3418 41.9646C29.3392 38.5093 29.3418 35.0539 29.3418 31.6013C29.3418 31.5169 29.334 31.4325 29.3288 31.3318V31.3263ZM27.6827 10.6025C28.2409 10.4037 28.7369 10.2376 29.2198 10.0416C29.2951 10.0116 29.3652 9.84827 29.3652 9.74752C29.3756 8.54401 29.373 7.3405 29.3704 6.13699C29.3704 5.52979 29.0251 5.13497 28.5162 5.13497C28.0072 5.13497 27.6827 5.52979 27.6827 6.1506C27.6827 7.45214 27.6827 8.75095 27.6827 10.0525C27.6827 10.2104 27.6827 10.3711 27.6827 10.6052V10.6025ZM11.2132 9.69579C11.221 9.57326 11.2314 9.47796 11.2314 9.38538C11.2314 8.28806 11.2314 7.19346 11.2288 6.09615C11.2288 5.52979 10.9172 5.15948 10.4395 5.13769C9.9747 5.11591 9.59042 5.4835 9.57484 6.0308C9.54888 6.99742 9.55926 7.96404 9.56446 8.93066C9.56446 9.0069 9.64754 9.12398 9.71765 9.15121C10.1954 9.33637 10.6809 9.50519 11.2158 9.69579H11.2132ZM20.2568 38.3568C19.7608 38.5556 19.2987 38.7489 18.8313 38.9231C18.6677 38.983 18.6158 39.0756 18.6158 39.2526C18.6236 40.1539 18.6158 41.0579 18.621 41.9619C18.6262 42.5146 18.9949 42.9231 19.4648 42.9176C19.9296 42.9122 20.2749 42.5173 20.2749 41.9728C20.2801 40.8754 20.2749 39.7809 20.2749 38.6835C20.2749 38.5991 20.2645 38.5147 20.2542 38.3568H20.2568ZM39.4811 11.4412V13.2764C40.3639 13.2764 41.2259 13.2873 42.0854 13.2736C42.5865 13.2655 42.9526 12.8734 42.963 12.3805C42.9734 11.8741 42.615 11.4602 42.0931 11.4493C41.2337 11.4275 40.3717 11.4439 39.4811 11.4439V11.4412ZM39.4811 30.2698C40.4132 30.2698 41.3246 30.2916 42.2334 30.259C42.6358 30.2453 42.9526 29.8151 42.963 29.3931C42.9734 28.9656 42.6773 28.5027 42.2801 28.4891C41.3531 28.4537 40.421 28.4782 39.4785 28.4782V30.2726L39.4811 30.2698ZM36.7652 38.5501C36.7652 39.77 36.7444 40.9408 36.7756 42.1089C36.7885 42.6018 37.178 42.9013 37.635 42.8822C38.066 42.8631 38.4035 42.4983 38.4113 42.0082C38.4243 41.2975 38.4191 40.5868 38.4113 39.8789C38.4113 39.8026 38.388 39.691 38.336 39.6529C37.8297 39.288 37.3182 38.9368 36.7626 38.5501H36.7652ZM8.51029 20.2115C8.51029 19.6969 8.51548 19.1442 8.4999 18.5887C8.4999 18.537 8.36229 18.4526 8.28439 18.4471C7.51843 18.379 6.75247 18.3164 5.98651 18.2701C5.4776 18.2402 5.07515 18.6023 5.02581 19.1033C4.97908 19.588 5.3322 20.0563 5.83851 20.0917C6.71352 20.1544 7.59373 20.1734 8.51029 20.2115ZM8.51288 37.1996C8.51288 36.6904 8.52067 36.154 8.5025 35.6203C8.5025 35.5522 8.37008 35.4406 8.29218 35.4324C7.50545 35.3643 6.71872 35.3072 5.93198 35.2663C5.45942 35.2418 5.05178 35.6475 5.02581 36.1295C4.99985 36.6169 5.36855 37.058 5.83851 37.0825C6.71612 37.126 7.59373 37.1614 8.51288 37.2023V37.1996Z" fill="#6E89C3"/>
+        </svg>
+      </div>
+      <p class="linen-tips-item-text">
+        Исключительная плотность
+        и долговечность после множества стирок
+      </p>
+    </div>
+    <div class="linen-tips-item">
+      <div class="linen-tips-item-icon">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.953 4C11.2812 4.12999 12.8721 5.81354 13.2045 6.13921L28.3826 21.0012C29.8312 22.4192 31.5915 24.0755 32.9119 25.599C32.9119 25.599 33.5049 25.6158 35.3805 26.1637C39.1624 27.4405 41.7776 30.1989 41.9748 34.2949C42.1328 37.581 41.8808 39.7153 45 42.1697L44.9737 42.206C44.6242 42.7029 43.6483 43.5045 43.1621 44C42.8282 43.7149 42.5364 43.3543 42.2161 43.0489C39.8941 40.9823 38.2363 40.911 35.4111 40.9278C31.0911 40.953 26.5013 37.5404 26.4956 33.1348C25.5823 31.8846 22.503 28.9277 21.4872 27.9374L5.69697 12.4122C5.13749 11.8552 4.52247 11.3331 4 10.7426C4.92323 9.6447 6.20877 8.57404 7.24447 7.56139C8.32785 6.50192 9.74366 4.87358 10.953 4ZM10.953 7.21406C9.78067 8.47411 8.51364 9.53987 7.35195 10.7426C7.89222 11.2325 8.38124 11.7769 8.90941 12.2794L21.4388 24.5004C23.4504 26.4705 25.4613 28.4196 27.401 30.4589C28.3976 30.4337 29.4169 30.5092 30.1636 29.7425C30.7743 29.1164 31.3046 27.3559 30.6725 26.5802C30.1928 25.9918 29.5407 25.4655 28.9948 24.9302L11.7289 8.00727C11.4841 7.76686 11.2406 7.39367 10.953 7.21406ZM33.2322 28.1205C33.0016 30.6504 31.474 32.5338 28.7848 32.6386C29.2254 36.6599 32.1752 38.7194 36.1621 38.6719C37.5608 38.6691 38.7808 38.704 40.1354 39.1373C39.6379 37.4035 39.6934 36.5019 39.6699 34.7974C39.6179 31.0725 36.9202 28.3805 33.2329 28.1205H33.2322Z" fill="#6E89C3"/>
+        </svg>
+      </div>
+      <p class="linen-tips-item-text">
+        Конструкция, продуманная<br class="br-desktop">
+        до мелочей
+      </p>
+    </div>
+    <div class="linen-tips-item">
+      <div class="linen-tips-item-icon">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24.4091 3.00004C25.036 2.99377 25.7251 3.69286 26.1339 4.00232C31.35 7.95847 38.3912 14.3959 39.7151 19.9343C41.1429 25.904 37.1 31.6961 29.9099 33.9083C28.5584 34.3237 27.1058 34.5907 25.6816 34.7991C25.8483 37.2588 25.2542 40.6873 24.4091 42.9937C23.9737 43.0027 23.5347 42.9944 23.0984 42.9937C22.7188 43.0055 22.3393 42.9979 21.9597 42.9937C23.1605 40.5626 23.7803 37.348 23.3502 34.7991C17.8432 34.0373 12.6821 31.434 10.3046 27.3496C5.60281 19.27 14.6073 10.5004 21.4747 5.0506C22.1885 4.48395 23.5533 3.30811 24.4091 3.00004ZM24.4091 5.23601L24.3638 5.28201C23.9515 5.69672 23.4336 6.06125 22.96 6.43344C18.2928 10.1003 12.5145 15.661 11.3865 20.7323C10.0066 26.9342 15.9952 31.7971 23.3511 32.9583C22.5308 29.6204 19.1051 24.0925 15.4108 22.074C15.9269 21.5966 16.5414 21.1205 17.14 20.7072C19.2133 22.6769 20.8637 23.9455 22.584 26.2769C22.835 26.6178 23.0682 26.9823 23.3511 27.3064L23.3485 17.9785C23.3485 17.6983 23.3041 15.7188 23.3511 15.6143C25.9539 17.1435 25.6852 18.856 25.6843 21.1205L25.6887 25.6594C25.6896 26.3271 25.6408 27.0164 25.6825 27.6821C27.1368 26.2288 30.285 23.1885 32.1978 22.0747C32.776 22.4651 33.3444 22.9202 33.8552 23.3656C30.8871 25.4217 28.0174 28.1609 25.6825 30.7105C25.663 31.4591 25.6861 32.2098 25.6825 32.959C26.5001 32.782 27.3337 32.6705 28.1398 32.4586C35.118 30.622 39.2283 25.2328 37.2392 19.5391C35.6767 15.0671 31.0068 10.5485 27.0411 7.26914C26.2758 6.63627 25.2746 5.73784 24.4091 5.23601Z" fill="#6E89C3"/>
+        </svg>
+      </div>
+      <p class="linen-tips-item-text">
+        Гипоаллергенный материал обладает
+        бактериостатическими свойствами
+      </p>
+    </div>
+  </section>
+
+  <section class="linen-text-section">
+    <h3>
+      насладитесь шелковистыми прикосновениями<br>
+      постельного белья Beauty Sleep<br>
+      для непревзойдённого комфорта сна
+    </h3>
+  </section>
+
+  <section class="linen-video-section">
+    <video autoplay="" loop="" muted="" playsinline="" webkit-playsinline="" poster="landing_files/video/linen-video-1-poster.jpg" preload="none">
+      <source src="landing_files/video/linen-video-1.mp4" type="video/mp4">
+      <source src="landing_files/video/linen-video-1.webm" type="video/webm">
+    </video>
+    <div class="linen-video-text">
+      <h3>
+        Уникальный тенсель от Beauty Sleep теперь в постельном белье. Износостойкий, но в то же время удивительно мягкий на ощупь, тенсель Beauty Sleep обеспечивает ощущение лёгкости и свежести
+        всю ночь. Безупречное качество, прошедшее испытание временем и доверием наших клиентов.
+      </h3>
+    </div>
+  </section>
+
+  <section class="linen-unique-structure">
+    <div class="linen-unique-structure-wrapper">
+      <h4>
+        Уникальная структура пододеяльника
+      </h4>
+      <p>
+        Двусторонняя молния пододеяльника Beauty Sleep позволяет с лёгкостью заправлять одеяло, в том числе и утяжелённое
+      </p>
+      <div class="linen-unique-structure-video">
+        <video autoplay="" loop="" muted="" playsinline="" webkit-playsinline="" poster="landing_files/video/linen-video-2-poster.jpg" preload="none">
+          <source src="landing_files/video/linen-video-2.mp4" type="video/mp4">
+          <source src="landing_files/video/linen-video-2.webm" type="video/webm">
+        </video>
+      </div>
+      <ul>
+        <li>
+          <span class="num">1</span>
+          <span class="text">
+                        Разложите пододеяльник на кровати
+                    </span>
+        </li>
+        <li>
+          <span class="num">2</span>
+          <span class="text">
+                        Раскройте молнии на двух стыкующихся сторонах
+                    </span>
+        </li>
+        <li>
+          <span class="num">3</span>
+          <span class="text">
+                        Разложите одеяло в пододеяльнике и расправьте его внутри
+                    </span>
+        </li>
+        <li>
+          <span class="num">4</span>
+          <span class="text">
+                        Застегните молнии
+                    </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="linen-details">
+    <div class="linen-details-wrapper">
+      <h4 class="linen-details-title">
+        Детали, которые имеют значение
+      </h4>
+      <div class="linen-details-item">
+        <div class="linen-details-img">
+          <picture>
+            <source srcset="landing_files/images/linen-details-1-2xmob.avif" media="(max-width: 768px)" type="image/avif">
+            <source srcset="landing_files/images/linen-details-1-2x.avif" type="image/avif">
+
+            <source srcset="landing_files/images/linen-details-1-2xmob.webp" media="(max-width: 768px)" type="image/webp">
+            <source srcset="landing_files/images/linen-details-1-2x.webp" type="image/webp">
+
+            <source srcset="landing_files/images/linen-details-1-2xmob.jpg" media="(max-width: 768px)" type="image/jpg">
+            <source srcset="landing_files/images/linen-details-1-2x.jpg" type="image/jpg">
+
+            <img src="landing_files/images/linen-details-1-2x.jpg" alt="">
+          </picture>
+        </div>
+        <div class="linen-details-info">
+          <h5>
+            Изысканная фурнитура
+          </h5>
+          <p>
+            Деликатные молнии, скрытые под клапанами
+          </p>
+        </div>
+      </div>
+      <div class="linen-details-item">
+        <div class="linen-details-img">
+          <picture>
+            <source srcset="landing_files/images/linen-details-2-3xmob.avif" media="(max-width: 768px)" type="image/avif">
+            <source srcset="landing_files/images/linen-details-2-3x.avif" type="image/avif">
+
+            <source srcset="landing_files/images/linen-details-2-3xmob.webp" media="(max-width: 768px)" type="image/webp">
+            <source srcset="landing_files/images/linen-details-2-3x.webp" type="image/webp">
+
+            <source srcset="landing_files/images/linen-details-2-3xmob.jpg" media="(max-width: 768px)" type="image/jpg">
+            <source srcset="landing_files/images/linen-details-2-3x.jpg" type="image/jpg">
+
+            <img src="landing_files/images/linen-details-2-3x.jpg" alt="">
+          </picture>
+        </div>
+        <div class="linen-details-info">
+          <h5>
+            Внимание к каждой строчке
+          </h5>
+          <p>
+            Ручная обработка и идеальные швы
+          </p>
+        </div>
+      </div>
+      <div class="linen-details-item">
+        <div class="linen-details-img">
+          <picture>
+            <source srcset="landing_files/images/linen-details-3-2xmob.avif" media="(max-width: 768px)" type="image/avif">
+            <source srcset="landing_files/images/linen-details-3-2x.avif" type="image/avif">
+
+            <source srcset="landing_files/images/linen-details-3-2xmob.webp" media="(max-width: 768px)" type="image/webp">
+            <source srcset="landing_files/images/linen-details-3-2x.webp" type="image/webp">
+
+            <source srcset="landing_files/images/linen-details-3-2xmob.jpg" media="(max-width: 768px)" type="image/jpg">
+            <source srcset="landing_files/images/linen-details-3-2x.jpg" type="image/jpg">
+
+            <img src="landing_files/images/linen-details-3-2x.jpg" alt="">
+          </picture>
+        </div>
+        <div class="linen-details-info">
+          <h5>
+            Дышащий шелковистый тенсель
+          </h5>
+          <p>
+            Обеспечивает естественную терморегуляцию, создавая комфорт
+            в любое время года
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="picture-cards-section">
+    <h3 class="picture-cards-section-title">
+      Создайте <b>свой идеальный</b> комплект
+    </h3>
+    <p class="picture-cards-section-desc">
+      Сочетайте любые цвета, размеры и виды изделий, чтобы получить идеальную гармонию стиля и комфорта
+    </p>
+    <div class="picture-cards-section-wrapper">
+      <div class="picture-cards-section-picture">
+        <picture>
+          <source srcset="landing_files/images/picture-cards-big-1-mob.avif" media="(max-width: 768px)" type="image/avif">
+          <source srcset="landing_files/images/picture-cards-big-1.avif" type="image/avif">
+
+          <source srcset="landing_files/images/picture-cards-big-1-mob.webp" media="(max-width: 768px)" type="image/webp">
+          <source srcset="landing_files/images/picture-cards-big-1.webp" type="image/webp">
+
+          <source srcset="landing_files/images/picture-cards-big-1-mob.jpg" media="(max-width: 768px)" type="image/jpg">
+          <source srcset="landing_files/images/picture-cards-big-1.jpg" type="image/jpg">
+
+          <img src="landing_files/images/picture-cards-big-1.jpg" alt="Создайте свой идеальный комплект">
+        </picture>
+      </div>
+      <div class="picture-cards-section-cards">
+
+        <!-- Slider main container -->
+        <div class=" swiper-container" id="pictureCards">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <!-- card -->
+              <div class="card">
+                <div class="card-picture">
+                  <a href="" title="Наволочка на молнии из тенселя">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue">
+                    <img src="landing_files/images/linen-white-20_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-white">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink">
+                  </a>
+                </div>
+                <div class="card-info">
+                  <div class="card-info-top">
+                    <a href="" title="Наволочка на молнии из тенселя">
+                      <h4>
+                        Наволочка на молнии из тенселя
+                      </h4>
+                    </a>
+                    <div class="card-colors">
+                      <div class="card-colors-label">
+                        Цвет
+                      </div>
+                      <div class="card-colors-list">
+                        <div class="card-color active" data-color="linen-blue" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-white" title="Цвет" style="background-color: #F3F3F3"></div>
+                        <div class="card-color" data-color="linen-pink" title="Цвет" style="background-color: #F1DBCA"></div>
+                      </div>
+                    </div>
+                    <div class="card-sizes">
+                      <div class="card-sizes-label">
+                        Размер
+                      </div>
+                      <div class="card-sizes-list">
+                        <div class="card-size active" title="Размер">
+                          200x220
+                        </div>
+                        <div class="card-size" title="Размер">
+                          145x205
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-info-bottom">
+                    <a href="#" class="button gradient">
+                      <span>купить</span>
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="#221D1E"></path>
+                        <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="#221D1E"></path>
+                        <path d="M16.8496 13.6426H8.63532" stroke="#221D1E" stroke-linecap="square"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- card -->
+              <!-- card -->
+              <div class="card">
+                <div class="card-picture">
+                  <a href="" title="Наволочка на молнии из тенселя">
+                    <img src="landing_files/images/linen-white-20_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-white">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue2">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink2">
+                  </a>
+                </div>
+                <div class="card-info">
+                  <div class="card-info-top">
+                    <a href="" title="Наволочка на молнии из тенселя">
+                      <h4>
+                        Простынь из тенселя
+                      </h4>
+                    </a>
+                    <div class="card-colors">
+                      <div class="card-colors-label">
+                        Цвет
+                      </div>
+                      <div class="card-colors-list">
+                        <div class="card-color active" data-color="linen-white" title="Цвет" style="background-color: #F3F3F3"></div>
+                        <div class="card-color" data-color="linen-blue" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-pink" title="Цвет" style="background-color: #F1DBCA"></div>
+                        <div class="card-color" data-color="linen-blue2" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-pink2" title="Цвет" style="background-color: #F1DBCA"></div>
+                      </div>
+                    </div>
+                    <div class="card-sizes">
+                      <div class="card-sizes-label">
+                        Размер
+                      </div>
+                      <div class="card-sizes-list">
+                        <div class="card-size active" title="Размер">
+                          200x220
+                        </div>
+                        <div class="card-size" title="Размер">
+                          145x205
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-info-bottom">
+                    <a href="#" class="button gradient">
+                      <span>купить</span>
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="#221D1E"></path>
+                        <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="#221D1E"></path>
+                        <path d="M16.8496 13.6426H8.63532" stroke="#221D1E" stroke-linecap="square"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- card -->
+            </div>
+
+            <div class="swiper-slide">
+              <!-- card -->
+              <div class="card">
+                <div class="card-picture">
+                  <a href="" title="Наволочка на молнии из тенселя">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue">
+                    <img src="landing_files/images/linen-white-20_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-white">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink">
+                  </a>
+                </div>
+                <div class="card-info">
+                  <div class="card-info-top">
+                    <a href="" title="Наволочка на молнии из тенселя">
+                      <h4>
+                        Наволочка на молнии из тенселя
+                      </h4>
+                    </a>
+                    <div class="card-colors">
+                      <div class="card-colors-label">
+                        Цвет
+                      </div>
+                      <div class="card-colors-list">
+                        <div class="card-color active" data-color="linen-blue" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-white" title="Цвет" style="background-color: #F3F3F3"></div>
+                        <div class="card-color" data-color="linen-pink" title="Цвет" style="background-color: #F1DBCA"></div>
+                      </div>
+                    </div>
+                    <div class="card-sizes">
+                      <div class="card-sizes-label">
+                        Размер
+                      </div>
+                      <div class="card-sizes-list">
+                        <div class="card-size active" title="Размер">
+                          200x220
+                        </div>
+                        <div class="card-size" title="Размер">
+                          145x205
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-info-bottom">
+                    <a href="#" class="button gradient">
+                      <span>купить</span>
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="#221D1E"></path>
+                        <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="#221D1E"></path>
+                        <path d="M16.8496 13.6426H8.63532" stroke="#221D1E" stroke-linecap="square"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- card -->
+              <!-- card -->
+              <div class="card">
+                <div class="card-picture">
+                  <a href="" title="Наволочка на молнии из тенселя">
+                    <img src="landing_files/images/linen-white-20_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-white">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue2">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink2">
+                  </a>
+                </div>
+                <div class="card-info">
+                  <div class="card-info-top">
+                    <a href="" title="Наволочка на молнии из тенселя">
+                      <h4>
+                        Простынь из тенселя
+                      </h4>
+                    </a>
+                    <div class="card-colors">
+                      <div class="card-colors-label">
+                        Цвет
+                      </div>
+                      <div class="card-colors-list">
+                        <div class="card-color active" data-color="linen-white" title="Цвет" style="background-color: #F3F3F3"></div>
+                        <div class="card-color" data-color="linen-blue" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-pink" title="Цвет" style="background-color: #F1DBCA"></div>
+                        <div class="card-color" data-color="linen-blue2" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-pink2" title="Цвет" style="background-color: #F1DBCA"></div>
+                      </div>
+                    </div>
+                    <div class="card-sizes">
+                      <div class="card-sizes-label">
+                        Размер
+                      </div>
+                      <div class="card-sizes-list">
+                        <div class="card-size active" title="Размер">
+                          200x220
+                        </div>
+                        <div class="card-size" title="Размер">
+                          145x205
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-info-bottom">
+                    <a href="#" class="button gradient">
+                      <span>купить</span>
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="#221D1E"></path>
+                        <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="#221D1E"></path>
+                        <path d="M16.8496 13.6426H8.63532" stroke="#221D1E" stroke-linecap="square"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- card -->
+            </div>
+
+            <div class="swiper-slide">
+              <!-- card -->
+              <div class="card">
+                <div class="card-picture">
+                  <a href="" title="Наволочка на молнии из тенселя">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue">
+                    <img src="landing_files/images/linen-white-20_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-white">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink">
+                  </a>
+                </div>
+                <div class="card-info">
+                  <div class="card-info-top">
+                    <a href="" title="Наволочка на молнии из тенселя">
+                      <h4>
+                        Наволочка на молнии из тенселя
+                      </h4>
+                    </a>
+                    <div class="card-colors">
+                      <div class="card-colors-label">
+                        Цвет
+                      </div>
+                      <div class="card-colors-list">
+                        <div class="card-color active" data-color="linen-blue" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-white" title="Цвет" style="background-color: #F3F3F3"></div>
+                        <div class="card-color" data-color="linen-pink" title="Цвет" style="background-color: #F1DBCA"></div>
+                      </div>
+                    </div>
+                    <div class="card-sizes">
+                      <div class="card-sizes-label">
+                        Размер
+                      </div>
+                      <div class="card-sizes-list">
+                        <div class="card-size active" title="Размер">
+                          200x220
+                        </div>
+                        <div class="card-size" title="Размер">
+                          145x205
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-info-bottom">
+                    <a href="#" class="button gradient">
+                      <span>купить</span>
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="#221D1E"></path>
+                        <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="#221D1E"></path>
+                        <path d="M16.8496 13.6426H8.63532" stroke="#221D1E" stroke-linecap="square"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- card -->
+              <!-- card -->
+              <div class="card">
+                <div class="card-picture">
+                  <a href="" title="Наволочка на молнии из тенселя">
+                    <img src="landing_files/images/linen-white-20_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-white">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue2">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink2">
+                  </a>
+                </div>
+                <div class="card-info">
+                  <div class="card-info-top">
+                    <a href="" title="Наволочка на молнии из тенселя">
+                      <h4>
+                        Простынь из тенселя
+                      </h4>
+                    </a>
+                    <div class="card-colors">
+                      <div class="card-colors-label">
+                        Цвет
+                      </div>
+                      <div class="card-colors-list">
+                        <div class="card-color active" data-color="linen-white" title="Цвет" style="background-color: #F3F3F3"></div>
+                        <div class="card-color" data-color="linen-blue" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-pink" title="Цвет" style="background-color: #F1DBCA"></div>
+                        <div class="card-color" data-color="linen-blue2" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-pink2" title="Цвет" style="background-color: #F1DBCA"></div>
+                      </div>
+                    </div>
+                    <div class="card-sizes">
+                      <div class="card-sizes-label">
+                        Размер
+                      </div>
+                      <div class="card-sizes-list">
+                        <div class="card-size active" title="Размер">
+                          200x220
+                        </div>
+                        <div class="card-size" title="Размер">
+                          145x205
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-info-bottom">
+                    <a href="#" class="button gradient">
+                      <span>купить</span>
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="#221D1E"></path>
+                        <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="#221D1E"></path>
+                        <path d="M16.8496 13.6426H8.63532" stroke="#221D1E" stroke-linecap="square"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- card -->
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="comparison-material-section">
+    <h3>
+      Почему <b>тенсель, а не хлопок</b>
+    </h3>
+    <div class="comparison-material-items">
+      <div class="comparison-material-item">
+        <div class="comparison-material-item-title"></div>
+        <div class="comparison-material-item-info">
+          <h4>ХЛОПОК</h4>
+        </div>
+        <div class="comparison-material-item-info">
+          <h4>ТЕНСЕЛЬ</h4>
+        </div>
+      </div>
+      <div class="comparison-material-item">
+        <div class="comparison-material-item-title">
+                    <span>
+                        Мягкость и шелковистость
+                    </span>
+        </div>
+        <div class="comparison-material-item-info">
+          Может быть шершавым на ощупь и со временем терять мягкость из-за пушения волокон
+        </div>
+        <div class="comparison-material-item-info highlighted">
+          Обладает естественной шелковистостью и гладкостью благодаря структуре эвкалиптовых волокон
+        </div>
+      </div>
+      <div class="comparison-material-item">
+        <div class="comparison-material-item-title">
+                    <span>
+                        Воздухопроницаемость
+                    </span>
+        </div>
+        <div class="comparison-material-item-info">
+          Впитывает влагу, но испаряет её медленнее, что может создавать чувство влажности
+        </div>
+        <div class="comparison-material-item-info highlighted">
+          Прекрасно пропускает воздух, позволяя коже «дышать» и поддерживая комфортную температуру
+        </div>
+      </div>
+      <div class="comparison-material-item">
+        <div class="comparison-material-item-title">
+                    <span>
+                        Отведение влаги
+                    </span>
+        </div>
+        <div class="comparison-material-item-info">
+          Накопление влаги может привести к перегреву и ощущению сырости
+        </div>
+        <div class="comparison-material-item-info highlighted">
+          Быстро отводит влагу от тела, предотвращая перегрев и потливость
+        </div>
+      </div>
+      <div class="comparison-material-item">
+        <div class="comparison-material-item-title">
+                    <span>
+                        Устойчивость к сминанию
+                    </span>
+        </div>
+        <div class="comparison-material-item-info">
+          Склонён к сильному сминанию, особенно без добавок синтетики
+        </div>
+        <div class="comparison-material-item-info highlighted">
+          Меньше мнётся благодаря эластичности волокон и сохраняет аккуратный вид
+        </div>
+      </div>
+      <div class="comparison-material-item">
+        <div class="comparison-material-item-title">
+                    <span>
+                        Долговечность
+                    </span>
+        </div>
+        <div class="comparison-material-item-info">
+          Со временем может деформироваться и терять цвет
+        </div>
+        <div class="comparison-material-item-info highlighted">
+          Долговечен и устойчив к износу, сохраняя форму и цвет после стирок
+        </div>
+      </div>
+      <div class="comparison-material-item">
+        <div class="comparison-material-item-title">
+                    <span>
+                        Антибактериальные свойства
+                    </span>
+        </div>
+        <div class="comparison-material-item-info">
+          При накоплении влаги может создавать среду для бактерий и запахов
+        </div>
+        <div class="comparison-material-item-info highlighted">
+          Обладает естественными антибактериальными свойствами, предотвращая неприятные запахи
+        </div>
+      </div>
+      <div class="comparison-material-item">
+        <div class="comparison-material-item-title">
+                    <span>
+                        Гипоаллергенность
+                    </span>
+        </div>
+        <div class="comparison-material-item-info">
+          Может содержать остатки пестицидов или химикатов, используемых при производстве
+        </div>
+        <div class="comparison-material-item-info highlighted">
+          Подходит для чувствительной кожи, не вызывает раздражений и аллергических реакций
+        </div>
+      </div>
+      <div class="comparison-material-item">
+        <div class="comparison-material-item-title">
+                    <span>
+                        Экологичность
+                    </span>
+        </div>
+        <div class="comparison-material-item-info">
+          Выращивание хлопка требует большого количества воды и химикатов, оказывая значительное воздействие на окружающую среду
+        </div>
+        <div class="comparison-material-item-info highlighted">
+          Производится из возобновляемой древесины эвкалипта с использованием экологически чистого процесса
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="linen-cooper-blend-section">
+    <div class="linen-cooper-blend-info">
+      <h3>
+        <b>постельное белье Copper Blend</b><br>
+        из медного тенселя
+      </h3>
+      <h4>
+        Медные нити, вплетённые в ткань, придают тенселю уникальные антибактериальные свойства
+      </h4>
+    </div>
+    <div class="linen-cooper-blend-molecul">
+      <img class="linen-cooper-blend-molecul-img" src="landing_files/images/molec2_new.png" alt="">
+      <div class="box">
+        <h4>
+          МЕДНЫЕ НИТИ, ВПЛЕТЁННЫЕ В ТКАНЬ, ПРИДАЮТ ТЕНСЕЛЮ<br class="br-desktop">
+          УНИКАЛЬНЫЕ АНТИБАКТЕРИАЛЬНЫЕ СВОЙСТВА
+        </h4>
+        <div class="linen-cooper-blend-info-item">
+          <img src="landing_files/images/shield-icon.png" alt="Иконка шита">
+          <div>
+            <h5>
+              Уничтожение бактерий до 99,9%*
+            </h5>
+            <p>
+              что предотвращает раздражения<br class="br-desktop">
+              и высыпания на коже
+            </p>
+          </div>
+        </div>
+        <div class="linen-cooper-blend-info-item">
+          <img src="landing_files/images/moon-icon.png" alt="Иконка луны">
+          <div>
+            <h5>
+              Забота о гигиене сна:
+            </h5>
+            <p>
+              постельное бельё дольше остаётся свежим и чистым,<br class="br-desktop">
+              требуя реже стирок и замен
+            </p>
+          </div>
+        </div>
+        <div class="linen-cooper-blend-info-item">
+          <img src="landing_files/images/flower-icon.png" alt="Иконка цветка">
+          <div>
+            <h5>
+              Отсутствие неприятных запахов
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <picture class="linen-cooper-blend-bg-img">
+      <source srcset="landing_files/images/linen-cooper-blend-mob.avif" media="(max-width: 768px)" type="image/avif">
+      <source srcset="landing_files/images/linen-cooper-blend.avif" type="image/avif">
+
+      <source srcset="landing_files/images/linen-cooper-blend-mob.webp" media="(max-width: 768px)" type="image/webp">
+      <source srcset="landing_files/images/linen-cooper-blend.webp" type="image/webp">
+
+      <source srcset="landing_files/images/linen-cooper-blend-mob.jpg" media="(max-width: 768px)" type="image/jpg">
+      <source srcset="landing_files/images/linen-cooper-blend.jpg" type="image/jpg">
+      <img src="landing_files/images/linen-cooper-blend.jpg" alt="Постельное белье Copper Blend из медного тенселя">
+    </picture>
+  </section>
+
+  <section class="linen-cooper-fiber-section">
+    <h3>
+      почему <b>ткань с медной нитью<br>
+      лучше</b> хлопка
+    </h3>
+    <div class="linen-cooper-fiber-wrapper">
+      <picture class="linen-cooper-fiber-bg-img">
+        <source srcset="landing_files/images/linen-cooper-fiber1-mob.avif" media="(max-width: 768px)" type="image/avif">
+        <source srcset="landing_files/images/linen-cooper-fiber1.avif" type="image/avif">
+
+        <source srcset="landing_files/images/linen-cooper-fiber1-mob.webp" media="(max-width: 768px)" type="image/webp">
+        <source srcset="landing_files/images/linen-cooper-fiber1.webp" type="image/webp">
+
+        <source srcset="landing_files/images/linen-cooper-fiber1-mob.jpg" media="(max-width: 768px)" type="image/jpg">
+        <source srcset="landing_files/images/linen-cooper-fiber1.jpg" type="image/jpg">
+        <img src="landing_files/images/linen-cooper-fiber1.jpg" alt="Ткань с медной нитью">
+      </picture>
+      <div class="linen-cooper-fiber-box">
+
+        <!-- Mobile -->
+        <div class="linen-cooper-fiber-box-item">
+          <h4>
+            На хлопковой<br>
+            наволочке может<br>
+            скапливаться<br>
+            <span class="red">до 3 миллионов бактерий</span>
+          </h4>
+        </div>
+        <div class="linen-cooper-fiber-box-item">
+          <h4>
+            Антибактериальная<br>
+            медная нить<br>
+            вплетена в ткань
+          </h4>
+        </div>
+        <!-- Mobile -->
+
+
+        <div class="linen-cooper-fiber-box-item">
+          <div>
+            <!-- Hidden on Mobile -->
+            <h4>
+              На хлопковой наволочке<br>
+              может скапливаться<br>
+              <span class="red">до 3 миллионов бактерий</span>
+            </h4>
+            <!-- Hidden on Mobile -->
+            <p>
+              Хлопковая наволочка абсорбирует жир,<br class="br-desktop">
+              пот от волос и кожи и уже через 2-3 дня<br class="br-desktop">
+              становится благоприятной средой<br class="br-desktop">
+              для размножения бактерий, вызывая<br class="br-desktop">
+              высыпания и акне.
+            </p>
+          </div>
+        </div>
+        <div class="linen-cooper-fiber-box-item">
+          <div>
+            <!-- Hidden on Mobile -->
+            <h4>
+              Антибактериальная медная<br>
+              нить вплетена в ткань
+            </h4>
+            <!-- Hidden on Mobile -->
+            <p>
+              Ионы меди разрушают внешнюю<br class="br-desktop">
+              мембрану бактерий и уничтожают<br class="br-desktop">
+              их. Антибактериальный эффект<br class="br-desktop">
+              не выстирывается.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="linen-clinic-anti-section">
+    <h3>
+      <b>Клинически доказанный</b><br class="br-mobile"> анти-акне эффект
+    </h3>
+
+    <div class="linen-clinic-anti-percent-item-mob">
+      <div class="linen-clinic-anti-percent-count">
+        99%
+      </div>
+      <div class="linen-clinic-anti-percent-text">
+        бактерий уничтожается
+      </div>
+    </div>
+
+    <div class="linen-clinic-anti-wrapper">
+      <h4>
+        Исследование подтвердило, что ткань Beauty Sleep с медной нитью обладает антибактериальными свойствами и убивает 99,9% бактерий,<br class="br-desktop">
+        уничтожая среду для возникновения бактерий
+      </h4>
+      <div class="linen-clinic-anti-percent-item_link-text-mob">
+        <a href="" title="РЕЗУЛЬТАТЫ ИССЛЕДОВАНИЯ">
+                    <span>
+                        РЕЗУЛЬТАТЫ ИССЛЕДОВАНИЯ
+                    </span>
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.6651 13.8822H13.7383L13.4098 13.5656C14.8176 11.9242 15.545 9.68478 15.1461 7.30468C14.5947 4.04523 11.873 1.44237 8.58819 1.04373C3.62577 0.434052 -0.550646 4.60801 0.0593914 9.56753C0.458262 12.8504 3.06265 15.5705 6.32401 16.1216C8.7055 16.5202 10.9462 15.7933 12.5886 14.3863L12.9054 14.7146V15.6409L17.8913 20.6238C18.3723 21.1046 19.1583 21.1046 19.6393 20.6238C20.1202 20.1431 20.1202 19.3576 19.6393 18.8769L14.6651 13.8822ZM7.62621 13.8822C4.70506 13.8822 2.34703 11.5255 2.34703 8.60611C2.34703 5.68668 4.70506 3.33003 7.62621 3.33003C10.5473 3.33003 12.9054 5.68668 12.9054 8.60611C12.9054 11.5255 10.5473 13.8822 7.62621 13.8822Z" fill="url(#paint0_linear_1377_5214)"/>
+            <path d="M8.37891 5.55566H7.23633V7.83948H4.95117V8.98139H7.23633V11.2652H8.37891V8.98139H10.6641V7.83948H8.37891V5.55566Z" fill="url(#paint1_linear_1377_5214)"/>
+            <defs>
+              <linearGradient id="paint0_linear_1377_5214" x1="3.58139e-07" y1="20.9844" x2="20.2719" y2="1.2639" gradientUnits="userSpaceOnUse">
+                <stop offset="0.0618" stop-color="#FDD1DB"/>
+                <stop offset="0.9893" stop-color="#AABBE7"/>
+              </linearGradient>
+              <linearGradient id="paint1_linear_1377_5214" x1="4.95117" y1="11.2652" x2="10.7384" y2="5.63207" gradientUnits="userSpaceOnUse">
+                <stop offset="0.0618" stop-color="#FDD1DB"/>
+                <stop offset="0.9893" stop-color="#AABBE7"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </a>
+      </div>
+      <div class="linen-clinic-anti-percent">
+        <div class="linen-clinic-anti-percent-item">
+          <div class="linen-clinic-anti-percent-item-desk">
+            <div class="linen-clinic-anti-percent-count">
+              99%
+            </div>
+            <div class="linen-clinic-anti-percent-text">
+              бактерий уничтожается
+            </div>
+          </div>
+        </div>
+        <div class="linen-clinic-anti-percent-item">
+          <a href="" title="Результаты исследования">
+            <div class="linen-clinic-anti-percent-item_link-text">
+              Результаты<br>
+              исследования
+
+              <svg width="57" height="55" viewBox="0 0 57 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="22.9743" cy="20.7676" rx="16.1384" ry="15.5" fill="white"/>
+                <path d="M41.7923 35.0917H39.1884L38.2655 34.2369C42.2207 29.805 44.2643 23.7587 43.1436 17.3324C41.5945 8.5319 33.9477 1.50416 24.7188 0.427841C10.7766 -1.2183 -0.957228 10.0514 0.756707 23.4421C1.87736 32.3059 9.19454 39.6502 18.3575 41.1381C25.0484 42.2144 31.3438 40.2517 35.9583 36.4529L36.8482 37.3393V39.8401L50.8563 53.2941C52.2077 54.5921 54.416 54.5921 55.7674 53.2941C57.1188 51.9962 57.1188 49.8752 55.7674 48.5773L41.7923 35.0917ZM22.0161 35.0917C13.809 35.0917 7.18396 28.7287 7.18396 20.8463C7.18396 12.9638 13.809 6.60085 22.0161 6.60085C30.2232 6.60085 36.8482 12.9638 36.8482 20.8463C36.8482 28.7287 30.2232 35.0917 22.0161 35.0917Z" fill="url(#paint0_linear_1351_4090)"/>
+                <path d="M24.1304 12.6113H20.9203V18.7776H14.5V21.8608H20.9203V28.0271H24.1304V21.8608H30.5507V18.7776H24.1304V12.6113Z" fill="url(#paint1_linear_1351_4090)"/>
+                <defs>
+                  <linearGradient id="paint0_linear_1351_4090" x1="0.589845" y1="54.2676" x2="55.3408" y2="-1.15513" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.0618" stop-color="#FDD1DB"/>
+                    <stop offset="0.9893" stop-color="#AABBE7"/>
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_1351_4090" x1="14.5" y1="28.0271" x2="30.13" y2="12.196" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.0618" stop-color="#FDD1DB"/>
+                    <stop offset="0.9893" stop-color="#AABBE7"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="picture-cards-section">
+    <h3 class="picture-cards-section-title">
+      Создайте <b>свой идеальный</b> комплект copper blend
+    </h3>
+    <p class="picture-cards-section-desc">
+      Сочетайте любые размеры и виды изделий, чтобы получить идеальную гармонию стиля и комфорта
+    </p>
+    <div class="picture-cards-section-wrapper">
+      <div class="picture-cards-section-picture">
+        <picture>
+          <source srcset="landing_files/images/picture-cards-big-2-mob.avif" media="(max-width: 768px)" type="image/avif">
+          <source srcset="landing_files/images/picture-cards-big-2.avif" type="image/avif">
+
+          <source srcset="landing_files/images/picture-cards-big-2-mob.webp" media="(max-width: 768px)" type="image/webp">
+          <source srcset="landing_files/images/picture-cards-big-2.webp" type="image/webp">
+
+          <source srcset="landing_files/images/picture-cards-big-2-mob.jpg" media="(max-width: 768px)" type="image/jpg">
+          <source srcset="landing_files/images/picture-cards-big-2.jpg" type="image/jpg">
+
+          <img src="landing_files/images/picture-cards-big-2.jpg" alt="Создайте свой идеальный комплект">
+        </picture>
+      </div>
+      <div class="picture-cards-section-cards">
+
+        <!-- Slider main container -->
+        <div class=" swiper-container" id="pictureCards2">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <!-- card -->
+              <div class="card">
+                <div class="card-picture">
+                  <a href="" title="Наволочка на молнии из тенселя">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue">
+                    <img src="landing_files/images/linen-white-20_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-white">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink">
+                  </a>
+                </div>
+                <div class="card-info">
+                  <div class="card-info-top">
+                    <a href="" title="Наволочка на молнии из тенселя">
+                      <h4>
+                        Наволочка на молнии из тенселя
+                      </h4>
+                    </a>
+                    <div class="card-colors">
+                      <div class="card-colors-label">
+                        Цвет
+                      </div>
+                      <div class="card-colors-list">
+                        <div class="card-color active" data-color="linen-blue" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-white" title="Цвет" style="background-color: #F3F3F3"></div>
+                        <div class="card-color" data-color="linen-pink" title="Цвет" style="background-color: #F1DBCA"></div>
+                      </div>
+                    </div>
+                    <div class="card-sizes">
+                      <div class="card-sizes-label">
+                        Размер
+                      </div>
+                      <div class="card-sizes-list">
+                        <div class="card-size active" title="Размер">
+                          200x220
+                        </div>
+                        <div class="card-size" title="Размер">
+                          145x205
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-info-bottom">
+                    <a href="#" class="button gradient">
+                      <span>купить</span>
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="#221D1E"></path>
+                        <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="#221D1E"></path>
+                        <path d="M16.8496 13.6426H8.63532" stroke="#221D1E" stroke-linecap="square"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- card -->
+              <!-- card -->
+              <div class="card">
+                <div class="card-picture">
+                  <a href="" title="Наволочка на молнии из тенселя">
+                    <img src="landing_files/images/linen-white-20_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-white">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue2">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink2">
+                  </a>
+                </div>
+                <div class="card-info">
+                  <div class="card-info-top">
+                    <a href="" title="Наволочка на молнии из тенселя">
+                      <h4>
+                        Простынь из тенселя
+                      </h4>
+                    </a>
+                    <div class="card-colors">
+                      <div class="card-colors-label">
+                        Цвет
+                      </div>
+                      <div class="card-colors-list">
+                        <div class="card-color active" data-color="linen-white" title="Цвет" style="background-color: #F3F3F3"></div>
+                        <div class="card-color" data-color="linen-blue" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-pink" title="Цвет" style="background-color: #F1DBCA"></div>
+                        <div class="card-color" data-color="linen-blue2" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-pink2" title="Цвет" style="background-color: #F1DBCA"></div>
+                      </div>
+                    </div>
+                    <div class="card-sizes">
+                      <div class="card-sizes-label">
+                        Размер
+                      </div>
+                      <div class="card-sizes-list">
+                        <div class="card-size active" title="Размер">
+                          200x220
+                        </div>
+                        <div class="card-size" title="Размер">
+                          145x205
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-info-bottom">
+                    <a href="#" class="button gradient">
+                      <span>купить</span>
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="#221D1E"></path>
+                        <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="#221D1E"></path>
+                        <path d="M16.8496 13.6426H8.63532" stroke="#221D1E" stroke-linecap="square"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- card -->
+            </div>
+
+            <div class="swiper-slide">
+              <!-- card -->
+              <div class="card">
+                <div class="card-picture">
+                  <a href="" title="Наволочка на молнии из тенселя">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue">
+                    <img src="landing_files/images/linen-white-20_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-white">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink">
+                  </a>
+                </div>
+                <div class="card-info">
+                  <div class="card-info-top">
+                    <a href="" title="Наволочка на молнии из тенселя">
+                      <h4>
+                        Наволочка на молнии из тенселя
+                      </h4>
+                    </a>
+                    <div class="card-colors">
+                      <div class="card-colors-label">
+                        Цвет
+                      </div>
+                      <div class="card-colors-list">
+                        <div class="card-color active" data-color="linen-blue" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-white" title="Цвет" style="background-color: #F3F3F3"></div>
+                        <div class="card-color" data-color="linen-pink" title="Цвет" style="background-color: #F1DBCA"></div>
+                      </div>
+                    </div>
+                    <div class="card-sizes">
+                      <div class="card-sizes-label">
+                        Размер
+                      </div>
+                      <div class="card-sizes-list">
+                        <div class="card-size active" title="Размер">
+                          200x220
+                        </div>
+                        <div class="card-size" title="Размер">
+                          145x205
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-info-bottom">
+                    <a href="#" class="button gradient">
+                      <span>купить</span>
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="#221D1E"></path>
+                        <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="#221D1E"></path>
+                        <path d="M16.8496 13.6426H8.63532" stroke="#221D1E" stroke-linecap="square"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- card -->
+              <!-- card -->
+              <div class="card">
+                <div class="card-picture">
+                  <a href="" title="Наволочка на молнии из тенселя">
+                    <img src="landing_files/images/linen-white-20_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-white">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue2">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink2">
+                  </a>
+                </div>
+                <div class="card-info">
+                  <div class="card-info-top">
+                    <a href="" title="Наволочка на молнии из тенселя">
+                      <h4>
+                        Простынь из тенселя
+                      </h4>
+                    </a>
+                    <div class="card-colors">
+                      <div class="card-colors-label">
+                        Цвет
+                      </div>
+                      <div class="card-colors-list">
+                        <div class="card-color active" data-color="linen-white" title="Цвет" style="background-color: #F3F3F3"></div>
+                        <div class="card-color" data-color="linen-blue" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-pink" title="Цвет" style="background-color: #F1DBCA"></div>
+                        <div class="card-color" data-color="linen-blue2" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-pink2" title="Цвет" style="background-color: #F1DBCA"></div>
+                      </div>
+                    </div>
+                    <div class="card-sizes">
+                      <div class="card-sizes-label">
+                        Размер
+                      </div>
+                      <div class="card-sizes-list">
+                        <div class="card-size active" title="Размер">
+                          200x220
+                        </div>
+                        <div class="card-size" title="Размер">
+                          145x205
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-info-bottom">
+                    <a href="#" class="button gradient">
+                      <span>купить</span>
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="#221D1E"></path>
+                        <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="#221D1E"></path>
+                        <path d="M16.8496 13.6426H8.63532" stroke="#221D1E" stroke-linecap="square"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- card -->
+            </div>
+
+            <div class="swiper-slide">
+              <!-- card -->
+              <div class="card">
+                <div class="card-picture">
+                  <a href="" title="Наволочка на молнии из тенселя">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue">
+                    <img src="landing_files/images/linen-white-20_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-white">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink">
+                  </a>
+                </div>
+                <div class="card-info">
+                  <div class="card-info-top">
+                    <a href="" title="Наволочка на молнии из тенселя">
+                      <h4>
+                        Наволочка на молнии из тенселя
+                      </h4>
+                    </a>
+                    <div class="card-colors">
+                      <div class="card-colors-label">
+                        Цвет
+                      </div>
+                      <div class="card-colors-list">
+                        <div class="card-color active" data-color="linen-blue" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-white" title="Цвет" style="background-color: #F3F3F3"></div>
+                        <div class="card-color" data-color="linen-pink" title="Цвет" style="background-color: #F1DBCA"></div>
+                      </div>
+                    </div>
+                    <div class="card-sizes">
+                      <div class="card-sizes-label">
+                        Размер
+                      </div>
+                      <div class="card-sizes-list">
+                        <div class="card-size active" title="Размер">
+                          200x220
+                        </div>
+                        <div class="card-size" title="Размер">
+                          145x205
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-info-bottom">
+                    <a href="#" class="button gradient">
+                      <span>купить</span>
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="#221D1E"></path>
+                        <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="#221D1E"></path>
+                        <path d="M16.8496 13.6426H8.63532" stroke="#221D1E" stroke-linecap="square"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- card -->
+              <!-- card -->
+              <div class="card">
+                <div class="card-picture">
+                  <a href="" title="Наволочка на молнии из тенселя">
+                    <img src="landing_files/images/linen-white-20_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-white">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink">
+                    <img src="landing_files/images/linen-blue-32_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-blue2">
+                    <img src="landing_files/images/linen-pink-03_500x500.webp" alt="Наволочка на молнии из тенселя" data-color="linen-pink2">
+                  </a>
+                </div>
+                <div class="card-info">
+                  <div class="card-info-top">
+                    <a href="" title="Наволочка на молнии из тенселя">
+                      <h4>
+                        Простынь из тенселя
+                      </h4>
+                    </a>
+                    <div class="card-colors">
+                      <div class="card-colors-label">
+                        Цвет
+                      </div>
+                      <div class="card-colors-list">
+                        <div class="card-color active" data-color="linen-white" title="Цвет" style="background-color: #F3F3F3"></div>
+                        <div class="card-color" data-color="linen-blue" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-pink" title="Цвет" style="background-color: #F1DBCA"></div>
+                        <div class="card-color" data-color="linen-blue2" title="Цвет" style="background-color:  #cdd0d9"></div>
+                        <div class="card-color" data-color="linen-pink2" title="Цвет" style="background-color: #F1DBCA"></div>
+                      </div>
+                    </div>
+                    <div class="card-sizes">
+                      <div class="card-sizes-label">
+                        Размер
+                      </div>
+                      <div class="card-sizes-list">
+                        <div class="card-size active" title="Размер">
+                          200x220
+                        </div>
+                        <div class="card-size" title="Размер">
+                          145x205
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-info-bottom">
+                    <a href="#" class="button gradient">
+                      <span>купить</span>
+                      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="#221D1E"></path>
+                        <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="#221D1E"></path>
+                        <path d="M16.8496 13.6426H8.63532" stroke="#221D1E" stroke-linecap="square"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- card -->
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="linen-perfection-section">
+    <picture>
+      <source srcset="landing_files/images/linen-perfection-mob.avif" media="(max-width: 768px)" type="image/avif">
+      <source srcset="landing_files/images/linen-perfection.avif" type="image/avif">
+
+      <source srcset="landing_files/images/linen-perfection-mob.webp" media="(max-width: 768px)" type="image/webp">
+      <source srcset="landing_files/images/linen-perfection.webp" type="image/webp">
+
+      <source srcset="landing_files/images/linen-perfection-mob.jpg" media="(max-width: 768px)" type="image/jpg">
+      <source srcset="landing_files/images/linen-perfection.jpg" type="image/jpg">
+
+      <img src="landing_files/images/linen-perfection.jpg" alt="">
+    </picture>
+    <div class="linen-perfection-text">
+      <h3>
+        Совершенство в каждой детали
+      </h3>
+      <p>
+        Постельное белье из тенселя Beauty Sleep поднимает комфорт <br class="br-desktop">
+        во время сна на новый уровень
+      </p>
+    </div>
+  </section>
+
+  <!--transformer-section-->
+  <section class="transformer-section">
+    <h3>
+      <b>Подушки-трансформеры Somia</b> для мужчин и детей
+    </h3>
+    <div class="transformer-wrapper">
+      <div class="transformer-item">
+        <h4>
+          инновация<br> от Beauty Sleep
+        </h4>
+        <p class="transformer-sub-title-mob">
+          <b>Подушки-трансформер somia</b><br> для мужчин и детей
+        </p>
+        <p class="transformer-sub-desc-mob">
+          Настройте подушку под себя:<br>
+          3 комбинации по высоте, 4 слоя разной мягкости
+        </p>
+        <picture class="transformer-pillow">
+          <source srcset="landing_files/transformer_section_images/transformer-pillow.avif" type="image/avif">
+          <source srcset="landing_files/transformer_section_images/transformer-pillow.webp" type="image/webp">
+          <source srcset="landing_files/transformer_section_images/transformer-pillow.png" type="image/png">
+          <img src="landing_files/transformer_section_images/transformer-pillow.png" alt="Подушки-трансформеры Somia">
+        </picture>
+      </div>
+      <div class="transformer-item">
+        <video class="transformer-video" autoplay="" loop="" muted="" playsinline="" webkit-playsinline="" poster="landing_files/transformer_section_images/transformer-pillow-2.jpg" preload="none">
+          <source src="landing_files/transformer_section_images/somia1.mp4" type="video/mp4">
+          <source src="landing_files/transformer_section_images/somia1.webm" type="video/webm">
+        </video>
+      </div>
+      <div class="transformer-item">
+        <video class="transformer-video" autoplay="" loop="" muted="" playsinline="" webkit-playsinline="" poster="landing_files/transformer_section_images/transformer-pillow-3.jpg" preload="none">
+          <source src="landing_files/transformer_section_images/somia2.mp4" type="video/mp4">
+          <source src="landing_files/transformer_section_images/somia2.webm" type="video/webm">
+        </video>
+      </div>
+    </div>
+    <a href="#" class="button gradient">
+      <span>купить</span>
+      <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="#221D1E"/>
+        <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="#221D1E"/>
+        <path d="M16.8496 13.6426H8.63532" stroke="#221D1E" stroke-linecap="square"/>
+      </svg>
+    </a>
+  </section>
+  <!--transformer-section-->
+
+  <div class="footer-strofa">
+    *В акции "Добавьте товары с 30% скидкой" возможны исключения.
+  </div>
+
+</main>
+
+<!--landing bottom toaster-->
+<div class="bottom-toaster">
+  <div class="bottom-toaster-wrapper">
+    <div class="bottom-toaster-box">
+      <div class="bottom-toaster-box-picture">
+        <picture>
+          <source srcset="landing_files/images/linen-toaster.avif" type="image/avif">
+
+          <source srcset="landing_files/images/linen-toaster.webp" type="image/webp">
+
+          <source srcset="landing_files/images/linen-toaster.jpg" type="image/jpg">
+
+          <img src="landing_files/images/linen-toaster.jpg" alt="Постельное белье">
+        </picture>
+      </div>
+      <div class="bottom-toaster-box-title">
+        <h3>
+          Постельное белье
+        </h3>
+      </div>
+    </div>
+    <div class="bottom-toaster-button">
+      <a href="#" class="button gradient">
+        <span>купить</span>
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.5 21.7383L3.5 9.73828H21.5L18.5 21.7383H6.5Z" stroke="#221D1E"/>
+          <path d="M17.1311 7.55556C17.1311 3.92353 15.1412 2 12.6866 2C10.232 2 8.24219 3.92944 8.24219 7.55556" stroke="#221D1E"/>
+          <path d="M16.8496 13.6426H8.63532" stroke="#221D1E" stroke-linecap="square"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+<!--landing bottom toaster-->
+
+<!--Scripts-->
+<script src="../files/swiper.min.js"></script>
+<script src="landing_files/script.js"></script>
+<!--Scripts-->
+
+<a href="https://beautysleep.ru/pillows-beauty-sleep/beauty-sleep-omnia-1001" class="label__buy">Купить</a>
+<div class="pp pp__fullreview" data-pp="fullreview">
+  <div class="pp__bg"></div>
+  <div class="pp__content pp__content_fullreview">
+
+    <div class="pp__close">
+      <div class="close__lane"></div>
+      <div class="close__lane"></div>
+    </div>
+
+    <div class="popup-content">
+
+      <div class="reviews-text-item__content">
+
+        <div class="reviews-text-item__content_head">
+          <div class="reviews-text-item__photo">
+            <div></div>
+          </div>
+          <div class="reviews-info">
+            <div>
+              <span class="reviewer-name"></span>
+              <span class="review-date"></span>
+            </div>
+            <span class="review-product"></span>
+
+
+          </div>
+        </div>
+        <div class="reviews-stars">
+          <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.2933 0L13.3184 5.92523L20.0827 6.87539L15.188 11.4875L16.3435 18L10.2933 14.9252L4.24303 18L5.39853 11.4875L0.503788 6.87539L7.26815 5.92523L10.2933 0Z">
+            </path>
+          </svg>
+          <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.2933 0L13.3184 5.92523L20.0827 6.87539L15.188 11.4875L16.3435 18L10.2933 14.9252L4.24303 18L5.39853 11.4875L0.503788 6.87539L7.26815 5.92523L10.2933 0Z">
+            </path>
+          </svg>
+          <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.2933 0L13.3184 5.92523L20.0827 6.87539L15.188 11.4875L16.3435 18L10.2933 14.9252L4.24303 18L5.39853 11.4875L0.503788 6.87539L7.26815 5.92523L10.2933 0Z">
+            </path>
+          </svg>
+          <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.2933 0L13.3184 5.92523L20.0827 6.87539L15.188 11.4875L16.3435 18L10.2933 14.9252L4.24303 18L5.39853 11.4875L0.503788 6.87539  &lt;div class="
+                  pp="" pp__video-review
+            "="" data-title="popup_video" data-pp="video-review">
+            </path></svg>
+          <div class="pp__bg"></div>
+          <div class="pp__content pp__content_video-review">
+
+            <div class="pp__close">
+              <div class="close__lane"></div>
+              <div class="close__lane"></div>
+            </div>
+
+            <div class="popup-content">
+              <iframe id="yotubeplayer" allowfullscreen=""
+                      src="../files/saved_resource.html">
+              </iframe>
+            </div>
+          </div>
+        </div>
+        <!--                L7.26815 5.92523L10.2933 0Z"&gt;-->
+
+
+        <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.2933 0L13.3184 5.92523L20.0827 6.87539L15.188 11.4875L16.3435 18L10.2933 14.9252L4.24303 18L5.39853 11.4875L0.503788 6.87539L7.26815 5.92523L10.2933 0Z">
+          </path>
+        </svg>
+      </div>
+      <div class="reviews-text-item__content_text"></div>
+
+      <a href="https://beautysleep.ru/reviews" class="button transparent">
+        <span>читать все отзывы</span>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<div class="pp pp__video-review" data-title="popup_video" data-pp="video-review">
+  <div class="pp__bg"></div>
+  <div class="pp__content pp__content_video-review">
+    <div class="pp__close">
+      <div class="close__lane"></div>
+      <div class="close__lane"></div>
+    </div>
+
+    <div class="popup-content">
+      <iframe id="yotubeplayer" allowfullscreen="" src="https://www.youtube.com/embed/ykrxSO4XVHw?autoplay=1&amp;modestbranding=1&amp;iv_load_policy=3">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<footer class="posthog_view_block" posthog-name="Футер">
+  <div class="grid">
+
+    <div class="footer-part">
+      <div class="menu-container">
+        <div>
+          <span>Подушки Beauty sleep</span>
+          <ul>
+
+            <li>
+              <a href="https://beautysleep.ru/omnia-and-classic">Подушка Omnia &amp; Classic</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/copper">Подушка Omnia Copper Blend</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/aula">Подушка Aula</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/products/?category=437">Подушки для
+                мужчин&nbsp;и&nbsp;детей</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/pillow-for-decollete">Подушка для декольте</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/products/?category=25">Наволочки</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/sleep-wrinkles">Beauty - сон</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <span>Одеяла Beauty Sleep</span>
+          <ul>
+
+            <li>
+              <a href="https://beautysleep.ru/weighted-blanket">Утяжеленное одеяло </a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/airmesh-blanket">Одеяло с вентиляционными вставками</a>
+            </li>
+
+          </ul>
+        </div>
+        <div>
+          <span>Silk Collection</span>
+          <ul>
+
+            <li>
+              <a href="https://beautysleep.ru/silk-products/">Халаты</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/silk-products/">Комбинации</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/silk-products/">Топы и шорты</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/silk-products/">Маски для сна</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/silk-products/">Аксессуары для волос</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/silk-products/">Полотенца</a>
+            </li>
+
+          </ul>
+        </div>
+        <div>
+          <span>О Beauty Sleep</span>
+          <ul>
+
+            <li>
+              <a href="https://beautysleep.ru/sleep-wrinkles">Beauty - сон</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/o-kompanii">О компании</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/reviews">Отзывы</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/question">Вопросы</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/about-beauty-sleep/materials-beauty-sleep">Материалы</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/about-beauty-sleep/vacancy/">Вакансии</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/copyright">Авторские права</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <span>Покупателям</span>
+          <ul>
+
+            <li>
+              <a href="https://beautysleep.ru/dostavka-i-oplata">Доставка и оплата</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/garantia-i-vozvrat">Гарантия и возврат</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/for-customers/contacts">Контакты</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/o-kompanii">О компании</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/reviews">Отзывы</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/question">Вопросы</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/about-beauty-sleep/materials-beauty-sleep">Материалы</a>
+            </li>
+
+            <li>
+              <a href="https://beautysleep.ru/stocks" class="stock">Акции</a>
+            </li>
+            <li>
+              <a href="https://beautysleep.ru/rules-certificates">Подарочные сертификаты</a>
+            </li>
+            <li>
+              &nbsp;
+            </li>
+            <li>
+              <a href="https://wa.me/message/IYHHAZPLYCA6I1" class="whats-app">
+                <img src="../files/footer-whats-app.svg" alt="whats-app">
+                whats app
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="email-mailing">
+        <h4>ПОДПИШИТЕСЬ НА РАССЫЛКУ</h4>
+        <p>Подпишитесь, чтобы узнать больше о здоровом сне, новостях и спецпредложениях Beauty Sleep!</p>
+
+        <form method="post" class="js-form-mailing">
+          <input type="hidden" name="lists[pl2312]" value="set">
+          <div class="input-box">
+            <input name="email" type="email" data-si-form="" data-si-preset="msdcaddemail" data-si-nosave=""
+                   data-si-event="change" placeholder="Введите ваш email" required="">
+          </div>
+          <input type="text" class="n-message" name="n-message" value="">
+          <button type="submit"><img src="../files/mailing-submit.svg" alt="submit">
+          </button>
+
+          <input type="hidden" name="af_action" value="deb11a841c7ef742abd036ca26bea0c6">
+        </form>
+        <div class="politics">
+          Нажимая кнопку "Подписаться", вы соглашаетесь с <a href="https://beautysleep.ru/privacy-policy"
+                                                             target="_blank">политикой конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-part posthog_view_block" posthog-name="Соц сети">
+      <div class="sn-box">
+        <div>
+          <a href="https://t.me/beauty_sleep_russia" target="_blank" class="social-box__item posthog_click"
+             posthog-name="Соц сети - telegram">
+            <img src="../files/telegram.svg" alt="telegram">
+          </a>
+          <a href="https://vk.com/beautysleep_russia" target="_blank" class="social-box__item posthog_click"
+             posthog-name="Соц сети - vkontakte">
+            <img src="../files/vkon.svg" alt="vkontakte">
+          </a>
+          <a href="https://www.youtube.com/channel/UCem2kbdspTUse0141WFNSDQ" target="_blank"
+             class="social-box__item posthog_click" posthog-name="Соц сети - youtube">
+            <img src="../files/you.svg" alt="youtube">
+          </a>
+
+          <a href="https://clck.ru/Pv27v" target="_blank" class="social-box__item posthog_click"
+             posthog-name="Соц сети - dzen">
+            <img src="../files/dzen.svg" alt="dzen">
+          </a>
+
+        </div>
+        <span>следите за нами в соцсетях!</span>
+      </div>
+      <a href="https://beautysleep.ru/#up" class="up">
+        <span>наверх</span>
+        <img src="../files/up.svg" alt="up">
+      </a>
+    </div>
+    <div class="footer-part posthog_view_block" posthog-name="Футер - ссылки">
+      <div class="footer-part__info">
+        <span>© 2016 — 2024, Beauty Sleep ®</span>
+        <div>
+          <a href="https://beautysleep.ru/privacy-policy" target="_blank" class="posthog_click"
+             posthog-name="Футер - Политика конфиденциальности">Политика конфиденциальности</a>
+          <a href="https://beautysleep.ru/terms-of-use" target="_blank" class="posthog_click"
+             posthog-name="Футер - Пользовательское соглашение">Пользовательское соглашение</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="shopping-cart js-minicart">
+  <div class="shopping-cart-card">
+
+    <div class="shopping-cart__title posthog_view_block" posthog-name="Мини-корзина">
+      <h4>Корзина</h4>
+      <span class="goods-count">0 продуктов</span>
+
+      <div class="cart-close posthog_click" posthog-name="Закрыть мини-корзину">
+        <div class="close__lane"></div>
+        <div class="close__lane"></div>
+      </div>
+    </div>
+    <div class="shopping-cart__empty" style="display:block">
+      <div class="shopping-cart__empty_top">
+        <img src="../files/empty-cart.svg" alt="cart empty">
+        <div>
+          <span>В Вашей корзине нет товаров</span>
+          <span>Корзина ждет, что ее наполнят. Желаем приятных покупок!</span>
+        </div>
+      </div>
+      <a href="https://beautysleep.ru/products/" class="button gradient"><span>перейти в магазин</span></a>
+    </div>
+
+
+  </div>
+  <div class="shopping-cart__footer">
+    <div class="shopping-cart__footer_title">
+      <span>сумма заказа:</span>
+      <span><span class="js-minicart-cost">0</span> р.</span>
+    </div>
+
+
+    <a href="https://beautysleep.ru/products/" class="shopping-cart__footer_next button transparent posthog_click"
+       posthog-name="Мини-корзина - продолжить покупки"><span>продолжить покупки</span></a>
+
+    <a href="https://beautysleep.ru/basket" class="shopping-cart__footer_buy button gradient posthog_click"
+       posthog-name="Мини-корзина - оформить заказ"><span>оформить заказ</span></a>
+  </div>
+  <div class="shopping-cart-bg"></div>
+  <script>
+    $(document).ready(function () {
+      otherProductsSwiperSidebar();
+    });
+  </script>
+</div>
+
+<div class="coockies-container">
+  <div class="grid">
+    <div class="coockies-text">Мы используем файлы cookie, чтобы обеспечить Вам лучший сервис. Продолжая
+      пользоваться этим сайтом, Вы соглашаетесь на использование cookie
+      и обработку данных в соответствии с Пользовательским соглашением в области обработки и защиты персональных
+      данных.
+    </div>
+    <button class="coockies-ok button transparent">
+      <span>хорошо</span>
+    </button>
+  </div>
+</div>
+
+
+
+
+<div class="pp pp__mailing" data-title="popup_thanks" data-pp="email-mailing">
+  <div class="pp__bg"></div>
+  <div class="pp__content pp__content_mailing">
+
+    <div class="pp__close">
+      <div class="close__lane"></div>
+      <div class="close__lane"></div>
+    </div>
+
+    <div class="popup-content">
+      <div class="mailing-header">
+        <span class="mailing-header__title">СПАСИБО ЗА ПОДПИСКУ!</span>
+      </div>
+      <div class="mailing-body">
+        <span>Благодарим Вас за подписку! Ваш промокод на первую покупку: <strong>HELLO5</strong></span>
+        <button class="button gradient close_btn">
+          <span>продолжить покупки</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="module" src="../files/mailing.js.download"></script>
+
+<div class="pp pp__patent-preview" data-pp="patent-preview">
+  <div class="pp__bg"></div>
+  <div class="pp__content no_bg">
+    <div class="pp__close pp__close_bg">
+      <div class="close__lane"></div>
+      <div class="close__lane"></div>
+    </div>
+
+    <div class="popup-content">
+
+      <div class="img" data-patent="hong_kong">
+        <img src="../files/1.jpg" alt="">
+        <img src="../files/2.jpg" alt="">
+        <img src="../files/3.jpg" alt="">
+      </div>
+
+      <div class="img" data-patent="canada">
+        <img src="../files/1(1).jpg" alt="">
+        <img src="../files/2(1).jpg" alt="">
+        <img src="../files/3(1).jpg" alt="">
+      </div>
+
+      <div class="img" data-patent="japan">
+        <img src="../files/1(2).jpg" alt="">
+        <img src="../files/2(2).jpg" alt="">
+      </div>
+
+      <div class="img" data-patent="skorea">
+        <img src="../files/1(3).jpg" alt="">
+        <img src="../files/2(3).jpg" alt="">
+      </div>
+
+      <div class="img" data-patent="usa">
+        <img src="../files/1(4).jpg" alt="">
+        <img src="../files/2(4).jpg" alt="">
+        <img src="../files/1(5).jpg" alt="">
+        <img src="../files/2(5).jpg" alt="">
+        <img src="../files/3(2).jpg" alt="">
+        <img src="../files/4.jpg" alt="">
+        <img src="../files/5.jpg" alt="">
+        <img src="../files/6.jpg" alt="">
+        <img src="../files/7.jpg" alt="">
+        <img src="../files/8.jpg" alt="">
+        <img src="../files/9.jpg" alt="">
+        <img src="../files/10.jpg" alt="">
+        <img src="../files/11.jpg" alt="">
+        <img src="../files/12.jpg" alt="">
+        <img src="../files/13.jpg" alt="">
+      </div>
+
+      <div class="img" data-patent="wipo">
+        <img src="../files/1(6).jpg" alt="">
+        <img src="../files/2(6).jpg" alt="">
+        <img src="../files/1(7).jpg" alt="">
+        <img src="../files/2(7).jpg" alt="">
+        <img src="../files/3(3).jpg" alt="">
+        <img src="../files/4(1).jpg" alt="">
+      </div>
+
+      <div class="img" data-patent="new_zealand">
+        <img src="../files/1(8).jpg" alt="">
+        <img src="../files/2(8).jpg" alt="">
+        <img src="../files/3(4).jpg" alt="">
+        <img src="../files/4(2).jpg" alt="">
+        <img src="../files/5(1).jpg" alt="">
+      </div>
+
+      <div class="img" data-patent="australia">
+        <img src="../files/1(9).jpg" alt="">
+        <img src="../files/2(9).jpg" alt="">
+        <img src="../files/3(5).jpg" alt="">
+        <img src="../files/4(3).jpg" alt="">
+        <img src="../files/5(2).jpg" alt="">
+        <img src="../files/6(1).jpg" alt="">
+        <img src="../files/1(10).jpg" alt="">
+        <img src="../files/2(10).jpg" alt="">
+        <img src="../files/3(6).jpg" alt="">
+        <img src="../files/4(4).jpg" alt="">
+        <img src="../files/5(3).jpg" alt="">
+        <img src="../files/6(2).jpg" alt="">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="somia_form">
+  <div class="somia_form-bg"></div>
+  <div class="somia_form-block">
+    <div class="somia_form-close">
+      <div class="close__lane"></div>
+      <div class="close__lane"></div>
+    </div>
+
+  </div>
+</div>
+
+<script src="../files/swiper.min.js"></script>
+<script src="../files/video.min.js"></script>
+<script src="../files/jquery.validate.min.js"></script>
+
+
+
+
+
+
+
+<!--<script src="../files/messages_ru.min.js"></script>-->
+<!--<script src="../files/additional-methods.min.js"></script>-->
+<!--<script src="../files/PNotify.js"></script>-->
+<!--<script src="../files/suggs.js"></script>-->
+
+
+
+<script src="../files/js_main.js"></script>
+<!--<script src="../files/_js_checkoutt.js.download"></script>-->
+
+
+<!--script src="/static/js/customAjaxForm.js"></script-->
+<script src="../files/skrollr.min.js"></script>
+<script src="../files/aos.js"></script>
+<script src="../files/somia-form.js"></script>
+<script src="../files/phone-mask.js"></script>
+
+
+<script src="../files/parts.js"></script>
+
+
+<script>
+  $(document).on('click', '[href="shuber"]', function () {
+    return false;
+  })
+</script>
+
+
+<script>
+  if ($('.pillow-slider').length && $('.slide-product__img_colors').length && $('.slide-product__img_colors [name="options[color]"]').length >= 1) {
+    $('.pillow-slider [data-desc]').parent().hide()
+    $('.slide-product__img_colors [data-value]').each(function () {
+      var val = $(this).data('value');
+      $('.pillow-slider [data-desc="' + val + '"]').parent().show();
+    })
+  }
+
+  $(document).on('click', '[href="purpur"]', function () {
+    return false
+  })
+
+
+</script>
+
+
+<script>
+  window.product = {
+    "item_name": "",
+    "item_id": "",
+    "price": "",
+    "item_brand": "Beautysleep",
+    "item_list_name": "",
+    "variant": "",
+    "index": 1,
+    "quantity": 1,
+    "item_category": "",
+    "item_category2": ""
+  }
+
+  function getValues(form) {
+    let product = Object.assign({}, window.product)
+
+    var color = form.find('.slide-product__img_colors input:checked').next().data('color'),
+            id = parseInt(form.find('[name="id"]').val()),
+            price = parseFloat(form.find('.js-new-price').first().text().replace(/\D/g, "")),
+            name = form.find('[name="pagetitle"]').val(),
+            category1 = form.find('[name="category1"]').val(),
+            category2 = form.find('[name="category2"]').val()
+
+    if (color !== undefined) product.variant = color
+    product.item_category = category1
+    product.item_category2 = category2
+    product.item_name = name
+    product.item_id = id
+    product.price = price
+    return product
+  }
+
+  /* Добавление в корзину из карточки + */
+  $(document).on('click', '#product-inner [name="ms2_action"], #other-products-in-cart [name="ms2_action"]', function () {
+    try {
+      var form = $(this).closest('form'),
+              product = getValues(form),
+              count = parseInt(form.find('[name="count"]').val())
+
+      addProductToCart(product, count)
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+  /* Добавление на странице add-products-page +*/
+  $(document).on('click', '.add-products-page .swiper-slide [value="cart/add"]', function () {
+    try {
+      var form = $(this).closest('.swiper-slide'),
+              product = getValues(form),
+              count = parseInt(form.find('[name="count"]').val()),
+              price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+      if (form.find('.slide-product__img_colors').length)
+        product.variant = form.find('.slide-product__img_colors input:checked + label').data('color')
+
+      product.price = price
+      addProductToCart(product, count)
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+  /* Добавление в корзину через кнопку плюс + */
+  $(document).on('click', '#product-in-side-cart .hand_button.increment', function () {
+    try {
+      var form = $(this).closest('#product-in-side-cart'),
+              product = getValues(form),
+              name = form.find('.cart-item__info_title').text(),
+              count = 1,
+              price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+      if (form.find('.specifications-color span').last() != undefined)
+        product.variant = form.find('.specifications-color span').last().text()
+
+      product.item_name = name
+      product.price = price
+      addProductToCart(product, count)
+    } catch (e) {
+      console.log(e)
+    }
+  })
+  /* Добавление в корзину через кнопку плюс в корзине +*/
+  $(document).on('click', '#page-cart .hand_button.increment', function () {
+    try {
+      var form = $(this).closest('.cart-item'),
+              product = getValues(form),
+              count = 1,
+              price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+      if (form.find('.specifications-color span').last() != undefined)
+        product.variant = form.find('.specifications-color span').last().text()
+
+      product.price = price
+      addProductToCart(product, count)
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+  /* Удаление товара из корзины через кнопку  +*/
+  $(document).on('click', '#product-in-side-cart + .cart-close', function () {
+    try {
+      var form = $(this).prev(),
+              product = getValues(form),
+              name = form.find('[name="pagetitle"]').val(),
+              count = parseInt(form.find('[name="count"]').val()),
+              price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+      if (form.find('.specifications-color span').last() != undefined)
+        product.variant = form.find('.specifications-color span').last().text()
+
+      product.item_name = name
+      product.price = price
+      removeFromCart(product, count)
+    } catch (e) {
+      console.log(e)
+    }
+  })
+  /* Удаление товара из корзины через кнопку в корзине +*/
+  $(document).on('click', '#page-cart .cart-item .cart-close', function () {
+    try {
+      var form = $(this).closest('.cart-item'),
+              product = getValues(form),
+              count = parseInt(form.find('[name="count"]').val()),
+              price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+      if (form.find('.specifications-color span').last() != undefined)
+        product.variant = form.find('.specifications-color span').last().text()
+
+      product.price = price
+      removeFromCart(product, count)
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+  /* Удаление товара из корзины через минус +*/
+  $(document).on('click', '#product-in-side-cart .hand_button.decrement', function () {
+    try {
+      var form = $(this).closest('#product-in-side-cart'),
+              product = getValues(form),
+              name = form.find('.cart-item__info_title').text(),
+              count = 1,
+              price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+      if (form.find('.specifications-color span').last() != undefined)
+        product.variant = form.find('.specifications-color span').last().text()
+
+      product.item_name = name
+      product.price = price
+      removeFromCart(product, count)
+    } catch (e) {
+      console.log(e)
+    }
+  })
+  /* Удаление товара из корзины через минус в корзине +*/
+  $(document).on('click', '#page-cart .hand_button.decrement', function () {
+    try {
+      var form = $(this).closest('.cart-item'),
+              product = getValues(form),
+              count = 1,
+              price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+      if (form.find('.specifications-color span').last() != undefined)
+        product.variant = form.find('.specifications-color span').last().text()
+
+      product.price = price
+      removeFromCart(product, count)
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+  /* Клик по товару */
+  $(document).on('click', '.goods-grid .slide-product', function () {
+    try {
+      var form = $(this).closest('.slide-product'),
+              product = getValues(form)
+
+      selectItem(product)
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+  /* Клик по цвету */
+  $(document).on('click', '#product-inner .slide-product__img_colors label', function () {
+    try {
+      var form = $(this).closest('#product-inner'),
+              product = getValues(form)
+
+      product.variant = $(this).data('color')
+
+      selectItem(product, 'e03')
+      viewItem(product)
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+  /* Просмотр корзины */
+  if ($('#page-cart').length) {
+    try {
+      var items = []
+      $('#page-cart .cart-item').each(function (i, p) {
+        var product = getValues($(this))
+        product.variant = $(this).find('.specifications-color span').last().text()
+        product.quantity = parseInt($(this).find('[name="count"]').val())
+        items.push(product)
+      })
+
+      if (items.length) viewCart(items)
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+  /* Просмотр товара */
+  if ($('#product-inner input[name="id"]').length) {
+    try {
+      var form = $('#product-inner'),
+              product = getValues(form)
+
+      viewItem(product)
+
+      var items = []
+      $('#product-inner .slide-product__img_colors label').each(function (i, e) {
+
+        product = getValues(form)
+        product.variant = $(this).data('color')
+        items.push(product)
+      })
+      viewItemList(items)
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+  /* Просмотр товаров в каталоге */
+  if ($('#shop-catalog .slide-product').length) {
+    viewItemsInCatalog('#shop-catalog .slide-product')
+  }
+
+  /* Переход к оформлению заказа */
+  if ($('#page-order').length) {
+    try {
+      var items = []
+      $('.js-order-cart .cart-item').each(function (i, e) {
+        var form = $(this),
+                item = getValues(form)
+
+        if (form.find('.specifications-color span').last() != undefined)
+          item.variant = form.find('.specifications-color span').last().text()
+
+        if (form.find('.js-ordercart-count') != undefined)
+          item.quantity = parseInt(form.find('.js-ordercart-count').text().replace(/\D/g, ""))
+
+        items.push(item)
+      })
+      onCheckout(items)
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+  /* Может понравитmся */
+  if ($('#product-inner').length) {
+    mayLike()
+  }
+
+  /* Просмотр формы подписки */
+  if ($('.email-mailing').length) {
+    footerSubscribeVisit()
+  }
+
+  if ($('[name="status_id"]') !== undefined && $('[name="payment_id"]') !== undefined) {
+    var status_id = parseInt($('[name="status_id"]').val()),
+            payment_id = parseInt($('[name="payment_id"]').val()),
+            order_id = $('#orderCart [name="id"]').val(),
+            sended = parseInt($('[name="sended"]').val()),
+            queryString = window.location.search,
+            urlParams = new URLSearchParams(queryString),
+            msorder = parseInt(urlParams.get('msorder'))
+
+    if (!sended) {
+      switch (true) {
+        case status_id == 1 && payment_id == 3:
+        case status_id == 2 && [5, 17, 2, 18, 20, 23, 22].indexOf(payment_id) > -1:
+          purchase()
+          $.get('/update-order?msorder=' + msorder)
+          break
+        case status_id == 1 && [5, 17, 2, 18, 20, 23, 22].indexOf(payment_id) > -1:
+          let itCount = 0;
+          const interval = setInterval(() => {
+            itCount++;
+            $.get('/check-order?msorder=' + order_id, function (resp) {
+              if (resp.order_status == 2) {
+                purchase()
+                $.get('/update-order?msorder=' + msorder)
+                clearInterval(interval);
+              }
+            })
+            if (itCount >= 10)
+              clearInterval(interval);
+          }, 1000);
+          break
+      }
+    }
+  }
+
+
+  /**********************/
+  /**********************/
+  /**********************/
+
+
+
+  /* Клик по товару */
+  function selectItem(item, event_id = 'e02', list = 'catalog_main_block') {
+    let send = {
+      event: 'select_item',
+      event_id: event_id,
+      ecommerce: {
+        items: []
+      }
+    }
+
+    item.index = 1
+    localStorage.setItem('item_list_name', list)
+
+    item.item_list_name = list
+    send.ecommerce.items.push(item)
+    dataLayer.push({ecommerce: null})
+    dataLayer.push(send)
+    console.log(send)
+  }
+
+
+  /* Может понравиться */
+  function mayLike() {
+    var item, id, items = [], sended = false, form
+    $('#other-products-in-cart .js-product-box').each(function () {
+      form = $(this)
+      item = getValues(form)
+      item.item_list_name = 'you_might_like'
+      items.push(item)
+    })
+
+
+    $('.shopping-cart-card').scroll(function () {
+      if (!sended && $('.shopping-cart-card').scrollTop() >= 236) {
+        viewItemList(items)
+        sended = true
+      }
+    })
+  }
+
+  /* Скрол в каталоге */
+  function viewItemsInCatalog(element, list = 'catalog_main_block') {
+    let item, items = new Set(), id, itemsviewednow = new Set(), scrolledEl;
+
+    window.lastviewedmaylike = new Set();
+
+    scrolledEl = list === 'with_these_goods_bought' ? '#msCart.active .wrapper' : window
+
+
+    $(scrolledEl).on('resize scroll', function () {
+      items = new Set();
+      itemsviewednow = new Set();
+
+      $(element).each(function () {
+        if ($(this).offset().top < ($(window).scrollTop() + $(window).height()) && ($(this).offset().top + $(this).height() > $(window).scrollTop())) {
+          id = $(this).find('[name="id"]').val()
+          itemsviewednow.add(id);
+        }
+      });
+
+      for (const id of itemsviewednow) {
+        if (!window.lastviewedmaylike.has(id)) {
+          item = getValues($('[name="id"][value="' + id + '"]').closest('.slide-product'))
+          item.item_list_name = list
+          items.add(item)
+        }
+      }
+
+      if (items.size > 0) {
+        items = setIndexes([...items])
+        viewItemList(items)
+      }
+
+      for (const id of itemsviewednow) {
+        window.lastviewedmaylike.add(id)
+      }
+    });
+  }
+
+  /* Удаление товара из корзины */
+  function removeFromCart(item, quantity = 1) {
+    let send = {
+      event: "remove_from_cart",
+      event_id: 'e05',
+      ecommerce: {
+        items: []
+      }
+    }
+    item = setIndexes(item)
+    item.quantity = parseInt(quantity)
+    item.item_list_name = 'catalog_main_block'
+    send.ecommerce.items.push(item)
+    dataLayer.push({ecommerce: null})
+    dataLayer.push(send)
+    console.log(send)
+  }
+
+  /* Добавление товара в корзину */
+  function addProductToCart(item, count = 1) {
+    let send = {
+      event: 'add_to_cart',
+      event_id: 'e04',
+      ecommerce: {
+        items: []
+      }
+    }
+    item.quantity = parseInt(count)
+    item = setIndexes(item)
+    item.item_list_name = 'catalog_main_block'
+    send.ecommerce.items.push(item)
+    dataLayer.push({ecommerce: null})
+    dataLayer.push(send)
+    console.log(send)
+  }
+
+  /* Просмотр товара */
+  function viewItem(item, item_list_name = 'landing_productpage') {
+    let send = {
+      event: 'view_item',
+      event_id: 'e03',
+      ecommerce: {
+        items: []
+      }
+    }
+    item = setIndexes(item)
+    item.item_list_name = item_list_name
+
+    if (localStorage.getItem('item_list_name') !== null) {
+      item.item_list_name = localStorage.getItem('item_list_name')
+      localStorage.removeItem('item_list_name')
+    }
+
+    send.ecommerce.items.push(item)
+    dataLayer.push({ecommerce: null})
+    dataLayer.push(send)
+    console.log(send)
+  }
+
+  /* Просмотр списка товаров */
+  function viewItemList(items) {
+    let send = {
+      event: 'view_item_list',
+      event_id: 'e01',
+      ecommerce: {
+        items: []
+      }
+    }
+    items = setIndexes(items)
+    send.ecommerce.items.push(items)
+    dataLayer.push({ecommerce: null})
+    dataLayer.push(send)
+    console.log(send)
+  }
+
+  /* Просмотр корзины */
+  function viewCart(items) {
+    let send = {
+      event: 'view_cart',
+      event_id: 'e06',
+      ecommerce: {
+        items: []
+      }
+    }
+
+    items = setIndexes(items)
+    send.ecommerce.items = items
+    dataLayer.push({ecommerce: null})
+    dataLayer.push(send)
+    console.log(send)
+  }
+
+  /* Переход на оформление заказа */
+  function onCheckout(items = []) {
+    dataLayer.push({ecommerce: null})
+    let send = {
+      event: "begin_checkout",
+      event_id: 'e07',
+      ecommerce: {
+        items: []
+      }
+    }
+
+    items = setIndexes(items)
+    send.ecommerce.items = items
+    dataLayer.push(send)
+    console.log(send)
+  }
+
+  /* Добавление способа доставки */
+  function addShippingInfo(items = [], shipping) {
+
+    let send = {
+      event: 'add_shipping_info',
+      event_id: 'e08',
+      ecommerce: {
+        shipping_tier: shipping,
+        items: []
+      }
+    }
+    items = setIndexes(items)
+    send.ecommerce.items.push(items)
+    dataLayer.push({ecommerce: null})
+    dataLayer.push(send)
+    console.log(send)
+  }
+
+  /* Добавление способа оплаты */
+  function addPaymentInfo(items = [], payment) {
+
+    let send = {
+      event: 'add_payment_info',
+      event_id: 'e09',
+      ecommerce: {
+        payment_type: payment,
+        items: []
+      }
+    }
+    items = setIndexes(items)
+    send.ecommerce.items.push(items)
+    dataLayer.push({ecommerce: null})
+    dataLayer.push(send)
+    console.log(send)
+  }
+
+  /* Оформление заказа */
+  function orderCreated() {
+    try {
+      var items = []
+      $('.js-order-cart .cart-item').each(function (i, e) {
+        var form = $(this),
+                item = getValues(form)
+
+        items.push(item)
+      })
+
+      items = setIndexes(items)
+
+      var total = parseFloat($('.result__item.sum span').last().text().replace(' ', ''))
+      var delivery = $('[name="delivery"]:checked').parent().find('.checkbox__descr_title span').first().text()
+      var payment = $('[name="payment"]:checked').parent().find('.checkbox__descr_title span').first().text()
+
+
+      var try_order = 1
+      if (localStorage.getItem('try_order') != null)
+        try_order = localStorage.getItem('try_order')
+
+      var send = {
+        event: 'order_created',
+        event_id: 'e10',
+        shipping_tier: delivery,
+        payment_type: payment,
+        order_id: 'unknown',
+        value: total,
+        try_number_to_order: try_order + '_try'
+      }
+      dataLayer.push({ecommerce: null})
+      dataLayer.push(send)
+      console.log(send)
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+  /* Страница спасибо */
+  function purchase() {
+    if (typeof dataLayer === 'undefined') return
+
+    var items = []
+    $('#orderCart .products .product').each(function (i, p) {
+      var id = $(p).find('[name="id"]').val(),
+              product = getValues($(p)),
+              price = parseInt($(p).find('[name="price"]').val().replace(' ', '')),
+              count = parseInt($(p).find('[name="count"]').val()),
+              color = $(p).find('[name="color"]').val(),
+              name = $(p).find('[name="name"]').val()
+
+      if (isNaN(count)) count = 1
+      product.quantity = count
+      product.item_name = name
+      product.variant = color
+      product.price = price
+      items.push(product)
+    })
+
+    const shipping_price = parseFloat($('#orderCart [name="delivery_cost"]').val())
+    const total = parseFloat($('#orderCart [name="cost"]').val())
+    const transaction_id = $('#orderCart [name="num"]').val()
+    const coupon = $('#orderCart [name="coupon"]').val()
+    const discount = $('#orderCart [name="discount"]').val() != '' ? parseFloat($('#orderCart [name="discount"]').val()) : ''
+    const delivery = $('#orderCart [name="delivery"]').val()
+    const payment = $('#orderCart [name="payment"]').val()
+
+    //addShippingInfo(items, delivery)
+    //addPaymentInfo(items, payment)
+    localStorage.removeItem('try_order')
+
+    let send = {
+      event: 'purchase',
+      event_id: 'e11',
+      shipping_tier: delivery,
+      payment_type: payment,
+      ecommerce: {
+        transaction_id: transaction_id,
+        affiliation: 'beautysleep.ru',
+        value: total,
+        tax: '20%',
+        shipping: shipping_price,
+        currency: 'RUB',
+        coupon: coupon,
+        discount: discount,
+        items: []
+      }
+    }
+
+    items = setIndexes(items)
+    send.ecommerce.items = items
+    dataLayer.push({ecommerce: null})
+    dataLayer.push(send)
+    console.log(send)
+  }
+
+  /* Ошибки в форме заказа */
+  function checkoutErrors(errors) {
+    let try_order = 1
+    if (localStorage.getItem('try_order') === null) {
+      localStorage.setItem('try_order', try_order)
+    } else {
+      try_order = parseInt(localStorage.getItem('try_order'))
+      try_order++
+      localStorage.setItem('try_order', try_order)
+    }
+
+    let send = {
+      event: 'errors_in_chekout_form',
+      event_id: 'e30',
+      error_field_order: errors,
+      try_number_to_order: try_order + '_try'
+    }
+    dataLayer.push({ecommerce: null})
+    dataLayer.push(send)
+    console.log(send)
+  }
+
+  function showSubscribeModal() {
+    let title = $('#subscribe h2').text(), send = {}
+
+    send = {
+      event: 'generate_lead_view',
+      event_id: 'e33',
+      lead_type: 'form_for_subscribe',
+      location: 'pop_up_first_visit_after20sec',
+    }
+
+    dataLayer.push({ecommerce: null})
+    dataLayer.push(send)
+    console.log(send)
+
+    setTimeout(() => {
+      send = {
+        event: 'view_promotion',
+        event_id: 'e31',
+        ecommerce: {
+          promotion_name: 'discount_for_subscribe',
+          creative_slot: 'pop_up_first_visit',
+          creative_name: title,
+        }
+      }
+      dataLayer.push({ecommerce: null})
+      dataLayer.push(send)
+      console.log(send)
+    }, 1000)
+  }
+
+  function subscribeSubmit() {
+    let title = $('#subscribe h2').text()
+
+    let send = {
+      event: 'select_promotion',
+      event_id: 'e32',
+      ecommerce: {
+        promotion_name: 'discount_for_subscribe',
+        creative_slot: 'popup_subscribe_first_visit',
+        creative_name: title
+      }
+    }
+
+    dataLayer.push({ecommerce: null})
+    dataLayer.push(send)
+    console.log(send)
+  }
+
+  function footerSubscribeSubmit() {
+    let send = {
+      event: 'generate_lead',
+      event_id: 'e34',
+      lead_type: 'form_for_subscribe',
+      location: 'pop_up_first_visit_after20sec',
+    }
+
+    dataLayer.push({ecommerce: null})
+    dataLayer.push(send)
+    console.log(send)
+  }
+
+  function footerSubscribeVisit() {
+    let send = {
+      event: 'generate_lead',
+      event_id: 'e34',
+      lead_type: 'form_for_subscribe',
+      location: 'pop_up_first_visit_after20sec',
+    }
+
+    window.pop_up_first_visit_after20sec = false
+
+    $(window).on('resize scroll', function () {
+      $('.email-mailing').each(function () {
+        if ($('.email-mailing').isInViewport() && window.pop_up_first_visit_after20sec === false) {
+          dataLayer.push({ecommerce: null})
+          dataLayer.push(send)
+          console.log(send)
+
+          window.pop_up_first_visit_after20sec = true
+        }
+      })
+    });
+  }
+
+  function generateLeadView() {
+    let send = {
+      event: 'generate_lead_view',
+      event_id: 'e33',
+      lead_type: 'form_for_subscribe',
+      location: 'pop_up_first_visit_after20sec',
+    }
+
+  }
+
+  function setIndexes(items) {
+    let new_idx = 1
+    if (Array.isArray(items)) {
+      items.forEach((item, idx) => {
+        items[idx].index = new_idx
+        new_idx += 1
+      })
+    } else {
+      items.index = 1
+    }
+    return items
+  }
+
+  $(document).on('af_complete', function (e, r) {
+    const form = r.form.attr('id')
+    if (form === 'subscribe') {
+      subscribeSubmit()
+    }
+    if (form === 'subscribe-foot') {
+      footerSubscribeSubmit()
+    }
+  })
+
+  $(document).ready(function () {
+    miniShop2.Callbacks.add('Order.submit.response.error', 'orders_submit_error', function (response) {
+      checkoutErrors(response.data.join(';'))
+    });
+
+    miniShop2.Callbacks.add('Order.submit.response.success', 'orders_submit_success', function (response) {
+      orderCreated();
+      posthog.capture('sent_order', {
+        block_name: "Оформление заказа",
+        page_name: "Copper"
+      })
+    });
+
+
+  })
+
+
+  $.fn.isInViewport = function () {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+  };
+
+
+  /* POSTHOG */
+
+
+  /* Добавление в корзину из карточки */
+  $(document).on('click', '#product-inner [name="ms2_action"]', function () {
+    console.log("click");
+    try {
+      var form = $(this).closest('form'),
+              product = getValues(form),
+              count = parseInt(form.find('[name="count"]').val());
+      console.log(product);
+      posthog.capture('cart_add', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: product.item_name,
+        product_variant: product.variant,
+        product_price: product.price,
+        product_count: count,
+        block_name: "Страница товара"
+      });
+      console.log("posthog страница товара cart_add");
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+
+  $(document).on('click', '#product-inner .hand_button.increment', function () {
+    try {
+      var form = $(this).closest('#product-inner'),
+              product = getValues(form),
+              name = form.find('.cart-item__info_title').text(),
+              count = parseInt(form.find('[name="count"]').val());
+
+      console.log('product_change_plus');
+      console.log(product);
+      posthog.capture('product_change_plus', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: name,
+        product_variant: product.variant,
+        product_price: product.price,
+        product_count: count,
+        block_name: "Страница товара"
+      })
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+  $(document).on('click', '#product-inner .hand_button.decrement', function () {
+    try {
+      var form = $(this).closest('#product-inner'),
+              product = getValues(form),
+              name = form.find('.cart-item__info_title').text(),
+              count = parseInt(form.find('[name="count"]').val());
+
+      console.log('product_change_minus');
+      console.log(product);
+      posthog.capture('product_change_minus', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: name,
+        product_variant: product.variant,
+        product_price: product.price,
+        product_count: count,
+        block_name: "Страница товара"
+      })
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+
+  /* Клик по цвету */
+  $(document).on('click', '#product-inner .slide-product__img_colors label', function () {
+    try {
+      var form = $(this).closest('#product-inner'),
+              product = getValues(form)
+
+      product.variant = $(this).data('color');
+
+      console.log('product_change_color');
+      console.log(product);
+      posthog.capture('product_change_color', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: product.item_name,
+        product_price: product.price,
+        roduct_variant: product.variant,
+        block_name: "Страница товара"
+      });
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+  /* Клик по размеру  */
+  $(document).on('click', '#product-inner .single-product-hints__size label', function () {
+    try {
+      var form = $(this).closest('#product-inner'),
+              product = getValues(form)
+
+      product.variant = $(this).data('size');
+
+      console.log('product_change_size');
+      console.log(product);
+      posthog.capture('product_change_size', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: product.item_name,
+        product_price: product.price,
+        roduct_variant: product.variant,
+        block_name: "Страница товара"
+      });
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+
+  /* Добавление в корзину из Миникорзины */
+  $(document).on('click', '#other-products-in-cart [name="ms2_action"]', function () {
+    try {
+      var form = $(this).closest('form'),
+              product = getValues(form),
+              count = parseInt(form.find('[name="count"]').val());
+
+      posthog.capture('minicart_additional_products_add', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: product.item_name,
+        product_variant: product.variant,
+        product_price: product.price,
+        product_count: count,
+        block_name: "Миникорзина. Дополнительные товары"
+      })
+      console.log("posthog Миникорзина. Дополнительные товары minicart_additional_products_add");
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+  $(document).on('click', '#other-products-in-cart .slide-product__img_colors label', function () {
+    try {
+      var form = $(this).closest('#other-products-in-cart'),
+              product = getValues(form)
+
+      product.variant = $(this).data('color');
+
+      console.log('minicart_additional_products_color');
+      console.log(product);
+      posthog.capture('minicart_additional_products_color', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: product.item_name,
+        product_price: product.price,
+        roduct_variant: product.variant,
+        block_name: "Миникорзина. Дополнительные товары"
+      });
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+  $(document).on('click', '#other-products-in-cart .single-product-hints__size label', function () {
+    try {
+      var form = $(this).closest('#other-products-in-cart'),
+              product = getValues(form)
+
+      product.variant = $(this).data('size');
+
+      console.log('minicart_additional_products_size');
+      console.log(product);
+      posthog.capture('minicart_additional_products_size', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: product.item_name,
+        product_price: product.price,
+        roduct_variant: product.variant,
+        block_name: "Миникорзина. Дополнительные товары"
+      });
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+
+  $(document).on('click', '#other-products-in-cart .hand_button.increment', function () {
+    try {
+      var form = $(this).closest('form'),
+              product = getValues(form),
+              count = 1;
+
+      console.log("minicart_additional_products_plus");
+      console.log(product);
+      posthog.capture('minicart_additional_products_plus', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: product.item_name,
+        product_variant: product.variant,
+        product_price: product.price,
+        product_count: count,
+        block_name: "Миникорзина. Дополнительные товары"
+      })
+
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+  $(document).on('click', '#other-products-in-cart .hand_button.decrement', function () {
+    try {
+      var form = $(this).closest('form'),
+              product = getValues(form),
+              count = 1;
+
+      console.log("minicart_additional_products_minus");
+      console.log(product);
+      posthog.capture('minicart_additional_products_minus', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: product.item_name,
+        product_variant: product.variant,
+        product_price: product.price,
+        product_count: count,
+        block_name: "Миникорзина. Дополнительные товары"
+      })
+
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+
+  /* дополнительные товары  single-product-section__other-products posthog_view_block  */
+
+  $(document).on('click', '.single-product-section__other-products .slide-product__information .hand_button.decrement', function () {
+    try {
+      var form = $(this).closest('form'),
+              product = getValues(form),
+              count = 1;
+
+      console.log("additional_products_minus");
+      console.log(product);
+      posthog.capture('additional_products_minus', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: product.item_name,
+        product_variant: product.variant,
+        product_price: product.price,
+        product_count: count,
+        block_name: "Дополнительные товары"
+      })
+
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+  $(document).on('click', '.single-product-section__other-products .slide-product__information .hand_button.increment', function () {
+    try {
+      var form = $(this).closest('form'),
+              product = getValues(form),
+              count = 1;
+
+      console.log("additional_products_plus");
+      console.log(product);
+      posthog.capture('additional_products_plus', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: product.item_name,
+        product_variant: product.variant,
+        product_price: product.price,
+        product_count: count,
+        block_name: "Дополнительные товары"
+      })
+
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+
+  /* Добавление на странице add-products-page */
+  $(document).on('click', '.add-products-page .swiper-slide [value="cart/add"]', function () {
+    try {
+      var form = $(this).closest('.swiper-slide'),
+              product = getValues(form),
+              count = parseInt(form.find('[name="count"]').val()),
+              price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+      if (form.find('.slide-product__img_colors').length)
+        product.variant = form.find('.slide-product__img_colors input:checked + label').data('color')
+
+      product.price = price;
+      console.log('additional_products_add');
+      console.log(product);
+      posthog.capture('additional_products_add', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: product.item_name,
+        product_variant: product.variant,
+        product_price: price,
+        product_count: count,
+        block_name: "Дополнительные товары"
+      })
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+  $(document).on('click', '.add-products-page .swiper-slide .slide-product__img_colors label', function () {
+    try {
+      var form = $(this).closest('.slide-product__information'),
+              product = getValues(form)
+
+      product.variant = $(this).data('color');
+
+      console.log('additional_products_color');
+      console.log(product);
+      posthog.capture('additional_products_color', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: product.item_name,
+        product_price: product.price,
+        roduct_variant: product.variant,
+        block_name: "Дополнительные товары"
+      });
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+
+  $(document).on('click', '.add-products-page .swiper-slide .single-product-hints__size label', function () {
+    try {
+      var form = $(this).closest('.slide-product__information'),
+              product = getValues(form)
+
+      product.variant = $(this).data('size');
+
+      console.log('additional_products_size');
+      console.log(product);
+      posthog.capture('additional_products_size', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: product.item_name,
+        product_price: product.price,
+        roduct_variant: product.variant,
+        block_name: "Дополнительные товары"
+      });
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+
+  /* Добавление в миникорзину через кнопку плюс */
+  $(document).on('click', '#product-in-side-cart .hand_button.increment', function () {
+    try {
+      var form = $(this).closest('#product-in-side-cart'),
+              product = getValues(form),
+              name = form.find('.cart-item__info_title').text(),
+              count = 1,
+              price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+      if (form.find('.specifications-color span').last() != undefined)
+        product.variant = form.find('.specifications-color span').last().text()
+
+      product.price = price;
+      console.log('minicart_cart_product_plus');
+      console.log(product);
+      posthog.capture('minicart_cart_product_plus', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: name,
+        product_variant: product.variant,
+        product_price: price,
+        product_count: count,
+        block_name: "Товары в миникорзине"
+      })
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+
+  /* Удаление товара из миникорзины через минус */
+  $(document).on('click', '#product-in-side-cart .hand_button.decrement', function () {
+    try {
+      var form = $(this).closest('#product-in-side-cart'),
+              product = getValues(form),
+              name = form.find('.cart-item__info_title').text(),
+              count = 1,
+              price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+      if (form.find('.specifications-color span').last() != undefined)
+        product.variant = form.find('.specifications-color span').last().text()
+
+      product.price = price;
+      console.log('minicart_cart_product_minus');
+      console.log(product);
+      posthog.capture('minicart_cart_product_minus', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: name,
+        product_variant: product.variant,
+        product_price: price,
+        product_count: count,
+        block_name: "Товары в миникорзине"
+      })
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+
+  /* Удаление товара из корзины через кнопку */
+  $(document).on('click', '#product-in-side-cart + .cart-close', function () {
+    try {
+      var form = $(this).prev(),
+              product = getValues(form),
+              name = form.find('[name="pagetitle"]').val(),
+              count = parseInt(form.find('[name="count"]').val()),
+              price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+      if (form.find('.specifications-color span').last() != undefined)
+        product.variant = form.find('.specifications-color span').last().text()
+
+      product.price = price;
+      console.log('minicart_cart_product_delete');
+      console.log(product);
+      posthog.capture('minicart_cart_product_delete', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: name,
+        product_variant: product.variant,
+        product_price: price,
+        product_count: count,
+        block_name: "Товары в миникорзине"
+      })
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+
+  /* Добавление в корзину через кнопку плюс в корзине */
+  $(document).on('click', '#page-cart .hand_button.increment', function () {
+    try {
+      var form = $(this).closest('.cart-item'),
+              product = getValues(form),
+              count = 1,
+              price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+      if (form.find('.specifications-color span').last() != undefined)
+        product.variant = form.find('.specifications-color span').last().text()
+
+      product.price = price;
+      console.log('cart_product_plus');
+      console.log(product);
+      posthog.capture('cart_product_plus', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: name,
+        product_variant: product.variant,
+        product_price: price,
+        product_count: count,
+        block_name: "Корзина"
+      })
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+  /* Удаление товара из корзины через минус в корзине */
+  $(document).on('click', '#page-cart .hand_button.decrement', function () {
+    try {
+      var form = $(this).closest('.cart-item'),
+              product = getValues(form),
+              count = 1,
+              price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+      if (form.find('.specifications-color span').last() != undefined)
+        product.variant = form.find('.specifications-color span').last().text()
+
+      product.price = price;
+      console.log('cart_product_minus');
+      console.log(product);
+      posthog.capture('cart_product_minus', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: name,
+        product_variant: product.variant,
+        product_price: price,
+        product_count: count,
+        block_name: "Корзина"
+      })
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+
+  /* Удаление товара из корзины через кнопку в корзине */
+  $(document).on('click', '#page-cart .cart-item .cart-close', function () {
+    try {
+      var form = $(this).closest('.cart-item'),
+              product = getValues(form),
+              count = parseInt(form.find('[name="count"]').val()),
+              price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+      if (form.find('.specifications-color span').last() != undefined)
+        product.variant = form.find('.specifications-color span').last().text()
+
+      product.price = price;
+      console.log('cart_product_delete');
+      console.log(product);
+      posthog.capture('cart_product_delete', {
+        page_name: "Copper",
+        product_id: product.item_id,
+        product_name: name,
+        product_variant: product.variant,
+        product_price: price,
+        product_count: count,
+        block_name: "Корзина"
+      })
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+
+  $(document).on("focusout", "form input[name='coupon_value']", function () {
+    console.log("Промокод конец" + $(this).val());
+    posthog.capture('cart_promo_end', {
+      block_name: "Промокод",
+      promo: $(this).val(),
+      page_name: "Copper",
+    })
+  }).on("focus", "form input[name='coupon_value']", function () {
+    console.log("Промокод старт");
+    posthog.capture('cart_promo_start', {
+      block_name: "Промокод",
+      page_name: "Copper",
+    })
+  })
+
+
+  $(document).on('click', '.js-check-coupon button[type="submit"]', function () {
+    try {
+      if ($("input[name='coupon_value']").val() !== "") {
+        console.log('cart_promo_send');
+        posthog.capture('cart_promo_send', {
+          block_name: "Промокод",
+          promo: $("input[name='coupon_value']").val(),
+          error: $(".js-promocode-error.error_promocode").text(),
+          page_name: "Copper",
+        })
+      }
+    } catch (e) {
+      console.log(e)
+    }
+  })
+
+
+  $(".btn-play-video").click(function () {
+    posthog.capture('click_video_index', {
+      video_name: "Как работает BeautySleep"
+    })
+
+  })
+
+  $(".header-common a.interaction__phone").click(function () {
+    posthog.capture('click_phone_header', {
+      event_name: "Клик по номеру телефона"
+    })
+  })
+
+  $("a.whats-app").click(function () {
+    posthog.capture('whatsapp_click', {
+      event_name: "Клик по whatsapp"
+    })
+  })
+
+
+  /*var target = $( ".pp__mailing" )[0];
+    observer.observe(target, config);
+    var target = $( ".pp__mailing" )[2];
+    observer.observe(target, config);
+     var target = $( ".pp__video-review" )[0];
+    observer.observe(target, config);*/
+
+
+</script>
+
+<style>
+  .header-info .swiper-slide {
+    background: none !important;
+  }
+</style>
+
+<script>
+  $(window).resize(function () {
+    addMarginToSwiper();
+  })
+  addMarginToSwiper();
+
+  function addMarginToSwiper() {
+    var h = $('.general-section img').outerHeight();
+    $('.curtain-container.index').css({'margin-top': h})
+  }
+</script>
+
+<script src="../files/beautysleep.js"></script>
+<script src="../files/bs_default.js"></script>
+<script src="../files/jquery.jgrowl.min.js"></script>
+<!--<script src="../files/message_settings.js"></script>-->
+<!--<script type="module" src="../files/sendit.js"></script>-->
+
+<!--<script type="module" src="../files/sendsay.js"></script>-->
+<!--<script src="../files/customAjaxForm.js"></script>-->
+
+
+<div class="SmartCaptcha-Overlay SmartCaptcha-Overlay_show_spinner" data-testid="advanced-container" tabindex="-1"
+     style="--smart-captcha-doc-height: 918px; --smart-captcha-doc-width: 1598px;">
+  <div class="SmartCaptcha-Spin"></div>
+</div>
+<div class="SmartCaptcha-Overlay SmartCaptcha-Overlay_show_spinner" data-testid="advanced-container" tabindex="-1"
+     style="--smart-captcha-doc-height: 918px; --smart-captcha-doc-width: 1598px;">
+  <div class="SmartCaptcha-Spin"></div>
+</div>
+<script type="text/javascript" async="" src="../files/dyn-goal-config.js"></script>
+<script src="../files/iziToast.min.js"></script>
+</body>
+
+</html>
