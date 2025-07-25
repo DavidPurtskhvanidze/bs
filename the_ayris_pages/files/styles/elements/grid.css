@@ -1,0 +1,176 @@
+/*gap*/
+.gap {
+    gap: var(--gap);
+}
+/*gap*/
+
+.grid-col-1 {
+    display: grid;
+    grid-template-columns: minmax(0,1fr);
+    align-items: start;
+}
+.grid-col-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    align-items: start;
+}
+.grid-col-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    align-items: start;
+}
+.grid-col-4 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    align-items: start;
+}
+.grid-col-5 {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0,1fr));
+    align-items: start;
+}
+
+/*Desktop XL*/
+@media (max-width: 1440px) {
+    .grid-col-xl-1 {
+        display: grid;
+        grid-template-columns: minmax(0,1fr);
+        align-items: start;
+    }
+    .grid-col-xl-2 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        align-items: start;
+    }
+    .grid-col-xl-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        align-items: start;
+    }
+    .grid-col-xl-4 {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0,1fr));
+        align-items: start;
+    }
+    .grid-col-xl-5 {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0,1fr));
+        align-items: start;
+    }
+}
+
+/*Desktop LG*/
+@media (max-width: 1280px) {
+    .grid-col-lg-1 {
+        display: grid;
+        grid-template-columns: minmax(0,1fr);
+        align-items: start;
+    }
+    .grid-col-lg-2 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        align-items: start;
+    }
+    .grid-col-lg-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        align-items: start;
+    }
+    .grid-col-lg-4 {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0,1fr));
+        align-items: start;
+    }
+    .grid-col-lg-5 {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0,1fr));
+        align-items: start;
+    }
+}
+
+/*Tablet MD*/
+@media (max-width: 1023px) {
+    .grid-col-md-1 {
+        display: grid;
+        grid-template-columns: minmax(0,1fr);
+        align-items: start;
+    }
+    .grid-col-md-2 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        align-items: start;
+    }
+    .grid-col-md-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        align-items: start;
+    }
+    .grid-col-md-4 {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0,1fr));
+        align-items: start;
+    }
+    .grid-col-md-5 {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0,1fr));
+        align-items: start;
+    }
+}
+
+/*Mobile SM*/
+@media (max-width: 767px) {
+    .grid-col-sm-1 {
+        display: grid;
+        grid-template-columns: minmax(0,1fr);
+        align-items: start;
+    }
+    .grid-col-sm-2 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        align-items: start;
+    }
+    .grid-col-sm-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        align-items: start;
+    }
+    .grid-col-sm-4 {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0,1fr));
+        align-items: start;
+    }
+    .grid-col-sm-5 {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0,1fr));
+        align-items: start;
+    }
+}
+
+/*Mobile XS*/
+@media (max-width: 480px) {
+    .grid-col-xs-1 {
+        display: grid;
+        grid-template-columns: minmax(0,1fr);
+        align-items: start;
+    }
+    .grid-col-xs-2 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        align-items: start;
+    }
+    .grid-col-xs-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        align-items: start;
+    }
+    .grid-col-xs-4 {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0,1fr));
+        align-items: start;
+    }
+    .grid-col-xs-5 {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0,1fr));
+        align-items: start;
+    }
+}

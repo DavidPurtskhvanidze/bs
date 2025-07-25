@@ -1,0 +1,141 @@
+.card-grid__big-banner {
+    grid-area: 1 / 3 / 3 / 5;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: mediumaquamarine;
+}
+.card-top {
+    position: relative;
+    aspect-ratio: 1 / 1.4;
+    width: 100%;
+}
+.card-top__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.card-top__link-hidden-text {
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+.card-top__picture {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.card-top__picture-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-bottom {
+    padding: clamp(10px, calc(22/var(--clamp-width)*100vw), 22px);
+}
+.card-title {
+    font-size: var(--card-title-font-size);
+    color: var(--color-dark-3);
+    margin-bottom: clamp(9px, calc(12/var(--clamp-width)*100vw), 12px);
+    font-weight: 400;
+}
+.card-descriptor {
+    font-style: italic;
+    font-size: var(--card-descriptor-font-size);
+    color: var(--color-gray-1);
+    margin-bottom: clamp(9px, calc(12/var(--clamp-width)*100vw), 12px);
+}
+.card-price {
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, calc(12/var(--clamp-width)*100vw), 12px);
+}
+.card-price__value {
+    font-size: var(--card-price-value-font-size);
+    letter-spacing: -0.03em;
+    color: var(--color-dark-3);
+}
+.card-price__value_old {
+    position: relative;
+    font-size: var(--card-price-value-old-font-size);
+    color: var(--color-gray-1);
+}
+.card-price__value_old:before {
+    content: "";
+    background-color: var(--color-gray-1);
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.card-colors {
+    position: absolute;
+    top: var(--card-colors-padding);
+    right: var(--card-colors-padding);
+    direction: rtl;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    padding: 0;
+}
+.card-colors__item {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 0.7px solid rgba(0, 0, 0, 0.4);
+}
+
+/*Card button block*/
+.cards-button-block {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.cards-button-block .swiper {
+    width: 100%;
+    flex: 1;
+}
+.cards-button-block .card {
+    height: 100%;
+}
+
+/*use this wrapper 'cards-block' if there is no slider*/
+.cards-block {
+    display: flex;
+    gap: 5px;
+    flex: 1;
+}
+.cards-button-block .card-top {
+    position: relative;
+    aspect-ratio: unset;
+    height: 100%;
+}
+.cards-button-block .card-bottom {
+    height: 124px;
+}
+.cards-button-block .card-bottom .card-title,
+.cards-button-block .card-bottom .card-descriptor,
+.cards-button-block .card-bottom .card-price {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.button-block {
+    padding-top: 64px;
+    text-align: center;
+}
+.button-block .button {
+    max-width: 312px;
+}
+/*Card button block*/

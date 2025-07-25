@@ -1,0 +1,83 @@
+:root {
+    /*The Ayris Brandbook & Guidelines Colors*/
+    /*Main colours*/
+    --color-emerald-green: #3F8C65;
+    --color-black: #000000;
+    --color-royal-paper: #F9F4EC;
+
+    /*Additional colours*/
+    --color-pale-gold: #806E4D;
+    --color-marie-antoinette: #DDA499;
+    --color-star-sapphire: #1D739F;
+    --color-air-blue: #ACCAE1;
+    --colol-iris-stem: #C5C177;
+    --color-canary-yellow: #EFE58F;
+    /*The Ayris Brandbook & Guidelines Colors*/
+
+
+    --color-accent: var(--color-emerald-green);
+    --color-main-bg: var(--color-royal-paper);
+    --color-dark-1: #000000;
+    --color-dark-2: #32312F;
+    --color-dark-3: #4B4947;
+    --color-gray-1: #95928E;
+    --color-gray-2: #D9D9D9;
+    --color-light-1: var(--color-royal-paper);
+    --color-menu-bg: var(--color-royal-paper);
+    --color-modal-bg: var(--color-royal-paper);
+    --color-modal-backdrop: rgba(50, 49, 47, 0.30);
+    --color-invalid-input: var(--color-marie-antoinette);
+
+    --font-family-base: 'LiteraturnayaWebBook', serif;
+    --transition-duration: 0.2s;
+    --clamp-width: 1440;
+    --gap: 5px;
+
+    --page-container-width: 80%;
+
+    --header-height: 100px;
+    --header-paddin-inline: 60px;
+    --header-logo-width: clamp(174px, calc(312/var(--clamp-width)*100vw), 312px);
+    --header-column-gap: clamp(16px, calc(60/var(--clamp-width)*100vw), 60px);
+    --header-border-width: 1px;
+
+    --button-height: 60px;
+    --button-font-size: 17px;
+
+    --footer-padding: 60px;
+
+    /*--modal-width: 600px;*/
+    --modal-padding: 24px;
+
+    --menu-drop-lists-padding: 60px;
+
+    --baner-height: 900px;
+    --page-banner-padding-block: 60px;
+    --page-banner-padding-inline: 60px;
+
+    --input-height: 52px;
+    --input-inline-padding: 20px;
+
+    --checkbox-width: 18px;
+    --radio-width: 18px;
+
+    --checkbox-big-width: 34px;
+    --radio-big-width: 34px;
+
+    --product-popup-button-height: 40px;
+
+
+    --catalog-toolbar-height: 70px;
+
+    --swiper-theme-color: var(--color-accent);
+    --swiper-navigation-color: var(--color-gray-1);
+    --swiper-navigation-sides-offset: 60px;
+    --swiper-button-next-prev-width: 17px;
+    --swiper-button-next-prev-height: 29px;
+
+    --card-colors-padding: clamp(12px, calc(22/var(--clamp-width)*100vw), 22px);
+    --card-title-font-size: clamp(12px, calc(14/var(--clamp-width)*100vw), 14px);
+    --card-descriptor-font-size: clamp(11px, calc(12/var(--clamp-width)*100vw), 12px);
+    --card-price-value-font-size: clamp(14px, calc(18/var(--clamp-width)*100vw), 18px);
+    --card-price-value-old-font-size: clamp(12px, calc(13/var(--clamp-width)*100vw), 13px);
+}

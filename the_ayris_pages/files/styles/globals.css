@@ -1,0 +1,41 @@
+body {
+    font-size: 18px;
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    line-height: 1.28;
+    color: var(--color-dark-2);
+    background-color: var(--color-main-bg);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    text-decoration: underline;
+    color: inherit;
+}
+
+/*Common Typography*/
+h1:where(:not([class])) {
+    font-size: clamp(28px, calc(36/var(--clamp-width)*100vw), 36px);
+}
+h2:where(:not([class])) {
+    font-size: clamp(24px, calc(30/var(--clamp-width)*100vw), 30px);
+}
+h3:where(:not([class])) {
+    font-size: clamp(20px, calc(24/var(--clamp-width)*100vw), 24px);
+}
+h4:where(:not([class])) {
+    font-size: clamp(18px, calc(20/var(--clamp-width)*100vw), 20px);
+}
+h5:where(:not([class])) {
+    font-size: 16px;
+}
+h6:where(:not([class])) {
+    font-size: 14px;
+    font-weight: 500;
+}
+p:where(:not([class])) {
+    font-size: clamp(14px, calc(16/var(--clamp-width)*100vw), 16px);
+}
+/*Common Typography*/
