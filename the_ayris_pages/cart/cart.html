@@ -340,24 +340,25 @@
                     <p>Ваша корзина пуста.</p>
                     <a class="button button_gray" href="https://theayris.ru/katalog/">Перейти к покупкам в каталог</a>
                 </div>
-                <div class="basket-card-list" id="msCart">
-
+                <div class="basket-card-list-open fx-basket-list-open">
+                    <div class="basket-card-list-open-title">
+                        Показать детали заказа
+                    </div>
+                    <div class="basket-card-list-open-sum">
+                        65.000 ₽
+                    </div>
+                </div>
+                <div class="basket-card-list fx-basket-list" id="msCart">
                     <div data-tpl-cart-list-item="" class="card-horizontal" id="msc3628153775f7d4fd08a1ad30cb9ac2b">
                         <div class="card-horizontal-start">
                             <picture class="card-horizontal__picture">
-
-
-                                <img class="card-horizontal__picture-img" src="./files/nymphe-dress-black-5.jpg"
-                                     alt="Платье Nymphe">
+                                <img class="card-horizontal__picture-img" src="./files/nymphe-dress-black-5.jpg" alt="Платье Nymphe">
                             </picture>
                         </div>
                         <div class="card-horizontal-end">
                             <div class="card-horizontal__info">
                                 <div class="card-horizontal__info-top">
-
-                                    <a href="https://theayris.ru/katalog/platya/plate-nymphe?mod=%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B9"
-                                       class="card-horizontal__info-title" data-ymec-link="">
-
+                                    <a href="https://theayris.ru/katalog/platya/plate-nymphe?mod=%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B9" class="card-horizontal__info-title" data-ymec-link="">
                                         <input type="hidden" name="id" value="116">
                                         <input data-ymec-prop="" type="hidden" name="options[color]" value="черный">
                                         <input data-ymec-prop="" type="hidden" name="options[size]" value="S">
@@ -380,8 +381,6 @@
                                         Удалить
                                     </button>
                                 </form>
-
-
                             </div>
                             <div class="card-horizontal__info-option">
                                 <form class="input-count ms2_form" method="post" role="form"
@@ -399,7 +398,6 @@
                                 <div class="card-horizontal__price">
                                     <span class="ms2_price_one">49 000</span> ₽
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -632,6 +630,379 @@
                     </div>
                 </div>
 
+
+                <!-- order modul  -->
+                <div class="hidden">
+    <pre>Array
+(
+    [order_id] =&gt; 450
+    [receiver] =&gt;
+    [phone] =&gt;
+    [email] =&gt;
+    [metro] =&gt;
+    [street] =&gt;
+    [building] =&gt;
+    [entrance] =&gt;
+    [floor] =&gt;
+    [room] =&gt;
+    [comment] =&gt;
+    [text_address] =&gt;
+    [corpus] =&gt;
+    [delivery] =&gt; 0
+    [payment] =&gt; 0
+    [cost] =&gt; 206 000
+    [cart_cost] =&gt; 206 000
+    [delivery_cost] =&gt; 0
+    [discount_cost] =&gt; 0
+)
+</pre>
+                    <hr>
+                    <pre>Array
+(
+    [1] =&gt; Array
+        (
+            [id] =&gt; 1
+            [name] =&gt; Самовывоз
+            [description] =&gt;
+            [price] =&gt; 0
+            [weight_price] =&gt; 0.00
+            [distance_price] =&gt; 0.00
+            [logo] =&gt;
+            [rank] =&gt; 0
+            [active] =&gt; 1
+            [class] =&gt;
+            [properties] =&gt;
+            [requires] =&gt; email,receiver
+            [free_delivery_amount] =&gt; 1.00
+            [retailcrm_delivery_code] =&gt;
+            [payments] =&gt; Array
+                (
+                    [0] =&gt; 2
+                    [1] =&gt; 3
+                )
+
+        )
+
+    [2] =&gt; Array
+        (
+            [id] =&gt; 2
+            [name] =&gt; Курьерская служба
+            [description] =&gt; 2-5 рабочих дней
+            [price] =&gt; 0
+            [weight_price] =&gt; 0.00
+            [distance_price] =&gt; 0.00
+            [logo] =&gt;
+            [rank] =&gt; 1
+            [active] =&gt; 1
+            [class] =&gt; msTasDelivery
+            [properties] =&gt;
+            [requires] =&gt; phone,email,delivery,payment,country,region,city,street,building
+            [free_delivery_amount] =&gt; 0.00
+            [retailcrm_delivery_code] =&gt; courier
+            [payments] =&gt; Array
+                (
+                    [0] =&gt; 1
+                    [1] =&gt; 2
+                    [2] =&gt; 3
+                )
+
+        )
+
+    [3] =&gt; Array
+        (
+            [id] =&gt; 3
+            [name] =&gt; Пункты выдачи СДЭК
+            [description] =&gt; Зависит от страны и региона. &lt;u&gt;Выбрать на карте&lt;/u&gt;
+            [price] =&gt; 0
+            [weight_price] =&gt; 0.00
+            [distance_price] =&gt; 0.00
+            [logo] =&gt;
+            [rank] =&gt; 2
+            [active] =&gt; 1
+            [class] =&gt; msTasDelivery
+            [properties] =&gt;
+            [requires] =&gt; phone,email,delivery,payment,country,region,city,street,building
+            [free_delivery_amount] =&gt; 0.00
+            [retailcrm_delivery_code] =&gt; sdek-v-2-cv0y92geoyb3xdf3jvwrfwurb67k50zk
+            [payments] =&gt; Array
+                (
+                    [0] =&gt; 1
+                    [1] =&gt; 2
+                    [2] =&gt; 3
+                )
+
+        )
+
+)
+</pre>
+                    <hr>
+                    <pre>Array
+(
+    [2] =&gt; Array
+        (
+            [id] =&gt; 2
+            [name] =&gt; Онлайн на сайте банковской картой
+            [description] =&gt; Оплата без подтверждения (одностадийная)
+            [price] =&gt; 0
+            [logo] =&gt;
+            [rank] =&gt; 1
+            [active] =&gt; 1
+            [class] =&gt; mspYooKassaPaymentHandler
+            [properties] =&gt; Array
+                (
+                    [payment_method_data] =&gt; Array
+                        (
+                        )
+
+                    [confirmation] =&gt; Array
+                        (
+                            [type] =&gt; redirect
+                        )
+
+                    [capture] =&gt; 1
+                )
+
+            [retailcrm_payment_code] =&gt; yandex-kassa
+        )
+
+    [3] =&gt; Array
+        (
+            [id] =&gt; 3
+            [name] =&gt; СБП (через приложение банка)
+            [description] =&gt; Оплата без подтверждения (одностадийная)
+            [price] =&gt; 0
+            [logo] =&gt;
+            [rank] =&gt; 2
+            [active] =&gt; 1
+            [class] =&gt; mspYooKassaPaymentHandler
+            [properties] =&gt; Array
+                (
+                    [payment_method_data] =&gt; Array
+                        (
+                            [type] =&gt; sbp
+                        )
+
+                    [confirmation] =&gt; Array
+                        (
+                            [type] =&gt; redirect
+                        )
+
+                    [capture] =&gt; 1
+                )
+
+            [retailcrm_payment_code] =&gt; sbp
+        )
+
+    [1] =&gt; Array
+        (
+            [id] =&gt; 1
+            [name] =&gt; Оплата при получении (доступна для заказов не более 4 изделий) &lt;span class="fx-payment-more"&gt;В вашем заказе более 4 изделий&lt;/span&gt;
+            [description] =&gt;
+            [price] =&gt; 0
+            [logo] =&gt;
+            [rank] =&gt; 0
+            [active] =&gt; 1
+            [class] =&gt;
+            [properties] =&gt;
+            [retailcrm_payment_code] =&gt; cash
+        )
+
+)
+</pre>
+                    <hr>
+                    <pre>Array
+(
+    [index] =&gt; 101000
+    [country] =&gt; Россия
+    [region] =&gt; Москва
+    [city] =&gt; Москва
+)
+</pre>
+                    <hr>
+                    <pre>Array
+(
+)
+</pre>
+                    <hr>
+                    --
+                </div>
+                <form class="ms2_form fx-empty-cart-hide hidden0" id="msOrder" method="post"
+                      action="https://theayris.ru/">
+                    <fieldset class="fieldset">
+                        <!--fieldset legend-->
+                        <legend class="fieldset__legend">Контакты</legend>
+
+                        <div class="input-container">
+                            <input class="input-field " type="email" name="email" value="" id="basketEmail"
+                                   placeholder=" " required="" autocomplete="new" autocorrect="new">
+                            <label class="input-label" for="basketEmail">E-mail
+                                <span class="required-star">*</span>
+                            </label>
+                        </div>
+
+
+                        <div class="input-container">
+                            <input class="input-field" type="text" name="receiver" value="" id="basketYourName"
+                                   placeholder=" " required="" autocomplete="new">
+                            <label class="input-label" for="basketYourName">Имя Фамилия
+                                <span class="required-star">*</span>
+                            </label>
+                        </div>
+                        <div class="input-container">
+                            <input class="input-field" type="text" name="phone" value="" id="basketPhone"
+                                   placeholder=" " required="" autocomplete="new">
+                            <label class="input-label" for="basketPhone">Телефон
+                                <span class="required-star">*</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="fieldset">
+                        <!--fieldset legend-->
+                        <legend class="fieldset__legend">Доставка <span style="padding-left: 10px; font-style: italic">(Выберите город в начале)</span>
+                        </legend>
+
+                        <input type="hidden" name="index" value="101000" id="index">
+                        <input type="hidden" name="country_code" value="">
+                        <input type="hidden" name="federal" id="federal" value="">
+                        <!--input type="hidden" name="region" id="region" value="" /-->
+
+                        <input type="hidden" name="entrance" value="">
+
+                        <div class="input-container">
+                            <input class="input-field suggestions suggestions-input" type="text" name="city"
+                                   value="Москва" id="basketCity" placeholder=" " required="" autocomplete="off"
+                                   autocorrect="off" autocapitalize="off" spellcheck="false"
+                                   style="box-sizing: border-box;">
+                            <div class="suggestions-wrapper">
+                                <div class="suggestions-suggestions" style="display: none;"></div>
+                            </div>
+                            <label class="input-label" for="basketCity">Город <span
+                                    class="required-star">*</span></label>
+                        </div>
+
+                        <div class="grid-col-2 grid-col-sm-1 gap fx-hidden-poles">
+                            <div class="input-container">
+                                <input class="input-field" type="text" name="region" value="Москва" id="basketRegion"
+                                       placeholder=" " required="" autocomplete="new">
+                                <label class="input-label" for="basketRegion">Регион</label>
+                            </div>
+                            <div class="input-container">
+                                <input class="input-field" type="text" name="country" value="Россия" id="basketCountry"
+                                       placeholder=" " required="" autocomplete="new">
+                                <label class="input-label" for="basketCountry">Страна</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset fx-hidden-poles" id="deliveries">
+                        <label class="radio delivery" style="">
+                            <input class="radio__input" type="radio" name="delivery" value="2" id="delivery_2"
+                                   data-payments="[1,2,3]">
+                            <span class="radio__control"></span>
+                            <span class="radio__label">Курьерская служба – 2-5 рабочих дней</span>
+                            <span class="radio-checkbox-info">
+                                <span>
+                                    Вы можете примерить покупки и купить только
+                                    то, что понравится. Эта опция доступна при
+                                    оплате курьеру. Когда заказ будет передан в
+                                    курьерскую службу, мы пришлем вам СМС со
+                                    ссылкой — по ней вы сможете изменить день или
+                                    выбрать удобное время доставки. <a href="">Подробнее</a>
+                                </span>
+                            </span>
+                        </label>
+                        <label class="radio delivery" style="">
+                            <input class="radio__input" type="radio" name="delivery" value="3" id="delivery_3"
+                                   data-payments="[1,2,3]">
+                            <span class="radio__control"></span>
+                            <span class="radio__label">Пункты выдачи СДЭК – Зависит от страны и региона. <u>Выбрать на карте</u></span>
+                            <span class="radio-checkbox-info">
+                                <span>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    A animi aspernatur autem cumque doloremque eligendi et eveniet,
+                                    ex hic ipsum iste minus mollitia nam nisi pariatur qui
+                                    quibusdam sapiente suscipit!
+                                </span>
+                            </span>
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="fieldset fx-hidden-poles">
+                        <!--fieldset legend-->
+                        <legend class="fieldset__legend">Адрес доставки</legend>
+
+                        <div class="grid-col-4 grid-col-sm-1 gap">
+                            <div class="input-container">
+                                <input class="input-field" type="text" name="street" value="" id="basketstreet"
+                                       placeholder=" " autocomplete="new" autocorrect="new">
+                                <label class="input-label" for="basketstreet">Улица <span class="required-star">*</span>
+                                </label>
+                            </div>
+                            <div class="input-container">
+                                <input class="input-field" type="text" name="building" value="" id="basketbuilding"
+                                       placeholder=" " autocomplete="new" autocorrect="new">
+                                <label class="input-label" for="basketbuilding">Дом <span class="required-star">*</span>
+                                </label>
+                            </div>
+                            <div class="input-container">
+                                <input class="input-field" type="text" name="corpus" value="" id="basketcorpus"
+                                       placeholder=" " autocomplete="new" autocorrect="new">
+                                <label class="input-label" for="basketcorpus">Корпус <span
+                                        class="required-star">*</span>
+                                </label>
+                            </div>
+                            <div class="input-container">
+                                <input class="input-field" type="text" name="room" value="" id="basketroom"
+                                       placeholder=" " autocomplete="new" autocorrect="new">
+                                <label class="input-label" for="basketroom">Квартира <span
+                                        class="required-star">*</span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <textarea class="textarea" id="comment" name="comment" rows="5" cols="33"
+                                  placeholder="Комментарий для курьера"></textarea>
+                    </fieldset>
+
+
+                    <fieldset class="fieldset fx-hidden-poles" id="payments">
+                        <!--fieldset legend-->
+                        <legend class="fieldset__legend">Способ оплаты</legend>
+
+
+                        <label class="radio" for="payment_2">
+                            <input class="radio__input" type="radio" name="payment" value="2" id="payment_2" checked="">
+                            <span class="radio__control"></span>
+                            <span class="radio__label">Онлайн на сайте банковской картой</span>
+
+                        </label>
+
+                        <label class="radio" for="payment_3">
+                            <input class="radio__input" type="radio" name="payment" value="3" id="payment_3">
+                            <span class="radio__control"></span>
+                            <span class="radio__label">СБП (через приложение банка)</span>
+
+                        </label>
+
+                        <label class="radio" for="payment_1">
+                            <input class="radio__input" type="radio" name="payment" value="1" id="payment_1">
+                            <span class="radio__control"></span>
+                            <span class="radio__label">Оплата при получении (доступна для заказов не более 4 изделий) <span
+                                    class="fx-payment-more" style="display: none;">В вашем заказе более 4 изделий</span></span>
+
+                        </label>
+
+
+                    </fieldset>
+
+                    <div class="hidden">
+                        <button class="button button_gray" type="submit" name="ms2_action" value="order/submit">
+                            <span class="uppercase">Оплатить заказ</span>
+                        </button>
+                    </div>
+                </form>
+
             </div>
             <div class="basket-summary fx-empty-cart-hide ">
                 <form class="input-container fx-promo-exist ">
@@ -729,6 +1100,18 @@
                     конфидециальности</a>.
                 </p>
             </div>
+
+            <div class="basket-control-mobile">
+                <button class="button button_gray fx-trigger-form-order" type="submit" name="ms2_action"
+                        value="order/submit">
+                    <span class="uppercase">Оформить заказ</span>
+                </button>
+            </div>
+            <p class="basket-summary__agreements basket-summary__agreements_mobile">
+                Нажимая на кнопку, я принимаю условия <a title="Публичная оферта" href="https://theayris.ru/">публичной
+                оферты</a> и <a title="Политика конфиденциальности" href="https://theayris.ru/">политики
+                конфидециальности</a>.
+            </p>
         </section>
     </div>
 
@@ -964,8 +1347,6 @@
 <div id="svg-icons" style="display: none;">
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
          xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-
-
     </svg>
 </div>
 <script src="../files/js/libs/jquery-3.4.1.min.js"></script>
@@ -974,6 +1355,7 @@
 <script src="../files/js/modules/menu.js"></script>
 <script src="../files/js/modules/slider.js"></script>
 <script src="../files/js/modules/sidebar.js"></script>
+<script src="../files/js/modules/basket-list-open.js"></script>
 
 
 <script>

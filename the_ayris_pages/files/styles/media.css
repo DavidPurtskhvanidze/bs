@@ -415,6 +415,7 @@
     /*Basket*/
     .basket-wrapper {
         grid-template-columns: 1fr;
+        gap: unset;
     }
     .basket-summary {
         justify-self: start;
@@ -442,6 +443,29 @@
         padding-inline-start: 0;
         width: auto;
         justify-content: flex-end;
+    }
+    .basket-card-list-open {
+        display: flex;
+    }
+    .basket-card-list {
+        overflow: hidden;
+        height: 0;
+        transition: height 0.4s ease;
+    }
+    .basket-card-list .card-horizontal:first-child {
+        margin-top: 24px;
+    }
+    .basket-control-mobile {
+        display: block;
+    }
+    .basket-summary__agreements_mobile {
+        display: block;
+    }
+    .basket-summary button.button {
+        display: none;
+    }
+    .basket-summary .basket-summary__agreements {
+        display: none;
     }
     /*Basket*/
 
