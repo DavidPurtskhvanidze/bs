@@ -113,10 +113,10 @@
     display: none;
     align-items: center;
     justify-content: space-between;
-    width: calc(100% + 40px);
+    width: calc(100% + 32px);
     height: 52px;
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: -16px;
+    margin-right: -16px;
     background-color: rgba(63, 140, 101, 0.16);
     border-top: 1px solid var(--color-dark-3);
     border-bottom: 1px solid var(--color-dark-3);
