@@ -608,7 +608,27 @@
         display: flex;
     }
     .cart-sidebar-card_list {
-        max-height: 60vh;
+        max-height: 100%;
+    }
+    .card-horizontal__info-count {
+        display: none;
+    }
+    .card-horizontal__info-bottom .input-count {
+        display: flex;
+    }
+    .card-horizontal__info-price {
+        display: flex;
+    }
+    .card-horizontal__info-bottom {
+        align-items: flex-end;
+    }
+    .card-horizontal__info-item {
+        color: var(--color-gray-1);
+    }
+    .cart-sidebar-control {
+        position: sticky;
+        bottom: -10px;
+        background-color: var(--color-main-bg);
     }
     /*Cart preorder*/
 
