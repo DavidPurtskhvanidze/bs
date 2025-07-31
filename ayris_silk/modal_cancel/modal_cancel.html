@@ -352,10 +352,10 @@
     </h4>
     <form action="">
         <div class="input-group group-2">
-            <input type="text" name="name" placeholder="Имя">
-            <input type="text" name="surname" placeholder="Фамилия">
+            <input type="text" name="name" placeholder="Имя *" required>
+            <input type="text" name="surname" placeholder="Фамилия *" required>
             <input type="text" name="phone" placeholder="Телефон">
-            <input type="email" name="email" placeholder="E-mail">
+            <input type="email" name="email" placeholder="E-mail *" required>
             <input type="text" name="birthdate" placeholder="Дата рождения">
         </div>
         <div class="input-group">
@@ -380,6 +380,9 @@
                 </span>
                 </label>
             </div>
+        </div>
+        <div class="cancel-data-footnote">
+            * обязательные поля для заполнения
         </div>
         <div class="cancel-data-button-wrapper">
             <button type="submit" class="btn btn-brown">

@@ -6432,19 +6432,20 @@ skr = skrollr.init()
           <div class="form-row">
             <div class="col-12 col-md-6">
               <div class="input">
-                <input type="text" name="name" placeholder="Введите свое имя *" required="">
+                <input type="text" name="name" placeholder="Введите свое имя *" required>
                 <span class="error_name"></span>
               </div>
             </div>
             <div class="col-12 col-md-6">
               <div class="input">
-                <input type="text" name="surname" placeholder="Введите свою фамилию *" required="">
+                <input type="text" name="surname" placeholder="Введите свою фамилию *" required>
                 <span class="error_surname"></span>
               </div>
             </div>
             <div class="col-12 col-md-6">
               <div class="input">
-                <input type="tel" name="phone" placeholder="Ваш телефон">
+                <!-- Тут нужно реализовать валидацию/маску телефонного номера как уже реализовано на сайте-->
+                <input type="tel" name="phone" placeholder="+7">
                 <span class="error_phone"></span>
               </div>
             </div>
@@ -6462,7 +6463,7 @@ skr = skrollr.init()
             </div>
             <div class="col-12">
               <div class="input">
-                <input class="comment" type="text" name="comment" placeholder="Тут можно оставить комментарий">
+                <textarea class="comment" name="comment" rows="1" placeholder="Тут можно оставить комментарий"></textarea>
               </div>
             </div>
             <div class="col-12">
@@ -6488,6 +6489,9 @@ skr = skrollr.init()
                 </label>
                 <span class="error_agree"></span>
               </div>
+            </div>
+            <div class="input-text">
+              * обязательные поля для заполнения
             </div>
             <div class="btn_button_1">
               <button type="submit" class="submit">
