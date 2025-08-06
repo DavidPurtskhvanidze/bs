@@ -788,6 +788,10 @@ section.post-additional-info {
 }
 /*New SEO post*/
 
+p[id] {
+    color: tomato;
+}
+
 @media (min-width: 1921px)  {
     .post-page-wrapper {
         justify-content: center;
