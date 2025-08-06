@@ -108,8 +108,8 @@
 
 /*post-sidebar*/
 .post-sidebar {
-    width: 100%;
-    max-width: 475px;
+    width: 24%;
+    max-width: 24%;
     padding-left: clamp(10px, calc(20/1920*100vw), 20px);
 }
 .post-sidebar ul {
@@ -439,6 +439,7 @@
     padding: clamp(16px, calc(34 / 1920 * 100vw), 34px) 0;
     border-top: 1px solid #F5F5F5;
     border-bottom: 1px solid #F5F5F5;
+    width: 100%;
 }
 .post-big-title svg {
     width: clamp(0px, calc(192 / 1920 * 100vw), 192px);
@@ -797,11 +798,11 @@ p[id] {
         justify-content: center;
     }
 }
-@media screen and (max-width: 1440px) {
-    .post-sidebar {
-        max-width: 360px;
-    }
-}
+/*@media screen and (max-width: 1440px) {*/
+/*    .post-sidebar {*/
+/*        max-width: 360px;*/
+/*    }*/
+/*}*/
 
 @media screen and (max-width: 1223px) {
     .post-sidebar {
