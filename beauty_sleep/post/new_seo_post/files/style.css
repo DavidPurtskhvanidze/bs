@@ -71,7 +71,7 @@
     text-fill-color: transparent;
 }
 .post-page-with-sidebar.post-page-wrapper .post-container {
-    padding-top: clamp(0px, calc(96/1920*100vw), 96px);
+    padding-top: clamp(0px, calc(64/1920*100vw), 64px);
 }
 .post-page-wrapper .post-container ul {
     font-weight: 300;
@@ -118,11 +118,12 @@
 .post-sidebar-menu {
     position: relative;
     padding-left: 32px;
-    margin: 0;
     display: flex;
     flex-direction: column;
     gap: clamp(24px, calc(32/1920*100vw), 32px);
-    margin-top: clamp(0px, calc(96/1920*100vw), 96px);
+    margin-top: clamp(0px, calc(64/1920*100vw), 64px);
+    overflow: hidden;
+    padding-bottom: 16px;
 }
 .post-sidebar-content {
     width: 100%;
