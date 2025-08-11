@@ -10,7 +10,7 @@
     top: 0;
     right: 0;
     left: 0;
-    /*background-color: var(--color-menu-bg);*/
+    background-color: var(--color-menu-bg);
     transition: background-color .3s ease;
     color: var(--color-dark-3);
     border-bottom: var(--header-border-width) solid transparent;
@@ -26,17 +26,29 @@
 .header_transparent svg *[stroke] {
     stroke: var(--color-light-1);
 }
-.header_transparent:hover svg *[stroke],
 .header_color-active svg *[stroke] {
     stroke: var(--color-dark-2);
 }
-.header:hover,
-.header_transparent:hover,
 .header_color-active {
     background-color: var(--color-menu-bg);
     color: var(--color-dark-2);
     border-bottom-color: var(--color-dark-3);
 }
+
+/*Disable hover for mobile*/
+@media (hover: hover) and (pointer: fine) {
+    .header:hover,
+    .header_transparent:hover {
+        background-color: var(--color-menu-bg);
+        color: var(--color-dark-2);
+        border-bottom-color: var(--color-dark-3);
+    }
+    .header_transparent:hover svg *[stroke] {
+        stroke: var(--color-dark-2);
+    }
+}
+/*Disable hover for mobile*/
+
 body.no-scroll .header {
     background-color: var(--color-menu-bg);
     color: var(--color-dark-2);

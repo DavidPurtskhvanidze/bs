@@ -70,6 +70,13 @@
     }
 
     /*Header*/
+    .header.header_transparent {
+        border-bottom-color: transparent;
+    }
+    .header,
+    .header.header_color-active {
+        border-bottom-color: var(--color-dark-3);
+    }
     .header-burger-button {
         display: flex;
         align-items: center;
@@ -85,14 +92,14 @@
         display: none;
     }
     .header-menu-wrapper {
-        position: absolute;
+        position: fixed;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        top: calc(100% + var(--header-border-width));
+        top: var(--header-height);
         right: 100%;
+        bottom: 0;
         width: calc(100% - 10px);
-        height: calc(100vh - var(--header-height));
         overflow: auto;
         background-color: var(--color-menu-bg);
         color: var(--color-dark-2);
