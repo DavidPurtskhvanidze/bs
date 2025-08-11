@@ -55,7 +55,7 @@
 /*Tablet MD*/
 @media (max-width: 1023px) {
     :root {
-        --header-height: 50px;
+        --header-height: 54px;
         --header-paddin-inline: 20px;
 
         --menu-drop-lists-padding: 0;
@@ -91,7 +91,7 @@
         justify-content: space-between;
         top: calc(100% + var(--header-border-width));
         right: 100%;
-        width: 100%;
+        width: calc(100% - 10px);
         height: calc(100vh - var(--header-height));
         overflow: auto;
         background-color: var(--color-menu-bg);
@@ -141,6 +141,7 @@
         height: var(--header-height);
         text-transform: uppercase;
         color: var(--color-dark-3);
+        letter-spacing: 0.12em;
     }
     .header-menu-mobile-copy {
         display: flex;
