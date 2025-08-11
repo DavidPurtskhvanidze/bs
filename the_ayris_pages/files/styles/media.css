@@ -55,7 +55,7 @@
 /*Tablet MD*/
 @media (max-width: 1023px) {
     :root {
-        --header-height: 54px;
+        --header-height: 50px;
         --header-paddin-inline: 20px;
 
         --menu-drop-lists-padding: 0;
@@ -116,7 +116,7 @@
         height: 1px;
         background-color: var(--color-dark-2);
         position: absolute;
-        top: 44px;
+        top: 39px;
         right: 0;
         left: 0;
         display: block;

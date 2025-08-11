@@ -37,6 +37,14 @@
     color: var(--color-dark-2);
     border-bottom-color: var(--color-dark-3);
 }
+body.no-scroll .header {
+    background-color: var(--color-menu-bg);
+    color: var(--color-dark-2);
+    border-bottom-color: var(--color-dark-3);
+}
+body.no-scroll .header svg *[stroke] {
+    stroke: var(--color-dark-2);
+}
 
 
 .header-burger-button {
@@ -72,7 +80,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: transparent;
-    min-height: 45px;
+    height: 40px;
     width: 100%;
     margin-bottom: 22px;
     position: relative;
@@ -86,7 +94,7 @@
 .header-menu__mobile-button {
     border: none;
     background-color: transparent;
-    min-height: 45px;
+    height: 40px;
     padding: 0;
     text-align: start;
     position: relative;

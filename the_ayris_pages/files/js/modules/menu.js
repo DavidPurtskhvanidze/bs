@@ -18,7 +18,6 @@ const closeMenuButton = document.getElementById('closeMenuButton');
 hamburgerButton.addEventListener('click', () => {
     headerMenu.classList.toggle('open');
     document.body.classList.toggle('no-scroll');
-    header.classList.add('header_color-active');
 });
 closeMenuButton.addEventListener('click', () => {
     headerMenu.classList.remove('open');
