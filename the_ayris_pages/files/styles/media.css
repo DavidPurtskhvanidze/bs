@@ -100,6 +100,7 @@
     }
     .header-menu-wrapper.open {
         transform: translateX(100%);
+        box-shadow: 10px 0 0 0 rgba(0, 0, 0, 0.1);
     }
     .header-menu {
         display: flex;
@@ -489,7 +490,7 @@
 
     /*Footer*/
     .footer {
-        padding: 35px var(--footer-padding) 100px;
+        padding: 35px var(--footer-padding) var(--footer-padding);
     }
     .footer-main__list {
         gap: 7px;

@@ -73,6 +73,9 @@
 .justify-content-center {
     justify-content: center;
 }
+.no-scroll {
+    overflow: hidden;
+}
 
 /*Desktop XL*/
 @media (max-width: 1440px) {
