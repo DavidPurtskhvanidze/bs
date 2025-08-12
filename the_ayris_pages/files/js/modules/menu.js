@@ -17,11 +17,11 @@ const headerMenu = document.getElementById('headerMenu');
 const closeMenuButton = document.getElementById('closeMenuButton');
 hamburgerButton.addEventListener('click', () => {
     headerMenu.classList.toggle('open');
-    document.body.classList.toggle('no-scroll');
+    document.body.classList.toggle('mobile-menu-open');
 });
 closeMenuButton.addEventListener('click', () => {
     headerMenu.classList.remove('open');
-    document.body.classList.remove('no-scroll');
+    document.body.classList.remove('mobile-menu-open');
 });
 
 

@@ -49,12 +49,21 @@
 }
 /*Disable hover for mobile*/
 
-body.no-scroll .header {
+body.mobile-menu-open {
+    overflow: hidden;
+}
+body.mobile-menu-open .header-burger-button {
+    display: none;
+}
+body.mobile-menu-open .header-menu__item_user_mobile {
+    display: none;
+}
+body.mobile-menu-open .header {
     background-color: var(--color-menu-bg);
     color: var(--color-dark-2);
     border-bottom-color: var(--color-dark-3);
 }
-body.no-scroll .header svg *[stroke] {
+body.mobile-menu-open .header svg *[stroke] {
     stroke: var(--color-dark-2);
 }
 
