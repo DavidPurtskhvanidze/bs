@@ -52,8 +52,8 @@
     --menu-drop-lists-padding: 60px;
 
     --baner-height: 900px;
-    --page-banner-padding-block: 60px;
-    --page-banner-padding-inline: 60px;
+    --page-banner-padding-block: clamp(20px, calc(50 / var(--clamp-width) * 100vw), 50px);
+    --page-banner-padding-inline: clamp(10px, calc(50 / var(--clamp-width) * 100vw), 50px);
 
     --input-height: 52px;
     --input-inline-padding: 20px;
@@ -71,9 +71,10 @@
 
     --swiper-theme-color: var(--color-accent);
     --swiper-navigation-color: var(--color-gray-1);
-    --swiper-navigation-sides-offset: 60px;
-    --swiper-button-next-prev-width: 17px;
-    --swiper-button-next-prev-height: 29px;
+    --swiper-navigation-sides-offset: 16px;
+    --swiper-button-next-prev-width: 13px;
+    --swiper-button-next-prev-height: 22px;
+    --swiper-navigation-top-offset: 40%;
 
     --card-colors-padding: clamp(12px, calc(22/var(--clamp-width)*100vw), 22px);
     --card-title-font-size: clamp(12px, calc(14/var(--clamp-width)*100vw), 14px);

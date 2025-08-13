@@ -39,3 +39,33 @@ p:where(:not([class])) {
     font-size: clamp(14px, calc(16/var(--clamp-width)*100vw), 16px);
 }
 /*Common Typography*/
+
+
+/*Fancy*/
+.fancybox__nav .f-button svg {
+    display: none;
+}
+.fancybox__nav .f-button:hover {
+    background-color: transparent;
+}
+.fancybox__nav .f-button.is-next:after {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='42' viewBox='0 0 25 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_289_10708)'%3E%3Cpath d='M24.3335 19.5402C24.5427 19.717 24.7105 19.9362 24.8256 20.1827C24.9406 20.4293 25.0002 20.6974 25.0002 20.9686C25.0002 21.2399 24.9406 21.508 24.8256 21.7545C24.7105 22.001 24.5427 22.2202 24.3335 22.3971L0.968437 41.875C0.968437 41.9582 0.883786 41.9999 0.709183 41.9999C0.601296 41.9912 0.497038 41.9574 0.40504 41.9013C0.313042 41.8452 0.235943 41.7684 0.180082 41.6772C0.0980663 41.6064 0.0403125 41.5124 0.014738 41.4081C-0.0108365 41.3037 -0.00299099 41.1942 0.0372145 41.0944L16.1431 21.1013L0.0425106 0.842865C-0.0421455 0.671139 0.0425132 0.452578 0.375847 0.197591C0.70918 -0.0573959 0.904945 -0.0625997 0.968437 0.197591L24.3335 19.5402Z' fill='%233F8C65'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_289_10708'%3E%3Crect width='25' height='42' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: clamp(17px, calc(25/var(--clamp-width)*100vw), 25px);
+    height: clamp(29px, calc(42/var(--clamp-width)*100vw), 42px);
+    display: block;
+}
+.fancybox__nav .f-button.is-prev:after {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='42' viewBox='0 0 25 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.666464 22.4642C0.457317 22.2874 0.289503 22.0682 0.174436 21.8216C0.0593718 21.5751 -0.000207999 21.307 -0.000207976 21.0358C-0.000207952 20.7645 0.0593719 20.4964 0.174437 20.2499C0.289503 20.0034 0.457317 19.7842 0.666464 19.6073L24.0316 0.129436C24.0316 0.046173 24.1162 0.00454323 24.2908 0.00454324C24.3987 0.0132064 24.503 0.0469818 24.595 0.103081C24.687 0.15918 24.7641 0.235992 24.8199 0.327183C24.9019 0.397984 24.9597 0.491993 24.9853 0.596333C25.0108 0.700668 25.003 0.81023 24.9628 0.910007L8.85693 20.9031L24.9575 41.1615C25.0421 41.3333 24.9575 41.5518 24.6242 41.8068C24.2908 42.0618 24.0951 42.067 24.0316 41.8068L0.666464 22.4642Z' fill='%233F8C65'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: clamp(17px, calc(25/var(--clamp-width)*100vw), 25px);
+    height: clamp(29px, calc(42/var(--clamp-width)*100vw), 42px);
+    display: block;
+}
+/*Fancy*/

@@ -1,7 +1,7 @@
 const newItemsSlider = new Swiper('#newItemsSlider', {
     speed: 300,
     spaceBetween: 5,
-    slidesPerView: 1.3,
+    slidesPerView: 1.5,
     centeredSlides: true,
     navigation: {
         nextEl: '#newItemsSlider .swiper-button-next',
@@ -25,7 +25,7 @@ const newItemsSlider = new Swiper('#newItemsSlider', {
 const newItemsMainPageSlider = new Swiper('#newItemsMainPageSlider', {
     speed: 300,
     spaceBetween: 5,
-    slidesPerView: 1.3,
+    slidesPerView: 1.5,
     centeredSlides: true,
     navigation: {
         nextEl: '#newItemsMainPageSlider .swiper-button-next',
@@ -54,7 +54,7 @@ const newItemsMainPageSlider = new Swiper('#newItemsMainPageSlider', {
 const bestsellersSlider = new Swiper('#bestsellersSlider', {
     speed: 300,
     spaceBetween: 5,
-    slidesPerView: 1.3,
+    slidesPerView: 1.5,
     centeredSlides: true,
     navigation: {
         nextEl: '#bestsellersSlider .swiper-button-next',
@@ -159,7 +159,7 @@ const cartSuggestionsSlider = new Swiper('#cartSuggestionsSlider', {
 const cardsButtonBlockSlider = new Swiper('#cardsButtonBlockSlider', {
     speed: 300,
     spaceBetween: 5,
-    slidesPerView: 1.3,
+    slidesPerView: 1.5,
     centeredSlides: true,
     navigation: {
         nextEl: '#cardsButtonBlockSlider .swiper-button-next',

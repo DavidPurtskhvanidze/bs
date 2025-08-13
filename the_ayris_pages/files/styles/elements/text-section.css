@@ -38,6 +38,7 @@
     font-size: clamp(22px, calc(38/var(--clamp-width)*100vw), 38px);
     margin-bottom: clamp(58px, calc(86/var(--clamp-width)*100vw), 86px);
     letter-spacing: 0.01em;
+    line-height: 1.1;
 }
 .text-section-descriptor_main-page {
     font-size: clamp(17px, calc(28/var(--clamp-width)*100vw), 20px);

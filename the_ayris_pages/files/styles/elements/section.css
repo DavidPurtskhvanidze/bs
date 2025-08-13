@@ -1,5 +1,5 @@
 .section-title {
-    font-size: clamp(15px, calc(22/var(--clamp-width)*100vw), 22px);
+    font-size: clamp(17px, calc(22/var(--clamp-width)*100vw), 22px);
     padding-block: clamp(25px, calc(45/var(--clamp-width)*100vw), 45px);
     text-align: center;
     letter-spacing: 0.1em;

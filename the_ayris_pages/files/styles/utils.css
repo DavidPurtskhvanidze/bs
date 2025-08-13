@@ -73,6 +73,12 @@
 .justify-content-center {
     justify-content: center;
 }
+.br-desk {
+    display: inline-block;
+}
+.br-mob {
+    display: none;
+}
 
 /*Desktop XL*/
 @media (max-width: 1440px) {
@@ -159,6 +165,12 @@
     }
     .order-2-sm {
         order: 2;
+    }
+    .br-desk {
+        display: none;
+    }
+    .br-mob {
+        display: inline-block;
     }
 }
 

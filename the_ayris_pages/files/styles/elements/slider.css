@@ -17,3 +17,8 @@
     width: var(--swiper-button-next-prev-width);
     height: var(--swiper-button-next-prev-height);
 }
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
+}
+
