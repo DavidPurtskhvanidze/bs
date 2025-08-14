@@ -43,7 +43,7 @@
     border-bottom: 0.5px solid var(--color-dark-3);
 }
 .basket-summary-list__item-title {
-    font-size: 16px;
+    font-size: clamp(15px, calc(16/var(--clamp-width)*100vw), 16px);
     line-height: 1;
     color: var(--color-dark-3);
     flex: 1;
@@ -51,17 +51,19 @@
 .basket-summary-list__item-value {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 0.2em;
+    font-size: clamp(15px, calc(16/var(--clamp-width)*100vw), 16px);
 }
 .basket-summary-price {
     position: relative;
-    font-size: 16px;
+    font-size: clamp(15px, calc(16/var(--clamp-width)*100vw), 16px);
     line-height: 1;
     letter-spacing: -0.03em;
     color: var(--color-dark-3);
 }
 .basket-summary-price_old {
     color: var(--color-gray-1);
+    margin-right: 20px;
 }
 .basket-summary-price_old:before {
     content: "";

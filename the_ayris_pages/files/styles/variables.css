@@ -56,7 +56,7 @@
     --page-banner-padding-inline: clamp(10px, calc(50 / var(--clamp-width) * 100vw), 50px);
 
     --input-height: 52px;
-    --input-inline-padding: 20px;
+    --input-inline-padding: clamp(10px, calc(20/var(--clamp-width)*100vw), 20px);
 
     --checkbox-width: 18px;
     --radio-width: 18px;
