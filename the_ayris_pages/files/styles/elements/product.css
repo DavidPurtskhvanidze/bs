@@ -324,9 +324,9 @@
 }
 /*Product popup*/
 
-/*.product-section {*/
-/*    --swiper-navigation-top-offset: 50%;*/
-/*}*/
+.product-section {
+    --swiper-navigation-top-offset: calc(50% - 22px);
+}
 
 /*Swiper slider desktop disabled*/
 @media (min-width: 767px) {
