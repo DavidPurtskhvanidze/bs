@@ -425,3 +425,30 @@ fieldset.input-container_invalid {
 }
 /*marquee-wrap */
 
+.catalog-filter-inline-list-wrapper label[title="XXS"]{
+    order:10;
+}
+.catalog-filter-inline-list-wrapper label[title="XS"]{
+    order:20;
+}
+.catalog-filter-inline-list-wrapper label[title="S"]{
+    order:30;
+}
+.catalog-filter-inline-list-wrapper label[title="S/M"]{
+    order:40;
+}
+.catalog-filter-inline-list-wrapper label[title="M"]{
+    order:50;
+}
+.catalog-filter-inline-list-wrapper label[title="L"]{
+    order:60;
+}
+.catalog-filter-inline-list-wrapper label[title="L/XL"]{
+    order:70;
+}
+.catalog-filter-inline-list-wrapper label[title="XL"]{
+    order:80;
+}
+.catalog-filter-inline-list-wrapper label[title="XXL"]{
+    order:90;
+}

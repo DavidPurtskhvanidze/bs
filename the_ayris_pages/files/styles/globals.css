@@ -42,6 +42,10 @@ p:where(:not([class])) {
 
 
 /*Fancy*/
+.fancybox__nav {
+    --f-button-width: 10px;
+    --f-button-height: 44px;
+}
 .fancybox__nav .f-button svg {
     display: none;
 }
@@ -54,8 +58,8 @@ p:where(:not([class])) {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    width: clamp(17px, calc(25/var(--clamp-width)*100vw), 25px);
-    height: clamp(29px, calc(42/var(--clamp-width)*100vw), 42px);
+    width: var(--swiper-button-next-prev-width);
+    height: var(--swiper-button-next-prev-height);
     display: block;
 }
 .fancybox__nav .f-button.is-prev:after {
@@ -64,8 +68,28 @@ p:where(:not([class])) {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    width: clamp(17px, calc(25/var(--clamp-width)*100vw), 25px);
-    height: clamp(29px, calc(42/var(--clamp-width)*100vw), 42px);
+    width: var(--swiper-button-next-prev-width);
+    height: var(--swiper-button-next-prev-height);
     display: block;
+}
+.fancybox__content>.f-button.is-close-btn {
+    background-color: transparent;
+}
+.fancybox__content>.f-button.is-close-btn svg {
+    display: none;
+}
+.fancybox__content>.f-button.is-close-btn:after {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg width='35' height='35' viewBox='0 0 35 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='17.5' cy='17.5' r='17' stroke='%2332312F'/%3E%3Cpath d='M24.5 10.5L10.4998 24.5002' stroke='%2332312F'/%3E%3Cpath d='M24.5 24.5005L10.4998 10.5003' stroke='%2332312F'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: clamp(16px, calc(18/var(--clamp-width)*100vw), 18px);
+    height: clamp(16px, calc(18/var(--clamp-width)*100vw), 18px);
+    display: block;
+}
+.fancybox__content>.f-button.is-close-btn {
+    top: 5px;
+    right: 5px;
 }
 /*Fancy*/

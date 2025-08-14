@@ -36,11 +36,11 @@
     align-items: center;
     justify-content: space-between;
     height: 52px;
-    border-top: 1px solid var(--color-dark-3);
+    border-top: 0.5px solid var(--color-dark-3);
     gap: 6px;
 }
 .basket-summary-list__item:last-child {
-    border-bottom: 1px solid var(--color-dark-3);
+    border-bottom: 0.5px solid var(--color-dark-3);
 }
 .basket-summary-list__item-title {
     font-size: 16px;
@@ -118,8 +118,8 @@
     margin-left: -16px;
     margin-right: -16px;
     background-color: rgba(63, 140, 101, 0.16);
-    border-top: 1px solid var(--color-dark-3);
-    border-bottom: 1px solid var(--color-dark-3);
+    border-top: 0.5px solid var(--color-dark-3);
+    border-bottom:0.5px solid var(--color-dark-3);
     padding: 0 20px;
     cursor: pointer;
 }
@@ -135,4 +135,7 @@
     line-height: 1.2;
     letter-spacing: -0.03em;
     color: var(--color-dark-3);
+}
+.basket-card-list .input-count {
+    border: 0.65px solid var(--color-gray-1);
 }

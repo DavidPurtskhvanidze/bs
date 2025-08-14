@@ -49,6 +49,7 @@
     line-height: 1.2;
     letter-spacing: 0.05em;
     color: var(--color-dark-3);
+    min-height: 100px;
 }
 .tabs__body-content.active {
     display: block;

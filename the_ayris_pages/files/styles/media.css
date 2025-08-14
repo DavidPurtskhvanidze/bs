@@ -402,11 +402,11 @@
     /*Product card*/
     .product-picture-full-img-link {
         top: auto;
-        right: 10px;
+        right: 16px;
         bottom: 10%;
         left: auto;
-        width: 24px;
-        height: 24px;
+        width: 38px;
+        height: 38px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -418,8 +418,8 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        width: 24px;
-        height: 24px;
+        width: 38px;
+        height: 38px;
         position: absolute;
     }
     .product-pictures-wrapper .swiper-button-prev,
@@ -440,6 +440,30 @@
     .product-pictures-wrapper {
         --swiper-pagination-bottom: 18px;
         --swiper-pagination-color: var(--color-gray-1);
+    }
+    .product-color .color-radio__control {
+        width: 15px;
+        height: 15px;
+    }
+    .product-color .color-radio .color-radio__input:checked ~ .color-radio__control:after,
+    .product-color .color-radio input:checked ~ .color-radio__control:after {
+        width: 15px;
+        height: 15px;
+    }
+    .product-color {
+        gap: 20px;
+    }
+    .product-size {
+        gap: 5px;
+    }
+    .product-info .bread-crumbs {
+        display: none;
+    }
+    .product-button-wrapper {
+        display: none;
+    }
+    .product-mobile-button-wrapper {
+        display: block;
     }
     /*Product card*/
 
@@ -527,6 +551,11 @@
     .footer-main__section-form {
         padding-top: 35px;
     }
+    .footer-logo svg path {
+        stroke: var(--color-dark-3) !important;
+        color: var(--color-dark-3) !important;
+        fill: var(--color-dark-3) !important;
+    }
     /*Footer*/
 }
 
@@ -537,6 +566,7 @@
         --swiper-button-next-prev-width: 9px;
         --swiper-button-next-prev-height: 15px;
         --swiper-navigation-sides-offset: 2px;
+        /*--swiper-navigation-top-offset: 35%;*/
     }
 
     /*Header*/
@@ -635,9 +665,6 @@
     .product-info {
         height: auto;
         padding: 20px 10px 0;
-    }
-    .product-info .bread-crumbs {
-        display: none;
     }
 
     /*Cart preorder*/
@@ -770,7 +797,7 @@
         --checkbox-width: 15px;
     }
     .checkbox__big-control {
-        --checkbox-big-width: 28px;
+        --checkbox-big-width: 33px;
     }
     .checkbox__label {
         font-size: 12px;

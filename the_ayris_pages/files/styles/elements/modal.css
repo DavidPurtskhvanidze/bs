@@ -88,6 +88,7 @@
 .is-compact .modal>.f-button.is-close-btn {
     top: 15px;
     right: 15px;
+    border: none;
     --f-button-color: var(--color-dark-2);
     --f-button-hover-color: var(--color-gray-1);
     --f-button-svg-width: 10px;

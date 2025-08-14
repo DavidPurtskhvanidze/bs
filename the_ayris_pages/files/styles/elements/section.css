@@ -7,7 +7,7 @@
     color: var(--color-dark-3);
 }
 .section-title_border-top {
-    border-top: 1px solid var(--color-dark-3);
+    border-top: 0.5px solid var(--color-dark-3);
 }
 .section-button-wrapper {
     padding-block: clamp(28px, calc(45/var(--clamp-width)*100vw), 45px);

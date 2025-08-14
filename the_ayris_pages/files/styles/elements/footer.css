@@ -3,7 +3,7 @@
     flex-direction: column;
     padding: var(--footer-padding) var(--footer-padding) 38px;
     background-color: var(--color-menu-bg);
-    border-top: 1px solid var(--color-dark-3);
+    border-top: 0.5px solid var(--color-dark-3);
 }
 .footer-main {
     display: flex;

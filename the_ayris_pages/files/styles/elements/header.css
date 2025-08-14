@@ -10,7 +10,7 @@
     top: 0;
     right: 0;
     left: 0;
-    background-color: var(--color-menu-bg);
+    /*background-color: var(--color-menu-bg);*/
     transition: background-color .3s ease;
     color: var(--color-dark-3);
     border-bottom: var(--header-border-width) solid transparent;
