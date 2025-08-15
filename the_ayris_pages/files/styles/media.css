@@ -128,7 +128,35 @@
     .bread-crumbs-full-width {
         height: clamp(40px, calc(55 / var(--clamp-width) * 100vw), 55px);
     }
+    .bread-crumbs__list-item {
+        font-size: 11px;
+    }
+    .bread-crumbs__list-item:before {
+        font-size: 10px;
+    }
     /*Bread crumbs*/
+
+    /*Product*/
+    .product-info-body {
+        gap: clamp(18px, calc(23 / var(--clamp-width) * 100vw), 23px);
+    }
+    .product-title {
+        font-size: clamp(21px, calc(31 / var(--clamp-width) * 100vw), 31px);
+    }
+    .product-price {
+        font-size: clamp(17px, calc(19 / var(--clamp-width) * 100vw), 19px);
+    }
+    .product-color {
+        gap: 12px;
+    }
+    .product-color .color-radio__control {
+        width: 16px;
+        height: 16px;
+    }
+    .product-size {
+        --checkbox-big-width: 23px;
+    }
+    /*Product*/
 }
 
 /*Desktop LG*/

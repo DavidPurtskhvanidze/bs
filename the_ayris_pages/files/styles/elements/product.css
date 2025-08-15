@@ -35,7 +35,7 @@
 }
 
 .product-info-body {
-    margin-top: 15px;
+    margin-top: 32px;
     display: flex;
     flex-direction: column;
     gap: clamp(18px, calc(30/var(--clamp-width)*100vw), 30px);
