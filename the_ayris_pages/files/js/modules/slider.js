@@ -22,35 +22,6 @@ const newItemsSlider = new Swiper('#newItemsSlider', {
 
     }
 });
-const newItemsMainPageSlider = new Swiper('#newItemsMainPageSlider', {
-    speed: 300,
-    spaceBetween: 5,
-    slidesPerView: 1.5,
-    centeredSlides: true,
-    navigation: {
-        nextEl: '#newItemsMainPageSlider .swiper-button-next',
-        prevEl: '#newItemsMainPageSlider .swiper-button-prev',
-    },
-    // Responsive breakpoints
-    breakpoints: {
-        // when window width is >= 767px
-        767: {
-            centeredSlides: false,
-            slidesPerView: 3,
-        },
-        // when window width is >= 1023px
-        1023: {
-            centeredSlides: false,
-            slidesPerView: 4,
-        },
-        // when window width is >= 1023px
-        1440: {
-            centeredSlides: false,
-            slidesPerView: 5.2,
-        },
-
-    }
-});
 const bestsellersSlider = new Swiper('#bestsellersSlider', {
     speed: 300,
     spaceBetween: 5,
@@ -167,25 +138,52 @@ const cardsButtonBlockSlider = new Swiper('#cardsButtonBlockSlider', {
             centeredSlides: false,
             slidesPerView: 2,
         },
-        // when window width is >= 1023px
-        1440: {
-            centeredSlides: false,
-            slidesPerView: 2.6,
-        },
+
     }
 });
 
-
-const productPictures = new Swiper('#productPictures', {
+// direction vertical
+// swiper-slide
+/*const productPictures = new Swiper('#productPictures', {
     speed: 300,
     spaceBetween: 2,
     slidesPerView: 1,
     centeredSlides: true,
+    direction : 'vertical', // horizontal
+    el : '.fx-image-scrl',
+    mousewheel: {
+        enabled: true,
+        releaseOnEdges: true,
+    },
+  /!*  scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+    },*!/
     navigation: {
         nextEl: '#productPictures .swiper-button-next',
         prevEl: '#productPictures .swiper-button-prev',
     },
     pagination: {
         el: '#productPictures .swiper-pagination',
+        clickable : true
     },
+});*/
+
+// fx- addMarginToBottomOfBanner
+// This script adds padding to the bottom of a large banner. In a grid.
+function addMarginToBottomOfBanner() {
+    let cardBottomOuterHeight = $('.card-bottom').outerHeight();
+    let cardBigBanner = $('.fx-big-banner-margin-bottom');
+    if (window.innerWidth >= 767) {
+        cardBigBanner.css('margin-bottom', cardBottomOuterHeight);
+    } else {
+        cardBigBanner.removeAttr('style');
+    }
+}
+$(document).ready(function () {
+    addMarginToBottomOfBanner();
 });
+$(window).on('resize', function() {
+    addMarginToBottomOfBanner();
+});
+// fx- addMarginToBottomOfBanner

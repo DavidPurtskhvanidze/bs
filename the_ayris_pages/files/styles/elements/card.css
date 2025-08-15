@@ -53,7 +53,7 @@
     object-fit: cover;
 }
 .card-bottom {
-    padding: clamp(10px, calc(22/var(--clamp-width)*100vw), 22px);
+    padding: clamp(10px, calc(22/var(--clamp-width)*100vw), 22px) clamp(10px, calc(22/var(--clamp-width)*100vw), 22px) 28px;
 }
 .card-title {
     font-size: var(--card-title-font-size);

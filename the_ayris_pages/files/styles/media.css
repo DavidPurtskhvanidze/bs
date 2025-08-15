@@ -24,7 +24,7 @@
 
 @media (max-width: 1440px), (max-height: 960px) {
     :root {
-        --header-height: 70px;
+        --header-height: 76px;
         --header-paddin-inline: 40px;
         --menu-drop-lists-padding: 40px;
 
@@ -39,7 +39,7 @@
         height: 22px;
     }
     .header-menu__item-name {
-        font-size: 16px;
+        font-size: 18px;
     }
     /*Main menu*/
 
@@ -684,7 +684,7 @@
     .catalog-filter-wrapper:after {
         content: '';
         display: block;
-        width: 1px;
+        width: 0.5px;
         height: 100%;
         position: absolute;
         top: 0;
@@ -796,8 +796,8 @@
 
     /*Product popup*/
     .product-popup {
-        bottom: 14px;
-        right: 14px;
+        bottom: 17px;
+        right: 10px;
         height: 22px;
         width: 22px;
     }
@@ -810,20 +810,21 @@
         height: 10px;
     }
     .product-popup__box {
-        width: 184px;
+        width: 200px;
         max-height: 240px;
-        bottom: 30px;
-        right: 24px;
+        bottom: 34px;
+        right: 0;
     }
     .product-popup__picture {
-        width: 50px;
+        width: 56px;
     }
     .product-popup__info-title {
         font-size: 12px;
     }
     .product-popup__info-price-color {
-        gap: 8px;
-        padding-inline-end: 26px;
+        gap: 4px;
+        padding-inline-end: 28px;
+        flex-direction: column;
     }
     .product-popup-colors-list {
         line-height: 8px;
