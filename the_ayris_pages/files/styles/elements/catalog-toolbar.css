@@ -3,13 +3,13 @@
     align-items: center;
     justify-content: space-between;
     height: var(--catalog-toolbar-height);
-    border-top: 1px solid var(--color-dark-3);
-    border-bottom: 1px solid var(--color-dark-3);
+    border-top: 0.5px solid var(--color-dark-3);
+    border-bottom: 0.5px solid var(--color-dark-3);
     background-color: var(--color-main-bg);
 }
 .catalog-toolbar_sticky-top {
     position: sticky;
-    top: calc(var(--header-height) - 1px);
+    top: calc(var(--header-height) - 0.5px);
     z-index: 2;
 }
 .dropdown__button_catalog-toolbar {

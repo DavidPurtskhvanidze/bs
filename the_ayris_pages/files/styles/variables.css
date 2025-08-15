@@ -39,7 +39,7 @@
     --header-paddin-inline: 60px;
     --header-logo-width: clamp(174px, calc(312/var(--clamp-width)*100vw), 312px);
     --header-column-gap: clamp(16px, calc(60/var(--clamp-width)*100vw), 60px);
-    --header-border-width: 1px;
+    --header-border-width: 0.5px;
 
     --button-height: 60px;
     --button-font-size: 17px;

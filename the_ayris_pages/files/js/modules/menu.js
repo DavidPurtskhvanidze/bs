@@ -1,7 +1,7 @@
 const header = document.getElementById('headerMain');
 
 function headerBgColorSwitcher() {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 10) {
         header.classList.add('header_color-active');
     } else {
         header.classList.remove('header_color-active');
@@ -34,7 +34,7 @@ menuDropLink.forEach(link => {
         const newImage = link.getAttribute('data-menu-drop-image');
         const newName = link.getAttribute('data-menu-drop-name');
         BannerPicPlace.setAttribute('src',newImage);
-        BannerCatName.innerText = newName;
+        BannerCatName.innerHTML = newName;
 
         menuDropLink.forEach(link => link.classList.remove('menu-drop__link_underline'));
         link.classList.add('menu-drop__link_underline');

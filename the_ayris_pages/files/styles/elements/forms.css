@@ -18,7 +18,7 @@ fieldset {
     margin-bottom: 20px;
 }
 .fieldset__legend_border-top {
-    border-top: 1px solid var(--color-dark-3);
+    border-top: 0.5px solid var(--color-dark-3);
     width: calc(100% - 20px);
     padding-top: 20px;
 }

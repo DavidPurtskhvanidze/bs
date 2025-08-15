@@ -22,14 +22,77 @@
     /*Banners*/
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1440px), (max-height: 960px) {
     :root {
         --header-height: 70px;
         --header-paddin-inline: 40px;
+        --menu-drop-lists-padding: 40px;
 
         --page-banner-padding-block: clamp(20px, calc(40 / var(--clamp-width) * 100vw), 40px);
         --page-banner-padding-inline: clamp(10px, calc(40 / var(--clamp-width) * 100vw), 40px);
+
+        --catalog-toolbar-height: 55px;
     }
+
+    /*Main menu*/
+    .header__logo {
+        height: 22px;
+    }
+    .header-menu__item-name {
+        font-size: 16px;
+    }
+    /*Main menu*/
+
+    /*Main banner*/
+    .main-page-top-banner-text-wrapper {
+        bottom: 58px;
+    }
+    .main-page-top-banner-title {
+        font-size: clamp(19px, calc(26 / var(--clamp-width) * 100vw), 26px);
+        margin-bottom: clamp(18px, calc(24 / var(--clamp-width) * 100vw), 24px);
+    }
+    .main-page-top-banner-descriptor {
+        font-size: 15px;
+    }
+    /*Main banner*/
+
+    /*Main text section*/
+    .text-section_main-page {
+        padding-block: clamp(58px, calc(85 / var(--clamp-width) * 100vw), 85px);
+    }
+    .text-section-title_main-page {
+        font-size: clamp(22px, calc(29 / var(--clamp-width) * 100vw), 29px);
+        margin-bottom: 54px;
+    }
+    .text-section-descriptor_main-page {
+        font-size: 16px;
+    }
+    /*Main text section*/
+
+    /*Drop down menu*/
+    .menu-drop__picture-section {
+        width: 24%;
+    }
+    .menu-drop__list-title {
+        margin-bottom: clamp(60px, calc(74 / var(--clamp-width) * 100vw), 74px);
+    }
+    .menu-drop__list-title {
+        height: 37px;
+        font-size: 12px;
+    }
+    .menu-drop-lists-picture:before {
+        top: 37px;
+    }
+    .menu-drop__list {
+        gap: 14px;
+    }
+    .menu-drop__list-link {
+        font-size: clamp(14px, calc(16 / var(--clamp-width) * 100vw), 16px);
+    }
+    .menu-drop__list-link-picture-name {
+        font-size: clamp(18px, calc(23 / var(--clamp-width) * 100vw), 23px);
+    }
+    /*Drop down menu*/
 
     /*Catalog toolbar*/
     .catalog-filter__button {
@@ -43,6 +106,9 @@
     /*Banners*/
     .banner {
         --clamp-width: 1440;
+    }
+    .main-page-top-banner {
+        height: 87vh;
     }
     .banner-title {
         font-size: clamp(29px, calc(58 / var(--clamp-width) * 100vw), 58px);
@@ -60,6 +126,12 @@
         font-size: clamp(13px, calc(19 / var(--clamp-width) * 100vw), 19px);
     }
     /*Banners*/
+
+    /*Bread crumbs*/
+    .bread-crumbs-full-width {
+        height: clamp(40px, calc(55 / var(--clamp-width) * 100vw), 55px);
+    }
+    /*Bread crumbs*/
 }
 
 /*Desktop LG*/
@@ -112,6 +184,9 @@
     .header-menu__item_user {
         display: none;
     }
+    .menu-drop {
+        box-shadow: none;
+    }
     .menu-drop__picture-section {
         display: none;
     }
@@ -144,7 +219,7 @@
     .header-menu:before {
         content: '';
         width: 100%;
-        height: 1px;
+        height: 0.5px;
         background-color: var(--color-dark-2);
         position: absolute;
         top: 39px;
