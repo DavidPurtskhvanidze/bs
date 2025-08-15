@@ -786,8 +786,10 @@
     .cart-sidebar-suggestions {
         margin: auto -10px;
         --swiper-navigation-sides-offset: 4px;
-        --swiper-navigation-top-offset: 40%;
         border-top: 1px solid var(--color-gray-1);
+    }
+    .cart-sidebar-suggestions .card-bottom {
+        padding: 10px;
     }
     .cart-sidebar-control__link-wrapper {
         display: flex;

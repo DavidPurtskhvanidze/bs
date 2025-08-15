@@ -125,12 +125,15 @@
     padding: 0 22px;
     position: relative;
 }
+.cart-sidebar-suggestions .card-bottom {
+    padding: 18px 0 10px;
+}
 
 .cart-sidebar-suggestions {
     --swiper-button-next-prev-width: 9px;
     --swiper-button-next-prev-height: 16px;
     --swiper-navigation-sides-offset: -10px;
-    --swiper-navigation-top-offset: 28%;
+    --swiper-navigation-top-offset: 35%;
 
     --card-colors-padding: 10px;
     --card-title-font-size: 13px;
