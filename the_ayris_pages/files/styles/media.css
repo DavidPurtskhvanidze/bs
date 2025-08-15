@@ -153,6 +153,13 @@
         width: 16px;
         height: 16px;
     }
+    .product-color .color-radio .color-radio__input:checked ~ .color-radio__control:after,
+    .product-color .color-radio input:checked ~ .color-radio__control:after {
+        border: 0.5px solid var(--color-dark-2);
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+    }
     .product-size {
         --checkbox-big-width: 23px;
     }
