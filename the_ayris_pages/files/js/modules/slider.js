@@ -54,7 +54,7 @@ const newItemsMainPageSlider = new Swiper('#newItemsMainPageSlider', {
 const bestsellersSlider = new Swiper('#bestsellersSlider', {
     speed: 300,
     spaceBetween: 5,
-    slidesPerView: 1.3,
+    slidesPerView: 1.5,
     centeredSlides: true,
     navigation: {
         nextEl: '#bestsellersSlider .swiper-button-next',
