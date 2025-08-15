@@ -24,7 +24,7 @@
 
 @media (max-width: 1440px), (max-height: 960px) {
     :root {
-        --header-height: 76px;
+        --header-height: 70px;
         --header-paddin-inline: 40px;
         --menu-drop-lists-padding: 40px;
 
@@ -37,9 +37,6 @@
     /*Main menu*/
     .header__logo {
         height: 22px;
-    }
-    .header-menu__item-name {
-        font-size: 18px;
     }
     /*Main menu*/
 
