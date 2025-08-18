@@ -16,6 +16,7 @@
     line-height: 1;
     letter-spacing: 0.06em;
 }
+.text-section-descriptor *,
 .text-section-descriptor {
     margin-top: clamp(32px, calc(54/var(--clamp-width)*100vw), 54px);
     font-size: 15px;
@@ -40,6 +41,7 @@
     letter-spacing: 0.01em;
     line-height: 1.1;
 }
+.text-section-descriptor_main-page *,
 .text-section-descriptor_main-page {
     font-size: clamp(17px, calc(28/var(--clamp-width)*100vw), 20px);
     letter-spacing: normal;

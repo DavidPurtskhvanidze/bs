@@ -199,6 +199,7 @@
     text-align: center;
     margin-bottom: clamp(18px, calc(42/var(--clamp-width)*100vw), 42px);
 }
+.main-page-top-banner-descriptor *,
 .main-page-top-banner-descriptor {
     color: var(--color-light-1);
     font-size: clamp(16px, calc(20/var(--clamp-width)*100vw), 20px);
