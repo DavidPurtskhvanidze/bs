@@ -507,17 +507,6 @@
     /*Banners*/
 
     /*Product card*/
-    .product-picture-full-img-link {
-        top: auto;
-        right: 16px;
-        bottom: 10%;
-        left: auto;
-        width: 38px;
-        height: 38px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
     .product-picture-full-img-link:before {
         content: '';
         display: block;
@@ -528,6 +517,8 @@
         width: 38px;
         height: 38px;
         position: absolute;
+        right: 16px;
+        bottom: 10%;
     }
     .product-pictures-wrapper .swiper-button-prev,
     .product-pictures-wrapper .swiper-button-next {
