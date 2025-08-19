@@ -144,6 +144,12 @@
     .order-2-md {
         order: 2;
     }
+    .br-desk {
+        display: none;
+    }
+    .br-mob {
+        display: inline-block;
+    }
 }
 
 /*Mobile SM*/
@@ -165,12 +171,6 @@
     }
     .order-2-sm {
         order: 2;
-    }
-    .br-desk {
-        display: none;
-    }
-    .br-mob {
-        display: inline-block;
     }
 }
 

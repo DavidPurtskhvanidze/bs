@@ -38,6 +38,9 @@
     left: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.5) 100%);
 }
+.banner-bg-picture_only-img:after {
+    display: none;
+}
 .banner:hover .banner-bg-picture:before {
     background-color: rgba(0,0,0, 0.1);
 }

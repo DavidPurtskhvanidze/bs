@@ -49,7 +49,6 @@
     border-top: 0.5px solid var(--color-dark-3);
     padding-inline: 16px;
     text-align: center;
-    margin-top: 32px;
 }
 .bread-crumbs-top-left {
     padding: 30px var(--header-paddin-inline) 0;
