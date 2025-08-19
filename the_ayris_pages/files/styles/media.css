@@ -493,7 +493,7 @@
         gap: 4px;
     }
     .banner-with-text-wrapper {
-        padding-block: 60px;
+        max-width: 100%;
     }
     .banner-with-text-button {
         --button-height: 48px;
