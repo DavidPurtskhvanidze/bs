@@ -18,18 +18,23 @@ a:hover {
 /*Common Typography*/
 h1:where(:not([class])) {
     font-size: clamp(28px, calc(36/var(--clamp-width)*100vw), 36px);
+    font-weight: 500;
 }
 h2:where(:not([class])) {
     font-size: clamp(24px, calc(30/var(--clamp-width)*100vw), 30px);
+    font-weight: 500;
 }
 h3:where(:not([class])) {
     font-size: clamp(20px, calc(24/var(--clamp-width)*100vw), 24px);
+    font-weight: 500;
 }
 h4:where(:not([class])) {
     font-size: clamp(18px, calc(20/var(--clamp-width)*100vw), 20px);
+    font-weight: 500;
 }
 h5:where(:not([class])) {
     font-size: 16px;
+    font-weight: 500;
 }
 h6:where(:not([class])) {
     font-size: 14px;

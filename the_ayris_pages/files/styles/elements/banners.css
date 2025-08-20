@@ -290,7 +290,7 @@
     font-size: clamp(27px, calc(44 / var(--clamp-width) * 100vw), 44px);
     line-height: 1;
     text-align: center;
-    color: #000000;
+    color: var(--color-dark-2);
     margin-bottom: clamp(32px, calc(50/var(--clamp-width)*100vw), 50px);
 }
 .banner-with-text-descriptor *,
@@ -298,7 +298,7 @@
     font-size: 15px;
     text-align: center;
     letter-spacing: 0.05em;
-    color: rgba(0, 0, 0, 0.7);
+    color: var(--color-dark-2);
 }
 .banner-with-text-descriptor_margin-bottom {
     margin-bottom: 20px;

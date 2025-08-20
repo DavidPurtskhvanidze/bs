@@ -231,4 +231,8 @@
     letter-spacing: -0.03em;
     color: var(--color-dark-3);
 }
+.catalog-filter-side-menu .radio__big-control,
+.catalog-filter-side-menu .checkbox__big-control {
+    border: 0.5px solid var(--color-dark-2);
+}
 /*catalog price*/
