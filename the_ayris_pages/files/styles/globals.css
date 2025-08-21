@@ -98,3 +98,26 @@ p:where(:not([class])) {
     right: 5px;
 }
 /*Fancy*/
+
+/*Suggestions*/
+form .suggestions-suggestions {
+    background: var(--color-menu-bg);
+    border: 0.5px solid var(--color-dark-3);
+    padding-inline: clamp(12px, calc(24 / var(--clamp-width) * 100vw), 24px);
+    padding-block: clamp(12px, calc(16 / var(--clamp-width) * 100vw), 16px);
+}
+form .suggestions-suggestion {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: clamp(12px, calc(13 / var(--clamp-width) * 100vw), 13px);
+    height: 30px;
+    color: var(--color-dark-3);
+    padding: 0;
+}
+form .suggestions-suggestion:hover {
+    background: transparent;
+    color: var(--color-gray-1);
+    text-decoration: underline;
+}
+/*Suggestions*/

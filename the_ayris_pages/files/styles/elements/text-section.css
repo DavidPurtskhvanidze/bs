@@ -5,6 +5,9 @@
     padding: clamp(40px, calc(50/var(--clamp-width)*100vw), 50px);
     background-color: var(--color-menu-bg);
 }
+.text-section_border-bottom {
+    border-bottom: 0.5px solid var(--color-dark-3);
+}
 .text-section-wrapper {
     text-align: center;
     max-width: 800px;

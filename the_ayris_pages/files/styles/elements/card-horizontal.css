@@ -53,6 +53,9 @@
     color: var(--color-dark-3);
     margin-bottom: clamp(12px, calc(16/var(--clamp-width)*100vw), 16px);
 }
+.card-horizontal__info-title * {
+    font-style: normal;
+}
 .card-horizontal__info-price {
     font-size: clamp(14px, calc(16/var(--clamp-width)*100vw), 16px);
     line-height: 1.2;
