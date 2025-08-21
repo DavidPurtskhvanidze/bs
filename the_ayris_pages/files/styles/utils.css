@@ -79,6 +79,9 @@
 .br-mob {
     display: none;
 }
+.white-space-nowrap {
+    white-space: nowrap;
+}
 
 /*Desktop XL*/
 @media (max-width: 1440px) {

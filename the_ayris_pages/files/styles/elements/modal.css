@@ -83,7 +83,6 @@
     --f-button-hover-color: var(--color-gray-1);
     --f-button-svg-width: 10px;
     --f-button-svg-height: 10px;
-    border: 1px solid var(--color-dark-2);
 }
 .is-compact .modal>.f-button.is-close-btn {
     top: 15px;

@@ -1,11 +1,13 @@
 table {
     border-collapse: collapse;
-    border-bottom: 1px solid var(--color-dark-3);
+    border-bottom: 0.5px solid var(--color-gray-1);
     font-size: 16px;
+    color: var(--color-dark-3);
+    width: 100%;
 }
 
 th {
-    border-top: 1px solid var(--color-dark-3);
+    border-top: 0.5px solid var(--color-gray-1);
     padding: 16px 10px;
 }
 th {
@@ -13,7 +15,7 @@ th {
 }
 
 td {
-    border-top: 1px solid var(--color-dark-3);
+    border-top: 0.5px solid var(--color-gray-1);
     padding: 10px;
 }
 
@@ -46,8 +48,9 @@ td {
     background-color: transparent;
     border: none;
     padding: 1em 0 1em 2.6em;
-    cursor: pointer;
     position: relative;
+    width: fit-content;
+    margin: 0 auto 32px;
 }
 .size-guide-button:before {
     content: '';
@@ -74,18 +77,18 @@ td {
 }
 .size-measuring-table th:nth-child(1),
 .size-measuring-table th:nth-child(2) {
-    font-size: 12px;
+    font-size: 13px;
 }
 .size-measuring-table td {
-    width: 25%;
+    min-width: 100px;
 }
 .size-measuring-table td:first-child {
-    font-size: 12px;
+    font-size: 13px;
     width: 30%;
     text-align: start;
 }
 .size-measuring-table td img {
-    width: 120px;
+    max-width: 120px;
     margin: auto;
 }
 .size-measuring-button {
