@@ -1,0 +1,1154 @@
+/*это не нужно, это временно чтобы удобно было работать*/
+body * {
+    transition: none !important;
+}
+html {
+    overflow: auto !important;
+}
+html body {
+    overflow: auto !important;
+}
+header {
+    display: none;
+}
+/*это не нужно, это временно чтобы удобно было работать*/
+
+
+main {
+    background-color: #FCF9F9;
+}
+.br-mobile {
+    display: none;
+}
+.br-desktop {
+    display: inline-block;
+}
+.bold-mobile {
+    font-weight: 300;
+}
+.bold-desktop {
+    font-weight: 500;
+}
+/*towel-cooper-main*/
+.towel-cooper-main-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: 'Cera Pro', sans-serif;
+    z-index: 2;
+}
+.towel-cooper-main-section picture {
+    display: flex;
+    width: 100%;
+}
+.towel-cooper-main-section picture img {
+    width: 100%;
+}
+.towel-cooper-main-text {
+    position: absolute;
+    bottom: clamp(35px, calc(62/1920*100vw), 62px);
+    max-width: 90%;
+}
+.towel-cooper-main-text h1 {
+    color: #fff;
+    font-weight: 500;
+    font-size: clamp(24px, calc(48/1920*100vw), 48px);
+    line-height: clamp(34px, calc(60/1920*100vw), 60px);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: clamp(10px, calc(16/1920*100vw), 16px);
+    position: relative;
+    z-index: 1;
+}
+.towel-cooper-main-text p {
+    color: #fff;
+    font-weight: 500;
+    font-size: clamp(14px, calc(18/1920*100vw), 18px);
+    line-height: clamp(20px, calc(28/1920*100vw), 28px);
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+.towel-cooper-main-innovation {
+    font-weight: 700;
+    font-size: clamp(7px, calc(24 / 1920 * 100vw), 24px);
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transform: translateY(50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right: 11%;
+    background-image: url(../files/images/innovation-molecula.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 1em;
+    width: 9em;
+    height: 9em;
+}
+.towel-cooper-main-innovation span {
+    transform: rotate(-5.19deg);
+}
+/*towel-cooper-main*/
+
+/*towel-cooper-text*/
+body section.towel-cooper-text-section {
+    margin: 0;
+    padding: clamp(24px, calc(64/1920*100vw), 64px) 20px;
+    background-color: #F4EEE6;
+    text-align: center;
+}
+.towel-cooper-text-mob {
+    display: none;
+}
+.towel-cooper-text-section h3 {
+    font-weight: 500;
+    font-size: clamp(18px, calc(32/1920*100vw), 32px);
+    line-height: clamp(28px, calc(48/1920*100vw), 48px);
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0;
+}
+.towel-cooper-text-section h3 b {
+    font-weight: 500;
+}
+/*towel-cooper-text*/
+
+/*towel-cooper-fiber*/
+section.towel-cooper-fiber-section {
+    padding-top: clamp(25px, calc(96 / 1920 * 100vw), 96px);
+    background-color: #fdf8f9;
+    margin-top: 0;
+    margin-bottom: 96px;
+}
+.towel-cooper-fiber-one {
+    position: relative;
+    z-index: 1;
+}
+.towel-cooper-fiber-one-info {
+    position: absolute;
+    z-index: 1;
+    top: 9.8vw;
+    left: 9vw;
+    display: flex;
+    justify-content: start;
+    gap: 16px;
+}
+.towel-cooper-fiber-one-info-num {
+    font-weight: 500;
+    font-size: clamp(64px, calc(120 / 1920 * 100vw), 120px);
+    line-height: clamp(60px, calc(111 / 1920 * 100vw), 111px);
+    text-transform: uppercase;
+    background: linear-gradient(51.74deg, #9E866C -4.56%, #B8A284 9.71%, #AD9378 38.27%, #DDCEBA 52.04%, #AB8F76 63.16%, #735B42 130.05%, #A58B6E 146.36%, #B79A7A 181.03%, #8F7E61 199.39%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.towel-cooper-fiber-one-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.towel-cooper-fiber-one-info-text h4 {
+    font-weight: 500;
+    font-size: clamp(18px, calc(32 / 1920 * 100vw), 32px);
+    line-height:clamp(28px, calc(48 / 1920 * 100vw), 48px);
+    text-transform: uppercase;
+    background: linear-gradient(267.09deg, #9E866C 12.34%, #B8A284 17.61%, #AD9378 28.15%, #DDCEBA 33.23%, #AB8F76 37.33%, #735B42 62.01%, #A58B6E 68.03%, #B79A7A 80.83%, #8F7E61 87.6%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.towel-cooper-fiber-one-info-text p {
+    font-weight: 300;
+    font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
+    line-height: clamp(20px, calc(28 / 1920 * 100vw), 28px);
+    color: #91775D;
+}
+.towel-cooper-fiber-one-bg {
+
+
+}
+.towel-cooper-fiber-one-video {
+    position: absolute;
+    top: 2vw;
+    right: 3.6vw;
+    overflow: hidden;
+    width: 52vw;
+    height: 52vw;
+    border-radius: 100%;
+    border: 4px solid #DAC5A5;
+}
+.towel-cooper-fiber-one-video video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.towel-cooper-fiber-two {
+    position: relative;
+    margin-top: -11%;
+    overflow: hidden;
+}
+.towel-cooper-fiber-two-video {
+
+}
+.towel-cooper-fiber-two-info {
+    position: absolute;
+    bottom: 8.9vw;
+    left: 9.1vw;
+    z-index: 1;
+    display: flex;
+    justify-content: start;
+    gap: 16px;
+}
+.towel-cooper-fiber-two-info:after {
+    content: '';
+    position: absolute;
+    width: 60vw;
+    height: 40vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    background-color: #F3F7F3;
+    filter: blur(13vw);
+}
+.towel-cooper-fiber-two-info-num {
+    font-weight: 500;
+    font-size: clamp(64px, calc(120 / 1920 * 100vw), 120px);
+    line-height: clamp(60px, calc(111 / 1920 * 100vw), 111px);
+    text-transform: uppercase;
+    background: linear-gradient(51.74deg, #9E866C -4.56%, #B8A284 9.71%, #AD9378 38.27%, #DDCEBA 52.04%, #AB8F76 63.16%, #735B42 130.05%, #A58B6E 146.36%, #B79A7A 181.03%, #8F7E61 199.39%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.towel-cooper-fiber-two-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.towel-cooper-fiber-two-info-text h4 {
+    font-weight: 500;
+    font-size: clamp(18px, calc(32 / 1920 * 100vw), 32px);
+    line-height:clamp(28px, calc(48 / 1920 * 100vw), 48px);
+    text-transform: uppercase;
+    background: linear-gradient(267.09deg, #9E866C 12.34%, #B8A284 17.61%, #AD9378 28.15%, #DDCEBA 33.23%, #AB8F76 37.33%, #735B42 62.01%, #A58B6E 68.03%, #B79A7A 80.83%, #8F7E61 87.6%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.towel-cooper-fiber-two-info-text p {
+    font-weight: 300;
+    font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
+    line-height: clamp(20px, calc(28 / 1920 * 100vw), 28px);
+    color: #91775D;
+}
+/*towel-cooper-fiber*/
+
+/*towel-cooper-benefits*/
+section.towel-cooper-benefits {
+    margin-top: 0;
+    padding-top: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.towel-cooper-benefits-title-mob {
+    display: none;
+}
+.towel-cooper-benefits-info {
+    position: absolute;
+    z-index: 1;
+    left: 58.5vw;
+}
+.towel-cooper-benefits-info img {
+    width: clamp(78px, calc(90 / 1920 * 100vw), 90px);
+}
+.towel-cooper-benefits h3 {
+    font-weight: 500;
+    font-size: clamp(18px, calc(32 / 1920 * 100vw), 32px);
+    line-height: clamp(28px, calc(48 / 1920 * 100vw), 48px);
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: clamp(24px, calc(64 / 1920 * 100vw), 64px);
+    text-align: start;
+}
+.towel-cooper-benefits-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(22px, calc(32 / 1920 * 100vw), 32px);
+}
+.towel-cooper-benefits-info li {
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, calc(20 / 1920 * 100vw), 20px);
+    position: relative;
+}
+.towel-cooper-benefits-info li:before {
+    content: '';
+    width: 32vw;
+    height: 1.5px;
+    background-color: #E0B370;
+    display: block;
+    position: absolute;
+    left: -32vw;
+}
+.towel-cooper-benefits-info li:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #E0B370;
+    display: block;
+    position: absolute;
+    left: -32vw;
+}
+.towel-cooper-benefits-info li:nth-child(2):before {
+    width: 34vw;
+    left: -34vw;
+}
+.towel-cooper-benefits-info li:nth-child(2):after {
+    left: -34vw;
+}
+.towel-cooper-benefits-info li:nth-child(3):before {
+    width: 37vw;
+    left: -37vw;
+}
+.towel-cooper-benefits-info li:nth-child(3):after {
+    left: -37vw;
+}
+.towel-cooper-benefits-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.towel-cooper-benefits-item h4 {
+    font-weight: 500;
+    font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
+    line-height: clamp(14px, calc(20 / 1920 * 100vw), 28px);
+    text-transform: uppercase;
+    background: linear-gradient(270.56deg, #9E866C 79.14%, #B8A284 80.53%, #AD9378 83.3%, #DDCEBA 84.64%, #AB8F76 85.72%, #AE8A65 92.22%, #A58B6E 93.8%, #B79A7A 97.17%, #8F7E61 98.95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.towel-cooper-benefits-item p {
+    font-weight: 300;
+    font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
+    line-height: clamp(20px, calc(28 / 1920 * 100vw), 28px);
+    color: #90775D;
+}
+/*towel-cooper-benefits*/
+
+/*towel-cooper-why*/
+section.towel-cooper-why {
+    margin-top: clamp(68px, calc(96 / 1920 * 100vw), 96px);
+    padding-bottom: clamp(16px, calc(32 / 1920 * 100vw), 32px);
+}
+.towel-cooper-why h3 {
+    font-weight: 300;
+    font-size: clamp(18px, calc(32 / 1920 * 100vw), 32px);
+    line-height: clamp(28px, calc(48 / 1920 * 100vw), 48px);
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: clamp(10px, calc(64 / 1920 * 100vw), 64px);
+}
+.towel-cooper-why h3 b {
+    font-weight: 500;
+}
+.towel-cooper-why-wrapper {
+    position: relative;
+}
+.towel-cooper-why-wrapper picture {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.towel-cooper-why-video {
+    position: absolute;
+    top: 4.6vw;
+    right: 20.6vw;
+    overflow: hidden;
+    width: 11.4vw;
+    height: 11.4vw;
+    border-radius: 100%;
+    border: 2px solid #DAC5A5;
+    z-index: 1;
+}
+.towel-cooper-why-video video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.towel-cooper-why-box {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+    padding: 23.6vw 9vw 0;
+}
+.towel-cooper-why-box h4 {
+    font-weight: 500;
+    font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
+    line-height: clamp(20px, calc(29 / 1920 * 100vw), 29px);
+    text-transform: uppercase;
+    color: #90775D;
+    margin-bottom: 16px;
+    position: relative;
+}
+.towel-cooper-why-box p {
+    font-weight: 300;
+    font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
+    line-height: clamp(20px, calc(29 / 1920 * 100vw), 29px);
+    color: #90775D;
+}
+.towel-cooper-why-box-left {
+    position: relative;
+}
+.towel-cooper-why-box-left:before {
+    content: '';
+    width: calc(100% - 5vw);
+    height: 2px;
+    background-color: #E0B370;
+    display: block;
+    position: absolute;
+    right: 5vw;
+    top: -16px;
+}
+.towel-cooper-why-box-left:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #E0B370;
+    display: block;
+    position: absolute;
+    right: 5vw;
+    top: -19px;
+}
+.towel-cooper-why-box-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.towel-cooper-why-box-right:before {
+    content: '';
+    width: calc(100% - 3vw);
+    height: 2px;
+    background-color: #BCC2B2;
+    display: block;
+    position: absolute;
+    right: 1vw;
+    top: -16px;
+}
+.towel-cooper-why-box-right:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: #BCC2B2;
+    display: block;
+    position: absolute;
+    left: 2vw;
+    top: -19px;
+}
+/*towel-cooper-why*/
+
+/*towel-cooper-luxury*/
+section.towel-cooper-luxury {
+    margin-top: clamp(48px, calc(96 / 1920 * 100vw), 96px);
+}
+.towel-cooper-luxury h3 {
+    font-weight: 300;
+    font-size: clamp(18px, calc(32 / 1920 * 100vw), 32px);
+    line-height: clamp(28px, calc(48 / 1920 * 100vw), 48px);
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: clamp(24px, calc(32 / 1920 * 100vw), 32px);
+}
+.towel-cooper-luxury h3 b {
+    font-weight: 500;
+}
+/*towel-cooper-luxury*/
+
+/*towel-cooper-anti-section*/
+body section.towel-cooper-anti-section {
+    margin-top: clamp(68px, calc(96 / 1920 * 100vw), 96px);
+    padding: clamp(68px, calc(96/1920*100vw), 96px) clamp(8px, calc(20/1920*100vw), 20px) clamp(48px, calc(96/1920*100vw), 96px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.towel-cooper-anti-section:before {
+    content: '';
+    width: calc(100% - 20px);
+    height: 1px;
+    background-color: #F2DEBA;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.towel-cooper-anti-section:after {
+    content: '';
+    width: calc(100% - 20px);
+    height: 1px;
+    background-color: #F2DEBA;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.towel-cooper-anti-section h3 {
+    font-weight: 300;
+    font-size: clamp(18px, calc(32/1920*100vw), 32px);
+    line-height: clamp(28px, calc(48/1920*100vw), 48px);
+    text-transform: uppercase;
+    margin-bottom: clamp(14px, calc(32/1920*100vw), 32px);
+    text-align: center;
+    background: linear-gradient(267.09deg, #9E866C 12.34%, #B8A284 17.61%, #AD9378 28.15%, #DDCEBA 33.23%, #AB8F76 37.33%, #735B42 62.01%, #A58B6E 68.03%, #B79A7A 80.83%, #8F7E61 87.6%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.towel-cooper-anti-section h3 b {
+    font-weight: 500;
+}
+.towel-cooper-anti-percent-item-mob {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #90775D;
+}
+.towel-cooper-anti-wrapper {
+    position: relative;
+    max-width: 1564px;
+    margin: auto;
+}
+.towel-cooper-anti-wrapper h4 {
+    font-weight: 300;
+    font-size: clamp(14px, calc(18/1920*100vw), 18px);
+    line-height: clamp(20px, calc(28/1920*100vw), 28px);
+    text-align: center;
+    color: #90775D;
+    margin-bottom: clamp(24px, calc(32/1920*100vw), 32px);
+}
+.towel-cooper-anti-text-mobile {
+    display: none;
+    font-style: italic;
+}
+.towel-cooper-anti-text b {
+    font-weight: 500;
+}
+.towel-cooper-anti-percent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.towel-cooper-anti-percent-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: clamp(0px, calc(7 / 1920 * 100vw), 7px) 0;
+}
+.towel-cooper-anti-percent-item:first-child:after {
+    content: '';
+    height: 100%;
+    width: 1px;
+    background-color: #F2DEBA;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.towel-cooper-anti-percent-item a {
+    align-self: end;
+    padding-right: 6vw;
+}
+.towel-cooper-anti-percent-item a:hover {
+    opacity: 0.8;
+}
+.towel-cooper-anti-percent-item-desk {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    gap: 5px;
+    padding-left: 2vw;
+}
+.towel-cooper-anti-percent-count {
+    font-weight: 300;
+    font-size: clamp(64px, calc(100 / 1920 * 100vw), 100px);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.1em;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.towel-cooper-anti-percent-count i {
+    font-weight: 500;
+    font-size: clamp(25px, calc(48 / 1920 * 100vw), 48px);
+    line-height: 1;
+    text-transform: uppercase;
+    font-style: normal;
+}
+.towel-cooper-anti-percent-text {
+    font-weight: 500;
+    font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
+    line-height: 1.5;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.towel-cooper-anti-percent-item_link a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 68%;
+    text-decoration: none;
+    outline: 0 !important;
+    color: inherit;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    transition: .3s;
+    will-change: opacity;
+}
+.towel-cooper-anti-percent-item_link a:hover {
+    opacity: 0.8;
+}
+.towel-cooper-anti-percent-item_link-text-mob {
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.towel-cooper-anti-percent-item_link-text-mob a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    position: relative;
+}
+.towel-cooper-anti-percent-item_link-text-mob a:hover {
+    opacity: 0.8;
+}
+.towel-cooper-anti-percent-item_link-text-mob svg {
+    position: absolute;
+    bottom: 7px;
+    right: -31px;
+}
+.towel-cooper-anti-percent-item_link-text {
+    font-weight: 400;
+    font-size: clamp(7px, calc(18 / 1920 * 100vw), 18px);
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    width: clamp(90px, calc(110 / 1920 * 100vw), 110px);
+    height: clamp(90px, calc(110 / 1920 * 100vw), 110px);
+    border-radius: 50%;
+    border: 1px solid #9E866C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.towel-cooper-anti-percent-item_link-text svg {
+    position: absolute;
+    bottom: 0.5em;
+    right: -2.7em;
+    width: clamp(44px, calc(56 / 1920 * 100vw), 56px);
+}
+/*towel-cooper-anti-section*/
+
+/*towel-cooper-how*/
+section.towel-cooper-how {
+    margin-top: clamp(48px, calc(96 / 1920 * 100vw), 96px);
+    padding-bottom: clamp(68px, calc(96 / 1920 * 100vw), 96px);
+}
+.towel-cooper-how h3 {
+    font-weight: 300;
+    font-size: clamp(18px, calc(32 / 1920 * 100vw), 32px);
+    line-height: clamp(28px, calc(48 / 1920 * 100vw), 48px);
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: clamp(24px, calc(64 / 1920 * 100vw), 64px);
+}
+.towel-cooper-how h3 b {
+    font-weight: 500;
+}
+.towel-cooper-how-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.towel-cooper-how-structure {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding-right: 3vw;
+}
+.towel-cooper-how-structure h4 {
+    display: flex;
+    gap: clamp(4px, calc(10 / 1920 * 100vw), 10px);
+    padding-right: 6.3vw;
+}
+.towel-cooper-how-structure h4 span:nth-child(1) {
+    font-weight: 500;
+    font-size: clamp(24px, calc(48 / 1920 * 100vw), 48px);
+    line-height: clamp(34px, calc(60 / 1920 * 100vw), 60px);
+    align-items: center;
+    text-transform: uppercase;
+    background: linear-gradient(305.06deg, #9E866C 15.41%, #B8A284 22.29%, #AD9378 36.03%, #DDCEBA 42.66%, #AB8F76 43.58%, #997B59 57.29%, #C6A98A 75.85%, #735B42 82.83%, #8F7E61 113.58%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.towel-cooper-how-structure h4 span:nth-child(2) {
+    font-weight: 500;
+    font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
+    line-height: clamp(20px, calc(28 / 1920 * 100vw), 28px);
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.towel-cooper-how-structure picture img {
+    max-width: 670px;
+}
+.towel-cooper-how-info {
+
+}
+.towel-cooper-how-info h4 {
+    font-weight: 500;
+    font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
+    line-height: clamp(20px, calc(28 / 1920 * 100vw), 28px);
+    align-items: center;
+    text-transform: uppercase;
+    color: #90775D;
+    margin-bottom: clamp(16px, calc(32 / 1920 * 100vw), 32px);
+    padding-left: 98px;
+}
+.towel-cooper-how-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, calc(32 / 1920 * 100vw), 32px);
+}
+.towel-cooper-how-info ul li {
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, calc(20 / 1920 * 100vw), 20px);
+}
+.towel-cooper-how-info ul li span:nth-child(1) {
+    font-weight: 300;
+    font-size: 100px;
+    line-height: 82px;
+    width: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #BCA587 0%, #B8A284 7%, #FFF8EF 8%, #DAC5A5 21%, #AB8F76 34%, #735B42 66%, #A58B6E 74%, #B79A7A 91%, #8F7E61 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.towel-cooper-how-info ul li span:nth-child(2) {
+    font-weight: 300;
+    font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
+    line-height: clamp(20px, calc(28 / 1920 * 100vw), 28px);
+    color: #90775D;
+}
+/*towel-cooper-how*/
+
+
+@media screen and (max-width: 1279px) {
+    .br-mobile {
+        display: block;
+    }
+    .br-desktop {
+        display: none;
+    }
+    .bold-mobile {
+        font-weight: 500;
+    }
+    .bold-desktop {
+        font-weight: 300;
+    }
+
+    /*towel-cooper-benefits*/
+    .towel-cooper-benefits-info {
+        left: 48vw;
+    }
+    .towel-cooper-benefits-info li:before {
+        width: 25vw;
+        left: -25vw;
+    }
+    .towel-cooper-benefits-info li:after {
+        left: -25vw;
+    }
+    .towel-cooper-benefits-info li:nth-child(2):before {
+        width: 28vw;
+        left: -28vw;
+    }
+    .towel-cooper-benefits-info li:nth-child(2):after {
+        left: -28vw;
+    }
+    .towel-cooper-benefits-info li:nth-child(3):before {
+        width: 30vw;
+        left: -30vw;
+    }
+    .towel-cooper-benefits-info li:nth-child(3):after {
+        left: -30vw;
+    }
+    .towel-cooper-benefits-info ul {
+        padding-right: 6vw;
+    }
+    /*towel-cooper-benefits*/
+}
+
+@media (max-width: 768px) {
+
+    /*towel-cooper-main*/
+    .towel-cooper-main-innovation {
+        bottom: 8px;
+        right: 2%;
+    }
+    /*towel-cooper-main*/
+
+    /*towel-cooper-text*/
+    .towel-cooper-text-desk {
+        display: none;
+    }
+    .towel-cooper-text-mob {
+        display: inline-block;
+    }
+    /*towel-cooper-text*/
+
+    /*towel-cooper-benefits*/
+    .towel-cooper-benefits-info {
+        position: static;
+    }
+    .towel-cooper-benefits-info h3 {
+        display: none;
+    }
+    .towel-cooper-benefits-title-mob {
+        display: inline-block;
+    }
+    section.towel-cooper-benefits {
+        flex-direction: column;
+    }
+    .towel-cooper-benefits-info ul {
+        padding: 24px 10px 0;
+    }
+    .towel-cooper-benefits-info li:before,
+    .towel-cooper-benefits-info li:before {
+        display: none;
+    }
+    /*towel-cooper-benefits*/
+
+    /*towel-cooper-anti*/
+    .towel-cooper-anti-percent-item-mob {
+        display: flex;
+    }
+    .towel-cooper-anti-percent {
+        display: none;
+    }
+    .towel-cooper-anti-percent-item_link-text-mob {
+        display: flex;
+        text-align: center;
+    }
+    .towel-cooper-anti-text {
+        display: none;
+    }
+    .towel-cooper-anti-text-mobile {
+        display: inline-block;
+    }
+    /*towel-cooper-anti*/
+
+    /*towel-cooper-how*/
+    .towel-cooper-how-wrapper {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .towel-cooper-how-structure {
+        padding-right: 0;
+        align-items: center;
+        gap: 24px;
+    }
+    .towel-cooper-how-structure h4 {
+        padding-right: 0;
+    }
+    .towel-cooper-how-structure picture {
+        max-width: 80%;
+    }
+    .towel-cooper-how-info h4 {
+        text-align: center;
+        padding-left: 0;
+    }
+    .towel-cooper-how-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .towel-cooper-how-info ul li span:nth-child(1) {
+        font-size: 88px;
+        line-height: 66px;
+        width: 57px;
+    }
+    .towel-cooper-how-info ul li span:nth-child(2) {
+        flex: 1;
+    }
+    /*towel-cooper-how*/
+
+    /*towel-cooper-why*/
+    section.towel-cooper-why {
+        padding-top: 69px;
+    }
+    .towel-cooper-why:before {
+        content: '';
+        width: calc(100% - 20px);
+        height: 1px;
+        background-color: #F2DEBA;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+    .towel-cooper-why-box {
+        padding: 49vw 10px 0;
+        gap: 20px;
+    }
+    .towel-cooper-why-video {
+        width: 18.6vw;
+        height: 18.6vw;
+        top: 7.6vw;
+        right: 7vw;
+        border: 1px solid #BCC2B2;
+    }
+    .towel-cooper-why-box-left {
+        text-align: end;
+    }
+    .towel-cooper-why-box-left:before,
+    .towel-cooper-why-box-left:after,
+    .towel-cooper-why-box-right:before,
+    .towel-cooper-why-box-right:after {
+        display: none;
+    }
+    .towel-cooper-why-box-left h4 {
+        min-height: 120px;
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        padding: 0 8px 14px;
+    }
+    .towel-cooper-why-box-left h4:before {
+        content: '';
+        width: 4px;
+        height: 4px;
+        display: block;
+        background-color: #C49375;
+        position: absolute;
+        border-radius: 50%;
+        top: -3%;
+        right: -2px;
+    }
+    .towel-cooper-why-box-left h4:after {
+        content: '';
+        width: calc(100% - 10px);
+        height: 100%;
+        display: block;
+        border-right: 1px solid #C49375;
+        border-bottom: 1px solid #C49375;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: 0 0 6px 0;
+    }
+
+    .towel-cooper-why-box-right h4 {
+        min-height: 120px;
+        display: flex;
+        align-items: end;
+        justify-content: start;
+        padding: 0 8px 14px;
+    }
+    .towel-cooper-why-box-right h4:before {
+        content: '';
+        width: 4px;
+        height: 4px;
+        display: block;
+        background-color: #C49375;
+        position: absolute;
+        border-radius: 50%;
+        top: -3%;
+        left: -1px;
+    }
+    .towel-cooper-why-box-right h4:after {
+        content: '';
+        width: calc(100% - 10px);
+        height: 100%;
+        display: block;
+        border-left: 1px solid #C49375;
+        border-bottom: 1px solid #C49375;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-radius: 0 0 0 6px;
+    }
+    /*towel-cooper-why*/
+}
+
+@media (max-width: 576px) {
+    /*towel-cooper-fiber*/
+    .towel-cooper-fiber-one-info {
+        top: 1vw;
+        left: 2vw;
+        gap: 10px;
+    }
+    .towel-cooper-fiber-two-info {
+        top: 2.6vw;
+        left: 2vw;
+        gap: 10px;
+    }
+    .towel-cooper-fiber-two-info-text {
+        gap: 6px;
+    }
+    .towel-cooper-fiber-one-info-text {
+        gap: 6px;
+    }
+    .towel-cooper-fiber-one-video {
+        border: none;
+        top: 28vw;
+        right: auto;
+        left: -7vw;
+        overflow: hidden;
+        width: 79vw;
+        height: 79vw;
+    }
+    .towel-cooper-fiber-two-video {
+        height: 116vw;
+        position: relative;
+    }
+    .towel-cooper-fiber-two-video:before {
+        content: '';
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 140px;
+        position: absolute;
+        background: linear-gradient(360deg, rgba(241, 237, 234, 0) 0%, #f3f2eecc 20.27%);
+    }
+    .towel-cooper-fiber-two-video video {
+        height: 100%;
+        object-fit: cover;
+    }
+    /*towel-cooper-fiber*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
