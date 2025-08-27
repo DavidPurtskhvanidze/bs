@@ -1,16 +1,13 @@
 /*это не нужно, это временно чтобы удобно было работать*/
-body * {
-    transition: none !important;
-}
-html {
-    overflow: auto !important;
-}
-html body {
-    overflow: auto !important;
-}
-header {
-    display: none;
-}
+/*body * {*/
+/*    transition: none !important;*/
+/*}*/
+/*html {*/
+/*    overflow: auto !important;*/
+/*}*/
+/*html body {*/
+/*    overflow: auto !important;*/
+/*}*/
 /*это не нужно, это временно чтобы удобно было работать*/
 
 
@@ -272,6 +269,12 @@ section.towel-cooper-benefits {
     display: flex;
     align-items: center;
 }
+.towel-cooper-benefits-bg {
+    width: 100%;
+}
+.towel-cooper-benefits-bg img {
+    width: 100%;
+}
 .towel-cooper-benefits-title-mob {
     display: none;
 }
@@ -443,6 +446,9 @@ section.towel-cooper-why {
 .towel-cooper-why-box-left {
     position: relative;
 }
+.towel-cooper-why-box-left .towel-cooper-why-box-info {
+    max-width: 60%;
+}
 .towel-cooper-why-box-left:before {
     content: '';
     width: calc(100% - 5vw);
@@ -469,6 +475,9 @@ section.towel-cooper-why {
     display: flex;
     flex-direction: column;
     align-items: end;
+}
+.towel-cooper-why-box-right .towel-cooper-why-box-info {
+    max-width: 60%;
 }
 .towel-cooper-why-box-right:before {
     content: '';
@@ -798,11 +807,14 @@ section.towel-cooper-how {
     background-clip: text;
     text-fill-color: transparent;
 }
-.towel-cooper-how-structure picture img {
+.towel-cooper-how-structure picture {
     max-width: 670px;
 }
+.towel-cooper-how-structure picture img {
+    width: 100%;
+}
 .towel-cooper-how-info {
-
+    max-width: 80%;
 }
 .towel-cooper-how-info h4 {
     font-weight: 500;
@@ -845,6 +857,7 @@ section.towel-cooper-how {
     font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
     line-height: clamp(20px, calc(28 / 1920 * 100vw), 28px);
     color: #90775D;
+    flex: 1;
 }
 /*towel-cooper-how*/
 
@@ -862,6 +875,12 @@ section.towel-cooper-how {
     .bold-desktop {
         font-weight: 300;
     }
+
+    /*.towel-cooper-how*/
+    .towel-cooper-how-structure picture {
+        max-width: 80%;
+    }
+    /*.towel-cooper-how*/
 
     /*towel-cooper-benefits*/
     .towel-cooper-benefits-info {
@@ -892,6 +911,15 @@ section.towel-cooper-how {
         padding-right: 6vw;
     }
     /*towel-cooper-benefits*/
+
+    /*towel-cooper-anti*/
+    .towel-cooper-anti-percent-item-desk {
+        align-self: center;
+    }
+    .towel-cooper-anti-percent-item a {
+        align-self: center;
+    }
+    /*towel-cooper-anti*/
 }
 
 @media (max-width: 768px) {
@@ -984,8 +1012,11 @@ section.towel-cooper-how {
         line-height: 66px;
         width: 57px;
     }
-    .towel-cooper-how-info ul li span:nth-child(2) {
-        flex: 1;
+    .towel-cooper-how-structure picture {
+        max-width: 90%;
+    }
+    .towel-cooper-how-info {
+        max-width: 100%;
     }
     /*towel-cooper-how*/
 
@@ -1003,6 +1034,12 @@ section.towel-cooper-how {
         right: 0;
         left: 0;
         margin: auto;
+    }
+    .towel-cooper-why-box-left .towel-cooper-why-box-info {
+        max-width: 100%;
+    }
+    .towel-cooper-why-box-right .towel-cooper-why-box-info {
+        max-width: 100%;
     }
     .towel-cooper-why-box {
         padding: 49vw 10px 0;
