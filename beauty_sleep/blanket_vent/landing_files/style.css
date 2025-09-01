@@ -1,13 +1,13 @@
 /*это не нужно, это временно чтобы удобно было работать*/
-body * {
-    /*transition: none !important;*/
-}
-html {
-    overflow: auto !important;
-}
-html body {
-    overflow: auto !important;
-}
+/*body * {*/
+/*    transition: none !important;*/
+/*}*/
+/*html {*/
+/*    overflow: auto !important;*/
+/*}*/
+/*html body {*/
+/*    overflow: auto !important;*/
+/*}*/
 /*это не нужно, это временно чтобы удобно было работать*/
 
 
@@ -777,7 +777,6 @@ section.vent-features {
 
 /*bottom-toaster*/
 .bottom-toaster {
-    display: none;
     padding: 0 clamp(10px, calc(64 / 1920 * 100vw), 64px);
     height: clamp(56px, calc(80 / 1920 * 100vw), 80px);
     background-color: #fff;
@@ -808,12 +807,19 @@ section.vent-features {
 .bottom-toaster-box-picture img {
     max-height: 100%;
 }
+.bottom-toaster-box-title {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+}
 .bottom-toaster-box-title h3 {
     font-weight: 500;
     font-size: clamp(14px, calc(24 / 1920 * 100vw), 24px);
     line-height: 1.5;
     text-transform: uppercase;
     color: #221D1E;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .bottom-toaster-button {
     flex: 1;
