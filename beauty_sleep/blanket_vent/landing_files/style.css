@@ -984,12 +984,12 @@ section.vent-features {
     .vent-mesh-position-blanket-item {
         overflow: visible;
     }
-    /*.vent-mesh-position-blanket picture {*/
-    /*    height: 100%;*/
-    /*}*/
-    /*.vent-mesh-position-blanket picture img {*/
-    /*    height: 100%;*/
-    /*}*/
+    .vent-mesh-position-blanket picture {
+        height: 322px;
+    }
+    .vent-mesh-position-blanket picture img {
+        height: 322px;
+    }
     .vent-mesh-position-blanket-item {
         display: none;
     }
