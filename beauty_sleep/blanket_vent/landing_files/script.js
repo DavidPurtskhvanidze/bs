@@ -129,37 +129,37 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
+window.addEventListener("DOMContentLoaded", () => {
+    const ventMeshButtons = document.querySelectorAll(".vent-mesh-position-switch-btn");
+    const ventMeshBlocks  = [document.getElementById("fnSingleVent"), document.getElementById("fnDoubleVent")];
 
-const ventMeshButtons = document.querySelectorAll(".vent-mesh-position-switch-btn");
-const ventMeshBlocks  = [document.getElementById("fnSingleVent"), document.getElementById("fnDoubleVent")];
-
-ventMeshButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-        ventMeshButtons.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        ventMeshBlocks.forEach(block => block.classList.remove("active"));
-        const targetId = btn.dataset.target;
-        document.getElementById(targetId).classList.add("active");
+    ventMeshButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            ventMeshButtons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            ventMeshBlocks.forEach(block => block.classList.remove("active"));
+            const targetId = btn.dataset.target;
+            document.getElementById(targetId).classList.add("active");
+        });
     });
+
+
+    function setVideoSources() {
+        const isMobile = window.innerWidth <= 768;
+        const videos = document.querySelectorAll("video");
+
+        videos.forEach(video => {
+            const sources = video.querySelectorAll("source");
+
+            sources.forEach(source => {
+                const src = isMobile ? source.dataset.mobile : source.dataset.desktop;
+                if (src) source.src = src;
+            });
+
+            video.load();
+        });
+    }
+    setVideoSources();
 });
 
-
-function setVideoSources() {
-    const isMobile = window.innerWidth <= 768;
-    const videos = document.querySelectorAll("video");
-
-    videos.forEach(video => {
-        const sources = video.querySelectorAll("source");
-
-        sources.forEach(source => {
-            const src = isMobile ? source.dataset.mobile : source.dataset.desktop;
-            if (src) source.src = src;
-        });
-
-        video.load();
-    });
-}
-
-setVideoSources();
-window.addEventListener("resize", setVideoSources); // при ресайзе
 
