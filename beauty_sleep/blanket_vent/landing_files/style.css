@@ -1,6 +1,6 @@
 /*это не нужно, это временно чтобы удобно было работать*/
 body * {
-    transition: none !important;
+    /*transition: none !important;*/
 }
 html {
     overflow: auto !important;
@@ -261,6 +261,10 @@ body section.vent-how-degradation-section {
     width: 100%;
     height: 100%;
 }
+.vent-how-degradation-list-lines .line,
+.vent-how-degradation-list-lines-mob .line {
+    transition: all 0.1s linear;
+}
 .vent-how-degradation-list {
     position: absolute;
     top: 0;
@@ -351,6 +355,9 @@ body section.vent-different-section {
 }
 .vent-different-section h3 b {
     font-weight: 500;
+}
+.vent-different-section h3 .b-mobile {
+    font-weight: 300;
 }
 
 
@@ -593,12 +600,26 @@ body section.vent-mesh-position-section {
     display: none;
     width: 100%;
     flex:  1 1 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 .vent-mesh-position-blanket-controls button {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 20px;
+    min-width: 95px;
+    height: 28px;
+    background-color: #FFFFFF;
+    border: 1px solid #221D1E;
+    border-radius: 24px;
+    color: #221D1E;
+    cursor: pointer;
 }
 .vent-mesh-position-blanket-controls button.active {
-
+    border: 1px solid #4F6FC1;
+    color: #4F6FC1;
 }
 /*vent-mesh-position-section*/
 
@@ -646,6 +667,11 @@ body section.vent-details {
     gap: 20px;
     /*width: calc(100% / var(--number-of-items) - (var(--gap) * var(--number-of-gaps) / var(--number-of-items)));*/
     width: calc(100% / 3 - (clamp(24px, calc(20/1920*100vw), 20px) * 2 / 3));
+}
+.vent-details-img {
+    aspect-ratio: 612 / 360;
+    overflow: hidden;
+    object-fit: cover;
 }
 .vent-details-img picture {
     display: flex;
@@ -832,6 +858,20 @@ section.vent-features {
 }
 
 @media (max-width: 768px) {
+    .br-mobile {
+        display: block;
+    }
+    .br-desktop {
+        display: none;
+    }
+    .bold-mobile {
+        font-weight: 500;
+    }
+    .bold-desktop {
+        font-weight: 300;
+    }
+
+
     /*vent-tips*/
     .vent-tips-title {
         grid-template-columns: 1fr;
@@ -899,6 +939,9 @@ section.vent-features {
     /*vent-how-work*/
 
     /*vent-mesh-position-section*/
+    body section.vent-mesh-position-section {
+        padding-bottom: 0;
+    }
     .vent-mesh-position-section {
         flex-direction: column;
     }
@@ -906,6 +949,7 @@ section.vent-features {
         width: 100%;
         text-align: center;
         padding-left: 0;
+        margin-bottom: 24px;
     }
     .vent-mesh-position-title h3 {
         text-align: center;
@@ -916,10 +960,39 @@ section.vent-features {
         flex-wrap: wrap;
     }
     .vent-mesh-position-blanket-controls {
-        display: block;
+        margin-top: 24px;
+        display: flex;
     }
     .vent-mesh-position-blanket-height {
         left: -10px;
+    }
+    .vent-mesh-position-section:after {
+        display: none;
+    }
+    .vent-mesh-position-blanket {
+        height: 100%;
+        padding: 0 40px 40px;
+        width: fit-content;
+        margin: auto;
+    }
+    .vent-mesh-position-blanket-item {
+        aspect-ratio: 1/1;
+        overflow: visible;
+    }
+    .vent-mesh-position-blanket picture {
+        height: 100%;
+    }
+    .vent-mesh-position-blanket picture img {
+        height: 100%;
+    }
+    .vent-mesh-position-blanket-item {
+        display: none;
+    }
+    .vent-mesh-position-blanket-item.active {
+        display: flex;
+    }
+    .vent-mesh-position-blanket-title {
+        transform: none;
     }
     /*vent-mesh-position-section*/
 
@@ -1016,6 +1089,9 @@ section.vent-features {
     body section.vent-different-section {
         padding-top: 64px;
     }
+    .vent-different-section h3 .b-mobile {
+        font-weight: 500;
+    }
     /*vent-different*/
 
     /*vent-how-degradation*/
@@ -1028,13 +1104,13 @@ section.vent-features {
         align-items: center;
         justify-content: center;
         position: absolute;
-        top: 9vw;
+        top: 4%;
+        bottom: 4%;
         left: 0;
         right: 0;
         margin: auto;
         width: 100%;
         z-index: -1;
-        bottom: 9vw;
     }
     .vent-how-degradation-list-lines-mob svg {
         width: 83%;
@@ -1079,7 +1155,7 @@ section.vent-features {
     .vent-how-degradation-list li svg {
         width: 48px;
     }
-    .vent-how-degradation-list li.active span {
+    .vent-how-degradation-list li span {
         flex: 1;
     }
     .vent-how-degradation-list-wrapper {
@@ -1089,11 +1165,15 @@ section.vent-features {
     .vent-how-degradation-list li br {
         display: none;
     }
+    .vent-how-degradation-list li span {
+        color: #221D1E;
+    }
     /*vent-how-degradation*/
-
 
 }
 @media (max-width: 576px) {
-
+    .vent-tips-item-text br {
+        display: none;
+    }
 }
 

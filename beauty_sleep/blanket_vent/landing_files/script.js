@@ -44,43 +44,81 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener("DOMContentLoaded", () => {
     const icons = document.querySelectorAll(".vent-how-degradation-list li");
     const paths = document.querySelectorAll(".vent-how-degradation-list-lines .line");
+    const pathGray = document.querySelector("#how-degradation-gray .line");
     const initDashArrays = () => {
         paths.forEach((item, index) => {
             const pathLength = item.getTotalLength();
             item.style.strokeDasharray = pathLength;
         });
+        pathGray.style.strokeDasharray = pathGray.getTotalLength();
     };
 
     const updateDashOffset = () => {
-        // const { offsetFactor, path, pathLength } = getPath();
-        paths.forEach((item, index) => {
 
-            let startOffset;
-            if (index === 0) {
-                startOffset = 1.4;
-            } else {
-                startOffset = 2 * index;
-            }
-            const rect = item.getBoundingClientRect();
+        if (window.innerWidth >= 768) {
+            paths.forEach((item, index) => {
 
-            const startPosition = rect.top - (window.innerHeight / startOffset);
-            const endPosition = window.innerHeight - rect.height;
+                let startOffset;
+                if (index === 0) {
+                    startOffset = 1.4;
+                } else {
+                    startOffset = 2 * index;
+                }
+                const rect = item.getBoundingClientRect();
+
+                const startPosition = rect.top - (window.innerHeight / startOffset);
+                const endPosition = window.innerHeight - rect.height;
+
+                const progress = Math.max(0, Math.min(1, startPosition / endPosition));
+                const offset = paths[index].getTotalLength() * progress;
+
+                item.style.strokeDashoffset = offset;
+
+                if (icons[index]) {
+                    if (progress <= 0) {
+                        icons[index].classList.add("active");
+                    } else {
+                        icons[index].classList.remove("active");
+                    }
+                }
+
+            });
+        }
+
+
+        if (window.innerWidth <= 768) {
+            const rect = document.querySelector("#how-degradation-gray").getBoundingClientRect();
+
+            const startPosition = rect.top - 50;
+            const endPosition = window.innerHeight - rect.height - 50 * 2;
 
             const progress = Math.max(0, Math.min(1, startPosition / endPosition));
-            const offset = paths[index].getTotalLength() * progress;
+            const offset = pathGray.getTotalLength() * progress;
 
-            item.style.strokeDashoffset = offset;
-
-            const n = index.toString();
+            pathGray.style.strokeDashoffset = offset;
 
 
-            if (progress <= 0) {
-                icons[n].classList.add("active");
-            } else {
-                icons[n].classList.remove("active");
-            }
+            icons.forEach((icon, index) => {
+                let threshold;
 
-        });
+                if (index === 0) {
+                    threshold = 0.97;
+                } else if (index === 1) {
+                    threshold = 0.70;
+                } else if (index === 2) {
+                    threshold = 0.35;
+                } else {
+                    threshold = 0.01;
+                }
+
+                if (progress < threshold) {
+                    icon.classList.add("active");
+                } else {
+                    icon.classList.remove("active");
+                }
+            });
+        }
+
     };
 
     window.addEventListener("resize", updateDashOffset);
@@ -89,4 +127,39 @@ window.addEventListener("DOMContentLoaded", () => {
     initDashArrays();
     updateDashOffset();
 });
+
+
+
+const ventMeshButtons = document.querySelectorAll(".vent-mesh-position-switch-btn");
+const ventMeshBlocks  = [document.getElementById("fnSingleVent"), document.getElementById("fnDoubleVent")];
+
+ventMeshButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        ventMeshButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        ventMeshBlocks.forEach(block => block.classList.remove("active"));
+        const targetId = btn.dataset.target;
+        document.getElementById(targetId).classList.add("active");
+    });
+});
+
+
+function setVideoSources() {
+    const isMobile = window.innerWidth <= 768;
+    const videos = document.querySelectorAll("video");
+
+    videos.forEach(video => {
+        const sources = video.querySelectorAll("source");
+
+        sources.forEach(source => {
+            const src = isMobile ? source.dataset.mobile : source.dataset.desktop;
+            if (src) source.src = src;
+        });
+
+        video.load();
+    });
+}
+
+setVideoSources();
+window.addEventListener("resize", setVideoSources); // при ресайзе
 
