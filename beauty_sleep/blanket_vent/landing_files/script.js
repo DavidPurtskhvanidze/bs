@@ -133,15 +133,17 @@ window.addEventListener("DOMContentLoaded", () => {
     const ventMeshButtons = document.querySelectorAll(".vent-mesh-position-switch-btn");
     const ventMeshBlocks  = [document.getElementById("fnSingleVent"), document.getElementById("fnDoubleVent")];
 
-    ventMeshButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            ventMeshButtons.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-            ventMeshBlocks.forEach(block => block.classList.remove("active"));
-            const targetId = btn.dataset.target;
-            document.getElementById(targetId).classList.add("active");
-        });
+    document.addEventListener("click", e => {
+        const btn = e.target.closest(".vent-mesh-position-switch-btn");
+        if (!btn) return;
+
+        ventMeshButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        ventMeshBlocks.forEach(block => block.classList.remove("active"));
+        document.getElementById(btn.dataset.target)?.classList.add("active");
     });
+
 
 
     function setVideoSources() {

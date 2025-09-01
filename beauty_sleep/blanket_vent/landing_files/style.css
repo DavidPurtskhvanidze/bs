@@ -982,7 +982,6 @@ section.vent-features {
         margin: auto;
     }
     .vent-mesh-position-blanket-item {
-        aspect-ratio: 1/1;
         overflow: visible;
     }
     .vent-mesh-position-blanket picture {
@@ -996,6 +995,7 @@ section.vent-features {
     }
     .vent-mesh-position-blanket-item.active {
         display: flex;
+        width: 100%;
     }
     .vent-mesh-position-blanket-title {
         transform: none;
@@ -1010,7 +1010,7 @@ section.vent-features {
         margin-bottom: 0;
     }
     .vent-details-item {
-       width: 100%;
+        width: 100%;
     }
     .vent-details-img {
         overflow: hidden;
