@@ -147,7 +147,7 @@ body section.vent-tips {
 
 /*vent-video-section*/
 body section.vent-video-section {
-    margin: 0 auto clamp(64px, calc(96/1920*100vw), 96px);
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -224,13 +224,17 @@ body section.vent-video-section {
 
 /*vent-how-degradation-section*/
 body section.vent-how-degradation-section {
+    position: relative;
+    margin-top: 0;
+    padding-bottom: 32px;
+}
+.vent-how-degradation-sticky {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 0;
+    justify-content: center;
+    padding-top: clamp(64px, calc(96/1920*100vw), 96px);
     padding-right: clamp(10px, calc(20 / 1920 * 100vw), 20px);
-    padding-bottom: 32px;
-    position: relative;
+    position: sticky;
 }
 .vent-how-degradation-list-lines-mob {
     display: none;
@@ -260,6 +264,8 @@ body section.vent-how-degradation-section {
 .vent-how-degradation-list-wrapper .vent-how-degradation-list-lines svg {
     width: 100%;
     height: 100%;
+    position: relative;
+    left: -5px;
 }
 .vent-how-degradation-list-lines .line,
 .vent-how-degradation-list-lines-mob .line {
@@ -271,7 +277,7 @@ body section.vent-how-degradation-section {
     left: 0;
     bottom: 0;
     display: grid;
-    grid-template-rows: 0.8fr 1fr 1fr 1fr;
+    grid-template-rows: 0.8fr 1fr 1fr 1.1fr;
     align-items: start;
     width: 100%;
 }
@@ -320,12 +326,13 @@ body section.vent-how-degradation-section {
     font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
     line-height: clamp(20px, calc(28 / 1920 * 100vw), 28px);
     color: #D3D2D2;
+    flex: 1;
 }
 .vent-how-degradation-list li.active span {
     color: #221D1E;
 }
 .vent-how-degradation-title {
-
+    width: 100%;
 }
 .vent-how-degradation-title h3 {
     font-weight: 300;
@@ -372,10 +379,10 @@ body section.vent-different-section {
     content: '';
     display: block;
     background-color: #fff;
-    width: clamp(2px, calc(6 / 1920 * 100vw), 6px);
+    width: clamp(2px, calc(4 / 1920 * 100vw), 4px);
     height: 100%;
     top: 0;
-    right: -3px;
+    right: 0;
     bottom: 0;
     position: absolute;
 }
@@ -411,6 +418,7 @@ body section.vent-different-section {
     background-size: contain;
     background-position: center;
     border-radius: 50%;
+    transform: translateX(-4%);
 }
 /*vent-different-section*/
 
@@ -571,7 +579,7 @@ body section.vent-mesh-position-section {
 .vent-mesh-position-blanket-height {
     transform: rotate(-90deg) translateX(10%);
     position: absolute;
-    left: -52px;
+    left: -49px;
     font-weight: 500;
     font-size: clamp(8px, calc(18 / 1920 * 100vw), 18px);
     line-height: clamp(10px, calc(28 / 1920 * 100vw), 28px);
@@ -858,6 +866,15 @@ section.vent-features {
 }
 /*bottom-toaster*/
 
+@media screen and (max-width: 1500px) {
+    .vent-how-degradation-title {
+        width: auto;
+    }
+    .vent-how-degradation-list li span {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
 
 @media screen and (max-width: 1279px) {
 
@@ -1102,8 +1119,13 @@ section.vent-features {
 
     /*vent-how-degradation*/
     body section.vent-how-degradation-section {
-        flex-direction: column-reverse;
         padding-right: 0;
+        height: auto !important;
+    }
+    .vent-how-degradation-sticky {
+        flex-direction: column-reverse;
+        position: static;
+        padding-top: 0;
     }
     .vent-how-degradation-list-lines-mob {
         display: flex;

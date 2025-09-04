@@ -45,47 +45,70 @@ window.addEventListener("DOMContentLoaded", () => {
     const icons = document.querySelectorAll(".vent-how-degradation-list li");
     const paths = document.querySelectorAll(".vent-how-degradation-list-lines .line");
     const pathGray = document.querySelector("#how-degradation-gray .line");
+    const stickyContainerParent = document.querySelector('.vent-how-degradation-section');
+    const stickyContainer = document.querySelector(".vent-how-degradation-sticky");
+    const headerHeight = document.querySelector("header.header").offsetHeight;
+
+
+    const updateSizes = () => {
+        if (window.innerWidth >= 768) {
+            stickyContainerParent.style.height = (stickyContainer.offsetHeight * 2.6) + 'px';
+            stickyContainer.style.top = headerHeight + 'px';
+        }
+    }
+
     const initDashArrays = () => {
-        paths.forEach((item, index) => {
-            const pathLength = item.getTotalLength();
-            item.style.strokeDasharray = pathLength;
-        });
         pathGray.style.strokeDasharray = pathGray.getTotalLength();
     };
 
-    const updateDashOffset = () => {
+    gsap.registerPlugin(ScrollTrigger);
 
-        if (window.innerWidth >= 768) {
-            paths.forEach((item, index) => {
-
-                let startOffset;
-                if (index === 0) {
-                    startOffset = 1.4;
-                } else {
-                    startOffset = 2 * index;
-                }
-                const rect = item.getBoundingClientRect();
-
-                const startPosition = rect.top - (window.innerHeight / startOffset);
-                const endPosition = window.innerHeight - rect.height;
-
-                const progress = Math.max(0, Math.min(1, startPosition / endPosition));
-                const offset = paths[index].getTotalLength() * progress;
-
-                item.style.strokeDashoffset = offset;
-
-                if (icons[index]) {
-                    if (progress <= 0) {
-                        icons[index].classList.add("active");
-                    } else {
-                        icons[index].classList.remove("active");
-                    }
-                }
-
-            });
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".vent-how-degradation-section",
+            start: "top top+=50%",
+            end: "bottom bottom",
+            scrub: true,
         }
+    });
+
+    const ACTIVATE_AT  = 0.999;
+    const DELTA_REVERSE = 0.001;
+
+    paths.forEach((item, index) => {
+        const length = item.getTotalLength();
+        gsap.set(item, {
+            strokeDasharray: length,
+            strokeDashoffset: length - 1
+        });
+
+        const iconEl = icons[index];
+        const state  = { prev: 0, active: false };
+
+        tl.to(item, {
+            strokeDashoffset: 0,
+            duration: 1.3,
+            ease: "none",
+            onUpdate: function () {
+                if (!iconEl) return;
+
+                const p = this.progress();
+
+                if (!state.active && p >= ACTIVATE_AT) {
+                    iconEl.classList.add("active");
+                    state.active = true;
+                }
+                if (state.active && p < state.prev - DELTA_REVERSE) {
+                    iconEl.classList.remove("active");
+                    state.active = false;
+                }
+                state.prev = p;
+            }
+        }, index);
+    });
 
 
+    const updateDashOffset = () => {
         if (window.innerWidth <= 768) {
             const rect = document.querySelector("#how-degradation-gray").getBoundingClientRect();
 
@@ -121,9 +144,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
     };
 
+    window.addEventListener("resize", updateSizes);
     window.addEventListener("resize", updateDashOffset);
     window.addEventListener("scroll", updateDashOffset);
 
+    updateSizes();
     initDashArrays();
     updateDashOffset();
 });
