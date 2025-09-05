@@ -1,3 +1,4 @@
+//for Diff slider
 document.addEventListener('DOMContentLoaded', () => {
     const overlays = document.querySelectorAll('.vent-different-comp-overlay');
 
@@ -6,17 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const width = container.offsetWidth;
         const height = container.offsetHeight;
 
-        // начальная ширина половина
         overlay.style.width = width / 1.3 + 'px';
 
-        // создаем разделитель
         const slider = document.createElement('div');
         slider.className = 'vent-different-comp-slider';
         container.insertBefore(slider, overlay);
         slider.style.top = height / 2 - slider.offsetHeight / 2 + 'px';
         slider.style.left = width / 1.3 - slider.offsetWidth / 2 + 'px';
 
-        // обработка движения мыши
         container.addEventListener('mousemove', e => {
             const rect = container.getBoundingClientRect();
             const x = e.clientX - rect.left;
@@ -24,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
             updateSlider(pos);
         });
 
-        // поддержка тач
         container.addEventListener('touchmove', e => {
             const rect = container.getBoundingClientRect();
             const x = e.touches[0].clientX - rect.left;
@@ -39,8 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-/*- hormones-section -*/
+//for lines animation
 window.addEventListener("DOMContentLoaded", () => {
     const icons = document.querySelectorAll(".vent-how-degradation-list li");
     const paths = document.querySelectorAll(".vent-how-degradation-list-lines .line");
@@ -153,7 +149,7 @@ window.addEventListener("DOMContentLoaded", () => {
     updateDashOffset();
 });
 
-
+//for switch tabs
 window.addEventListener("DOMContentLoaded", () => {
     const ventMeshButtons = document.querySelectorAll(".vent-mesh-position-switch-btn");
     const ventMeshBlocks  = [document.getElementById("fnSingleVent"), document.getElementById("fnDoubleVent")];
@@ -168,9 +164,10 @@ window.addEventListener("DOMContentLoaded", () => {
         ventMeshBlocks.forEach(block => block.classList.remove("active"));
         document.getElementById(btn.dataset.target)?.classList.add("active");
     });
+});
 
-
-
+//for video
+window.addEventListener("DOMContentLoaded", () => {
     function setVideoSources() {
         const isMobile = window.innerWidth <= 768;
         const videos = document.querySelectorAll("video");

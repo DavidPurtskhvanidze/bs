@@ -680,9 +680,16 @@ body section.vent-details {
     aspect-ratio: 612 / 360;
     overflow: hidden;
     object-fit: cover;
+    width: 100%;
 }
 .vent-details-img picture {
     display: flex;
+    min-width: 100%;
+    min-height: 100%;
+}
+.vent-details-img video {
+    min-width: 100%;
+    min-height: 100%;
 }
 .vent-details-info {
     display: flex;
