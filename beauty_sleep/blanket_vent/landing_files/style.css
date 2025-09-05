@@ -154,7 +154,6 @@ body section.vent-video-section {
     aspect-ratio: 1920 / 580;
     width: 100%;
     height: 100%;
-    background-color: darkcyan;
     position: relative;
 }
 .vent-video-section:before {
@@ -977,6 +976,13 @@ section.vent-features {
     .vent-how-air-mesh {
         aspect-ratio: 360 / 418;
         align-items: start;
+        overflow: hidden;
+    }
+    .vent-how-air-mesh video {
+        object-fit: cover;
+        width: 100%;
+        height: calc(100% + 4px);
+        position: relative;
     }
     .vent-how-air-mesh-text {
         margin-top: 32px;
