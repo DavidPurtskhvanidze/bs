@@ -5,6 +5,9 @@
     position: relative;
     height: var(--baner-height);
 }
+a.picture-big-icon:hover .banner-bg-picture:before {
+    background-color: rgba(0, 0, 0, 0.1);
+}
 .picture-big-icon__icon-wrapper {
     position: absolute;
     color: var(--color-accent);
