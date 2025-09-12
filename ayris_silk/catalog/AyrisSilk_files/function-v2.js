@@ -295,7 +295,7 @@ function editDistance(s1, s2) {
 function initScrollActions() {
     if ($(this).scrollTop() != 0) {
         header.addClass('fixed');
-        $('header.fixed .logo img').attr('src', 'assets/tpl/icon/logo.svg');
+        $('header.fixed .logo img').attr('src', '../files/logo.svg');
         $('#msMiniCart > *').css({ 'background-image': "url(assets/tpl/icon/cart.svg#black)" })
     } else {
         header.removeClass('fixed');
@@ -542,7 +542,7 @@ $(document).ready(function () {
                 else {
                     $('header').removeClass('inverse');
                     $('.header').removeClass('inverse');
-                    $('.header .logo img').attr('src', 'assets/tpl/icon/logo.svg')
+                    $('.header .logo img').attr('src', '../files/logo.svg')
                     $('#msMiniCart > *').css({ 'background-image': "url(assets/tpl/icon/cart.svg#black)" })
                     $('#slider').removeClass('inverse');
                 }
@@ -976,6 +976,7 @@ $(document).ready(function () {
 });
 
 $(window).resize(function () {
+    console.log('awawa')
     initTabSwiper();
     paddingBody();
 });

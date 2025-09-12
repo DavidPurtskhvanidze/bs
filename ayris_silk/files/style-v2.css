@@ -2218,7 +2218,7 @@ header.fixed .menu a:active,
     width: 30px;
     height: 30px;
     background: no-repeat center;
-    background-image: url(../icon/cart.svg#black);
+    background-image: url(../files/cart.svg#black);
     position: relative;
     background-size: contain;
 }

@@ -1,0 +1,654 @@
+
+
+/*hyaluron-hero-img*/
+#hyaluron-hero-img {
+    margin-bottom: clamp(40px, calc(64/1440*100vw), 64px);
+}
+#hyaluron-hero-img picture {
+
+}
+/*hyaluron-hero-img*/
+
+/*hyaluron-inova*/
+.hyaluron-inova-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(40px, calc(64/1440*100vw), 64px);
+    margin-bottom: clamp(40px, calc(64/1440*100vw), 64px);
+}
+.hyaluron-inova-info h3 {
+    font-weight: 500;
+    font-size: clamp(15px, calc(22/1440*100vw), 22px);
+    line-height: clamp(22px, calc(26/1440*100vw), 26px);
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: clamp(10px, calc(20/1440*100vw), 20px);
+}
+.hyaluron-inova-info p {
+    font-family: "Bitter", serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    color: #3C3C3B;
+}
+.hyaluron-inova-img {
+
+}
+.hyaluron-inova-img picture {
+    max-width: 484px;
+    display: flex;
+}
+/*hyaluron-inova*/
+
+/*hyaluron-tip*/
+#hyaluron-tip {
+    background-color: #F4EEE6;
+    text-align: center;
+    padding: clamp(24px, calc(30/1440*100vw), 30px) 10px;
+}
+#hyaluron-tip h3 {
+    font-weight: 500;
+    font-size: clamp(15px, calc(22/1440*100vw), 22px);
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+/*hyaluron-tip*/
+
+/*hyaluron-2in1*/
+#hyaluron-2in1 {
+    padding-top: clamp(60px, calc(128/1440*100vw), 128px);
+    margin-bottom: clamp(60px, calc(128/1440*100vw), 128px);
+}
+.hyaluron-2in1-box {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    margin-top: clamp(20px, calc(60/1440*100vw), 60px);
+    padding: 32px 20px;
+    gap: 40px;
+    width: 100%;
+    min-height: 210px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 0.25px solid #FFF8EC;
+    box-shadow: 0px 22.3363px 17.869px rgba(144, 119, 93, 0.0357664), 0px 12.5216px 10.0172px rgba(144, 119, 93, 0.03);
+    border-radius: 16px;
+}
+.hyaluron-2in1-info-start {
+    text-align: end;
+    position: relative;
+}
+.hyaluron-2in1-info-start picture {
+    position: absolute;
+    top: -15vw;
+    left: -5vw;
+    display: flex;
+}
+.hyaluron-2in1-info-start h4 {
+    font-family: "Bitter", serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: end;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: clamp(10px, calc(16/1440*100vw), 16px);
+}
+.hyaluron-2in1-info-start p {
+    font-weight: 400;
+    font-size: clamp(12px, calc(15/1440*100vw), 15px);
+    line-height: clamp(18px, calc(26/1440*100vw), 26px);
+    text-align: right;
+    color: #000000;
+}
+.hyaluron-2in1-title {
+    font-weight: 300;
+    font-size: 120px;
+    line-height: 146px;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.hyaluron-2in1-title span {
+    font-size: 60px;
+    line-height: 146px;
+}
+.hyaluron-2in1-info-end {
+    position: relative;
+}
+.hyaluron-2in1-info-end picture {
+    position: absolute;
+    top: -14vw;
+    right: -4vw;
+    display: flex;
+}
+.hyaluron-2in1-info-end h4 {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: start;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: clamp(10px, calc(16/1440*100vw), 16px);
+}
+.hyaluron-2in1-info-end p {
+    font-weight: 400;
+    font-size: clamp(12px, calc(15/1440*100vw), 15px);
+    line-height: clamp(18px, calc(26/1440*100vw), 26px);
+    text-align: start;
+    color: #000000;
+}
+/*hyaluron-2in1*/
+
+/*hyaluron-gold-standard*/
+#hyaluron-gold-standard {
+    margin-bottom: clamp(60px, calc(128/1440*100vw), 128px);
+}
+.hyaluron-gold-standard-title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #3C3C3B;
+    margin-bottom: clamp(24px, calc(64/1440*100vw), 64px);
+    text-align: center;
+}
+.hyaluron-gold-standard-title span {
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%), #3C3C3B;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.hyaluron-gold-standard-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(24px, calc(40/1440*100vw), 40px);
+}
+.hyaluron-gold-standard-img {
+    position: relative;
+    overflow: hidden;
+}
+.hyaluron-gold-standard-img picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.hyaluron-gold-standard-img picture img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.hyaluron-gold-standard-info {
+
+}
+.hyaluron-list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(24px, calc(32/1440*100vw), 32px);
+}
+.hyaluron-list li {
+    display: flex;
+    align-items: start;
+    gap: clamp(10px, calc(20/1440*100vw), 20px);
+}
+.hyaluron-list-icon {
+    width: clamp(64px, calc(80/1440*100vw), 80px);
+}
+.hyaluron-list-icon img {
+    width: 100%;
+}
+.hyaluron-list-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: clamp(4px, calc(12/1440*100vw), 12px);
+}
+.hyaluron-list-content span {
+    color: #B2B2B2;
+    font-weight: 300;
+}
+.hyaluron-list-content h4 {
+    font-weight: 600;
+    font-size: clamp(12px, calc(15/1440*100vw), 15px);
+    line-height: clamp(15px, calc(18/1440*100vw), 18px);
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.hyaluron-list-content span {
+    font-weight: 300;
+    font-size: clamp(12px, calc(15/1440*100vw), 15px);
+    line-height: clamp(18px, calc(22/1440*100vw), 22px);
+    color: #3C3C3B;
+}
+/*hyaluron-gold-standard*/
+
+/*hyaluron-clinic*/
+#hyaluron-clinic {
+    margin-bottom: clamp(60px, calc(128/1440*100vw), 128px);
+}
+.hyaluron-clinic-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(24px, calc(64/1440*100vw), 64px);
+}
+.hyaluron-clinic-wrapper h3 {
+    font-weight: 500;
+    font-size: clamp(15px, calc(22/1440*100vw), 22px);
+    line-height: 22px;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-align: center;
+}
+.hyaluron-clinic-wrapper h4 {
+    font-weight: 600;
+    font-size: clamp(12px, calc(15/1440*100vw), 15px);
+    line-height: clamp(15px, calc(18/1440*100vw), 18px);
+    text-align: center;
+    text-transform: uppercase;
+    color: #3C3C3B;
+}
+.hyaluron-clinic-percent {
+
+}
+.hyaluron-clinic-percent ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.hyaluron-clinic-percent ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: clamp(10px, calc(32/1440*100vw), 32px);
+}
+.hyaluron-clinic-percent-count {
+    font-weight: 300;
+    font-size: clamp(50px, calc(80/1440*100vw), 80px);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.hyaluron-clinic-percent-count span {
+    font-size: 0.8em;
+    line-height: 1;
+}
+.hyaluron-clinic-percent-text {
+    font-weight: 600;
+    font-size: clamp(12px, calc(15/1440*100vw), 15px);
+    line-height: clamp(15px, calc(18/1440*100vw), 18px);
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+/*hyaluron-clinic*/
+
+/*hyaluron-wakeup*/
+#hyaluron-wakeup {
+    margin-bottom: clamp(60px, calc(128/1440*100vw), 128px);
+}
+.hyaluron-wakeup-title {
+    font-weight: 500;
+    font-size: clamp(15px, calc(22/1440*100vw), 22px);
+    margin-bottom: clamp(24px, calc(48/1440*100vw), 48px);
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.hyaluron-wakeup-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    align-items: start;
+}
+.hyaluron-wakeup-img {
+    position: relative;
+    height: 100%;
+}
+.hyaluron-wakeup-img picture {
+    display: flex;
+    height: 100%;
+}
+.hyaluron-wakeup-img picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hyaluron-wakeup-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-left: 3vw;
+}
+.hyaluron-wakeup-info-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 48px;
+}
+.hyaluron-wakeup-info-list li {
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+    position: relative;
+}
+.hyaluron-wakeup-info-list-icon {
+    width: 100px;
+    position: relative;
+}
+.hyaluron-wakeup-info-list-line {
+    position: absolute;
+    width: 65%;
+    transform: translateX(-104%);
+}
+.hyaluron-wakeup-info-list li:nth-child(2) .hyaluron-wakeup-info-list-line {
+    bottom: 44%;
+    width: 55%;
+}
+.hyaluron-wakeup-info-list li:nth-child(3) .hyaluron-wakeup-info-list-line {
+    bottom: 44%;
+}
+.hyaluron-wakeup-info-list-description {
+    flex: 1;
+}
+.hyaluron-wakeup-info-list-description h4 {
+    margin-bottom: clamp(4px, calc(12/1440*100vw), 12px);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.hyaluron-wakeup-info-list-description p {
+    font-weight: 300;
+    font-size: clamp(12px, calc(15/1440*100vw), 15px);
+    line-height: clamp(15px, calc(22/1440*100vw), 22px);
+    align-items: center;
+    color: #3C3C3B;
+}
+/*hyaluron-wakeup*/
+
+/*hyaluron-tech*/
+#hyaluron-tech {
+    margin-bottom: clamp(60px, calc(128/1440*100vw), 128px);
+}
+.hyaluron-tech-wrapper {
+
+}
+.hyaluron-tech-title-mob {
+    display: none;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 24px;
+}
+.hyaluron-tech-1 {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+.hyaluron-tech-1-info {
+
+}
+.hyaluron-tech-1-info h3 {
+    font-weight: 500;
+    font-size: clamp(15px, calc(22/1440*100vw), 22px);
+    line-height: 22px;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: clamp(32px, calc(64/1440*100vw), 64px);
+}
+.hyaluron-tech-1-info-box {
+    display: flex;
+    gap: clamp(10px, calc(20/1440*100vw), 20px);
+}
+.hyaluron-tech-1-info-box span:first-child {
+    font-weight: 300;
+    font-size: clamp(52px, calc(100/1440*100vw), 100px);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.hyaluron-tech-1-info-box span:last-child {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+    color: #3C3C3B;
+    padding-top: 1em;
+}
+.hyaluron-tech-1-video {
+    aspect-ratio: 650/400;
+    overflow: hidden;
+}
+.hyaluron-tech-1-video video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.hyaluron-tech-2-info-box {
+    display: flex;
+    gap: clamp(10px, calc(20/1440*100vw), 20px);
+}
+.hyaluron-tech-2-info-box span:first-child {
+    font-weight: 300;
+    font-size: clamp(52px, calc(100/1440*100vw), 100px);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.hyaluron-tech-2-info-box span:last-child {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+    color: #3C3C3B;
+    padding-top: 1em;
+}
+.hyaluron-tech-2 {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+.hyaluron-tech-2-img {
+    aspect-ratio: 650/400;
+    overflow: hidden;
+}
+.hyaluron-tech-2-img picture {
+    display: flex;
+}
+.hyaluron-tech-2-img picture img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/*hyaluron-tech*/
+
+/*hyaluron-firma-silk*/
+#hyaluron-firma-silk {
+    margin-bottom: clamp(60px, calc(128/1440*100vw), 128px);
+}
+.hyaluron-firma-silk-title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: clamp(24px, calc(64 / 1440 * 100vw), 64px);
+}
+.hyaluron-firma-silk-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(24px, calc(40 / 1440 * 100vw), 40px);
+}
+.hyaluron-firma-silk-video {
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hyaluron-firma-silk-video video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+/*hyaluron-firma-silk*/
+
+/*hyaluron-collection*/
+#hyaluron-collection {
+    margin-bottom: clamp(60px, calc(128/1440*100vw), 128px);
+}
+#hyaluron-collection h3 {
+    font-weight: 500;
+    font-size: clamp(14px, calc(15/1440*100vw), 15px);
+    line-height: clamp(20px, calc(27/1440*100vw), 27px);
+    text-transform: uppercase;
+    color: #3C3C3B;
+    margin-bottom: clamp(20px, calc(16/1440*100vw), 16px);
+}
+/*hyaluron-collection*/
+
+/*hyaluron-skin-defence*/
+#hyaluron-skin-defence {
+
+}
+.hyaluron-skin-defence-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #FAEFE8;
+}
+.hyaluron-skin-defence-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.hyaluron-skin-defence-info h4 {
+    font-family: 'Bitter', serif;
+    font-weight: 600;
+    font-size: 43px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%), #3C3C3B;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.hyaluron-skin-defence-info h4 span {
+    font-size: 50px;
+    line-height: 100%;
+}
+.hyaluron-skin-defence-info span {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #3C3C3B;
+}
+.hyaluron-skin-defence-img {
+
+}
+/*hyaluron-skin-defence*/
+
+
+@media screen and (max-width: 1500px) {
+
+}
+@media screen and (max-width: 1279px) {
+
+}
+@media (max-width: 768px) {
+    /*hyaluron-tech*/
+    .hyaluron-tech-title-mob {
+        display: inline-block;
+    }
+    .hyaluron-tech-1-info h3 {
+        display: none;
+    }
+    /*hyaluron-tech*/
+}
+@media (max-width: 576px) {
+
+}

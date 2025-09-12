@@ -1,6 +1,11 @@
 $.fancybox.defaults.thumbs.autoStart = true
 $.fancybox.defaults.thumbs.axis = 'x'
 
+var body = $('body');
+var header = $('header');
+var to_top = $('#panel .up');
+var tab_slider = undefined;
+
 
 if($('.cards-slider').length) initCardsSlider();
 
@@ -295,13 +300,13 @@ function editDistance(s1, s2) {
 function initScrollActions() {
     if ($(this).scrollTop() != 0) {
         header.addClass('fixed');
-        $('header.fixed .logo img').attr('src', 'assets/tpl/icon/logo.svg');
-        $('#msMiniCart > *').css({ 'background-image': "url(assets/tpl/icon/cart.svg#black)" })
+        $('header.fixed .logo img').attr('src', '../files/logo.svg');
+        $('#msMiniCart > *').css({ 'background-image': "url(../files/cart.svg#black)" })
     } else {
         header.removeClass('fixed');
         if($('.header.inverse').length) {
             $('header .logo img').attr('src', 'assets/tpl/icon/logo_inverse.svg');
-            $('#msMiniCart > *').css({ 'background-image': 'url("assets/tpl/icon/cart.svg#caramel")' });
+            $('#msMiniCart > *').css({ 'background-image': 'url("../files/cart.svg#caramel")' });
         }
     }
     if ($(this).scrollTop() > 100) {
@@ -316,6 +321,7 @@ function paddingBody() {
         $('body').css({ "padding-top": header.outerHeight() + 'px' })
     }
 }
+
 
 function initTabSwiper() {
     if(!$('.tabs .swiper-container').length) return;
@@ -410,10 +416,6 @@ $(document).on('af_complete', function (event, response) {
     }
 });
 
-var body = $('body');
-var header = $('header');
-var to_top = $('#panel .up');
-var tab_slider = undefined;
 
 $(document).ready(function () {
 
@@ -542,7 +544,7 @@ $(document).ready(function () {
                 // else {
                 //     $('header').removeClass('inverse');
                 //     $('.header').removeClass('inverse');
-                //     $('.header .logo img').attr('src', 'assets/tpl/icon/logo.svg')
+                //     $('.header .logo img').attr('src', '../files/logo.svg')
                 //     $('#msMiniCart > *').css({ 'background-image': "url(assets/tpl/icon/cart.svg#black)" })
                 //     $('#slider').removeClass('inverse');
                 // }
