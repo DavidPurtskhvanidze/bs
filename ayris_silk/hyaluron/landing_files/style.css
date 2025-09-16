@@ -683,6 +683,15 @@
         bottom: 6%;
     }
     /*hyaluron-2in1*/
+
+    /*hyaluron-tech*/
+    .hyaluron-tech-1-info-box br {
+        display: none;
+    }
+    .hyaluron-tech-2-info-box br {
+        display: none;
+    }
+    /*hyaluron-tech*/
 }
 @media (max-width: 768px) {
     .br-mobile {
@@ -831,6 +840,10 @@
     .hyaluron-tech-1-info-box {
         padding: 0 20px;
     }
+    .hyaluron-tech-1-info-box span:first-child {
+        position: relative;
+        margin-top: -0.07em;
+    }
     .hyaluron-tech-2 {
         display: flex;
         flex-direction: column;
@@ -841,6 +854,13 @@
     }
     .hyaluron-tech-2-info-box {
         padding: 0 20px;
+    }
+    .hyaluron-tech-2-info-box span:first-child {
+        position: relative;
+        margin-top: -0.07em;
+    }
+    .hyaluron-tech-1-info-box span:last-child {
+        padding-top: 0;
     }
     .hyaluron-tech-2-info-box span:last-child {
         padding-top: 0;
