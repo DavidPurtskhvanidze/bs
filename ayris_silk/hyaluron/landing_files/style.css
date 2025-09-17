@@ -628,13 +628,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: clamp(16px, calc(30/1440*100vw), 30px);
+    gap: clamp(20px, calc(30/1440*100vw), 30px);
     padding-right: clamp(16px, calc(30/1440*100vw), 30px);
 }
 .hyaluron-skin-defence-info h4 {
     font-family: 'Bitter', serif;
     font-weight: 600;
-    font-size: clamp(24px, calc(43/1440*100vw), 43px);
+    font-size: clamp(20px, calc(43/1440*100vw), 43px);
     line-height: 100%;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -646,12 +646,12 @@
     text-align: center;
 }
 .hyaluron-skin-defence-info h4 span {
-    font-size: clamp(32px, calc(50/1440*100vw), 50px);
+    font-size: clamp(20px, calc(50/1440*100vw), 50px);
     line-height: 100%;
 }
 .hyaluron-skin-defence-info span {
     font-weight: 500;
-    font-size: clamp(14px, calc(20/1440*100vw), 20px);
+    font-size: clamp(15px, calc(20/1440*100vw), 20px);
     line-height: clamp(18px, calc(24/1440*100vw), 24px);
     text-align: center;
     text-transform: uppercase;
@@ -887,8 +887,12 @@
     /*hyaluron-firma*/
 
     /*hyaluron-skin-defence*/
-    #hyaluron-skin-defence {
-        display: none;
+    .hyaluron-skin-defence-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .hyaluron-skin-defence-info {
+        padding: 20px 0;
     }
     /*hyaluron-skin-defence*/
 
