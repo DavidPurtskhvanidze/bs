@@ -389,14 +389,14 @@
 .post-author-info-title {
     font-weight: 500;
     font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
-    line-height: 1.5;
+    line-height: clamp(20px, calc(28 / 1920 * 100vw), 28px);
     text-transform: uppercase;
     color: #221D1E;
 }
 .post-author-info-author {
     font-weight: 300;
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: clamp(10px, calc(14 / 1920 * 100vw), 14px);
+    line-height: 18px;
     color: #BCBDC2;
 }
 .post-author-info-author cite {
