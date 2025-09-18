@@ -648,6 +648,7 @@
 .hyaluron-skin-defence-info h4 span {
     font-size: clamp(20px, calc(50/1440*100vw), 50px);
     line-height: 100%;
+    font-weight: 600;
 }
 .hyaluron-skin-defence-info span {
     font-weight: 500;
@@ -887,6 +888,9 @@
     /*hyaluron-firma*/
 
     /*hyaluron-skin-defence*/
+    #hyaluron-skin-defence .container {
+        padding: 0 20px;
+    }
     .hyaluron-skin-defence-wrapper {
         display: flex;
         flex-direction: column-reverse;
