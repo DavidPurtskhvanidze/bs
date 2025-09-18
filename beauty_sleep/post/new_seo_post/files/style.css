@@ -399,10 +399,6 @@
     line-height: 18px;
     color: #BCBDC2;
 }
-.post-author-info-author cite {
-    font-style: normal;
-    text-decoration: underline;
-}
 .post-author-info-logo svg {
     width: clamp(104px, calc(272 / 1920 * 100vw), 272px);
 }
