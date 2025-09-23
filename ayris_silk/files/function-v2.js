@@ -551,18 +551,18 @@ $(document).ready(function () {
             }
         },
     });
-    
-    product_thumbs = new Swiper('#product:not(.two-row) .product-nav', {
-        slidesPerView: 4,
-        spaceBetween: 10,
-        loop: false,
-        //lazy: { loadPrevNext: true },
-        breakpoints: {
-            1000: {
-                spaceBetween: 18,
-            }
-        }
-    });
+
+    // product_thumbs = new Swiper('#product:not(.two-row) .product-nav', {
+    //     slidesPerView: 4,
+    //     spaceBetween: 10,
+    //     loop: false,
+    //     //lazy: { loadPrevNext: true },
+    //     breakpoints: {
+    //         1000: {
+    //             spaceBetween: 18,
+    //         }
+    //     }
+    // });
 
     /*если используется 1 ряд миниатюр*/
     product_for = new Swiper('#product:not(.two-row) .product-for', {

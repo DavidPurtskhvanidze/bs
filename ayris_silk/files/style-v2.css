@@ -1183,11 +1183,11 @@ body .ui-spinner input {
 }
 
 .ui-spinner .ui-spinner-up .ui-icon {
-    background-image: url(../icon/uibutton.svg#plus) !important;
+    background-image: url(../files/uibutton.svg#plus) !important;
 }
 
 .ui-spinner .ui-spinner-down .ui-icon {
-    background-image: url(../icon/uibutton.svg#minus) !important;
+    background-image: url(../files/uibutton.svg#minus) !important;
 }
 
 /*DATA-ICON*/
@@ -1366,7 +1366,7 @@ body.fancybox-active {
 .content-text ul > li::before {
     position: absolute;
     content: "";
-    background: url(../icon/li.svg);
+    background: url(../files/li.svg);
     width: 12px;
     height: 14px;
     left: -25px;
@@ -3281,11 +3281,11 @@ nav .more {
 }
 
 #product .produt__info__fix .ui-spinner .ui-spinner-up .ui-icon {
-    background-image: url(../icon/fix_plus.svg) !important;
+    background-image: url(../files/fix_plus.svg) !important;
 }
 
 #product .produt__info__fix .ui-spinner .ui-spinner-down .ui-icon {
-    background-image: url(../icon/fix_minus.svg) !important;
+    background-image: url(../files/fix_minus.svg) !important;
 }
 
 #product .produt__info__fix .ui-spinner .ui-spinner-up .ui-icon,

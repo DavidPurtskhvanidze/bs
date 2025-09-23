@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+    <rect id="horizontal" y="6" width="13" height="1"/>
+    <rect id="vertical" x="6" width="1" height="13"/>
+    <g id="plus" fill="#3C3C3B">
+        <use href="#vertical"/>
+        <use href="#horizontal"/>
+    </g>
+    <g id="minus" fill="#3C3C3B">
+        <use href="#horizontal"/>
+    </g>
+    <defs>
+        <clipPath id="clip">
+            <use href="#vertical"/>
+            <use href="#horizontal"/>
+        </clipPath>
+        <style>
+            g {
+            display: none;
+            }
+            g:target {
+            display: inline;
+            }
+        </style>
+    </defs>
+    <script xmlns=""/></svg>
