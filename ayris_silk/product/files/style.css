@@ -339,7 +339,12 @@
         width: calc(50% - 10px);
     }
     #product .payments {
-        gap: 20px;
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+    #product .payments {
+        gap: 10px;
+        flex-wrap: nowrap;
     }
 }
 @media screen and (max-width: 680px) {
@@ -366,6 +371,10 @@
     .parts-div .parts-flex .parts-text svg {
         position: static;
     }
+    .payments img {
+        max-width: 60px;
+        margin: 0;
+    }
 }
 @media (max-width: 480px) {
     .mobile-br {
@@ -377,6 +386,7 @@
     .parts-div .parts-flex .parts-text svg {
         position: static;
     }
+
 }
 
 
