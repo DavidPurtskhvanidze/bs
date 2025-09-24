@@ -13,6 +13,10 @@
 .product-container {
     width: 1156px;
 }
+.product-tab-container {
+    width: 874px;
+    margin: 0 auto;
+}
 .product-container .content.content-text.small {
     font-size: 12px;
     line-height: 17px;
@@ -230,6 +234,12 @@
 
 #product #comments.no-results .empty {
     text-align: start;
+}
+#product .tab-accord-content .swiper-button-prev {
+    left: 0;
+}
+#product .tab-accord-content .swiper-button-next {
+    right: 0;
 }
 
 /*tabs*/
