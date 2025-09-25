@@ -12,10 +12,12 @@
 }
 .product-container {
     width: 1156px;
+    max-width: 100%;
 }
 .product-tab-container {
     width: 874px;
     margin: 0 auto;
+    max-width: 100%;
 }
 .product-container .content.content-text.small {
     font-size: 12px;
@@ -382,8 +384,9 @@
         position: static;
     }
     .payments img {
-        max-width: 60px;
         margin: 0;
+        flex-shrink: 1;
+        min-width: 0;
     }
 }
 @media (max-width: 480px) {
