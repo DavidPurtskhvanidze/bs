@@ -35,6 +35,9 @@
 .post-mobile-display {
     display: none;
 }
+.post-desk-20-margin-bottom {
+    margin-bottom: clamp(10px, calc(20 / 1920 * 100vw), 20px);
+}
 /*///////////////////////////////*/
 
 body .post-general-section {
@@ -78,6 +81,18 @@ body .post-general-section {
     font-size: clamp(18px, calc(24/1920*100vw), 24px);
     margin-bottom: clamp(10px, calc(16/1920*100vw), 16px);
     line-height: 1.5;
+    text-transform: uppercase;
+    background: linear-gradient(65.37deg, #F0C9D1 0%, #6E89C3 108.19%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.post-page-wrapper h3 {
+    font-weight: 500;
+    font-size: clamp(24px, calc(48/1920*100vw), 48px);
+    line-height: clamp(34px, calc(60/1920*100vw), 60px);
+    margin-bottom: clamp(10px, calc(16/1920*100vw), 16px);
     text-transform: uppercase;
     background: linear-gradient(65.37deg, #F0C9D1 0%, #6E89C3 108.19%);
     -webkit-background-clip: text;
@@ -220,6 +235,9 @@ body .post-general-section {
     justify-content: flex-start;
     width: 100%;
     max-width: 1248px;
+}
+.post-container picture {
+    display: flex;
 }
 .post-blocks-special-width {
     max-width: 74.6%;
@@ -432,7 +450,7 @@ body .post-general-section {
     width: 100%;
 }
 main > .post-big-title {
-    padding: 0 20px;
+    padding: clamp(16px, calc(34 / 1920 * 100vw), 34px) 20px;
 }
 .post-big-title svg {
     width: clamp(0px, calc(192 / 1920 * 100vw), 192px);
