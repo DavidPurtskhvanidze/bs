@@ -310,7 +310,6 @@ body .post-general-section {
 /*post-product-card*/
 .post-product-card-wrapper {
     padding: 0 10px;
-    margin-bottom: 64px;
 }
 .post-product-card {
     display: flex;
