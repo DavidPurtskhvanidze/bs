@@ -1022,7 +1022,17 @@ section.post-additional-info {
 /*        max-width: 360px;*/
 /*    }*/
 /*}*/
-
+@media (max-width: 1280px) {
+    .post-block-two-tiles {
+        padding: 0 10px;
+    }
+    .post-top-block {
+        padding: 0 10px;
+    }
+    .post-author-info {
+        padding: 0 10px;
+    }
+}
 @media screen and (max-width: 1223px) {
     .post-sidebar {
         display: none;
@@ -1062,6 +1072,9 @@ section.post-additional-info {
     }
     .post-tablet-64-margin-bottom {
         margin-bottom: 64px;
+    }
+    .post-tablet-10-margin-bottom {
+        margin-bottom: 10px;
     }
 
     .post-text-left-wrapper h1 {
@@ -1112,6 +1125,7 @@ section.post-additional-info {
     }
     .post-text-left-wrapper {
         top: 24px;
+        right: 10px;
     }
     .post-top-back-button button {
         color: #4F6FC1;
