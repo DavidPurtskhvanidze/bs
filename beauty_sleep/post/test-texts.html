@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Clamp demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 20px;
+    }
+
+    /* --- Вариант 1: через vw (от всего окна) --- */
+    .fluid-vw {
+      font-size: clamp(10px, calc(64 / 1920 * 100vw), 64px);
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    /* --- Вариант 2: через container queries (от контейнера) --- */
+    .container {
+      container-type: inline-size; /* включаем контейнер */
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #e8f6ff;
+      padding: 20px;
+    }
+
+    .fluid-cqi {
+      font-size: clamp(10px, calc(64 / 1200 * 100cqi), 64px);
+      background: #d1ecff;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Вариант 1: clamp + vw (считает от ширины окна)</h2>
+<div class="fluid-vw">
+  Этот текст меняет размер относительно ширины окна (100vw).
+</div>
+
+<h2>Вариант 2: clamp + cqi (считает от ширины контейнера)</h2>
+<div class="container">
+  <div class="fluid-cqi">
+    Этот текст меняет размер относительно ширины контейнера (max-width 1200px).
+  </div>
+</div>
+
+</body>
+</html>
