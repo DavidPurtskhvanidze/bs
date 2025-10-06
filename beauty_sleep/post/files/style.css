@@ -987,8 +987,16 @@ section.post-additional-info {
     text-transform: uppercase;
 }
 /*New SEO post*/
-
+.half-moon {
+    position: absolute;
+    z-index: -1;
+    right: -25%;
+    top: 57%;
+}
 /*///////////////////////////////*/
+.relative {
+    position: relative;
+}
 .br-mobile {
     display: none;
 }
@@ -1054,6 +1062,11 @@ section.post-additional-info {
 }
 
 @media (max-width: 768px) {
+    .half-moon {
+        right: auto;
+        top: 34%;
+        left: 0;
+    }
     .post-desktop-display {
         display: none;
     }
