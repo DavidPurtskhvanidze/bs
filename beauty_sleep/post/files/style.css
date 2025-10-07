@@ -1002,12 +1002,14 @@ section.post-additional-info {
     gap: clamp(10px, calc(16 / 1920 * 100vw), 16px);
 }
 .post-preview-text p {
+    color: #221D1E;
     font-weight: 300;
     font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
     line-height: clamp(20px, calc(28 / 1920 * 100vw), 28px);
 }
 .post-preview-text p b {
     font-weight: 500;
+    color: #221D1E;
 }
 .post-preview-info .button {
     font-weight: 500;
