@@ -1063,21 +1063,23 @@ section.post-additional-info {
 /*cooper-blend*/
 .post-cooper-blend h4 {
     margin-bottom: clamp(88px, calc(128 / 1920 * 100vw), 128px);
+    font-size: clamp(14px, calc(24 / 1920 * 100vw), 24px);
+    padding: 0 10px;
 }
 .post-cooper-blend {
     width: 100%;
+    padding-bottom: 30px;
 }
 .post-cooper-blend-cu {
     position: absolute;
-    bottom: 0;
-    right: -19%;
+    right: 0;
+    transform: translateX(44%);
     bottom: -10px;
     width: 84.7vw;
 }
 .post-cooper-blend-zones {
     width: 20.2vw;
     margin-top: 16px;
-    margin-bottom: 30px;
 }
 /*cooper-blend*/
 
@@ -1208,6 +1210,11 @@ p.post-page-special-text {
         padding: 0 10px;
         gap: 16px;
     }
+    /*cooper-blend*/
+    .post-cooper-blend {
+        width: 80%;
+    }
+    /*cooper-blend*/
 }
 @media screen and (max-width: 1223px) {
     .post-sidebar {
@@ -1219,12 +1226,23 @@ p.post-page-special-text {
 }
 
 @media (max-width: 768px) {
+    /*cooper-blend*/
+    .post-cooper-blend {
+        width: 100%;
+        padding: 0 10px 24px;
+    }
+    .post-cooper-blend-cu {
+        position: static;
+        width: 145vw;
+        transform: translateX(-13vw);
+    }
+    /*cooper-blend*/
     .half-moon {
         right: auto;
         top: 34%;
         left: 0;
     }
-    .post-desktop-display {
+    div .post-desktop-display {
         display: none;
     }
     .post-desktop-display-grid {
