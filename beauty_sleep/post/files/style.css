@@ -300,6 +300,9 @@ body .post-general-section {
 p + .post-product-card {
     margin-top: clamp(10px, calc(16 / 1920 * 100vw), 16px);
 }
+.post-product-card + .post-product-card {
+    margin-top: clamp(10px, calc(16 / 1920 * 100vw), 16px);
+}
 .post-product-card {
     display: flex;
     justify-content: space-between;
@@ -665,6 +668,7 @@ main > .post-big-title {
 }
 .post-block-two-tiles .post-block-img-fill {
     position: relative;
+    height: 100%;
 }
 .post-block-two-tiles .post-block-img-fill img {
     object-fit: cover;
@@ -1237,6 +1241,20 @@ p.post-page-special-text {
         transform: translateX(-13vw);
     }
     /*cooper-blend*/
+
+    /*post-quotes-gold*/
+    .post-quotes-gold {
+        text-align: right;
+    }
+    .post-quotes-gold:before {
+        display: none;
+    }
+    .post-quotes-gold:after {
+        top: -7%;
+        left: 0;
+    }
+    /*post-quotes-gold*/
+
     .half-moon {
         right: auto;
         top: 34%;
@@ -1277,6 +1295,10 @@ p.post-page-special-text {
     }
     .post-tablet-10-margin-bottom {
         margin-bottom: 10px;
+    }
+    .post-tablet-0-10-padding {
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
     .post-text-left-wrapper h1 {
