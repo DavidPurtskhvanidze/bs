@@ -1177,14 +1177,14 @@ section.post-additional-info {
 }
 .post-images-badges .item .cu-plus {
     position: absolute;
-    top: -15%;
-    right: -25%;
-    width: 8.2vw;
+    top: -4vw;
+    right: -3vw;
+    width: 9vw;
 }
 .post-images-badges .cu-innovation {
     position: absolute;
-    top: -9%;
-    left: -12%;
+    top: -4vw;
+    right: -3vw;
     width: 7.8vw;
 }
 .post-copper-waves {
@@ -1239,6 +1239,13 @@ section.post-additional-info {
 }
 .post-page-wrapper .post-copper-color {
     background: linear-gradient(283.95deg, #D3B89F 19.86%, #865133 28.58%, #D8AF98 37.3%, #B26D61 46.02%, #976346 54.74%, #EBC5A2 63.46%, #A37244 72.18%, #D99578 80.9%, #D1A686 89.62%, #B98568 98.34%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.post-page-wrapper .post-copper-color2 {
+    background: linear-gradient(283.95deg, #A68464 19.86%, #865133 32.94%, #B28861 46.02%, #976D46 59.1%, #A37D44 72.18%, #D99578 85.26%, #B98568 98.34%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
