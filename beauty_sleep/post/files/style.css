@@ -218,6 +218,7 @@ body .post-general-section {
 }
 .post-container picture {
     display: flex;
+    width: 100%;
 }
 .post-container picture img {
     width: 100%;
