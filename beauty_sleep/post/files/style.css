@@ -1496,9 +1496,6 @@ p.post-page-special-text {
     .post-tablet-display {
         display: flex;
     }
-    .br-mobile {
-        display: block;
-    }
     .br-tablet {
         display: block;
     }
@@ -1661,6 +1658,9 @@ p.post-page-special-text {
 }
 
 @media (max-width: 576px) {
+    .br-mobile {
+        display: block;
+    }
     .post-mobile-display {
         display: block;
     }
