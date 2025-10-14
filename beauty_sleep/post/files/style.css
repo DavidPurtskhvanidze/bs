@@ -109,9 +109,9 @@ body .post-general-section {
 .post-page-wrapper ol + p {
     margin-top: clamp(10px, calc(16/1920*100vw), 16px);
 }
-.post-page-wrapper picture + p {
-    margin-top: clamp(10px, calc(16/1920*100vw), 16px);
-}
+/*.post-page-wrapper picture + p {*/
+/*    margin-top: clamp(10px, calc(16/1920*100vw), 16px);*/
+/*}*/
 .post-page-wrapper p + p {
     margin-top: clamp(10px, calc(16/1920*100vw), 16px);
 }
