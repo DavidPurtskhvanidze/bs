@@ -83,14 +83,14 @@ body .post-general-section {
 .post-page-with-sidebar.post-page-wrapper .post-container {
     padding-top: clamp(0px, calc(64/1920*100vw), 64px);
 }
-.post-page-wrapper .post-container ul {
+.post-page-wrapper .post-container ul:not([class]) {
     font-weight: 300;
     font-size: clamp(14px, calc(18/1920*100vw), 18px);
     line-height: 1.5;
     color: #221D1E;
     padding-left: 1.6em;
 }
-.post-page-wrapper .post-container ol {
+.post-page-wrapper .post-container ol:not([class]) {
     font-weight: 300;
     font-size: clamp(14px, calc(18/1920*100vw), 18px);
     line-height: 1.5;
@@ -1159,6 +1159,30 @@ section.post-additional-info {
 }
 /*post-benefit*/
 
+/*post-tags-list*/
+.post-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(10px, calc(16 / 1920 * 100vw), 16px);
+    padding: 0 10px;
+}
+.post-tags-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(8px, calc(18 / 1920 * 100vw), 18px) clamp(16px, calc(30 / 1920 * 100vw), 30px);
+    background-color: #F9FCFF;
+    border: 1px solid #221D1E;
+    border-radius: 50px;
+    font-weight: 300;
+    font-size: clamp(14px, calc(24 / 1920 * 100vw), 24px);
+    line-height: clamp(20px, calc(36 / 1920 * 100vw), 36px);
+    color: #221D1E;
+}
+/*post-tags-list*/
+
+/*post-images-badges*/
 .post-images-badges {
     display: flex;
     gap: clamp(10px, calc(20 / 1920 * 100vw), 20px);
@@ -1203,6 +1227,8 @@ section.post-additional-info {
     right: -3vw;
     width: 7.8vw;
 }
+/*post-images-badges*/
+
 .post-copper-waves {
     position: absolute;
     bottom: 0;
