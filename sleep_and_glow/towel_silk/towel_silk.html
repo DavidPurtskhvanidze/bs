@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <base href=".">
+  <title>Title</title>
+
+  <link rel="stylesheet" href="../common_files/normalize.css">
+  <link rel="stylesheet" href="../common_files/swiper.min.css">
+  <link href="../common_files/video-js.min.css" rel="stylesheet">
+  <link href="../common_files/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="../common_files/css_styles22.css">
+  <link rel="stylesheet" href="../common_files/aos.css">
+  <link rel="stylesheet" href="../common_files/pnotify.custom.css">
+  <link rel="stylesheet" href="../common_files/css_common22.css">
+  <link rel="stylesheet" href="../common_files/science.css">
+  <link rel="stylesheet" href="../common_files/styles_all.css">
+  <link rel="stylesheet" href="../common_files/styles_usa.css">
+  <link rel="stylesheet" href="files/style.css">
+
+  <link href="../common_files/suggestions.min.css" rel="stylesheet">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+      if ("IntersectionObserver" in window) {
+        let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              let lazyImage = entry.target;
+              lazyImage.src = lazyImage.dataset.src;
+              lazyImage.srcset = lazyImage.dataset.srcset;
+              lazyImage.classList.remove("lazy");
+              lazyImageObserver.unobserve(lazyImage);
+            }
+          });
+        });
+        lazyImages.forEach(function (lazyImage) {
+          lazyImageObserver.observe(lazyImage);
+        });
+      } else {
+        // Possibly fall back to event handlers here
+      }
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+      if ("IntersectionObserver" in window) {
+        var lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(function (video) {
+            if (video.isIntersecting) {
+              for (var source in video.target.children) {
+                var videoSource = video.target.children[source];
+                if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                  videoSource.src = videoSource.dataset.src;
+                }
+              }
+              video.target.load();
+              video.target.classList.remove("lazy");
+              lazyVideoObserver.unobserve(video.target);
+            }
+          });
+        });
+        lazyVideos.forEach(function (lazyVideo) {
+          lazyVideoObserver.observe(lazyVideo);
+        });
+      }
+    });
+  </script>
+  <style>
+
+    @keyframes flicker2 {
+
+      0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+        text-shadow: 0 0 4px #EA90BB,
+        0 0 11px #EA90BB,
+        0 0 19px #EA90BB,
+        0 0 40px #EA90BB,
+        0 0 80px #FC67A8,
+        0 0 90px #FC67A8,
+        0 0 100px #FC67A8,
+        0 0 150px #FC67A8;
+
+      }
+
+      20%, 24%, 55% {
+        text-shadow: none;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .header-info {
+        font-size: 10px !important;
+        padding: 5px 5px !important;
+
+      }
+    }
+
+
+    @media screen and (max-width: 768px) {
+      .header-info {
+        font-size: 11px;
+      }
+    }
+
+
+    @font-face {
+      font-family: 'Cera Pro';
+      src: url('../common_files/fonts/CeraPro-Regular.woff2') format('woff2'),
+      url('../common_files/fonts/CeraPro-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Cera Pro';
+      src: url('../common_files/fonts/CeraPro-Bold.woff2') format('woff2'),
+      url('../common_files/fonts/CeraPro-Bold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Cera Pro';
+      src: url('../common_files/fonts/CeraPro-Medium.woff2') format('woff2'),
+      url('../common_files/fonts/CeraPro-Medium.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Cera Pro';
+      src: url('../common_files/fonts/CeraPro-Light.woff2') format('woff2'),
+      url('../common_files/fonts/CeraPro-Light.woff') format('woff');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+  </style>
+
+  <link rel="stylesheet" href="../common_files/default.css" type="text/css">
+  <script type="text/javascript">miniShop2Config = {
+    "cssUrl": "\/assets\/components\/minishop2\/css\/web\/",
+    "jsUrl": "\/assets\/components\/minishop2\/js\/web\/",
+    "actionUrl": "\/assets\/components\/minishop2\/action.php",
+    "ctx": "lat",
+    "close_all_message": "ms2_message_close_all",
+    "price_format": [2, ".", " "],
+    "price_format_no_zeros": false,
+    "weight_format": [3, ".", " "],
+    "weight_format_no_zeros": true
+  };</script>
+  <link rel="stylesheet" href="../common_files/index(1).css" type="text/css">
+  <script type="text/javascript">miniShop2Config = {
+    "cssUrl": "\/assets\/components\/minishop2\/css\/web\/",
+    "jsUrl": "\/assets\/components\/minishop2\/js\/web\/",
+    "actionUrl": "\/assets\/components\/minishop2\/action.php",
+    "ctx": "usa",
+    "close_all_message": "ms2_message_close_all",
+    "price_format": [2, ".", " "],
+    "price_format_no_zeros": false,
+    "weight_format": [3, ".", " "],
+    "weight_format_no_zeros": true
+  };</script>
+  <link rel="stylesheet" href="../common_files/default(1).css" type="text/css">
+  <script src="../common_files/api.js.download" async=""></script>
+
+</head>
+<body>
+<script>
+  localStorage.removeItem("checkout2_sended");
+</script>
+
+<header role="banner" class="">
+  <div class="header-info">
+    <span>SILK MASK FOR ORDERS OVER 270 - CODE 'SELFLOVE' </span>
+  </div>
+  <div class="header-common">
+    <div class="grid">
+      <div class="header-common__top">
+        <div class="interaction">
+          <div class="b-switch b-switch--desktop">
+            <div class="b-switch__item b-switchSelect">
+              <div class="b-switchSelect__title">USA</div>
+              <ul class="b-switchSelect__list">
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.ch/omnia-copper?findGeo=true">Switzerland</a></li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.fr/omnia-copper?findGeo=true">France</a></li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.it/omnia-copper?findGeo=true">Italy</a></li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.de/omnia-copper?findGeo=true">Germany/Austria</a>
+                </li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.pl/omnia-copper?findGeo=true">Poland</a></li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.cz/omnia-copper?country=cz&amp;findGeo=true">Czech
+                  Republic</a></li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.cz/omnia-copper?country=sk&amp;findGeo=true">Slovakia</a>
+                </li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.es/omnia-copper?findGeo=true">Spain</a></li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.co.uk/omnia-copper?findGeo=true">Great Britain</a>
+                </li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.com.au/omnia-copper?findGeo=true">Australia/New
+                  Zealand</a></li>
+                <li class="b-switchSelect__item b-switchSelect__item--active">
+                  <span>USA</span>
+                </li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.ca/omnia-copper?findGeo=true">Canada</a></li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.com/omnia-copper?country=roe&amp;findGeo=true">Rest
+                  of Europe</a></li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.com/omnia-copper?country=oc&amp;findGeo=true">Other
+                  Countries</a></li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.com/omnia-copper?country=ae&amp;findGeo=true">United
+                  Arab Emirates</a></li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.kr/omnia-copper?country=kr&amp;findGeo=true">South
+                  Korea</a></li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.jp/omnia-copper?country=jp&amp;findGeo=true">Japan</a>
+                </li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.com.co/omnia-copper?findGeo=true">Latin America</a>
+                </li>
+                <li class="b-switchSelect__item"><a
+                        href="https://sleepandglow.mx/omnia-copper?findGeo=true">Mexico</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="burger-menu action-item tablet btn-mob-menu">
+            <span class="burger-menu__item"></span>
+            <span class="burger-menu__item"></span>
+            <span class="burger-menu__item"></span>
+          </div>
+        </div>
+        <div class="logo">
+          <a href="https://sleepandglow.com/">
+            <img loading="lazy" src="../common_files/logo-sg.png.webp" alt="Sleep&amp;Glow">
+          </a>
+        </div>
+        <div class="shop">
+          <a href="https://sleepandglow.com/shop/" class="shop_goods">
+            <img loading="lazy" src="../common_files/shop.svg" alt="profile">
+            <span>Shop now</span>
+          </a>
+          <a href="https://sleepandglow.com/cart" class="shop_cart ">
+            <img loading="lazy" src="../common_files/card.svg" alt="card">
+            <img loading="lazy" class="card-mobile-ico" src="../common_files/card-mobile.svg" alt="card">
+            <span>
+Cart </span>
+            <div class="cart-counter">
+              <strong class="ms2_total_count">0</strong>
+            </div>
+          </a></div>
+      </div>
+    </div>
+    <nav role="navigation" class="header-common__bottom">
+      <div class="header-menu__item "><span class="header-menu__item_name">Pillows</span>
+        <div class="header-menu__item_content">
+          <div class="item-content__box grid"><a href="https://sleepandglow.com/omnia"
+                                                 class="item-content__link">
+            <div><img loading="lazy" src="../common_files/pillow_omnia.svg" alt="pillow"></div>
+            <span>The Omnia</span></a><a href="https://sleepandglow.com/omnia-copper"
+                                         class="item-content__link">
+            <div><img loading="lazy" src="../common_files/pillow_copper.svg" alt="pillow">
+              <div class="item-content__link_new"><span>new</span></div>
+            </div>
+            <span>The Omnia Skin Defense</span></a><a href="https://sleepandglow.com/aula"
+                                                      class="item-content__link">
+            <div><img loading="lazy" src="../common_files/pillow_aula.svg" alt="pillow"></div>
+            <span>The Aula</span></a><a href="https://sleepandglow.com/silk-pillow-bra"
+                                        class="item-content__link">
+            <div><img loading="lazy" src="../common_files/pillow_decollete.svg" alt="pillow"></div>
+            <span>The Pillow Bra</span></a><a
+                  href="https://sleepandglow.com/additional-pillowcases/?category=2053"
+                  class="item-content__link">
+            <div><img loading="lazy" src="../common_files/pillow_case.svg" alt=""></div>
+            <span>ADDITIONAL PILLOWCASES</span></a></div>
+        </div>
+      </div>
+      <div class="header-menu__item "><span class="header-menu__item_name">Blankets</span>
+        <div class="header-menu__item_content">
+          <div class="item-content__box grid"><a href="https://sleepandglow.com/weighted-blankets-page"
+                                                 class="item-content__link">
+            <div><img loading="lazy" src="../common_files/blanket.svg" alt="pillow"></div>
+            <span>Weighted Blankets</span></a><a
+                  href="https://sleepandglow.com/blanket-with-ventilation-panels" class="item-content__link">
+            <div><img loading="lazy" src="../common_files/blanket2.svg" alt="">
+              <div class="item-content__link_new"><span>new</span></div>
+            </div>
+            <span>ventilated blanket</span></a></div>
+        </div>
+      </div>
+      <div class="header-menu__item "><span class="header-menu__item_name">Silk Loungewear</span>
+        <div class="header-menu__item_content">
+          <div class="item-content__box grid"><a href="https://sleepandglow.com/silk-products/"
+                                                 class="item-content__link">
+            <div><img loading="lazy" src="../common_files/robe.svg" alt="Silk Loungewear"></div>
+            <span>SILK KIMONO</span></a><a href="https://sleepandglow.com/silk-tops-and-shorts/"
+                                           class="item-content__link">
+            <div><img loading="lazy" src="../common_files/underwear.svg" alt=""></div>
+            <span>SILK TOPS AND SHORTS</span></a></div>
+        </div>
+      </div>
+      <div class="header-menu__item "><span class="header-menu__item_name">Silk collection</span>
+        <div class="header-menu__item_content">
+          <div class="item-content__box grid"><a href="https://sleepandglow.com/the-silk-collection?product=6"
+                                                 class="item-content__link">
+            <div><img loading="lazy" src="../common_files/pillow_case.svg" alt=""></div>
+            <span>Additional Silk Pillowcases</span></a><a
+                  href="https://sleepandglow.com/the-silk-collection?product=7" class="item-content__link">
+            <div><img loading="lazy" src="../common_files/sleepmask.svg" alt=""></div>
+            <span>The silk sleep mask</span></a><a
+                  href="https://sleepandglow.com/the-silk-collection?product=5" class="item-content__link">
+            <div><img loading="lazy" src="../common_files/coif.svg" alt=""></div>
+            <span>The silk sleep hair turban</span></a><a
+                  href="https://sleepandglow.com/the-silk-collection?product=8" class="item-content__link">
+            <div><img loading="lazy" src="../common_files/scrunchy.svg" alt=""></div>
+            <span>Silk Hair Scrunchies</span></a><a
+                  href="https://sleepandglow.com/silk-pillow-bra?product=2" class="item-content__link">
+            <div><img loading="lazy" src="../common_files/pillow_decollete.svg" alt="pillow"></div>
+            <span>Silk Pillow Bra</span></a><a href="https://sleepandglow.com/the-silk-collection?product=9"
+                                               class="item-content__link">
+            <div><img loading="lazy" src="../common_files/bando.png.webp" alt=""></div>
+            <span>SILK HEADBAND</span></a></div>
+        </div>
+      </div>
+      <div class="header-menu__item "><span class="header-menu__item_name">Our Science</span>
+        <div class="header-menu__item_content">
+          <div class="item-content__box grid"><a href="https://sleepandglow.com/our-science"
+                                                 class="item-content__link">
+            <div><img loading="lazy" src="../common_files/expert-menu_.png.webp" alt=""></div>
+            <span>Our Science</span></a></div>
+        </div>
+      </div>
+      <div class="header-menu__item "><span class="header-menu__item_name">BEAUTY SLEEP UNIVERSITY</span>
+        <div class="header-menu__item_content">
+          <div class="item-content__box grid"><a href="https://sleepandglow.com/beauty-sleep-university/"
+                                                 class="item-content__link">
+            <div><img loading="lazy" src="../common_files/Шапочка.svg" alt=""></div>
+            <span>BEAUTY SLEEP UNIVERSITY</span></a></div>
+        </div>
+      </div>
+      <div class="header-menu__item"><span class="header-menu__item_name"><a
+              href="https://sleepandglow.com/for-professionals">For professionals</a></span></div>
+      <div class="header-menu__item "><span class="header-menu__item_name">About</span>
+        <div class="header-menu__item_content">
+          <div class="item-content__box grid"><a href="https://sleepandglow.com/beauty-sleep"
+                                                 class="item-content__link">
+            <div><img loading="lazy" src="../common_files/sleep.svg" alt="pillow"></div>
+            <span>Beauty Sleep</span></a><a href="https://sleepandglow.com/our-story"
+                                            class="item-content__link">
+            <div><img loading="lazy" src="../common_files/about.svg" alt="pillow"></div>
+            <span>Our Story</span></a><a href="https://sleepandglow.com/reviews" class="item-content__link">
+            <div><img loading="lazy" src="../common_files/review.svg" alt="pillow"></div>
+            <span>Reviews</span></a><a href="https://sleepandglow.com/faq" class="item-content__link">
+            <div><img loading="lazy" src="../common_files/faq.svg" alt="pillow"></div>
+            <span>FAQ</span></a><a href="https://sleepandglow.com/our-materials" class="item-content__link">
+            <div><img loading="lazy" src="../common_files/materials.svg" alt="pillow"></div>
+            <span>Materials</span></a></div>
+        </div>
+      </div>
+      <div class="header-menu__item "><span class="header-menu__item_name">Support</span>
+        <div class="header-menu__item_content">
+          <div class="item-content__box grid"><a href="https://sleepandglow.com/payment-and-shipping/"
+                                                 class="item-content__link">
+            <div><img loading="lazy" src="../common_files/delivery.svg" alt="pillow"></div>
+            <span>Payment and Shipping</span></a><a href="https://sleepandglow.com/warranty-and-returns/"
+                                                    class="item-content__link">
+            <div><img loading="lazy" src="../common_files/return.svg" alt="pillow"></div>
+            <span>Warranty and Returns</span></a><a href="https://sleepandglow.com/contact-us"
+                                                    class="item-content__link">
+            <div><img loading="lazy" src="../common_files/contacts.svg" alt="pillow"></div>
+            <span>Contact Us</span></a></div>
+        </div>
+      </div>
+      <div class="header-menu__item mobile-item">
+
+      </div>
+      <div class="header-menu__item mobile-item shop">
+        <a href="https://sleepandglow.com/shop/" class="shop_goods">
+          <img loading="lazy" src="../common_files/shop.svg" alt="profile">
+          <span>SHOP NOW</span>
+        </a>
+      </div>
+      <div class="b-switch b-switch--mobile">
+        <div class="b-switch__item b-switchSelect">
+          <div class="b-switchSelect__title">USA</div>
+          <ul class="b-switchSelect__list">
+            <li class="b-switchSelect__item"><a href="https://sleepandglow.ch/omnia-copper?findGeo=true">Switzerland</a>
+            </li>
+            <li class="b-switchSelect__item"><a href="https://sleepandglow.fr/omnia-copper?findGeo=true">France</a>
+            </li>
+            <li class="b-switchSelect__item"><a href="https://sleepandglow.it/omnia-copper?findGeo=true">Italy</a>
+            </li>
+            <li class="b-switchSelect__item"><a href="https://sleepandglow.de/omnia-copper?findGeo=true">Germany/Austria</a>
+            </li>
+            <li class="b-switchSelect__item"><a href="https://sleepandglow.pl/omnia-copper?findGeo=true">Poland</a>
+            </li>
+            <li class="b-switchSelect__item"><a
+                    href="https://sleepandglow.cz/omnia-copper?country=cz&amp;findGeo=true">Czech
+              Republic</a></li>
+            <li class="b-switchSelect__item"><a
+                    href="https://sleepandglow.cz/omnia-copper?country=sk&amp;findGeo=true">Slovakia</a>
+            </li>
+            <li class="b-switchSelect__item"><a href="https://sleepandglow.es/omnia-copper?findGeo=true">Spain</a>
+            </li>
+            <li class="b-switchSelect__item"><a href="https://sleepandglow.co.uk/omnia-copper?findGeo=true">Great
+              Britain</a></li>
+            <li class="b-switchSelect__item"><a
+                    href="https://sleepandglow.com.au/omnia-copper?findGeo=true">Australia/New Zealand</a>
+            </li>
+            <li class="b-switchSelect__item b-switchSelect__item--active">
+              <span>USA</span>
+            </li>
+            <li class="b-switchSelect__item"><a href="https://sleepandglow.ca/omnia-copper?findGeo=true">Canada</a>
+            </li>
+            <li class="b-switchSelect__item"><a
+                    href="https://sleepandglow.com/omnia-copper?country=roe&amp;findGeo=true">Rest of
+              Europe</a></li>
+            <li class="b-switchSelect__item"><a
+                    href="https://sleepandglow.com/omnia-copper?country=oc&amp;findGeo=true">Other
+              Countries</a></li>
+            <li class="b-switchSelect__item"><a
+                    href="https://sleepandglow.com/omnia-copper?country=ae&amp;findGeo=true">United Arab
+              Emirates</a></li>
+            <li class="b-switchSelect__item"><a
+                    href="https://sleepandglow.kr/omnia-copper?country=kr&amp;findGeo=true">South Korea</a>
+            </li>
+            <li class="b-switchSelect__item"><a
+                    href="https://sleepandglow.jp/omnia-copper?country=jp&amp;findGeo=true">Japan</a></li>
+            <li class="b-switchSelect__item"><a
+                    href="https://sleepandglow.com.co/omnia-copper?findGeo=true">Latin America</a></li>
+            <li class="b-switchSelect__item"><a href="https://sleepandglow.mx/omnia-copper?findGeo=true">Mexico</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main role="main">
+
+  <!--towel-silk-main-->
+  <section class="towel-silk-main-section general-section">
+    <picture>
+      <source srcset="files/images/towel-silk-main-img-mob.webp" media="(max-width: 768px)" type="image/webp">
+      <source srcset="files/images/towel-silk-main-img.webp" type="image/webp">
+
+      <img src="files/images/towel-silk-main-img.webp" alt="Silk Towel">
+    </picture>
+    <div class="towel-silk-main-text">
+      <h1>
+        ADVANCED SILK TOWELS
+      </h1>
+      <p>
+        Engineered for Skin’s Most Vulnerable Moments
+      </p>
+    </div>
+  </section>
+  <!--towel-silk-main-->
+
+  <!--towel-silk-skin-care-->
+  <section class="towel-silk-skin-care">
+    <h2 class="title">
+      Care When Skin Needs It Most
+    </h2>
+    <div class="towel-silk-skin-care-wrapper">
+      <div class="skin-care-item">
+        <picture>
+          <source srcset="files/images/towel-silk-skin-care-1-mob.webp" media="(max-width: 768px)" type="image/webp">
+          <source srcset="files/images/towel-silk-skin-care-1.webp" type="image/webp">
+
+          <img src="files/images/towel-silk-skin-care-1.webp" alt="Regular Towel">
+        </picture>
+        <div class="info">
+          <img src="files/images/towel-silk-x-icon.svg" alt="">
+          <p>
+            Right after cleansing, your skin is&nbsp;freshly
+            exposed&nbsp;— pores open, natural oils
+            reduced, and&nbsp;the protective barrier
+            temporarily weakened. It’s the moment
+            when ordinary towels can do&nbsp;the most
+            damage&nbsp;— drying, tugging, and&nbsp;introducing
+            bacteria.
+          </p>
+        </div>
+      </div>
+      <div class="skin-care-item">
+        <picture>
+          <source srcset="files/images/towel-silk-skin-care-2-mob.webp" media="(max-width: 768px)" type="image/webp">
+          <source srcset="files/images/towel-silk-skin-care-2.webp" type="image/webp">
+
+          <img src="files/images/towel-silk-skin-care-2.webp" alt="Silk Towel">
+        </picture>
+        <div class="info">
+          <img src="files/images/towel-silk-plus-icon.svg" alt="">
+          <p>
+            Our advanced silk towels are designed&nbsp;for
+            this critical moment. Infused with skincare
+            actives and&nbsp;made from the&nbsp;softest silk, they
+            protect, calm, and&nbsp;enhance your skin when
+            it’s most in&nbsp;need.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--towel-silk-skin-care-->
+
+  <!--towel-silk-text-->
+  <section class="towel-silk-text-section">
+    <h3 class="towel-silk-text-desk">
+      Years of development to create&nbsp;a best-in-class skincare towel
+    </h3>
+    <h3 class="towel-silk-text-mob">
+      A BREAKTHROUGH FOR HOLISTIC<br>
+      SKIN SUPPORT
+    </h3>
+  </section>
+  <!--towel-silk-text-->
+
+  <!--towel-silk-fiber-->
+  <section class="towel-silk-fiber-section">
+    <div class="towel-silk-fiber-one">
+      <div class="towel-silk-fiber-one-info">
+        <div class="towel-silk-fiber-one-info-num">
+          1
+        </div>
+        <div class="towel-silk-fiber-one-info-text">
+          <h4>
+            Antibacteral effect
+          </h4>
+          <p>
+            Antibacterial copper<br>
+            threads woven into the&nbsp;fabric
+          </p>
+        </div>
+      </div>
+      <picture class="towel-silk-fiber-one-bg">
+        <source srcset="files/images/towel-silk-1-fiber-img-mob.avif" media="(max-width: 576px)" type="image/avif">
+        <source srcset="files/images/towel-silk-1-fiber-img.avif" type="image/avif">
+
+        <source srcset="files/images/towel-silk-1-fiber-img-mob.webp" media="(max-width: 576px)" type="image/webp">
+        <source srcset="files/images/towel-silk-1-fiber-img.webp" type="image/webp">
+
+        <source srcset="files/images/towel-silk-1-fiber-img-mob.jpg" media="(max-width: 576px)" type="image/jpg">
+        <source srcset="files/images/towel-silk-1-fiber-img.png" type="image/png">
+
+        <img src="files/images/towel-silk-1-fiber-img.png" alt="Antibacteral effect">
+      </picture>
+      <div class="towel-silk-fiber-one-video">
+        <video autoplay="" loop="" muted="" playsinline="" webkit-playsinline="" poster="files/images/towel-silk-fiber-opti.jpg" preload="none">
+          <source src="files/images/towel-silk-fiber-opti.mp4" type="video/mp4">
+          <source src="files/images/towel-silk-fiber-opti.webm" type="video/webm">
+        </video>
+      </div>
+    </div>
+    <div class="towel-silk-fiber-two">
+      <div class="towel-silk-fiber-two-info">
+        <div class="towel-silk-fiber-two-info-num">
+          2
+        </div>
+        <div class="towel-silk-fiber-two-info-text">
+          <h4>
+            Unmatched<br class="br-desktop">
+            Softness
+          </h4>
+          <p>
+            The combination of high-quality fibers and<br>
+            unique weaving techniques ensures our<br>
+            towel stays exceptionally soft, even after<br>
+            multiple washes
+          </p>
+        </div>
+      </div>
+      <div class="towel-silk-fiber-two-video">
+        <video autoplay="" loop="" muted="" playsinline="" webkit-playsinline="" poster="files/images/towel-fiber-big-opti.jpg" preload="none">
+          <source src="files/images/towel-fiber-big-opti.mp4" type="video/mp4">
+          <source src="files/images/towel-fiber-big-opti.webm" type="video/webm">
+        </video>
+      </div>
+    </div>
+  </section>
+  <!--towel-silk-fiber-->
+
+  <!--towel-silk-benefits-->
+  <section class="towel-silk-benefits">
+    <h3 class="towel-silk-benefits-title-mob">
+      Skin Benefits with Every Use
+    </h3>
+    <picture class="towel-silk-benefits-bg">
+      <source srcset="files/images/towel-copper-benefits-mobile.avif" media="(max-width: 768px)" type="image/avif">
+      <source srcset="files/images/towel-copper-benefits.avif" type="image/avif">
+
+      <source srcset="files/images/towel-copper-benefits-mobile.webp" media="(max-width: 768px)" type="image/webp">
+      <source srcset="files/images/towel-copper-benefits.webp" type="image/webp">
+
+      <source srcset="files/images/towel-copper-benefits-mobile.jpg" media="(max-width: 768px)" type="image/jpg">
+      <source srcset="files/images/towel-copper-benefits.jpg" type="image/jpg">
+
+      <img src="files/images/towel-copper-benefits.jpg" alt="Blemish Defense & Anti-Acne">
+    </picture>
+    <div class="towel-silk-benefits-info">
+      <h3>
+        Skin Benefits with Every Use
+      </h3>
+      <ul>
+        <li>
+          <img src="files/images/benefits-1.svg" alt="Blemish Defense & Anti-Acne">
+          <div class="towel-silk-benefits-item">
+            <h4>
+              Blemish Defense & Anti-Acne
+            </h4>
+            <p>
+              Copper threads fight acne-causing bacteria, helping to keep<br class="br-desktop">
+              your skin clear and blemish-free
+            </p>
+          </div>
+        </li>
+        <li>
+          <img src="files/images/benefits-2.svg" alt="Skin Care">
+          <div class="towel-silk-benefits-item">
+            <h4>
+              Skin Care
+            </h4>
+            <p>
+              Gentle on your skin, our towel offers the softest touch,<br class="br-desktop">
+              preventing irritation and ensuring a soothing experience
+            </p>
+          </div>
+        </li>
+        <li>
+          <img src="files/images/benefits-3.svg" alt="Anti-Inflammatory Effect">
+          <div class="towel-silk-benefits-item">
+            <h4>
+              Anti-Inflammatory Effect
+            </h4>
+            <p>
+              With antibacterial properties, this towel helps reduce<br class="br-desktop">
+              inflammation, keeping your skin calm and healthy
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!--towel-silk-benefits-->
+
+  <!--towel-silk-why-->
+  <section class="towel-silk-why">
+    <h3>
+      why <b>copper tencel is better</b><br>
+      than cotton
+    </h3>
+    <div class="towel-silk-why-wrapper">
+      <div class="towel-silk-why-video">
+        <video autoplay="" loop="" muted="" playsinline="" webkit-playsinline="" poster="files/images/towel-silk-fiber-opti.jpg" preload="none">
+          <source src="files/images/towel-silk-fiber-opti.mp4" type="video/mp4">
+          <source src="files/images/towel-silk-fiber-opti.webm" type="video/webm">
+        </video>
+      </div>
+      <picture>
+        <source srcset="files/images/towel-silk-why-mob.avif" media="(max-width: 768px)" type="image/avif">
+        <source srcset="files/images/towel-silk-why.avif" type="image/avif">
+
+        <source srcset="files/images/towel-silk-why-mob.webp" media="(max-width: 768px)" type="image/webp">
+        <source srcset="files/images/towel-silk-why.webp" type="image/webp">
+
+        <source srcset="files/images/towel-silk-why-mob.jpg" media="(max-width: 768px)" type="image/jpg">
+        <source srcset="files/images/towel-silk-why.jpg" type="image/jpg">
+
+        <img src="files/images/towel-silk-why.jpg" alt="Why copper tencel is better than cotton">
+      </picture>
+      <div class="towel-silk-why-box">
+        <div class="towel-silk-why-box-left">
+          <div class="towel-silk-why-box-info">
+            <h4>
+              Regular Towels
+            </h4>
+            <p>
+              Traditional terry towels trap<br class="br-desktop">
+              bacteria after just one use, leading<br class="br-desktop">
+              to unpleasant odors and poor<br class="br-desktop">
+              hygiene. With repeated use,<br class="br-desktop">
+              bacteria multiply, compromising<br class="br-desktop">
+              cleanliness and freshness.
+            </p>
+          </div>
+        </div>
+        <div class="towel-silk-why-box-right">
+          <div class="towel-silk-why-box-info">
+            <h4>
+              Copper-Infused<br class="br-mobile"> Towel
+            </h4>
+            <p>
+              Thanks to copper threads woven into the<br class="br-desktop">
+              fabric, our towel stays fresh and hygienic,<br class="br-desktop">
+              naturally preventing bacteria growth. This<br class="br-desktop">
+              ensures your towel remains clean and<br class="br-desktop">
+              odor-free after every use, maintaining<br class="br-desktop">
+              long-lasting freshness and protection.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--towel-silk-why-->
+
+  <!--towel-silk-luxury-->
+  <section class="towel-silk-luxury">
+    <h3>
+      <b>Luxury for Your Skin,</b> Head to Toe
+    </h3>
+    <picture>
+      <source srcset="files/images/towel-silk-luxury-mob-bg.avif" media="(max-width: 1279px)" type="image/avif">
+      <source srcset="files/images/towel-silk-luxury-bg.avif" type="image/avif">
+
+      <source srcset="files/images/towel-silk-luxury-mob-bg.webp" media="(max-width: 1279px)" type="image/webp">
+      <source srcset="files/images/towel-silk-luxury-bg.webp" type="image/webp">
+
+      <source srcset="files/images/towel-silk-luxury-mob-bg.jpg" media="(max-width: 1279px)" type="image/jpg">
+      <source srcset="files/images/towel-silk-luxury-bg.jpg" type="image/jpg">
+
+      <img src="files/images/towel-silk-luxury-bg.jpg" alt="Blemish Defense & Anti-Acne">
+    </picture>
+  </section>
+  <!--towel-silk-luxury-->
+
+  <!--towel-silk-anti-->
+  <section class="towel-silk-anti-section">
+    <h3>
+      <b>CLINICALLY PROVEN</b> anti-acne effect
+    </h3>
+
+    <div class="towel-silk-anti-percent-item-mob">
+      <div class="towel-silk-anti-percent-count">
+        99%
+      </div>
+      <div class="towel-silk-anti-percent-text">
+        antibacterial activity
+      </div>
+    </div>
+
+    <div class="towel-silk-anti-wrapper">
+      <h4 class="towel-silk-anti-text">
+        Independent research confirms that Sleep&Glow Copper Tencel kills 99.9% of bacteria, helping prevent breakouts
+      </h4>
+      <h4 class="towel-silk-anti-text-mobile">
+        Research shows that Sleep&Glow Copper Tencel has antibacterial properties and kills 99.9% of bacteria, destroying acne-causing environments
+      </h4>
+
+      <!--Mobile link to video-->
+      <div class="towel-silk-anti-percent-item_link-text-mob">
+        <a href="#" title="Full research">
+          <span>
+              Full<br> research
+          </span>
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="8.29066" cy="8.05812" rx="5.97718" ry="5.74074" fill="#FCF9F9"/>
+            <path d="M14.6651 13.3636H13.7383L13.4098 13.0471C14.8176 11.4056 15.545 9.16622 15.1461 6.78612C14.5947 3.52668 11.873 0.923814 8.58819 0.525177C3.62577 -0.0845032 -0.550646 4.08946 0.0593914 9.04897C0.458262 12.3319 3.06265 15.052 6.32401 15.603C8.7055 16.0017 10.9462 15.2747 12.5886 13.8678L12.9054 14.1961V15.1223L17.8913 20.1053C18.3723 20.586 19.1583 20.586 19.6393 20.1053C20.1202 19.6246 20.1202 18.839 19.6393 18.3583L14.6651 13.3636ZM7.62621 13.3636C4.70506 13.3636 2.34703 11.007 2.34703 8.08756C2.34703 5.16813 4.70506 2.81148 7.62621 2.81148C10.5473 2.81148 12.9054 5.16813 12.9054 8.08756C12.9054 11.007 10.5473 13.3636 7.62621 13.3636Z" fill="url(#paint0_linear_3576_8081)"/>
+            <path d="M8.37891 5.03711H7.23633V7.32093H4.95117V8.46284H7.23633V10.7467H8.37891V8.46284H10.6641V7.32093H8.37891V5.03711Z" fill="url(#paint1_linear_3576_8081)"/>
+            <defs>
+              <linearGradient id="paint0_linear_3576_8081" x1="23.5" y1="10.4658" x2="-5" y2="0.465821" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#9E866C"/>
+                <stop offset="0.07" stop-color="#B8A284"/>
+                <stop offset="0.21" stop-color="#AD9378"/>
+                <stop offset="0.277551" stop-color="#DDCEBA"/>
+                <stop offset="0.332061" stop-color="#AB8F76"/>
+                <stop offset="0.66" stop-color="#735B42"/>
+                <stop offset="0.74" stop-color="#A58B6E"/>
+                <stop offset="0.91" stop-color="#B79A7A"/>
+                <stop offset="1" stop-color="#8F7E61"/>
+              </linearGradient>
+              <linearGradient id="paint1_linear_3576_8081" x1="13.5001" y1="8.96582" x2="5.50012" y2="4.96582" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#9E866C"/>
+                <stop offset="0.07" stop-color="#B8A284"/>
+                <stop offset="0.21" stop-color="#AD9378"/>
+                <stop offset="0.277551" stop-color="#DDCEBA"/>
+                <stop offset="0.332061" stop-color="#AB8F76"/>
+                <stop offset="0.66" stop-color="#735B42"/>
+                <stop offset="0.74" stop-color="#A58B6E"/>
+                <stop offset="0.91" stop-color="#B79A7A"/>
+                <stop offset="1" stop-color="#8F7E61"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </a>
+      </div>
+      <!--Mobile link to video-->
+
+      <div class="towel-silk-anti-percent">
+        <div class="towel-silk-anti-percent-item">
+          <div class="towel-silk-anti-percent-item-desk">
+            <div class="towel-silk-anti-percent-count">
+              99%
+            </div>
+            <div class="towel-silk-anti-percent-text">
+              antibacterial activity
+            </div>
+          </div>
+        </div>
+        <div class="towel-silk-anti-percent-item">
+
+          <!--Desktop link to video-->
+          <a href="#" title="Full research">
+            <div class="towel-silk-anti-percent-item_link-text">
+              Full<br> research
+
+              <svg width="57" height="55" viewBox="0 0 57 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="22.3835" cy="21.3711" rx="16.1384" ry="15.5" fill="#FCF9F9"/>
+                <path d="M41.2014 35.6952H38.5976L37.6747 34.8405C41.6299 30.4086 43.6735 24.3622 42.5528 17.9359C41.0037 9.13541 33.3569 2.10768 24.128 1.03136C10.1858 -0.61478 -1.54805 10.6549 0.165887 24.0456C1.28654 32.9094 8.60372 40.2537 17.7667 41.7416C24.4576 42.8179 30.753 40.8552 35.3675 37.0564L36.2574 37.9428V40.4437L50.2655 53.8977C51.6169 55.1956 53.8252 55.1956 55.1766 53.8977C56.528 52.5997 56.528 50.4788 55.1766 49.1808L41.2014 35.6952ZM21.4253 35.6952C13.2182 35.6952 6.59314 29.3322 6.59314 21.4498C6.59314 13.5673 13.2182 7.20437 21.4253 7.20437C29.6324 7.20437 36.2574 13.5673 36.2574 21.4498C36.2574 29.3322 29.6324 35.6952 21.4253 35.6952Z" fill="url(#paint0_linear_3578_10718)"/>
+                <path d="M23.5396 13.2148H20.3295V19.3812H13.9092V22.4643H20.3295V28.6306H23.5396V22.4643H29.9599V19.3812H23.5396V13.2148Z" fill="url(#paint1_linear_3578_10718)"/>
+                <defs>
+                  <linearGradient id="paint0_linear_3578_10718" x1="56.666" y1="21.5" x2="-0.333986" y2="21.5" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#9E866C"/>
+                    <stop offset="0.07" stop-color="#B8A284"/>
+                    <stop offset="0.21" stop-color="#AD9378"/>
+                    <stop offset="0.277551" stop-color="#DDCEBA"/>
+                    <stop offset="0.332061" stop-color="#AB8F76"/>
+                    <stop offset="0.66" stop-color="#735B42"/>
+                    <stop offset="0.74" stop-color="#A58B6E"/>
+                    <stop offset="0.91" stop-color="#B79A7A"/>
+                    <stop offset="1" stop-color="#8F7E61"/>
+                  </linearGradient>
+                  <linearGradient id="paint1_linear_3578_10718" x1="25.4613" y1="40.6742" x2="18.3928" y2="40.2602" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#9E866C"/>
+                    <stop offset="0.07" stop-color="#B8A284"/>
+                    <stop offset="0.21" stop-color="#AD9378"/>
+                    <stop offset="0.277551" stop-color="#DDCEBA"/>
+                    <stop offset="0.332061" stop-color="#AB8F76"/>
+                    <stop offset="0.66" stop-color="#735B42"/>
+                    <stop offset="0.74" stop-color="#A58B6E"/>
+                    <stop offset="0.91" stop-color="#B79A7A"/>
+                    <stop offset="1" stop-color="#8F7E61"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </a>
+          <!--Desktop link to video-->
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--towel-silk-anti-->
+
+  <!--towel-silk-how-->
+  <section class="towel-silk-how">
+    <h3>
+      how it <b>works</b>
+    </h3>
+    <div class="towel-silk-how-wrapper">
+      <div class="towel-silk-how-structure">
+        <h4>
+          <span class="num">
+            99,9%
+          </span>
+          <span>
+            ANTIBACTERIAL <br>
+            ACTIVITY
+          </span>
+        </h4>
+        <picture>
+          <source srcset="files/images/towel-silk-how-structure.avif" type="image/avif">
+          <source srcset="files/images/towel-silk-how-structure.webp" type="image/webp">
+          <source srcset="files/images/towel-silk-how-structure.jpg" type="image/jpg">
+
+          <img src="files/images/towel-silk-how-structure.jpg" alt="ANTIBACTERIAL ACTIVITY">
+        </picture>
+      </div>
+
+      <div class="towel-silk-how-info">
+        <h4>
+          Copper inactivates bacteria <br>
+          with a multifaceted attack
+        </h4>
+        <ul>
+          <li>
+            <span>
+              1
+            </span>
+            <span>
+              The first step is a direct interaction between the surface<br class="br-desktop">
+              and the bacterial outer membrane, causing the membrane<br class="br-desktop">
+              to rupture
+             </span>
+          </li>
+          <li>
+            <span>
+              2
+            </span>
+            <span>
+              The second is related to the holes in the outer membrane,<br class="br-desktop">
+              through which the cell loses vital nutrients and water, causing<br class="br-desktop">
+              them to die
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--towel-silk-how-->
+
+
+
+</main>
+
+<footer>
+  <div class="grid">
+    <div class="footer-part">
+      <div class="menu-container">
+        <div>
+          <span>Pillows</span>
+          <ul>
+            <li>
+              <a href="https://sleepandglow.com/omnia">The Omnia</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/omnia-copper">The Omnia Skin Defense</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/aula">The Aula</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/silk-pillow-bra">The Pillow Bra</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/shop/?category=2053">ADDITIONAL PILLOWCASES</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <span>Blankets</span>
+          <ul>
+            <li>
+              <a href="https://sleepandglow.com/weighted-blankets-page">Weighted Blankets</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/blanket-with-ventilation-panels">ventilated blanket</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <span>Silk collection</span>
+          <ul>
+            <li>
+              <a href="https://sleepandglow.com/the-silk-collection">Additional Silk Pillowcases</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/the-silk-collection">The silk sleep mask</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/the-silk-collection">The silk sleep hair turban</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/the-silk-collection">Silk Hair Scrunchies</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/silk-pillow-bra">Silk Pillow Bra</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/the-silk-collection">SILK HEADBAND</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <span>Silk Loungewear</span>
+          <ul>
+            <li>
+              <a href="https://sleepandglow.com/silk-products/">SILK KIMONO</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/silk-tops-and-shorts/">SILK TOPS AND SHORTS</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <span>About</span>
+          <ul>
+            <li>
+              <a href="https://sleepandglow.com/beauty-sleep">Beauty Sleep</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/our-story">Our Story</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/reviews">Reviews</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/faq">FAQ</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/our-materials">Materials</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/2091">Privacy policy</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <span>Support</span>
+          <ul>
+            <li>
+              <a href="https://sleepandglow.com/payment-and-shipping/">Payment and Shipping</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/warranty-and-returns/">Warranty and Returns</a>
+            </li>
+            <li>
+              <a href="https://sleepandglow.com/contact-us">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="email-mailing">
+        <div class="h4">SUBSCRIBE TO OUR NEWSLETTER</div>
+        <p>Sign up to discover sleep hygiene, news and news from Sleep&amp;Glow!</p>
+        <form method="post" class="js-form-mailing" action="https://sleepandglow.com/" novalidate="novalidate">
+          <div class="input-box">
+            <input name="email" type="email" placeholder="Enter your e-mail" required="">
+            <input type="text" name="vorg" class="vorg">
+          </div>
+          <input type="text" class="n-message" name="n-message" value="">
+          <button type="submit"><img loading="lazy" src="../common_files/mailing-submit.svg" alt="submit"></button>
+          <span class="error_g-recaptcha-response error"></span>
+          <input type="hidden" name="g-recaptcha-response"
+                 value="03AFcWeA7A4FE0l1wd4YYfxnUYxBixgWt-Qe7C_aIhP8-2m74XVO_XYIGCUksR9b4cSld7BdCPMP90agrJLU0rp1I0q3biiIt0iZoPGAFaRkPn-tlpATjzNckzOSp7mUAuDMaWzaTCvJArkF-13zHh2AVPj9nn17kAtRb17frbXHnkvkY4TMVfhu_iGPgMEJEDHRNFT3_wjP4OV52lpEvAG3_p0Hs5YJHvfCf3idEEqX9mEhahNmsl2tvGxIDYPyKGxTI5D5XSiKBVcSCmRG7f8d_kMkp--u8QZLlK1UUSsBgra6iO_CtpCO79BbpRUQ33AbXiegozVM03n1L2OO281OKFi-m12Nl0GsebiUhEfocanrIQEziMU-oQwL0mqbfYbTGnzVwoeLZw8suEHZF9YM50baLzHmNlETG8IXlAoQQgOYlC6dfbI3H9oChwCpAHtdoUXe6goyi9LJkF1Z7p3-mK6iOZnaSveDu0enLs11OopsEoJwMnVerAGcfT-ieCMcRU8RE8Z5X1tpx2j8P6egtrNiI1p_LND7YQIIqEvw3g6g_M0vzJuBBBsJyGbxO2B0Fxdcmhq-8oBX1B9mdvftFlmyx2tj4ZYZv54aYJK1HFadjH5lsDdkX-ZB5mtH-7jxlwkjygXuJZdzWsdCG02-VWmGo66aYvsosZMw93KZfiRMPPzj_zjoU0b8LqZHGvXvW9Hoxoi6vI_kCd9nSDAVjVazOEQfZaSF1l1-5rykFnLjxACoC5iAmvSlqkOzxe_IKq7dh8GPcsItdWH2Gqqbp53bGFC1CsyH8UwmbvvPwbTd58y3RhG58mxOGZUW6Io6HR3aAloWAUXYUgyf4Vw1MO-JdG7NG5zn4Juo1JYInebqZkHCdfuA8Bj2q9bbH7Qx_0CnBFsYIMyH2bgNUumz9ym4zYmh-0YGbCs1lUAThSqqEb_kT_Gj06JomYXAappaa6t1JdgxyRicQWqJp7NlxMElObu5fOiDcTqH3p9E-E6-MoEiC1pgA4WKPc524tWTyms82UZ7Im6od8AhiuPRSQKsYJAWmg9mSnEoWVWPkYOviErpCHg3Q_Kyb94L5N15jn1tk8MDFMp4RwFi8QcPHSLt98oZuwLnLxaew4x7eccf5b1r1ZLOV2cq-63iwJuN07cY15a4lzW0SyK5W6dX_zjcOpFlYHXLlKVoQG2pJ_0b0FkPSk-bgNdN4K261d7A_I4NCMq82-1MGC8VBydgR35Y4owg8qLCRUIbBop-Z-AteyjBl8lQMCExMQwDkUhI1cv1cQammaiC99H2q2jAhseCJUflV6SgSKCE4gF6n50lJG42FVp1vo0p_6hSmcL6urDUpimtn87rllDpQVn6J8ltjLW9YySGmAEfxVGX-D2PTNSQW5EbKucwxfCDVcVB6pQ3n9bKLIsCix3sPMGNF30VfIY4cbqPet0sknK5-zJtYE3RFUeu4uZK6dNm5HbB6tcVAAbs_0KCIb13mn17WU6-aHx9llVP_aZM0T_UGl6PbzVF2jSjV_xkLFxQsbmIIauc0iPwwwJ9l_Bn8cOw_uLlLhBbTukJgXvqCB_y2J02iluhHYLsVsogA_QAhXF10JusbUB3F2aMQ69EaQI7LWPnYqox2VLH4xzDFCrDIuowcb-1PCaFxSUd4a5VXIX0DhE04qykRgsgBtPypayvm3zH2BSyMD9CvxRVoJ7yUtuxAoHhoPUjl1oFeFiTdne-ZVCgx5jAs0CqZlT_lAH9FnHs_9TEvDzRcVjfhrjadPNp2FWVgzbN8vD0y3Wu6VWonE4gutUe2vJdwBhqgyL1l-1jyU4cJJ6jnHsVTGYZPu_P26PVySaOnTSiUesatCiQYTDOPCTwa9v8brbG8yhmNiH771y6Nll6uhPSZy5Su1_G7QcqxmsNI3ae2PEKD5XlE3whGWtFcJYIR3di6ePVELdddNf1Sr3lU2sPKK-AJwRo9iHWBVN2G6Um7PbOPQWQVaH2nDxfyOVmKL-9ZzDpv6BSrhQfXNj19ict_OwrhQcxnz7lqg3fUIT3MLFSk6k03ikCLIZ2d_MwYSAzKTJu0GrnWfV9SA6-xAEpgxXXoQGcuvcKTi-i9Cyz9QwzBOJWUCDA3axmaE0m05yUmS5bQILl-Oi0QTiulVk70w-GtiQYNEIbET0rnydLTUhA4SnR0co4ZqiXOFi66biUiY_T8L2h-MT6CMm-iDB48DRsxifsU3L-eeQtg">
+          <input type="hidden" name="af_action" value="45a34a071fe940cf9d119a98819b56bd">
+        </form>
+        <div class="politics">
+          By clicking on Subscribe, you agree to our <a href="https://sleepandglow.com/privacy-policy"
+                                                        target="_blank">privacy policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-part mobile-display-block-non-flex">
+      <div class="sn-box">
+        <div>
+          <a href="https://www.instagram.com/sleepandglow/" target="_blank" class="social-box__item">
+            <img loading="lazy" src="../common_files/in.svg" alt="instagram">
+          </a>
+          <a href="https://www.facebook.com/sleepandglow" target="_blank" class="social-box__item">
+            <img loading="lazy" src="../common_files/f.svg" alt="facebook">
+          </a>
+          <a href="https://sleepandglow.com/false" target="_blank" class="social-box__item">
+            <img loading="lazy" src="../common_files/vkon.svg" alt="vk">
+          </a>
+          <a href="https://www.youtube.com/channel/UCE9tVdNt0JS15blKR3t6Qkw/featured" target="_blank"
+             class="social-box__item">
+            <img loading="lazy" src="../common_files/you.svg" alt="youtube">
+          </a>
+        </div>
+
+        <span>FOLLOW US ON SOCIAL MEDIA</span>
+      </div>
+      <div class="sn-box mobile-display-none">
+        <div class="v-line"></div>
+        <div>
+          <img loading="lazy" src="../common_files/feder.jpeg.webp" alt="feder">
+        </div>
+        <span style="font-size:12px; line-height:16px" class="mobile-display">
+TAKO INNOVATIONS SL en el marco del Programa ICEX Next, ha contado con el apoyo de
+ICEX y con la cofinanciación del fondo europeo FEDER.
+La finalidad de este apoyo es contribuir al desarrollo internacional de la empresa y
+de su entorno. FONDO EUROPEO DE DESARROLLO REGIONAL. Una manera de hacer Europa
+</span>
+        <div class="v-line"></div>
+      </div>
+      <a href="https://sleepandglow.com/#up" class="up">
+        <span>Top of page</span>
+        <img loading="lazy" src="../common_files/up.svg" alt="up">
+      </a>
+    </div>
+    <div class="footer-part mobile-display-block">
+      <div class="sn-box mobile-display-block">
+        <div>
+          <img loading="lazy" src="../common_files/feder.jpeg.webp" alt="feder">
+        </div>
+        <span style="font-size:12px; line-height:16px" class="mobile-display">
+TAKO INNOVATIONS SL en el marco del Programa ICEX Next, ha contado con el apoyo de
+ICEX y con la cofinanciación del fondo europeo FEDER.
+La finalidad de este apoyo es contribuir al desarrollo internacional de la empresa y
+de su entorno.
+</span>
+      </div>
+    </div>
+    <div class="footer-part">
+      <div class="footer-part__info">
+
+        <span>© 2016 — 2024, Sleep&amp;Glow ®</span>
+        <div>
+          <a href="https://sleepandglow.com/privacy-policy">Privacy policy</a>
+          <a href="https://sleepandglow.com/terms-of-use">Terms of use</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="shopping-cart js-minicart">
+  <div class="shopping-cart-card">
+    <div class="shopping-cart__title">
+      <div class="h4">Cart</div>
+
+      <span class="goods-count">0 products</span>
+      <div class="cart-close">
+        <div class="close__lane"></div>
+        <div class="close__lane"></div>
+      </div>
+    </div>
+    <div class="shopping-cart__empty" style="display:block">
+      <div class="shopping-cart__empty_top">
+        <img loading="lazy" src="../common_files/empty-cart.svg" alt="cart empty">
+        <div>
+          <span>There are no items in your cart</span>
+          <span>The basket is waiting to be filled. We wish you a pleasant shopping!</span>
+        </div>
+      </div>
+      <a href="https://sleepandglow.com/shop/" class="button gradient"><span>Shop now</span></a>
+    </div>
+  </div>
+  <div class="shopping-cart-bg"></div>
+  <script>
+    try {
+      $(document).ready(function () {
+        otherProductsSwiperSidebar();
+      });
+    } catch (err) {
+      console.error(err);
+    }
+
+  </script>
+</div>
+
+<script src="../common_files/lexicon_usa.js.download"></script>
+<script src="../common_files/price-widget"></script>
+<script src="../common_files/swiper.min.js.download"></script>
+<script src="../common_files/video.min.js.download"></script>
+<script src="../common_files/jquery.validate.min.js.download"></script>
+<script src="../common_files/jquery.visible.min.js.download"></script>
+<script src="../common_files/messages_ru.min.js.download"></script>
+<script src="../common_files/additional-methods.min.js.download"></script>
+<script src="../common_files/PNotify.js.download"></script>
+<script src="../common_files/suggs.js.download"></script>
+<script src="../common_files/_js_main_v11.js.download"></script>
+<script src="../common_files/main.js.download"></script>
+
+
+<script src="../common_files/_js_checkout_v11.js.download"></script>
+
+<script src="../common_files/skrollr.min.js.download"></script>
+<script src="../common_files/aos.js.download"></script>
+<script type="text/javascript" id="pap_x2s6df8d" src="../common_files/zg7j7hw4"></script>
+<script type="text/javascript" src="../common_files/zg7r7hw4"></script>
+<script defer="" src="../common_files/sms_aff_clicktrack.js.download"></script>
+<script>
+  $(document).ready(function () {
+    /*
+        function nextMsg(i) {
+            if (messages.length == i) {
+                i = 0;
+            }
+            if (messages[i+1] !== '') {
+                $('.header-info').html(messages[i]).fadeIn(500).delay(5000).fadeOut(500, function() {
+                    nextMsg(i + 1);
+                });
+            }
+        };
+
+        var messages = [
+            "PINK OCTOBER! 10% of profits to breastcancer.org",
+        "SILK MASK FOR ORDERS OVER 270 - CODE 'SELFLOVE'"
+    ];
+
+    nextMsg(0);
+*/
+    $(".js-product-color .c_button.active").click().addClass("active");
+    $(".partners-swipernew").length > 0 && (partnersSwiperNew = new Swiper(".partners-swipernew", {
+      speed: 300,
+      allowTouchMove: !1,
+      initialSlide: 1,
+      centeredSlides: false,
+      loop: !1,
+      slidesPerView: 4,
+      breakpoints: {1279: {}}
+    }));
+
+  })
+
+
+</script>
+<script>
+  if (!dataLayer) {
+    var dataLayer = [];
+  }
+</script>
+<script>
+  jQuery(function () {
+    jQuery(".goods-grid .slide-product a").on('click', function (e) {
+      let id = jQuery(this).closest('form.slide-product').find('input[name=id]').val()
+      setCookie('click_product', id, {path: '/'})
+      setCookie('click_product_out', 'Shop', {path: '/'})
+    })
+  })
+</script>
+
+
+<script src="../common_files/iziToast.min.js.download"></script>
+</body>
+</html>

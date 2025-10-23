@@ -1,0 +1,96 @@
+
+main {
+    background-color: #FCF9F9;
+}
+
+/*towel-silk-main-section*/
+.towel-silk-main-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: clamp(36px, calc(96/1920*100vw), 96px);
+}
+.towel-silk-main-section picture {
+    display: flex;
+    width: 100%;
+}
+.towel-silk-main-section picture img {
+    width: 100%;
+}
+.towel-silk-main-text {
+    position: absolute;
+    bottom: clamp(35px, calc(62/1920*100vw), 62px);
+    max-width: 90%;
+}
+.towel-silk-main-text h1 {
+    color: #fff;
+    font-weight: 500;
+    font-size: clamp(24px, calc(48/1920*100vw), 48px);
+    line-height: clamp(34px, calc(60/1920*100vw), 60px);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: clamp(10px, calc(16/1920*100vw), 16px);
+    position: relative;
+    z-index: 1;
+}
+.towel-silk-main-text p {
+    color: #fff;
+    font-weight: 500;
+    font-size: clamp(14px, calc(18/1920*100vw), 18px);
+    line-height: clamp(20px, calc(28/1920*100vw), 28px);
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+/*towel-silk-main-section*/
+
+/*towel-silk-skin-care*/
+.towel-silk-skin-care {
+
+}
+.towel-silk-skin-care .title {
+    font-weight: 500;
+    font-size: clamp(18px, calc(32/1920*100vw), 32px);
+    line-height: clamp(28px, calc(48/1920*100vw), 48px);
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(273.22deg, #9E866C 22.37%, #B8A284 25.3%, #AD9378 31.16%, #DDCEBA 33.99%, #AB8F76 36.27%, #735B42 49.99%, #A58B6E 53.33%, #B79A7A 60.45%, #8F7E61 64.21%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.towel-silk-skin-care-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: end;
+}
+.skin-care-item {
+    position: relative;
+    display: flex;
+}
+.skin-care-item:nth-child(2) {
+    justify-content: end;
+}
+.skin-care-item picture {
+    width: 42vw;
+    display: flex;
+}
+.skin-care-item .info {
+    position: absolute;
+}
+/*towel-silk-skin-care*/
+
+
+@media screen and (max-width: 1279px) {
+
+}
+@media (max-width: 768px) {
+
+}
+@media (max-width: 576px) {
+
+}
