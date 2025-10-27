@@ -653,7 +653,7 @@
     </div>
 </header>
 
-<main role="main">
+<main role="main" class="beauty-landing store shop-store">
 
     <section class="general-section">
         <div class="general-photo center posthog_view_block ">
@@ -791,14 +791,13 @@
                                 <source data-src="" type="video/mp4" src="">
                             </video>
                         </div>
+
+                        <!--product card-->
                         <form class="slide-product js-product-box dd posthog_view_block ms2_form msoptionsprice-product">
-                            <input type="hidden" name="id" value="98"><input type="hidden" name="pagetitle" value="Комплект из двух подушек Omnia"><input type="hidden" name="price" value="27000"><input type="hidden" name="category1" value="Комплекты"><input type="hidden" name="category2" value="Комплекты">    <input type="hidden" name="id" value="98">
-                            <input type="hidden" name="count" value="1">
-                            <input type="hidden" name="price" value="27000">
-                            <input type="hidden" name="old_price" value="31000">
+                            <!--slide-product__img-->
                             <div class="slide-product__img">
                                 <div class="slide-product__badge custom">
-                                    <img loading="lazy" src="../files/20percent.svg" alt="">
+                                    <img loading="lazy" src="../files/cup+tencel-badge.svg" alt="">
                                 </div>
                                 <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
                                     <img loading="lazy" src="../files/omnia-tencel-1_500x500.jpg.webp" alt="photo-0" data-color="Молочный">
@@ -807,19 +806,44 @@
                                     <div class="real-options d-flex"></div>
                                 </div>
                                 <div class="pillow-preview-labels"></div>
+
+                                <!--mobile add button-->
+                                <button type="submit" name="" value="cart/add" onclick="" class="button border single-product__to-card single-product__to-card-mobile">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.33333 16.3519L2 7.01855H16L13.6667 16.3519H4.33333Z" stroke="#221D1E"/>
+                                        <path d="M12.4566 5.32099C12.4566 2.49608 10.9089 1 8.99973 1C7.09062 1 5.54297 2.50068 5.54297 5.32099" stroke="#221D1E"/>
+                                        <path d="M11.1543 11.6851H6.84333" stroke="#221D1E" stroke-linecap="square"/>
+                                        <path d="M9 13.8406L9 9.52961" stroke="#221D1E" stroke-linecap="square"/>
+                                    </svg>
+                                </button>
+                                <!--mobile add button-->
                             </div>
+                            <!--slide-product__img-->
+
+                            <!--slide-product__title-->
                             <div class="slide-product__title">
                                 <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
                                     <h4>
-                                        Комплект из двух подушек Omnia
+                                        Комплект из&nbsp;двух подушек Omnia
                                     </h4>
                                 </a>
                             </div>
+                            <!--slide-product__title-->
+
+                            <!--slide-product__info-->
                             <div class="slide-product__info">
-                                <!--<div class="btn-dolyamipc fx-product-dolyami-insert-pc"></div>-->
-                                <div class="single-product-price">
-                                    <span class="js-old-price">31 000 р.</span>
-                                    <span class="js-new-price">27 000 р.</span>
+                                <div class="slide-product__item">
+                                    <div class="single-product-price">
+                                        <span class="js-old-price">31 000 ₽</span>
+                                        <span class="js-new-price">27 000 ₽</span>
+                                    </div>
+                                    <div class="separate-payments">
+                                        4 платежа по 3 500 ₽
+                                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="9" cy="9.66675" r="8" stroke="#4F6FC1"/>
+                                            <path d="M9.05805 14.8848C8.87986 14.8848 8.73448 14.8332 8.62194 14.73C8.50939 14.6175 8.45312 14.4674 8.45312 14.2799V7.7944C8.45312 7.60682 8.50939 7.46145 8.62194 7.35829C8.73448 7.24574 8.87986 7.18947 9.05805 7.18947C9.23625 7.18947 9.37693 7.24574 9.4801 7.35829C9.59265 7.46145 9.64892 7.60682 9.64892 7.7944V14.2799C9.64892 14.4674 9.59265 14.6175 9.4801 14.73C9.37693 14.8332 9.23625 14.8848 9.05805 14.8848ZM9.04399 5.79671C8.81889 5.79671 8.62663 5.71699 8.46719 5.55755C8.30775 5.38873 8.22803 5.19178 8.22803 4.96668C8.22803 4.73221 8.30775 4.53995 8.46719 4.38989C8.63601 4.23983 8.82827 4.16479 9.04399 4.16479C9.2597 4.16479 9.44727 4.23983 9.60671 4.38989C9.77553 4.53995 9.85994 4.73221 9.85994 4.96668C9.85994 5.19178 9.78022 5.38873 9.62078 5.55755C9.46134 5.71699 9.26908 5.79671 9.04399 5.79671Z" fill="#4F6FC1"/>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <button data-reachgoal="click-add-to-cart-button " type="submit" name="ms2_action" value="cart/add" onclick="addToCart(this);" class="button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
                                     <span>добавить</span>
@@ -831,53 +855,345 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div class="digi-dolyame-label--container">
-                                <button class="digi-dolyame-label digi-dolyame-label--5 digi-dolyame-label--desktop">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" class="digi-dolyame-logo_small">
-                                        <rect width="16" height="16" rx="8" fill="#000"></rect>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6786 4.78571H11.75V9.60713H10.6786V4.78571ZM8.53571 5.32142H9.60714V10.1428H8.53571V5.32142ZM7.46429 5.85713H6.39286V10.6786H7.46429V5.85713ZM4.25 6.39285H5.32143V11.2143H4.25V6.39285Z" fill="#fff"></path>
-                                    </svg>
-                                    <span class="digi-dolyame-label__text">Долями по 6750 <span>₽</span></span>
-                                </button>
-                            </div>
+                            <!--slide-product__info-->
+                        </form>
+                        <!--product card-->
 
-                            <!-- New design-->
-                            <div class="slide-product__pay" onclick="">
-                                <div class="slide-product__pay-dol">
-                                    <div class="slide-product__pay-dol-badge">
-                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect width="16" height="16" rx="8" fill="#4E4A4B"></rect>
-                                            <g clip-path="url(#clip0_1040_1405)">
-                                                <path d="M12.5 4.37805H11.2913V10.5073H12.5V4.37805Z" fill="white"></path>
-                                                <path d="M9.90289 4.72102H8.69421V10.8501H9.90289V4.72102Z" fill="white"></path>
-                                                <path d="M7.30579 5.10392H6.09711V11.2342H7.30579V5.10392Z" fill="white"></path>
-                                                <path d="M4.70868 5.49106H3.5L3.5 11.6221H4.70868L4.70868 5.49106Z" fill="white"></path>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_1040_1405">
-                                                    <rect width="9" height="9" fill="white" transform="translate(3.5 3.5)"></rect>
-                                                </clipPath>
-                                            </defs>
+                        <!--product card-->
+                        <form class="slide-product js-product-box dd posthog_view_block ms2_form msoptionsprice-product">
+                            <!--slide-product__img-->
+                            <div class="slide-product__img">
+                                <div class="slide-product__badge custom">
+                                    <img loading="lazy" src="../files/20percent.svg" alt="">
+                                </div>
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <img loading="lazy" src="../files/omnia-tencel-1_500x500.jpg.webp" alt="photo-0" data-color="Молочный">
+                                </a>
+                                <div class="js-product-color" data-id="98">
+                                    <div class="real-options d-flex"></div>
+                                </div>
+                                <div class="pillow-preview-labels"></div>
+                                <!--mobile add button-->
+                                <button type="submit" name="" value="cart/add" onclick="" class="button border single-product__to-card single-product__to-card-mobile">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.33333 16.3519L2 7.01855H16L13.6667 16.3519H4.33333Z" stroke="#221D1E"/>
+                                        <path d="M12.4566 5.32099C12.4566 2.49608 10.9089 1 8.99973 1C7.09062 1 5.54297 2.50068 5.54297 5.32099" stroke="#221D1E"/>
+                                        <path d="M11.1543 11.6851H6.84333" stroke="#221D1E" stroke-linecap="square"/>
+                                        <path d="M9 13.8406L9 9.52961" stroke="#221D1E" stroke-linecap="square"/>
+                                    </svg>
+                                </button>
+                                <!--mobile add button-->
+                            </div>
+                            <!--slide-product__img-->
+
+                            <!--slide-product__title-->
+                            <div class="slide-product__title">
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <h4>
+                                        Подушка Omnia Copper Blend в&nbsp;наволочке из&nbsp;тенселя с&nbsp;медной нитью
+                                    </h4>
+                                </a>
+                            </div>
+                            <!--slide-product__title-->
+
+                            <!--slide-product__info-->
+                            <div class="slide-product__info">
+                                <div class="slide-product__item">
+                                    <div class="single-product-price">
+                                        <span class="js-old-price hidden"></span>
+                                        <span class="js-new-price">17 600 ₽</span>
+                                    </div>
+                                    <div class="separate-payments">
+                                        4 платежа по 3 500 ₽
+                                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="9" cy="9.66675" r="8" stroke="#4F6FC1"/>
+                                            <path d="M9.05805 14.8848C8.87986 14.8848 8.73448 14.8332 8.62194 14.73C8.50939 14.6175 8.45312 14.4674 8.45312 14.2799V7.7944C8.45312 7.60682 8.50939 7.46145 8.62194 7.35829C8.73448 7.24574 8.87986 7.18947 9.05805 7.18947C9.23625 7.18947 9.37693 7.24574 9.4801 7.35829C9.59265 7.46145 9.64892 7.60682 9.64892 7.7944V14.2799C9.64892 14.4674 9.59265 14.6175 9.4801 14.73C9.37693 14.8332 9.23625 14.8848 9.05805 14.8848ZM9.04399 5.79671C8.81889 5.79671 8.62663 5.71699 8.46719 5.55755C8.30775 5.38873 8.22803 5.19178 8.22803 4.96668C8.22803 4.73221 8.30775 4.53995 8.46719 4.38989C8.63601 4.23983 8.82827 4.16479 9.04399 4.16479C9.2597 4.16479 9.44727 4.23983 9.60671 4.38989C9.77553 4.53995 9.85994 4.73221 9.85994 4.96668C9.85994 5.19178 9.78022 5.38873 9.62078 5.55755C9.46134 5.71699 9.26908 5.79671 9.04399 5.79671Z" fill="#4F6FC1"/>
                                         </svg>
-                                        <span>Долями по 6750 ₽</span>
                                     </div>
                                 </div>
-                                <div class="slide-product__pay-split">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="16" height="16" rx="8" fill="#4E4A4B"></rect>
-                                        <g clip-path="url(#clip0_1040_1410)">
-                                            <path d="M9.98137 6.56607L9.92148 6.48622C12.9756 4.07091 12.6362 3.71161 12.6362 3.71161C12.3368 3.39223 12.0174 3.11277 11.6781 2.87324C11.199 2.5339 10.68 2.25444 10.1211 2.07479C7.80559 1.23642 5.05094 1.89514 3.39416 3.71161C1.17846 6.087 1.13854 9.85967 3.3742 12.275C5.72962 14.8101 9.74183 14.9698 12.2769 12.6343L12.3168 12.5944L12.3568 12.5544L12.3767 12.5345C12.4166 12.4946 12.4566 12.4546 12.4765 12.4147C13.1951 11.4965 12.1172 9.00134 9.98137 6.56607ZM11.9376 11.9556C11.7779 12.1153 11.0992 12.1353 10.0013 11.5564C8.98331 11.0174 7.84552 10.0992 6.76761 8.98138C6.58796 9.12111 9.58214 6.76568 9.44242 6.88545C10.3806 7.96336 11.179 9.14107 11.5982 10.1192C12.0973 11.257 12.0773 11.8159 11.9376 11.9556Z" fill="white"></path>
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_1040_1410">
-                                                <rect width="12.5714" height="12.5714" fill="white" transform="translate(1.71484 1.71484)"></rect>
-                                            </clipPath>
-                                        </defs>
+                                <button data-reachgoal="click-add-to-cart-button " type="submit" name="ms2_action" value="cart/add" onclick="addToCart(this);" class="button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
+                                    <span>добавить</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 21.7383L3 9.73828H21L18 21.7383H6Z" stroke="#221D1E"></path>
+                                        <path d="M16.4446 7.55556C16.4446 3.92353 14.4547 2 12.0001 2C9.5455 2 7.55566 3.92944 7.55566 7.55556" stroke="#221D1E"></path>
+                                        <path d="M14.7695 15.7383H9.22686" stroke="black" stroke-linecap="round"></path>
+                                        <path d="M12 18.5095L12 12.9668" stroke="black" stroke-linecap="round"></path>
                                     </svg>
-                                    <span class="slide-product__pay-split-text">6750 ₽ в Сплит</span>
-                                </div>
+                                </button>
                             </div>
+                            <!--slide-product__info-->
                         </form>
+                        <!--product card-->
+
+                        <!--product card-->
+                        <form class="slide-product js-product-box dd posthog_view_block ms2_form msoptionsprice-product">
+                            <!--slide-product__img-->
+                            <div class="slide-product__img">
+                                <div class="slide-product__badge custom">
+                                    <img loading="lazy" src="../files/20percent.svg" alt="">
+                                </div>
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <img loading="lazy" src="../files/omnia-tencel-1_500x500.jpg.webp" alt="photo-0" data-color="Молочный">
+                                </a>
+                                <div class="js-product-color" data-id="98">
+                                    <div class="real-options d-flex"></div>
+                                </div>
+                                <!--slide-product-color-->
+                                <div class="slide-product-color-size">
+                                    <div class="color" style="background-color: #db8c97;"></div>
+                                    <div class="color" style="background-color: #eae6dd;"></div>
+                                    <div class="color" style="background-color: #bbb7b0;"></div>
+                                    <div class="color" style="background-color: #D2B58B;"></div>
+                                    <div class="color" style="background-color: #3A3939;"></div>
+                                </div>
+                                <!--slide-product-color-->
+                                <div class="pillow-preview-labels"></div>
+
+                                <!--mobile add button-->
+                                <button type="submit" name="" value="cart/add" onclick="" class="button border single-product__to-card single-product__to-card-mobile">
+                                    <span>
+                                        опции
+                                    </span>
+                                </button>
+                                <!--mobile add button-->
+                            </div>
+                            <!--slide-product__img-->
+
+                            <!--slide-product__title-->
+                            <div class="slide-product__title">
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <h4>
+                                        Подушка Aula
+                                    </h4>
+                                </a>
+                            </div>
+                            <!--slide-product__title-->
+
+                            <!--slide-product__info-->
+                            <div class="slide-product__info">
+                                <div class="slide-product__item">
+                                    <div class="single-product-price">
+                                        <span class="js-old-price hidden"></span>
+                                        <span class="js-new-price">17 600 ₽</span>
+                                    </div>
+                                    <div class="separate-payments">
+                                        4 платежа по 3 500 ₽
+                                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="9" cy="9.66675" r="8" stroke="#4F6FC1"/>
+                                            <path d="M9.05805 14.8848C8.87986 14.8848 8.73448 14.8332 8.62194 14.73C8.50939 14.6175 8.45312 14.4674 8.45312 14.2799V7.7944C8.45312 7.60682 8.50939 7.46145 8.62194 7.35829C8.73448 7.24574 8.87986 7.18947 9.05805 7.18947C9.23625 7.18947 9.37693 7.24574 9.4801 7.35829C9.59265 7.46145 9.64892 7.60682 9.64892 7.7944V14.2799C9.64892 14.4674 9.59265 14.6175 9.4801 14.73C9.37693 14.8332 9.23625 14.8848 9.05805 14.8848ZM9.04399 5.79671C8.81889 5.79671 8.62663 5.71699 8.46719 5.55755C8.30775 5.38873 8.22803 5.19178 8.22803 4.96668C8.22803 4.73221 8.30775 4.53995 8.46719 4.38989C8.63601 4.23983 8.82827 4.16479 9.04399 4.16479C9.2597 4.16479 9.44727 4.23983 9.60671 4.38989C9.77553 4.53995 9.85994 4.73221 9.85994 4.96668C9.85994 5.19178 9.78022 5.38873 9.62078 5.55755C9.46134 5.71699 9.26908 5.79671 9.04399 5.79671Z" fill="#4F6FC1"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button data-reachgoal="click-add-to-cart-button " type="submit" name="ms2_action" value="cart/add" onclick="addToCart(this);" class="button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
+                                    <span>опции</span>
+                                </button>
+                            </div>
+                            <!--slide-product__info-->
+                        </form>
+                        <!--product card-->
+
+                        <!--product card-->
+                        <form class="slide-product js-product-box dd posthog_view_block ms2_form msoptionsprice-product">
+                            <!--slide-product__img-->
+                            <div class="slide-product__img">
+                                <div class="slide-product__badge custom">
+                                    <img loading="lazy" src="../files/cup+tencel-badge.svg" alt="">
+                                </div>
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <img loading="lazy" src="../files/omnia-tencel-1_500x500.jpg.webp" alt="photo-0" data-color="Молочный">
+                                </a>
+                                <div class="js-product-color" data-id="98">
+                                    <div class="real-options d-flex"></div>
+                                </div>
+                                <!--slide-product-size-->
+                                <div class="slide-product-color-size">
+                                    <div class="size">
+                                        200x220
+                                    </div>
+                                    <div class="size">
+                                        145x205
+                                    </div>
+                                </div>
+                                <!--slide-product-size-->
+                                <div class="pillow-preview-labels"></div>
+
+                                <!--mobile add button-->
+                                <button type="submit" name="" value="cart/add" onclick="" class="button border single-product__to-card single-product__to-card-mobile">
+                                    <span>
+                                        опции
+                                    </span>
+                                </button>
+                                <!--mobile add button-->
+                            </div>
+                            <!--slide-product__img-->
+
+                            <!--slide-product__title-->
+                            <div class="slide-product__title">
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <h4>
+                                        Вентилируемое одеяло с окнами Air Mesh
+                                    </h4>
+                                </a>
+                            </div>
+                            <!--slide-product__title-->
+
+                            <!--slide-product__info-->
+                            <div class="slide-product__info">
+                                <div class="slide-product__item">
+                                    <div class="single-product-price">
+                                        <span class="js-old-price hidden"></span>
+                                        <span class="js-new-price">17 600 ₽</span>
+                                    </div>
+                                    <div class="separate-payments">
+                                        4 платежа по 3 500 ₽
+                                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="9" cy="9.66675" r="8" stroke="#4F6FC1"/>
+                                            <path d="M9.05805 14.8848C8.87986 14.8848 8.73448 14.8332 8.62194 14.73C8.50939 14.6175 8.45312 14.4674 8.45312 14.2799V7.7944C8.45312 7.60682 8.50939 7.46145 8.62194 7.35829C8.73448 7.24574 8.87986 7.18947 9.05805 7.18947C9.23625 7.18947 9.37693 7.24574 9.4801 7.35829C9.59265 7.46145 9.64892 7.60682 9.64892 7.7944V14.2799C9.64892 14.4674 9.59265 14.6175 9.4801 14.73C9.37693 14.8332 9.23625 14.8848 9.05805 14.8848ZM9.04399 5.79671C8.81889 5.79671 8.62663 5.71699 8.46719 5.55755C8.30775 5.38873 8.22803 5.19178 8.22803 4.96668C8.22803 4.73221 8.30775 4.53995 8.46719 4.38989C8.63601 4.23983 8.82827 4.16479 9.04399 4.16479C9.2597 4.16479 9.44727 4.23983 9.60671 4.38989C9.77553 4.53995 9.85994 4.73221 9.85994 4.96668C9.85994 5.19178 9.78022 5.38873 9.62078 5.55755C9.46134 5.71699 9.26908 5.79671 9.04399 5.79671Z" fill="#4F6FC1"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button data-reachgoal="click-add-to-cart-button " type="submit" name="ms2_action" value="cart/add" onclick="addToCart(this);" class="button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
+                                    <span>опции</span>
+                                </button>
+                            </div>
+                            <!--slide-product__info-->
+                        </form>
+                        <!--product card-->
+
+                        <!--product card-->
+                        <form class="slide-product js-product-box dd posthog_view_block ms2_form msoptionsprice-product">
+                            <!--slide-product__img-->
+                            <div class="slide-product__img">
+<!--                                <div class="slide-product__badge custom">-->
+<!--                                    <img loading="lazy" src="../files/20percent.svg" alt="">-->
+<!--                                </div>-->
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <img loading="lazy" src="../files/omnia-tencel-1_500x500.jpg.webp" alt="photo-0" data-color="Молочный">
+                                </a>
+                                <div class="js-product-color" data-id="98">
+                                    <div class="real-options d-flex"></div>
+                                </div>
+                                <!--slide-product-color-->
+                                <div class="slide-product-color-size">
+                                    <div class="color" style="background-color: #db8c97;"></div>
+                                    <div class="color" style="background-color: #eae6dd;"></div>
+                                    <div class="color" style="background-color: #bbb7b0;"></div>
+<!--                                    <div class="color" style="background-color: #D2B58B;"></div>-->
+<!--                                    <div class="color" style="background-color: #3A3939;"></div>-->
+                                </div>
+                                <!--slide-product-color-->
+                                <div class="pillow-preview-labels"></div>
+
+                                <!--mobile add button-->
+                                <button type="submit" name="" value="cart/add" onclick="" class="button border single-product__to-card single-product__to-card-mobile">
+                                    <span>
+                                        опции
+                                    </span>
+                                </button>
+                                <!--mobile add button-->
+                            </div>
+                            <!--slide-product__img-->
+
+                            <!--slide-product__title-->
+                            <div class="slide-product__title">
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <h4>
+                                        Подушка Aula Copper Blend в наволочке из тенселя с медной нитью
+                                    </h4>
+                                </a>
+                            </div>
+                            <!--slide-product__title-->
+
+                            <!--slide-product__info-->
+                            <div class="slide-product__info">
+                                <div class="slide-product__item">
+                                    <div class="single-product-price">
+                                        <span class="js-old-price hidden"></span>
+                                        <span class="js-new-price">17 600 ₽</span>
+                                    </div>
+                                    <div class="separate-payments">
+                                        4 платежа по 3 500 ₽
+                                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="9" cy="9.66675" r="8" stroke="#4F6FC1"/>
+                                            <path d="M9.05805 14.8848C8.87986 14.8848 8.73448 14.8332 8.62194 14.73C8.50939 14.6175 8.45312 14.4674 8.45312 14.2799V7.7944C8.45312 7.60682 8.50939 7.46145 8.62194 7.35829C8.73448 7.24574 8.87986 7.18947 9.05805 7.18947C9.23625 7.18947 9.37693 7.24574 9.4801 7.35829C9.59265 7.46145 9.64892 7.60682 9.64892 7.7944V14.2799C9.64892 14.4674 9.59265 14.6175 9.4801 14.73C9.37693 14.8332 9.23625 14.8848 9.05805 14.8848ZM9.04399 5.79671C8.81889 5.79671 8.62663 5.71699 8.46719 5.55755C8.30775 5.38873 8.22803 5.19178 8.22803 4.96668C8.22803 4.73221 8.30775 4.53995 8.46719 4.38989C8.63601 4.23983 8.82827 4.16479 9.04399 4.16479C9.2597 4.16479 9.44727 4.23983 9.60671 4.38989C9.77553 4.53995 9.85994 4.73221 9.85994 4.96668C9.85994 5.19178 9.78022 5.38873 9.62078 5.55755C9.46134 5.71699 9.26908 5.79671 9.04399 5.79671Z" fill="#4F6FC1"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button data-reachgoal="click-add-to-cart-button " type="submit" name="ms2_action" value="cart/add" onclick="addToCart(this);" class="button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
+                                    <span>опции</span>
+                                </button>
+                            </div>
+                            <!--slide-product__info-->
+                        </form>
+                        <!--product card-->
+
+                        <!--product card-->
+                        <form class="slide-product js-product-box dd posthog_view_block ms2_form msoptionsprice-product">
+                            <!--slide-product__img-->
+                            <div class="slide-product__img">
+<!--                                <div class="slide-product__badge custom">-->
+<!--                                    <img loading="lazy" src="../files/cup+tencel-badge.svg" alt="">-->
+<!--                                </div>-->
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <img loading="lazy" src="../files/omnia-tencel-1_500x500.jpg.webp" alt="photo-0" data-color="Молочный">
+                                </a>
+                                <div class="js-product-color" data-id="98">
+                                    <div class="real-options d-flex"></div>
+                                </div>
+                                <!--slide-product-size-->
+                                <div class="slide-product-color-size">
+                                    <div class="size">
+                                        200x220x136
+                                    </div>
+                                    <div class="size">
+                                        145x205
+                                    </div>
+                                </div>
+                                <!--slide-product-size-->
+                                <div class="pillow-preview-labels"></div>
+
+                                <!--mobile add button-->
+                                <button type="submit" name="" value="cart/add" onclick="" class="button border single-product__to-card single-product__to-card-mobile">
+                                    <span>
+                                        опции
+                                    </span>
+                                </button>
+                                <!--mobile add button-->
+                            </div>
+                            <!--slide-product__img-->
+
+                            <!--slide-product__title-->
+                            <div class="slide-product__title">
+                                <a href="sets/komplekt-omnia-iz-2x-podushek" class="">
+                                    <h4>
+                                        Вентилируемое одеяло с окнами Air Mesh
+                                    </h4>
+                                </a>
+                            </div>
+                            <!--slide-product__title-->
+
+                            <!--slide-product__info-->
+                            <div class="slide-product__info">
+                                <div class="slide-product__item">
+                                    <div class="single-product-price">
+                                        <span class="js-old-price hidden"></span>
+                                        <span class="js-new-price">17 600 ₽</span>
+                                    </div>
+                                    <div class="separate-payments">
+                                        4 платежа по 3 500 ₽
+                                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="9" cy="9.66675" r="8" stroke="#4F6FC1"/>
+                                            <path d="M9.05805 14.8848C8.87986 14.8848 8.73448 14.8332 8.62194 14.73C8.50939 14.6175 8.45312 14.4674 8.45312 14.2799V7.7944C8.45312 7.60682 8.50939 7.46145 8.62194 7.35829C8.73448 7.24574 8.87986 7.18947 9.05805 7.18947C9.23625 7.18947 9.37693 7.24574 9.4801 7.35829C9.59265 7.46145 9.64892 7.60682 9.64892 7.7944V14.2799C9.64892 14.4674 9.59265 14.6175 9.4801 14.73C9.37693 14.8332 9.23625 14.8848 9.05805 14.8848ZM9.04399 5.79671C8.81889 5.79671 8.62663 5.71699 8.46719 5.55755C8.30775 5.38873 8.22803 5.19178 8.22803 4.96668C8.22803 4.73221 8.30775 4.53995 8.46719 4.38989C8.63601 4.23983 8.82827 4.16479 9.04399 4.16479C9.2597 4.16479 9.44727 4.23983 9.60671 4.38989C9.77553 4.53995 9.85994 4.73221 9.85994 4.96668C9.85994 5.19178 9.78022 5.38873 9.62078 5.55755C9.46134 5.71699 9.26908 5.79671 9.04399 5.79671Z" fill="#4F6FC1"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <button data-reachgoal="click-add-to-cart-button " type="submit" name="ms2_action" value="cart/add" onclick="addToCart(this);" class="button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
+                                    <span>опции</span>
+                                </button>
+                            </div>
+                            <!--slide-product__info-->
+                        </form>
+                        <!--product card-->
                     </div>
                 </div>
             </div>
@@ -885,6 +1201,79 @@
     </section>
 
 </main>
+
+<style>
+    .introx {
+        width: 100%;
+        left: 0px;
+        top: 140px;
+        margin-left: 0;
+        padding: 0;
+        background: #fff;
+        text-align: center;
+        position: fixed;
+        z-index: 9;
+    }
+    .introx img {
+        display:block;}
+
+    .fx-bnrset {
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        -moz-transition: .3s;
+        transition: .3s;
+    }
+    .fx-bnrset.hide {
+        top:140px;
+    }
+    .shop-section__goods_sidebar > div{
+        top:235px;
+    }
+
+    .slide-product__badge.custom {
+        top: clamp(8px, calc(16/1920*100vw), 16px);
+        right: clamp(8px, calc(16/1920*100vw), 16px);
+        width: auto;
+        height: auto;
+        max-height: clamp(44px, calc(80/1920*100vw), 80px);
+    }
+    .slide-product__badge.custom img {
+        width: auto;
+        height: auto;
+    }
+
+    @media screen and (max-width: 1800px) {
+        .introx {
+            top:134px;
+        }
+        .shop-section__goods_sidebar > div{
+            top:220px;
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .introx {
+            top:130px;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .introx {
+            top:73px;
+        }
+        .fx-bnrset.hide {
+            top:30px;
+        }
+
+    }
+    @media screen and (max-width: 480px) {
+        .introx {
+            top:85px;
+        }
+        .fx-bnrset.hide {
+            top:40px;
+        }
+    }
+</style>
 
 
 
