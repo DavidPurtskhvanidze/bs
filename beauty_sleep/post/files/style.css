@@ -1964,6 +1964,11 @@ p.post-page-special-text {
         border-bottom: none;
         padding: 0;
     }
+    .post-big-title-simple-border-mob {
+        border-top: 1px solid #EAEDFF;
+        border-bottom: 1px solid #EAEDFF;
+        padding: clamp(16px, calc(34 / 1920 * 100vw), 34px) 10px;
+    }
     .post-big-title svg {
         display: none;
     }
