@@ -1071,11 +1071,12 @@
 .product-modal-promocode {
     background-color: #4F6FC1;
     display: inline-flex;
+    align-items: center;
     height: clamp(20px, calc(28 / 1920 * 100vw), 28px);
     padding: 0 clamp(8px, calc(16 / 1920 * 100vw), 16px);
     font-weight: 500;
     font-size: clamp(14px, calc(18 / 1920 * 100vw), 18px);
-    line-height: clamp(20px, calc(28 / 1920 * 100vw), 28px);
+    line-height: 1;
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: clamp(10px, calc(16 / 1920 * 100vw), 16px);
