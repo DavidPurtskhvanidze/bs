@@ -1,0 +1,4669 @@
+<!DOCTYPE html>
+<html lang="ru" class="skrollr skrollr-desktop js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="landing_files/style.css">
+    <link rel="stylesheet" href="../files/iziToast.min.css">
+    <style class="vjs-styles-defaults">
+        .video-js {
+            width: 300px;
+            height: 150px;
+        }
+
+        .vjs-fluid {
+            padding-top: 56.25%
+        }
+    </style>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href=".">
+    <title>Title</title>
+    <meta name="description" content="Описание">
+    <meta property="og:title" content="">
+
+    <style>
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('../files/fonts/CeraPro-Regular.woff2') format('woff2'),
+            url('../files/fonts/CeraPro-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('../files/fonts/CeraPro-Bold.woff2') format('woff2'),
+            url('../files/fonts/CeraPro-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('../files/fonts/CeraPro-Medium.woff2') format('woff2'),
+            url('../files/fonts/CeraPro-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('../files/fonts/CeraPro-Light.woff2') format('woff2'),
+            url('../files/fonts/CeraPro-Light.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+
+    <link rel="stylesheet" href="../files/normalize.css">
+    <link rel="stylesheet" href="../files/swiper.min.css">
+    <link href="../files/video-js.min.css" rel="stylesheet">
+    <link href="../files/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../files/css_styles.css">
+    <link rel="stylesheet" href="../files/aos.css">
+    <link rel="stylesheet" href="../files/pnotify.custom.css">
+    <link rel="stylesheet" href="../files/css_common.css">
+    <!--    <link href="../files/css" rel="stylesheet">-->
+
+
+    <!--    <script async="" src="../files/tracking_v2.min.js"></script>-->
+    <!--    <script type="text/javascript" src="../files/tracking.js.download" async=""></script>-->
+    <!--    <script type="text/javascript" src="../files/t.js.download"></script>-->
+    <!--    <script type="text/javascript" async="" id="tmr-code"-->
+    <!--            src="../files/code.js"></script>-->
+    <!--    <script async="" src="../files/tag.js"></script>-->
+    <!--    <script type="text/javascript" async="" src="../files/js"></script>-->
+    <!--    <script type="text/javascript" async="" src="https://hs.beautysleep.ru/static/old/array.js"></script>-->
+    <!--    <script async="" src="../files/gtm.js"></script>-->
+    <!--    <script src="../files/captcha.js" defer=""></script>-->
+    <!--    <link href="../files/suggestions.min.css" rel="stylesheet">-->
+
+    <script src="../files/jquery-3.4.1.min.js"></script>
+
+
+    <!--    <script src="../files/pay.js" async=""></script>-->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.srcset = lazyImage.dataset.srcset;
+                            lazyImage.classList.remove("lazy");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+                lazyImages.forEach(function (lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            } else {
+                // Possibly fall back to event handlers here
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+            if ("IntersectionObserver" in window) {
+                var lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (video) {
+                        if (video.isIntersecting) {
+                            for (var source in video.target.children) {
+                                var videoSource = video.target.children[source];
+                                if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                                    videoSource.src = videoSource.dataset.src;
+                                }
+                            }
+                            video.target.load();
+                            video.target.classList.remove("lazy");
+                            lazyVideoObserver.unobserve(video.target);
+                        }
+                    });
+                });
+                lazyVideos.forEach(function (lazyVideo) {
+                    lazyVideoObserver.observe(lazyVideo);
+                });
+            }
+        });
+    </script>
+
+
+
+    <link rel="stylesheet" href="../files/index(1).css" type="text/css">
+    <link rel="stylesheet" href="../files/default(1).css" type="text/css">
+    <!--    <script type="text/javascript" async="" src="../files/f.txt"></script>-->
+    <style type="text/css">#digi-feedback.digi-feedback {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+        position: relative;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 0 24px rgba(128, 149, 255, .16);
+        padding: 24px;
+        margin: 20px 0;
+        height: 92px
+    }
+
+    #digi-feedback .digi-feedback__logo {
+        display: none;
+        width: 87px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-image: url(https://cdn.diginetica.net/digi-emodzi/Frame.svg)
+    }
+
+    #digi-feedback .digi-feedback__text {
+        color: #0d0943;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 600;
+        margin-right: 24px
+    }
+
+    #digi-feedback .digi-feedback__emoji-list {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        margin-right: 36px
+    }
+
+    #digi-feedback .digi-feedback__emoji-item {
+        display: -webkit-flex;
+        display: flex;
+        position: relative;
+        border-radius: 30px;
+        border: 2px solid transparent;
+        padding: 3px
+    }
+
+    #digi-feedback .digi-feedback__emoji-item:not(:last-child) {
+        margin-right: 8px
+    }
+
+    #digi-feedback .digi-feedback__emoji-item:hover {
+        border-color: #6e85f5
+    }
+
+    #digi-feedback .digi-feedback__emoji-item:hover .digi-feedback__emoji-tooltip {
+        display: -webkit-flex;
+        display: flex
+    }
+
+    #digi-feedback .digi-feedback__emoji-tooltip {
+        position: absolute;
+        left: -14px;
+        top: -40px;
+        background: rgba(0, 0, 0, .6);
+        border-radius: 1px;
+        padding: 6px;
+        display: none;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+        width: 70px;
+        z-index: 1
+    }
+
+    #digi-feedback .digi-feedback__emoji-tooltip:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 100%;
+        width: 10px;
+        height: 9px;
+        border: 5px solid transparent;
+        border-top: 9px solid rgba(0, 0, 0, .6);
+        box-sizing: border-box
+    }
+
+    #digi-feedback .digi-feedback__emoji-tooltip-text {
+        font-size: 14px;
+        color: #fff;
+        font-weight: 500
+    }
+
+    #digi-feedback .digi-feedback__emoji-button {
+        width: 36px;
+        height: 36px;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: auto
+    }
+
+    #digi-feedback .digi-feedback__emoji-button.terrible {
+        background-image: url(https://cdn.diginetica.net/digi-emodzi/Property%201=1.svg)
+    }
+
+    #digi-feedback .digi-feedback__emoji-button.bad {
+        background-image: url(https://cdn.diginetica.net/digi-emodzi/Property%201=2.svg)
+    }
+
+    #digi-feedback .digi-feedback__emoji-button.average {
+        background-image: url(https://cdn.diginetica.net/digi-emodzi/Property%201=3.svg)
+    }
+
+    #digi-feedback .digi-feedback__emoji-button.good {
+        background-image: url(https://cdn.diginetica.net/digi-emodzi/Property%201=4.svg)
+    }
+
+    #digi-feedback .digi-feedback__emoji-button.excellent {
+        background-image: url(https://cdn.diginetica.net/digi-emodzi/Group%202.svg)
+    }
+
+    #digi-feedback .digi-feedback__heart {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        width: 60px;
+        height: 60px
+    }
+
+    #digi-feedback .digi-feedback__heart-icon {
+        width: 60px;
+        height: 60px;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: contain;
+        background-image: url(https://cdn.diginetica.net/digi-emodzi/mdi_heart.svg)
+    }
+
+    #digi-feedback .digi-feedback__button-wrapper {
+        position: absolute;
+        right: 24px
+    }
+
+    #digi-feedback .digi-feedback__close-button {
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: auto;
+        background-image: url(https://cdn.diginetica.net/digi-emodzi/Vector.svg)
+    }
+
+    #digi-shield.digi_mobile #digi-feedback.digi-feedback {
+        margin: 16px 0;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        height: unset
+    }
+
+    #digi-shield.digi_mobile #digi-feedback .digi-feedback__logo {
+        margin-top: 16px;
+        -webkit-order: 3;
+        order: 3
+    }
+
+    #digi-shield.digi_mobile #digi-feedback .digi-feedback__text {
+        max-width: 246px;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        -webkit-order: 1;
+        order: 1;
+        margin-right: 0
+    }
+
+    #digi-shield.digi_mobile #digi-feedback .digi-feedback__emoji-list {
+        margin-top: 16px;
+        margin-right: 0;
+        width: 100%;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-order: 2;
+        order: 2
+    }
+
+    #digi-shield.digi_mobile #digi-feedback .digi-feedback__emoji-item:not(:last-child) {
+        margin-right: 16px
+    }
+
+    #digi-shield.digi_mobile #digi-feedback .digi-feedback__heart {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px
+    }
+
+    #digi-shield.digi_mobile #digi-feedback .digi-feedback__button-wrapper {
+        position: absolute;
+        top: 20px;
+        right: 20px
+    }</style>
+    <style type="text/css">.digi-dolyame-overflow {
+        overflow: hidden !important
+    }
+
+    .digi-dolyame-modal, .digi-dolyame-modal *, .digi-dolyame-modal:after, .digi-dolyame-modal :after, .digi-dolyame-modal:before, .digi-dolyame-modal :before, .digi-dolyame-scheme__product-card, .digi-dolyame-scheme__product-card *, .digi-dolyame-scheme__product-card:after, .digi-dolyame-scheme__product-card :after, .digi-dolyame-scheme__product-card:before, .digi-dolyame-scheme__product-card :before {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-weight: 400;
+        text-transform: none
+    }
+
+    .digi-dolyame-modal__background, .digi-dolyame-scheme__product-card__background {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity .5s linear;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .75);
+        top: 0;
+        left: 0;
+        min-height: 100%;
+        box-sizing: border-box;
+        z-index: 999999999
+    }
+
+    .digi-dolyame-modal__active, .digi-dolyame-scheme__product-card__active {
+        visibility: visible;
+        opacity: 1
+    }
+
+    .digi-dolyame-modal__wrapper, .digi-dolyame-scheme__product-card__wrapper {
+        padding: 40px;
+        box-sizing: border-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        background: #fff;
+        box-shadow: 0 18px 30px rgba(51, 51, 51, .64);
+        border-radius: 4px;
+        width: 100%;
+        max-width: 600px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        transform: translateY(-50%) translateX(-50%)
+    }
+
+    .digi-dolyame-modal__wrapper > *, .digi-dolyame-scheme__product-card__wrapper > * {
+        max-width: 100%
+    }
+
+    @media (max-width: 640px) {
+        .digi-dolyame-modal__wrapper, .digi-dolyame-scheme__product-card__wrapper {
+            padding: 16px;
+            max-width: unset;
+            top: unset;
+            bottom: 0;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%)
+        }
+    }
+
+    .digi-dolyame-modal__header, .digi-dolyame-scheme__product-card__header {
+        text-align: left;
+        font-size: 32px;
+        line-height: 38px;
+        width: 100%;
+        color: #000;
+        margin-bottom: 16px
+    }
+
+    @media (max-width: 640px) {
+        .digi-dolyame-modal__header, .digi-dolyame-scheme__product-card__header {
+            font-size: 20px;
+            line-height: 26px
+        }
+    }
+
+    .digi-dolyame-modal__close, .digi-dolyame-scheme__product-card__close {
+        width: 32px;
+        height: 32px;
+        border: 0;
+        border-radius: 50%;
+        background: transparent;
+        cursor: pointer;
+        position: absolute;
+        right: 16px;
+        top: 38px
+    }
+
+    @media (max-width: 640px) {
+        .digi-dolyame-modal__close, .digi-dolyame-scheme__product-card__close {
+            top: 14px
+        }
+    }
+
+    .digi-dolyame-modal__close > svg, .digi-dolyame-scheme__product-card__close > svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%)
+    }
+
+    .digi-dolyame-modal__close > svg > path, .digi-dolyame-scheme__product-card__close > svg > path {
+        fill: #999
+    }
+
+    .digi-dolyame-modal__body-text, .digi-dolyame-scheme__product-card__body-text {
+        font-size: 15px;
+        line-height: 24px;
+        color: #000
+    }
+
+    @media (max-width: 640px) {
+        .digi-dolyame-modal__body-text, .digi-dolyame-scheme__product-card__body-text {
+            font-size: 16px
+        }
+    }
+
+    .digi-dolyame-modal__body-description, .digi-dolyame-scheme__product-card__body-description {
+        font-size: 12px;
+        line-height: 20px;
+        color: #666
+    }
+
+    @media (max-width: 640px) {
+        .digi-dolyame-modal__body-description, .digi-dolyame-scheme__product-card__body-description {
+            font-size: 14px
+        }
+    }
+
+    .digi-dolyame-modal__body-description, .digi-dolyame-modal__body-text, .digi-dolyame-scheme__product-card__body-description, .digi-dolyame-scheme__product-card__body-text {
+        margin: 0
+    }
+
+    .digi-dolyame-modal__body-description:not(:last-child), .digi-dolyame-modal__body-text:not(:last-child), .digi-dolyame-scheme__product-card__body-description:not(:last-child), .digi-dolyame-scheme__product-card__body-text:not(:last-child) {
+        margin-bottom: 8px
+    }
+
+    .digi-dolyame-modal__body-description > a, .digi-dolyame-modal__body-text > a, .digi-dolyame-scheme__product-card__body-description > a, .digi-dolyame-scheme__product-card__body-text > a {
+        color: #1771e6;
+        text-decoration: none
+    }
+
+    .digi-dolyame-modal__body-image, .digi-dolyame-scheme__product-card__body-image {
+        margin: 16px 0
+    }
+
+    @media (max-width: 640px) {
+        .digi-dolyame-modal__body-image, .digi-dolyame-scheme__product-card__body-image {
+            margin: 16px -16px;
+            max-width: unset;
+            min-width: unset;
+            width: calc(100% + 32px)
+        }
+    }
+
+    .digi-dolyame-modal-advanced-new {
+        padding: 24px;
+        border-radius: 24px;
+        display: unset !important
+    }
+
+    .digi-dolyame-modal-advanced-new svg {
+        position: unset;
+        z-index: unset;
+        width: unset;
+        height: unset
+    }
+
+    @media (max-width: 640px) {
+        .digi-dolyame-modal-advanced-new:not(.digi-dolyame-scheme__product-card) {
+            padding: 16px;
+            max-width: 90% !important;
+            -webkit-transform: translateY(-50%) translateX(-50%) !important;
+            transform: translateY(-50%) translateX(-50%) !important
+        }
+    }
+
+    .digi-dolyame-modal-advanced-new .digi-dolyame-modal__header {
+        text-align: left !important;
+        margin-bottom: 0 !important
+    }
+
+    .digi-dolyame-modal-advanced-new .digi-dolyame-modal__header > svg {
+        margin: 0 !important
+    }
+
+    .digi-dolyame-modal-advanced-new .digi-dolyame-modal__header > .digi-dolyame-modal__body-text-header {
+        font-size: 24px;
+        font-weight: 700
+    }
+
+    @media (max-width: 640px) {
+        .digi-dolyame-modal-advanced-new .digi-dolyame-modal__header > .digi-dolyame-modal__body-text-header {
+            font-size: 20px
+        }
+    }
+
+    .digi-dolyame-modal-advanced-new .digi-dolyame-modal__close {
+        top: 12px !important;
+        right: 12px !important;
+        background-color: unset !important;
+        outline: unset !important
+    }
+
+    .digi-dolyame-modal-advanced-new .digi-dolyame-modal__body-text {
+        text-align: left !important;
+        font-size: 13px;
+        color: rgba(0, 0, 0, .6) !important
+    }
+
+    .digi-dolyame-modal-advanced-new li {
+        list-style-type: none
+    }
+
+    .digi-dolyame-modal-advanced-new li:before {
+        content: unset !important
+    }
+
+    .digi-dolyame-modal-advanced-new .digi-dolyame-modal__payment-wrap {
+        padding: 16px;
+        margin: 20px 0;
+        background-color: #f6f7f8 !important;
+        border-radius: 12px;
+        font-size: 12px
+    }
+
+    @media (max-width: 640px) {
+        .digi-dolyame-modal-advanced-new .digi-dolyame-modal__payment-wrap {
+            padding: 12px;
+            margin: 4px 0 20px
+        }
+    }
+
+    .digi-dolyame-modal-advanced-new .digi-dolyame-modal__payment-wrap .digi-dolyame-modal__details-of-payment {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between
+    }
+
+    .digi-dolyame-modal-advanced-new .digi-dolyame-modal__payment-wrap .digi-dolyame-modal__details-of-payment_item {
+        width: 25%
+    }
+
+    .digi-dolyame-modal-advanced-new .digi-dolyame-modal__payment-wrap .digi-dolyame-modal__details-of-payment_item:after {
+        content: "";
+        background-color: #4288f9 !important;
+        border-radius: 6px;
+        height: 5px;
+        width: 95%;
+        display: block
+    }
+
+    .digi-dolyame-modal-advanced-new .digi-dolyame-modal__payment-wrap .digi-dolyame-modal__details-of-payment .digi-dolyame-modal__details-of-payment_price {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 12px
+    }
+
+    .digi-dolyame-modal-advanced-new .digi-dolyame-modal__payment-wrap .digi-dolyame-modal__payment-text {
+        color: rgba(0, 0, 0, .4) !important;
+        margin-top: 10px
+    }
+
+    .digi-dolyame-modal-advanced-new .digi-dolyame-modal__details-of-payment_item {
+        color: #000 !important
+    }
+
+    .digi-dolyame-modal-advanced-new .digi-dolyame-modal__details-of-payment_item ~ .digi-dolyame-modal__details-of-payment_item {
+        color: rgba(0, 0, 0, .4) !important
+    }
+
+    .digi-dolyame-modal-advanced-new .digi-dolyame-modal__details-of-payment_item ~ .digi-dolyame-modal__details-of-payment_item:after {
+        background-color: rgba(0, 0, 0, .06) !important
+    }
+
+    .digi-dolyame-modal-advanced-new .digi-dolyame-modal__details {
+        text-align: center;
+        color: rgba(0, 0, 0, .4) !important;
+        font-size: 12px
+    }
+
+    .digi-dolyame-modal-advanced-new .digi-dolyame-modal__details a {
+        color: #1771e6 !important
+    }</style>
+    <style type="text/css">@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+    .digi-dolyame-button, .digi-dolyame-button *, .digi-dolyame-button:after, .digi-dolyame-button :after, .digi-dolyame-button:before, .digi-dolyame-button :before {
+        font-family: inherit, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: unset !important
+    }
+
+    .digi-dolyame-button {
+        padding: 12px;
+        max-width: unset;
+        min-width: unset;
+        width: unset;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        background: transparent;
+        border: .5px solid #c7c9cc
+    }
+
+    .digi-dolyame-button--1 {
+        border-color: transparent;
+        background-color: #000
+    }
+
+    .digi-dolyame-button--1 .digi-dolyame-button__text {
+        color: #fff
+    }
+
+    .digi-dolyame-button--1:hover {
+        background-color: #242424
+    }
+
+    .digi-dolyame-button--2 {
+        border-color: transparent;
+        background-color: #fff
+    }
+
+    .digi-dolyame-button--2 .digi-dolyame-button__text {
+        color: #000
+    }
+
+    .digi-dolyame-button--3 {
+        border-color: transparent;
+        background-color: #f5f5f5
+    }
+
+    .digi-dolyame-button--3 .digi-dolyame-button__text {
+        color: #000
+    }
+
+    .digi-dolyame-button--3:hover {
+        background-color: #ebebeb
+    }
+
+    .digi-dolyame-button--4 {
+        border-color: transparent;
+        background-color: #1f1f1f
+    }
+
+    .digi-dolyame-button--4 .digi-dolyame-button__text {
+        color: #fff
+    }
+
+    .digi-dolyame-button--4:hover {
+        background-color: #2e2e2e
+    }
+
+    .digi-dolyame-button--5 {
+        border: 1px solid rgba(0, 0, 0, .13)
+    }
+
+    .digi-dolyame-button--5:hover {
+        border: 1px solid rgba(0, 0, 0, .43)
+    }
+
+    .digi-dolyame-button--6 {
+        background-color: #000;
+        border: 1px solid #838383
+    }
+
+    .digi-dolyame-button--6 .digi-dolyame-button__text {
+        color: #fff
+    }
+
+    .digi-dolyame-button--6:hover {
+        border: 1px solid #bcb7b7
+    }
+
+    .digi-dolyame-button--11 {
+        border-color: transparent;
+        background-color: #f7f7f7
+    }
+
+    .digi-dolyame-button--12 {
+        background-color: #000
+    }
+
+    .digi-dolyame-button--12 .digi-dolyame-button__text {
+        color: #fff
+    }
+
+    .digi-dolyame-button--14 {
+        font-family: Montserrat, Helvetica, Arial, sans-serif;
+        border: unset
+    }
+
+    .digi-dolyame-button--14 .digi-dolyame-button__label {
+        width: 90px;
+        height: 26px
+    }
+
+    .digi-dolyame-button--15 {
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        padding: 6px 12px;
+        -webkit-justify-content: space-between;
+        justify-content: space-between
+    }
+
+    .digi-dolyame-button--15 .digi-dolyame-button__upper-wrap {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column
+    }
+
+    .digi-dolyame-button--15 .digi-dolyame-button__content {
+        -webkit-flex-direction: unset;
+        flex-direction: unset;
+        -webkit-align-items: center;
+        align-items: center;
+        margin-left: unset
+    }
+
+    .digi-dolyame-button--15 .digi-dolyame-button__label {
+        margin-left: -6px;
+        margin-bottom: 0
+    }
+
+    .digi-dolyame-button--16 {
+        font-family: Montserrat, Helvetica, Arial, sans-serif
+    }
+
+    .digi-dolyame-button--17 {
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        border-radius: 5px;
+        -webkit-align-items: center;
+        align-items: center;
+        padding: 0 12px
+    }
+
+    .digi-dolyame-button--17 .digi-dolyame-button__label {
+        width: 100px;
+        height: 44px
+    }
+
+    .digi-dolyame-button:hover {
+        cursor: pointer
+    }
+
+    .digi-dolyame-button:hover .digi-dolyame__arrow {
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+        transition: .2s ease-in
+    }
+
+    .digi-dolyame-button__label {
+        width: 64px;
+        height: 20px;
+        background-size: contain;
+        overflow: hidden;
+        background-repeat: no-repeat
+    }
+
+    .digi-dolyame-button__before-content, .digi-dolyame-button__content {
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+        margin-left: 10px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        margin-right: 10px
+    }
+
+    .digi-dolyame-button__before-content {
+        margin-left: 0
+    }
+
+    .digi-dolyame-button__text {
+        color: #000;
+        font-size: 13px;
+        line-height: 20px
+    }
+
+    .digi-dolyame-button__sign {
+        font-size: 10px;
+        line-height: 16px;
+        color: #646464
+    }
+
+    .digi-dolyame-button__sign, .digi-dolyame-button__text {
+        text-align: left;
+        font-weight: 400;
+        white-space: nowrap;
+        margin: 0 !important
+    }
+
+    .digi-dolyame-button__icon-info {
+        fill: hsla(0, 0%, 100%, .7)
+    }
+
+    .digi-dolyame-button__icon-arrow {
+        width: 6px;
+        height: 10.5px;
+        fill: #9299a2
+    }
+
+    .digi-dolyame-scheme__product-card {
+        display: block !important
+    }
+
+    .digi-dolyame-scheme__product-card.digi-dolyame-button-1193 {
+        border: 1px solid #f2f3f5;
+        border-radius: 8px;
+        padding: 16px
+    }
+
+    @media screen and (max-width: 1024px) {
+        .digi-dolyame-scheme__product-card.digi-dolyame-button-1193 {
+            margin: 16px 0 32px
+        }
+    }
+
+    .digi-dolyame-scheme__product-card.digi-dolyame-button-1193 .digi-dolyame-modal__details-of-payment_date {
+        margin-bottom: 3px
+    }
+
+    .digi-dolyame-scheme__product-card.digi-dolyame-button-1193 .digi-dolyame-modal__body-text-header {
+        letter-spacing: .1px;
+        line-height: 30px;
+        margin-bottom: 8px
+    }
+
+    .digi-dolyame-scheme__product-card.digi-dolyame-button-2701 {
+        display: unset !important
+    }</style>
+    <style type="text/css">.digi-dolyame-modal-advanced > .digi-dolyame-modal__close {
+        top: 40px;
+        right: 40px
+    }
+
+    @media (max-width: 640px) {
+        .digi-dolyame-modal-advanced > .digi-dolyame-modal__close {
+            top: 16px;
+            right: 16px
+        }
+    }
+
+    .digi-dolyame-modal-advanced > .digi-dolyame-modal__header {
+        text-align: center
+    }
+
+    .digi-dolyame-modal-advanced > .digi-dolyame-modal__header > svg {
+        margin-bottom: 32px
+    }
+
+    @media (max-width: 640px) {
+        .digi-dolyame-modal-advanced > .digi-dolyame-modal__header > svg {
+            margin-bottom: 24px
+        }
+    }
+
+    .digi-dolyame-modal-advanced > .digi-dolyame-modal__body-description, .digi-dolyame-modal-advanced > .digi-dolyame-modal__body-text {
+        text-align: center
+    }
+
+    .digi-dolyame-modal-advanced > .digi-dolyame-modal__features {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        gap: 12px;
+        margin: 20px 0;
+        font-size: 14px;
+        line-height: 22px
+    }
+
+    .digi-dolyame-modal-advanced > .digi-dolyame-modal__features .digi-dolyame-modal__features-item {
+        width: 100%;
+        display: -webkit-flex;
+        display: flex;
+        gap: 12px;
+        -webkit-align-items: center;
+        align-items: center
+    }
+
+    .digi-dolyame-modal-advanced > .digi-dolyame-modal__features .digi-dolyame-modal__features-icon {
+        display: -ms-grid;
+        display: grid;
+        place-content: center;
+        width: 32px;
+        height: 32px;
+        background: rgba(111, 153, 198, .08);
+        border-radius: 4px
+    }
+
+    @media (max-width: 640px) {
+        .digi-dolyame-modal-advanced > .digi-dolyame-modal__features {
+            -webkit-flex-direction: column;
+            flex-direction: column
+        }
+    }</style>
+    <style type="text/css">.digi-dolyame-scheme {
+        width: 100%;
+        font-weight: 400;
+        text-transform: none;
+        font-family: var(--inheritFontFamilyValue)
+    }
+
+    .digi-dolyame-scheme__content {
+        min-height: 100%;
+        font-weight: 400
+    }
+
+    .digi-dolyame-scheme ul {
+        list-style: none
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-list {
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        margin-bottom: 15px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item {
+        min-width: -webkit-max-content;
+        min-width: -moz-max-content;
+        min-width: max-content
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--price {
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-align-items: center;
+        align-items: center;
+        position: relative;
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 700;
+        margin-bottom: 2px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--price svg {
+        margin-left: 3px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--date {
+        font-size: 11px;
+        line-height: 16px;
+        font-weight: 400;
+        opacity: .6;
+        margin-bottom: 8px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--img {
+        position: relative;
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-align-items: center;
+        align-items: center;
+        height: 18px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--img:not(:last-child) {
+        margin-right: 8px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item:first-child .digi-dolyame-scheme__payment-item--img:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 15px;
+        height: 14px;
+        display: block !important;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='15' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.318 1a9 9 0 00-9 9' stroke='%236FADAA' stroke-width='1.5'/%3E%3Ccircle cx='10.318' cy='10' r='4' transform='rotate(-90 10.318 10)' fill='%23242424'/%3E%3C/svg%3E");
+        background-position: 50%;
+        background-repeat: no-repeat
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item:nth-child(3) .digi-dolyame-scheme__payment-item--img:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 21px;
+        height: 14px;
+        display: block !important;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='21' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.354 10a9 9 0 10-18 0' stroke='%236FADAA' stroke-width='1.5'/%3E%3Ccircle cx='10.354' cy='10' r='4' transform='rotate(-90 10.354 10)' fill='%23242424'/%3E%3C/svg%3E");
+        background-position: 50%;
+        background-repeat: no-repeat
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item:nth-child(5) .digi-dolyame-scheme__payment-item--img:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 21px;
+        height: 20px;
+        display: block !important;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='21' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.386 19a9 9 0 10-9-9' stroke='%236FADAA' stroke-width='1.5'/%3E%3Ccircle cx='10.386' cy='10' r='4' transform='rotate(-90 10.386 10)' fill='%23242424'/%3E%3C/svg%3E");
+        background-position: 50%;
+        background-repeat: no-repeat
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item:nth-child(7) .digi-dolyame-scheme__payment-item--img:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        display: block !important;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='19' height='19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='9.422' cy='9.069' r='8.25' stroke='%236FADAA' stroke-width='1.5'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.536 10.472l-1.782-1.52a.824.824 0 00-1.13.064.745.745 0 00.067 1.083l2.4 2.045a.824.824 0 001.146-.082l4-4.602a.745.745 0 00-.103-1.08.824.824 0 00-1.127.099l-3.47 3.993z' fill='%236FADAA'/%3E%3C/svg%3E");
+        background-position: 50%;
+        background-repeat: no-repeat
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--border {
+        width: 17%;
+        border-bottom: 1px solid #c7c9cc;
+        margin-bottom: 7px;
+        margin-left: -20px;
+        margin-right: 8px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_item, .digi-dolyame-scheme .digi-dolyame-scheme__item-features {
+        color: #000 !important
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__description-details {
+        color: rgba(0, 0, 0, .6);
+        font-size: 14px;
+        line-height: 24px
+    }
+
+    .digi-dolyame-scheme li:before {
+        content: unset !important
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_item {
+        width: 25%;
+        line-height: 1.35 !important;
+        font-size: 14px !important
+    }
+
+    .digi-dolyame-scheme.digi-dolyame-scheme--mobile {
+        margin-top: 24px;
+        padding-left: 0 !important;
+        margin-left: 0 !important
+    }
+
+    .digi-dolyame-scheme.digi-dolyame-scheme--mobile .digi-dolyame-scheme__item-features:not(:nth-child(2)) {
+        margin-bottom: 16px !important
+    }
+
+    .digi-dolyame-scheme.digi-dolyame-scheme--mobile .digi-dolyame-scheme__item-features {
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-align-items: center;
+        align-items: center;
+        padding-left: 0 !important
+    }
+
+    .digi-dolyame-scheme.digi-dolyame-scheme--mobile .digi-dolyame-scheme__item-features svg {
+        margin-right: 12px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-wrap {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-custom {
+        font-size: 13px;
+        text-align: center;
+        color: rgba(0, 0, 0, .4);
+        margin: 10px 0 !important
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details {
+        font-size: 13px;
+        text-align: center;
+        color: rgba(0, 0, 0, .4)
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details a {
+        color: #1771e6 !important;
+        text-decoration: none
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_date {
+        font-size: .865em
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_price {
+        font-size: 1em;
+        font-weight: 700;
+        margin-bottom: 12px
+    }
+
+    .digi-dolyame-scheme__payments-text {
+        font-size: 1em;
+        padding-left: 16px;
+        color: rgba(0, 0, 0, .6)
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_item ~ .digi-dolyame-scheme__details-of-payment_item {
+        color: rgba(0, 0, 0, .4) !important
+    }
+
+    .digi-dolyame-scheme__payments-wrap {
+        margin: 16px 0;
+        padding: 0 0 10px;
+        border-radius: 8px;
+        background-color: #f6f7f8
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment {
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        padding: 16px !important;
+        margin: 0 !important
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_item:after {
+        content: "";
+        background-color: #4288f9;
+        border-radius: 6px;
+        height: 5px;
+        width: 95%;
+        display: block !important
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_item ~ .digi-dolyame-scheme__details-of-payment_item:after {
+        background-color: rgba(0, 0, 0, .06) !important
+    }</style>
+    <style type="text/css">.digi-dolyame-logo-advanced {
+        display: inline;
+        position: relative;
+        top: 3px;
+        font-size: 0
+    }
+
+    .digi-dolyame-logo-advanced .digi-dolyame-logo-advanced--container {
+        display: inherit
+    }
+
+    .digi-dolyame-logo-advanced.digi-dolyame-logo-advanced--1 .digi-dolyame-logo-advanced__content, .digi-dolyame-logo-advanced.digi-dolyame-logo-advanced--2 .digi-dolyame-logo-advanced__content {
+        width: 52px;
+        height: 16px;
+        margin-left: 8px
+    }
+
+    .digi-dolyame-logo-advanced.digi-dolyame-logo-advanced--3 .digi-dolyame-logo-advanced__content, .digi-dolyame-logo-advanced.digi-dolyame-logo-advanced--4 .digi-dolyame-logo-advanced__content {
+        width: 104px;
+        height: 32px;
+        margin-left: 8px
+    }
+
+    .digi-dolyame-logo-advanced.digi-dolyame-logo-advanced--5 .digi-dolyame-logo-advanced__content, .digi-dolyame-logo-advanced.digi-dolyame-logo-advanced--6 .digi-dolyame-logo-advanced__content {
+        border-radius: 50%
+    }
+
+    .digi-dolyame-wrapper {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        margin-top: 10px
+    }
+
+    .digi-dolyame-wrapper .digi-dolyame-logo-advanced__content {
+        margin-top: 0
+    }</style>
+    <style type="text/css">.digi-dolyame-payments-title-wrap {
+        display: inline-block;
+        font-family: var(--inheritFontFamilyValue)
+    }</style>
+    <style type="text/css">.digi-dolyame-label, .digi-dolyame-label *, .digi-dolyame-label:after, .digi-dolyame-label :after, .digi-dolyame-label:before, .digi-dolyame-label :before {
+        font-family: HarmoniaSansProCyrRegular, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box
+    }
+
+    .digi-dolyame-label {
+        width: auto;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        background: none;
+        border: .5px solid transparent !important;
+        z-index: 9;
+        margin-top: auto;
+        background-color: transparent
+    }
+
+    .digi-dolyame-label--container {
+        width: 100%
+    }
+
+    .digi-dolyame-label--1, .digi-dolyame-label--2, .digi-dolyame-label--3, .digi-dolyame-label--4, .digi-dolyame-label--5, .digi-dolyame-label--6 {
+        padding: 8px 12px;
+        border-radius: 4px
+    }
+
+    .digi-dolyame-label--1 .digi-dolyame-logo_small, .digi-dolyame-label--2 .digi-dolyame-logo_small, .digi-dolyame-label--3 .digi-dolyame-logo_small, .digi-dolyame-label--4 .digi-dolyame-logo_small, .digi-dolyame-label--5 .digi-dolyame-logo_small, .digi-dolyame-label--6 .digi-dolyame-logo_small {
+        border-radius: 50%
+    }
+
+    .digi-dolyame-label--1 .digi-dolyame-label__text, .digi-dolyame-label--2 .digi-dolyame-label__text, .digi-dolyame-label--3 .digi-dolyame-label__text, .digi-dolyame-label--4 .digi-dolyame-label__text, .digi-dolyame-label--5 .digi-dolyame-label__text, .digi-dolyame-label--6 .digi-dolyame-label__text {
+        margin-left: 10px;
+        font-size: 14px
+    }
+
+    .digi-dolyame-label--1 .digi-dolyame-label__text, .digi-dolyame-label--2 .digi-dolyame-label__text, .digi-dolyame-label--3 .digi-dolyame-label__text {
+        color: #fff
+    }
+
+    .digi-dolyame-label--4 .digi-dolyame-label__text, .digi-dolyame-label--5 .digi-dolyame-label__text, .digi-dolyame-label--6 .digi-dolyame-label__text {
+        color: #000
+    }
+
+    .digi-dolyame-label--1 {
+        background-color: #000 !important
+    }
+
+    .digi-dolyame-label--1:hover {
+        background-color: #242424 !important
+    }
+
+    .digi-dolyame-label--2 {
+        background-color: #1c1c1c !important
+    }
+
+    .digi-dolyame-label--2:hover {
+        background-color: #2e2e2e !important
+    }
+
+    .digi-dolyame-label--3 {
+        background-color: #000 !important;
+        border: 1px solid #838383
+    }
+
+    .digi-dolyame-label--3:hover {
+        border: 1px solid #bcb7b7
+    }
+
+    .digi-dolyame-label--4 {
+        background-color: #fff !important
+    }
+
+    .digi-dolyame-label--4:hover {
+        border: 1px solid rgba(0, 0, 0, .13);
+        box-shadow: none !important
+    }
+
+    .digi-dolyame-label--5 {
+        background-color: #f5f5f5 !important
+    }
+
+    .digi-dolyame-label--5:hover {
+        border: 1px solid rgba(0, 0, 0, .13) !important
+    }
+
+    .digi-dolyame-label--6 {
+        background-color: #fff !important;
+        border: 1px solid rgba(0, 0, 0, .13)
+    }
+
+    .digi-dolyame-label--6:hover {
+        border: 1px solid rgba(0, 0, 0, .43)
+    }
+
+    .digi-dolyame-label--mobile {
+        padding: 8px 5px
+    }
+
+    .digi-dolyame-label--mobile .digi-dolyame-label__text {
+        margin-left: 5px;
+        font-size: 12px
+    }
+
+    .digi-dolyame-label:hover {
+        cursor: pointer;
+        box-shadow: none !important
+    }
+
+    .digi-dolyame-label__content {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-flex-grow: initial;
+        flex-grow: 0;
+        margin-right: 5px
+    }
+
+    .digi-dolyame-label__text {
+        font-size: 13px;
+        line-height: 20px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        color: #000
+    }
+
+    .digi-dolyame-label__price {
+        font-weight: 600
+    }
+
+    .digi-dolyame-label__sign {
+        display: block;
+        margin-left: 5px;
+        font-size: 10px;
+        line-height: 16px;
+        color: #000;
+        border-bottom: 1px solid #000
+    }
+
+    .digi-dolyame-label__sign, .digi-dolyame-label__text {
+        text-align: left;
+        white-space: nowrap;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px
+    }
+
+    .digi-dolyame-label__icon-info path {
+        fill: #000
+    }
+
+    .digi-dolyame-label-2626 {
+        width: 100%;
+        margin: 8px 0 0
+    }
+
+    .digi-dolyame-label-2626 .digi-dolyame-logo_small {
+        border-radius: unset
+    }
+
+    .digi-dolyame-label-2626 .digi-dolyame-logo_small, .digi-dolyame-label-2626 .digi-dolyame-logo_small rect {
+        width: 44px;
+        height: 18px
+    }
+
+    .digi-dolyame-label-2626 .digi-dolyame-logo_small rect {
+        rx: 5
+    }
+
+    .digi-dolyame-label-2626 .digi-dolyame-logo_small path {
+        -webkit-transform: translate(7px, -7px) scale(2);
+        transform: translate(7px, -7px) scale(2)
+    }
+
+    .digi-dolyame-label-2626 .digi-dolyame-label__text {
+        font-size: 12px
+    }
+
+    #simplecheckout_cart .digi-dolyame-label-2626 {
+        margin: 8px 0
+    }
+
+    #simplecheckout_cart .digi-dolyame-label-2626 .digi-dolyame-logo_small {
+        border-radius: 50%
+    }
+
+    #simplecheckout_cart .digi-dolyame-label-2626 .digi-dolyame-logo_small, #simplecheckout_cart .digi-dolyame-label-2626 .digi-dolyame-logo_small rect {
+        width: 16px;
+        height: 16px
+    }
+
+    #simplecheckout_cart .digi-dolyame-label-2626 .digi-dolyame-logo_small rect {
+        rx: 8
+    }
+
+    #simplecheckout_cart .digi-dolyame-label-2626 .digi-dolyame-logo_small path {
+        -webkit-transform: unset;
+        transform: unset
+    }
+
+    #simplecheckout_cart .digi-dolyame-label-2626 .digi-dolyame-label__text {
+        font-size: 14px
+    }</style>
+    <style type="text/css">.digi-dolyame-banner, .digi-dolyame-banner *, .digi-dolyame-banner:after, .digi-dolyame-banner :after, .digi-dolyame-banner:before, .digi-dolyame-banner :before {
+        font-family: HarmoniaSansProCyrRegular, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box
+    }
+
+    .digi-dolyame-banner {
+        display: -webkit-flex;
+        display: flex;
+        width: 100%;
+        height: 61px;
+        padding: 12px 16px !important;
+        border-radius: 8px !important;
+        -webkit-align-items: center;
+        align-items: center;
+        margin-bottom: 20px
+    }
+
+    .digi-dolyame-banner__text-wrapper {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        margin: 0 12px !important;
+        width: 355px
+    }
+
+    .digi-dolyame-banner__text {
+        display: inline;
+        font-family: Arial;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: -.24px;
+        text-align: left;
+        color: #000
+    }
+
+    .digi-dolyame-banner__text span {
+        margin: 0
+    }
+
+    .digi-dolyame-banner__text-small {
+        font-size: 13px;
+        color: rgba(0, 0, 0, .6);
+        margin-top: 4px;
+        font-weight: 400
+    }
+
+    .digi-dolyame-banner__button {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: #fff;
+        padding: 4px 12px;
+        background-color: #000;
+        border-radius: 30px;
+        cursor: pointer;
+        margin-left: auto;
+        border: none
+    }
+
+    .digi-dolyame-banner__button-arrow {
+        background-color: transparent !important;
+        border: none !important;
+        cursor: pointer;
+        box-shadow: none !important;
+        margin-left: auto
+    }
+
+    .digi-dolyame-banner--1 .digi-dolyame-banner__text, .digi-dolyame-banner--2 .digi-dolyame-banner__text, .digi-dolyame-banner--4 .digi-dolyame-banner__text, .digi-dolyame-banner--5 .digi-dolyame-banner__text {
+        color: #000
+    }
+
+    .digi-dolyame-banner--1 .digi-dolyame-banner__text-small, .digi-dolyame-banner--2 .digi-dolyame-banner__text-small, .digi-dolyame-banner--4 .digi-dolyame-banner__text-small, .digi-dolyame-banner--5 .digi-dolyame-banner__text-small {
+        color: rgba(0, 0, 0, .6)
+    }
+
+    .digi-dolyame-banner--1 .digi-dolyame-banner__button, .digi-dolyame-banner--2 .digi-dolyame-banner__button, .digi-dolyame-banner--4 .digi-dolyame-banner__button, .digi-dolyame-banner--5 .digi-dolyame-banner__button {
+        color: #fff;
+        background-color: #000
+    }
+
+    .digi-dolyame-banner--3 .digi-dolyame-banner__text {
+        color: #fff
+    }
+
+    .digi-dolyame-banner--3 .digi-dolyame-banner__text-small {
+        color: hsla(0, 0%, 100%, .6)
+    }
+
+    .digi-dolyame-banner--3 .digi-dolyame-banner__button {
+        color: #000;
+        background-color: #fff
+    }
+
+    .digi-dolyame-banner--mobile {
+        width: 345px;
+        margin: 0 auto
+    }
+
+    .digi-dolyame-banner--mobile .digi-dolyame-banner__text-wrapper {
+        width: 260px !important
+    }
+
+    .digi-dolyame-banner--mobile .digi-dolyame-banner__text-small {
+        font-size: 12px !important
+    }</style>
+    <style type="text/css">.digi-dolyame-notification, .digi-dolyame-notification *, .digi-dolyame-notification:after, .digi-dolyame-notification :after, .digi-dolyame-notification:before, .digi-dolyame-notification :before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box
+    }
+
+    .digi-dolyame-notification {
+        width: 100%
+    }
+
+    .digi-dolyame-notification__wrapper {
+        display: -webkit-flex;
+        display: flex;
+        padding: 11px 0;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+        height: 42px
+    }
+
+    .digi-dolyame-notification__text-wrapper {
+        display: -webkit-flex;
+        display: flex
+    }
+
+    .digi-dolyame-notification__text {
+        display: inline;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px
+    }
+
+    .digi-dolyame-notification__button {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        margin-left: 5px;
+        color: #000;
+        cursor: pointer;
+        border: none;
+        text-decoration: underline
+    }
+
+    .digi-dolyame-notification__logo {
+        margin-left: 15px
+    }
+
+    .digi-dolyame-notification--1 .digi-dolyame-notification__button, .digi-dolyame-notification--1 .digi-dolyame-notification__text, .digi-dolyame-notification--3 .digi-dolyame-notification__button, .digi-dolyame-notification--3 .digi-dolyame-notification__text {
+        color: #000
+    }
+
+    .digi-dolyame-notification--2 .digi-dolyame-notification__button, .digi-dolyame-notification--2 .digi-dolyame-notification__text {
+        color: #fff
+    }
+
+    .digi-dolyame-notification--mobile {
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 8px
+    }
+
+    .digi-dolyame-notification--mobile .digi-dolyame-notification__text-wrapper {
+        width: 157px !important;
+        margin: 0 12px !important
+    }
+
+    .digi-dolyame-notification--mobile .digi-dolyame-notification__button {
+        font-weight: 500;
+        line-height: 16px;
+        padding: 4px 12px;
+        border-radius: 30px;
+        cursor: pointer;
+        border: none;
+        text-decoration: none
+    }
+
+    .digi-dolyame-notification--1.digi-dolyame-notification--mobile .digi-dolyame-notification__button, .digi-dolyame-notification--3.digi-dolyame-notification--mobile .digi-dolyame-notification__button {
+        color: #fff;
+        background-color: #000 !important
+    }
+
+    .digi-dolyame-notification--2.digi-dolyame-notification--mobile .digi-dolyame-notification__button {
+        color: #000;
+        background-color: #fff !important
+    }</style>
+    <style>.SmartCaptcha-Overlay {
+        position: fixed;
+        z-index: 9999999;
+        top: -10000px;
+        left: -10000px;
+
+        width: 100%;
+        width: var(--smart-captcha-doc-width, 100%);
+        height: 100%;
+        height: var(--smart-captcha-doc-height, 100%);
+        margin: 0;
+        padding: 0;
+
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .SmartCaptcha-Overlay.SmartCaptcha-Overlay_visible {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .SmartCaptcha-Overlay.SmartCaptcha-Overlay_no_background {
+        background: none;
+    }
+
+    .SmartCaptcha-Overlay .SmartCaptcha-Spin {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+
+        margin: auto;
+
+        transform: translateY(-50%);
+    }
+    </style>
+    <style>.SmartCaptcha-Spin {
+        display: none;
+        visibility: hidden;
+
+        box-sizing: border-box;
+
+        border: 2px solid transparent;
+        border-radius: 50%;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    }
+
+    .SmartCaptcha-Spin::after {
+        visibility: hidden;
+
+        content: '\00A0';
+    }
+
+    .SmartCaptcha-Overlay_visible.SmartCaptcha-Overlay_show_spinner .SmartCaptcha-Spin {
+        display: inline-block;
+        visibility: visible;
+
+        width: 50px;
+        height: 50px;
+
+        border-top-color: #5282FF;
+        border-left-color: #5282FF;
+
+        animation: islands-spin 1s .21s infinite linear;
+
+        backface-visibility: hidden;
+    }
+
+    .SmartCaptcha-Overlay_visible.SmartCaptcha-Overlay_show_spinner .SmartCaptcha-Spin {
+        border-top-color: var(--spin-view-default-border-color, #5282FF);
+        border-left-color: var(--spin-view-default-border-color, #5282FF);
+    }
+
+    @keyframes islands-spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    </style>
+    <style>.smart-captcha {
+        min-width: 300px;
+        height: 102px;
+    }
+
+    .smart-captcha_invisible {
+        height: 0;
+    }
+    </style>
+    <link rel="prefetch" as="script" href="https://smartcaptcha.yandexcloud.net/shield.a7a8aae3ab898b70eed0.chunk.js">
+    <style type="text/css">.digi-dolyame-button {
+        margin: 10px 0 !important;
+        border-radius: 30px
+    }
+
+    .digi-dolyame-label {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 30px;
+        margin: 10px 0
+    }</style>
+</head>
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" style="height: 10708px;"
+      data-new-gr-c-s-check-loaded="14.1207.0" data-gr-ext-installed="" class="">
+<div class="digi-dolyame-modal digi-dolyame-modal__background">
+    <div class="digi-dolyame-modal__wrapper digi-dolyame-modal-advanced digi-dolyame-modal-advanced-new ">
+        <button type="button" class="digi-dolyame-modal__close">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L3.58579 5L0.292893 8.29289C-0.0976311 8.68342 -0.0976311 9.31658 0.292893 9.70711C0.683417 10.0976 1.31658 10.0976 1.70711 9.70711L5 6.41421L8.29289 9.70711C8.68342 10.0976 9.31658 10.0976 9.70711 9.70711C10.0976 9.31658 10.0976 8.68342 9.70711 8.29289L6.41421 5L9.70711 1.70711C10.0976 1.31658 10.0976 0.683417 9.70711 0.292893C9.31658 -0.0976311 8.68342 -0.0976311 8.29289 0.292893L5 3.58579L1.70711 0.292893Z"
+                      fill="#999"></path>
+            </svg>
+        </button>
+        <div class="digi-dolyame-modal__header">
+            <svg width="64" height="20" viewBox="0 0 64 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="64" height="20" rx="2" fill="black"></rect>
+                <path d="M47.9412 9.81863L45.9579 7.57313H44.7984V12.7722H46.009V9.45511L47.8197 11.4204H48.0435L49.823 9.45511V12.7722H51.0336V7.57313H49.8741L47.9412 9.81863Z"
+                      fill="white" style="display: unset;"></path>
+                <path d="M56.8017 7.57313L53.8011 10.9524V7.57313H52.5905V12.7722H53.6996L56.7002 9.39301V12.7722H57.9108V7.57313H56.8017Z"
+                      fill="white" style="display: unset;"></path>
+                <path d="M38.2776 9.47556C38.2776 10.3033 38.7221 10.9554 39.4045 11.2288L38.125 12.7722H39.6067L40.7707 11.3681H42.0301V12.7722H43.2407V7.57313H40.1587C39.0096 7.57313 38.2776 8.37364 38.2776 9.47556ZM42.0309 8.71822V10.2556H40.3832C39.8335 10.2556 39.5386 9.94359 39.5386 9.48616C39.5386 9.02873 39.8438 8.71671 40.3832 8.71671L42.0309 8.71822Z"
+                      fill="white" style="display: unset;"></path>
+                <path d="M32.6519 8.61295C32.5778 10.401 32.2074 11.5552 31.4821 11.5552H31.3005V12.8033L31.4939 12.8139C32.9482 12.8964 33.7521 11.5969 33.884 8.75836H35.7969V12.7722H37.0053V7.57313H32.6926L32.6519 8.61295Z"
+                      fill="white" style="display: unset;"></path>
+                <path d="M28.0945 7.50049C26.4572 7.50049 25.2792 8.65467 25.2792 10.1724C25.2792 11.7423 26.5609 12.8556 28.0945 12.8556C29.6918 12.8556 30.9328 11.6802 30.9328 10.1724C30.9328 8.66451 29.6918 7.50049 28.0945 7.50049ZM28.0945 11.6075C27.1691 11.6075 26.5387 10.9941 26.5387 10.1724C26.5387 9.33021 27.1699 8.73343 28.0945 8.73343C29.0191 8.73343 29.6711 9.35748 29.6711 10.1724C29.6711 10.9873 29.0102 11.6075 28.0945 11.6075Z"
+                      fill="white" style="display: unset;"></path>
+                <path d="M23.9949 7.58306H19.7223L19.6815 8.62288C19.6208 10.1209 19.237 11.5454 18.5117 11.5659L18.1761 11.5765V14H19.397V12.7731H23.6385V14H24.8699V11.5659H23.9949V7.58306ZM22.7843 11.5659H20.2009C20.638 10.8904 20.8721 9.91263 20.9129 8.76905H22.7843V11.5659Z"
+                      fill="white" style="display: unset;"></path>
+                <path d="M15.3913 6.39997H14.2174V12.8H15.3913V6.39997Z" fill="white"></path>
+                <path d="M12.6522 6.80001H11.4783V13.2H12.6522V6.80001Z" fill="white"></path>
+                <path d="M9.91305 7.19999H8.73914V13.6H9.91305V7.19999Z" fill="white"></path>
+                <path d="M7.17391 7.60003H6V14H7.17391V7.60003Z" fill="white"></path>
+            </svg>
+            <div class="digi-dolyame-modal__body-text-header">
+                Разделите стоимость покупки
+            </div>
+        </div>
+        <p class="digi-dolyame-modal__body-text">
+            Заплатите сейчас только часть, а оставшиеся будем списывать каждые две недели
+        </p>
+        <ul class="digi-dolyame-modal__features">
+            <li class="digi-dolyame-modal__features-item">
+                <div class="digi-dolyame-modal__features-icon">
+                    <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M13.4 11c0-.44.36-.8.8-.8a2.4 2.4 0 0 1 0 4.8.8.8 0 0 1 0-1.6.8.8 0 0 0 .8-.8.8.8 0 0 0-.8-.8.8.8 0 0 1-.8-.8Z"
+                              fill="#6F99C6"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M18.47 15.8V6.2c0-.59-.48-1.07-1.07-1.07H4.6c-.59 0-1.07.48-1.07 1.07v9.6c0 .59.48 1.07 1.07 1.07h12.8c.59 0 1.07-.48 1.07-1.07ZM4.6 3.53A2.67 2.67 0 0 0 1.93 6.2v9.6c0 1.47 1.2 2.67 2.67 2.67h12.8c1.47 0 2.67-1.2 2.67-2.67V6.2c0-1.47-1.2-2.67-2.67-2.67H4.6Z"
+                              fill="#000"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.47 7.53c0-.44.35-.8.8-.8h12.8a.8.8 0 0 1 0 1.6H3.27a.8.8 0 0 1-.8-.8Z"
+                              fill="#000"></path>
+                    </svg>
+                </div>
+                <span>
+				Как обычная оплата картой
+			</span></li>
+            <li class="digi-dolyame-modal__features-item">
+                <div class="digi-dolyame-modal__features-icon">
+                    <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M11 11.89c0 .98-.8 1.77-1.78 1.77H7.44c0-.98.8-1.77 1.78-1.77H11ZM14.56 8.33c0 .99-.8 1.78-1.78 1.78H7.44c0-.98.8-1.78 1.78-1.78h5.34Z"
+                              fill="#B182BC"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M18.11 2.11v15.11c0 1.48-1.2 2.67-2.67 2.67H3.9V4.78c0-1.47 1.2-2.67 2.67-2.67H18.1ZM16.33 3.9H6.56c-.5 0-.9.4-.9.89V18.1h9.78c.5 0 .9-.4.9-.89V3.9Z"
+                              fill="#000"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M14.56 2.11v2.67c0 .98-.8 1.78-1.78 1.78H9.22c-.98 0-1.78-.8-1.78-1.78V2.1h1.78v2.67h3.56V2.1h1.78Z"
+                              fill="#000"></path>
+                    </svg>
+                </div>
+                <span>
+				Без кредитного договора
+			</span></li>
+        </ul>
+        <div class="digi-dolyame-modal__payment-wrap">
+            <ul class="digi-dolyame-modal__details-of-payment">
+                <li class="digi-dolyame-modal__details-of-payment_item">
+                    <div class="digi-dolyame-modal__details-of-payment_date">
+                        Сегодня
+                    </div>
+                    <div class="digi-dolyame-modal__details-of-payment_price">
+                        25%
+                    </div>
+                </li>
+                <li class="digi-dolyame-modal__details-of-payment_item">
+                    <div class="digi-dolyame-modal__details-of-payment_date">
+                        5 дек
+                    </div>
+                    <div class="digi-dolyame-modal__details-of-payment_price">
+                        25%
+                    </div>
+                </li>
+                <li class="digi-dolyame-modal__details-of-payment_item">
+                    <div class="digi-dolyame-modal__details-of-payment_date">
+                        19 дек
+                    </div>
+                    <div class="digi-dolyame-modal__details-of-payment_price">
+                        25%
+                    </div>
+                </li>
+                <li class="digi-dolyame-modal__details-of-payment_item">
+                    <div class="digi-dolyame-modal__details-of-payment_date">
+                        2 янв
+                    </div>
+                    <div class="digi-dolyame-modal__details-of-payment_price">
+                        25%
+                    </div>
+                </li>
+            </ul>
+            <div class="digi-dolyame-modal__payment-text">Примерный график, может быть сервисный сбор</div>
+        </div>
+        <p class="digi-dolyame-modal__details">
+            Подробнее о сервисе можно узнать на
+            <noindex><a href="https://dolyame.ru/" target="_blank" rel="nofollow">dolyame.ru</a></noindex>
+        </p>
+    </div>
+</div>
+<!--<script type="text/javascript">-->
+<!--    var digiScript = document.createElement('script');-->
+<!--    digiScript.src = '//aq.dolyame.ru/2621/client.js?ts=' + Date.now();-->
+<!--    digiScript.defer = true;-->
+<!--    digiScript.async = true;-->
+<!--    document.body.appendChild(digiScript);-->
+<!--</script>-->
+<!--<script src="../files/client.js" defer="" async=""></script>-->
+
+
+<div class="header-info">
+    <div class="swiper-container header-swiper swiper-container-initialized swiper-container-horizontal swiper-container-autoheight">
+        <div class="swiper-wrapper"
+             style="transition-duration: 0ms; transform: translate3d(-6372px, 0px, 0px); height: 28px;">
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev"
+                 data-swiper-slide-index="2" style="width: 1593px;">
+                <span class="posthog_view_block posthog_try_to_click"
+                      posthog-name="Растяжка &#39;Покупайте сейчас и оплачивайте частями в течение нескольких месяцев!&#39;">Покупайте сейчас и оплачивайте частями в течение нескольких месяцев!</span>
+            </div>
+            <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 1593px;">
+                <a href="https://beautysleep.ru/products/" class="posthog_view_block posthog_click"
+                   posthog-name="Растяжка &#39;ЧЕРНАЯ ПЯТНИЦА! -10% на всё по промокоду BLACK&#39;">ЧЕРНАЯ ПЯТНИЦА! -10%
+                    на всё по промокоду BLACK</a>
+            </div>
+            <div class="swiper-slide" data-swiper-slide-index="1" style="width: 1593px;">
+                <span class="posthog_view_block posthog_try_to_click"
+                      posthog-name="Растяжка &#39;*Бесплатная доставка для заказов от 18 000 рублей только по Москве, Московской области, Санкт-Петербургу и Ленинградской области.&#39;">*Бесплатная доставка для заказов от 18&nbsp;000 рублей только по Москве, Московской области, Санкт-Петербургу и Ленинградской области.</span>
+            </div>
+            <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="2"
+                 style="width: 1593px;">
+                <span class="posthog_view_block posthog_try_to_click"
+                      posthog-name="Растяжка &#39;Покупайте сейчас и оплачивайте частями в течение нескольких месяцев!&#39;">Покупайте сейчас и оплачивайте частями в течение нескольких месяцев!</span>
+            </div>
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0"
+                 style="width: 1593px;">
+                <a href="https://beautysleep.ru/products/" class="posthog_view_block posthog_click"
+                   posthog-name="Растяжка &#39;ЧЕРНАЯ ПЯТНИЦА! -10% на всё по промокоду BLACK&#39;">ЧЕРНАЯ ПЯТНИЦА! -10%
+                    на всё по промокоду BLACK</a>
+            </div>
+        </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+</div>
+<header role="banner" style="top: 28px;" class="">
+    <div class="header-common">
+        <div class="grid">
+            <div class="header-common__top">
+                <div class="interaction">
+                    <a href="tel:88002224624" class="interaction__phone posthog_click" posthog-name="Номер телефона">
+                        <img src="../files/phone-ico-black.svg" alt="phone-ico"> 8 (800) 222
+                        46 24</a>
+                    <div class="burger-menu action-item tablet btn-mob-menu">
+                        <span class="burger-menu__item"></span>
+                        <span class="burger-menu__item"></span>
+                        <span class="burger-menu__item"></span>
+                    </div>
+                </div>
+                <a href="https://beautysleep.ru/" class="logo posthog_click" posthog-name="Лого">
+                    <img src="../files/logo.svg" alt="Beauty sleep">
+                </a>
+                <div class="shop">
+                    <a href="https://beautysleep.ru/products/" class="shop_goods posthog_click" posthog-name="Магазин">
+                        <img src="../files/shop.svg" alt="profile">
+                        <span>онлайн магазин</span>
+                    </a>
+                    <a href="https://beautysleep.ru/basket" class="posthog_click shop_cart " posthog-name="Корзина">
+                        <img src="../files/card.svg" alt="card">
+                        <img class="card-mobile-ico" src="../files/card-mobile.svg"
+                             alt="card">
+                        <span>
+                  Корзина                </span>
+                        <div class="cart-counter">
+                            <strong class="ms2_total_count">0</strong>
+                        </div>
+                    </a></div>
+            </div>
+        </div>
+
+        <nav role="navigation" class="header-common__bottom">
+
+            <div style="display: none!important;">
+
+            </div>
+            <div class="header-menu__item  active ">
+                <span class="header-menu__item_name">Подушки</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid">
+
+
+                        <a href="https://beautysleep.ru/omnia-and-classic" class="item-content__link">
+                            <div>
+                                <img src="../files/pillow_classic.svg" alt="pillow">
+                            </div>
+                            <span>Подушка Omnia &amp; Classic</span>
+                        </a>
+                        <a href="https://beautysleep.ru/copper" class="item-content__link">
+                            <div>
+                                <img src="../files/pillow_copper.svg" alt="pillow_copper">
+                                <div class="item-content__link_new"><span>new</span></div>
+                            </div>
+                            <span>Подушка Omnia Copper Blend</span>
+                        </a>
+                        <a href="https://beautysleep.ru/aula" class="item-content__link">
+                            <div>
+                                <img src="../files/pillow_aula.svg" alt="pillow">
+                            </div>
+                            <span>Подушка Aula</span>
+                        </a>
+                        <a href="https://beautysleep.ru/products/?category=437" class="item-content__link">
+                            <div>
+                                <img src="../files/somia_ico.svg" alt="somia">
+                            </div>
+                            <span>Подушки для мужчин&nbsp;и&nbsp;детей</span>
+                        </a>
+                        <a href="https://beautysleep.ru/pillow-for-decollete" class="item-content__link">
+                            <div>
+                                <img src="../files/pillow_decollete.svg" alt="pillow">
+                            </div>
+                            <span>Подушка для декольте</span>
+                        </a>
+                        <a href="https://beautysleep.ru/products/?category=25" class="item-content__link">
+                            <div>
+                                <img src="../files/pillow_case.svg" alt="pillow">
+                            </div>
+                            <span>Наволочки</span>
+                        </a>
+                        <a href="https://beautysleep.ru/sleep-wrinkles" class="item-content__link">
+                            <div>
+                                <img src="../files/sleep.svg" alt="pillow">
+                            </div>
+                            <span>Beauty - сон</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-menu__item ">
+                <span class="header-menu__item_name">Одеяла</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid">
+
+
+                        <a href="https://beautysleep.ru/weighted-blanket" class="item-content__link">
+                            <div>
+                                <img src="../files/blanket.svg" alt="pillow">
+                            </div>
+                            <span>Утяжеленное одеяло </span>
+                        </a>
+                        <a href="https://beautysleep.ru/airmesh-blanket" class="item-content__link">
+                            <div>
+                                <img src="../files/blanket2.svg" alt="pillow">
+                            </div>
+                            <span>Одеяло с вентиляционными вставками</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-menu__item ">
+                <span class="header-menu__item_name">Одежда и аксессуары из элитного шелка</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid">
+
+
+                        <a href="https://beautysleep.ru/silk-products/?product=21" class="item-content__link">
+                            <div>
+                                <img src="../files/robe.svg" alt="robe">
+                            </div>
+                            <span>Халаты</span>
+                        </a>
+                        <a href="https://beautysleep.ru/silk-products/?product=23" class="item-content__link">
+                            <div>
+                                <img src="../files/shirt.svg" alt="underwear">
+                            </div>
+                            <span>Комбинации</span>
+                        </a>
+                        <a href="https://beautysleep.ru/silk-products/?product=24" class="item-content__link">
+                            <div>
+                                <img src="../files/underwear.svg" alt="underwear">
+                            </div>
+                            <span>Топы и шорты</span>
+                        </a>
+                        <a href="https://beautysleep.ru/silk-products/?product=25" class="item-content__link">
+                            <div>
+                                <img src="../files/sleepmask.svg" alt="mask">
+                            </div>
+                            <span>Маски для сна</span>
+                        </a>
+                        <a href="https://beautysleep.ru/silk-products/?product=26" class="item-content__link">
+                            <div>
+                                <img src="../files/scrunchy.svg" alt="elastic">
+                            </div>
+                            <span>Аксессуары для волос</span>
+                        </a>
+                        <a href="https://beautysleep.ru/silk-products/?product=27" class="item-content__link">
+                            <div>
+                                <img src="../files/pol.svg" alt="elastic">
+                            </div>
+                            <span>Полотенца</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu__item ">
+                <span class="header-menu__item_name">Ароматы для сна</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid">
+
+
+                        <a href="https://beautysleep.ru/scents-for-sleep" class="item-content__link">
+                            <div>
+                                <img src="../files/aroma.svg" alt="aroma">
+                            </div>
+                            <span>Ароматы для сна</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="header-menu__item ">
+                <span class="header-menu__item_name">Идеи подарков</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid">
+
+
+                        <a href="https://beautysleep.ru/products/?category=287" class="item-content__link">
+                            <div>
+                                <img src="../files/gift card.svg" alt="">
+                            </div>
+                            <span>Подарочные сертификаты</span>
+                        </a>
+                        <a href="https://beautysleep.ru/products/?category=325" class="item-content__link">
+                            <div>
+                                <img src="../files/gift.svg" alt="">
+                            </div>
+                            <span>Подарочные наборы</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-menu__item ">
+                <span class="header-menu__item_name">Наша наука</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid">
+
+
+                        <a href="https://beautysleep.ru/our-science" class="item-content__link">
+                            <div>
+                                <img src="../files/expert-menu_.png" alt="">
+                            </div>
+                            <span>Наша наука</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-menu__item ">
+                <span class="header-menu__item_name">Покупателям</span>
+                <div class="header-menu__item_content">
+                    <div class="item-content__box grid">
+
+
+                        <a href="https://beautysleep.ru/dostavka-i-oplata" class="item-content__link">
+                            <div>
+                                <img src="../files/delivery.svg" alt="pillow">
+                            </div>
+                            <span>Доставка и оплата</span>
+                        </a>
+                        <a href="https://beautysleep.ru/garantia-i-vozvrat" class="item-content__link">
+                            <div>
+                                <img src="../files/return.svg" alt="pillow">
+                            </div>
+                            <span>Гарантия и возврат</span>
+                        </a>
+                        <a href="https://beautysleep.ru/for-customers/contacts" class="item-content__link">
+                            <div>
+                                <img src="../files/contacts.svg" alt="pillow">
+                            </div>
+                            <span>Контакты</span>
+                        </a>
+                        <a href="https://beautysleep.ru/o-kompanii" class="item-content__link">
+                            <div>
+                                <img src="../files/about.svg" alt="pillow">
+                            </div>
+                            <span>О компании</span>
+                        </a>
+                        <a href="https://beautysleep.ru/reviews" class="item-content__link">
+                            <div>
+                                <img src="../files/review.svg" alt="pillow">
+                            </div>
+                            <span>Отзывы</span>
+                        </a>
+                        <a href="https://beautysleep.ru/question" class="item-content__link">
+                            <div>
+                                <img src="../files/faq.svg" alt="pillow">
+                            </div>
+                            <span>Вопросы</span>
+                        </a>
+                        <a href="https://beautysleep.ru/about-beauty-sleep/materials-beauty-sleep"
+                           class="item-content__link">
+                            <div>
+                                <img src="../files/materials.svg" alt="pillow">
+                            </div>
+                            <span>Материалы</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="header-menu__item mobile-item">
+                <!--<a href="products/" class="header-menu__item_name">онлайн магазин beauty sleep</a>-->
+            </div>
+            <div class="header-menu__item mobile-item shop">
+                <a href="https://beautysleep.ru/products/" class="shop_goods posthog_click"
+                   posthog-name="онлайн магазин">
+                    <img src="../files/shop.svg" alt="profile">
+                    <span>онлайн магазин</span>
+                </a>
+            </div>
+            <div class="interaction">
+                <a href="tel:88002224624" class="contacts-item__contact posthog_click" posthog-name="телефон">
+                    <div><img src="../files/phone-ico-blue.svg" alt="phone">
+                        <span>8 (800) 222 46 24</span>
+                    </div>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=+79303844624" target="_blank"
+                   class="contacts-item__contact posthog_click" posthog-name="whatsapp">
+                    <div><img src="../files/whatsapp-ico-blue.svg" alt="whats-app">
+                        <span>+7 930 384 46 24</span>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
+<link rel="stylesheet" href="landing_files/style.css">
+
+<main role="main" id="up" class="beauty-landing">
+    <section class="cooling-main-section general-section">
+        <picture>
+            <source srcset="landing_files/images/cooling-main-img-mobile.avif" media="(max-width: 768px)" type="image/avif">
+            <source srcset="landing_files/images/cooling-main-img.avif" type="image/avif">
+
+            <source srcset="landing_files/images/cooling-main-img-mobile.webp" media="(max-width: 768px)" type="image/webp">
+            <source srcset="landing_files/images/cooling-main-img.webp" type="image/webp">
+
+            <source srcset="landing_files/images/cooling-main-img-mobile.jpg" media="(max-width: 768px)" type="image/jpg">
+            <source srcset="landing_files/images/cooling-main-img.jpg" type="image/jpg">
+
+            <img src="landing_files/images/cooling-main-img.jpg" alt="Main picture">
+        </picture>
+        <div class="cooling-main-text">
+            <h1>
+                OMNIA cooling
+            </h1>
+            <p>
+                Best-selling Omnia pillow with<br class="br-mobile">  thermoregulating properties
+            </p>
+        </div>
+    </section>
+
+    <section class="cooling-text-section">
+        <h3>
+            THE CUTTING-EDGE OF INNOVATION: ALWAYS SLEEP <br>
+            ON THE COOL SIDE OF THE PILLOW
+        </h3>
+    </section>
+
+    <section class="cooling-two-in-one-section">
+        <picture class="cooling-two-in-one-bg">
+            <source srcset="landing_files/images/cooling-2-1-img-mobile.avif" media="(max-width: 768px)" type="image/avif">
+            <source srcset="landing_files/images/cooling-2-1-img.avif" type="image/avif">
+
+            <source srcset="landing_files/images/cooling-2-1-img-mobile.webp" media="(max-width: 768px)" type="image/webp">
+            <source srcset="landing_files/images/cooling-2-1-img.webp" type="image/webp">
+
+            <source srcset="landing_files/images/cooling-2-1-img-mobile.jpg" media="(max-width: 768px)" type="image/jpg">
+            <source srcset="landing_files/images/cooling-2-1-img.jpg" type="image/jpg">
+
+            <img src="landing_files/images/cooling-2-1-img.jpg" alt="">
+        </picture>
+        <div class="cooling-two-in-one-title">
+            2<span>in</span>1
+        </div>
+        <div class="cooling-two-in-one-card cooling-two-in-one-card_pillow">
+            <picture class="cooling-two-in-one-card-pillow">
+                <source srcset="landing_files/images/pillow3D-mob.avif" media="(max-width: 768px)" type="image/avif">
+                <source srcset="landing_files/images/pillow3D.avif" type="image/avif">
+
+                <source srcset="landing_files/images/pillow3D-mob.webp" media="(max-width: 768px)" type="image/webp">
+                <source srcset="landing_files/images/pillow3D.webp" type="image/webp">
+
+                <source srcset="landing_files/images/pillow3D-mob.png" media="(max-width: 768px)" type="image/png">
+                <source srcset="landing_files/images/pillow3D.png" type="image/png">
+
+                <img src="landing_files/images/pillow3D.png" alt="">
+            </picture>
+            <div class="cooling-two-in-one-card-num">
+                1
+            </div>
+            <div class="cooling-two-in-one-card-info">
+                <h3>
+                    PATENTED 3D OMNIA<br>
+                    PILLOW WITH VENTILATION<br>
+                    ZONES
+                </h3>
+            </div>
+        </div>
+        <div class="cooling-two-in-one-card cooling-two-in-one-card_fiber">
+            <picture class="cooling-two-in-one-card-fiber">
+                <source srcset="landing_files/images/fiber-mob.avif" media="(max-width: 768px)" type="image/avif">
+                <source srcset="landing_files/images/fiber.avif" type="image/avif">
+
+                <source srcset="landing_files/images/fiber-mob.webp" media="(max-width: 768px)" type="image/webp">
+                <source srcset="landing_files/images/fiber.webp" type="image/webp">
+
+                <source srcset="landing_files/images/fiber-mob.png" media="(max-width: 768px)" type="image/png">
+                <source srcset="landing_files/images/fiber.png" type="image/png">
+
+                <img src="landing_files/images/fiber.png" alt="">
+            </picture>
+            <div class="cooling-two-in-one-card-num">
+                2
+            </div>
+            <div class="cooling-two-in-one-card-info">
+                <h3>
+                    INNOVATIVE<br>
+                    THERMOREGULATING<br>
+                    PILLOWCASE
+                </h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="cooling-diff-section">
+        <h3>
+            how is the <b>sleep&glow different from other pillows?</b>
+        </h3>
+        <div class="cooling-diff-sides">
+            <div class="cooling-diff-side-left">
+                <div class="cooling-diff-side-left-item">
+                    <picture>
+                        <source srcset="landing_files/images/pillow-regular-1-mob.avif" media="(max-width: 768px)" type="image/avif">
+                        <source srcset="landing_files/images/pillow-regular-1.avif" type="image/avif">
+
+                        <source srcset="landing_files/images/pillow-regular-1-mob.webp" media="(max-width: 768px)" type="image/webp">
+                        <source srcset="landing_files/images/pillow-regular-1.webp" type="image/webp">
+
+                        <source srcset="landing_files/images/pillow-regular-1-mob.jpg" media="(max-width: 768px)" type="image/jpg">
+                        <source srcset="landing_files/images/pillow-regular-1.jpg" type="image/jpg">
+
+                        <img src="landing_files/images/pillow-regular-1.jpg" alt="">
+                    </picture>
+                    <div class="cooling-diff-side-left-badge">
+                        <svg viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.9">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.6977 27.7L36.3977 37.4L37.8977 35.9L28.1977 26.2L37.8977 16.5L36.3977 15L26.6977 24.7L17.0977 15L15.5977 16.5L25.2977 26.2L15.5977 35.9L17.0977 37.4L26.6977 27.7Z" fill="#4F6FC1"/>
+                                <path d="M26.6984 50.9984C40.3984 50.9984 51.4984 39.8984 51.4984 26.1984C51.4984 12.4984 40.3984 1.39844 26.6984 1.39844C12.9984 1.39844 1.89844 12.4984 1.89844 26.1984C1.89844 39.8984 12.9984 50.9984 26.6984 50.9984Z" stroke="#4F6FC1" stroke-width="2.145"/>
+                            </g>
+                        </svg>
+
+                        Regular<br> pillow
+                    </div>
+                </div>
+                <div class="cooling-diff-side-left-item">
+                    <picture>
+                        <source srcset="landing_files/images/pillow-regular-2-mob.avif" media="(max-width: 768px)" type="image/avif">
+                        <source srcset="landing_files/images/pillow-regular-2.avif" type="image/avif">
+
+                        <source srcset="landing_files/images/pillow-regular-2-mob.webp" media="(max-width: 768px)" type="image/webp">
+                        <source srcset="landing_files/images/pillow-regular-2.webp" type="image/webp">
+
+                        <source srcset="landing_files/images/pillow-regular-2-mob.jpg" media="(max-width: 768px)" type="image/jpg">
+                        <source srcset="landing_files/images/pillow-regular-2.jpg" type="image/jpg">
+
+                        <img src="landing_files/images/pillow-regular-2.jpg" alt="">
+                    </picture>
+                    <div class="cooling-diff-side-left-badge">
+                        <svg viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.9">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.6977 27.7L36.3977 37.4L37.8977 35.9L28.1977 26.2L37.8977 16.5L36.3977 15L26.6977 24.7L17.0977 15L15.5977 16.5L25.2977 26.2L15.5977 35.9L17.0977 37.4L26.6977 27.7Z" fill="#4F6FC1"/>
+                                <path d="M26.6984 50.9984C40.3984 50.9984 51.4984 39.8984 51.4984 26.1984C51.4984 12.4984 40.3984 1.39844 26.6984 1.39844C12.9984 1.39844 1.89844 12.4984 1.89844 26.1984C1.89844 39.8984 12.9984 50.9984 26.6984 50.9984Z" stroke="#4F6FC1" stroke-width="2.145"/>
+                            </g>
+                        </svg>
+
+                        Orthopedic<br> pillow
+                    </div>
+                </div>
+                <p>
+                    When you sleep on a regular pillow (no matter the pillowcase material), your skin may become stretched and
+                    compressed, creating creases and morning puffiness. Over time, they turn into permanent sleep wrinkles.
+                </p>
+            </div>
+            <div class="cooling-diff-side-right">
+                <picture>
+                    <source srcset="landing_files/images/pillow-sg-mob.avif" media="(max-width: 768px)" type="image/avif">
+                    <source srcset="landing_files/images/pillow-sg-desk-1.avif" type="image/avif">
+
+                    <source srcset="landing_files/images/pillow-sg-mob.webp" media="(max-width: 768px)" type="image/webp">
+                    <source srcset="landing_files/images/pillow-sg-desk-1.webp" type="image/webp">
+
+                    <source srcset="landing_files/images/pillow-sg-mob.jpg" media="(max-width: 768px)" type="image/jpg">
+                    <source srcset="landing_files/images/pillow-sg-desk-1.jpg" type="image/jpg">
+
+                    <img src="landing_files/images/pillow-sg-desk-1.jpg" alt="">
+                </picture>
+                <p>
+                    Thanks to its special design, the Sleep&Glow provides comfort while reducing contact between the face
+                    and pillow, preventing and fighting sleep wrinkles and morning puffiness.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cooling-technology-section">
+        <h2>
+            The technology
+        </h2>
+        <div class="cooling-technology-img">
+            <div class="cooling-technology-video">
+                <video autoplay="" loop="" muted="" playsinline="" webkit-playsinline="" poster="landing_files/images/cooling_omnia_video.jpg" preload="none">
+                    <source src="landing_files/images/cooling_omnia.mp4" type="video/mp4">
+                    <source src="landing_files/images/cooling_omnia.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="cooling-technology">
+                <div class="cooling-technology-num">
+                    <svg class="cooling-technology-num-desk" width="33" height="80" viewBox="0 0 33 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32.0422 0.799997V80H19.3222V15.8L3.24219 20.96L0.122188 9.8L27.6022 0.799997H32.0422Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="cooling-technology-text">
+                    <h4>
+                        <svg class="cooling-technology-num-mob" width="30" height="80" viewBox="0 0 30 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M29.52 0.638864V79.8389H20.16V11.6789L2.88 17.0789L0.6 9.03886L26.04 0.638864H29.52Z" fill="url(#paint0_linear_2386_9331)"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_2386_9331" x1="29.2737" y1="-27.0081" x2="35.7371" y2="152.108" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.167093" stop-color="#CBE5FF"/>
+                                    <stop offset="0.5" stop-color="#85B2DE"/>
+                                    <stop offset="1" stop-color="#3F7EBD"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>
+                            Ventilation perforating<br>
+                            technology
+                        </span>
+                    </h4>
+                    <p>
+                        The pillow's ventilation zones prevent heat
+                        buildup. The location of the holes
+                        is concentrated around the cheeks and eyes
+                        — the areas most susceptible to swelling
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cooling-technology-micro-section">
+        <div class="cooling-technology-micro-img">
+            <picture>
+                <source srcset="landing_files/images/cooling_micro_mob.avif" media="(max-width: 768px)" type="image/avif">
+                <source srcset="landing_files/images/cooling_micro_desk.avif" type="image/avif">
+
+                <source srcset="landing_files/images/cooling_micro_mob.webp" media="(max-width: 768px)" type="image/webp">
+                <source srcset="landing_files/images/cooling_micro_desk.webp" type="image/webp">
+
+                <source srcset="landing_files/images/cooling_micro_mob.jpg" media="(max-width: 768px)" type="image/jpg">
+                <source srcset="landing_files/images/cooling_micro_desk.jpg" type="image/jpg">
+
+                <img src="landing_files/images/cooling_micro_desk.jpg" alt="">
+            </picture>
+            <div class="cooling-technology-micro">
+                <div class="cooling-technology-micro-num">
+                    <svg class="cooling-technology-micro-num-desk"  width="58" height="81" viewBox="0 0 58 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M57.6081 69.96V81H0.848125V78.12L29.0481 47.76C33.4481 43.12 36.6481 39.2 38.6481 36C40.6481 32.72 41.6481 29.4 41.6481 26.04C41.6481 22.04 40.4481 18.72 38.0481 16.08C35.6481 13.44 32.4481 12.12 28.4481 12.12C24.4481 12.12 21.2081 13.52 18.7281 16.32C16.2481 19.04 15.0081 22.44 15.0081 26.52C15.0081 28.2 15.2081 30.24 15.6081 32.64H2.76813C2.20813 30.48 1.92813 28.2 1.92813 25.8C1.92813 21.48 3.00813 17.4 5.16813 13.56C7.32813 9.64 10.4081 6.48 14.4081 4.08C18.4881 1.68 23.2081 0.48 28.5681 0.48C33.6081 0.48 38.0881 1.56 42.0081 3.71999C46.0081 5.87999 49.1281 8.83999 51.3681 12.6C53.6881 16.28 54.8481 20.44 54.8481 25.08C54.8481 30.44 53.4081 35.36 50.5281 39.84C47.7281 44.24 43.5681 49.36 38.0481 55.2L24.1281 69.96H57.6081Z" fill="#76ACE3"/>
+                    </svg>
+                </div>
+                <div class="cooling-technology-micro-text">
+                    <h4>
+                        <svg class="cooling-technology-micro-num-mob" width="56" height="81" viewBox="0 0 56 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M55.72 72.4389V80.8389H0.64V78.4389L28.84 48.4389C33.64 43.3989 37.16 39.1589 39.4 35.7189C41.64 32.1989 42.76 28.5589 42.76 24.7989C42.76 20.3989 41.36 16.6789 38.56 13.6389C35.84 10.5189 32.16 8.95886 27.52 8.95886C22.72 8.95886 18.88 10.5589 16 13.7589C13.12 16.9589 11.68 20.7989 11.68 25.2789C11.68 27.5189 11.92 29.7189 12.4 31.8789H2.8C2.24 29.7189 1.96 27.3989 1.96 24.9189C1.96 20.7589 3 16.7989 5.08 13.0389C7.16 9.19886 10.12 6.11886 13.96 3.79886C17.88 1.47887 22.4 0.318867 27.52 0.318867C32.32 0.318867 36.6 1.39886 40.36 3.55886C44.2 5.63886 47.16 8.51886 49.24 12.1989C51.4 15.7989 52.48 19.8389 52.48 24.3189C52.48 27.9989 51.72 31.5189 50.2 34.8789C48.68 38.2389 46.8 41.3189 44.56 44.1189C42.4 46.9189 39.52 50.1989 35.92 53.9589L18.4 72.4389H55.72Z" fill="url(#paint0_linear_2386_9297)"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_2386_9297" x1="27.2737" y1="-26.0081" x2="33.7371" y2="153.108" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.167093" stop-color="#CBE5FF"/>
+                                    <stop offset="0.5" stop-color="#85B2DE"/>
+                                    <stop offset="1" stop-color="#3F7EBD"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>
+                            Innovative Thermoregulating <br>
+                            pillowcase
+                        </span>
+                    </h4>
+                    <p>
+                        Our unique material, with paraffin
+                        microencapsulated into the fabric, has
+                        special thermoregulating properties that
+                        ensure an ideal microclimate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefit-section">
+        <picture class="benefit-section_img">
+            <source srcset="landing_files/images/benefits-mob.avif" media="(max-width: 768px)" type="image/avif">
+            <source srcset="landing_files/images/benefits-desk.avif" type="image/avif">
+
+            <source srcset="landing_files/images/benefits-mob.webp" media="(max-width: 768px)" type="image/webp">
+            <source srcset="landing_files/images/benefits-desk.webp" type="image/webp">
+
+            <source srcset="landing_files/images/benefits-mob.jpg" media="(max-width: 768px)" type="image/jpg">
+            <source srcset="landing_files/images/benefits-desk.jpg" type="image/jpg">
+
+            <img src="landing_files/images/benefits-desk.jpg" alt="">
+        </picture>
+        <div class="benefit-section-info">
+            <h3 class="benefit-section-title">
+                BENEFITS OF COOLING
+            </h3>
+            <div class="benefit-section-info-item">
+                <div class="benefit-section-info-item-line"></div>
+                <img src="landing_files/images/benefit-1.svg" class="benefit-section-info-item-img" alt="benefit 1">
+                <div class="benefit-section-info-item-text">
+                    <h4>
+                        deep beauty sleep
+                    </h4>
+                    <span>
+                        Overheating is 1 of the top 3 contributing factors in reduced
+                        sleep quality. Our pillow creates the perfect microclimate
+                        for sleep and supports optimal body temperature
+                        all night long.
+                    </span>
+                </div>
+            </div>
+            <div class="benefit-section-info-item">
+                <div class="benefit-section-info-item-line"></div>
+                <img src="landing_files/images/benefit-2.svg" class="benefit-section-info-item-img" alt="benefit 2">
+                <div class="benefit-section-info-item-text">
+                    <h4>
+                        SOOTHES SKIN
+                    </h4>
+                    <span>
+                        Nighttime heat causes the skin to become over-
+                        moisturized, leading to irritation and imperfections.
+                        The innovative Omnia Cooling absorbs excess sweat,
+                        preventing overheating.
+                    </span>
+                </div>
+            </div>
+            <div class="benefit-section-info-item">
+                <div class="benefit-section-info-item-line benefit-section-info-item-line__last"></div>
+                <img src="landing_files/images/benefit-3.svg" class="benefit-section-info-item-img" alt="benefit 3">
+                <div class="benefit-section-info-item-text">
+                    <h4>
+                        REDUCED PUFFINESS
+                    </h4>
+                    <span>
+                        Poor sleep, overheating and bad pillow posture are
+                        all sources of morning puffiness. Avoid them all with
+                        our new product, the Omnia Cooling, with a special sloped
+                        design and thermoregulating technology so you wake
+                        up glowing.​
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cooling-pillow-section cooling-dignities-section">
+        <div class="dignities-item dignities-item-1 left">
+            <div>
+                <span>YOUNGER-LOOKING SKIN</span>
+                <span>
+                    Helps fight and prevent sleep wrinkles. Even US $250+ face creams and botulinum toxin cannot fight sleep wrinkles
+                </span>
+            </div>
+            <img loading="lazy" src="landing_files/images/pillow-1.svg" alt="dignities-1">
+        </div>
+        <div class="dignities-item dignities-item-2 left">
+            <div>
+                <span>ORTHOPEDIC PROPERTIES</span>
+                <span>
+                    Designed together with orthopedic specialists. Ensures anatomically correct body position during sleep
+                </span>
+            </div>
+            <img loading="lazy" src="landing_files/images/pillow-2.svg" alt="dignities-2">
+        </div>
+        <div class="dignities-item dignities-item-3 left">
+            <div>
+                <span>deep sleep</span>
+                <span>
+                    The anatomical design of the pillow ensures extra comfort while you sleep
+                </span>
+            </div>
+            <img loading="lazy" src="landing_files/images/pillow-3.svg" alt="dignities-3">
+        </div>
+        <div class="dignities-section__content_center">
+            <div class="pillow-img-box">
+                <div class="pillow-img-box-anty-hydra">
+                    <div class="pillow-img-box-anty-hydra-item">
+                        Anti-Edad
+                    </div>
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.41954 10.9955H0.5V8.95928H9.41954V0H11.7184V8.95928H20.5V10.9955H11.7184V20H9.41954V10.9955Z" fill="#221D1E"/>
+                    </svg>
+                    <div class="pillow-img-box-anty-hydra-item">
+                        Efecto refrescante
+                    </div>
+                </div>
+                <div class="pillow-img-box__circles"></div>
+                <picture class="pillow-img-box-picture">
+                    <source srcset="landing_files/images/pillow-center-1-new.avif" type="image/avif">
+                    <source srcset="landing_files/images/pillow-center-1-new.webp" type="image/webp">
+                    <img src="landing_files/images/pillow-center-1-new.webp" alt="">
+                </picture>
+                <div class="pillow-img-box-button">
+                    <a href="#" class="button">
+                        <span>aprende cómo funciona nuestra almohada</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="dignities-item dignities-item-4 right">
+            <img loading="lazy" src="landing_files/images/pillow-4.svg" alt="dignities-4">
+            <div>
+                    <span>
+                        REDUCED PUFFINESS
+                    </span>
+                <span>
+                    Helps combat morning puffiness through a cooler environment and the special slope of the pillow ​
+                </span>
+            </div>
+        </div>
+        <div class="dignities-item dignities-item-5 right">
+            <img loading="lazy" src="landing_files/images/pillow-5.svg" alt="dignities-5">
+            <div>
+                <span>COOL NIGHT’S SLEEP</span>
+                <span>
+                    Helps avoid overheating throughout the night thanks to thermoregulating properties. Perfect for hot sleepers.
+                </span>
+            </div>
+        </div>
+        <div class="dignities-item dignities-item-6 right">
+            <img loading="lazy" src="landing_files/images/pillow-6.svg" alt="dignities-6">
+            <div>
+                <span>Enhanced Skin Comfort</span>
+                <span>
+                    Cooling pillowcase help maintain a dry, balanced environment around your face—ideal for sensitive or easily irritated skin
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!--Put structure-section block here-->
+
+    <!--Put structure-section block here-->
+</main>
+
+<a href="https://beautysleep.ru/pillows-beauty-sleep/beauty-sleep-omnia-1001" class="label__buy">Купить</a>
+<div class="pp pp__fullreview" data-pp="fullreview">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_fullreview">
+
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+
+        <div class="popup-content">
+
+            <div class="reviews-text-item__content">
+
+                <div class="reviews-text-item__content_head">
+                    <div class="reviews-text-item__photo">
+                        <div></div>
+                    </div>
+                    <div class="reviews-info">
+                        <div>
+                            <span class="reviewer-name"></span>
+                            <span class="review-date"></span>
+                        </div>
+                        <span class="review-product"></span>
+
+
+                    </div>
+                </div>
+                <div class="reviews-stars">
+                    <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.2933 0L13.3184 5.92523L20.0827 6.87539L15.188 11.4875L16.3435 18L10.2933 14.9252L4.24303 18L5.39853 11.4875L0.503788 6.87539L7.26815 5.92523L10.2933 0Z">
+                        </path>
+                    </svg>
+                    <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.2933 0L13.3184 5.92523L20.0827 6.87539L15.188 11.4875L16.3435 18L10.2933 14.9252L4.24303 18L5.39853 11.4875L0.503788 6.87539L7.26815 5.92523L10.2933 0Z">
+                        </path>
+                    </svg>
+                    <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.2933 0L13.3184 5.92523L20.0827 6.87539L15.188 11.4875L16.3435 18L10.2933 14.9252L4.24303 18L5.39853 11.4875L0.503788 6.87539L7.26815 5.92523L10.2933 0Z">
+                        </path>
+                    </svg>
+                    <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.2933 0L13.3184 5.92523L20.0827 6.87539L15.188 11.4875L16.3435 18L10.2933 14.9252L4.24303 18L5.39853 11.4875L0.503788 6.87539  &lt;div class="
+                              pp="" pp__video-review
+                        "="" data-title="popup_video" data-pp="video-review">
+                        </path></svg>
+                    <div class="pp__bg"></div>
+                    <div class="pp__content pp__content_video-review">
+
+                        <div class="pp__close">
+                            <div class="close__lane"></div>
+                            <div class="close__lane"></div>
+                        </div>
+
+                        <div class="popup-content">
+                            <iframe id="yotubeplayer" allowfullscreen=""
+                                    src="../files/saved_resource.html">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--                L7.26815 5.92523L10.2933 0Z"&gt;-->
+
+
+                <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.2933 0L13.3184 5.92523L20.0827 6.87539L15.188 11.4875L16.3435 18L10.2933 14.9252L4.24303 18L5.39853 11.4875L0.503788 6.87539L7.26815 5.92523L10.2933 0Z">
+                    </path>
+                </svg>
+            </div>
+            <div class="reviews-text-item__content_text"></div>
+
+            <a href="https://beautysleep.ru/reviews" class="button transparent">
+                <span>читать все отзывы</span>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<div class="pp pp__video-review" data-title="popup_video" data-pp="video-review">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_video-review">
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+
+        <div class="popup-content">
+            <iframe id="yotubeplayer" allowfullscreen="" src="https://www.youtube.com/embed/ykrxSO4XVHw?autoplay=1&amp;modestbranding=1&amp;iv_load_policy=3">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+<footer class="posthog_view_block" posthog-name="Футер">
+    <div class="grid">
+
+        <div class="footer-part">
+            <div class="menu-container">
+                <div>
+                    <span>Подушки Beauty sleep</span>
+                    <ul>
+
+                        <li>
+                            <a href="https://beautysleep.ru/omnia-and-classic">Подушка Omnia &amp; Classic</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/copper">Подушка Omnia Copper Blend</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/aula">Подушка Aula</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/products/?category=437">Подушки для
+                                мужчин&nbsp;и&nbsp;детей</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/pillow-for-decollete">Подушка для декольте</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/products/?category=25">Наволочки</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/sleep-wrinkles">Beauty - сон</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Одеяла Beauty Sleep</span>
+                    <ul>
+
+                        <li>
+                            <a href="https://beautysleep.ru/weighted-blanket">Утяжеленное одеяло </a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/airmesh-blanket">Одеяло с вентиляционными вставками</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div>
+                    <span>Silk Collection</span>
+                    <ul>
+
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Халаты</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Комбинации</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Топы и шорты</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Маски для сна</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Аксессуары для волос</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/silk-products/">Полотенца</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div>
+                    <span>О Beauty Sleep</span>
+                    <ul>
+
+                        <li>
+                            <a href="https://beautysleep.ru/sleep-wrinkles">Beauty - сон</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/o-kompanii">О компании</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/reviews">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/question">Вопросы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/about-beauty-sleep/materials-beauty-sleep">Материалы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/about-beauty-sleep/vacancy/">Вакансии</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/copyright">Авторские права</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <span>Покупателям</span>
+                    <ul>
+
+                        <li>
+                            <a href="https://beautysleep.ru/dostavka-i-oplata">Доставка и оплата</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/garantia-i-vozvrat">Гарантия и возврат</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/for-customers/contacts">Контакты</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/o-kompanii">О компании</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/reviews">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/question">Вопросы</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/about-beauty-sleep/materials-beauty-sleep">Материалы</a>
+                        </li>
+
+                        <li>
+                            <a href="https://beautysleep.ru/stocks" class="stock">Акции</a>
+                        </li>
+                        <li>
+                            <a href="https://beautysleep.ru/rules-certificates">Подарочные сертификаты</a>
+                        </li>
+                        <li>
+                            &nbsp;
+                        </li>
+                        <li>
+                            <a href="https://wa.me/message/IYHHAZPLYCA6I1" class="whats-app">
+                                <img src="../files/footer-whats-app.svg" alt="whats-app">
+                                whats app
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="email-mailing">
+                <h4>ПОДПИШИТЕСЬ НА РАССЫЛКУ</h4>
+                <p>Подпишитесь, чтобы узнать больше о здоровом сне, новостях и спецпредложениях Beauty Sleep!</p>
+
+                <form method="post" class="js-form-mailing">
+                    <input type="hidden" name="lists[pl2312]" value="set">
+                    <div class="input-box">
+                        <input name="email" type="email" data-si-form="" data-si-preset="msdcaddemail" data-si-nosave=""
+                               data-si-event="change" placeholder="Введите ваш email" required="">
+                    </div>
+                    <input type="text" class="n-message" name="n-message" value="">
+                    <button type="submit"><img src="../files/mailing-submit.svg" alt="submit">
+                    </button>
+
+                    <input type="hidden" name="af_action" value="deb11a841c7ef742abd036ca26bea0c6">
+                </form>
+                <div class="politics">
+                    Нажимая кнопку "Подписаться", вы соглашаетесь с <a href="https://beautysleep.ru/privacy-policy"
+                                                                       target="_blank">политикой конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-part posthog_view_block" posthog-name="Соц сети">
+            <div class="sn-box">
+                <div>
+                    <a href="https://t.me/beauty_sleep_russia" target="_blank" class="social-box__item posthog_click"
+                       posthog-name="Соц сети - telegram">
+                        <img src="../files/telegram.svg" alt="telegram">
+                    </a>
+                    <a href="https://vk.com/beautysleep_russia" target="_blank" class="social-box__item posthog_click"
+                       posthog-name="Соц сети - vkontakte">
+                        <img src="../files/vkon.svg" alt="vkontakte">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCem2kbdspTUse0141WFNSDQ" target="_blank"
+                       class="social-box__item posthog_click" posthog-name="Соц сети - youtube">
+                        <img src="../files/you.svg" alt="youtube">
+                    </a>
+
+                    <a href="https://clck.ru/Pv27v" target="_blank" class="social-box__item posthog_click"
+                       posthog-name="Соц сети - dzen">
+                        <img src="../files/dzen.svg" alt="dzen">
+                    </a>
+
+                </div>
+                <span>следите за нами в соцсетях!</span>
+            </div>
+            <a href="https://beautysleep.ru/#up" class="up">
+                <span>наверх</span>
+                <img src="../files/up.svg" alt="up">
+            </a>
+        </div>
+        <div class="footer-part posthog_view_block" posthog-name="Футер - ссылки">
+            <div class="footer-part__info">
+                <span>© 2016 — 2024, Beauty Sleep ®</span>
+                <div>
+                    <a href="https://beautysleep.ru/privacy-policy" target="_blank" class="posthog_click"
+                       posthog-name="Футер - Политика конфиденциальности">Политика конфиденциальности</a>
+                    <a href="https://beautysleep.ru/terms-of-use" target="_blank" class="posthog_click"
+                       posthog-name="Футер - Пользовательское соглашение">Пользовательское соглашение</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="shopping-cart js-minicart">
+    <div class="shopping-cart-card">
+
+        <div class="shopping-cart__title posthog_view_block" posthog-name="Мини-корзина">
+            <h4>Корзина</h4>
+            <span class="goods-count">0 продуктов</span>
+
+            <div class="cart-close posthog_click" posthog-name="Закрыть мини-корзину">
+                <div class="close__lane"></div>
+                <div class="close__lane"></div>
+            </div>
+        </div>
+        <div class="shopping-cart__empty" style="display:block">
+            <div class="shopping-cart__empty_top">
+                <img src="../files/empty-cart.svg" alt="cart empty">
+                <div>
+                    <span>В Вашей корзине нет товаров</span>
+                    <span>Корзина ждет, что ее наполнят. Желаем приятных покупок!</span>
+                </div>
+            </div>
+            <a href="https://beautysleep.ru/products/" class="button gradient"><span>перейти в магазин</span></a>
+        </div>
+
+
+    </div>
+    <div class="shopping-cart__footer">
+        <div class="shopping-cart__footer_title">
+            <span>сумма заказа:</span>
+            <span><span class="js-minicart-cost">0</span> р.</span>
+        </div>
+
+
+        <a href="https://beautysleep.ru/products/" class="shopping-cart__footer_next button transparent posthog_click"
+           posthog-name="Мини-корзина - продолжить покупки"><span>продолжить покупки</span></a>
+
+        <a href="https://beautysleep.ru/basket" class="shopping-cart__footer_buy button gradient posthog_click"
+           posthog-name="Мини-корзина - оформить заказ"><span>оформить заказ</span></a>
+    </div>
+    <div class="shopping-cart-bg"></div>
+    <script>
+        $(document).ready(function () {
+            otherProductsSwiperSidebar();
+        });
+    </script>
+</div>
+
+<div class="coockies-container">
+    <div class="grid">
+        <div class="coockies-text">Мы используем файлы cookie, чтобы обеспечить Вам лучший сервис. Продолжая
+            пользоваться этим сайтом, Вы соглашаетесь на использование cookie
+            и обработку данных в соответствии с Пользовательским соглашением в области обработки и защиты персональных
+            данных.
+        </div>
+        <button class="coockies-ok button transparent">
+            <span>хорошо</span>
+        </button>
+    </div>
+</div>
+
+
+<div class="window_subs">
+    <div class="left">
+        <div class="title">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="17" viewBox="0 0 12 17" fill="none">
+                <rect x="0.5" y="0.585007" width="11" height="15" fill="white" stroke="#221D1E"
+                      stroke-linejoin="round"></rect>
+                <path d="M1 1.08501L6.625 8.08501L1 15.085" stroke="#221D1E" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+            </svg>
+            ДАРИМ СКИДКУ
+        </div>
+    </div>
+    <div class="right">
+        <div class="title">ПОЛУЧИТЕ СКИДКУ 5%</div>
+        <div class="subtitle">Подпишитесь на рассылки от Beauty Sleep и получите скидку 5% на первый заказ!</div>
+        <form method="post" class="js-form-mailing-window-subs js-form-mailing-popup"
+              name="js-form-mailing-window-subs">
+            <input type="hidden" name="lists[pl32668]" value="set">
+            <input type="email" name="email" data-si-form="" data-si-preset="msdcaddemail" data-si-nosave=""
+                   data-si-event="change" value="" placeholder="Ваш email" required="">
+            <div class="checkbox">
+                <input type="hidden" name="agree" value="">
+                <input type="checkbox" name="agree" value="1">
+                <span>
+            Нажимая на кнопку, я принимаю условия
+            <a href="https://beautysleep.ru/publichnaya-oferta" target="_blank">публичной оферты</a> и
+            <a href="https://beautysleep.ru/privacy-policy" target="_blank">политики конфидециальности</a>
+        </span>
+            </div>
+            <button type="submit">Получить скидку</button>
+
+            <input type="hidden" name="af_action" value="0572a5447e678b1dd7ab38fd0404a108">
+        </form>
+        <div class="subs">Нажимая кнопку, вы соглашаетесь с <a href="https://beautysleep.ru/privacy-policy">политикой
+            конфиденциальности</a></div>
+    </div>
+</div>
+
+<div class="pp pp__mailing" data-title="popup_thanks" data-pp="email-mailing">
+    <div class="pp__bg"></div>
+    <div class="pp__content pp__content_mailing">
+
+        <div class="pp__close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+
+        <div class="popup-content">
+            <div class="mailing-header">
+                <span class="mailing-header__title">СПАСИБО ЗА ПОДПИСКУ!</span>
+            </div>
+            <div class="mailing-body">
+                <span>Благодарим Вас за подписку! Ваш промокод на первую покупку: <strong>HELLO5</strong></span>
+                <button class="button gradient close_btn">
+                    <span>продолжить покупки</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="module" src="../files/mailing.js.download"></script>
+
+<div class="pp pp__patent-preview" data-pp="patent-preview">
+    <div class="pp__bg"></div>
+    <div class="pp__content no_bg">
+        <div class="pp__close pp__close_bg">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+
+        <div class="popup-content">
+
+            <div class="img" data-patent="hong_kong">
+                <img src="../files/1.jpg" alt="">
+                <img src="../files/2.jpg" alt="">
+                <img src="../files/3.jpg" alt="">
+            </div>
+
+            <div class="img" data-patent="canada">
+                <img src="../files/1(1).jpg" alt="">
+                <img src="../files/2(1).jpg" alt="">
+                <img src="../files/3(1).jpg" alt="">
+            </div>
+
+            <div class="img" data-patent="japan">
+                <img src="../files/1(2).jpg" alt="">
+                <img src="../files/2(2).jpg" alt="">
+            </div>
+
+            <div class="img" data-patent="skorea">
+                <img src="../files/1(3).jpg" alt="">
+                <img src="../files/2(3).jpg" alt="">
+            </div>
+
+            <div class="img" data-patent="usa">
+                <img src="../files/1(4).jpg" alt="">
+                <img src="../files/2(4).jpg" alt="">
+                <img src="../files/1(5).jpg" alt="">
+                <img src="../files/2(5).jpg" alt="">
+                <img src="../files/3(2).jpg" alt="">
+                <img src="../files/4.jpg" alt="">
+                <img src="../files/5.jpg" alt="">
+                <img src="../files/6.jpg" alt="">
+                <img src="../files/7.jpg" alt="">
+                <img src="../files/8.jpg" alt="">
+                <img src="../files/9.jpg" alt="">
+                <img src="../files/10.jpg" alt="">
+                <img src="../files/11.jpg" alt="">
+                <img src="../files/12.jpg" alt="">
+                <img src="../files/13.jpg" alt="">
+            </div>
+
+            <div class="img" data-patent="wipo">
+                <img src="../files/1(6).jpg" alt="">
+                <img src="../files/2(6).jpg" alt="">
+                <img src="../files/1(7).jpg" alt="">
+                <img src="../files/2(7).jpg" alt="">
+                <img src="../files/3(3).jpg" alt="">
+                <img src="../files/4(1).jpg" alt="">
+            </div>
+
+            <div class="img" data-patent="new_zealand">
+                <img src="../files/1(8).jpg" alt="">
+                <img src="../files/2(8).jpg" alt="">
+                <img src="../files/3(4).jpg" alt="">
+                <img src="../files/4(2).jpg" alt="">
+                <img src="../files/5(1).jpg" alt="">
+            </div>
+
+            <div class="img" data-patent="australia">
+                <img src="../files/1(9).jpg" alt="">
+                <img src="../files/2(9).jpg" alt="">
+                <img src="../files/3(5).jpg" alt="">
+                <img src="../files/4(3).jpg" alt="">
+                <img src="../files/5(2).jpg" alt="">
+                <img src="../files/6(1).jpg" alt="">
+                <img src="../files/1(10).jpg" alt="">
+                <img src="../files/2(10).jpg" alt="">
+                <img src="../files/3(6).jpg" alt="">
+                <img src="../files/4(4).jpg" alt="">
+                <img src="../files/5(3).jpg" alt="">
+                <img src="../files/6(2).jpg" alt="">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="somia_form">
+    <div class="somia_form-bg"></div>
+    <div class="somia_form-block">
+        <div class="somia_form-close">
+            <div class="close__lane"></div>
+            <div class="close__lane"></div>
+        </div>
+
+    </div>
+</div>
+
+<script src="beauty_sleep_omnia_cooling_files/swiper.min.js"></script>
+<script src="beauty_sleep_omnia_cooling_files/video.min.js"></script>
+<script src="beauty_sleep_omnia_cooling_files/jquery.validate.min.js"></script>
+
+
+
+
+
+
+
+<!--<script src="../files/messages_ru.min.js"></script>-->
+<!--<script src="../files/additional-methods.min.js"></script>-->
+<!--<script src="../files/PNotify.js"></script>-->
+<!--<script src="../files/suggs.js"></script>-->
+
+
+
+<script src="beauty_sleep_omnia_cooling_files/_js_main.js"></script>
+<!--<script src="../files/_js_checkoutt.js.download"></script>-->
+
+
+<!--script src="/static/js/customAjaxForm.js"></script-->
+<script src="beauty_sleep_omnia_cooling_files/skrollr.min.js"></script>
+<script src="beauty_sleep_omnia_cooling_files/aos.js"></script>
+<script src="beauty_sleep_omnia_cooling_files/somia-form.js"></script>
+<script src="beauty_sleep_omnia_cooling_files/phone-mask.js"></script>
+
+
+<script src="beauty_sleep_omnia_cooling_files/parts.js"></script>
+
+
+<script>
+    $(document).on('click', '[href="shuber"]', function () {
+        return false;
+    })
+</script>
+
+
+<script>
+    if ($('.pillow-slider').length && $('.slide-product__img_colors').length && $('.slide-product__img_colors [name="options[color]"]').length >= 1) {
+        $('.pillow-slider [data-desc]').parent().hide()
+        $('.slide-product__img_colors [data-value]').each(function () {
+            var val = $(this).data('value');
+            $('.pillow-slider [data-desc="' + val + '"]').parent().show();
+        })
+    }
+
+    $(document).on('click', '[href="purpur"]', function () {
+        return false
+    })
+
+
+</script>
+
+
+<script>
+    window.product = {
+        "item_name": "",
+        "item_id": "",
+        "price": "",
+        "item_brand": "Beautysleep",
+        "item_list_name": "",
+        "variant": "",
+        "index": 1,
+        "quantity": 1,
+        "item_category": "",
+        "item_category2": ""
+    }
+
+    function getValues(form) {
+        let product = Object.assign({}, window.product)
+
+        var color = form.find('.slide-product__img_colors input:checked').next().data('color'),
+            id = parseInt(form.find('[name="id"]').val()),
+            price = parseFloat(form.find('.js-new-price').first().text().replace(/\D/g, "")),
+            name = form.find('[name="pagetitle"]').val(),
+            category1 = form.find('[name="category1"]').val(),
+            category2 = form.find('[name="category2"]').val()
+
+        if (color !== undefined) product.variant = color
+        product.item_category = category1
+        product.item_category2 = category2
+        product.item_name = name
+        product.item_id = id
+        product.price = price
+        return product
+    }
+
+    /* Добавление в корзину из карточки + */
+    $(document).on('click', '#product-inner [name="ms2_action"], #other-products-in-cart [name="ms2_action"]', function () {
+        try {
+            var form = $(this).closest('form'),
+                product = getValues(form),
+                count = parseInt(form.find('[name="count"]').val())
+
+            addProductToCart(product, count)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Добавление на странице add-products-page +*/
+    $(document).on('click', '.add-products-page .swiper-slide [value="cart/add"]', function () {
+        try {
+            var form = $(this).closest('.swiper-slide'),
+                product = getValues(form),
+                count = parseInt(form.find('[name="count"]').val()),
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.slide-product__img_colors').length)
+                product.variant = form.find('.slide-product__img_colors input:checked + label').data('color')
+
+            product.price = price
+            addProductToCart(product, count)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Добавление в корзину через кнопку плюс + */
+    $(document).on('click', '#product-in-side-cart .hand_button.increment', function () {
+        try {
+            var form = $(this).closest('#product-in-side-cart'),
+                product = getValues(form),
+                name = form.find('.cart-item__info_title').text(),
+                count = 1,
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.item_name = name
+            product.price = price
+            addProductToCart(product, count)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+    /* Добавление в корзину через кнопку плюс в корзине +*/
+    $(document).on('click', '#page-cart .hand_button.increment', function () {
+        try {
+            var form = $(this).closest('.cart-item'),
+                product = getValues(form),
+                count = 1,
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price
+            addProductToCart(product, count)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Удаление товара из корзины через кнопку  +*/
+    $(document).on('click', '#product-in-side-cart + .cart-close', function () {
+        try {
+            var form = $(this).prev(),
+                product = getValues(form),
+                name = form.find('[name="pagetitle"]').val(),
+                count = parseInt(form.find('[name="count"]').val()),
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.item_name = name
+            product.price = price
+            removeFromCart(product, count)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+    /* Удаление товара из корзины через кнопку в корзине +*/
+    $(document).on('click', '#page-cart .cart-item .cart-close', function () {
+        try {
+            var form = $(this).closest('.cart-item'),
+                product = getValues(form),
+                count = parseInt(form.find('[name="count"]').val()),
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price
+            removeFromCart(product, count)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Удаление товара из корзины через минус +*/
+    $(document).on('click', '#product-in-side-cart .hand_button.decrement', function () {
+        try {
+            var form = $(this).closest('#product-in-side-cart'),
+                product = getValues(form),
+                name = form.find('.cart-item__info_title').text(),
+                count = 1,
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.item_name = name
+            product.price = price
+            removeFromCart(product, count)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+    /* Удаление товара из корзины через минус в корзине +*/
+    $(document).on('click', '#page-cart .hand_button.decrement', function () {
+        try {
+            var form = $(this).closest('.cart-item'),
+                product = getValues(form),
+                count = 1,
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price
+            removeFromCart(product, count)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Клик по товару */
+    $(document).on('click', '.goods-grid .slide-product', function () {
+        try {
+            var form = $(this).closest('.slide-product'),
+                product = getValues(form)
+
+            selectItem(product)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Клик по цвету */
+    $(document).on('click', '#product-inner .slide-product__img_colors label', function () {
+        try {
+            var form = $(this).closest('#product-inner'),
+                product = getValues(form)
+
+            product.variant = $(this).data('color')
+
+            selectItem(product, 'e03')
+            viewItem(product)
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Просмотр корзины */
+    if ($('#page-cart').length) {
+        try {
+            var items = []
+            $('#page-cart .cart-item').each(function (i, p) {
+                var product = getValues($(this))
+                product.variant = $(this).find('.specifications-color span').last().text()
+                product.quantity = parseInt($(this).find('[name="count"]').val())
+                items.push(product)
+            })
+
+            if (items.length) viewCart(items)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
+    /* Просмотр товара */
+    if ($('#product-inner input[name="id"]').length) {
+        try {
+            var form = $('#product-inner'),
+                product = getValues(form)
+
+            viewItem(product)
+
+            var items = []
+            $('#product-inner .slide-product__img_colors label').each(function (i, e) {
+
+                product = getValues(form)
+                product.variant = $(this).data('color')
+                items.push(product)
+            })
+            viewItemList(items)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
+    /* Просмотр товаров в каталоге */
+    if ($('#shop-catalog .slide-product').length) {
+        viewItemsInCatalog('#shop-catalog .slide-product')
+    }
+
+    /* Переход к оформлению заказа */
+    if ($('#page-order').length) {
+        try {
+            var items = []
+            $('.js-order-cart .cart-item').each(function (i, e) {
+                var form = $(this),
+                    item = getValues(form)
+
+                if (form.find('.specifications-color span').last() != undefined)
+                    item.variant = form.find('.specifications-color span').last().text()
+
+                if (form.find('.js-ordercart-count') != undefined)
+                    item.quantity = parseInt(form.find('.js-ordercart-count').text().replace(/\D/g, ""))
+
+                items.push(item)
+            })
+            onCheckout(items)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
+    /* Может понравитmся */
+    if ($('#product-inner').length) {
+        mayLike()
+    }
+
+    /* Просмотр формы подписки */
+    if ($('.email-mailing').length) {
+        footerSubscribeVisit()
+    }
+
+    if ($('[name="status_id"]') !== undefined && $('[name="payment_id"]') !== undefined) {
+        var status_id = parseInt($('[name="status_id"]').val()),
+            payment_id = parseInt($('[name="payment_id"]').val()),
+            order_id = $('#orderCart [name="id"]').val(),
+            sended = parseInt($('[name="sended"]').val()),
+            queryString = window.location.search,
+            urlParams = new URLSearchParams(queryString),
+            msorder = parseInt(urlParams.get('msorder'))
+
+        if (!sended) {
+            switch (true) {
+                case status_id == 1 && payment_id == 3:
+                case status_id == 2 && [5, 17, 2, 18, 20, 23, 22].indexOf(payment_id) > -1:
+                    purchase()
+                    $.get('/update-order?msorder=' + msorder)
+                    break
+                case status_id == 1 && [5, 17, 2, 18, 20, 23, 22].indexOf(payment_id) > -1:
+                    let itCount = 0;
+                    const interval = setInterval(() => {
+                        itCount++;
+                        $.get('/check-order?msorder=' + order_id, function (resp) {
+                            if (resp.order_status == 2) {
+                                purchase()
+                                $.get('/update-order?msorder=' + msorder)
+                                clearInterval(interval);
+                            }
+                        })
+                        if (itCount >= 10)
+                            clearInterval(interval);
+                    }, 1000);
+                    break
+            }
+        }
+    }
+
+
+    /**********************/
+    /**********************/
+    /**********************/
+
+
+
+    /* Клик по товару */
+    function selectItem(item, event_id = 'e02', list = 'catalog_main_block') {
+        let send = {
+            event: 'select_item',
+            event_id: event_id,
+            ecommerce: {
+                items: []
+            }
+        }
+
+        item.index = 1
+        localStorage.setItem('item_list_name', list)
+
+        item.item_list_name = list
+        send.ecommerce.items.push(item)
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+
+    /* Может понравиться */
+    function mayLike() {
+        var item, id, items = [], sended = false, form
+        $('#other-products-in-cart .js-product-box').each(function () {
+            form = $(this)
+            item = getValues(form)
+            item.item_list_name = 'you_might_like'
+            items.push(item)
+        })
+
+
+        $('.shopping-cart-card').scroll(function () {
+            if (!sended && $('.shopping-cart-card').scrollTop() >= 236) {
+                viewItemList(items)
+                sended = true
+            }
+        })
+    }
+
+    /* Скрол в каталоге */
+    function viewItemsInCatalog(element, list = 'catalog_main_block') {
+        let item, items = new Set(), id, itemsviewednow = new Set(), scrolledEl;
+
+        window.lastviewedmaylike = new Set();
+
+        scrolledEl = list === 'with_these_goods_bought' ? '#msCart.active .wrapper' : window
+
+
+        $(scrolledEl).on('resize scroll', function () {
+            items = new Set();
+            itemsviewednow = new Set();
+
+            $(element).each(function () {
+                if ($(this).offset().top < ($(window).scrollTop() + $(window).height()) && ($(this).offset().top + $(this).height() > $(window).scrollTop())) {
+                    id = $(this).find('[name="id"]').val()
+                    itemsviewednow.add(id);
+                }
+            });
+
+            for (const id of itemsviewednow) {
+                if (!window.lastviewedmaylike.has(id)) {
+                    item = getValues($('[name="id"][value="' + id + '"]').closest('.slide-product'))
+                    item.item_list_name = list
+                    items.add(item)
+                }
+            }
+
+            if (items.size > 0) {
+                items = setIndexes([...items])
+                viewItemList(items)
+            }
+
+            for (const id of itemsviewednow) {
+                window.lastviewedmaylike.add(id)
+            }
+        });
+    }
+
+    /* Удаление товара из корзины */
+    function removeFromCart(item, quantity = 1) {
+        let send = {
+            event: "remove_from_cart",
+            event_id: 'e05',
+            ecommerce: {
+                items: []
+            }
+        }
+        item = setIndexes(item)
+        item.quantity = parseInt(quantity)
+        item.item_list_name = 'catalog_main_block'
+        send.ecommerce.items.push(item)
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Добавление товара в корзину */
+    function addProductToCart(item, count = 1) {
+        let send = {
+            event: 'add_to_cart',
+            event_id: 'e04',
+            ecommerce: {
+                items: []
+            }
+        }
+        item.quantity = parseInt(count)
+        item = setIndexes(item)
+        item.item_list_name = 'catalog_main_block'
+        send.ecommerce.items.push(item)
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Просмотр товара */
+    function viewItem(item, item_list_name = 'landing_productpage') {
+        let send = {
+            event: 'view_item',
+            event_id: 'e03',
+            ecommerce: {
+                items: []
+            }
+        }
+        item = setIndexes(item)
+        item.item_list_name = item_list_name
+
+        if (localStorage.getItem('item_list_name') !== null) {
+            item.item_list_name = localStorage.getItem('item_list_name')
+            localStorage.removeItem('item_list_name')
+        }
+
+        send.ecommerce.items.push(item)
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Просмотр списка товаров */
+    function viewItemList(items) {
+        let send = {
+            event: 'view_item_list',
+            event_id: 'e01',
+            ecommerce: {
+                items: []
+            }
+        }
+        items = setIndexes(items)
+        send.ecommerce.items.push(items)
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Просмотр корзины */
+    function viewCart(items) {
+        let send = {
+            event: 'view_cart',
+            event_id: 'e06',
+            ecommerce: {
+                items: []
+            }
+        }
+
+        items = setIndexes(items)
+        send.ecommerce.items = items
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Переход на оформление заказа */
+    function onCheckout(items = []) {
+        dataLayer.push({ecommerce: null})
+        let send = {
+            event: "begin_checkout",
+            event_id: 'e07',
+            ecommerce: {
+                items: []
+            }
+        }
+
+        items = setIndexes(items)
+        send.ecommerce.items = items
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Добавление способа доставки */
+    function addShippingInfo(items = [], shipping) {
+
+        let send = {
+            event: 'add_shipping_info',
+            event_id: 'e08',
+            ecommerce: {
+                shipping_tier: shipping,
+                items: []
+            }
+        }
+        items = setIndexes(items)
+        send.ecommerce.items.push(items)
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Добавление способа оплаты */
+    function addPaymentInfo(items = [], payment) {
+
+        let send = {
+            event: 'add_payment_info',
+            event_id: 'e09',
+            ecommerce: {
+                payment_type: payment,
+                items: []
+            }
+        }
+        items = setIndexes(items)
+        send.ecommerce.items.push(items)
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Оформление заказа */
+    function orderCreated() {
+        try {
+            var items = []
+            $('.js-order-cart .cart-item').each(function (i, e) {
+                var form = $(this),
+                    item = getValues(form)
+
+                items.push(item)
+            })
+
+            items = setIndexes(items)
+
+            var total = parseFloat($('.result__item.sum span').last().text().replace(' ', ''))
+            var delivery = $('[name="delivery"]:checked').parent().find('.checkbox__descr_title span').first().text()
+            var payment = $('[name="payment"]:checked').parent().find('.checkbox__descr_title span').first().text()
+
+
+            var try_order = 1
+            if (localStorage.getItem('try_order') != null)
+                try_order = localStorage.getItem('try_order')
+
+            var send = {
+                event: 'order_created',
+                event_id: 'e10',
+                shipping_tier: delivery,
+                payment_type: payment,
+                order_id: 'unknown',
+                value: total,
+                try_number_to_order: try_order + '_try'
+            }
+            dataLayer.push({ecommerce: null})
+            dataLayer.push(send)
+            console.log(send)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
+    /* Страница спасибо */
+    function purchase() {
+        if (typeof dataLayer === 'undefined') return
+
+        var items = []
+        $('#orderCart .products .product').each(function (i, p) {
+            var id = $(p).find('[name="id"]').val(),
+                product = getValues($(p)),
+                price = parseInt($(p).find('[name="price"]').val().replace(' ', '')),
+                count = parseInt($(p).find('[name="count"]').val()),
+                color = $(p).find('[name="color"]').val(),
+                name = $(p).find('[name="name"]').val()
+
+            if (isNaN(count)) count = 1
+            product.quantity = count
+            product.item_name = name
+            product.variant = color
+            product.price = price
+            items.push(product)
+        })
+
+        const shipping_price = parseFloat($('#orderCart [name="delivery_cost"]').val())
+        const total = parseFloat($('#orderCart [name="cost"]').val())
+        const transaction_id = $('#orderCart [name="num"]').val()
+        const coupon = $('#orderCart [name="coupon"]').val()
+        const discount = $('#orderCart [name="discount"]').val() != '' ? parseFloat($('#orderCart [name="discount"]').val()) : ''
+        const delivery = $('#orderCart [name="delivery"]').val()
+        const payment = $('#orderCart [name="payment"]').val()
+
+        //addShippingInfo(items, delivery)
+        //addPaymentInfo(items, payment)
+        localStorage.removeItem('try_order')
+
+        let send = {
+            event: 'purchase',
+            event_id: 'e11',
+            shipping_tier: delivery,
+            payment_type: payment,
+            ecommerce: {
+                transaction_id: transaction_id,
+                affiliation: 'beautysleep.ru',
+                value: total,
+                tax: '20%',
+                shipping: shipping_price,
+                currency: 'RUB',
+                coupon: coupon,
+                discount: discount,
+                items: []
+            }
+        }
+
+        items = setIndexes(items)
+        send.ecommerce.items = items
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    /* Ошибки в форме заказа */
+    function checkoutErrors(errors) {
+        let try_order = 1
+        if (localStorage.getItem('try_order') === null) {
+            localStorage.setItem('try_order', try_order)
+        } else {
+            try_order = parseInt(localStorage.getItem('try_order'))
+            try_order++
+            localStorage.setItem('try_order', try_order)
+        }
+
+        let send = {
+            event: 'errors_in_chekout_form',
+            event_id: 'e30',
+            error_field_order: errors,
+            try_number_to_order: try_order + '_try'
+        }
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    function showSubscribeModal() {
+        let title = $('#subscribe h2').text(), send = {}
+
+        send = {
+            event: 'generate_lead_view',
+            event_id: 'e33',
+            lead_type: 'form_for_subscribe',
+            location: 'pop_up_first_visit_after20sec',
+        }
+
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+
+        setTimeout(() => {
+            send = {
+                event: 'view_promotion',
+                event_id: 'e31',
+                ecommerce: {
+                    promotion_name: 'discount_for_subscribe',
+                    creative_slot: 'pop_up_first_visit',
+                    creative_name: title,
+                }
+            }
+            dataLayer.push({ecommerce: null})
+            dataLayer.push(send)
+            console.log(send)
+        }, 1000)
+    }
+
+    function subscribeSubmit() {
+        let title = $('#subscribe h2').text()
+
+        let send = {
+            event: 'select_promotion',
+            event_id: 'e32',
+            ecommerce: {
+                promotion_name: 'discount_for_subscribe',
+                creative_slot: 'popup_subscribe_first_visit',
+                creative_name: title
+            }
+        }
+
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    function footerSubscribeSubmit() {
+        let send = {
+            event: 'generate_lead',
+            event_id: 'e34',
+            lead_type: 'form_for_subscribe',
+            location: 'pop_up_first_visit_after20sec',
+        }
+
+        dataLayer.push({ecommerce: null})
+        dataLayer.push(send)
+        console.log(send)
+    }
+
+    function footerSubscribeVisit() {
+        let send = {
+            event: 'generate_lead',
+            event_id: 'e34',
+            lead_type: 'form_for_subscribe',
+            location: 'pop_up_first_visit_after20sec',
+        }
+
+        window.pop_up_first_visit_after20sec = false
+
+        $(window).on('resize scroll', function () {
+            $('.email-mailing').each(function () {
+                if ($('.email-mailing').isInViewport() && window.pop_up_first_visit_after20sec === false) {
+                    dataLayer.push({ecommerce: null})
+                    dataLayer.push(send)
+                    console.log(send)
+
+                    window.pop_up_first_visit_after20sec = true
+                }
+            })
+        });
+    }
+
+    function generateLeadView() {
+        let send = {
+            event: 'generate_lead_view',
+            event_id: 'e33',
+            lead_type: 'form_for_subscribe',
+            location: 'pop_up_first_visit_after20sec',
+        }
+
+    }
+
+    function setIndexes(items) {
+        let new_idx = 1
+        if (Array.isArray(items)) {
+            items.forEach((item, idx) => {
+                items[idx].index = new_idx
+                new_idx += 1
+            })
+        } else {
+            items.index = 1
+        }
+        return items
+    }
+
+    $(document).on('af_complete', function (e, r) {
+        const form = r.form.attr('id')
+        if (form === 'subscribe') {
+            subscribeSubmit()
+        }
+        if (form === 'subscribe-foot') {
+            footerSubscribeSubmit()
+        }
+    })
+
+    $(document).ready(function () {
+        miniShop2.Callbacks.add('Order.submit.response.error', 'orders_submit_error', function (response) {
+            checkoutErrors(response.data.join(';'))
+        });
+
+        miniShop2.Callbacks.add('Order.submit.response.success', 'orders_submit_success', function (response) {
+            orderCreated();
+            posthog.capture('sent_order', {
+                block_name: "Оформление заказа",
+                page_name: "Copper"
+            })
+        });
+
+
+    })
+
+
+    $.fn.isInViewport = function () {
+        var elementTop = $(this).offset().top;
+        var elementBottom = elementTop + $(this).outerHeight();
+        var viewportTop = $(window).scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
+
+
+    /* POSTHOG */
+
+
+    /* Добавление в корзину из карточки */
+    $(document).on('click', '#product-inner [name="ms2_action"]', function () {
+        console.log("click");
+        try {
+            var form = $(this).closest('form'),
+                product = getValues(form),
+                count = parseInt(form.find('[name="count"]').val());
+            console.log(product);
+            posthog.capture('cart_add', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_variant: product.variant,
+                product_price: product.price,
+                product_count: count,
+                block_name: "Страница товара"
+            });
+            console.log("posthog страница товара cart_add");
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    $(document).on('click', '#product-inner .hand_button.increment', function () {
+        try {
+            var form = $(this).closest('#product-inner'),
+                product = getValues(form),
+                name = form.find('.cart-item__info_title').text(),
+                count = parseInt(form.find('[name="count"]').val());
+
+            console.log('product_change_plus');
+            console.log(product);
+            posthog.capture('product_change_plus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: name,
+                product_variant: product.variant,
+                product_price: product.price,
+                product_count: count,
+                block_name: "Страница товара"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    $(document).on('click', '#product-inner .hand_button.decrement', function () {
+        try {
+            var form = $(this).closest('#product-inner'),
+                product = getValues(form),
+                name = form.find('.cart-item__info_title').text(),
+                count = parseInt(form.find('[name="count"]').val());
+
+            console.log('product_change_minus');
+            console.log(product);
+            posthog.capture('product_change_minus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: name,
+                product_variant: product.variant,
+                product_price: product.price,
+                product_count: count,
+                block_name: "Страница товара"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* Клик по цвету */
+    $(document).on('click', '#product-inner .slide-product__img_colors label', function () {
+        try {
+            var form = $(this).closest('#product-inner'),
+                product = getValues(form)
+
+            product.variant = $(this).data('color');
+
+            console.log('product_change_color');
+            console.log(product);
+            posthog.capture('product_change_color', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_price: product.price,
+                roduct_variant: product.variant,
+                block_name: "Страница товара"
+            });
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Клик по размеру  */
+    $(document).on('click', '#product-inner .single-product-hints__size label', function () {
+        try {
+            var form = $(this).closest('#product-inner'),
+                product = getValues(form)
+
+            product.variant = $(this).data('size');
+
+            console.log('product_change_size');
+            console.log(product);
+            posthog.capture('product_change_size', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_price: product.price,
+                roduct_variant: product.variant,
+                block_name: "Страница товара"
+            });
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* Добавление в корзину из Миникорзины */
+    $(document).on('click', '#other-products-in-cart [name="ms2_action"]', function () {
+        try {
+            var form = $(this).closest('form'),
+                product = getValues(form),
+                count = parseInt(form.find('[name="count"]').val());
+
+            posthog.capture('minicart_additional_products_add', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_variant: product.variant,
+                product_price: product.price,
+                product_count: count,
+                block_name: "Миникорзина. Дополнительные товары"
+            })
+            console.log("posthog Миникорзина. Дополнительные товары minicart_additional_products_add");
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    $(document).on('click', '#other-products-in-cart .slide-product__img_colors label', function () {
+        try {
+            var form = $(this).closest('#other-products-in-cart'),
+                product = getValues(form)
+
+            product.variant = $(this).data('color');
+
+            console.log('minicart_additional_products_color');
+            console.log(product);
+            posthog.capture('minicart_additional_products_color', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_price: product.price,
+                roduct_variant: product.variant,
+                block_name: "Миникорзина. Дополнительные товары"
+            });
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    $(document).on('click', '#other-products-in-cart .single-product-hints__size label', function () {
+        try {
+            var form = $(this).closest('#other-products-in-cart'),
+                product = getValues(form)
+
+            product.variant = $(this).data('size');
+
+            console.log('minicart_additional_products_size');
+            console.log(product);
+            posthog.capture('minicart_additional_products_size', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_price: product.price,
+                roduct_variant: product.variant,
+                block_name: "Миникорзина. Дополнительные товары"
+            });
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    $(document).on('click', '#other-products-in-cart .hand_button.increment', function () {
+        try {
+            var form = $(this).closest('form'),
+                product = getValues(form),
+                count = 1;
+
+            console.log("minicart_additional_products_plus");
+            console.log(product);
+            posthog.capture('minicart_additional_products_plus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_variant: product.variant,
+                product_price: product.price,
+                product_count: count,
+                block_name: "Миникорзина. Дополнительные товары"
+            })
+
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    $(document).on('click', '#other-products-in-cart .hand_button.decrement', function () {
+        try {
+            var form = $(this).closest('form'),
+                product = getValues(form),
+                count = 1;
+
+            console.log("minicart_additional_products_minus");
+            console.log(product);
+            posthog.capture('minicart_additional_products_minus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_variant: product.variant,
+                product_price: product.price,
+                product_count: count,
+                block_name: "Миникорзина. Дополнительные товары"
+            })
+
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* дополнительные товары  single-product-section__other-products posthog_view_block  */
+
+    $(document).on('click', '.single-product-section__other-products .slide-product__information .hand_button.decrement', function () {
+        try {
+            var form = $(this).closest('form'),
+                product = getValues(form),
+                count = 1;
+
+            console.log("additional_products_minus");
+            console.log(product);
+            posthog.capture('additional_products_minus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_variant: product.variant,
+                product_price: product.price,
+                product_count: count,
+                block_name: "Дополнительные товары"
+            })
+
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    $(document).on('click', '.single-product-section__other-products .slide-product__information .hand_button.increment', function () {
+        try {
+            var form = $(this).closest('form'),
+                product = getValues(form),
+                count = 1;
+
+            console.log("additional_products_plus");
+            console.log(product);
+            posthog.capture('additional_products_plus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_variant: product.variant,
+                product_price: product.price,
+                product_count: count,
+                block_name: "Дополнительные товары"
+            })
+
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* Добавление на странице add-products-page */
+    $(document).on('click', '.add-products-page .swiper-slide [value="cart/add"]', function () {
+        try {
+            var form = $(this).closest('.swiper-slide'),
+                product = getValues(form),
+                count = parseInt(form.find('[name="count"]').val()),
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.slide-product__img_colors').length)
+                product.variant = form.find('.slide-product__img_colors input:checked + label').data('color')
+
+            product.price = price;
+            console.log('additional_products_add');
+            console.log(product);
+            posthog.capture('additional_products_add', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_variant: product.variant,
+                product_price: price,
+                product_count: count,
+                block_name: "Дополнительные товары"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    $(document).on('click', '.add-products-page .swiper-slide .slide-product__img_colors label', function () {
+        try {
+            var form = $(this).closest('.slide-product__information'),
+                product = getValues(form)
+
+            product.variant = $(this).data('color');
+
+            console.log('additional_products_color');
+            console.log(product);
+            posthog.capture('additional_products_color', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_price: product.price,
+                roduct_variant: product.variant,
+                block_name: "Дополнительные товары"
+            });
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    $(document).on('click', '.add-products-page .swiper-slide .single-product-hints__size label', function () {
+        try {
+            var form = $(this).closest('.slide-product__information'),
+                product = getValues(form)
+
+            product.variant = $(this).data('size');
+
+            console.log('additional_products_size');
+            console.log(product);
+            posthog.capture('additional_products_size', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: product.item_name,
+                product_price: product.price,
+                roduct_variant: product.variant,
+                block_name: "Дополнительные товары"
+            });
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* Добавление в миникорзину через кнопку плюс */
+    $(document).on('click', '#product-in-side-cart .hand_button.increment', function () {
+        try {
+            var form = $(this).closest('#product-in-side-cart'),
+                product = getValues(form),
+                name = form.find('.cart-item__info_title').text(),
+                count = 1,
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price;
+            console.log('minicart_cart_product_plus');
+            console.log(product);
+            posthog.capture('minicart_cart_product_plus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: name,
+                product_variant: product.variant,
+                product_price: price,
+                product_count: count,
+                block_name: "Товары в миникорзине"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* Удаление товара из миникорзины через минус */
+    $(document).on('click', '#product-in-side-cart .hand_button.decrement', function () {
+        try {
+            var form = $(this).closest('#product-in-side-cart'),
+                product = getValues(form),
+                name = form.find('.cart-item__info_title').text(),
+                count = 1,
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price;
+            console.log('minicart_cart_product_minus');
+            console.log(product);
+            posthog.capture('minicart_cart_product_minus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: name,
+                product_variant: product.variant,
+                product_price: price,
+                product_count: count,
+                block_name: "Товары в миникорзине"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* Удаление товара из корзины через кнопку */
+    $(document).on('click', '#product-in-side-cart + .cart-close', function () {
+        try {
+            var form = $(this).prev(),
+                product = getValues(form),
+                name = form.find('[name="pagetitle"]').val(),
+                count = parseInt(form.find('[name="count"]').val()),
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price;
+            console.log('minicart_cart_product_delete');
+            console.log(product);
+            posthog.capture('minicart_cart_product_delete', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: name,
+                product_variant: product.variant,
+                product_price: price,
+                product_count: count,
+                block_name: "Товары в миникорзине"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* Добавление в корзину через кнопку плюс в корзине */
+    $(document).on('click', '#page-cart .hand_button.increment', function () {
+        try {
+            var form = $(this).closest('.cart-item'),
+                product = getValues(form),
+                count = 1,
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price;
+            console.log('cart_product_plus');
+            console.log(product);
+            posthog.capture('cart_product_plus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: name,
+                product_variant: product.variant,
+                product_price: price,
+                product_count: count,
+                block_name: "Корзина"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+    /* Удаление товара из корзины через минус в корзине */
+    $(document).on('click', '#page-cart .hand_button.decrement', function () {
+        try {
+            var form = $(this).closest('.cart-item'),
+                product = getValues(form),
+                count = 1,
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price;
+            console.log('cart_product_minus');
+            console.log(product);
+            posthog.capture('cart_product_minus', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: name,
+                product_variant: product.variant,
+                product_price: price,
+                product_count: count,
+                block_name: "Корзина"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    /* Удаление товара из корзины через кнопку в корзине */
+    $(document).on('click', '#page-cart .cart-item .cart-close', function () {
+        try {
+            var form = $(this).closest('.cart-item'),
+                product = getValues(form),
+                count = parseInt(form.find('[name="count"]').val()),
+                price = parseFloat(form.find('[name="price"]').val().replace(' ', ''))
+
+            if (form.find('.specifications-color span').last() != undefined)
+                product.variant = form.find('.specifications-color span').last().text()
+
+            product.price = price;
+            console.log('cart_product_delete');
+            console.log(product);
+            posthog.capture('cart_product_delete', {
+                page_name: "Copper",
+                product_id: product.item_id,
+                product_name: name,
+                product_variant: product.variant,
+                product_price: price,
+                product_count: count,
+                block_name: "Корзина"
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    $(document).on("focusout", "form input[name='coupon_value']", function () {
+        console.log("Промокод конец" + $(this).val());
+        posthog.capture('cart_promo_end', {
+            block_name: "Промокод",
+            promo: $(this).val(),
+            page_name: "Copper",
+        })
+    }).on("focus", "form input[name='coupon_value']", function () {
+        console.log("Промокод старт");
+        posthog.capture('cart_promo_start', {
+            block_name: "Промокод",
+            page_name: "Copper",
+        })
+    })
+
+
+    $(document).on('click', '.js-check-coupon button[type="submit"]', function () {
+        try {
+            if ($("input[name='coupon_value']").val() !== "") {
+                console.log('cart_promo_send');
+                posthog.capture('cart_promo_send', {
+                    block_name: "Промокод",
+                    promo: $("input[name='coupon_value']").val(),
+                    error: $(".js-promocode-error.error_promocode").text(),
+                    page_name: "Copper",
+                })
+            }
+        } catch (e) {
+            console.log(e)
+        }
+    })
+
+
+    $(".btn-play-video").click(function () {
+        posthog.capture('click_video_index', {
+            video_name: "Как работает BeautySleep"
+        })
+
+    })
+
+    $(".header-common a.interaction__phone").click(function () {
+        posthog.capture('click_phone_header', {
+            event_name: "Клик по номеру телефона"
+        })
+    })
+
+    $("a.whats-app").click(function () {
+        posthog.capture('whatsapp_click', {
+            event_name: "Клик по whatsapp"
+        })
+    })
+
+    $(".pp__mailing").each(function () {
+        observer.observe(this, {
+            attributes: true
+        });
+    });
+    /*var target = $( ".pp__mailing" )[0];
+    observer.observe(target, config);
+    var target = $( ".pp__mailing" )[2];
+    observer.observe(target, config);
+     var target = $( ".pp__video-review" )[0];
+    observer.observe(target, config);*/
+
+
+</script>
+
+<style>
+    .header-info .swiper-slide {
+        background: none !important;
+    }
+</style>
+
+<script>
+    $(window).resize(function () {
+        addMarginToSwiper();
+    })
+    addMarginToSwiper();
+
+    function addMarginToSwiper() {
+        var h = $('.general-section img').outerHeight();
+        $('.curtain-container.index').css({'margin-top': h})
+    }
+</script>
+
+<script src="beauty_sleep_omnia_cooling_files/beautysleep.js"></script>
+<script src="beauty_sleep_omnia_cooling_files/bs_default.js"></script>
+<script src="beauty_sleep_omnia_cooling_files/jquery.jgrowl.min.js"></script>
+<!--<script src="../files/message_settings.js"></script>-->
+<!--<script type="module" src="../files/sendit.js"></script>-->
+
+<!--<script type="module" src="../files/sendsay.js"></script>-->
+<!--<script src="../files/customAjaxForm.js"></script>-->
+
+
+<div class="SmartCaptcha-Overlay SmartCaptcha-Overlay_show_spinner" data-testid="advanced-container" tabindex="-1"
+     style="--smart-captcha-doc-height: 918px; --smart-captcha-doc-width: 1598px;">
+    <div class="SmartCaptcha-Spin"></div>
+</div>
+<div class="SmartCaptcha-Overlay SmartCaptcha-Overlay_show_spinner" data-testid="advanced-container" tabindex="-1"
+     style="--smart-captcha-doc-height: 918px; --smart-captcha-doc-width: 1598px;">
+    <div class="SmartCaptcha-Spin"></div>
+</div>
+<script type="text/javascript" async="" src="../files/dyn-goal-config.js.download"></script>
+<script src="../files/iziToast.min.js.download"></script>
+</body>
+
+</html>

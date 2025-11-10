@@ -57,6 +57,7 @@
 
     <link rel="stylesheet" href="../files/normalize.css">
     <link rel="stylesheet" href="../files/swiper.min.css">
+    <link href="../files/fancybox.min.css" rel="stylesheet">
     <link href="../files/video-js.min.css" rel="stylesheet">
     <link href="../files/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../files/css_styles.css">
@@ -251,23 +252,25 @@
 
 <header class="header" style="top: 0px;">
     <div class="header__content">
-        <div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-autoheight" data-site-carousel="header">
-            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-6544px, 0px, 0px); height: 15px;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="2" style="width: 1636px;">
-                <span class="header__slide">Для обеспечения быстрой работы сайта, пожалуйста, отключите VPN</span>
-            </div>
-                <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 1636px;">
-                    <a href="products/" class="header__slide">-10% НА ВСЕ ИЗДЕЛИЯ. ПРОМОКОД: HAPPY10</a>
-                </div>
-                <div class="swiper-slide" data-swiper-slide-index="1" style="width: 1636px;">
-                    <span class="header__slide">Покупайте сейчас и оплачивайте частями в течение нескольких месяцев</span>
-                </div>
-                <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="2" style="width: 1636px;">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
                     <span class="header__slide">Для обеспечения быстрой работы сайта, пожалуйста, отключите VPN</span>
                 </div>
-                <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" style="width: 1636px;">
+                <div class="swiper-slide">
                     <a href="products/" class="header__slide">-10% НА ВСЕ ИЗДЕЛИЯ. ПРОМОКОД: HAPPY10</a>
-                </div></div>
-            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                </div>
+                <div class="swiper-slide">
+                    <span class="header__slide">Покупайте сейчас и оплачивайте частями в течение нескольких месяцев</span>
+                </div>
+                <div class="swiper-slide">
+                    <span class="header__slide">Для обеспечения быстрой работы сайта, пожалуйста, отключите VPN</span>
+                </div>
+                <div class="swiper-slide">
+                    <a href="products/" class="header__slide">-10% НА ВСЕ ИЗДЕЛИЯ. ПРОМОКОД: HAPPY10</a>
+                </div>
+            </div>
+        </div>
         <div class="header__middle">
             <div class="header__middle-col">
                 <a href="tel:88002224624" class="header__phone">
@@ -870,14 +873,14 @@
                                 <div class="js-product-color" data-id="98">
                                     <div class="real-options d-flex"></div>
                                 </div>
-                                <!--slide-product-color-->
-                                <div class="slide-product-color-size">
-                                    <div class="color" style="background-color: #db8c97;"></div>
-                                    <div class="color" style="background-color: #eae6dd;"></div>
-                                    <div class="color" style="background-color: #bbb7b0;"></div>
-                                    <div class="color" style="background-color: #D2B58B;"></div>
-                                    <div class="color" style="background-color: #3A3939;"></div>
-                                </div>
+<!--                                &lt;!&ndash;slide-product-color&ndash;&gt;-->
+<!--                                <div class="slide-product-color-size">-->
+<!--                                    <div class="color" style="background-color: #db8c97;"></div>-->
+<!--                                    <div class="color" style="background-color: #eae6dd;"></div>-->
+<!--                                    <div class="color" style="background-color: #bbb7b0;"></div>-->
+<!--                                    <div class="color" style="background-color: #D2B58B;"></div>-->
+<!--                                    <div class="color" style="background-color: #3A3939;"></div>-->
+<!--                                </div>-->
                                 <!--slide-product-color-->
                                 <div class="pillow-preview-labels"></div>
 
@@ -1106,7 +1109,7 @@
                                 <div class="pillow-preview-labels"></div>
 
                                 <!--mobile add button-->
-                                <button type="submit" name="" value="cart/add" onclick="" class="button border single-product__to-card single-product__to-card-mobile">
+                                <button data-pp="open-product-modal-data" type="submit" name="" value="cart/add" onclick="" class="pp_ button border single-product__to-card single-product__to-card-mobile">
                                     <span>
                                         опции
                                     </span>
@@ -1140,7 +1143,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <button data-reachgoal="click-add-to-cart-button " type="submit" name="ms2_action" value="cart/add" onclick="addToCart(this);" class="button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
+                                <button data-pp="open-product-modal-data" type="submit" name="ms2_action" value="cart/add" class="pp_ button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
                                     <span>опции</span>
                                 </button>
                             </div>
@@ -1177,7 +1180,7 @@
                                 <div class="pillow-preview-labels"></div>
 
                                 <!--mobile add button-->
-                                <button type="submit" name="" value="cart/add" onclick="" class="button border single-product__to-card single-product__to-card-mobile">
+                                <button data-pp="open-product-modal-data" type="submit" name="" value="cart/add" onclick="" class="pp_ button border single-product__to-card single-product__to-card-mobile">
                                     <span>
                                         опции
                                     </span>
@@ -1211,7 +1214,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <button data-reachgoal="click-add-to-cart-button " type="submit" name="ms2_action" value="cart/add" onclick="addToCart(this);" class="button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
+                                <button data-pp="open-product-modal-data" type="submit" name="ms2_action" value="cart/add" class="pp_ button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
                                     <span>опции</span>
                                 </button>
                             </div>
@@ -1251,7 +1254,7 @@
                                 <div class="pillow-preview-labels"></div>
 
                                 <!--mobile add button-->
-                                <button type="submit" name="" value="cart/add" onclick="" class="button border single-product__to-card single-product__to-card-mobile">
+                                <button data-pp="open-product-modal-data" type="submit" name="" value="cart/add" onclick="" class="pp_ button border single-product__to-card single-product__to-card-mobile">
                                     <span>
                                         опции
                                     </span>
@@ -1285,7 +1288,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <button data-reachgoal="click-add-to-cart-button " type="submit" name="ms2_action" value="cart/add" onclick="addToCart(this);" class="button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
+                                <button data-pp="open-product-modal-data" type="submit" name="ms2_action" value="cart/add" class="pp_ button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
                                     <span>опции</span>
                                 </button>
                             </div>
@@ -1376,7 +1379,7 @@
                                 <div class="pillow-preview-labels"></div>
 
                                 <!--mobile add button-->
-                                <button type="submit" name="" value="cart/add" onclick="" class="button border single-product__to-card single-product__to-card-mobile">
+                                <button data-pp="open-product-modal-data" type="submit" name="" value="cart/add" onclick="" class="pp_ button border single-product__to-card single-product__to-card-mobile">
                                     <span>
                                         опции
                                     </span>
@@ -1410,7 +1413,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <button data-reachgoal="click-add-to-cart-button " type="submit" name="ms2_action" value="cart/add" onclick="addToCart(this);" class="button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
+                                <button data-pp="open-product-modal-data" type="submit" name="ms2_action" value="cart/add" onclick="addToCart(this);" class="pp_ button border x_gradient single-product__to-card to-card btn btn-buy btn-add-basket action-basket show" data-pagetitle="Подушка арт.1003 | Beauty Sleep Classic" data-parent="Подушки" data-id="365" data-price="14600">
                                     <span>опции</span>
                                 </button>
                             </div>
@@ -1422,6 +1425,19 @@
             </div>
         </div>
     </section>
+    <!-- Кнопка для открытия модального окна -->
+    <button type="button" data-fancybox="modal-right" data-src="#modal-right">
+        Открыть модальное окно справа
+    </button>
+
+    <!-- Модальное окно -->
+    <div id="modal-right" class="modal-right" style="display: none;">
+        <div class="modal-right__content">
+            <h2>Заголовок модального окна</h2>
+            <p>Содержимое модального окна...</p>
+            <button type="button" data-fancybox-close>Закрыть</button>
+        </div>
+    </div>
 
 </main>
 
@@ -1502,12 +1518,10 @@
 <div class="pp pp_product-modal" data-pp="open-product-modal-data">
     <div class="pp__bg"></div>
     <div class="pp__content pp__content_content_product-modal">
-
         <div class="pp__close">
             <div class="close__lane"></div>
             <div class="close__lane"></div>
         </div>
-
         <div class="popup-content popup-content_product-modal">
             <form action="">
                 <div class="product-modal-wrapper">
@@ -1645,6 +1659,55 @@
         </div>
     </div>
 </div>
+<!---->
+<script>
+    function updateHeaderHeight() {
+        // Проверяем ширину окна
+        if (window.innerWidth < 767) {
+            const header = document.querySelector('.header');
+            if (header) {
+                let headerHeight;
+
+                // Проверяем наличие класса hide
+                if (header.classList.contains('hide')) {
+                    headerHeight = '50px';
+                } else {
+                    headerHeight = header.offsetHeight + 'px';
+                }
+
+                document.documentElement.style.setProperty('--header-height', headerHeight);
+                console.log('Header height updated:', headerHeight, header.classList.contains('hide') ? '(hide class)' : '');
+            }
+        } else {
+            // На десктопе удаляем переменную
+            document.documentElement.style.removeProperty('--header-height');
+        }
+    }
+
+    // Инициализация при загрузке страницы
+    document.addEventListener('DOMContentLoaded', function() {
+        updateHeaderHeight();
+    });
+
+    // Обновление при ресайзе (с debounce для оптимизации)
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(updateHeaderHeight, 100);
+    });
+
+    // Обновление при полной загрузке страницы
+    window.addEventListener('load', function() {
+        updateHeaderHeight();
+    });
+
+    // Обновление при скролле (с throttle для оптимизации)
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(updateHeaderHeight, 50); // Более быстрый отклик для скролла
+    });
+</script>
 <!--pp_product-modal-->
 
 <footer class="posthog_view_block" posthog-name="Футер">
@@ -3516,6 +3579,7 @@
 <script src="../files/beautysleep.js"></script>
 <script src="../files/bs_default.js"></script>
 <script src="../files/jquery.jgrowl.min.js"></script>
+<script src="../files/fancybox.min.js"></script>
 <!--<script src="../files/message_settings.js"></script>-->
 <!--<script type="module" src="../files/sendit.js"></script>-->
 
@@ -3596,8 +3660,6 @@
         const productModalSwiperCont = document.querySelector('.product-modal-images .swiper-container');
         productModalSwiperCont.style.height = productModalInfo.clientHeight  + 'px';
 
-        console.log(productModalInfo.clientHeight )
-
         const productModalImagesSwiper = new Swiper(".product-modal-images .swiper-container", {
             spaceBetween: 0,
             slidesPerView: 'auto',
@@ -3632,7 +3694,40 @@
                     autoHeight: true,
                 },
             }
-        })
+        });
+    });
+
+</script>
+
+<script>
+    // Инициализация Fancybox
+    Fancybox.bind('[data-fancybox="modal-right"]', {
+        // Отключаем стандартный backdrop
+        backdrop: false,
+
+        // Отключаем закрытие по клику на backdrop
+        closeOnBackdropClick: false,
+
+        // Настройки анимации
+        animated: false,
+
+        // Отключаем стандартные стили
+        mainClass: 'custom-fancybox',
+
+        // Настройки отображения
+        on: {
+            // Перед показом
+            reveal: (fancybox, slide) => {
+                // Добавляем кастомный класс
+                document.querySelector('.fancybox-container').classList.add('modal-right-open');
+            },
+
+            // Перед закрытием
+            close: (fancybox, slide) => {
+                // Убираем кастомный класс
+                document.querySelector('.fancybox-container').classList.remove('modal-right-open');
+            }
+        }
     });
 
 </script>

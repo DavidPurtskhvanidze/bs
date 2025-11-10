@@ -454,6 +454,7 @@
     padding: 0 clamp(2px, calc(12 / 1920* 100vw), 12px);
     margin: 5px 0;
     line-height: 1;
+    z-index: 1;
 }
 .shop-section__goods_content .single-product__to-card.button svg {
     margin-left: 4px;
@@ -955,7 +956,6 @@
     position: absolute;
     top: clamp(10px, calc(32 / 1920 * 100vw), 32px);
     right: clamp(10px, calc(32 / 1920 * 100vw), 32px);
-    max-height: clamp(20px, calc(80/1920*100vw), 80px);
 }
 .slide-product__item {
     width: 100%;
@@ -963,14 +963,57 @@
 .shop-section__goods_content .single-product__to-card-mobile {
     display: none;
 }
+html.noscroll .header {
+    position: fixed;
+}
+/* Стили для модального окна */
+.modal-right {
+    width: 100%;
+    height: calc(100vh - 20px); /* Отступ сверху 20px */
+    margin-top: 20px; /* Отступ сверху */
+    background: white;
+    border-radius: 12px 0 0 12px;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Когда модальное окно открыто */
+.fancybox-slide--current .modal-right {
+    transform: translateX(0);
+}
+
+/* Контент модального окна */
+.modal-right__content {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Убираем стандартный backdrop Fancybox */
+.fancybox-bg {
+    background: none !important;
+}
+
+/* Настройка контейнера Fancybox */
+.fancybox-container {
+    overflow: hidden;
+}
+
+/* Стили для слайда */
+.fancybox-slide--html {
+    padding: 0;
+    justify-content: flex-end;
+}
 /*New style*/
 
 /*pp_product-modal*/
 .pp_product-modal .pp__close {
+    padding: 8px;
     top: clamp(10px, calc(20 / 1920 * 100vw), 20px);
     right: clamp(10px, calc(20 / 1920 * 100vw), 20px);
-    width: clamp(16px, calc(24 / 1920 * 100vw), 24px);
-    height: clamp(16px, calc(24 / 1920 * 100vw), 24px);
+    width: clamp(32px, calc(40 / 1920 * 100vw), 40px);
+    height: clamp(32px, calc(40 / 1920 * 100vw), 40px);
 }
 .pp_product-modal .close__lane {
     height: 1px;
@@ -1649,9 +1692,20 @@ input[type=radio]:checked + .product-modal-size,
     }
     /*new style*/
     /*pp_product-modal*/
+    .pp.pp_product-modal {
+        height: calc(100% - var(--header-height, 60px));
+        top: var(--header-height, 60px);
+    }
+    .pp_product-modal .pp__bg {
+        top: var(--header-height, 60px);
+    }
+    .pp_product-modal .pp__content {
+        top: 0;
+        margin-bottom: 0;
+    }
     .product-modal-wrapper {
         flex-direction: column;
-        min-height: 80vh;
+        min-height: auto;
     }
     .product-modal-images {
         width: 100%;
@@ -1684,5 +1738,18 @@ input[type=radio]:checked + .product-modal-size,
 @media screen and (max-width: 767px) {
     .shop-store .shop-section__goods_sidebar .show {
         display: none !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slide-product .slide-product__badge.custom {
+        transform: scale(0.8);
+        transform-origin: top right;
+    }
+}
+@media screen and (max-width: 420px) {
+    .slide-product .slide-product__badge.custom {
+        transform: scale(0.6);
+        transform-origin: top right;
     }
 }
